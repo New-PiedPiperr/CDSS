@@ -10,6 +10,7 @@ const useAssessmentStore = create(
       history: [], // Stack of question IDs for previous navigation
       responses: {}, // { questionId: answerText }
       redFlags: [], // List of tagged flags
+      aiAnalysis: null, // Temporary AI diagnosis
       isDisclaimerAccepted: false,
       files: [],
 
@@ -24,7 +25,10 @@ const useAssessmentStore = create(
           history: [],
           responses: {},
           redFlags: [],
+          aiAnalysis: null,
         }),
+
+      setAiAnalysis: (analysis) => set({ aiAnalysis: analysis }),
 
       answerQuestion: (questionId, answer, nextQuestionId, tags = []) => {
         const state = get();
@@ -86,6 +90,7 @@ const useAssessmentStore = create(
           history: [],
           responses: {},
           redFlags: [],
+          aiAnalysis: null,
           isDisclaimerAccepted: false,
           files: [],
         }),

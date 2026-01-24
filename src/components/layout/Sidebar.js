@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Settings, HelpCircle, Shield, LogOut, User } from 'lucide-react';
 import { cn } from '@/lib/cn';
+import { signOut } from 'next-auth/react';
 
 function Sidebar({ links = [], secondaryLinks = [], className }) {
   const pathname = usePathname();
@@ -114,10 +115,10 @@ function Sidebar({ links = [], secondaryLinks = [], className }) {
                 <li key={link.label}>
                   {link.action ? (
                     <button
-                      className="text-muted-foreground hover:bg-muted hover:text-foreground flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors"
-                      onClick={() => {
+                      className="text-muted-foreground hover:bg-muted hover:text-foreground flex w-full cursor-pointer items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors"
+                      onClick={async () => {
                         setIsMobileOpen(false);
-                        // Handle logout or other actions
+                        await signOut({ redirectTo: '/' });
                       }}
                     >
                       {Icon && <Icon className="h-5 w-5" />}

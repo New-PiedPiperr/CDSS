@@ -36,17 +36,16 @@ export default function PatientAssessmentPage() {
   const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [justSubmitted, setJustSubmitted] = useState(false);
 
   useEffect(() => {
-    // Check for explicit reset from URL OR if we are in 'complete' state on mount
-    if (isNewAssessment || currentStep === 'complete') {
+    // We only reset if:
+    // 1. It's a fresh manual visit (?new=true)
+    // 2. We land on the page (not just submitted) and it's marked complete
+    if (isNewAssessment || (currentStep === 'complete' && !justSubmitted)) {
       resetAssessment();
-
-      // If they were on the 'complete' screen and just refreshed,
-      // stay on 'body-map'. If they just submitted, the submission
-      // logic will handle showing the 'complete' state.
     }
-  }, [isNewAssessment, resetAssessment]); // Removed currentStep from deps to avoid loop
+  }, [isNewAssessment, currentStep, resetAssessment, justSubmitted]);
 
   const handleAiAnalysis = async () => {
     setIsAnalyzing(true);
@@ -109,9 +108,8 @@ export default function PatientAssessmentPage() {
 
       toast.success('Assessment submitted successfully! A clinician will review it.');
 
-      // 1. Reset everything
+      setJustSubmitted(true);
       resetAssessment();
-      // 2. Explicitly set to complete so they see the success screen
       setStep('complete');
     } catch (error) {
       toast.error('Failed to submit assessment. Please try again.');

@@ -17,7 +17,7 @@ function ThemeToggle({ className }) {
     return (
       <button
         className={cn(
-          'text-muted-foreground hover:bg-accent hover:text-accent-foreground inline-flex h-10 w-10 items-center justify-center rounded-lg transition-colors',
+          'text-muted-foreground hover:bg-accent hover:text-accent-foreground inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg transition-colors',
           className
         )}
         aria-label="Toggle theme"
@@ -30,7 +30,7 @@ function ThemeToggle({ className }) {
   return (
     <button
       className={cn(
-        'text-muted-foreground hover:bg-accent hover:text-accent-foreground inline-flex h-10 w-10 items-center justify-center rounded-lg transition-colors',
+        'text-muted-foreground hover:bg-accent hover:text-accent-foreground inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg transition-colors',
         className
       )}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

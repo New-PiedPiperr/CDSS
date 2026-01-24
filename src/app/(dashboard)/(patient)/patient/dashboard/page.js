@@ -181,14 +181,13 @@ export default async function PatientDashboardPage() {
                         : 'Track your symptoms and complete daily check-ins to monitor your recovery journey effectively.'}
                     </p>
                     <div className="pt-2">
-                      <Button asChild variant="secondary" size="lg" className="font-bold">
-                        <Link href="/patient/assessment">
-                          {latestSession?.sessionStatus === 'in_progress'
-                            ? 'Continue Assessment'
-                            : 'Start New Assessment'}
-                          <ChevronRight className="ml-2 h-4 w-4" />
-                        </Link>
-                      </Button>
+                      <Link 
+                        href="/patient/assessment" 
+                        className="bg-secondary text-secondary-foreground border border-primary h-12 flex items-center justify-center rounded-lg px-8 text-base font-bold transition-colors hover:bg-primary/10"
+                      >
+                        {latestSession?.sessionStatus === 'in_progress' ? 'Continue Assessment' : 'Start New Assessment'}
+                        <ChevronRight className="ml-2 h-4 w-4" />
+                      </Link>
                     </div>
                   </div>
                   <div className="hidden opacity-20 lg:block">

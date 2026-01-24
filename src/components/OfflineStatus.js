@@ -46,13 +46,13 @@ export default function OfflineStatus() {
   return (
     <div
       className={cn(
-        'fixed bottom-6 left-1/2 z-[100] -translate-x-1/2 transform transition-all duration-500 ease-out',
+        'fixed bottom-6 left-1/2 z-[100] w-[90%] max-w-md -translate-x-1/2 transform transition-all duration-500 ease-out sm:w-auto',
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
       )}
     >
       <div
         className={cn(
-          'flex items-center gap-3 rounded-2xl border px-5 py-3 shadow-2xl backdrop-blur-xl transition-all duration-300',
+          'flex w-full items-center gap-3 rounded-2xl border px-5 py-3 shadow-2xl backdrop-blur-xl transition-all duration-300 sm:w-auto',
           isOffline
             ? 'bg-destructive/10 border-destructive/20 text-destructive shadow-destructive/10'
             : 'border-emerald-500/20 bg-emerald-500/10 text-emerald-600 shadow-emerald-500/10 dark:text-emerald-400'

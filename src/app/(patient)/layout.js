@@ -2,19 +2,21 @@
 
 import {
   LayoutDashboard,
-  ClipboardList,
-  TestTube,
+  ClipboardPlus,
+  FlaskConical,
   TrendingUp,
-  Settings,
+  MessageSquare,
+  Bell,
 } from 'lucide-react';
 import { Sidebar, TopNav } from '@/components/layout';
 
 const patientLinks = [
   { href: '/patient/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/patient/assessment', label: 'Assessment', icon: ClipboardList },
-  { href: '/patient/self-test', label: 'Self Test', icon: TestTube },
+  { href: '/patient/assessment', label: 'New assessment', icon: ClipboardPlus },
+  { href: '/patient/self-test', label: 'Guided Self Test', icon: FlaskConical },
   { href: '/patient/progress', label: 'Progress', icon: TrendingUp },
-  { href: '/patient/settings', label: 'Settings', icon: Settings },
+  { href: '/patient/messages', label: 'Messages', icon: MessageSquare },
+  { href: '/patient/notifications', label: 'Notifications', icon: Bell },
 ];
 
 export default function PatientLayout({ children }) {
@@ -23,7 +25,7 @@ export default function PatientLayout({ children }) {
       <Sidebar links={patientLinks} />
 
       <div className="lg:pl-64">
-        <TopNav title="Patient Portal" />
+        <TopNav title="User's Dashboard" />
 
         <main className="p-4 lg:p-6">{children}</main>
       </div>

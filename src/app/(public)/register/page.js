@@ -21,6 +21,8 @@ export default function RegisterPage() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -44,9 +46,15 @@ export default function RegisterPage() {
   const validate = () => {
     const newErrors = {};
 
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = 'First name is required';
+    }
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = 'Last name is required';
+    }
     if (!formData.email) {
       newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+    } else if (!/\S+@\S+\.\S+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email';
     }
 
@@ -74,13 +82,29 @@ export default function RegisterPage() {
     setIsLoading(true);
 
     try {
-      // Placeholder for actual registration logic
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const response = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          password: formData.password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Registration failed');
+      }
 
       toast.success('Account created successfully!');
-      router.push('/verify');
-    } catch {
-      toast.error('Registration failed. Please try again.');
+      router.push(`/verify?email=${encodeURIComponent(formData.email)}`);
+    } catch (err) {
+      toast.error(err.message || 'Registration failed. Please try again.');
     } finally {
       setIsLoading(false);
     }
@@ -102,6 +126,40 @@ export default function RegisterPage() {
 
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              {/* First Name */}
+              <div className="space-y-2">
+                <label
+                  htmlFor="firstName"
+                  className="text-foreground text-sm font-medium"
+                >
+                  First Name
+                </label>
+                <Input
+                  id="firstName"
+                  name="firstName"
+                  placeholder="John"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  error={errors.firstName}
+                />
+              </div>
+              {/* Last Name */}
+              <div className="space-y-2">
+                <label htmlFor="lastName" className="text-foreground text-sm font-medium">
+                  Last Name
+                </label>
+                <Input
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Doe"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  error={errors.lastName}
+                />
+              </div>
+            </div>
+
             {/* Email Field */}
             <div className="space-y-2">
               <label htmlFor="email" className="text-foreground text-sm font-medium">
@@ -117,7 +175,6 @@ export default function RegisterPage() {
                 error={errors.email}
                 autoComplete="email"
               />
-              {errors.email && <p className="text-destructive text-xs">{errors.email}</p>}
             </div>
 
             {/* Password Field */}
@@ -134,9 +191,6 @@ export default function RegisterPage() {
                 error={errors.password}
                 autoComplete="new-password"
               />
-              {errors.password && (
-                <p className="text-destructive text-xs">{errors.password}</p>
-              )}
             </div>
 
             {/* Confirm Password Field */}
@@ -156,9 +210,6 @@ export default function RegisterPage() {
                 error={errors.confirmPassword}
                 autoComplete="new-password"
               />
-              {errors.confirmPassword && (
-                <p className="text-destructive text-xs">{errors.confirmPassword}</p>
-              )}
             </div>
 
             {/* Submit Button */}

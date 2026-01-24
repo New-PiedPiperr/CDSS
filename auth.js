@@ -1,37 +1,43 @@
 import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import User from '@/models/User';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import connectDB from '@/lib/db/connect';
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Credentials({
       credentials: {
-        email: {},
-        password: {},
+        email: { label: 'Email', type: 'email' },
+        password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
+        if (!credentials?.email || !credentials?.password) return null;
+
         await connectDB();
-        const { email, password } = credentials;
-        // Here you would normally fetch the user from your database
-        const user = await User.findOne({ email }).select(
-          'password email firstName lastName avatar role'
-        );
+
+        const user = await User.findOne({
+          email: credentials.email.toLowerCase(),
+        }).select('password email firstName lastName avatar role isVerified');
+
         if (!user) {
-          console.log('User not found');
           return null;
         }
-        // check password if it's correct
-        const isPasswordValid = await bcrypt.compare(password, user.password);
-        // if password is not correct
+
+        const isPasswordValid = await bcrypt.compare(credentials.password, user.password);
+
         if (!isPasswordValid) {
-          console.log('Invalid password');
+          return null;
+        }
+
+        if (!user.isVerified) {
+          // Returning null signals invalid credentials.
+          // Custom error messages in v5 are best handled by redirecting to a custom page or using callbacks.
           return null;
         }
 
         return {
-          id: user._id,
+          id: user._id.toString(),
           email: user.email,
           firstName: user.firstName,
           lastName: user.lastName,
@@ -67,10 +73,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   },
   session: {
     strategy: 'jwt',
-    maxAge: 1000 * 60 * 60 * 24,
   },
   secret: process.env.AUTH_SECRET,
   pages: {
     signIn: '/login',
+    error: '/login', // Redirect back to login on error
   },
 });

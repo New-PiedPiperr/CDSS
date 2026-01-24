@@ -2,6 +2,7 @@ import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import User from '@/models/User';
 import bcrypt from 'bcrypt';
+import connectDB from '@/lib/db/connect';
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
@@ -11,6 +12,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         password: {},
       },
       async authorize(credentials) {
+        await connectDB();
         const { email, password } = credentials;
         // Here you would normally fetch the user from your database
         const user = await User.findOne({ email });
@@ -63,4 +65,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     maxAge: 1000 * 60 * 60 * 24,
   },
   secret: process.env.AUTH_SECRET,
+  pages: {
+    signIn: '/login',
+  },
 });

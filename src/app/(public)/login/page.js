@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import {
   Logo,
   Button,
@@ -16,10 +15,18 @@ import {
   CardFooter,
 } from '@/components/ui';
 import { toast } from 'sonner';
+import { signIn } from 'next-auth/react';
+import { useSearchParams } from 'next/navigation';
 
 export default function LoginPage() {
-  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+  const error = useSearchParams().has('error');
+
+  useEffect(() => {
+    if (error) {
+      toast.error('Invalid credentials. Please try again.');
+    }
+  }, [error]);
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -38,10 +45,18 @@ export default function LoginPage() {
 
     try {
       // Placeholder for actual login logic
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-
-      toast.success('Login successful!');
-      router.push('/patient/dashboard');
+      const result = await signIn('credentials', {
+        email: formData.email,
+        password: formData.password,
+        redirect: false,
+      });
+      console.log(result);
+      if (result.error && result.code) {
+        return toast.error('Invalid credentials. Please try again.');
+      }
+      toast.success('Logged in successfully!');
+      // Redirect to dashboard or desired page
+      window.location.href = '/patient/dashboard';
     } catch {
       toast.error('Invalid credentials. Please try again.');
     } finally {

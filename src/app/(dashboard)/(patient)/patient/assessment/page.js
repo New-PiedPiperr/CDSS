@@ -66,16 +66,20 @@ export default function PatientAssessmentPage() {
     }
   };
 
-  const handleConfirmAndAnalyze = async () => {
+  const handleConfirmAndAnalyze = () => {
+    setIsDisclaimerOpen(true);
+  };
+
+  const handleDisclaimerConfirm = async () => {
+    setIsDisclaimerOpen(false);
     if (!aiAnalysis) {
       await handleAiAnalysis();
     } else {
-      setIsDisclaimerOpen(true);
+      await handleFinalSubmit();
     }
   };
 
   const handleFinalSubmit = async () => {
-    setIsDisclaimerOpen(false);
     setIsSubmitting(true);
 
     try {
@@ -139,21 +143,28 @@ export default function PatientAssessmentPage() {
                     Preliminary AI Analysis
                   </span>
                   {isAnalyzing ? (
-                    <div className="flex items-center justify-center gap-3 rounded-xl bg-slate-50 p-6 dark:bg-slate-900">
-                      <Loader2 className="text-primary animate-spin" size={20} />
-                      <span className="animate-pulse text-sm font-medium">
-                        Our AI is analyzing your symptoms...
-                      </span>
+                    <div className="animate-in fade-in zoom-in flex items-center justify-center gap-3 rounded-xl border border-slate-100 bg-slate-50 p-8 dark:border-slate-800 dark:bg-slate-900">
+                      <Loader2 className="text-primary animate-spin" size={24} />
+                      <div className="flex flex-col">
+                        <span className="text-sm font-bold text-slate-900 dark:text-white">
+                          Analyzing Symptoms
+                        </span>
+                        <span className="animate-pulse text-xs text-slate-500">
+                          Our clinical AI agent is processing your data...
+                        </span>
+                      </div>
                     </div>
                   ) : aiAnalysis ? (
-                    <div className="prose prose-sm dark:prose-invert max-w-none rounded-2xl border border-blue-100 bg-blue-50/50 p-6 dark:border-blue-900/30 dark:bg-blue-900/10">
+                    <div className="prose prose-sm dark:prose-invert animate-in slide-in-from-bottom-4 max-w-none rounded-2xl border border-blue-100 bg-blue-50/50 p-6 duration-500 dark:border-blue-900/30 dark:bg-blue-900/10">
                       <div className="leading-relaxed font-medium text-slate-700 dark:text-slate-300">
                         <ReactMarkdown>{aiAnalysis}</ReactMarkdown>
                       </div>
                     </div>
                   ) : (
-                    <div className="p-4 text-center text-sm text-slate-400 italic">
-                      Analysis unavailable. You can still proceed with submission.
+                    <div className="rounded-2xl border-2 border-dashed border-slate-100 bg-slate-50/30 p-8 text-center dark:border-slate-800/50 dark:bg-slate-900/10">
+                      <div className="text-sm font-medium text-slate-400">
+                        Click below to generate your preliminary AI clinical report.
+                      </div>
                     </div>
                   )}
                 </div>
@@ -179,24 +190,24 @@ export default function PatientAssessmentPage() {
             </Card>
 
             <div className="flex flex-col gap-4">
-              {!aiAnalysis || isAnalyzing ? (
+              {!aiAnalysis ? (
                 <Button
                   size="lg"
-                  onClick={handleAiAnalysis}
+                  onClick={handleConfirmAndAnalyze}
                   loading={isAnalyzing}
-                  className="w-full"
+                  className="h-14 w-full text-lg"
                 >
-                  Confirm and Send for AI Analysis
+                  Generate AI Preliminary Report
                   <ChevronRight size={18} className="ml-2" />
                 </Button>
               ) : (
                 <Button
                   size="lg"
-                  onClick={() => setIsDisclaimerOpen(true)}
+                  onClick={handleFinalSubmit}
                   loading={isSubmitting}
-                  className="w-full bg-blue-600 hover:bg-blue-700"
+                  className="h-14 w-full bg-green-600 text-lg hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-700"
                 >
-                  Confirm and Submit to Clinician
+                  Submit Final Assessment
                   <ChevronRight size={18} className="ml-2" />
                 </Button>
               )}
@@ -231,7 +242,7 @@ export default function PatientAssessmentPage() {
 
       <DisclaimerModal
         isOpen={isDisclaimerOpen}
-        onConfirm={handleFinalSubmit}
+        onConfirm={handleDisclaimerConfirm}
         onCancel={() => setIsDisclaimerOpen(false)}
       />
     </div>

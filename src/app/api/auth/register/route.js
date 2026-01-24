@@ -120,7 +120,7 @@ export async function POST(req) {
           id: newUser._id,
         },
       },
-      { status: '200' }
+      { status: 200 }
     );
   } catch (err) {
     if (err.name === 'ValidationError') {

@@ -16,7 +16,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         const { email, password } = credentials;
         // Here you would normally fetch the user from your database
         const user = await User.findOne({ email }).select(
-          'password email firstName lastName avatar role'
+          'password email firstName lastName avatar role isVerified'
         );
         if (!user) {
           console.log('User not found');

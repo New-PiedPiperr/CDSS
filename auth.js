@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import User from '@/models/User';
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
 import connectDB from '@/lib/db/connect';
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
@@ -31,8 +31,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         }
 
         if (!user.isVerified) {
-          // Returning null signals invalid credentials.
-          // Custom error messages in v5 are best handled by redirecting to a custom page or using callbacks.
           return null;
         }
 
@@ -77,6 +75,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   secret: process.env.AUTH_SECRET,
   pages: {
     signIn: '/login',
-    error: '/login', // Redirect back to login on error
+    error: '/login',
   },
 });

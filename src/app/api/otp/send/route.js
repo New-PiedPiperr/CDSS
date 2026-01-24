@@ -1,12 +1,12 @@
 import { NextResponse } from 'next/server';
 import { otpService } from '@/services/otpService';
+import encryptPassword from '@/lib/encryptPassword';
 
-// Basic in-memory rate limiting (for single-instance deployment/dev)
 const rateLimitMap = new Map();
 
 export async function POST(req) {
   try {
-    const { email } = await req.json();
+    const { email, firstName, lastName, password } = await req.json();
 
     if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
       return NextResponse.json({ error: 'Valid email is required' }, { status: 400 });
@@ -23,9 +23,17 @@ export async function POST(req) {
     }
     rateLimitMap.set(email, now);
 
-    // We don't check if user exists here to avoid email enumeration
-    // Just send the OTP. If the user doesn't exist, they'll just get an OTP and that's it.
-    await otpService.sendOtp(email);
+    let registrationData = null;
+    if (firstName && lastName && password) {
+      const passwordHash = await encryptPassword(password);
+      registrationData = {
+        firstName,
+        lastName,
+        password_hash: passwordHash,
+      };
+    }
+
+    await otpService.sendOtp(email, registrationData);
 
     return NextResponse.json({ success: true, message: 'OTP sent successfully' });
   } catch (error) {

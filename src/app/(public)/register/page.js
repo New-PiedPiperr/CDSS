@@ -34,7 +34,6 @@ export default function RegisterPage() {
       ...prev,
       [e.target.name]: e.target.value,
     }));
-    // Clear error when user starts typing
     if (errors[e.target.name]) {
       setErrors((prev) => ({
         ...prev,
@@ -45,48 +44,36 @@ export default function RegisterPage() {
 
   const validate = () => {
     const newErrors = {};
-
-    if (!formData.firstName.trim()) {
-      newErrors.firstName = 'First name is required';
-    }
-    if (!formData.lastName.trim()) {
-      newErrors.lastName = 'Last name is required';
-    }
+    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
+    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
     if (!formData.email) {
       newErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email';
     }
-
     if (!formData.password) {
       newErrors.password = 'Password is required';
     } else if (formData.password.length < 8) {
       newErrors.password = 'Password must be at least 8 characters';
     }
-
-    if (!formData.confirmPassword) {
-      newErrors.confirmPassword = 'Please confirm your password';
-    } else if (formData.password !== formData.confirmPassword) {
+    if (formData.password !== formData.confirmPassword) {
       newErrors.confirmPassword = 'Passwords do not match';
     }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!validate()) return;
 
     setIsLoading(true);
-
     try {
-      const response = await fetch('/api/auth/register', {
+      // We call /api/otp/send with all details.
+      // Account is NOT created until OTP is verified.
+      const response = await fetch('/api/otp/send', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           firstName: formData.firstName,
           lastName: formData.lastName,
@@ -96,15 +83,13 @@ export default function RegisterPage() {
       });
 
       const data = await response.json();
+      if (!response.ok) throw new Error(data.error || 'Failed to initiate registration');
 
-      if (!response.ok) {
-        throw new Error(data.error || 'Registration failed');
-      }
-
-      toast.success('Account created successfully!');
+      toast.success('Verification code sent to your email!');
+      // Move to verify page, passing only the email
       router.push(`/verify?email=${encodeURIComponent(formData.email)}`);
     } catch (err) {
-      toast.error(err.message || 'Registration failed. Please try again.');
+      toast.error(err.message);
     } finally {
       setIsLoading(false);
     }
@@ -112,12 +97,10 @@ export default function RegisterPage() {
 
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center px-4 py-8">
-      {/* Logo */}
       <div className="animate-fade-in mb-8">
         <Logo size="lg" />
       </div>
 
-      {/* Register Card */}
       <Card className="animate-slide-up w-full max-w-md">
         <CardHeader className="text-center">
           <CardTitle>Create Account</CardTitle>
@@ -127,16 +110,9 @@ export default function RegisterPage() {
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
-              {/* First Name */}
               <div className="space-y-2">
-                <label
-                  htmlFor="firstName"
-                  className="text-foreground text-sm font-medium"
-                >
-                  First Name
-                </label>
+                <label className="text-foreground text-sm font-medium">First Name</label>
                 <Input
-                  id="firstName"
                   name="firstName"
                   placeholder="John"
                   value={formData.firstName}
@@ -144,13 +120,9 @@ export default function RegisterPage() {
                   error={errors.firstName}
                 />
               </div>
-              {/* Last Name */}
               <div className="space-y-2">
-                <label htmlFor="lastName" className="text-foreground text-sm font-medium">
-                  Last Name
-                </label>
+                <label className="text-foreground text-sm font-medium">Last Name</label>
                 <Input
-                  id="lastName"
                   name="lastName"
                   placeholder="Doe"
                   value={formData.lastName}
@@ -160,61 +132,44 @@ export default function RegisterPage() {
               </div>
             </div>
 
-            {/* Email Field */}
             <div className="space-y-2">
-              <label htmlFor="email" className="text-foreground text-sm font-medium">
-                Email Address
-              </label>
+              <label className="text-foreground text-sm font-medium">Email Address</label>
               <Input
-                id="email"
                 name="email"
                 type="email"
                 placeholder="Enter your email"
                 value={formData.email}
                 onChange={handleChange}
                 error={errors.email}
-                autoComplete="email"
               />
             </div>
 
-            {/* Password Field */}
             <div className="space-y-2">
-              <label htmlFor="password" className="text-foreground text-sm font-medium">
-                Password
-              </label>
+              <label className="text-foreground text-sm font-medium">Password</label>
               <PasswordInput
-                id="password"
                 name="password"
                 placeholder="Create a password"
                 value={formData.password}
                 onChange={handleChange}
                 error={errors.password}
-                autoComplete="new-password"
               />
             </div>
 
-            {/* Confirm Password Field */}
             <div className="space-y-2">
-              <label
-                htmlFor="confirmPassword"
-                className="text-foreground text-sm font-medium"
-              >
+              <label className="text-foreground text-sm font-medium">
                 Confirm Password
               </label>
               <PasswordInput
-                id="confirmPassword"
                 name="confirmPassword"
                 placeholder="Confirm your password"
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 error={errors.confirmPassword}
-                autoComplete="new-password"
               />
             </div>
 
-            {/* Submit Button */}
             <Button type="submit" className="w-full" size="lg" loading={isLoading}>
-              Sign Up
+              Continue to Verification
             </Button>
           </form>
         </CardContent>

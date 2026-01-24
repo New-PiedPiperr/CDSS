@@ -25,11 +25,10 @@ function VerifyContent() {
   const [error, setError] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
 
-  // Initial OTP send
+  // Initial OTP is sent by the Register page.
+  // We only resend if they click the button or if they navigate here manually.
   useEffect(() => {
-    if (email) {
-      sendOtp();
-    } else {
+    if (!email) {
       toast.error('No email provided for verification');
     }
   }, [email]);

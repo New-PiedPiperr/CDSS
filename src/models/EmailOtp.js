@@ -20,6 +20,12 @@ const EmailOtpSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    // Registration data (stored until verification)
+    registration_data: {
+      firstName: String,
+      lastName: String,
+      password_hash: String,
+    },
   },
   {
     timestamps: { createdAt: 'created_at', updatedAt: false },

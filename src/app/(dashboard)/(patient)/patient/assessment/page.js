@@ -32,10 +32,12 @@ export default function PatientAssessmentPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
   useEffect(() => {
-    if (currentStep === 'summary' && !aiAnalysis && !isAnalyzing) {
-      handleAiAnalysis();
+    // If we land on the assessment page and it's marked as complete, reset it automatically
+    // This allows the "New Assessment" link to work as a fresh start if they just finished one.
+    if (currentStep === 'complete') {
+      resetAssessment();
     }
-  }, [currentStep]);
+  }, [currentStep, resetAssessment]);
 
   const handleAiAnalysis = async () => {
     setIsAnalyzing(true);
@@ -64,8 +66,12 @@ export default function PatientAssessmentPage() {
     }
   };
 
-  const handleSubmitClick = () => {
-    setIsDisclaimerOpen(true);
+  const handleConfirmAndAnalyze = async () => {
+    if (!aiAnalysis) {
+      await handleAiAnalysis();
+    } else {
+      setIsDisclaimerOpen(true);
+    }
   };
 
   const handleFinalSubmit = async () => {
@@ -173,16 +179,33 @@ export default function PatientAssessmentPage() {
             </Card>
 
             <div className="flex flex-col gap-4">
+              {!aiAnalysis || isAnalyzing ? (
+                <Button
+                  size="lg"
+                  onClick={handleAiAnalysis}
+                  loading={isAnalyzing}
+                  className="w-full"
+                >
+                  Confirm and Send for AI Analysis
+                  <ChevronRight size={18} className="ml-2" />
+                </Button>
+              ) : (
+                <Button
+                  size="lg"
+                  onClick={() => setIsDisclaimerOpen(true)}
+                  loading={isSubmitting}
+                  className="w-full bg-blue-600 hover:bg-blue-700"
+                >
+                  Confirm and Submit to Clinician
+                  <ChevronRight size={18} className="ml-2" />
+                </Button>
+              )}
+
               <Button
-                size="lg"
-                onClick={handleSubmitClick}
-                loading={isSubmitting}
-                disabled={isAnalyzing}
+                variant="ghost"
+                onClick={() => setStep('upload')}
+                disabled={isAnalyzing || isSubmitting}
               >
-                Confirm and Send for AI Analysis
-                <ChevronRight size={18} />
-              </Button>
-              <Button variant="ghost" onClick={() => setStep('upload')}>
                 Go back to uploads
               </Button>
             </div>

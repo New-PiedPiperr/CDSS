@@ -49,16 +49,15 @@ function Sidebar({ links = [], secondaryLinks = [], className }) {
         )}
       >
         {/* Logo */}
-        {/* Logo */}
-        <div className="border-border flex h-32 shrink-0 items-center justify-center overflow-hidden border-b bg-white">
+        <div className="border-border flex h-24 shrink-0 items-center justify-start border-b bg-white px-6">
           <Link href="/" className="relative h-full w-full">
             <Image
               src="/logo.png"
               alt="CDSS Logo"
               fill
               priority
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 256px"
+              className="object-contain object-left"
+              sizes="(max-width: 768px) 100vw, 192px"
             />
           </Link>
         </div>

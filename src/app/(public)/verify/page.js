@@ -25,15 +25,33 @@ function VerifyContent() {
   const [error, setError] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
 
-  // Initial OTP is sent by the Register page.
-  // We only resend if they click the button or if they navigate here manually.
+  // Countdown state (in seconds)
+  const [countdown, setCountdown] = useState(60);
+  const [canResend, setCanResend] = useState(false);
+
   useEffect(() => {
     if (!email) {
       toast.error('No email provided for verification');
     }
   }, [email]);
 
+  // Countdown logic
+  useEffect(() => {
+    let timer;
+    if (countdown > 0 && !canResend) {
+      timer = setInterval(() => {
+        setCountdown((prev) => prev - 1);
+      }, 1000);
+    } else {
+      setCanResend(true);
+      clearInterval(timer);
+    }
+    return () => clearInterval(timer);
+  }, [countdown, canResend]);
+
   const sendOtp = async () => {
+    if (!canResend) return;
+
     setIsResending(true);
     try {
       const response = await fetch('/api/otp/send', {
@@ -45,7 +63,10 @@ function VerifyContent() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Failed to send OTP');
 
-      toast.success('Verification code sent!');
+      toast.success('Verification code resent!');
+      // Reset countdown
+      setCountdown(60);
+      setCanResend(false);
     } catch (err) {
       toast.error(err.message);
     } finally {
@@ -133,10 +154,14 @@ function VerifyContent() {
               variant="ghost"
               size="sm"
               onClick={sendOtp}
-              disabled={isResending || isLoading || isVerified}
+              disabled={!canResend || isResending || isLoading || isVerified}
               className="text-primary hover:text-primary/80 mt-1 font-semibold"
             >
-              {isResending ? 'Sending...' : 'Resend Code'}
+              {isResending
+                ? 'Sending...'
+                : canResend
+                  ? 'Resend Code'
+                  : `Resend in ${countdown}s`}
             </Button>
           </div>
         </CardFooter>

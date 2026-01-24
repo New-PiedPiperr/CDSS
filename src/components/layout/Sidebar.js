@@ -50,19 +50,16 @@ function Sidebar({ links = [], secondaryLinks = [], className }) {
       >
         {/* Logo */}
         {/* Logo */}
-        <div className="border-border flex h-16 shrink-0 items-center gap-3 border-b px-6">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative h-10 w-10 shrink-0">
-              <Image
-                src="/logo.png"
-                alt="CDSS Logo"
-                fill
-                priority
-                className="object-contain"
-                sizes="40px"
-              />
-            </div>
-            <span className="text-primary text-xl font-bold tracking-tight">CDSS</span>
+        <div className="border-border flex h-32 shrink-0 items-center justify-center overflow-hidden border-b bg-white">
+          <Link href="/" className="relative h-full w-full">
+            <Image
+              src="/logo.png"
+              alt="CDSS Logo"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 256px"
+            />
           </Link>
         </div>
 

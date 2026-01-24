@@ -14,7 +14,7 @@ export default async function PatientLayout({ children }) {
     <>
       <Sidebar links={patientLinks} user={session?.user} />
       <div className="lg:pl-64">
-        <TopNav title="User's Dashboard" />
+        <TopNav title="Patient Dashboard" />
         <main className="p-4 lg:p-6">{children}</main>
       </div>
     </>

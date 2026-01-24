@@ -14,23 +14,14 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-/**
- * Generates a 4-digit numeric OTP string
- */
 const generateOtp = () => {
   return crypto.randomInt(1000, 10000).toString();
 };
 
-/**
- * Hashes the OTP using SHA-256
- */
 const hashOtp = (otp) => {
   return crypto.createHash('sha256').update(otp).digest('hex');
 };
 
-/**
- * Constant-time comparison for hashes
- */
 const compareHashes = (providedOtp, storedHash) => {
   const providedHash = hashOtp(providedOtp);
   const providedBuffer = Buffer.from(providedHash);
@@ -42,9 +33,6 @@ const compareHashes = (providedOtp, storedHash) => {
   return crypto.timingSafeEqual(providedBuffer, storedBuffer);
 };
 
-/**
- * Sends OTP email
- */
 const sendOtpEmail = async (email, otp) => {
   const mailOptions = {
     from: `"CDSS Verification" <${process.env.EMAIL}>`,
@@ -70,20 +58,21 @@ const sendOtpEmail = async (email, otp) => {
 };
 
 export const otpService = {
-  async sendOtp(email) {
+  async sendOtp(email, registrationData = null) {
     await connectDB();
 
     const otp = generateOtp();
     const otpHash = hashOtp(otp);
     const expiresAt = new Date(Date.now() + OTP_EXPIRATION_MINUTES * 60 * 1000);
 
-    // Overwrite previous unverified OTPs for the same email
+    // Overwrite previous unverified OTPs
     await EmailOtp.deleteMany({ email, verified: false });
 
     await EmailOtp.create({
       email,
       otp_hash: otpHash,
       expires_at: expiresAt,
+      registration_data: registrationData,
     });
 
     await sendOtpEmail(email, otp);
@@ -110,13 +99,33 @@ export const otpService = {
       return { success: false, message: 'Invalid OTP Code.' };
     }
 
-    // Mark as verified and "used once" logic is handled by verified: true
-    // Subsequent calls won't find it because we search for verified: false
+    // Mark current OTP as verified
     record.verified = true;
     await record.save();
 
-    // Mark user as verified
-    await User.findOneAndUpdate({ email }, { isVerified: true });
+    // If there is registration data, create the user account
+    if (record.registration_data && record.registration_data.firstName) {
+      const { firstName, lastName, password_hash } = record.registration_data;
+
+      // Check if user already exists (just in case)
+      const existingUser = await User.findOne({ email });
+      if (existingUser) {
+        // Just update isVerified if they already exist
+        existingUser.isVerified = true;
+        await existingUser.save();
+      } else {
+        await User.create({
+          email,
+          firstName,
+          lastName,
+          password: password_hash,
+          isVerified: true,
+        });
+      }
+    } else {
+      // Fallback: just mark existing user as verified if they exist
+      await User.findOneAndUpdate({ email }, { isVerified: true });
+    }
 
     return { success: true };
   },

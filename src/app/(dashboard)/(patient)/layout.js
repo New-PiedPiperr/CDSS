@@ -28,7 +28,7 @@ export default function PatientLayout({ children }) {
         <TopNav title="User's Dashboard" />
 
         <main className="p-4 lg:p-6">{children}</main>
-      </div>
+      </div> 
     </div>
   );
 }

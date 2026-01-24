@@ -49,7 +49,7 @@ function Sidebar({ links = [], secondaryLinks = [], className }) {
         )}
       >
         {/* Logo */}
-        <div className="border-border flex h-24 shrink-0 items-center justify-start border-b bg-white px-6">
+        <div className="border-border bg-background flex h-24 shrink-0 items-center justify-start border-b px-6">
           <Link href="/" className="relative h-full w-full">
             <Image
               src="/logo.png"

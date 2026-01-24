@@ -1,3 +1,3 @@
 export default async function Layout({ children }) {
-  return <>{children}</>;
+  return <div className="bg-background min-h-screen">{children}</div>;
 }

@@ -21,14 +21,12 @@ const patientLinks = [
 
 export default function PatientLayout({ children }) {
   return (
-    <div className="bg-background min-h-screen">
+    <>
       <Sidebar links={patientLinks} />
-
       <div className="lg:pl-64">
         <TopNav title="User's Dashboard" />
-
         <main className="p-4 lg:p-6">{children}</main>
-      </div> 
-    </div>
+      </div>
+    </>
   );
 }

@@ -28,8 +28,8 @@ function TopNav({ title, className, showSidebarTrigger = true, showUser = true }
           </button>
         )}
 
-        {/* Logo - Always show as requested */}
-        <div className="flex items-center">
+        {/* Logo - Hide on PC (Sidebar has it) */}
+        <div className="flex items-center lg:hidden">
           <Logo size="sm" showText={false} />
         </div>
 

@@ -19,7 +19,7 @@ function TopNav({ title, className }) {
       <div className="flex items-center gap-3">
         {/* Mobile Menu Button */}
         <button
-          className="hover:bg-accent text-foreground block rounded-lg p-2 transition-colors lg:hidden"
+          className="hover:bg-accent text-foreground block rounded-lg transition-colors lg:hidden"
           onClick={toggleSidebar}
           aria-label="Toggle menu"
         >

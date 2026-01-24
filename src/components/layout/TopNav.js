@@ -6,7 +6,7 @@ import { Logo } from '@/components/ui/Logo';
 import { cn } from '@/lib/cn';
 import { useUIStore } from '@/store';
 
-function TopNav({ title, className }) {
+function TopNav({ title, className, showSidebarTrigger = true, showUser = true }) {
   const { toggleSidebar } = useUIStore();
 
   return (
@@ -17,35 +17,43 @@ function TopNav({ title, className }) {
       )}
     >
       <div className="flex items-center gap-3">
-        {/* Mobile Menu Button */}
-        <button
-          className="hover:bg-accent text-foreground block rounded-lg transition-colors lg:hidden"
-          onClick={toggleSidebar}
-          aria-label="Toggle menu"
-        >
-          <Menu className="h-6 w-6" />
-        </button>
+        {/* Mobile Menu Button - only if showSidebarTrigger is true */}
+        {showSidebarTrigger && (
+          <button
+            className="hover:bg-accent text-foreground block rounded-lg transition-colors lg:hidden"
+            onClick={toggleSidebar}
+            aria-label="Toggle menu"
+          >
+            <Menu className="h-6 w-6" />
+          </button>
+        )}
 
-        {/* Mobile Logo */}
-        <div className="lg:hidden">
+        {/* Logo - Always show as requested */}
+        <div className="flex items-center">
           <Logo size="sm" showText={false} />
         </div>
 
         {/* Page Title */}
-        <h1 className="text-foreground text-sm font-semibold sm:text-lg">{title}</h1>
+        {title && (
+          <h1 className="text-foreground ml-1 text-sm font-semibold sm:text-lg">
+            {title}
+          </h1>
+        )}
       </div>
 
       {/* Right Actions */}
       <div className="flex items-center gap-2">
         <ThemeToggle />
 
-        {/* User Avatar */}
-        <button
-          className="bg-muted text-muted-foreground hover:bg-accent flex h-10 w-10 items-center justify-center rounded-full transition-colors"
-          aria-label="User menu"
-        >
-          <User className="h-5 w-5" />
-        </button>
+        {/* User Avatar - only if showUser is true */}
+        {showUser && (
+          <button
+            className="bg-muted text-muted-foreground hover:bg-accent flex h-10 w-10 items-center justify-center rounded-full transition-colors"
+            aria-label="User menu"
+          >
+            <User className="h-5 w-5" />
+          </button>
+        )}
       </div>
     </header>
   );

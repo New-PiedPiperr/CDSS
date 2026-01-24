@@ -1,7 +1,7 @@
 'use client';
 
 import { User } from 'lucide-react';
-import { ThemeToggle } from '@/components/ui';
+import { ThemeToggle, Logo } from '@/components/ui';
 import { cn } from '@/lib/cn';
 
 function TopNav({ title, className }) {
@@ -12,8 +12,18 @@ function TopNav({ title, className }) {
         className
       )}
     >
-      {/* Page Title - offset for mobile menu button */}
-      <h1 className="text-foreground pl-12 text-lg font-semibold lg:pl-0">{title}</h1>
+      <div className="flex items-center gap-3">
+        {/* Mobile Spacer for Menu Button */}
+        <div className="w-10 lg:hidden" />
+
+        {/* Mobile Logo */}
+        <div className="lg:hidden">
+          <Logo size="sm" showText={false} />
+        </div>
+
+        {/* Page Title */}
+        <h1 className="text-foreground text-lg font-semibold">{title}</h1>
+      </div>
 
       {/* Right Actions */}
       <div className="flex items-center gap-2">

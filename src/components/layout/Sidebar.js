@@ -23,13 +23,16 @@ function Sidebar({ links = [], secondaryLinks = [], className }) {
 
   return (
     <>
-      {/* Mobile Menu Button */}
+      {/* Mobile Menu Button - Only visible when closed */}
       <button
-        className="bg-primary text-primary-foreground fixed top-4 left-4 z-50 rounded-lg p-2 shadow-lg lg:hidden"
-        onClick={() => setIsMobileOpen(!isMobileOpen)}
-        aria-label="Toggle menu"
+        className={cn(
+          'bg-primary text-primary-foreground fixed top-4 left-4 z-50 rounded-lg p-2 shadow-lg transition-opacity duration-200 lg:hidden',
+          isMobileOpen ? 'pointer-events-none opacity-0' : 'opacity-100'
+        )}
+        onClick={() => setIsMobileOpen(true)}
+        aria-label="Open menu"
       >
-        {isMobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        <Menu className="h-6 w-6" />
       </button>
 
       {/* Mobile Overlay */}
@@ -48,18 +51,27 @@ function Sidebar({ links = [], secondaryLinks = [], className }) {
           className
         )}
       >
-        {/* Logo */}
-        <div className="border-border bg-background flex h-24 shrink-0 items-center justify-start border-b px-6">
-          <Link href="/" className="relative h-full w-full">
+        {/* Logo & Close Button */}
+        <div className="border-border bg-background flex h-24 shrink-0 items-center justify-between border-b px-6">
+          <Link href="/" className="relative h-12 w-32">
             <Image
               src="/logo.png"
               alt="CDSS Logo"
               fill
               priority
               className="object-contain object-left"
-              sizes="(max-width: 768px) 100vw, 192px"
+              sizes="(max-width: 768px) 100vw, 128px"
             />
           </Link>
+
+          {/* Close Button (Mobile Only) */}
+          <button
+            className="text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg p-2 transition-colors lg:hidden"
+            onClick={() => setIsMobileOpen(false)}
+            aria-label="Close menu"
+          >
+            <X className="h-6 w-6" />
+          </button>
         </div>
 
         {/* Primary Navigation Links */}

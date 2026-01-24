@@ -39,16 +39,17 @@ function Sidebar({ links = [], className }) {
         )}
       >
         {/* Logo */}
-        <div className="border-sidebar-muted flex h-16 items-center justify-center gap-2 border-b px-4">
-          <Image
-            src="/logo.png"
-            alt="CDSS Logo"
-            width={36}
-            height={36}
-            priority
-            className="object-contain"
-          />
-          <span className="text-sidebar-foreground text-lg font-semibold">CDSS</span>
+        <div className="border-sidebar-muted flex h-16 items-center justify-center border-b px-4">
+          <div className="rounded-lg bg-white p-2">
+            <Image
+              src="/logo.png"
+              alt="CDSS Logo"
+              width={120}
+              height={40}
+              priority
+              className="h-10 w-auto object-contain"
+            />
+          </div>
         </div>
 
         {/* Navigation Links */}

@@ -225,11 +225,7 @@ export default async function PatientDashboardPage() {
                   Scheduled exercises and clinical sessions
                 </CardDescription>
               </div>
-              <Button variant="ghost" size="sm" asChild>
-                <Link href="/patient/progress" className="text-primary text-xs font-bold">
-                  View Full Plan
-                </Link>
-              </Button>
+              <Link href="/patient/progress" className="text-primary text-xs font-bold hover:underline">View Full Plan</Link>
             </CardHeader>
             <CardContent className="p-0">
               <div className="overflow-x-auto">
@@ -405,14 +401,7 @@ export default async function PatientDashboardPage() {
                   <p className="text-muted-foreground text-xs font-medium">
                     No sessions booked.
                   </p>
-                  <Button
-                    variant="link"
-                    size="sm"
-                    className="text-primary mt-1 h-auto p-0 text-[11px] font-bold"
-                    asChild
-                  >
-                    <Link href="/patient/appointments">Schedule one now</Link>
-                  </Button>
+                  <Link href="/patient/appointments" className="text-primary text-[11px] font-bold p-0 h-auto mt-1 hover:underline">Schedule one now</Link>
                 </div>
               )}
             </CardContent>

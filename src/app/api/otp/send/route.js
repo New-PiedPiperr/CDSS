@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { otpService } from '@/services/otpService';
 import encryptPassword from '@/lib/encryptPassword';
+import connectDB from '@/lib/db/connect';
+import User from '@/models/User';
 
 const rateLimitMap = new Map();
 
@@ -25,6 +27,16 @@ export async function POST(req) {
 
     let registrationData = null;
     if (firstName && lastName && password) {
+      // Check if user already exists before allowing registration OTP
+      await connectDB();
+      const existingUser = await User.findOne({ email: email.toLowerCase() });
+      if (existingUser) {
+        return NextResponse.json(
+          { error: 'An account with this email already exists.' },
+          { status: 400 }
+        );
+      }
+
       const passwordHash = await encryptPassword(password);
       registrationData = {
         firstName,

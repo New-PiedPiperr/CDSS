@@ -30,8 +30,12 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           return null;
         }
 
+        if (!user.isVerified) {
+          throw new Error('Please verify your email before logging in.');
+        }
+
         return {
-          id: user._id,
+          id: user._id.toString(),
           email: user.email,
           firstName: user.firstName,
           lastName: user.lastName,

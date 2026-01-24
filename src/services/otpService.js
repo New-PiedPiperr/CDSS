@@ -1,6 +1,7 @@
 import crypto from 'crypto';
 import nodemailer from 'nodemailer';
 import EmailOtp from '@/models/EmailOtp';
+import User from '@/models/User';
 import connectDB from '@/lib/db/connect';
 
 const OTP_EXPIRATION_MINUTES = parseInt(process.env.OTP_EXPIRATION_TIME || '5', 10);
@@ -113,6 +114,9 @@ export const otpService = {
     // Subsequent calls won't find it because we search for verified: false
     record.verified = true;
     await record.save();
+
+    // Mark user as verified
+    await User.findOneAndUpdate({ email }, { isVerified: true });
 
     return { success: true };
   },

@@ -51,7 +51,7 @@ export default function LoginPage() {
         redirect: false,
       });
       console.log(result);
-      if (result.error && result.code) {
+      if (result.error || result.code) {
         return toast.error('Invalid credentials. Please try again.');
       }
       toast.success('Logged in successfully!');

@@ -15,13 +15,15 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         await connectDB();
         const { email, password } = credentials;
         // Here you would normally fetch the user from your database
-        const user = await User.findOne({ email });
+        const user = await User.findOne({ email }).select(
+          'password email firstName lastName avatar role'
+        );
         if (!user) {
           console.log('User not found');
           return null;
         }
         // check password if it's correct
-        const isPasswordValid = bcrypt.compare(password, user?.password);
+        const isPasswordValid = await bcrypt.compare(password, user.password);
         // if password is not correct
         if (!isPasswordValid) {
           console.log('Invalid password');
@@ -34,6 +36,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           firstName: user.firstName,
           lastName: user.lastName,
           role: user.role,
+          avatar: user.avatar || null,
         };
       },
     }),
@@ -46,6 +49,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         token.firstName = user.firstName;
         token.lastName = user.lastName;
         token.role = user.role;
+        token.avatar = user.avatar;
       }
       return token;
     },
@@ -56,6 +60,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         session.user.firstName = token.firstName;
         session.user.lastName = token.lastName;
         session.user.role = token.role;
+        session.user.avatar = token.avatar;
       }
       return session;
     },

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import connectDB from '@/lib/db/connect';
-import User, { ROLES } from '@/models/User';
+import User from '@/models/User';
 import encryptPassword from '@/lib/encryptPassword';
 
 export async function POST(req) {

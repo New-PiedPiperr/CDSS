@@ -2,7 +2,7 @@ import { auth } from '@/../auth';
 import connectDB from '@/lib/db/connect';
 import DiagnosisSession from '@/models/DiagnosisSession';
 import { NextResponse } from 'next/server';
-import axios from 'axios';
+import { getAiPreliminaryAnalysis } from '@/lib/ai-agent';
 
 export async function POST(req) {
   try {
@@ -19,62 +19,20 @@ export async function POST(req) {
 
     await connectDB();
 
-    // 1. Prepare symptoms for Mistral AI
-    const symptomText = symptomData
-      .map((s) => `Question: ${s.question}\nAnswer: ${s.answer}`)
-      .join('\n\n');
-
-    const prompt = `
-      You are a diagnostic engine using the Weighted Matching Paradigm. 
-      Compare the following symptoms for the ${bodyRegion} region against clinical heuristics.
-      
-      Symptoms:
-      ${symptomText}
-      
-      Output JSON only:
-      {
-        "temporalDiagnosis": "String (e.g., Lumbar Disc Herniation)",
-        "confidenceScore": "Number (0-100)",
-        "riskLevel": "String (Low, Moderate, Urgent)",
-        "reasoning": ["String (Key indicator 1)", "String (Key indicator 2)"]
-      }
-    `;
-
-    // 2. Call Mistral AI Agent
-    // Using the Mistral AI API as a placeholder/standard REST call since no SDK is configured
-    // Note: Adjust the endpoint/payload based on the specific agent provider if it's not standard Mistral
+    // 1. Call Mistral AI Agent via helper
     let aiResult;
     try {
-      const response = await axios.post(
-        'https://api.mistral.ai/v1/chat/completions',
-        {
-          model: 'mistral-medium', // Fallback model if agent is not available via this endpoint
-          messages: [
-            {
-              role: 'system',
-              content:
-                'You are a diagnostic engine using the Weighted Matching Paradigm. Compare symptoms against clinical heuristics. Output JSON only.',
-            },
-            { role: 'user', content: prompt },
-          ],
-          response_format: { type: 'json_object' },
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${process.env['CDSS-AI_API_KEY']}`,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-
-      aiResult = JSON.parse(response.data.choices[0].message.content);
+      const result = await getAiPreliminaryAnalysis({
+        selectedRegion: bodyRegion,
+        symptomData,
+      });
+      aiResult = result.analysis;
     } catch (error) {
-      console.error('Mistral AI Error:', error.response?.data || error.message);
-      // Fallback or handle error
+      console.error('AI analysis error in submission:', error);
       throw new Error('AI analysis failed');
     }
 
-    // 3. Persist to Database
+    // 2. Persist to Database
     const diagnosisSession = await DiagnosisSession.create({
       patientId: session.user.id,
       bodyRegion,

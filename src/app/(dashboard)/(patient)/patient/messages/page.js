@@ -54,7 +54,7 @@ export default function Page() {
                 ? 'border-b border-gray-100 dark:border-gray-700'
                 : ''
             }`}
-            href={`/patient/message/${index}`}
+            href={`/patient/messages/${index}`}
           >
             {/* Left side - Avatar and text */}
             <div className="flex flex-1 items-center gap-4">

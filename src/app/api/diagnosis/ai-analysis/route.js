@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getWeightedAiAnalysis } from '@/lib/ai-agent';
+import { getAiPreliminaryAnalysis } from '@/lib/ai-agent';
 
 export async function POST(request) {
   try {
@@ -9,11 +9,7 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Missing assessment data' }, { status: 400 });
     }
 
-    // Map existing structure to new getWeightedAiAnalysis structure
-    const aiResult = await getWeightedAiAnalysis({
-      bodyRegion: body.selectedRegion,
-      symptomData: body.responses,
-    });
+    const aiResult = await getAiPreliminaryAnalysis(body);
 
     return NextResponse.json(aiResult);
   } catch (error) {

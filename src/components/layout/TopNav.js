@@ -1,6 +1,7 @@
 'use client';
 
 import { User, Menu } from 'lucide-react';
+import Link from 'next/link';
 import { ThemeToggle } from '@/components/ui';
 import { Logo } from '@/components/ui/Logo';
 import { cn } from '@/lib/cn';
@@ -29,9 +30,9 @@ function TopNav({ title, className, showSidebarTrigger = true, showUser = true }
         )}
 
         {/* Logo - Always visible now */}
-        <div className="flex items-center">
+        <Link href="/" className="flex items-center transition-opacity hover:opacity-80">
           <Logo size="sm" showText={false} />
-        </div>
+        </Link>
 
         {/* Page Title */}
         {title && (

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import decisionEngine from './decision-engine/heuristic';
 
 /**
  * Mistral AI Agent utility for clinical diagnosis.
@@ -31,6 +32,16 @@ export async function getAiPreliminaryAnalysis({
       .map((s) => `Question: ${s.question}\nAnswer: ${s.answer}`)
       .join('\n\n');
 
+    // 2. RUN HEURISTIC ENGINE FIRST
+    // This provides a mathematical anchor for confidence
+    const normalizedSymptoms = symptoms.map((s) => ({
+      questionId: s.question,
+      response: s.answer,
+      questionCategory: s.question,
+    }));
+    const heuristicResult = decisionEngine.calculateTemporalDiagnosis(normalizedSymptoms);
+    const baseConfidence = heuristicResult.primaryDiagnosis?.confidence || 0;
+
     const prompt = `
       You are a diagnostic engine using the Weighted Matching Paradigm. 
       Compare the following symptoms for the ${bodyRegion} region against clinical heuristics.
@@ -38,18 +49,24 @@ export async function getAiPreliminaryAnalysis({
       Symptoms:
       ${symptomText}
       
+      Mathematical Baseline Confidence: ${(baseConfidence * 100).toFixed(0)}%
+
       Instructions:
-      1. Analyze the symptoms.
+      1. Analyze the symptoms using clinical reasoning.
       2. Provide a temporal diagnosis.
-      3. For "reasoning", provide clear clinical indicators found in the symptoms.
-      4. CRITICAL: Do NOT include any internal tags, question IDs, or technical codes (e.g., "(lumbar_q_redflag)") in the reasoning. Use natural language only.
+      3. Calculate a dynamic "confidenceScore" (0-100) by refining the "Mathematical Baseline Confidence".
+         - Adjust based on symptom specificity, red flags, and consistency.
+         - AVOID using fixed or placeholder numbers (like 85).
+         - Be granular (e.g., 73, 88, 92).
+      4. For "reasoning", provide clear clinical indicators found in the symptoms.
+      5. CRITICAL: Do NOT include any internal tags, question IDs, or technical codes (e.g., "(lumbar_q_redflag)") in the reasoning. Use natural language only.
 
       Output JSON only:
       {
-        "temporalDiagnosis": "String (e.g., Lumbar Disc Herniation)",
-        "confidenceScore": "Number (0-100)",
-        "riskLevel": "String (Low, Moderate, Urgent)",
-        "reasoning": ["String (Key indicator 1)", "String (Key indicator 2)"]
+        "temporalDiagnosis": "String",
+        "confidenceScore": Number,
+        "riskLevel": "Low" | "Moderate" | "Urgent",
+        "reasoning": ["String"]
       }
     `;
 

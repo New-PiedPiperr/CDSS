@@ -2,7 +2,7 @@ import { auth } from '@/../auth';
 import connectDB from '@/lib/db/connect';
 import DiagnosisSession from '@/models/DiagnosisSession';
 import { NextResponse } from 'next/server';
-import { getAiPreliminaryAnalysis } from '@/lib/ai-agent';
+import { getAiPreliminaryAnalysis } from '../../../../lib/ai-agent';
 
 export async function POST(req) {
   try {

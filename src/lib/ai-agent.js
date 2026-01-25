@@ -103,7 +103,10 @@ export async function getAiPreliminaryAnalysis({
 
     return {
       success: true,
-      analysis: aiResult,
+      analysis: {
+        ...aiResult,
+        baseConfidence: Number((baseConfidence * 100).toFixed(0)), // Expose baseline for UI comparison
+      },
     };
   } catch (error) {
     console.error('AI Agent Error:', error.response?.data || error.message);

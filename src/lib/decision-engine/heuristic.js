@@ -253,6 +253,65 @@ function generateRecommendations(conditionCode, severity) {
 }
 
 /**
+ * Identify Red Flags based on symptom responses
+ * @param {Object[]} symptoms - Patient symptom responses
+ * @returns {Object[]} Array of triggered red flags
+ */
+export function identifyRedFlags(symptoms) {
+  const redFlags = [];
+
+  // Define known red flag patterns (could be moved to a config/medicalRules in future)
+  const redFlagPatterns = [
+    {
+      id: 'cauda_equina_bowel_bladder',
+      questionId: 'lumbar_q_redflag', // From medicalRules.js
+      triggerResponse: 'Yes',
+      severity: 'CRITICAL',
+      label: 'Bowel/Bladder Dysfunction (Cauda Equina Risk)',
+    },
+    {
+      id: 'lumbar_bilateral_radiation',
+      questionId: 'lumbar_q1',
+      triggerResponse: 'Radiates down both legs',
+      severity: 'URGENT',
+      label: 'Bilateral Leg Radiation',
+    },
+    {
+      id: 'achilles_rupture_pop',
+      questionId: 'ankle_achilles_pop',
+      triggerResponse: 'Yes',
+      severity: 'URGENT',
+      label: 'Audible Pop (Achilles Rupture Risk)',
+    },
+    {
+      id: 'ankle_fracture_weight',
+      questionId: 'ankle_fracture_q1',
+      triggerResponse: 'No',
+      severity: 'URGENT',
+      label: 'Inability to Bear Weight (Fracture Risk)',
+    },
+  ];
+
+  const symptomMap = new Map(
+    symptoms.map((s) => [s.questionCategory || s.questionId, s.response])
+  );
+
+  for (const pattern of redFlagPatterns) {
+    const response = symptomMap.get(pattern.questionId);
+    if (response === pattern.triggerResponse) {
+      redFlags.push({
+        id: pattern.id,
+        severity: pattern.severity,
+        label: pattern.label,
+        questionId: pattern.questionId,
+      });
+    }
+  }
+
+  return redFlags;
+}
+
+/**
  * Main diagnostic function - Calculate temporal diagnosis
  * @param {Object[]} symptoms - Array of symptom response objects
  * @param {Object} options - Optional configuration
@@ -271,7 +330,15 @@ export function calculateTemporalDiagnosis(symptoms, options = {}) {
     };
   }
 
-  // Calculate scores for all conditions
+  // 1. Identify Red Flags first
+  const redFlags = identifyRedFlags(symptoms);
+  const highestRisk = redFlags.some((rf) => rf.severity === 'CRITICAL')
+    ? 'Urgent'
+    : redFlags.some((rf) => rf.severity === 'URGENT')
+      ? 'Moderate'
+      : 'Low';
+
+  // 2. Calculate scores for all conditions
   const results = [];
 
   for (const conditionData of Object.values(CONDITION_PATTERNS)) {
@@ -288,7 +355,7 @@ export function calculateTemporalDiagnosis(symptoms, options = {}) {
         conditionName: conditionData.name,
         confidence: parseFloat(confidence.toFixed(3)),
         severity,
-        matchedPatterns,
+        matchedPatterns, // Traceability: which rules matched
         recommendations: generateRecommendations(conditionData.code, severity),
       });
     }
@@ -304,6 +371,8 @@ export function calculateTemporalDiagnosis(symptoms, options = {}) {
   return {
     primaryDiagnosis,
     differentialDiagnoses,
+    redFlags, // Explicit red flags
+    riskLevel: highestRisk, // Overall risk assessment
     calculatedAt: new Date().toISOString(),
     engineVersion: '1.0.0',
   };

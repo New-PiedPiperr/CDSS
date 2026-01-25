@@ -84,7 +84,7 @@ export default function Page() {
                 </div>
               )}
               <div
-                className={`max-w-[280px] rounded-lg px-3 py-2.5 sm:max-w-md sm:rounded-xl sm:px-4 sm:py-3 ${
+                className={`max-w-70 rounded-lg px-3 py-2.5 sm:max-w-md sm:rounded-xl sm:px-4 sm:py-3 ${
                   msg.sender === 'patient'
                     ? 'bg-cyan-500 text-white'
                     : 'bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200'
@@ -159,7 +159,7 @@ export default function Page() {
             onClick={handleSendMessage}
             className="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-500 text-white hover:bg-cyan-600 sm:h-10 sm:w-10"
           >
-            <Send size={16} className="sm:h-[18px] sm:w-[18px]" />
+            <Send size={16} className="sm:h-4.5 sm:w-4.5" />
           </button>
         </div>
       </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { TopNav } from '@/components/layout/TopNav';
-import { Sidebar } from '@/components/layout/Sidebar';
+import Sidebar from '@/components/layout/Sidebar';
 import { useUIStore } from '@/store';
 import { cn } from '@/lib/cn';
 

@@ -1,7 +1,5 @@
 'use client';
-import { Search } from 'lucide-react';
 import { useState } from 'react';
-import Link from 'next/link';
 import SearchPaitent from '@/components/dashboard/clinician/search';
 import PatientInfoContainer from '@/components/dashboard/clinician/paitentContainer';
 

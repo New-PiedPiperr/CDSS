@@ -1,8 +1,6 @@
 'use client';
 import PatientInfoContainer from '@/components/dashboard/clinician/paitentContainer';
 import SearchPaitent from '@/components/dashboard/clinician/search';
-import { Search } from 'lucide-react';
-import Link from 'next/link';
 import { useState } from 'react';
 
 export default function ReferralPage() {

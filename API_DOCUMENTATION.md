@@ -44,54 +44,89 @@ This section defines the ownership and logic for every route in the system.
 
 ---
 
-## 3. API Specification
+## 3. Core API Specifications
 
-### 3.1 Auth & Identity
+### 3.1 Onboarding & Clinical Flow (Philip / Samkiell)
 #### `POST /api/otp/send`
+- **Owner**: Philip/Samkiell (Shared Logic)
 - **Request**: `{ email, firstName?, lastName?, password? }`
-- **Logic**: Used for both login verification and account initialization.
+- **Logic**: Generates OTP, hashes password (via Robert's helper), and sends email.
 
-#### `POST /api/patients/profile` (Owned by Robert)
-- **Method**: `GET / PATCH`
-- **Purpose**: Fetch or update patient demographic data.
-
-#### `GET /api/users?role=PATIENT` (Owned by Robert)
-- **Purpose**: Lists all registered patients for clinician/admin views.
-
-### 3.2 Clinical Endpoints
 #### `POST /api/assessment/submit`
-- **Logic**: Calls Mistral AI Agent → Persists `DiagnosisSession` → Creates `CaseFile`.
+- **Owner**: Samkiel
+- **Logic**: Mistral AI Integration → `DiagnosisSession` creation → `CaseFile` indexing.
+- **Payload**: `{ bodyRegion, symptomData: [], mediaUrls: [] }`
 
-#### `PATCH /api/diagnosis/[id]` (Owned by Robert)
-- **Goal**: Finalize clinician review and confirm diagnosis.
-
-#### `GET /api/clinician/stats` (Owned by Robert)
-- **Purpose**: Aggregated data for dashboard widgets (active cases, pending reviews).
+#### `POST /api/upload`
+- **Owner**: Samkiel
+- **Purpose**: Server-side proxy for Cloudinary medical image uploads.
 
 ---
 
-## 4. Operational Governance (Hard Boundaries)
+## 4. Backend Implementation (Robert's Scope)
 
-### 4.1 Dashboard Shell Authority
+This section details the specific requirements for the APIs owned by **Robert (@bobanih00)**.
+
+### 4.1 Patient Profile
+- **Endpoint**: `/api/patients/profile`
+- **Method**: `GET`
+  - **Purpose**: Fetch the logged-in patient's profile data.
+  - **Response**: `{ success: true, data: { firstName, lastName, email, phone, gender, dateOfBirth, avatar } }`
+- **Method**: `PATCH`
+  - **Purpose**: Update patient demographics.
+  - **Body**: `{ phone?, gender?, dateOfBirth?, avatar? }`
+
+### 4.2 User Management
+- **Endpoint**: `/api/users`
+- **Method**: `GET`
+  - **Query**: `role=PATIENT`
+  - **Purpose**: Retrieve a list of all patients for the clinician's CRM/Queue views.
+  - **Response**: `{ success: true, count: number, users: [...] }`
+
+### 4.3 Clinician Analytics
+- **Endpoint**: `/api/clinician/stats`
+- **Method**: `GET`
+  - **Purpose**: Aggregated stats for the clinician dashboard.
+  - **Logic**: Count `DiagnosisSession` by status (`pending_review`, `assigned`, `completed`) for the logged-in clinician.
+  - **Response**: `{ success: true, data: { pending: 5, active: 12, completed: 45 } }`
+
+### 4.4 Advanced Diagnosis Support
+- **Endpoint**: `/api/diagnosis/[id]`
+- **Method**: `PATCH`
+  - **Purpose**: Allow clinicians to provide a final, verified diagnosis and notes.
+  - **Body**: `{ clinicianReview: { confirmedDiagnosis: string, notes: string }, status: 'completed' }`
+
+### 4.5 Security & Registration
+- **Module**: `/api/auth/register` (and `/api/otp/send`)
+- **Deliverable**: 
+  - Implementation of **Bcrypt** hashing for all new user passwords.
+  - Ensure passwords are never stored in plain text during the OTP registration flight.
+  - Validate that hashing occurs *before* persistence in the `User` model.
+
+---
+
+## 5. Operational Governance (Hard Boundaries)
+
+### 5.1 Dashboard Shell Authority
 To maintain UI consistency and role enforcement, the **Dashboard Shells** (Sidebar, TopNav, Layout logic) are restricted.
 - **Protected Controllers**: `Samkiell` & `Philip` only.
 - **Rule**: No direct modifications to layout files by other team members without PR approval.
 
-### 4.2 PR & Integration Workflow
+### 5.2 PR & Integration Workflow
 1. **Feature Isolation**: One branch per developer per feature.
 2. **Review Tier**: All core logic changes (Heuristic/AI) must be reviewed by Samkiell.
 3. **Parity**: Ensure patient and clinician experiences share component libraries where medically applicable.
 
 ---
 
-## 5. Data Models & Contracts
-### 5.1 DiagnosisSession
+## 6. Data Models & Contracts
+### 6.1 DiagnosisSession
 The source of truth for MSK assessments. Stores `symptomData` (Heuristic input) and `aiAnalysis` (LLM output).
 
-### 5.2 CaseFile
+### 6.2 CaseFile
 The administrative link between a patient's session and a clinician assignment.
 
-### 5.3 TreatmentPlan
+### 6.3 TreatmentPlan
 Iterative recovery schedules, including sets/reps and daily goals.
 ---
 

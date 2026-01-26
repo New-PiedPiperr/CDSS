@@ -8,10 +8,12 @@ import { Logo } from '@/components/ui/Logo';
 import { cn } from '@/lib/cn';
 import { useUIStore } from '@/store';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 function TopNav({ title, className, showSidebarTrigger = true, showUser = true }) {
   const { toggleSidebar } = useUIStore();
   const { data: session } = useSession();
+  const router = useRouter();
 
   const isClinician = session?.user?.role?.toLowerCase() === 'clinician';
   const userName = session?.user?.firstName
@@ -72,18 +74,11 @@ function TopNav({ title, className, showSidebarTrigger = true, showUser = true }
           <button
             className="border-background flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border-2 shadow-md transition-transform hover:scale-105"
             aria-label="User menu"
-            onClick={async () => {
-              if (window.confirm('Do you want to sign out?')) {
-                const { signOut } = await import('next-auth/react');
-                const { useAuthStore, useDiagnosisStore, useAssessmentStore } =
-                  await import('@/store');
-
-                useAuthStore.getState().logout?.();
-                useDiagnosisStore.getState().reset?.();
-                useAssessmentStore.getState().resetAssessment?.();
-
-                await signOut({ callbackUrl: '/', redirect: true });
-              }
+            onClick={() => {
+              const role = session?.user?.role;
+              if (role === 'ADMIN') router.push('/admin/dashboard');
+              else if (role === 'CLINICIAN') router.push('/clinician/settings');
+              else router.push('/patient/settings');
             }}
           >
             {session?.user?.image ? (

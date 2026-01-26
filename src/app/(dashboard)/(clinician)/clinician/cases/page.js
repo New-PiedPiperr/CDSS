@@ -46,7 +46,11 @@ export default function Page() {
       <SearchPaitent searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
       <div className="space-y-4">
-        <PatientInfoContainer patients={patients} searchQuery={searchQuery} />
+        <PatientInfoContainer
+          patients={patients}
+          searchQuery={searchQuery}
+          url={'/clinician/cases'}
+        />
       </div>
     </div>
   );

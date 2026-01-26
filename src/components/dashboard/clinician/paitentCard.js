@@ -1,5 +1,5 @@
 import Link from 'next/link';
-export default function PaitentInfoCard({ patient }) {
+export default function PaitentInfoCard({ patient, url }) {
   const getStatusColor = (status) => {
     const colors = {
       active: 'bg-green-500',
@@ -43,7 +43,7 @@ export default function PaitentInfoCard({ patient }) {
 
       <div className="flex items-center gap-3 sm:gap-4">
         <Link
-          href={`/clinician/cases/${patient?.id}`}
+          href={`${url}/${patient?.id}`}
           className="rounded-lg bg-cyan-500 px-4 py-2 text-xs font-medium text-white transition-colors hover:bg-cyan-600 sm:px-6 sm:text-sm"
         >
           View

@@ -1,5 +1,5 @@
 import PaitentInfoCard from '@/components/dashboard/clinician/paitentCard';
-export default function PatientInfoContainer({ patients, searchQuery }) {
+export default function PatientInfoContainer({ patients, searchQuery, url }) {
   const filteredPatients = patients.filter((patient) =>
     patient.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -19,7 +19,7 @@ export default function PatientInfoContainer({ patients, searchQuery }) {
       )}
       {filteredPatients.length > 0 ? (
         filteredPatients.map((patient, idx) => {
-          return <PaitentInfoCard patient={patient} key={idx} />;
+          return <PaitentInfoCard patient={patient} key={idx} url={url} />;
         })
       ) : (
         <div className="flex flex-col items-center justify-center py-16 sm:py-20">

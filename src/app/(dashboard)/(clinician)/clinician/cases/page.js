@@ -7,38 +7,38 @@ export default function Page() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const patients = [
-    {
-      id: 1,
-      name: 'Bola Ahmed Tinubu',
-      gender: 'Male',
-      time: '8:00am',
-      date: '12-11-2025',
-      status: 'active',
-    },
-    {
-      id: 2,
-      name: 'Tomisi Faith John',
-      gender: 'Female',
-      time: '8:30am',
-      date: '12-11-2025',
-      status: 'active',
-    },
-    {
-      id: 3,
-      name: 'Henry Ahmed Garet',
-      gender: 'Male',
-      time: '10:00am',
-      date: '12-11-2025',
-      status: 'pending',
-    },
-    {
-      id: 4,
-      name: 'Bola Saed Dushak',
-      gender: 'Male',
-      time: '10:30am',
-      date: '12-11-2025',
-      status: 'urgent',
-    },
+    // {
+    //   id: 1,
+    //   name: 'Bola Ahmed Tinubu',
+    //   gender: 'Male',
+    //   time: '8:00am',
+    //   date: '12-11-2025',
+    //   status: 'active',
+    // },
+    // {
+    //   id: 2,
+    //   name: 'Tomisi Faith John',
+    //   gender: 'Female',
+    //   time: '8:30am',
+    //   date: '12-11-2025',
+    //   status: 'active',
+    // },
+    // {
+    //   id: 3,
+    //   name: 'Henry Ahmed Garet',
+    //   gender: 'Male',
+    //   time: '10:00am',
+    //   date: '12-11-2025',
+    //   status: 'pending',
+    // },
+    // {
+    //   id: 4,
+    //   name: 'Bola Saed Dushak',
+    //   gender: 'Male',
+    //   time: '10:30am',
+    //   date: '12-11-2025',
+    //   status: 'urgent',
+    // },
   ];
 
   const filteredPatients = patients.filter((patient) =>
@@ -126,8 +126,55 @@ export default function Page() {
         ))}
 
         {filteredPatients.length === 0 && (
-          <div className="py-12 text-center">
-            <p className="text-gray-500 dark:text-gray-400">No patients found</p>
+          <div className="flex flex-col items-center justify-center py-16 sm:py-20">
+            <svg
+              className="mb-6 h-32 w-32 text-gray-300 sm:h-40 sm:w-40 dark:text-gray-600"
+              viewBox="0 0 200 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="50"
+                y="30"
+                width="100"
+                height="130"
+                rx="8"
+                stroke="currentColor"
+                strokeWidth="3"
+              />
+              <g stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                <line x1="100" y1="70" x2="100" y2="110" />
+                <line x1="80" y1="90" x2="120" y2="90" />
+              </g>
+              <line
+                x1="65"
+                y1="130"
+                x2="135"
+                y2="130"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+              <line
+                x1="65"
+                y1="145"
+                x2="135"
+                y2="145"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+              <line
+                x1="30"
+                y1="30"
+                x2="170"
+                y2="170"
+                stroke="currentColor"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+            </svg>
+            <p className="text-center text-sm font-medium text-gray-600 sm:text-base dark:text-gray-400">
+              No Patient Case File Has Been Assigned To You
+            </p>
           </div>
         )}
       </div>

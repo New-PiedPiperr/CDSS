@@ -79,14 +79,14 @@ export default function NotificationsPage() {
 
       {/* Tabs */}
       <div className="mb-6 border-b border-gray-200 dark:border-gray-700">
-        <div className="flex gap-4 overflow-x-auto sm:gap-8">
+        <div className="flex gap-6 overflow-x-auto sm:gap-8">
           {tabs.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`cursor-pointer border-b-2 border-transparent pb-3 text-sm font-medium whitespace-nowrap transition-colors hover:border-gray-900 sm:text-base dark:hover:border-gray-100 ${
+              className={`cursor-pointer pb-2.5 text-sm font-medium whitespace-nowrap transition-all sm:text-base ${
                 activeTab === tab
-                  ? 'text-gray-900 dark:text-gray-100'
+                  ? 'border-b-2 border-gray-900 text-gray-900 dark:border-gray-100 dark:text-gray-100'
                   : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
               }`}
             >

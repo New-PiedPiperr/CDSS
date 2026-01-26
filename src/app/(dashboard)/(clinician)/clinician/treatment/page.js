@@ -7,24 +7,24 @@ export default function TreatmentPlannerPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const patients = [
-    // {
-    //   id: 1,
-    //   name: 'Bola Ahmed Tinubu',
-    //   gender: 'Male',
-    //   status: 'completed',
-    // },
-    // {
-    //   id: 2,
-    //   name: 'Tomisi Faith John',
-    //   gender: 'Female',
-    //   status: 'inprogress',
-    // },
-    // {
-    //   id: 3,
-    //   name: 'Bola Saed Dushak',
-    //   gender: 'Male',
-    //   status: 'completed',
-    // },
+    {
+      id: 1,
+      name: 'Bola Ahmed Tinubu',
+      gender: 'Male',
+      status: 'completed',
+    },
+    {
+      id: 2,
+      name: 'Tomisi Faith John',
+      gender: 'Female',
+      status: 'inprogress',
+    },
+    {
+      id: 3,
+      name: 'Bola Saed Dushak',
+      gender: 'Male',
+      status: 'completed',
+    },
   ];
 
   const filteredPatients = useMemo(
@@ -102,7 +102,7 @@ export default function TreatmentPlannerPage() {
 
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                 <Link
-                  href={`/clinician/treatment/${patient.id}`}
+                  href={`/clinician/treatment/view/${patient.id}`}
                   className="flex items-center justify-center rounded-lg bg-cyan-500 px-4 py-2 text-xs font-medium text-white transition hover:bg-cyan-600 sm:text-sm"
                 >
                   View

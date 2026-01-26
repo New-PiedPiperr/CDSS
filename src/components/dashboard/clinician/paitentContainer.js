@@ -1,3 +1,4 @@
+import PaitentInfoCard from '@/components/dashboard/clinician/paitentCard';
 export default function PatientInfoContainer({ patients, searchQuery }) {
   const filteredPatients = patients.filter((patient) =>
     patient.name.toLowerCase().includes(searchQuery.toLowerCase())

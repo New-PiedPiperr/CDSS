@@ -276,27 +276,126 @@ export default function CaseViewPage() {
         <h2 className="mb-4 text-base font-semibold text-gray-900 dark:text-gray-100">
           Quick Actions
         </h2>
-        <div className="space-y-3">
-          <button className="flex w-full items-center justify-between rounded-lg bg-green-500 p-4 text-left text-white transition-colors hover:bg-green-600">
-            <div>
-              <div className="font-semibold">Book Appointment</div>
-              <div className="text-xs opacity-90">Schedule next consultation</div>
+        <div className="space-y-4">
+          <button className="relative w-full overflow-hidden rounded-2xl bg-linear-to-r from-green-400 to-green-500 p-6 text-left text-white transition-transform hover:scale-105 sm:p-8">
+            <div className="relative z-10 flex items-start justify-between">
+              <div>
+                <div className="mb-2 flex items-center gap-3">
+                  <svg
+                    className="h-6 w-6 sm:h-7 sm:w-7"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M7 10h12V5H7v5zm12-7H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" />
+                  </svg>
+                  <span className="text-base font-bold sm:text-lg">Book Appointment</span>
+                </div>
+                <p className="text-sm opacity-95 sm:text-base">
+                  Schedule your next physiotherapy session with your patient.
+                </p>
+              </div>
             </div>
-            <Calendar size={24} />
+            <svg
+              className="absolute top-0 right-0 h-32 w-32 opacity-30 sm:h-40 sm:w-40"
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="50"
+                y="20"
+                width="35"
+                height="45"
+                rx="3"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+              <path
+                d="M60 35h15M60 45h15M60 55h15M65 75h5v5h-5z"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
           </button>
-          <button className="flex w-full items-center justify-between rounded-lg bg-blue-500 p-4 text-left text-white transition-colors hover:bg-blue-600">
-            <div>
-              <div className="font-semibold">Check Related Test</div>
-              <div className="text-xs opacity-90">View test results</div>
+
+          <button className="relative w-full overflow-hidden rounded-2xl bg-linear-to-r from-blue-400 to-blue-500 p-6 text-left text-white transition-transform hover:scale-105 sm:p-8">
+            <div className="relative z-10 flex items-start justify-between">
+              <div>
+                <div className="mb-2 flex items-center gap-3">
+                  <svg
+                    className="h-6 w-6 sm:h-7 sm:w-7"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                  </svg>
+                  <span className="text-base font-bold sm:text-lg">
+                    Check Guided-Test
+                  </span>
+                </div>
+                <p className="text-sm opacity-95 sm:text-base">
+                  Guided tests already assigned to your patient
+                </p>
+              </div>
             </div>
-            <TestTube size={24} />
+            <svg
+              className="absolute top-0 right-0 h-32 w-32 opacity-30 sm:h-40 sm:w-40"
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M55 25L70 40M55 40L70 55M50 60L65 75"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+              <circle cx="60" cy="50" r="8" stroke="currentColor" strokeWidth="2" />
+            </svg>
           </button>
-          <button className="flex w-full items-center justify-between rounded-lg bg-purple-500 p-4 text-left text-white transition-colors hover:bg-purple-600">
-            <div>
-              <div className="font-semibold">Treatment Plan</div>
-              <div className="text-xs opacity-90">Create treatment plan</div>
+
+          <button className="relative w-full overflow-hidden rounded-2xl bg-linear-to-r from-purple-500 to-purple-600 p-6 text-left text-white transition-transform hover:scale-105 sm:p-8">
+            <div className="relative z-10 flex items-start justify-between">
+              <div>
+                <div className="mb-2 flex items-center gap-3">
+                  <svg
+                    className="h-6 w-6 sm:h-7 sm:w-7"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V8h8v2z" />
+                  </svg>
+                  <span className="text-base font-bold sm:text-lg">Treatment Plan</span>
+                </div>
+                <p className="text-sm opacity-95 sm:text-base">
+                  Check documents uploaded by the your patient
+                </p>
+              </div>
             </div>
-            <FileText size={24} />
+            <svg
+              className="absolute top-0 right-0 h-32 w-32 opacity-30 sm:h-40 sm:w-40"
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="40"
+                y="25"
+                width="35"
+                height="50"
+                rx="2"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+              <path
+                d="M48 35h19M48 45h19M48 55h12"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+              <circle cx="72" cy="62" r="6" stroke="currentColor" strokeWidth="2" />
+            </svg>
           </button>
         </div>
       </div>

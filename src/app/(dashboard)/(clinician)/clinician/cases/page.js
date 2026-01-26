@@ -46,15 +46,6 @@ export default function Page() {
     patient.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const getStatusColor = (status) => {
-    const colors = {
-      active: 'bg-green-500',
-      pending: 'bg-yellow-400',
-      urgent: 'bg-red-500',
-    };
-    return colors[status] || 'bg-gray-500';
-  };
-
   return (
     <div className="mx-auto max-w-4xl">
       <SearchPaitent searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
@@ -84,7 +75,7 @@ export default function Page() {
               className="mb-6 h-32 w-32 text-gray-300 sm:h-40 sm:w-40 dark:text-gray-600"
             />
             <p className="text-center text-sm font-medium text-gray-600 sm:text-base dark:text-gray-400">
-              You don&apos;t have an Patient with this Name.
+              No Patient with this Name.
             </p>
           </div>
         )}

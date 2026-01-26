@@ -75,16 +75,13 @@ export default function Page() {
         </div>
       </div>
 
-      {/* Patient Cards */}
       <div className="space-y-4">
         {filteredPatients.map((patient) => (
           <div
             key={patient.id}
             className="flex items-center justify-between gap-3 rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-shadow hover:shadow-md sm:gap-4 sm:p-5 dark:border-gray-700 dark:bg-gray-800"
           >
-            {/* Left side - Avatar and info */}
             <div className="flex flex-1 items-center gap-3 sm:gap-4">
-              {/* Avatar */}
               <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gray-200 sm:h-14 sm:w-14 dark:bg-gray-700">
                 <svg
                   className="h-8 w-8 text-gray-400 sm:h-9 sm:w-9 dark:text-gray-500"
@@ -95,7 +92,6 @@ export default function Page() {
                 </svg>
               </div>
 
-              {/* Patient info */}
               <div className="flex-1">
                 <h3 className="text-sm font-semibold text-gray-900 sm:text-base dark:text-gray-100">
                   {patient.name}
@@ -106,7 +102,6 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Middle - Time and date */}
             <div className="flex flex-col items-end gap-0.5">
               <span className="text-xs font-medium text-gray-700 sm:text-sm dark:text-gray-300">
                 {patient.time}
@@ -116,7 +111,6 @@ export default function Page() {
               </span>
             </div>
 
-            {/* Right side - View button and status */}
             <div className="flex items-center gap-3 sm:gap-4">
               <Link
                 href={`/clinician/cases/${patient.id}`}

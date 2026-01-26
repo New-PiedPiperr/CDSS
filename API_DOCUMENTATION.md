@@ -48,7 +48,7 @@ This section defines the ownership and logic for every route in the system.
 
 ### 3.1 Onboarding & Clinical Flow (Philip / Samkiell)
 #### `POST /api/otp/send`
-- **Owner**: Philip/Samkiell (Shared Logic)
+- **Owner**: Samkiell
 - **Request**: `{ email, firstName?, lastName?, password? }`
 - **Logic**: Generates OTP, hashes password (via Robert's helper), and sends email.
 

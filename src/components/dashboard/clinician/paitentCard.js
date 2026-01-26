@@ -1,5 +1,13 @@
 import Link from 'next/link';
 export default function PaitentInfoCard({ patient }) {
+  const getStatusColor = (status) => {
+    const colors = {
+      active: 'bg-green-500',
+      pending: 'bg-yellow-400',
+      urgent: 'bg-red-500',
+    };
+    return colors[status] || 'bg-gray-500';
+  };
   return (
     <div
       key={patient.id}
@@ -18,24 +26,24 @@ export default function PaitentInfoCard({ patient }) {
 
         <div className="flex-1">
           <h3 className="text-sm font-semibold text-gray-900 sm:text-base dark:text-gray-100">
-            {patient.name}
+            {patient?.name}
           </h3>
           <p className="text-xs text-gray-600 sm:text-sm dark:text-gray-400">
-            {patient.gender}
+            {patient?.gender}
           </p>
         </div>
       </div>
 
       <div className="flex flex-col items-end gap-0.5">
         <span className="text-xs font-medium text-gray-700 sm:text-sm dark:text-gray-300">
-          {patient.time}
+          {patient?.time}
         </span>
-        <span className="text-xs text-gray-500 dark:text-gray-400">{patient.date}</span>
+        <span className="text-xs text-gray-500 dark:text-gray-400">{patient?.date}</span>
       </div>
 
       <div className="flex items-center gap-3 sm:gap-4">
         <Link
-          href={`/clinician/cases/${patient.id}`}
+          href={`/clinician/cases/${patient?.id}`}
           className="rounded-lg bg-cyan-500 px-4 py-2 text-xs font-medium text-white transition-colors hover:bg-cyan-600 sm:px-6 sm:text-sm"
         >
           View

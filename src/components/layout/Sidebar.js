@@ -103,11 +103,11 @@ export default function Sidebar({ links = [], secondaryLinks = [], className, us
               const Icon = link.icon;
               // For settings main page, only match exact path
               // For sub-pages (help, privacy), match exact or children
-              const isActive = !link.action && (
-                link.href === `${basePath}/settings`
+              const isActive =
+                !link.action &&
+                (link.href === `${basePath}/settings`
                   ? pathname === link.href
-                  : pathname === link.href || pathname.startsWith(`${link.href}/`)
-              );
+                  : pathname === link.href || pathname.startsWith(`${link.href}/`));
 
               return (
                 <li key={link.label}>
@@ -162,11 +162,11 @@ export default function Sidebar({ links = [], secondaryLinks = [], className, us
         {/* Profile Section */}
         <div className="border-border border-t p-4">
           <Link
-            href="#"
+            href={`${basePath}/settings`}
             className="hover:bg-muted flex items-center gap-3 rounded-lg px-3 py-2 transition-colors"
           >
-            <div className="bg-muted flex h-10 w-10 items-center justify-center rounded-full">
-              <User className="text-muted-foreground h-5 w-5" />
+            <div className="bg-primary/10 text-primary flex h-10 w-10 items-center justify-center rounded-full font-bold">
+              {user?.firstName?.[0] || user?.email?.[0] || 'U'}
             </div>
             <div className="flex flex-col overflow-hidden">
               <span className="text-foreground truncate text-sm font-medium">

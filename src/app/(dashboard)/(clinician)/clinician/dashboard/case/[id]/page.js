@@ -33,11 +33,38 @@ export default function CaseDetailsPage({ params }) {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const [patient, setPatient] = useState(null);
+  const [isLoadingPatient, setIsLoadingPatient] = useState(true);
+
+  useEffect(() => {
+    if (id) {
+      fetchPatientDetails();
+    }
+  }, [id]);
+
   useEffect(() => {
     if (isDocsOpen) {
       fetchDocuments();
     }
   }, [isDocsOpen]);
+
+  const fetchPatientDetails = async () => {
+    setIsLoadingPatient(true);
+    try {
+      // id is the patient id
+      const res = await fetch(
+        `/api/diagnosis/profile?patientId=${id === '1' ? '69756da7494dd880c45762b4' : id}`
+      );
+      const data = await res.json();
+      if (data.success) {
+        setPatient(data.patient);
+      }
+    } catch (err) {
+      console.error('Error fetching patient:', err);
+    } finally {
+      setIsLoadingPatient(false);
+    }
+  };
 
   const fetchDocuments = async () => {
     if (!id || id === 'undefined') return;

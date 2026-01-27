@@ -40,7 +40,8 @@ export default function PrivacySettingsPage() {
     {
       id: 'shareWithClinician',
       title: 'Share Data with Clinician',
-      description: 'Allow your assigned clinician to view your health data and assessments',
+      description:
+        'Allow your assigned clinician to view your health data and assessments',
       icon: UserCheck,
       color: 'blue',
     },
@@ -73,7 +74,7 @@ export default function PrivacySettingsPage() {
 
   const handleDeleteAccount = () => {
     toast.error('Please contact support to delete your account', {
-      description: 'Email: support@cdss-platform.com',
+      description: 'Email: cdssoau@gmail.com',
       duration: 5000,
     });
   };
@@ -116,7 +117,8 @@ export default function PrivacySettingsPage() {
           <div className="flex-1">
             <h3 className="text-foreground font-semibold">Your Account is Secure</h3>
             <p className="text-muted-foreground text-sm">
-              Your data is encrypted and protected with industry-standard security measures
+              Your data is encrypted and protected with industry-standard security
+              measures
             </p>
           </div>
         </CardContent>
@@ -202,7 +204,7 @@ export default function PrivacySettingsPage() {
 
       {/* Danger Zone */}
       <div className="pt-4">
-        <h2 className="text-red-500 mb-4 text-lg font-semibold">Danger Zone</h2>
+        <h2 className="mb-4 text-lg font-semibold text-red-500">Danger Zone</h2>
         <Card
           className="cursor-pointer border-red-500/30 transition-all hover:border-red-500/50 hover:shadow-md"
           onClick={handleDeleteAccount}
@@ -217,7 +219,7 @@ export default function PrivacySettingsPage() {
                 Permanently delete your account and all data
               </p>
             </div>
-            <ChevronRight className="text-red-500/50 h-5 w-5" />
+            <ChevronRight className="h-5 w-5 text-red-500/50" />
           </CardContent>
         </Card>
       </div>

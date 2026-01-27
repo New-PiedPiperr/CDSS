@@ -63,10 +63,10 @@ const contactOptions = [
   },
   {
     title: 'Email Support',
-    description: 'support@cdss-platform.com',
+    description: 'cdssoau@gmail.com',
     icon: Mail,
     color: 'green',
-    action: 'mailto:support@cdss-platform.com',
+    action: 'mailto:cdssoau@gmail.com',
   },
   {
     title: 'Phone Support',

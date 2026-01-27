@@ -33,7 +33,7 @@ function TopNav({ title, className, showSidebarTrigger = true, showUser = true }
     >
       <div className="flex items-center gap-4">
         {/* Mobile Menu Button or Logo */}
-        {showSidebarTrigger ? (
+        {showSidebarTrigger && (
           <button
             className="hover:bg-accent text-foreground block rounded-lg p-2 transition-colors lg:hidden"
             onClick={toggleSidebar}
@@ -41,10 +41,6 @@ function TopNav({ title, className, showSidebarTrigger = true, showUser = true }
           >
             <Menu className="h-6 w-6" />
           </button>
-        ) : (
-          <Link href="/" className="lg:hidden">
-            <Logo size="sm" showText={false} />
-          </Link>
         )}
 
         {/* Welcome Text or Title */}

@@ -126,10 +126,7 @@ export default function PatientsPage() {
           ))}
         </div>
         <div className="flex items-center gap-3">
-          <Button className="h-12 gap-2 rounded-xl px-6 font-bold">
-            <UserPlus className="h-4 w-4" />
-            Add New Patient
-          </Button>
+          {/* Patients are assigned by Admin */}
         </div>
       </div>
 

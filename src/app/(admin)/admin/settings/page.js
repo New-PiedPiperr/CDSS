@@ -80,9 +80,7 @@ export default function AdminSettingsPage() {
                     Enable deep learning analysis for complex multi-joint pathologies.
                   </p>
                 </div>
-                <div className="bg-primary relative h-6 w-11 rounded-full">
-                  <div className="absolute top-1 right-1 h-4 w-4 rounded-full bg-white shadow-sm" />
-                </div>
+                <Switch checked={true} />
               </div>
             </CardContent>
           </Card>

@@ -22,16 +22,22 @@ const UPLOAD_PRESETS = {
     allowed_formats: ['jpg', 'jpeg', 'png', 'dicom', 'dcm'],
     transformation: [{ quality: 'auto:best' }, { fetch_format: 'auto' }],
     resource_type: 'image',
+    access_mode: 'public',
+    type: 'upload',
   },
   document: {
     folder: 'cdss/documents',
     allowed_formats: ['pdf', 'doc', 'docx'],
     resource_type: 'raw',
+    access_mode: 'public',
+    type: 'upload',
   },
   medical_report: {
     folder: 'cdss/medical_reports',
     allowed_formats: ['pdf', 'jpg', 'jpeg', 'png', 'doc', 'docx'],
-    resource_type: 'auto', // Auto-detect for mixed content
+    resource_type: 'auto',
+    access_mode: 'public',
+    type: 'upload',
   },
   avatar: {
     folder: 'cdss/avatars',
@@ -42,6 +48,8 @@ const UPLOAD_PRESETS = {
       { fetch_format: 'auto' },
     ],
     resource_type: 'image',
+    access_mode: 'public',
+    type: 'upload',
   },
 };
 

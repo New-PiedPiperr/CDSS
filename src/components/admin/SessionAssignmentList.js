@@ -230,7 +230,7 @@ export function SessionAssignmentList({ sessions, clinicians, initialSelectedId 
                   </p>
                 </div>
                 <div className="group-hover:bg-primary flex h-8 w-8 items-center justify-center rounded-full bg-gray-50 transition-colors group-hover:text-white dark:bg-gray-800">
-                  <PlusIcon className="h-4 w-4" />
+                  <Plus className="h-4 w-4" />
                 </div>
               </button>
             ))}
@@ -247,25 +247,5 @@ export function SessionAssignmentList({ sessions, clinicians, initialSelectedId 
         </div>
       </div>
     </div>
-  );
-}
-
-function PlusIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M5 12h14" />
-      <path d="M12 5v14" />
-    </svg>
   );
 }

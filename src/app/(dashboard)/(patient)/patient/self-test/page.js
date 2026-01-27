@@ -38,7 +38,7 @@ export default function SelfTestPage() {
         'Observe any catching sensations, sharp pain, or radiation into the arms.',
         'Perform 5 repetitions on each side.',
       ],
-      image: '/neck_rotation_demonstration.png',
+      image: '/neck_rotation_medical_diagram.png',
       premium: true,
     },
     {
@@ -54,7 +54,7 @@ export default function SelfTestPage() {
         'Lower the arm slowly and repeat with the other side.',
         'Note if pain occurs at a specific height or if you feel tingling in your fingers.',
       ],
-      image: '/shoulder_mobility_demonstration.png',
+      image: '/arm_raise_medical_diagram.png',
       premium: true,
     },
   ];
@@ -78,13 +78,12 @@ export default function SelfTestPage() {
             <Card className="bg-card relative overflow-hidden rounded-[2.5rem] border-none shadow-xl">
               <div className="flex flex-col lg:flex-row">
                 {/* Visual Section */}
-                <div className="relative aspect-video shrink-0 bg-[#0f172a] lg:aspect-auto lg:w-[450px]">
+                <div className="relative aspect-video shrink-0 bg-white lg:aspect-auto lg:w-[450px]">
                   <img
                     src={test.image}
                     alt={test.title}
-                    className="absolute inset-0 h-full w-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105"
+                    className="absolute inset-0 h-full w-full object-contain p-8 transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent" />
 
                   {/* This is where the generated images would be displayed */}
                   <div className="relative z-10 flex h-full w-full flex-col items-center justify-center p-8 text-center text-white/60">

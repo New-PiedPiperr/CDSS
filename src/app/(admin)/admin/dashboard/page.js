@@ -49,16 +49,46 @@ export default async function AdminDashboardPage() {
 
   const pendingTherapists = JSON.parse(JSON.stringify(pendingTherapistsRaw));
 
-  // Weekly Report Data (Mocking for now as we might not have 7 days of data)
-  const weeklyData = [
-    { day: 'Mon', users: 12, therapists: 2 },
-    { day: 'Tue', users: 19, therapists: 3 },
-    { day: 'Wed', users: 15, therapists: 5 },
-    { day: 'Thu', users: 22, therapists: 4 },
-    { day: 'Fri', users: 30, therapists: 8 },
-    { day: 'Sat', users: 25, therapists: 6 },
-    { day: 'Sun', users: 40, therapists: 10 },
-  ];
+  // Fetch Weekly Growth Data (Real-time)
+  const last7Days = [...Array(7)].map((_, i) => {
+    const d = new Date();
+    d.setHours(0, 0, 0, 0);
+    d.setDate(d.getDate() - (6 - i));
+    return d;
+  });
+
+  const weeklyGrowth = await User.aggregate([
+    {
+      $match: {
+        createdAt: { $gte: last7Days[0] },
+      },
+    },
+    {
+      $group: {
+        _id: {
+          day: { $dayOfWeek: '$createdAt' },
+          role: '$role',
+        },
+        count: { $sum: 1 },
+      },
+    },
+  ]);
+
+  const daysMap = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const weeklyData = last7Days.map((date) => {
+    const dayName = daysMap[date.getDay()];
+    const dayOfWeek = date.getDay() + 1; // MongoDB $dayOfWeek is 1-indexed (Sun=1)
+
+    const patients =
+      weeklyGrowth.find((g) => g._id.day === dayOfWeek && g._id.role === ROLES.PATIENT)
+        ?.count || 0;
+
+    const therapists =
+      weeklyGrowth.find((g) => g._id.day === dayOfWeek && g._id.role === ROLES.CLINICIAN)
+        ?.count || 0;
+
+    return { day: dayName, users: patients, therapists };
+  });
 
   return (
     <div className="space-y-10 pb-12">

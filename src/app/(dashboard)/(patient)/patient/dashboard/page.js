@@ -323,9 +323,9 @@ export default async function PatientDashboardPage() {
                 bg: 'bg-yellow-500',
               },
               {
-                href: '/patient/appointments',
-                label: 'Book Session',
-                icon: Calendar,
+                href: '/patient/progress',
+                label: 'Clinical Files',
+                icon: Clipboard,
                 bg: 'bg-emerald-500',
               },
               {
@@ -410,17 +410,15 @@ export default async function PatientDashboardPage() {
                   </div>
                 ))
               ) : (
-                <div className="rounded-xl border border-dashed px-4 py-6 text-center">
-                  <AlertCircle className="text-muted-foreground/30 mx-auto mb-2 h-8 w-8" />
-                  <p className="text-muted-foreground text-xs font-medium">
-                    No sessions booked.
+                <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50/50 px-4 py-8 text-center dark:border-slate-800 dark:bg-slate-900/20">
+                  <AlertCircle className="mx-auto mb-3 h-10 w-10 text-slate-300" />
+                  <p className="text-xs font-bold text-slate-900 dark:text-white">
+                    No Appointments Scheduled
                   </p>
-                  <Link
-                    href="/patient/appointments"
-                    className="text-primary mt-1 h-auto p-0 text-[11px] font-bold hover:underline"
-                  >
-                    Schedule one now
-                  </Link>
+                  <p className="mx-auto mt-2 max-w-[180px] text-[10px] leading-relaxed font-medium text-slate-400">
+                    Your assigned clinician will schedule your follow-up sessions and
+                    treatments.
+                  </p>
                 </div>
               )}
             </CardContent>

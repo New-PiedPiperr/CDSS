@@ -21,8 +21,7 @@ export default function SelfTestPage() {
         'Note the angle at which the pain begins (e.g., 30, 45, 60 degrees).',
         'Slowly lower the leg back down and repeat for the other side.',
       ],
-      image:
-        'https://res.cloudinary.com/djp2v78cc/image/upload/v1706385000/leg_raise_demonstration.png', // Placeholder or generated
+      image: '/leg_raise_demonstration.png',
       premium: true,
     },
     {
@@ -39,8 +38,7 @@ export default function SelfTestPage() {
         'Observe any catching sensations, sharp pain, or radiation into the arms.',
         'Perform 5 repetitions on each side.',
       ],
-      image:
-        'https://res.cloudinary.com/djp2v78cc/image/upload/v1706385001/neck_rotation_demonstration.png',
+      image: '/neck_rotation_demonstration.png',
       premium: true,
     },
     {
@@ -56,8 +54,7 @@ export default function SelfTestPage() {
         'Lower the arm slowly and repeat with the other side.',
         'Note if pain occurs at a specific height or if you feel tingling in your fingers.',
       ],
-      image:
-        'https://res.cloudinary.com/djp2v78cc/image/upload/v1706385002/shoulder_mobility_demonstration.png',
+      image: '/shoulder_mobility_demonstration.png',
       premium: true,
     },
   ];
@@ -82,9 +79,12 @@ export default function SelfTestPage() {
               <div className="flex flex-col lg:flex-row">
                 {/* Visual Section */}
                 <div className="relative aspect-video shrink-0 bg-[#0f172a] lg:aspect-auto lg:w-[450px]">
-                  <div className="absolute inset-0 flex items-center justify-center opacity-40">
-                    <Activity className="text-primary/30 h-24 w-24" />
-                  </div>
+                  <img
+                    src={test.image}
+                    alt={test.title}
+                    className="absolute inset-0 h-full w-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent" />
 
                   {/* This is where the generated images would be displayed */}
                   <div className="relative z-10 flex h-full w-full flex-col items-center justify-center p-8 text-center text-white/60">

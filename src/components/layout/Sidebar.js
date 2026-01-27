@@ -17,7 +17,7 @@ export default function Sidebar({ links = [], secondaryLinks = [], className, us
 
   const defaultSecondaryLinks = [
     { href: `${basePath}/settings`, label: 'Settings', icon: Settings },
-    { href: `${basePath}/settings/help`, label: 'Help & Center', icon: HelpCircle },
+    { href: `${basePath}/settings/help`, label: 'Help & Support', icon: HelpCircle },
     { href: `${basePath}/settings/privacy`, label: 'Privacy', icon: Shield },
     { href: '#', label: 'Logout', icon: LogOut, action: true },
   ];

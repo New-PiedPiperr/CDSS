@@ -35,7 +35,7 @@ const UPLOAD_PRESETS = {
   medical_report: {
     folder: 'cdss/medical_reports',
     allowed_formats: ['pdf', 'jpg', 'jpeg', 'png', 'doc', 'docx'],
-    resource_type: 'image', // Forcing image type allows PDF preview/thumbnailing
+    resource_type: 'auto', // Auto handles both images and raw files (PDFs)
     access_mode: 'public',
     type: 'upload',
   },

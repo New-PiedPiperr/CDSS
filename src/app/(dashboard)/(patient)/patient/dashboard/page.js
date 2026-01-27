@@ -75,7 +75,7 @@ export default async function PatientDashboardPage() {
   if (!treatmentPlan && latestSession) {
     const assignedTherapist = latestSession.clinicianId
       ? `Dr. ${latestSession.clinicianId.lastName || latestSession.clinicianId.firstName}`
-      : 'System (AI)';
+      : 'None assigned';
 
     treatmentPlan = {
       isProvisional: true,

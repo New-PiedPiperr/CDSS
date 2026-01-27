@@ -7,34 +7,6 @@ import bcrypt from 'bcrypt';
 import { revalidatePath } from 'next/cache';
 
 /**
- * Initializes the Admin user if it doesn't exist.
- */
-export async function seedAdminUser() {
-  await connectDB();
-
-  const adminEmail = 'cdssoau@gmail.com';
-  const adminPassword = 'CDSSADMIN2026';
-
-  const existingAdmin = await User.findOne({ email: adminEmail });
-
-  if (!existingAdmin) {
-    const hashedPassword = await bcrypt.hash(adminPassword, 10);
-    await User.create({
-      email: adminEmail,
-      password: hashedPassword,
-      firstName: 'CDSS',
-      lastName: 'Admin',
-      role: ROLES.ADMIN,
-      isVerified: true,
-      isActive: true,
-    });
-    return { success: true, message: 'Admin user created successfully.' };
-  }
-
-  return { success: true, message: 'Admin user already exists.' };
-}
-
-/**
  * Upgrades a user role from PATIENT to CLINICIAN.
  */
 export async function upgradeUserRole(userId) {

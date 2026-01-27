@@ -15,8 +15,6 @@ import {
 } from '@/components/ui';
 import { toast } from 'sonner';
 import { signIn } from 'next-auth/react';
-import { seedAdminUser } from '@/actions/admin';
-
 export default function AdminLoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
@@ -24,11 +22,6 @@ export default function AdminLoginPage() {
     email: '',
     password: '',
   });
-
-  useEffect(() => {
-    // Seed the admin user once on mount
-    seedAdminUser();
-  }, []);
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -42,16 +35,6 @@ export default function AdminLoginPage() {
     setIsLoading(true);
 
     try {
-      // Validate credentials
-      if (
-        formData.email !== 'cdssoau@gmail.com' ||
-        formData.password !== 'CDSSADMIN2026'
-      ) {
-        toast.error('Unauthorized: Invalid Admin Credentials');
-        setIsLoading(false);
-        return;
-      }
-
       const result = await signIn('credentials', {
         email: formData.email,
         password: formData.password,
@@ -59,7 +42,7 @@ export default function AdminLoginPage() {
       });
 
       if (result?.error) {
-        toast.error('Login failed. Please try again.');
+        toast.error('Login failed: Invalid Admin Credentials.');
       } else {
         toast.success('Admin authenticated successfully!');
         router.push('/admin/dashboard');

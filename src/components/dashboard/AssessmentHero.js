@@ -27,8 +27,7 @@ export default function AssessmentHero({ latestSession }) {
 
   const title = isInProgress
     ? 'Continue Your Assessment'
-    : latestSession?.temporalDiagnosis?.primaryDiagnosis?.conditionName ||
-      'Start a New Assessment';
+    : latestSession?.aiAnalysis?.temporalDiagnosis || 'Start a New Assessment';
 
   const description = isInProgress
     ? 'Finish your assessment to get a comprehensive diagnostic report and personalized treatment plan.'

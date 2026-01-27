@@ -17,7 +17,6 @@ import {
   PolarGrid,
   PolarAngleAxis,
   PolarRadiusAxis,
-  Legend,
 } from 'recharts';
 import {
   Card,
@@ -29,9 +28,37 @@ import {
 import { Activity, PieChart as PieIcon, Target } from 'lucide-react';
 
 const RISK_COLORS = {
-  Low: '#22c55e',
-  Moderate: '#eab308',
+  Low: '#10b981',
+  Moderate: '#f59e0b',
   Urgent: '#ef4444',
+};
+
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="rounded-2xl border border-slate-100 bg-white/95 p-4 shadow-2xl backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/95">
+        <p className="mb-1 text-[10px] font-extrabold tracking-widest text-slate-500 uppercase">
+          {label}
+        </p>
+        <div className="flex items-center gap-2">
+          <div
+            className="h-2.5 w-2.5 rounded-full"
+            style={{
+              backgroundColor:
+                payload[0].color || payload[0].payload.fill || 'hsl(var(--primary))',
+            }}
+          />
+          <span className="text-xl font-black text-slate-900 dark:text-white">
+            {payload[0].value}
+          </span>
+          {payload[0].name === 'Intensity' && (
+            <span className="text-[10px] font-bold text-slate-400 uppercase">Level</span>
+          )}
+        </div>
+      </div>
+    );
+  }
+  return null;
 };
 
 export default function ProgressCharts({
@@ -59,98 +86,108 @@ export default function ProgressCharts({
   return (
     <div className="grid gap-6 lg:grid-cols-2">
       {/* Pain History Line Chart */}
-      <Card className="lg:col-span-2">
-        <CardHeader>
-          <div className="flex items-center gap-2">
-            <Activity className="text-primary h-5 w-5" />
-            <CardTitle>Pain Intensity Over Time</CardTitle>
+      <Card className="overflow-hidden border-none shadow-2xl ring-1 ring-slate-100 lg:col-span-2 dark:ring-slate-800">
+        <CardHeader className="border-b border-slate-50 bg-slate-50/30 pb-8 dark:border-slate-800/50 dark:bg-slate-900/30">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="bg-primary shadow-primary/20 flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-lg">
+                <Activity size={24} />
+              </div>
+              <div>
+                <CardTitle className="text-2xl font-black tracking-tight">
+                  Recovery Curve
+                </CardTitle>
+                <CardDescription className="font-medium text-slate-500">
+                  Longitudinal pain intensity tracking
+                </CardDescription>
+              </div>
+            </div>
           </div>
-          <CardDescription>
-            Track how your pain levels have changed across assessments
-          </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="pt-10">
           {painHistory.length === 0 ? (
-            <div className="flex h-[300px] flex-col items-center justify-center rounded-xl bg-muted/30 text-center">
-              <Activity className="text-muted-foreground/40 mb-3 h-10 w-10" />
-              <p className="text-muted-foreground text-sm font-medium">
-                No pain history data available yet
+            <div className="flex h-[380px] flex-col items-center justify-center rounded-[2.5rem] bg-slate-50/50 text-center dark:bg-slate-900/20">
+              <Activity className="mb-6 h-16 w-16 text-slate-200" />
+              <p className="text-xl font-black text-slate-900 dark:text-white">
+                Awaiting Assessment Data
               </p>
-              <p className="text-muted-foreground/60 mt-1 text-xs">
-                Complete assessments with pain intensity to see your trend
+              <p className="mt-2 max-w-[280px] text-sm font-medium text-slate-400">
+                Complete your daily clinical check-ins to generate your diagnostic
+                progression map.
               </p>
             </div>
           ) : (
-            <div className="h-[300px] w-full">
+            <div className="h-[380px] w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart
                   data={painHistory}
-                  margin={{ top: 20, right: 30, left: 0, bottom: 10 }}
+                  margin={{ top: 10, right: 30, left: 0, bottom: 20 }}
                 >
                   <defs>
-                    <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#8b5cf6" />
-                      <stop offset="50%" stopColor="hsl(var(--primary))" />
-                      <stop offset="100%" stopColor="#06b6d4" />
+                    <linearGradient id="curveGrad" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stopColor="#6366f1" />
+                      <stop offset="100%" stopColor="hsl(var(--primary))" />
                     </linearGradient>
-                    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-                      <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="hsl(var(--primary))" floodOpacity="0.3" />
+                    <filter id="curveShadow" x="-20%" y="-20%" width="140%" height="140%">
+                      <feDropShadow
+                        dx="0"
+                        dy="12"
+                        stdDeviation="12"
+                        floodColor="hsl(var(--primary))"
+                        floodOpacity="0.25"
+                      />
                     </filter>
                   </defs>
                   <CartesianGrid
-                    strokeDasharray="3 3"
+                    strokeDasharray="6 6"
                     vertical={false}
                     stroke="hsl(var(--border))"
-                    opacity={0.5}
+                    opacity={0.4}
                   />
                   <XAxis
                     dataKey="date"
                     axisLine={false}
                     tickLine={false}
-                    tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
-                    dy={10}
+                    tick={{
+                      fill: 'hsl(var(--muted-foreground))',
+                      fontSize: 11,
+                      fontWeight: 700,
+                    }}
+                    dy={20}
                   />
                   <YAxis
                     axisLine={false}
                     tickLine={false}
-                    tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 11 }}
+                    tick={{
+                      fill: 'hsl(var(--muted-foreground))',
+                      fontSize: 11,
+                      fontWeight: 700,
+                    }}
                     domain={[0, 10]}
                     ticks={[0, 2, 4, 6, 8, 10]}
                   />
-                  <Tooltip
-                    contentStyle={{
-                      backgroundColor: 'hsl(var(--card))',
-                      borderRadius: '0.75rem',
-                      border: '1px solid hsl(var(--border))',
-                      boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.2)',
-                      padding: '12px 16px',
-                    }}
-                    itemStyle={{ color: 'hsl(var(--primary))', fontWeight: 600 }}
-                    labelStyle={{
-                      color: 'hsl(var(--foreground))',
-                      fontWeight: 'bold',
-                      marginBottom: 4,
-                    }}
-                  />
+                  <Tooltip content={<CustomTooltip />} />
                   <Line
                     type="monotone"
                     dataKey="intensity"
-                    name="Pain Level"
-                    stroke="url(#lineGradient)"
-                    strokeWidth={4}
-                    filter="url(#shadow)"
+                    name="Intensity"
+                    stroke="url(#curveGrad)"
+                    strokeWidth={6}
+                    filter="url(#curveShadow)"
                     dot={{
-                      r: 6,
-                      fill: 'hsl(var(--card))',
-                      strokeWidth: 3,
+                      r: 7,
+                      fill: 'white',
+                      strokeWidth: 4,
                       stroke: 'hsl(var(--primary))',
                     }}
                     activeDot={{
-                      r: 8,
+                      r: 10,
                       fill: 'hsl(var(--primary))',
-                      strokeWidth: 4,
-                      stroke: 'hsl(var(--card))',
+                      strokeWidth: 5,
+                      stroke: 'white',
                     }}
+                    animationDuration={2000}
+                    animationEasing="ease-in-out"
                   />
                 </LineChart>
               </ResponsiveContainer>
@@ -159,75 +196,78 @@ export default function ProgressCharts({
         </CardContent>
       </Card>
 
-      {/* Risk Distribution Pie Chart */}
-      <Card>
-        <CardHeader>
-          <div className="flex items-center gap-2">
-            <PieIcon className="text-primary h-5 w-5" />
-            <CardTitle>Risk Level Distribution</CardTitle>
+      {/* Severity Pie Chart */}
+      <Card className="border-none shadow-2xl ring-1 ring-slate-100 dark:ring-slate-800">
+        <CardHeader className="pb-2">
+          <div className="flex items-center gap-4">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-500/10 text-orange-500">
+              <PieIcon size={20} />
+            </div>
+            <div>
+              <CardTitle className="text-xl font-black tracking-tight">
+                Clinical Risk
+              </CardTitle>
+              <CardDescription className="text-xs font-bold tracking-widest text-slate-400 uppercase">
+                Severity Breakdown
+              </CardDescription>
+            </div>
           </div>
-          <CardDescription>
-            Breakdown of risk levels across your assessments
-          </CardDescription>
         </CardHeader>
         <CardContent>
           {totalRisk === 0 ? (
-            <div className="flex h-[280px] flex-col items-center justify-center rounded-xl bg-muted/30 text-center">
-              <PieIcon className="text-muted-foreground/40 mb-3 h-10 w-10" />
-              <p className="text-muted-foreground text-sm font-medium">
-                No risk data available
+            <div className="flex h-[320px] flex-col items-center justify-center rounded-3xl bg-slate-50/50 text-center dark:bg-slate-900/20">
+              <PieIcon className="mb-4 h-12 w-12 text-slate-200" />
+              <p className="text-[10px] font-black tracking-[0.2em] text-slate-300 uppercase">
+                Matrix Empty
               </p>
             </div>
           ) : (
-            <div className="flex flex-col items-center">
-              <div className="relative h-[220px] w-full max-w-[220px]">
+            <div className="flex flex-col items-center py-6">
+              <div className="relative h-[250px] w-full max-w-[250px]">
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
-                    <defs>
-                      <filter id="pieShadow" x="-20%" y="-20%" width="140%" height="140%">
-                        <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.2" />
-                      </filter>
-                    </defs>
                     <Pie
                       data={riskChartData}
-                      innerRadius={70}
-                      outerRadius={95}
-                      paddingAngle={4}
+                      innerRadius={85}
+                      outerRadius={115}
+                      paddingAngle={10}
                       dataKey="value"
                       stroke="none"
-                      filter="url(#pieShadow)"
+                      cornerRadius={12}
                     >
                       {riskChartData.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={entry.color} />
                       ))}
                     </Pie>
-                    <Tooltip
-                      contentStyle={{
-                        backgroundColor: 'hsl(var(--card))',
-                        borderRadius: '0.75rem',
-                        border: '1px solid hsl(var(--border))',
-                        boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.2)',
-                      }}
-                    />
+                    <Tooltip content={<CustomTooltip />} />
                   </PieChart>
                 </ResponsiveContainer>
                 <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
-                  <span className="text-foreground text-3xl font-bold">{totalRisk}</span>
-                  <span className="text-muted-foreground text-xs font-medium">
-                    Assessments
+                  <span className="text-5xl leading-none font-black text-slate-900 dark:text-white">
+                    {totalRisk}
+                  </span>
+                  <span className="mt-1 text-[10px] font-black tracking-[0.2em] text-slate-400 uppercase">
+                    Cases
                   </span>
                 </div>
               </div>
-              {/* Legend */}
-              <div className="mt-6 flex flex-wrap justify-center gap-6">
+              <div className="mt-10 flex flex-wrap justify-center gap-4">
                 {riskChartData.map((item) => (
-                  <div key={item.name} className="flex items-center gap-2">
+                  <div
+                    key={item.name}
+                    className="flex items-center gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-2 shadow-sm dark:border-slate-800 dark:bg-slate-900/50"
+                  >
                     <div
-                      className="h-4 w-4 rounded-full shadow-sm"
-                      style={{ backgroundColor: item.color }}
+                      className="h-3 w-3 rounded-full"
+                      style={{
+                        backgroundColor: item.color,
+                        boxShadow: `0 0 12px ${item.color}44`,
+                      }}
                     />
-                    <span className="text-foreground text-sm font-medium">{item.name}</span>
-                    <span className="bg-muted text-foreground rounded-full px-2 py-0.5 text-xs font-bold">
+                    <span className="text-sm font-black text-slate-700 dark:text-slate-200">
+                      {item.name}
+                    </span>
+                    <span className="rounded-md bg-slate-100 px-1.5 py-0.5 text-[10px] font-black text-slate-500 dark:bg-slate-800">
                       {item.value}
                     </span>
                   </div>
@@ -238,77 +278,70 @@ export default function ProgressCharts({
         </CardContent>
       </Card>
 
-      {/* Body Region Radar Chart */}
-      <Card>
-        <CardHeader>
-          <div className="flex items-center gap-2">
-            <Target className="text-primary h-5 w-5" />
-            <CardTitle>Body Region Analysis</CardTitle>
+      {/* Anatomical Radar Chart */}
+      <Card className="border-none shadow-2xl ring-1 ring-slate-100 dark:ring-slate-800">
+        <CardHeader className="pb-2">
+          <div className="flex items-center gap-4">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-500">
+              <Target size={20} />
+            </div>
+            <div>
+              <CardTitle className="text-xl font-black tracking-tight">
+                Anatomy Focus
+              </CardTitle>
+              <CardDescription className="text-xs font-bold tracking-widest text-slate-400 uppercase">
+                Regional Distribution
+              </CardDescription>
+            </div>
           </div>
-          <CardDescription>
-            Visual map of assessed body regions
-          </CardDescription>
         </CardHeader>
         <CardContent>
           {bodyRegionData.length === 0 ? (
-            <div className="flex h-[280px] flex-col items-center justify-center rounded-xl bg-muted/30 text-center">
-              <Target className="text-muted-foreground/40 mb-3 h-10 w-10" />
-              <p className="text-muted-foreground text-sm font-medium">
-                No body region data available
+            <div className="flex h-[320px] flex-col items-center justify-center rounded-3xl bg-slate-50/50 text-center dark:bg-slate-900/20">
+              <Target className="mb-4 h-12 w-12 text-slate-200" />
+              <p className="text-[10px] font-black tracking-[0.2em] text-slate-300 uppercase">
+                No Region Map
               </p>
             </div>
           ) : (
-            <div className="h-[280px] w-full">
+            <div className="h-[380px] w-full pt-4">
               <ResponsiveContainer width="100%" height="100%">
-                <RadarChart data={radarData} margin={{ top: 20, right: 30, bottom: 20, left: 30 }}>
-                  <defs>
-                    <linearGradient id="radarGradient" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity={0.8} />
-                      <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity={0.2} />
-                    </linearGradient>
-                  </defs>
-                  <PolarGrid
-                    stroke="hsl(var(--border))"
-                    strokeDasharray="3 3"
-                  />
+                <RadarChart
+                  data={radarData}
+                  margin={{ top: 20, right: 50, bottom: 20, left: 50 }}
+                >
+                  <PolarGrid stroke="hsl(var(--border))" opacity={0.6} />
                   <PolarAngleAxis
                     dataKey="subject"
                     tick={{
-                      fill: 'hsl(var(--muted-foreground))',
-                      fontSize: 11,
-                      fontWeight: 500,
+                      fill: 'hsl(var(--foreground))',
+                      fontSize: 10,
+                      fontWeight: 900,
+                      letterSpacing: '0.1em',
+                      textAnchor: 'middle',
                     }}
                   />
                   <PolarRadiusAxis
                     angle={90}
                     domain={[0, 'auto']}
-                    tick={{
-                      fill: 'hsl(var(--muted-foreground))',
-                      fontSize: 10,
-                    }}
+                    tick={false}
                     axisLine={false}
                   />
                   <Radar
-                    name="Assessments"
+                    name="Cases"
                     dataKey="value"
                     stroke="hsl(var(--primary))"
-                    strokeWidth={2}
-                    fill="url(#radarGradient)"
+                    strokeWidth={4}
+                    fill="hsl(var(--primary))"
+                    fillOpacity={0.15}
                     dot={{
-                      r: 4,
+                      r: 5,
                       fill: 'hsl(var(--primary))',
-                      strokeWidth: 2,
-                      stroke: 'hsl(var(--card))',
+                      strokeWidth: 3,
+                      stroke: 'white',
                     }}
                   />
-                  <Tooltip
-                    contentStyle={{
-                      backgroundColor: 'hsl(var(--card))',
-                      borderRadius: '0.75rem',
-                      border: '1px solid hsl(var(--border))',
-                      boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.2)',
-                    }}
-                  />
+                  <Tooltip content={<CustomTooltip />} />
                 </RadarChart>
               </ResponsiveContainer>
             </div>

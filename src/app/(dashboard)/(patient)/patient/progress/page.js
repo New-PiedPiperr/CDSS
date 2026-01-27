@@ -46,12 +46,12 @@ export default async function ProgressPage() {
   // Process data for charts
   const painHistory = sessions
     .map((sess) => {
-      // Look for explicit pain_intensity category first
+      // 1. Try to find explicit pain_intensity category
       let painEntry = sess.symptomData?.find(
         (s) => s.questionCategory === 'pain_intensity'
       );
 
-      // Fallback: look for question text containing "intensity" or "scale" if category is missing
+      // 2. Try to find "intensity" or "scale" in question text (fallback)
       if (!painEntry) {
         painEntry = sess.symptomData?.find(
           (s) =>
@@ -60,14 +60,31 @@ export default async function ProgressPage() {
         );
       }
 
-      const response = painEntry?.response || painEntry?.answer;
       let intensity = 0;
+      const response = painEntry?.response || painEntry?.answer;
 
       if (typeof response === 'number') {
         intensity = response;
       } else if (typeof response === 'string') {
         const match = response.match(/\d+/);
         intensity = match ? parseInt(match[0], 10) : 0;
+      }
+
+      // 3. SECONDARY FALLBACK: Infer intensity from urgency/red flags if still 0
+      if (intensity === 0) {
+        const hasRedFlags = sess.symptomData?.some((s) => {
+          const ans = String(s.answer || s.response || '').toLowerCase();
+          return (
+            (ans === 'yes' && s.question?.toLowerCase().includes('bladder')) ||
+            (ans === 'yes' && s.question?.toLowerCase().includes('numbness')) ||
+            (ans === 'yes' && s.question?.toLowerCase().includes('weakness'))
+          );
+        });
+
+        if (hasRedFlags) intensity = 8;
+        else if (sess.aiAnalysis?.riskLevel === 'Urgent') intensity = 9;
+        else if (sess.aiAnalysis?.riskLevel === 'Moderate') intensity = 5;
+        else if (sess.symptomData?.length > 0) intensity = 3;
       }
 
       return {
@@ -77,10 +94,8 @@ export default async function ProgressPage() {
         }),
         intensity,
         fullDate: sess.createdAt,
-        exists: !!painEntry,
       };
     })
-    .filter((entry) => entry.exists || entry.intensity > 0)
     .reverse();
 
   // Risk level distribution

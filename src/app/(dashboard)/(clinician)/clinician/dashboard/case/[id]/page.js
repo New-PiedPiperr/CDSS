@@ -20,7 +20,8 @@ import { cn } from '@/lib/cn';
 import { Button, Card, Badge } from '@/components/ui';
 
 export default function CaseDetailsPage({ params }) {
-  const { id } = params;
+  const unwrappedParams = React.use(params);
+  const id = unwrappedParams.id;
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [isDocsOpen, setIsDocsOpen] = useState(false);
   const [documents, setDocuments] = useState([]);
@@ -39,6 +40,7 @@ export default function CaseDetailsPage({ params }) {
   }, [isDocsOpen]);
 
   const fetchDocuments = async () => {
+    if (!id || id === 'undefined') return;
     setIsLoadingDocs(true);
     try {
       // id is patientId linked from PatientQueue

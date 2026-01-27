@@ -301,6 +301,14 @@ export default function PatientDocumentsPage() {
                         <Download className="h-4 w-4" />
                       </Button>
                     </a>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => handleDelete(doc._id)}
+                      className="hover:bg-destructive/10 hover:text-destructive h-9 w-9 rounded-full transition-all"
+                    >
+                      <Trash2 className="h-4 w-4" />
+                    </Button>
                   </div>
                 </CardContent>
               </Card>

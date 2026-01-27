@@ -45,20 +45,42 @@ export default async function ProgressPage() {
 
   // Process data for charts
   const painHistory = sessions
-    .filter((sess) => sess.symptomData?.some((s) => s.questionCategory === 'pain_intensity'))
     .map((sess) => {
-      const intensityScore = sess.symptomData?.find(
+      // Look for explicit pain_intensity category first
+      let painEntry = sess.symptomData?.find(
         (s) => s.questionCategory === 'pain_intensity'
-      )?.response;
+      );
+
+      // Fallback: look for question text containing "intensity" or "scale" if category is missing
+      if (!painEntry) {
+        painEntry = sess.symptomData?.find(
+          (s) =>
+            s.question?.toLowerCase().includes('intensity') ||
+            s.question?.toLowerCase().includes('scale')
+        );
+      }
+
+      const response = painEntry?.response || painEntry?.answer;
+      let intensity = 0;
+
+      if (typeof response === 'number') {
+        intensity = response;
+      } else if (typeof response === 'string') {
+        const match = response.match(/\d+/);
+        intensity = match ? parseInt(match[0], 10) : 0;
+      }
+
       return {
         date: new Date(sess.createdAt).toLocaleDateString('en-US', {
           month: 'short',
           day: 'numeric',
         }),
-        intensity: typeof intensityScore === 'number' ? intensityScore : 0,
+        intensity,
         fullDate: sess.createdAt,
+        exists: !!painEntry,
       };
     })
+    .filter((entry) => entry.exists || entry.intensity > 0)
     .reverse();
 
   // Risk level distribution
@@ -111,7 +133,9 @@ export default async function ProgressPage() {
     <div className="animate-fade-in space-y-6 pb-8">
       {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Progress Tracking</h1>
+        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
+          Progress Tracking
+        </h1>
         <p className="text-muted-foreground mt-1 text-sm">
           Monitor your recovery journey and health trends
         </p>
@@ -125,7 +149,7 @@ export default async function ProgressPage() {
               <ClipboardCheck className="h-6 w-6 text-blue-500" />
             </div>
             <div>
-              <p className="text-muted-foreground text-xs font-semibold uppercase tracking-wider">
+              <p className="text-muted-foreground text-xs font-semibold tracking-wider uppercase">
                 Total Assessments
               </p>
               <h3 className="text-2xl font-bold">{totalAssessments}</h3>
@@ -139,7 +163,7 @@ export default async function ProgressPage() {
               <Award className="h-6 w-6 text-green-500" />
             </div>
             <div>
-              <p className="text-muted-foreground text-xs font-semibold uppercase tracking-wider">
+              <p className="text-muted-foreground text-xs font-semibold tracking-wider uppercase">
                 Completed
               </p>
               <h3 className="text-2xl font-bold">{completedAssessments}</h3>
@@ -153,7 +177,7 @@ export default async function ProgressPage() {
               <Target className="h-6 w-6 text-purple-500" />
             </div>
             <div>
-              <p className="text-muted-foreground text-xs font-semibold uppercase tracking-wider">
+              <p className="text-muted-foreground text-xs font-semibold tracking-wider uppercase">
                 Avg Confidence
               </p>
               <h3 className="text-2xl font-bold">{avgConfidence}%</h3>
@@ -175,7 +199,7 @@ export default async function ProgressPage() {
               )}
             </div>
             <div>
-              <p className="text-muted-foreground text-xs font-semibold uppercase tracking-wider">
+              <p className="text-muted-foreground text-xs font-semibold tracking-wider uppercase">
                 Pain Trend
               </p>
               <h3 className="text-2xl font-bold">
@@ -212,7 +236,8 @@ export default async function ProgressPage() {
                 />
               </div>
               <p className="text-muted-foreground text-sm">
-                Managed by: <span className="text-foreground">{treatmentPlan.therapistName}</span>
+                Managed by:{' '}
+                <span className="text-foreground">{treatmentPlan.therapistName}</span>
               </p>
             </div>
           </CardContent>

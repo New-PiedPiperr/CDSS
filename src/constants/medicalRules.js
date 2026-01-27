@@ -10,6 +10,7 @@ export const MEDICAL_RULES = {
     questions: {
       ankle_q1: {
         text: 'What region is pain present in?',
+        category: 'location',
         options: [
           { text: 'Heel', next: 'ankle_q2' },
           { text: 'Heel/sole of foot', next: 'ankle_q2' },
@@ -19,6 +20,7 @@ export const MEDICAL_RULES = {
       },
       ankle_q2: {
         text: 'When do you feel the pain?',
+        category: 'temporal',
         options: [
           { text: 'Morning', next: 'ankle_q3' },
           { text: 'Noon', next: 'ankle_q3' },
@@ -28,6 +30,7 @@ export const MEDICAL_RULES = {
       },
       ankle_q3: {
         text: 'Do you experience ankle joint stiffness?',
+        category: 'stiffness',
         options: [
           {
             text: 'Yes',
@@ -39,6 +42,7 @@ export const MEDICAL_RULES = {
       },
       ankle_q3_time: {
         text: 'If yes, when?',
+        category: 'temporal',
         options: [
           {
             text: 'Morning',
@@ -53,6 +57,7 @@ export const MEDICAL_RULES = {
       },
       ankle_achilles_q1: {
         text: 'Do you feel the pain about 4 cm above your heel?',
+        category: 'location_specific',
         options: [
           {
             text: 'Yes',
@@ -64,6 +69,7 @@ export const MEDICAL_RULES = {
       },
       ankle_achilles_q2: {
         text: 'How did the pain begin?',
+        category: 'onset',
         options: [
           {
             text: 'Sudden',
@@ -75,6 +81,7 @@ export const MEDICAL_RULES = {
       },
       ankle_achilles_pop: {
         text: 'Did you hear a ripping or popping sensation accompanying the pain at onset?',
+        category: 'mechanical',
         options: [
           {
             text: 'Yes',
@@ -86,6 +93,7 @@ export const MEDICAL_RULES = {
       },
       ankle_fracture_q1: {
         text: 'Can you walk with the affected foot and bear weight on it?',
+        category: 'function',
         options: [
           { text: 'Yes', next: 'ankle_next_region' },
           {
@@ -97,9 +105,26 @@ export const MEDICAL_RULES = {
       },
       ankle_next_region: {
         text: 'Is there tenderness at the medial aspect beneath the heel / mid-foot?',
+        category: 'location_specific',
         options: [
-          { text: 'Yes', next: null, tags: ['Plantar Fasciitis Indicator'] },
-          { text: 'No', next: null },
+          {
+            text: 'Yes',
+            next: 'ankle_pain_intensity',
+            tags: ['Plantar Fasciitis Indicator'],
+          },
+          { text: 'No', next: 'ankle_pain_intensity' },
+        ],
+      },
+      ankle_pain_intensity: {
+        text: 'On a scale of 0-10, how intense is your pain right now?',
+        category: 'pain_intensity',
+        options: [
+          { text: '0 - No Pain', next: null },
+          { text: '2 - Mild', next: null },
+          { text: '4 - Moderate', next: null },
+          { text: '6 - Distressing', next: null },
+          { text: '8 - Severe', next: null },
+          { text: '10 - Unbearable', next: null },
         ],
       },
     },
@@ -110,6 +135,7 @@ export const MEDICAL_RULES = {
     questions: {
       lumbar_q1: {
         text: 'Where is your pain located?',
+        category: 'location',
         options: [
           { text: 'Lower back only', next: 'lumbar_q2' },
           {
@@ -126,6 +152,7 @@ export const MEDICAL_RULES = {
       },
       lumbar_q2: {
         text: 'How did the pain begin?',
+        category: 'onset',
         options: [
           {
             text: 'Sudden',
@@ -137,6 +164,7 @@ export const MEDICAL_RULES = {
       },
       lumbar_q_redflag: {
         text: 'Are you experiencing any bowel or bladder dysfunction, such as difficulty or loss of control in urination or defecation?',
+        category: 'red_flag',
         options: [
           {
             text: 'Yes',
@@ -148,6 +176,7 @@ export const MEDICAL_RULES = {
       },
       lumbar_q_numb: {
         text: 'Do you experience any numbness or tingling sensation in your legs or feet?',
+        category: 'neurological',
         options: [
           {
             text: 'Yes',
@@ -159,17 +188,81 @@ export const MEDICAL_RULES = {
       },
       lumbar_q_weak: {
         text: 'Have you experienced any weakness in your legs?',
+        category: 'neurological',
         options: [
-          { text: 'Yes', next: null, tags: ['Rule out cauda equina'] },
-          { text: 'No', next: null },
+          { text: 'Yes', next: 'lumbar_pain_intensity', tags: ['Rule out cauda equina'] },
+          { text: 'No', next: 'lumbar_pain_intensity' },
+        ],
+      },
+      lumbar_pain_intensity: {
+        text: 'On a scale of 0-10, how intense is your pain right now?',
+        category: 'pain_intensity',
+        options: [
+          { text: '0 - No Pain', next: null },
+          { text: '2 - Mild', next: null },
+          { text: '4 - Moderate', next: null },
+          { text: '6 - Distressing', next: null },
+          { text: '8 - Severe', next: null },
+          { text: '10 - Unbearable', next: null },
         ],
       },
     },
   },
   // Placeholder for others to be extracted verbatim
-  cervical: { title: 'Cervical Region', startQuestionId: 'cervical_q1', questions: {} },
-  shoulder: { title: 'Shoulder Region', startQuestionId: 'shoulder_q1', questions: {} },
-  elbow: { title: 'Elbow Region', startQuestionId: 'elbow_q1', questions: {} },
+  cervical: {
+    title: 'Cervical Region',
+    startQuestionId: 'cervical_pain_intensity',
+    questions: {
+      cervical_pain_intensity: {
+        text: 'On a scale of 0-10, how intense is your neck (cervical) pain right now?',
+        category: 'pain_intensity',
+        options: [
+          { text: '0 - No Pain', next: null },
+          { text: '2 - Mild', next: null },
+          { text: '4 - Moderate', next: null },
+          { text: '6 - Distressing', next: null },
+          { text: '8 - Severe', next: null },
+          { text: '10 - Unbearable', next: null },
+        ],
+      },
+    },
+  },
+  shoulder: {
+    title: 'Shoulder Region',
+    startQuestionId: 'shoulder_pain_intensity',
+    questions: {
+      shoulder_pain_intensity: {
+        text: 'On a scale of 0-10, how intense is your shoulder pain right now?',
+        category: 'pain_intensity',
+        options: [
+          { text: '0 - No Pain', next: null },
+          { text: '2 - Mild', next: null },
+          { text: '4 - Moderate', next: null },
+          { text: '6 - Distressing', next: null },
+          { text: '8 - Severe', next: null },
+          { text: '10 - Unbearable', next: null },
+        ],
+      },
+    },
+  },
+  elbow: {
+    title: 'Elbow Region',
+    startQuestionId: 'elbow_pain_intensity',
+    questions: {
+      elbow_pain_intensity: {
+        text: 'On a scale of 0-10, how intense is your elbow pain right now?',
+        category: 'pain_intensity',
+        options: [
+          { text: '0 - No Pain', next: null },
+          { text: '2 - Mild', next: null },
+          { text: '4 - Moderate', next: null },
+          { text: '6 - Distressing', next: null },
+          { text: '8 - Severe', next: null },
+          { text: '10 - Unbearable', next: null },
+        ],
+      },
+    },
+  },
 };
 
 export const BODY_REGIONS = [

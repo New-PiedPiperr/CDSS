@@ -65,7 +65,7 @@ export default function PatientAssessmentPage() {
     }
 
     if (currentStep === 'complete' && !isNewAssessment) {
-      // If we are finished but not starting fresh, don't auto-reset 
+      // If we are finished but not starting fresh, don't auto-reset
       // unless we want to allow viewing the complete screen only once.
     }
   }, [isNewAssessment, resetAssessment, isHydrated, router]);
@@ -117,10 +117,15 @@ export default function PatientAssessmentPage() {
       const payload = {
         bodyRegion: selectedRegion,
         symptomData: Object.entries(responses).map(([questionId, answer]) => {
-          // Find the question text from MEDICAL_RULES if possible
+          // Find the question object from MEDICAL_RULES if possible
           const regionRules = MEDICAL_RULES[selectedRegion];
-          const question = regionRules?.questions[questionId]?.text || questionId;
-          return { question, answer };
+          const questionObj = regionRules?.questions[questionId];
+          return {
+            questionId,
+            question: questionObj?.text || questionId,
+            response: answer,
+            questionCategory: questionObj?.category || 'general',
+          };
         }),
         mediaUrls: [], // For now, handle media separately if needed or add here
       };

@@ -37,19 +37,28 @@ export default async function PatientDashboardPage() {
 
   await dbConnect();
 
-  const [patientData, latestSessionData, appointmentsData, treatmentPlanData, pastSessionsData] =
-    await Promise.all([
-      User.findById(session.user.id).select('firstName lastName avatar').lean(),
-      DiagnosisSession.findOne({ patientId: session.user.id }).sort({ createdAt: -1 }).lean(),
-      Appointment.find({ patient: session.user.id, date: { $gte: new Date() } }).sort({
+  const [
+    patientData,
+    latestSessionData,
+    appointmentsData,
+    treatmentPlanData,
+    pastSessionsData,
+  ] = await Promise.all([
+    User.findById(session.user.id).select('firstName lastName avatar').lean(),
+    DiagnosisSession.findOne({ patientId: session.user.id })
+      .sort({ createdAt: -1 })
+      .lean(),
+    Appointment.find({ patient: session.user.id, date: { $gte: new Date() } })
+      .sort({
         date: 1,
-      }).lean(),
-      TreatmentPlan.findOne({ patient: session.user.id, status: 'active' }).lean(),
-      DiagnosisSession.find({ patientId: session.user.id })
-        .sort({ createdAt: -1 })
-        .limit(7)
-        .lean(),
-    ]);
+      })
+      .lean(),
+    TreatmentPlan.findOne({ patient: session.user.id, status: 'active' }).lean(),
+    DiagnosisSession.find({ patientId: session.user.id })
+      .sort({ createdAt: -1 })
+      .limit(7)
+      .lean(),
+  ]);
 
   // Serialize to plain objects for Client Components
   const patient = JSON.parse(JSON.stringify(patientData));
@@ -60,16 +69,39 @@ export default async function PatientDashboardPage() {
 
   // Aggregate pain history for the chart
   const painHistory = pastSessions
-    .filter((sess) => sess.symptoms?.some((s) => s.questionCategory === 'pain_intensity'))
     .map((sess) => {
-      const intensityScore = sess.symptoms?.find(
+      // Look for explicit pain_intensity category first
+      let painEntry = sess.symptomData?.find(
         (s) => s.questionCategory === 'pain_intensity'
-      )?.response;
+      );
+
+      // Fallback: look for question text containing "intensity" or "scale" if category is missing
+      if (!painEntry) {
+        painEntry = sess.symptomData?.find(
+          (s) =>
+            s.question?.toLowerCase().includes('intensity') ||
+            s.question?.toLowerCase().includes('scale')
+        );
+      }
+
+      const response = painEntry?.response || painEntry?.answer;
+      let intensity = 0;
+
+      if (typeof response === 'number') {
+        intensity = response;
+      } else if (typeof response === 'string') {
+        // Extract first number found in string (e.g., "4 - Moderate" -> 4)
+        const match = response.match(/\d+/);
+        intensity = match ? parseInt(match[0], 10) : 0;
+      }
+
       return {
         date: new Date(sess.createdAt).toLocaleDateString('en-US', { weekday: 'short' }),
-        intensity: typeof intensityScore === 'number' ? intensityScore : 0,
+        intensity,
+        exists: !!painEntry,
       };
     })
+    .filter((entry) => entry.exists || entry.intensity > 0)
     .reverse();
 
   const nextAppointment = appointments[0];

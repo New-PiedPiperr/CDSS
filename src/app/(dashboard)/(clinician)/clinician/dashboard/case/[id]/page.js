@@ -449,9 +449,8 @@ export default function CaseDetailsPage({ params }) {
               <div>
                 <h3 className="text-xl font-black">Patient Documents</h3>
                 <p className="text-muted-foreground text-xs font-medium">
-                  Viewing clinical files for {patient ? `${patient.firstName} ${patient.lastName}` : "this patient"}
-                </p>
-                  Uploaded by Bola Ahmed Tinubu
+                  Viewing clinical files for{' '}
+                  {patient ? `${patient.firstName} ${patient.lastName}` : 'this patient'}
                 </p>
               </div>
               <Button variant="ghost" size="icon" onClick={() => setIsDocsOpen(false)}>

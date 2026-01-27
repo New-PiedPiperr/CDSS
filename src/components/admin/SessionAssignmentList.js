@@ -20,6 +20,7 @@ export function SessionAssignmentList({ sessions, clinicians, initialSelectedId 
   const [isAssigning, setIsAssigning] = useState(false);
   const [selectedSessionId, setSelectedSessionId] = useState(initialSelectedId || null);
   const [assignmentLoading, setAssignmentLoading] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleAssign = async (clinicianId) => {
     if (!selectedSessionId) return;
@@ -45,6 +46,15 @@ export function SessionAssignmentList({ sessions, clinicians, initialSelectedId 
         return <AlertCircle className="h-4 w-4 text-yellow-500" />;
     }
   };
+
+  const filteredClinicians = clinicians.filter((c) => {
+    const search = searchTerm.toLowerCase();
+    return (
+      c.firstName.toLowerCase().includes(search) ||
+      c.lastName.toLowerCase().includes(search) ||
+      (c.specialization && c.specialization.toLowerCase().includes(search))
+    );
+  });
 
   return (
     <div className="flex flex-col gap-8 lg:flex-row">
@@ -194,17 +204,19 @@ export function SessionAssignmentList({ sessions, clinicians, initialSelectedId 
             <input
               type="text"
               placeholder="Filter clinicians..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
               className="focus:border-primary/20 h-12 w-full rounded-2xl border border-transparent bg-gray-50 pr-4 pl-12 text-sm outline-none dark:bg-gray-800"
             />
           </div>
 
           <div className="custom-scrollbar max-h-[500px] space-y-3 overflow-y-auto pr-2">
-            {clinicians.map((clinician) => (
+            {filteredClinicians.map((clinician) => (
               <button
                 key={clinician._id}
                 onClick={() => handleAssign(clinician._id)}
                 disabled={assignmentLoading}
-                className="hover:bg-primary/5 hover:border-primary/20 flex w-full items-center gap-4 rounded-3xl border border-gray-50 p-4 transition-all dark:border-gray-800 dark:hover:bg-gray-800"
+                className="hover:bg-primary/5 hover:border-primary/20 group flex w-full items-center gap-4 rounded-3xl border border-gray-50 p-4 transition-all dark:border-gray-800 dark:hover:bg-gray-800"
               >
                 <div className="h-12 w-12 overflow-hidden rounded-xl bg-gray-100">
                   {clinician.avatar ? (
@@ -234,6 +246,11 @@ export function SessionAssignmentList({ sessions, clinicians, initialSelectedId 
                 </div>
               </button>
             ))}
+            {filteredClinicians.length === 0 && (
+              <p className="py-4 text-center text-sm text-gray-400">
+                No clinicians matching search.
+              </p>
+            )}
           </div>
 
           {selectedSessionId && (

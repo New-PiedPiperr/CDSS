@@ -26,19 +26,28 @@ export default async function AdminDashboardPage() {
   });
 
   // Fetch Triage Queue (New Cases)
-  const newCases = await DiagnosisSession.find({ status: 'pending_review' })
+  const newCasesRaw = await DiagnosisSession.find({ status: 'pending_review' })
     .populate('patientId', 'firstName lastName avatar phone gender')
     .sort({ createdAt: -1 })
-    .limit(5);
+    .limit(5)
+    .lean();
+
+  const newCases = JSON.parse(JSON.stringify(newCasesRaw));
 
   // Fetch Therapists for Management
-  const approvedTherapists = await User.find({ role: ROLES.CLINICIAN })
+  const approvedTherapistsRaw = await User.find({ role: ROLES.CLINICIAN })
     .sort({ createdAt: -1 })
-    .limit(5);
+    .limit(5)
+    .lean();
 
-  const pendingTherapists = await User.find({ role: ROLES.PATIENT }) // Conceptually candidates
+  const approvedTherapists = JSON.parse(JSON.stringify(approvedTherapistsRaw));
+
+  const pendingTherapistsRaw = await User.find({ role: ROLES.PATIENT }) // Conceptually candidates
     .sort({ createdAt: -1 })
-    .limit(5);
+    .limit(5)
+    .lean();
+
+  const pendingTherapists = JSON.parse(JSON.stringify(pendingTherapistsRaw));
 
   // Weekly Report Data (Mocking for now as we might not have 7 days of data)
   const weeklyData = [

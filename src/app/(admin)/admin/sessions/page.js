@@ -9,15 +9,20 @@ export default async function AdminSessionsPage({ searchParams }) {
   const { id } = await searchParams;
 
   // Fetch all sessions (populated)
-  const sessions = await DiagnosisSession.find()
+  const sessionsRaw = await DiagnosisSession.find()
     .populate('patientId', 'firstName lastName avatar email phone gender')
     .populate('clinicianId', 'firstName lastName avatar specialization')
-    .sort({ createdAt: -1 });
+    .sort({ createdAt: -1 })
+    .lean();
+
+  const sessions = JSON.parse(JSON.stringify(sessionsRaw));
 
   // Fetch all clinicians for assignment dropdown
-  const clinicians = await User.find({ role: ROLES.CLINICIAN, isActive: true }).select(
-    'firstName lastName avatar specialization'
-  );
+  const cliniciansRaw = await User.find({ role: ROLES.CLINICIAN, isActive: true })
+    .select('firstName lastName avatar specialization')
+    .lean();
+
+  const clinicians = JSON.parse(JSON.stringify(cliniciansRaw));
 
   return (
     <div className="space-y-10 pb-12">

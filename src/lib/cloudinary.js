@@ -28,6 +28,11 @@ const UPLOAD_PRESETS = {
     allowed_formats: ['pdf', 'doc', 'docx'],
     resource_type: 'raw',
   },
+  medical_report: {
+    folder: 'cdss/medical_reports',
+    allowed_formats: ['pdf', 'jpg', 'jpeg', 'png', 'doc', 'docx'],
+    resource_type: 'auto', // Auto-detect for mixed content
+  },
   avatar: {
     folder: 'cdss/avatars',
     allowed_formats: ['jpg', 'jpeg', 'png', 'webp'],
@@ -42,12 +47,8 @@ const UPLOAD_PRESETS = {
 
 /**
  * Upload a file to Cloudinary
- * @param {string|Buffer} file - File path or buffer to upload
+ * @param {string|Buffer} file - File path, data URI, or Buffer to upload
  * @param {Object} options - Upload options
- * @param {string} options.preset - Preset name from UPLOAD_PRESETS
- * @param {string} options.publicId - Custom public ID (optional)
- * @param {Object} options.customOptions - Additional Cloudinary options
- * @returns {Promise<Object>} Upload result
  */
 export async function uploadFile(file, options = {}) {
   const { preset = 'medical_image', publicId, customOptions = {} } = options;
@@ -58,8 +59,37 @@ export async function uploadFile(file, options = {}) {
       ...presetConfig,
       ...customOptions,
       ...(publicId && { public_id: publicId }),
+      timeout: 120000, // Increase timeout to 2 minutes
     };
 
+    // If it's a Buffer, use upload_stream
+    if (Buffer.isBuffer(file)) {
+      return new Promise((resolve, reject) => {
+        const uploadStream = cloudinary.uploader.upload_stream(
+          uploadOptions,
+          (error, result) => {
+            if (error) {
+              console.error('Cloudinary stream upload error:', error);
+              resolve({ success: false, error: error.message });
+            } else {
+              resolve({
+                success: true,
+                url: result.secure_url,
+                publicId: result.public_id,
+                format: result.format,
+                width: result.width,
+                height: result.height,
+                bytes: result.bytes,
+                resourceType: result.resource_type,
+              });
+            }
+          }
+        );
+        uploadStream.end(file);
+      });
+    }
+
+    // Otherwise use standard upload (for strings/URIs/paths)
     const result = await cloudinary.uploader.upload(file, uploadOptions);
 
     return {

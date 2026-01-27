@@ -25,12 +25,8 @@ export async function POST(request) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    // Create a base64 data URI for Cloudinary upload
-    const base64 = buffer.toString('base64');
-    const dataUri = `data:${file.type};base64,${base64}`;
-
-    // Upload to Cloudinary
-    const result = await uploadFile(dataUri, {
+    // Upload to Cloudinary directly using the buffer
+    const result = await uploadFile(buffer, {
       preset,
       customOptions: {
         context: `session_id=${sessionId || 'unknown'}`,

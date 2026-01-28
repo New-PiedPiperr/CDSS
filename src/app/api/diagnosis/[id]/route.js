@@ -18,8 +18,16 @@ export async function GET(request, { params }) {
     await connectDB();
 
     const session = await DiagnosisSession.findById(id)
-      .populate('patientId', 'firstName lastName email gender dateOfBirth avatar')
-      .populate('clinicianReview.reviewedBy', 'firstName lastName')
+      .populate({
+        path: 'patientId',
+        select: 'firstName lastName email gender dateOfBirth avatar',
+        options: { strictPopulate: false },
+      })
+      .populate({
+        path: 'clinicianReview.reviewedBy',
+        select: 'firstName lastName',
+        options: { strictPopulate: false },
+      })
       .lean();
 
     if (!session) {

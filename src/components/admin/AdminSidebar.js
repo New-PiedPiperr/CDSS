@@ -12,7 +12,7 @@ import {
   BarChart3,
   MessageSquare,
   Settings,
-  HelpCircle,
+  Bell,
   LogOut,
   X,
 } from 'lucide-react';
@@ -32,7 +32,7 @@ const navItems = [
 
 const footerItems = [
   { href: '/admin/settings', label: 'Settings', icon: Settings },
-  { href: '/admin/help', label: 'Help', icon: HelpCircle },
+  { href: '/admin/notifications', label: 'Notifications', icon: Bell },
 ];
 
 export default function AdminSidebar() {

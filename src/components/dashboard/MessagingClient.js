@@ -242,21 +242,21 @@ export default function MessagingClient({ currentUser, initialConversations = []
       {!activeTab ? (
         /* Conversation List - Full Width */
         <div className="flex h-full flex-col">
-          <div className="border-border/50 bg-card border-b p-4 md:p-8">
-            <div className="mb-6 flex items-center justify-between">
-              <h2 className="text-xl font-bold tracking-tight uppercase">Secure Inbox</h2>
-              <div className="bg-primary/10 rounded-xl p-3">
-                <MessageSquare className="text-primary h-6 w-6" />
+          <div className="border-border/50 bg-card border-b p-4">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-lg font-bold tracking-tight uppercase">Secure Inbox</h2>
+              <div className="bg-primary/10 rounded-xl p-2">
+                <MessageSquare className="text-primary h-5 w-5" />
               </div>
             </div>
             <div className="relative">
-              <Search className="text-muted-foreground absolute top-1/2 left-4 h-5 w-5 -translate-y-1/2" />
+              <Search className="text-muted-foreground absolute top-1/2 left-4 h-4 w-4 -translate-y-1/2" />
               <input
                 type="text"
                 placeholder="Search conversations..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-muted/30 placeholder:text-muted-foreground/50 focus:ring-primary/20 h-12 w-full rounded-2xl pr-4 pl-12 text-xs font-semibold focus:ring-2 focus:outline-none"
+                className="bg-muted/30 placeholder:text-muted-foreground/50 focus:ring-primary/20 h-10 w-full rounded-xl pr-4 pl-10 text-xs font-semibold focus:ring-2 focus:outline-none"
               />
             </div>
           </div>
@@ -271,14 +271,14 @@ export default function MessagingClient({ currentUser, initialConversations = []
                     className="group hover:bg-muted/50 border-border/20 bg-card flex w-full items-center gap-6 rounded-[2rem] border p-6 transition-all hover:scale-[1.01] hover:shadow-lg"
                   >
                     <div className="relative shrink-0">
-                      <Avatar className="h-16 w-16 rounded-[1.5rem] shadow-md ring-4 ring-white dark:ring-gray-800">
+                      <Avatar className="h-12 w-12 rounded-xl shadow-md ring-2 ring-white dark:ring-gray-800">
                         <AvatarImage src={conv.otherUser.avatar} />
-                        <AvatarFallback className="bg-primary/20 text-primary text-xl font-bold">
+                        <AvatarFallback className="bg-primary/20 text-primary text-lg font-bold">
                           {getInitials(conv.otherUser.name)}
                         </AvatarFallback>
                       </Avatar>
                       {conv.otherUser.online && (
-                        <div className="absolute -right-1 -bottom-1 h-5 w-5 rounded-full bg-emerald-500 ring-4 ring-white dark:ring-gray-900" />
+                        <div className="absolute -right-1 -bottom-1 h-3 w-3 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-gray-900" />
                       )}
                     </div>
 
@@ -363,7 +363,7 @@ export default function MessagingClient({ currentUser, initialConversations = []
                     Online
                   </p>
                 ) : (
-                  <p className="text-muted-foreground text-[9px] font-semibold tracking-widest uppercase opacity-60">
+                  <p className="text-muted-foreground text-[10px] font-medium opacity-60">
                     {activeTab.otherUser.lastLogin
                       ? `Last seen ${
                           new Date(activeTab.otherUser.lastLogin).toLocaleDateString() ===
@@ -465,26 +465,24 @@ export default function MessagingClient({ currentUser, initialConversations = []
                     >
                       <div
                         className={cn(
-                          'rounded-[2rem] p-6 shadow-sm transition-all duration-300',
+                          'rounded-2xl px-4 py-3 shadow-sm transition-all duration-300',
                           isFromMe
-                            ? 'bg-primary hover:shadow-primary/10 rounded-tr-none text-white hover:shadow-lg'
-                            : 'dark:bg-muted border-border/50 rounded-tl-none border bg-white hover:shadow-lg'
+                            ? 'bg-primary hover:shadow-primary/10 rounded-tr-none text-white hover:shadow-md'
+                            : 'dark:bg-muted border-border/50 rounded-tl-none border bg-white hover:shadow-md'
                         )}
                       >
                         {m.content.startsWith('IMAGE:') ? (
                           <img
                             src={m.content.replace('IMAGE:', '')}
                             alt="Attachment"
-                            className="max-h-64 rounded-2xl object-cover"
+                            className="max-h-48 rounded-xl object-cover"
                           />
                         ) : (
-                          <p className="font-sans text-[15px] leading-relaxed">
-                            {m.content}
-                          </p>
+                          <p className="font-sans text-sm leading-snug">{m.content}</p>
                         )}
                       </div>
-                      <div className="mt-3 flex items-center gap-2 px-2">
-                        <span className="text-muted-foreground text-[8px] font-semibold tracking-widest uppercase opacity-40">
+                      <div className="mt-1 flex items-center gap-2 px-1">
+                        <span className="text-muted-foreground text-[9px] font-medium opacity-50">
                           {new Date(m.createdAt).toLocaleTimeString([], {
                             hour: '2-digit',
                             minute: '2-digit',
@@ -516,10 +514,10 @@ export default function MessagingClient({ currentUser, initialConversations = []
           </ScrollArea>
 
           {/* Input */}
-          <footer className="bg-card border-border/50 border-t p-4 md:p-8">
+          <footer className="bg-card border-border/50 border-t p-3 md:p-6">
             <form
               onSubmit={handleSendMessage}
-              className="relative mx-auto flex max-w-4xl items-center gap-5"
+              className="relative mx-auto flex max-w-4xl items-center gap-3"
             >
               <input
                 type="file"
@@ -533,35 +531,35 @@ export default function MessagingClient({ currentUser, initialConversations = []
                 variant="ghost"
                 size="icon"
                 className={cn(
-                  'hover:bg-muted/50 h-16 w-16 shrink-0 rounded-[1.5rem]',
+                  'hover:bg-muted/50 h-12 w-12 shrink-0 rounded-xl',
                   isUploading && 'animate-pulse opacity-50'
                 )}
                 disabled={isUploading}
                 onClick={() => fileInputRef.current?.click()}
               >
-                <Paperclip className="text-muted-foreground h-6 w-6" />
+                <Paperclip className="text-muted-foreground h-5 w-5" />
               </Button>
 
               <div className="group relative flex-1">
-                <div className="from-primary/20 absolute -inset-1 rounded-[1.5rem] bg-gradient-to-r to-indigo-500/20 opacity-0 blur transition duration-500 group-focus-within:opacity-100"></div>
+                <div className="from-primary/20 absolute -inset-1 rounded-xl bg-gradient-to-r to-indigo-500/20 opacity-0 blur transition duration-500 group-focus-within:opacity-100"></div>
                 <input
                   type="text"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Type clinical inquiry here..."
-                  className="bg-muted/30 focus:ring-primary/20 relative h-16 w-full rounded-[1.5rem] border-none pr-16 pl-6 font-sans text-sm transition-all focus:ring-2 focus:outline-none"
+                  placeholder="Type message..."
+                  className="bg-muted/30 focus:ring-primary/20 relative h-12 w-full rounded-xl border-none pr-12 pl-4 font-sans text-sm transition-all focus:ring-2 focus:outline-none"
                 />
                 <Button
                   type="button"
                   variant="ghost"
                   size="icon"
                   className={cn(
-                    'hover:text-primary absolute top-1/2 right-3 h-12 w-12 -translate-y-1/2 rounded-xl transition-all',
+                    'hover:text-primary absolute top-1/2 right-2 h-8 w-8 -translate-y-1/2 rounded-lg transition-all',
                     showEmojiPicker && 'text-primary bg-primary/10'
                   )}
                   onClick={() => setShowEmojiPicker(!showEmojiPicker)}
                 >
-                  <Smile className="h-6 w-6" />
+                  <Smile className="h-5 w-5" />
                 </Button>
 
                 {showEmojiPicker && (
@@ -583,9 +581,9 @@ export default function MessagingClient({ currentUser, initialConversations = []
               <Button
                 type="submit"
                 disabled={!message.trim()}
-                className="bg-primary shadow-primary/30 h-16 w-16 shrink-0 rounded-[1.5rem] text-white shadow-2xl transition-all hover:brightness-110 active:scale-95 disabled:opacity-50"
+                className="bg-primary shadow-primary/30 h-12 w-12 shrink-0 rounded-xl text-white shadow-xl transition-all hover:brightness-110 active:scale-95 disabled:opacity-50"
               >
-                <Send className="h-6 w-6" />
+                <Send className="h-5 w-5" />
               </Button>
             </form>
           </footer>

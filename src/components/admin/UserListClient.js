@@ -118,7 +118,7 @@ export default function AdminUserListClient({ initialUsers = [] }) {
                     key={role}
                     onClick={() => setRoleFilter(role)}
                     className={cn(
-                      'rounded-xl px-4 py-2 text-xs font-black tracking-widest uppercase transition-all',
+                      'rounded-xl px-4 py-2 text-xs font-bold tracking-widest uppercase transition-all',
                       roleFilter === role
                         ? 'text-primary bg-white shadow-sm'
                         : 'text-muted-foreground hover:text-foreground'
@@ -149,19 +149,19 @@ export default function AdminUserListClient({ initialUsers = [] }) {
           <table className="w-full border-collapse text-left">
             <thead>
               <tr className="border-border bg-muted/20 border-b">
-                <th className="text-muted-foreground p-6 text-[10px] font-black tracking-[0.2em] uppercase">
+                <th className="text-muted-foreground p-6 text-[10px] font-bold tracking-widest uppercase">
                   User Details
                 </th>
-                <th className="text-muted-foreground p-6 text-[10px] font-black tracking-[0.2em] uppercase">
+                <th className="text-muted-foreground p-6 text-[10px] font-bold tracking-widest uppercase">
                   Account Role
                 </th>
-                <th className="text-muted-foreground p-6 text-[10px] font-black tracking-[0.2em] uppercase">
+                <th className="text-muted-foreground p-6 text-[10px] font-bold tracking-widest uppercase">
                   Verification
                 </th>
-                <th className="text-muted-foreground p-6 text-[10px] font-black tracking-[0.2em] uppercase">
+                <th className="text-muted-foreground p-6 text-[10px] font-bold tracking-widest uppercase">
                   Joined Date
                 </th>
-                <th className="text-muted-foreground p-6 text-right text-[10px] font-black tracking-[0.2em] uppercase">
+                <th className="text-muted-foreground p-6 text-right text-[10px] font-bold tracking-widest uppercase">
                   Actions
                 </th>
               </tr>
@@ -196,7 +196,7 @@ export default function AdminUserListClient({ initialUsers = [] }) {
                     <td className="p-6">
                       <Badge
                         className={cn(
-                          'rounded-full border-none px-4 py-1.5 text-[10px] font-black tracking-widest uppercase',
+                          'rounded-full border-none px-4 py-1.5 text-[10px] font-bold tracking-widest uppercase',
                           user.role === 'CLINICIAN'
                             ? 'bg-indigo-500 text-white'
                             : 'bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300'
@@ -280,7 +280,7 @@ export default function AdminUserListClient({ initialUsers = [] }) {
                   <td colSpan="5" className="text-muted-foreground p-12 text-center">
                     <div className="flex flex-col items-center gap-4">
                       <UserIcon className="h-12 w-12 opacity-20" />
-                      <p className="text-foreground text-xl font-bold tracking-tighter uppercase italic opacity-30">
+                      <p className="text-foreground text-xl font-bold tracking-tight uppercase opacity-30">
                         No users found
                       </p>
                       <p className="text-sm font-medium">
@@ -311,12 +311,10 @@ function StatCard({ title, value, icon, color }) {
           {icon}
         </div>
         <div>
-          <p className="text-muted-foreground mb-1 text-[10px] font-black tracking-[0.2em] uppercase">
+          <p className="text-muted-foreground mb-1 text-[10px] font-bold tracking-widest uppercase">
             {title}
           </p>
-          <h3 className="text-foreground text-3xl font-black tracking-tighter">
-            {value}
-          </h3>
+          <h3 className="text-foreground text-3xl font-bold tracking-tight">{value}</h3>
         </div>
       </CardContent>
     </Card>

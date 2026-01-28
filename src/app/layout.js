@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { Toaster } from 'sonner';
 import OfflineStatus from '@/components/OfflineStatus';
-import { SessionProvider } from 'next-auth/react';
+import { NextAuthProvider } from '@/components/providers/NextAuthProvider';
 import './globals.css';
 
 const inter = Inter({
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         className={`${inter.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
-        <SessionProvider basePath="/api/auth">
+        <NextAuthProvider>
           <ThemeProvider
             attribute="class"
             defaultTheme="light"
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
             <Toaster position="top-right" richColors />
             <OfflineStatus />
           </ThemeProvider>
-        </SessionProvider>
+        </NextAuthProvider>
       </body>
     </html>
   );

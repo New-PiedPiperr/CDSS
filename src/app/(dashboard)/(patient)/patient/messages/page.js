@@ -1,64 +1,89 @@
-import connectDB from '@/lib/db/connect';
-import { DiagnosisSession, Message, User } from '@/models';
-import { auth } from '@/auth';
-import { redirect } from 'next/navigation';
+'use client';
+
+import React, { useState } from 'react';
 import MessagingClient from '@/components/dashboard/MessagingClient';
+import { useSession } from 'next-auth/react';
+import { redirect } from 'next/navigation';
 
-export default async function PatientMessagesPage() {
-  const session = await auth();
-  if (!session || !session.user) redirect('/login');
-
-  await connectDB();
-  const patientId = session.user.id;
-
-  // 1. Get all assigned clinicians via sessions
-  const sessions = await DiagnosisSession.find({ patientId })
-    .populate('clinicianId', 'firstName lastName avatar specialization')
-    .sort({ updatedAt: -1 })
-    .lean();
-
-  // 2. Get recent messages
-  const recentMessages = await Message.find({
-    $or: [{ senderId: patientId }, { receiverId: patientId }],
-  })
-    .sort({ createdAt: -1 })
-    .lean();
-
-  // 3. Construct conversations
-  const conversationsMap = new Map();
-
-  sessions.forEach((sess) => {
-    if (!sess.clinicianId) return;
-    const cId = sess.clinicianId._id.toString();
-
-    const lastMsg = recentMessages.find(
-      (m) => m.senderId.toString() === cId || m.receiverId.toString() === cId
-    );
-
-    conversationsMap.set(cId, {
-      id: cId,
-      otherUser: {
-        id: cId,
-        name: `Dr. ${sess.clinicianId.firstName} ${sess.clinicianId.lastName}`,
-        avatar: sess.clinicianId.avatar,
-        online: true,
-      },
-      lastMessage: lastMsg
-        ? lastMsg.content
-        : 'Start a conversation with your therapist.',
-      lastMessageTime: lastMsg
-        ? new Date(lastMsg.createdAt).toLocaleTimeString([], {
-            hour: '2-digit',
-            minute: '2-digit',
-          })
-        : 'New',
-    });
+export default function MessagesPage() {
+  const { data: session, status } = useSession({
+    required: true,
+    onUnauthenticated() {
+      redirect('/login');
+    },
   });
 
-  const initialConversations = Array.from(conversationsMap.values());
+  const conversations = [
+    {
+      id: 1,
+      otherUser: {
+        id: 'dr-ajayi',
+        name: 'Dr Ajayi',
+        avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=DrAjayi`,
+        online: true,
+      },
+      lastMessage: 'How are you today David?',
+      unreadCount: 12,
+      lastMessageTime: 'Yesterday',
+    },
+    {
+      id: 2,
+      otherUser: {
+        id: 'dr-isaac',
+        name: 'Dr Isaac',
+        avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=DrIsaac`,
+        online: false,
+      },
+      lastMessage: 'How are you today David?',
+      unreadCount: 10,
+      lastMessageTime: '2d ago',
+    },
+    {
+      id: 3,
+      otherUser: {
+        id: 'dr-bull',
+        name: 'Dr Bull',
+        avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=DrBull`,
+        online: true,
+      },
+      lastMessage: 'How are you today David?',
+      unreadCount: 21,
+      lastMessageTime: '2d ago',
+    },
+    {
+      id: 4,
+      otherUser: {
+        id: 'dr-olufemi',
+        name: 'Dr Olufemi',
+        avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=DrOlufemi`,
+        online: false,
+      },
+      lastMessage: 'How are you today David?',
+      unreadCount: 0,
+      lastMessageTime: '2d ago',
+    },
+    {
+      id: 5,
+      otherUser: {
+        id: 'dr-dayo',
+        name: 'Dr Dayo',
+        avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=DrDayo`,
+        online: true,
+      },
+      lastMessage: 'How are you today David?',
+      unreadCount: 0,
+      lastMessageTime: '2d ago',
+    },
+  ];
+
+  if (status === 'loading') {
+    return (
+      <div className="flex h-[60vh] items-center justify-center">Loading messages...</div>
+    );
+  }
 
   return (
-    <div className="mx-auto max-w-6xl">
+    <div className="mx-auto max-w-6xl space-y-6">
       <header className="mb-8">
         <h1 className="text-foreground text-3xl font-black tracking-tighter uppercase italic">
           Messages
@@ -70,10 +95,10 @@ export default async function PatientMessagesPage() {
 
       <MessagingClient
         currentUser={{
-          id: session.user.id,
-          name: `${session.user.firstName} ${session.user.lastName}`,
+          id: session?.user?.id,
+          name: `${session?.user?.firstName} ${session?.user?.lastName}`,
         }}
-        initialConversations={initialConversations}
+        initialConversations={conversations}
       />
     </div>
   );

@@ -29,7 +29,7 @@ import {
 import { cn } from '@/lib/cn';
 
 export default function MessagingClient({ currentUser, initialConversations = [] }) {
-  const [activeTab, setActiveTab] = useState(initialConversations[0] || null);
+  const [activeTab, setActiveTab] = useState(null);
   const [message, setMessage] = useState('');
   const [conversations, setConversations] = useState(initialConversations);
   const [messages, setMessages] = useState([]);
@@ -69,7 +69,8 @@ export default function MessagingClient({ currentUser, initialConversations = []
       <aside
         className={cn(
           'border-border/50 bg-muted/10 flex-col border-r transition-all duration-300',
-          isSidebarOpen ? 'flex w-80' : 'hidden w-0 md:flex md:w-20'
+          isSidebarOpen ? 'flex w-full md:w-80' : 'hidden md:flex md:w-20',
+          activeTab && 'hidden md:flex'
         )}
       >
         <div className="border-border/50 bg-card border-b p-6">
@@ -137,7 +138,7 @@ export default function MessagingClient({ currentUser, initialConversations = []
                 {isSidebarOpen && (
                   <div className="min-w-0 flex-1 text-left">
                     <div className="mb-1 flex items-start justify-between">
-                      <span className="truncate text-sm font-black tracking-tight uppercase italic">
+                      <span className="truncate text-[11px] font-black tracking-tight uppercase italic">
                         {conv.otherUser.name}
                       </span>
                       <span
@@ -151,16 +152,31 @@ export default function MessagingClient({ currentUser, initialConversations = []
                         {conv.lastMessageTime}
                       </span>
                     </div>
-                    <p
-                      className={cn(
-                        'truncate text-[10px] font-medium opacity-70',
-                        activeTab?.id === conv.id
-                          ? 'text-white/80'
-                          : 'text-muted-foreground'
-                      )}
-                    >
-                      {conv.lastMessage}
-                    </p>
+                    <div className="flex items-center gap-1">
+                      <Check
+                        size={10}
+                        className={cn(
+                          activeTab?.id === conv.id ? 'text-white/60' : 'text-cyan-500'
+                        )}
+                      />
+                      <p
+                        className={cn(
+                          'truncate text-[10px] font-medium opacity-70',
+                          activeTab?.id === conv.id
+                            ? 'text-white/80'
+                            : 'text-muted-foreground'
+                        )}
+                      >
+                        {conv.lastMessage}
+                      </p>
+                    </div>
+                    {conv.unreadCount > 0 && activeTab?.id !== conv.id && (
+                      <div className="mt-1">
+                        <span className="rounded-full bg-cyan-500 px-2 py-0.5 text-[8px] font-black text-white">
+                          {conv.unreadCount} NEWS
+                        </span>
+                      </div>
+                    )}
                   </div>
                 )}
               </button>
@@ -180,7 +196,7 @@ export default function MessagingClient({ currentUser, initialConversations = []
                   variant="ghost"
                   size="icon"
                   className="rounded-xl md:hidden"
-                  onClick={() => setIsSidebarOpen(true)}
+                  onClick={() => setActiveTab(null)}
                 >
                   <ChevronLeft className="h-5 w-5" />
                 </Button>

@@ -14,8 +14,6 @@ export const middleware = auth((req) => {
     return null;
   }
 
-  const isAuthRoute = ['/login', '/register', '/admin'].includes(nextUrl.pathname);
-
   if (isAuthRoute) {
     if (isLoggedIn) {
       const role = req.auth?.user?.role?.toUpperCase();

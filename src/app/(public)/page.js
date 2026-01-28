@@ -36,7 +36,7 @@ export default function SplashPage() {
         <Logo size="xl" showText={false} />
       </div>
 
-      {/* Title */}
+      {/* Tittle */}
       <h1
         className={`text-foreground mt-6 text-center text-2xl font-bold transition-all delay-200 duration-700 ease-out sm:text-3xl md:text-4xl ${
           isAnimating ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'

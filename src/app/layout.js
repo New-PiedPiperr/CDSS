@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { Toaster } from 'sonner';
 import OfflineStatus from '@/components/OfflineStatus';
-import { NextAuthProvider } from '@/components/providers/NextAuthProvider';
+import NextAuthProvider from '@/components/providers/NextAuthProvider';
 import './globals.css';
 
 const inter = Inter({

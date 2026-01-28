@@ -91,7 +91,7 @@ export async function getAiPreliminaryAnalysis({
       },
       {
         headers: {
-          Authorization: `Bearer ${process.env['CDSS-AI_API_KEY']}`,
+          Authorization: `Bearer ${process.env['CDSS_AI_API_KEY']}`,
           'Content-Type': 'application/json',
         },
       }

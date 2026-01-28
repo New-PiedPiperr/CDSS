@@ -24,13 +24,20 @@ import {
   Badge,
 } from '@/components/ui';
 import { cn } from '@/lib/cn';
+import { getMessages, sendMessage, markAsRead } from '@/lib/actions/messages';
 
 export default function MessagingClient({ currentUser, initialConversations = [] }) {
   const [activeTab, setActiveTab] = useState(null);
   const [message, setMessage] = useState('');
   const [conversations, setConversations] = useState(initialConversations);
   const [messages, setMessages] = useState([]);
+  const [isLoadingMessages, setIsLoadingMessages] = useState(false);
   const scrollRef = useRef(null);
+
+  // Sync state with props
+  useEffect(() => {
+    setConversations(initialConversations);
+  }, [initialConversations]);
 
   // Auto-scroll to bottom of messages
   useEffect(() => {
@@ -39,21 +46,66 @@ export default function MessagingClient({ currentUser, initialConversations = []
     }
   }, [messages]);
 
+  // Fetch messages when tab changes
+  useEffect(() => {
+    if (activeTab) {
+      const fetchMessages = async () => {
+        setIsLoadingMessages(true);
+        try {
+          const msgs = await getMessages(activeTab.otherUser.id);
+          setMessages(msgs);
+          await markAsRead(activeTab.otherUser.id);
+
+          // Reset unread count locally
+          setConversations((prev) =>
+            prev.map((c) => (c.id === activeTab.id ? { ...c, unreadCount: 0 } : c))
+          );
+        } catch (error) {
+          console.error('Failed to fetch messages:', error);
+        } finally {
+          setIsLoadingMessages(false);
+        }
+      };
+
+      fetchMessages();
+
+      // Poll for new messages every 5 seconds
+      const interval = setInterval(async () => {
+        const msgs = await getMessages(activeTab.otherUser.id);
+        if (msgs.length !== messages.length) {
+          setMessages(msgs);
+        }
+      }, 5000);
+
+      return () => clearInterval(interval);
+    } else {
+      setMessages([]);
+    }
+  }, [activeTab]);
+
   const handleSendMessage = async (e) => {
     e.preventDefault();
     if (!message.trim() || !activeTab) return;
 
-    const newMessage = {
-      _id: Date.now().toString(),
-      content: message,
-      senderId: currentUser.id,
-      receiverId: activeTab.otherUser.id,
-      createdAt: new Date().toISOString(),
-      isRead: false,
-    };
+    const content = message;
+    setMessage(''); // Clear immediately for UX
 
-    setMessages([...messages, newMessage]);
-    setMessage('');
+    try {
+      const sentMsg = await sendMessage(activeTab.otherUser.id, content);
+      setMessages((prev) => [...prev, sentMsg]);
+
+      // Update last message in conversation list
+      setConversations((prev) =>
+        prev.map((c) =>
+          c.id === activeTab.id
+            ? { ...c, lastMessage: content, lastMessageTime: 'Just now' }
+            : c
+        )
+      );
+    } catch (error) {
+      console.error('Failed to send message:', error);
+      // Revert if failed?
+    }
   };
 
   return (
@@ -204,7 +256,12 @@ export default function MessagingClient({ currentUser, initialConversations = []
                 </Badge>
               </div>
 
-              {messages.length === 0 ? (
+              {isLoadingMessages ? (
+                <div className="flex flex-col items-center justify-center py-20 text-center opacity-30">
+                  <Circle className="mb-4 h-8 w-8 animate-ping" />
+                  <p className="text-sm font-bold uppercase">Loading decryption...</p>
+                </div>
+              ) : messages.length === 0 ? (
                 <div className="flex flex-col items-center justify-center py-20 text-center opacity-30">
                   <MessageSquare className="mb-4 h-16 w-16" />
                   <p className="text-base font-bold uppercase">No message history</p>

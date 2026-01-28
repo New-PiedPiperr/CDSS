@@ -20,6 +20,7 @@ import {
   CardHeader,
   CardTitle,
   Button,
+  Badge,
   Tabs,
   TabsContent,
   TabsList,

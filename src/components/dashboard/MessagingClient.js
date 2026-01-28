@@ -329,7 +329,7 @@ export default function MessagingClient({ currentUser, initialConversations = []
                     <DropdownMenuItem
                       className="flex cursor-pointer gap-2 rounded-xl py-3 text-xs font-bold tracking-widest uppercase transition-colors"
                       onClick={() =>
-                        (window.location.href = `/clinician/diagnostics?id=${activeTab.id}`)
+                        (window.location.href = `/clinician/cases/${activeTab.id}`)
                       }
                     >
                       View Case File

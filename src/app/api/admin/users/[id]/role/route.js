@@ -41,10 +41,6 @@ export async function PATCH(request, { params }) {
       });
     }
 
-    if (!updatedUser) {
-      return NextResponse.json({ error: 'User not found' }, { status: 404 });
-    }
-
     return NextResponse.json({
       message: 'User role updated successfully',
       user: updatedUser,

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import {
   Send,
   Search,
@@ -44,8 +44,15 @@ export default function MessagingClient({ currentUser, initialConversations = []
   const scrollContainerRef = useRef(null);
   const fileInputRef = useRef(null);
   const msgCountRef = useRef(0);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const emojis = ['😊', '👍', '🙏', '🏥', '💊', '👋', '❤️', '📍', '✅', '❌', '🤔', '💪'];
+
+  const filteredConversations = useMemo(() => {
+    return conversations.filter((c) =>
+      c.otherUser.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [conversations, searchQuery]);
 
   // Sync state with props
   useEffect(() => {
@@ -247,6 +254,8 @@ export default function MessagingClient({ currentUser, initialConversations = []
               <input
                 type="text"
                 placeholder="Search conversations..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
                 className="bg-muted/30 placeholder:text-muted-foreground/50 focus:ring-primary/20 h-12 w-full rounded-2xl pr-4 pl-12 text-xs font-semibold focus:ring-2 focus:outline-none"
               />
             </div>
@@ -254,8 +263,8 @@ export default function MessagingClient({ currentUser, initialConversations = []
 
           <ScrollArea className="flex-1">
             <div className="mx-auto max-w-4xl space-y-4 p-8">
-              {conversations.length > 0 ? (
-                conversations.map((conv) => (
+              {filteredConversations.length > 0 ? (
+                filteredConversations.map((conv) => (
                   <button
                     key={conv.id}
                     onClick={() => setActiveTab(conv)}

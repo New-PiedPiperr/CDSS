@@ -28,7 +28,7 @@ export async function getAssignedClinician() {
     patientId: session.user.id,
     clinicianId: { $ne: null },
   })
-  })
+
     .sort({ updatedAt: -1 })
     .populate('clinicianId', 'firstName lastName email avatar lastLogin')
     .lean();
@@ -180,7 +180,7 @@ export async function getConversations() {
   const conversations = await Promise.all(
     users.map(async (u) => {
       const conversationId = [session.user.id, u._id].sort().join('_');
-      
+
       const lastMsg = await Message.findOne({
         conversationId,
         deletedBy: { $ne: session.user.id },
@@ -207,18 +207,19 @@ export async function getConversations() {
       };
 
       // Online logic: Active in last 5 mins
-      const isOnline = u.lastLogin && (Date.now() - new Date(u.lastLogin).getTime() < 5 * 60 * 1000);
+      const isOnline =
+        u.lastLogin && Date.now() - new Date(u.lastLogin).getTime() < 5 * 60 * 1000;
 
       return {
-        id: conversationId, // Use conversationId or User ID as key? MessagingClient uses activeTab.id to compare. 
-        // Note: MessagingClient uses `activeTab.otherUser.id` for fetch. 
+        id: conversationId, // Use conversationId or User ID as key? MessagingClient uses activeTab.id to compare.
+        // Note: MessagingClient uses `activeTab.otherUser.id` for fetch.
         // But `activeTab` itself has an ID.
         // Let's use conversationId as the ID for the conversation object
         // But wait, MessagingClient logic might expect `id` to be something else?
         // Let's stick to generating a unique ID. Using User ID might be safer if that's what initialConversations did.
         // Line 25 in MessagingClient: `c.id === activeTab.id`.
         // I'll use conversationId.
-        
+
         otherUser: {
           id: u._id,
           name: `${u.firstName} ${u.lastName}`,
@@ -232,10 +233,10 @@ export async function getConversations() {
       };
     })
   );
-  
+
   // Sort by last message time (most recent first)
   // We need to parse the time back or sort by raw date if available
-  // Simple sort: put those with lastMessage first? 
+  // Simple sort: put those with lastMessage first?
   // Let's just return as is, usually calling function sorts.
   return JSON.parse(JSON.stringify(conversations));
 }

@@ -1,6 +1,7 @@
 import { auth } from '@/auth';
 import connectDB from '@/lib/db/connect';
 import User from '@/models/User';
+import Notification from '@/models/Notification';
 import { NextResponse } from 'next/server';
 
 export async function PATCH(request, { params }) {
@@ -23,6 +24,22 @@ export async function PATCH(request, { params }) {
       { role },
       { new: true, runValidators: true }
     );
+
+    if (!updatedUser) {
+      return NextResponse.json({ error: 'User not found' }, { status: 404 });
+    }
+
+    // Send notification if upgraded to CLINICIAN
+    if (role === 'CLINICIAN') {
+      await Notification.create({
+        userId: updatedUser._id,
+        title: 'Role Upgraded',
+        description:
+          'Your account has been upgraded to Clinician (Therapist). You can now manage patient cases.',
+        type: 'SYSTEM',
+        link: '/clinician/dashboard',
+      });
+    }
 
     if (!updatedUser) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 });

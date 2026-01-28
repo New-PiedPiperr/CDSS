@@ -382,50 +382,65 @@ export default function MessagingClient({ currentUser, initialConversations = []
                   <p className="text-sm">Start your clinical inquiry below.</p>
                 </div>
               ) : (
-                messages.map((m) => (
-                  <div
-                    key={m._id}
-                    className={cn(
-                      'group flex max-w-[85%] flex-col',
-                      m.senderId === currentUser.id ? 'ml-auto items-end' : 'items-start'
-                    )}
-                  >
+                messages.map((m, index) => {
+                  const isLastMessage = index === messages.length - 1;
+                  const isFromMe = m.senderId === currentUser.id;
+
+                  return (
                     <div
+                      key={m._id}
                       className={cn(
-                        'rounded-[2rem] p-6 shadow-sm transition-all duration-300',
-                        m.senderId === currentUser.id
-                          ? 'bg-primary hover:shadow-primary/10 rounded-tr-none text-white hover:shadow-lg'
-                          : 'dark:bg-muted border-border/50 rounded-tl-none border bg-white hover:shadow-lg'
+                        'group flex max-w-[85%] flex-col',
+                        isFromMe ? 'ml-auto items-end' : 'items-start'
                       )}
                     >
-                      {m.content.startsWith('IMAGE:') ? (
-                        <img
-                          src={m.content.replace('IMAGE:', '')}
-                          alt="Attachment"
-                          className="max-h-64 rounded-2xl object-cover"
-                        />
-                      ) : (
-                        <p className="font-sans text-[15px] leading-relaxed">
-                          {m.content}
-                        </p>
-                      )}
-                    </div>
-                    <div className="mt-3 flex items-center gap-2 px-2">
-                      <span className="text-muted-foreground text-[8px] font-semibold tracking-widest uppercase opacity-40">
-                        {new Date(m.createdAt).toLocaleTimeString([], {
-                          hour: '2-digit',
-                          minute: '2-digit',
-                        })}
-                      </span>
-                      {m.senderId === currentUser.id &&
-                        (m.isRead ? (
-                          <CheckCheck className="text-primary h-3.5 w-3.5 opacity-60" />
+                      <div
+                        className={cn(
+                          'rounded-[2rem] p-6 shadow-sm transition-all duration-300',
+                          isFromMe
+                            ? 'bg-primary hover:shadow-primary/10 rounded-tr-none text-white hover:shadow-lg'
+                            : 'dark:bg-muted border-border/50 rounded-tl-none border bg-white hover:shadow-lg'
+                        )}
+                      >
+                        {m.content.startsWith('IMAGE:') ? (
+                          <img
+                            src={m.content.replace('IMAGE:', '')}
+                            alt="Attachment"
+                            className="max-h-64 rounded-2xl object-cover"
+                          />
                         ) : (
-                          <Check className="text-muted-foreground h-3.5 w-3.5 opacity-40" />
-                        ))}
+                          <p className="font-sans text-[15px] leading-relaxed">
+                            {m.content}
+                          </p>
+                        )}
+                      </div>
+                      <div className="mt-3 flex items-center gap-2 px-2">
+                        <span className="text-muted-foreground text-[8px] font-semibold tracking-widest uppercase opacity-40">
+                          {new Date(m.createdAt).toLocaleTimeString([], {
+                            hour: '2-digit',
+                            minute: '2-digit',
+                          })}
+                        </span>
+                        {isFromMe && (
+                          <div className="flex items-center gap-1">
+                            {m.isRead ? (
+                              <>
+                                <CheckCheck className="text-primary h-3.5 w-3.5 opacity-60" />
+                                {isLastMessage && (
+                                  <span className="text-primary text-[8px] font-bold tracking-widest uppercase">
+                                    Seen
+                                  </span>
+                                )}
+                              </>
+                            ) : (
+                              <Check className="text-muted-foreground h-3.5 w-3.5 opacity-40" />
+                            )}
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                ))
+                  );
+                })
               )}
               <div ref={scrollRef} />
             </div>

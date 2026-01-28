@@ -159,39 +159,85 @@ export async function clearMessages(otherUserId) {
 /**
  * Get all conversations for the current user with real-time status
  */
+/**
+ * Get all conversations for the current user with real-time status
+ */
 export async function getConversations() {
   const session = await auth();
   if (!session || !session.user) return [];
 
   await connectDB();
 
-  // Heartbeat: Update current user's lastLogin
-  await User.findByIdAndUpdate(session.user.id, { lastLogin: new Date() });
+  // Heartbeat: Update current user's lastLogin and lastSeenAt
+  await User.findByIdAndUpdate(session.user.id, {
+    lastLogin: new Date(),
+    lastSeenAt: new Date(),
+  });
 
+  const currentUserId = session.user.id;
   const role = session.user.role;
-  let users = [];
+  const userMap = new Map();
 
-  // 1. Identify users to chat with
-  if (role === 'CLINICIAN') {
-    users = await getAssignedPatients();
+  // 1. Get Assigned Users (Start from these)
+  let assignedUsers = [];
+  if (role === 'CLINICIAN' || role === 'ADMIN') {
+    // Admins can potentially chat with everyone, or just behave like Clinicians for now
+    // For now, let's treat Admin same as Clinician or maybe fetch ALL users?
+    // Let's stick to existing logic for "Assigned" but enhance with history
+    assignedUsers = await getAssignedPatients();
   } else {
+    // Patients
     const clinician = await getAssignedClinician();
-    if (clinician) users = [clinician];
+    if (clinician) assignedUsers = [clinician];
   }
 
-  // 2. Build conversation objects
+  assignedUsers.forEach((u) => {
+    if (u && u._id) userMap.set(u._id.toString(), u);
+  });
+
+  // 2. Get Users from Message History (anyone who has messaged us or we messaged)
+  // Find all distinct conversationIds involving this user
+  const distinctConversations = await Message.find({
+    $or: [{ senderId: currentUserId }, { receiverId: currentUserId }],
+    deletedBy: { $ne: currentUserId },
+  }).distinct('conversationId');
+
+  // Extract other user IDs from conversationIds
+  const historyUserIds = new Set();
+  distinctConversations.forEach((cid) => {
+    const parts = cid.split('_');
+    const otherId = parts.find((id) => id !== currentUserId.toString());
+    if (otherId) historyUserIds.add(otherId);
+  });
+
+  // Fetch details for these users if not already in map
+  const missingUserIds = Array.from(historyUserIds).filter((id) => !userMap.has(id));
+
+  if (missingUserIds.length > 0) {
+    const historyUsers = await User.find({ _id: { $in: missingUserIds } })
+      .select('firstName lastName email avatar lastLogin lastSeenAt role')
+      .lean();
+
+    historyUsers.forEach((u) => {
+      userMap.set(u._id.toString(), u);
+    });
+  }
+
+  const allUsers = Array.from(userMap.values());
+
+  // 3. Build conversation objects
   const conversations = await Promise.all(
-    users.map(async (u) => {
-      const conversationId = [session.user.id, u._id].sort().join('_');
+    allUsers.map(async (u) => {
+      const conversationId = [currentUserId, u._id].sort().join('_');
 
       const lastMsg = await Message.findOne({
         conversationId,
-        deletedBy: { $ne: session.user.id },
+        deletedBy: { $ne: currentUserId },
       }).sort({ createdAt: -1 });
 
       const unreadCount = await Message.countDocuments({
         conversationId,
-        receiverId: session.user.id,
+        receiverId: currentUserId,
         isRead: false,
       });
 
@@ -209,37 +255,32 @@ export async function getConversations() {
         return new Date(date).toLocaleDateString();
       };
 
-      // Online logic: Active in last 5 mins
+      // Online logic: Active in last 2 mins (using lastSeenAt if available, else fallback to lastLogin)
+      const lastActive = u.lastSeenAt || u.lastLogin;
       const isOnline =
-        u.lastLogin && Date.now() - new Date(u.lastLogin).getTime() < 5 * 60 * 1000;
+        lastActive && Date.now() - new Date(lastActive).getTime() < 2 * 60 * 1000;
 
       return {
-        id: conversationId, // Use conversationId or User ID as key? MessagingClient uses activeTab.id to compare.
-        // Note: MessagingClient uses `activeTab.otherUser.id` for fetch.
-        // But `activeTab` itself has an ID.
-        // Let's use conversationId as the ID for the conversation object
-        // But wait, MessagingClient logic might expect `id` to be something else?
-        // Let's stick to generating a unique ID. Using User ID might be safer if that's what initialConversations did.
-        // Line 25 in MessagingClient: `c.id === activeTab.id`.
-        // I'll use conversationId.
-
+        id: conversationId,
         otherUser: {
           id: u._id,
           name: `${u.firstName} ${u.lastName}`,
           avatar: u.avatar || '',
           online: isOnline,
           lastLogin: u.lastLogin,
+          role: u.role,
         },
         lastMessage: lastMsg ? lastMsg.content : 'No messages yet',
         lastMessageTime: lastMsg ? formatTime(lastMsg.createdAt) : '',
         unreadCount,
+        // Helper sort key
+        timestamp: lastMsg ? new Date(lastMsg.createdAt).getTime() : 0,
       };
     })
   );
 
-  // Sort by last message time (most recent first)
-  // We need to parse the time back or sort by raw date if available
-  // Simple sort: put those with lastMessage first?
-  // Let's just return as is, usually calling function sorts.
-  return JSON.parse(JSON.stringify(conversations));
+  // Sort by most recent message, then online status
+  return JSON.parse(
+    JSON.stringify(conversations.sort((a, b) => b.timestamp - a.timestamp))
+  );
 }

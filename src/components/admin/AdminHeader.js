@@ -1,5 +1,7 @@
 'use client';
 
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Search, Bell, User, Menu } from 'lucide-react';
 import { ThemeToggle } from '@/components/ui';
@@ -8,6 +10,14 @@ import { useUIStore } from '@/store';
 
 export default function AdminHeader({ user }) {
   const { toggleSidebar } = useUIStore();
+  const router = useRouter();
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = (e) => {
+    if (e.key === 'Enter' && searchQuery.trim()) {
+      router.push('/admin/search?q=' + encodeURIComponent(searchQuery.trim()));
+    }
+  };
 
   return (
     <header className="fixed top-0 right-0 left-0 z-40 flex h-20 items-center justify-between border-b border-gray-100 bg-white/80 px-4 backdrop-blur-md lg:left-64 lg:px-8 dark:border-gray-800 dark:bg-gray-900/80">
@@ -30,6 +40,9 @@ export default function AdminHeader({ user }) {
           <input
             type="text"
             placeholder="Search Therapists/Patients Name..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onKeyDown={handleSearch}
             className="focus:border-primary/50 focus:ring-primary/5 h-12 w-full rounded-2xl border border-gray-100 bg-gray-50 pr-4 pl-12 text-sm transition-all outline-none focus:ring-4 dark:border-gray-800 dark:bg-gray-800/50"
           />
         </div>

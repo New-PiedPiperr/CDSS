@@ -56,6 +56,10 @@ const UserSchema = new mongoose.Schema(
       type: Date,
       default: null,
     },
+    lastSeenAt: {
+      type: Date,
+      default: null,
+    },
     // Clinician-specific fields
     specialization: {
       type: String,

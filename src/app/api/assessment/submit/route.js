@@ -13,7 +13,7 @@ export async function POST(req) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const { bodyRegion, symptomData, mediaUrls } = await req.json();
+    const { bodyRegion, symptomData, mediaUrls, aiAnalysis } = await req.json();
 
     if (!bodyRegion || !symptomData) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
@@ -27,17 +27,22 @@ export async function POST(req) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
 
-    // 1. Call Mistral AI Agent via helper
-    let aiResult;
-    try {
-      const result = await getAiPreliminaryAnalysis({
-        selectedRegion: bodyRegion,
-        symptomData,
-      });
-      aiResult = result.analysis;
-    } catch (error) {
-      console.error('AI analysis error in submission:', error);
-      throw new Error('AI analysis failed');
+    // 1. Use existing AI analysis or regenerate if missing
+    let finalAiResult = aiAnalysis;
+
+    if (!finalAiResult) {
+      try {
+        const result = await getAiPreliminaryAnalysis({
+          selectedRegion: bodyRegion,
+          symptomData,
+        });
+        finalAiResult = result.analysis;
+      } catch (error) {
+        console.error('AI analysis error in submission:', error);
+        // We don't necessarily want to fail the whole submission if AI fails,
+        // but for now we follow the existing logic which throws.
+        throw new Error('AI analysis failed');
+      }
     }
 
     // 2. Persist DiagnosisSession
@@ -47,7 +52,7 @@ export async function POST(req) {
       symptomData,
       mediaUrls,
       aiAnalysis: {
-        ...aiResult,
+        ...finalAiResult,
         isProvisional: true, // Crucial medical disclaimer requirement
       },
       status: 'pending_review',

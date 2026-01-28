@@ -128,6 +128,7 @@ export default function PatientAssessmentPage() {
           };
         }),
         mediaUrls: [], // For now, handle media separately if needed or add here
+        aiAnalysis: aiAnalysis, // Pass the analysis matched during summary
       };
 
       const response = await fetch('/api/assessment/submit', {

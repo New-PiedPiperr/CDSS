@@ -20,24 +20,28 @@ export async function getAiPreliminaryAnalysis({
   try {
     const bodyRegion = selectedRegion || 'Unknown';
 
-    // Normalize data format
-    const symptoms =
-      symptomData ||
-      Object.entries(responses || {}).map(([question, answer]) => ({
-        question,
-        answer,
-      }));
+    // Normalize data format to always have 'question', 'answer', and 'questionId'
+    const symptoms = symptomData
+      ? symptomData.map((s) => ({
+          question: s.question || s.questionId || 'Unknown',
+          answer: s.answer || s.response || 'No answer',
+          questionId: s.questionId || s.question || 'Unknown',
+        }))
+      : Object.entries(responses || {}).map(([questionId, answer]) => ({
+          question: questionId, // Fallback to ID if text isn't available
+          answer,
+          questionId,
+        }));
 
     const symptomText = symptoms
       .map((s) => `Question: ${s.question}\nAnswer: ${s.answer}`)
       .join('\n\n');
 
     // 2. RUN HEURISTIC ENGINE FIRST
-    // This provides a mathematical anchor for confidence
     const normalizedSymptoms = symptoms.map((s) => ({
-      questionId: s.question,
+      questionId: s.questionId,
       response: s.answer,
-      questionCategory: s.question,
+      questionCategory: s.questionId,
     }));
     const heuristicResult = decisionEngine.calculateTemporalDiagnosis(normalizedSymptoms);
     const baseConfidence = heuristicResult.primaryDiagnosis?.confidence || 0;

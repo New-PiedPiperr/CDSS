@@ -55,6 +55,7 @@ export default async function MessagesPage() {
         currentUser={{
           id: session.user.id,
           name: `${session.user.firstName} ${session.user.lastName}`,
+          role: session.user.role,
         }}
         initialConversations={initialConversations}
       />

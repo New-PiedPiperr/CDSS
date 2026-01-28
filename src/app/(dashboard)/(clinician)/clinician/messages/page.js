@@ -52,6 +52,7 @@ export default async function ClinicianMessagesPage() {
         currentUser={{
           id: session.user.id,
           name: `${session.user.firstName} ${session.user.lastName}`,
+          role: session.user.role,
         }}
         initialConversations={initialConversations}
       />

@@ -14,6 +14,7 @@ import {
   MessageSquare,
   ChevronLeft,
   Circle,
+  User,
 } from 'lucide-react';
 import {
   Button,
@@ -132,52 +133,68 @@ export default function MessagingClient({ currentUser, initialConversations = []
 
           <ScrollArea className="flex-1">
             <div className="mx-auto max-w-4xl space-y-4 p-8">
-              {conversations.map((conv) => (
-                <button
-                  key={conv.id}
-                  onClick={() => setActiveTab(conv)}
-                  className="group hover:bg-muted/50 border-border/20 bg-card flex w-full items-center gap-6 rounded-[2rem] border p-6 transition-all hover:scale-[1.01] hover:shadow-lg"
-                >
-                  <div className="relative shrink-0">
-                    <Avatar className="h-16 w-16 rounded-[1.5rem] shadow-md ring-4 ring-white dark:ring-gray-800">
-                      <AvatarImage src={conv.otherUser.avatar} />
-                      <AvatarFallback className="bg-primary/10 text-primary text-xl font-bold">
-                        {conv.otherUser.name[0]}
-                      </AvatarFallback>
-                    </Avatar>
-                    {conv.otherUser.online && (
-                      <div className="absolute -right-1 -bottom-1 h-5 w-5 rounded-full bg-emerald-500 ring-4 ring-white dark:ring-gray-900" />
-                    )}
-                  </div>
-
-                  <div className="min-w-0 flex-1 text-left">
-                    <div className="mb-2 flex items-center justify-between">
-                      <h4 className="text-base font-bold tracking-tight uppercase">
-                        {conv.otherUser.name}
-                      </h4>
-                      <span className="text-muted-foreground text-[9px] font-semibold tracking-widest uppercase opacity-60">
-                        {conv.lastMessageTime}
-                      </span>
+              {conversations.length > 0 ? (
+                conversations.map((conv) => (
+                  <button
+                    key={conv.id}
+                    onClick={() => setActiveTab(conv)}
+                    className="group hover:bg-muted/50 border-border/20 bg-card flex w-full items-center gap-6 rounded-[2rem] border p-6 transition-all hover:scale-[1.01] hover:shadow-lg"
+                  >
+                    <div className="relative shrink-0">
+                      <Avatar className="h-16 w-16 rounded-[1.5rem] shadow-md ring-4 ring-white dark:ring-gray-800">
+                        <AvatarImage src={conv.otherUser.avatar} />
+                        <AvatarFallback className="bg-primary/10 text-primary text-xl font-bold">
+                          {conv.otherUser.name[0]}
+                        </AvatarFallback>
+                      </Avatar>
+                      {conv.otherUser.online && (
+                        <div className="absolute -right-1 -bottom-1 h-5 w-5 rounded-full bg-emerald-500 ring-4 ring-white dark:ring-gray-900" />
+                      )}
                     </div>
 
-                    <div className="flex items-center gap-2">
-                      <Check size={14} className="shrink-0 text-cyan-500" />
-                      <p className="text-muted-foreground truncate text-sm font-medium">
-                        {conv.lastMessage}
-                      </p>
-                    </div>
-                  </div>
+                    <div className="min-w-0 flex-1 text-left">
+                      <div className="mb-2 flex items-center justify-between">
+                        <h4 className="text-base font-bold tracking-tight uppercase">
+                          {conv.otherUser.name}
+                        </h4>
+                        <span className="text-muted-foreground text-[9px] font-semibold tracking-widest uppercase opacity-60">
+                          {conv.lastMessageTime}
+                        </span>
+                      </div>
 
-                  <div className="flex shrink-0 flex-col items-end gap-3">
-                    {conv.unreadCount > 0 && (
-                      <span className="bg-primary shadow-primary/20 rounded-full px-2.5 py-0.5 text-[8px] font-bold text-white shadow-lg">
-                        {conv.unreadCount} NEWS
-                      </span>
-                    )}
-                    <ChevronLeft className="h-5 w-5 rotate-180 opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-30" />
+                      <div className="flex items-center gap-2">
+                        <Check size={14} className="shrink-0 text-cyan-500" />
+                        <p className="text-muted-foreground truncate text-sm font-medium">
+                          {conv.lastMessage}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex shrink-0 flex-col items-end gap-3">
+                      {conv.unreadCount > 0 && (
+                        <span className="bg-primary shadow-primary/20 rounded-full px-2.5 py-0.5 text-[8px] font-bold text-white shadow-lg">
+                          {conv.unreadCount} NEWS
+                        </span>
+                      )}
+                      <ChevronLeft className="h-5 w-5 rotate-180 opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-30" />
+                    </div>
+                  </button>
+                ))
+              ) : (
+                <div className="flex flex-col items-center justify-center py-20 text-center opacity-40">
+                  <div className="bg-muted/50 mb-8 flex h-24 w-24 items-center justify-center rounded-[2.5rem]">
+                    <User className="text-muted-foreground h-12 w-12" />
                   </div>
-                </button>
-              ))}
+                  <h3 className="text-2xl font-bold tracking-tighter uppercase">
+                    No Messages
+                  </h3>
+                  <p className="mt-3 max-w-md text-sm leading-relaxed font-medium">
+                    {currentUser.role === 'CLINICIAN'
+                      ? 'You have not been assigned to a patient yet. Once a patient is assigned to your care, they will appear here.'
+                      : 'You have not been assigned to a therapist yet. Please wait while we process your clinical assessment.'}
+                  </p>
+                </div>
+              )}
             </div>
           </ScrollArea>
         </div>

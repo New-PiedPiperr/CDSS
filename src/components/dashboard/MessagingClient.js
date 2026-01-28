@@ -60,31 +60,29 @@ export default function MessagingClient({ currentUser, initialConversations = []
     <div className="bg-card border-border/50 h-[calc(100vh-12rem)] min-h-[600px] overflow-hidden rounded-[2.5rem] border shadow-2xl">
       {!activeTab ? (
         /* List View (Full Width) */
-        <div className="flex h-full flex-col bg-[#0f172a] text-white">
-          <div className="flex items-center justify-between p-8">
-            <h2 className="text-3xl font-black tracking-tighter uppercase italic">
-              Messages
-            </h2>
+        <div className="bg-card text-foreground flex h-full flex-col">
+          <div className="border-border/50 flex items-center justify-between border-b p-8">
+            <h2 className="text-2xl font-bold tracking-tight uppercase">Messages</h2>
             <div className="relative w-72">
               <Search className="absolute top-1/2 left-4 h-5 w-5 -translate-y-1/2 text-gray-400" />
               <input
                 type="text"
                 placeholder="Search patients..."
-                className="h-12 w-full rounded-xl border border-gray-800 bg-[#1e293b] pr-4 pl-12 text-sm font-medium placeholder:text-gray-500 focus:border-cyan-500/50 focus:outline-none"
+                className="border-border bg-muted/30 placeholder:text-muted-foreground/50 focus:border-primary/50 h-12 w-full rounded-xl border pr-4 pl-12 text-sm font-medium focus:outline-none"
               />
             </div>
           </div>
 
           <ScrollArea className="flex-1">
-            <div className="mx-auto max-w-5xl px-8 pb-8">
-              <div className="overflow-hidden rounded-[2rem] border border-gray-800 bg-[#1e293b]/50">
+            <div className="mx-auto mt-8 max-w-5xl px-8 pb-8">
+              <div className="border-border bg-muted/30 overflow-hidden rounded-[2rem] border">
                 {conversations.map((conv, index) => (
                   <button
                     key={conv.id}
                     onClick={() => setActiveTab(conv)}
                     className={cn(
-                      'flex w-full items-center gap-6 p-6 text-left transition-all hover:bg-[#1e293b]',
-                      index !== conversations.length - 1 && 'border-b border-gray-800'
+                      'hover:bg-muted/50 flex w-full items-center gap-6 p-6 text-left transition-all',
+                      index !== conversations.length - 1 && 'border-border border-b'
                     )}
                   >
                     <div className="relative shrink-0">
@@ -98,7 +96,7 @@ export default function MessagingClient({ currentUser, initialConversations = []
 
                     <div className="min-w-0 flex-1">
                       <div className="mb-1 flex items-center justify-between">
-                        <span className="text-lg font-black tracking-tight uppercase italic">
+                        <span className="text-lg font-bold tracking-tight uppercase">
                           {conv.otherUser.name}
                         </span>
                         <span className="text-xs font-medium text-gray-500">
@@ -152,7 +150,7 @@ export default function MessagingClient({ currentUser, initialConversations = []
                 )}
               </div>
               <div>
-                <h3 className="text-lg font-black tracking-tighter uppercase italic">
+                <h3 className="text-lg font-bold tracking-tight uppercase">
                   {activeTab.otherUser.name}
                 </h3>
                 <p className="flex items-center gap-1.5 text-[10px] font-bold tracking-widest text-emerald-500 uppercase">
@@ -204,9 +202,7 @@ export default function MessagingClient({ currentUser, initialConversations = []
               {messages.length === 0 ? (
                 <div className="flex flex-col items-center justify-center py-20 text-center opacity-30">
                   <MessageSquare className="mb-4 h-16 w-16" />
-                  <p className="text-lg font-black uppercase italic">
-                    No message history
-                  </p>
+                  <p className="text-lg font-bold uppercase">No message history</p>
                   <p className="text-sm">Start your clinical inquiry below.</p>
                 </div>
               ) : (

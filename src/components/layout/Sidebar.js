@@ -173,7 +173,9 @@ export default function Sidebar({ links = [], secondaryLinks = [], className, us
                 {user ? `${user?.firstName} ${user?.lastName}` : 'Unknown User'}
               </span>
               <span className="text-[12px] font-medium capitalize opacity-70">
-                {user ? `${user?.role.toLowerCase()}` : null}
+                {user?.role === 'CLINICIAN'
+                  ? 'Therapist'
+                  : user?.role?.toLowerCase() || ''}
               </span>
             </div>
           </Link>

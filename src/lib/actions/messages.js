@@ -16,7 +16,7 @@ export async function getAssignedClinician() {
 
   // 1. Try PatientProfile (Primary assignment)
   const profile = await PatientProfile.findOne({ userId: session.user.id })
-    .populate('assignedClinician', 'firstName lastName email avatar')
+    .populate('assignedClinician', 'firstName lastName email avatar lastLogin')
     .lean();
 
   if (profile?.assignedClinician) {
@@ -28,8 +28,9 @@ export async function getAssignedClinician() {
     patientId: session.user.id,
     clinicianId: { $ne: null },
   })
+  })
     .sort({ updatedAt: -1 })
-    .populate('clinicianId', 'firstName lastName email avatar')
+    .populate('clinicianId', 'firstName lastName email avatar lastLogin')
     .lean();
 
   if (lastSession?.clinicianId) {
@@ -52,7 +53,7 @@ export async function getAssignedPatients() {
 
   // 1. Get patients from PatientProfile
   const profiles = await PatientProfile.find({ assignedClinician: session.user.id })
-    .populate('userId', 'firstName lastName email avatar')
+    .populate('userId', 'firstName lastName email avatar lastLogin')
     .lean();
 
   profiles.forEach((p) => {
@@ -63,7 +64,7 @@ export async function getAssignedPatients() {
 
   // 2. Get patients from DiagnosisSessions (Fallback/Legacy support)
   const sessions = await DiagnosisSession.find({ clinicianId: session.user.id })
-    .populate('patientId', 'firstName lastName email avatar')
+    .populate('patientId', 'firstName lastName email avatar lastLogin')
     .lean();
 
   sessions.forEach((s) => {
@@ -153,4 +154,88 @@ export async function clearMessages(otherUserId) {
   );
 
   return { success: true };
+}
+
+/**
+ * Get all conversations for the current user with real-time status
+ */
+export async function getConversations() {
+  const session = await auth();
+  if (!session || !session.user) return [];
+
+  await connectDB();
+
+  const role = session.user.role;
+  let users = [];
+
+  // 1. Identify users to chat with
+  if (role === 'CLINICIAN') {
+    users = await getAssignedPatients();
+  } else {
+    const clinician = await getAssignedClinician();
+    if (clinician) users = [clinician];
+  }
+
+  // 2. Build conversation objects
+  const conversations = await Promise.all(
+    users.map(async (u) => {
+      const conversationId = [session.user.id, u._id].sort().join('_');
+      
+      const lastMsg = await Message.findOne({
+        conversationId,
+        deletedBy: { $ne: session.user.id },
+      }).sort({ createdAt: -1 });
+
+      const unreadCount = await Message.countDocuments({
+        conversationId,
+        receiverId: session.user.id,
+        isRead: false,
+      });
+
+      // Helper to format time relative
+      const formatTime = (date) => {
+        const diff = Date.now() - new Date(date).getTime();
+        const mins = Math.floor(diff / 60000);
+        const hours = Math.floor(mins / 60);
+        const days = Math.floor(hours / 24);
+
+        if (mins < 1) return 'Just now';
+        if (mins < 60) return `${mins}m ago`;
+        if (hours < 24) return `${hours}h ago`;
+        if (days < 7) return `${days}d ago`;
+        return new Date(date).toLocaleDateString();
+      };
+
+      // Online logic: Active in last 5 mins
+      const isOnline = u.lastLogin && (Date.now() - new Date(u.lastLogin).getTime() < 5 * 60 * 1000);
+
+      return {
+        id: conversationId, // Use conversationId or User ID as key? MessagingClient uses activeTab.id to compare. 
+        // Note: MessagingClient uses `activeTab.otherUser.id` for fetch. 
+        // But `activeTab` itself has an ID.
+        // Let's use conversationId as the ID for the conversation object
+        // But wait, MessagingClient logic might expect `id` to be something else?
+        // Let's stick to generating a unique ID. Using User ID might be safer if that's what initialConversations did.
+        // Line 25 in MessagingClient: `c.id === activeTab.id`.
+        // I'll use conversationId.
+        
+        otherUser: {
+          id: u._id,
+          name: `${u.firstName} ${u.lastName}`,
+          avatar: u.avatar || '',
+          online: isOnline,
+          lastLogin: u.lastLogin,
+        },
+        lastMessage: lastMsg ? lastMsg.content : 'No messages yet',
+        lastMessageTime: lastMsg ? formatTime(lastMsg.createdAt) : '',
+        unreadCount,
+      };
+    })
+  );
+  
+  // Sort by last message time (most recent first)
+  // We need to parse the time back or sort by raw date if available
+  // Simple sort: put those with lastMessage first? 
+  // Let's just return as is, usually calling function sorts.
+  return JSON.parse(JSON.stringify(conversations));
 }

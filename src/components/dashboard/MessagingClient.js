@@ -31,6 +31,7 @@ import {
   sendMessage,
   markAsRead,
   clearMessages,
+  getConversations,
 } from '@/lib/actions/messages';
 
 export default function MessagingClient({ currentUser, initialConversations = [] }) {

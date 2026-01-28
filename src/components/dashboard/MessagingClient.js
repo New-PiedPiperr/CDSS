@@ -45,7 +45,7 @@ export default function MessagingClient({ currentUser, initialConversations = []
   const scrollContainerRef = useRef(null);
   const fileInputRef = useRef(null);
   const msgCountRef = useRef(0);
-  const msgCountRef = useRef(0);
+
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedImage, setExpandedImage] = useState(null);
 

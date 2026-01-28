@@ -8,6 +8,9 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+// App Base URL for links
+const baseUrl = process.env.NEXTAUTH_URL || 'http://localhost:3000';
+
 /**
  * Sends a case assignment email to a clinician
  */
@@ -31,7 +34,7 @@ export const sendClinicianAssignmentEmail = async (
           <p style="margin: 5px 0 0 0; color: #666;">Session ID: ${sessionId}</p>
         </div>
         <div style="text-align: center; margin: 30px 0;">
-          <a href="${process.env.NEXTAUTH_URL}/clinician/cases/${sessionId}" style="background-color: #007bff; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">View Case Details</a>
+          <a href="${baseUrl}/clinician/cases/${sessionId}" style="background-color: #007bff; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">View Case Details</a>
         </div>
         <p style="font-size: 14px; color: #777;">Please log in to your dashboard to review the clinical data and AI analysis.</p>
         <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
@@ -69,7 +72,7 @@ export const sendPatientAssignmentEmail = async (
         </div>
         <p style="font-size: 16px; color: #555;">You can now communicate with your clinician through the messaging system in your dashboard.</p>
         <div style="text-align: center; margin: 30px 0;">
-          <a href="${process.env.NEXTAUTH_URL}/patient/messages" style="background-color: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">Go to Messages</a>
+          <a href="${baseUrl}/patient/messages" style="background-color: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">Go to Messages</a>
         </div>
         <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
         <p style="font-size: 12px; color: #999; text-align: center;">CDSS - Clinical Decision Support System</p>

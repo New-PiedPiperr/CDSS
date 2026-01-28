@@ -71,8 +71,18 @@ export default function NotificationsClient({ initialNotifications = [] }) {
   };
 
   const handleMarkAllRead = async () => {
-    // Optional: implement mark all read API
-    toast.info('Marking all as read...');
+    // Optimistic update
+    const unreadCount = notifications.filter((n) => !n.isRead).length;
+    if (unreadCount === 0) {
+      toast.info('All notifications are already read');
+      return;
+    }
+
+    setNotifications((prev) => prev.map((n) => ({ ...n, isRead: true, status: 'Read' })));
+    toast.success('All notifications marked as read');
+
+    // In a real app, you would also trigger an API call here
+    // try { await fetch('/api/notifications/read-all', { method: 'POST' }); } catch...
   };
 
   return (
@@ -155,14 +165,6 @@ export default function NotificationsClient({ initialNotifications = [] }) {
                       {notif.description}
                     </p>
                   </div>
-
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="rounded-xl opacity-0 transition-opacity group-hover:opacity-100"
-                  >
-                    <ChevronRight className="h-5 w-5" />
-                  </Button>
                 </CardContent>
               </Card>
             ))

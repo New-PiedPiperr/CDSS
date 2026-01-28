@@ -40,7 +40,9 @@ export default function AdminHeader() {
         <ThemeToggle />
 
         <button className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gray-50 text-gray-500 transition-colors hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-400">
-          <Bell className="h-5 w-5" />
+className <Bell 
+          href='/admin/notifications'
+          className="h-5 w-5" />
           <span className="absolute top-2 right-2 h-2 w-2 rounded-full border-2 border-white bg-red-500 dark:border-gray-900"></span>
         </button>
 

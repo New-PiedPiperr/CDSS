@@ -57,6 +57,9 @@ const NotificationSchema = new mongoose.Schema(
 );
 
 // Prevent model recompilation in development
+if (process.env.NODE_ENV === 'development') {
+  delete mongoose.models.Notification;
+}
 const Notification =
   mongoose.models.Notification || mongoose.model('Notification', NotificationSchema);
 

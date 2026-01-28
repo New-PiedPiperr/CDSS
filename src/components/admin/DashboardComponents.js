@@ -104,7 +104,6 @@ export function TherapistManagement({ title, therapists, type }) {
       <h4 className="mb-6 text-sm font-bold uppercase tracking-widest text-gray-400">{title}</h4>
       <div className="space-y-4">
         {therapists.map((user) => (
-          <div key={user._id} className="flex items-center justify-between rounded-2xl border border-gray-50 p-4 transition-all hover:bg-gray-50 dark:border-gray-800 dark:hover:bg-gray-800/50">
             <div className="flex items-center gap-4">
               <div className="relative h-12 w-12 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800">
                 {user.avatar ? (
@@ -123,20 +122,6 @@ export function TherapistManagement({ title, therapists, type }) {
                 <p className="text-xs text-gray-400 font-medium">{user.email}</p>
               </div>
             </div>
-            
-            {type === 'pending' ? (
-              <button 
-                onClick={() => handleApprove(user._id)}
-                disabled={loadingId === user._id}
-                className="rounded-xl bg-primary px-4 py-2 text-xs font-bold text-white shadow-lg shadow-primary/20 transition-transform active:scale-95 disabled:opacity-50"
-              >
-                {loadingId === user._id ? 'Processing...' : 'Approve'}
-              </button>
-            ) : (
-              <button className="rounded-xl border border-gray-100 bg-white px-4 py-2 text-xs font-bold text-gray-900 shadow-sm dark:border-gray-800 dark:bg-gray-900 dark:text-white">
-                View Profile
-              </button>
-            )}
           </div>
         ))}
         {therapists.length === 0 && (

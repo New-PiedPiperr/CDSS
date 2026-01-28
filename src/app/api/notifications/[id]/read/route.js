@@ -14,7 +14,7 @@ export async function PATCH(req, { params }) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const { id: notificationId } = params;
+    const { id: notificationId } = await params;
     const userId = session.user.id;
 
     await connectDB();

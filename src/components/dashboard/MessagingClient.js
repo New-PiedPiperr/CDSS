@@ -59,68 +59,75 @@ export default function MessagingClient({ currentUser, initialConversations = []
   return (
     <div className="bg-card border-border/50 h-[calc(100vh-12rem)] min-h-[600px] overflow-hidden rounded-[2.5rem] border shadow-2xl">
       {!activeTab ? (
-        /* List View (Full Width) */
-        <div className="bg-card text-foreground flex h-full flex-col">
-          <div className="border-border/50 flex items-center justify-between border-b p-8">
-            <h2 className="text-2xl font-bold tracking-tight uppercase">Messages</h2>
-            <div className="relative w-72">
-              <Search className="absolute top-1/2 left-4 h-5 w-5 -translate-y-1/2 text-gray-400" />
+        /* Conversation List - Full Width */
+        <div className="flex h-full flex-col">
+          <div className="border-border/50 bg-card border-b p-8">
+            <div className="mb-6 flex items-center justify-between">
+              <h2 className="text-2xl font-black tracking-tighter uppercase italic">
+                Secure Inbox
+              </h2>
+              <div className="bg-primary/10 rounded-xl p-3">
+                <MessageSquare className="text-primary h-6 w-6" />
+              </div>
+            </div>
+            <div className="relative">
+              <Search className="text-muted-foreground absolute top-1/2 left-4 h-5 w-5 -translate-y-1/2" />
               <input
                 type="text"
-                placeholder="Search patients..."
-                className="border-border bg-muted/30 placeholder:text-muted-foreground/50 focus:border-primary/50 h-12 w-full rounded-xl border pr-4 pl-12 text-sm font-medium focus:outline-none"
+                placeholder="Search conversations..."
+                className="bg-muted/30 placeholder:text-muted-foreground/50 focus:ring-primary/20 h-14 w-full rounded-2xl pr-4 pl-12 text-sm font-bold focus:ring-2 focus:outline-none"
               />
             </div>
           </div>
 
           <ScrollArea className="flex-1">
-            <div className="mx-auto mt-8 max-w-5xl px-8 pb-8">
-              <div className="border-border bg-muted/30 overflow-hidden rounded-[2rem] border">
-                {conversations.map((conv, index) => (
-                  <button
-                    key={conv.id}
-                    onClick={() => setActiveTab(conv)}
-                    className={cn(
-                      'hover:bg-muted/50 flex w-full items-center gap-6 p-6 text-left transition-all',
-                      index !== conversations.length - 1 && 'border-border border-b'
+            <div className="mx-auto max-w-4xl space-y-4 p-8">
+              {conversations.map((conv) => (
+                <button
+                  key={conv.id}
+                  onClick={() => setActiveTab(conv)}
+                  className="group hover:bg-muted/50 border-border/20 bg-card flex w-full items-center gap-6 rounded-[2rem] border p-6 transition-all hover:scale-[1.01] hover:shadow-lg"
+                >
+                  <div className="relative shrink-0">
+                    <Avatar className="h-16 w-16 rounded-[1.5rem] shadow-md ring-4 ring-white dark:ring-gray-800">
+                      <AvatarImage src={conv.otherUser.avatar} />
+                      <AvatarFallback className="bg-primary/10 text-primary text-xl font-bold">
+                        {conv.otherUser.name[0]}
+                      </AvatarFallback>
+                    </Avatar>
+                    {conv.otherUser.online && (
+                      <div className="absolute -right-1 -bottom-1 h-5 w-5 rounded-full bg-emerald-500 ring-4 ring-white dark:ring-gray-900" />
                     )}
-                  >
-                    <div className="relative shrink-0">
-                      <Avatar className="h-14 w-14 rounded-full">
-                        <AvatarImage src={conv.otherUser.avatar} />
-                        <AvatarFallback className="bg-gray-700 text-white">
-                          {conv.otherUser.name[0]}
-                        </AvatarFallback>
-                      </Avatar>
+                  </div>
+
+                  <div className="min-w-0 flex-1 text-left">
+                    <div className="mb-2 flex items-center justify-between">
+                      <h4 className="text-lg font-black tracking-tight uppercase italic">
+                        {conv.otherUser.name}
+                      </h4>
+                      <span className="text-muted-foreground text-[10px] font-black tracking-widest uppercase opacity-60">
+                        {conv.lastMessageTime}
+                      </span>
                     </div>
 
-                    <div className="min-w-0 flex-1">
-                      <div className="mb-1 flex items-center justify-between">
-                        <span className="text-lg font-bold tracking-tight uppercase">
-                          {conv.otherUser.name}
-                        </span>
-                        <span className="text-xs font-medium text-gray-500">
-                          {conv.lastMessageTime}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-1.5 text-sm text-gray-400">
-                          {conv.unreadCount === 0 && (
-                            <Check size={14} className="text-cyan-500" />
-                          )}
-                          <p className="truncate font-medium">{conv.lastMessage}</p>
-                        </div>
-                        {conv.unreadCount > 0 && (
-                          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-cyan-600 text-[10px] font-black text-white">
-                            {conv.unreadCount}
-                          </span>
-                        )}
-                      </div>
+                    <div className="flex items-center gap-2">
+                      <Check size={14} className="shrink-0 text-cyan-500" />
+                      <p className="text-muted-foreground truncate text-sm font-medium">
+                        {conv.lastMessage}
+                      </p>
                     </div>
-                  </button>
-                ))}
-              </div>
+                  </div>
+
+                  <div className="flex shrink-0 flex-col items-end gap-3">
+                    {conv.unreadCount > 0 && (
+                      <span className="bg-primary shadow-primary/20 rounded-full px-3 py-1 text-[10px] font-black text-white shadow-lg">
+                        {conv.unreadCount} NEWS
+                      </span>
+                    )}
+                    <ChevronLeft className="h-5 w-5 rotate-180 opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-30" />
+                  </div>
+                </button>
+              ))}
             </div>
           </ScrollArea>
         </div>
@@ -150,7 +157,7 @@ export default function MessagingClient({ currentUser, initialConversations = []
                 )}
               </div>
               <div>
-                <h3 className="text-lg font-bold tracking-tight uppercase">
+                <h3 className="text-lg font-black tracking-tighter uppercase italic">
                   {activeTab.otherUser.name}
                 </h3>
                 <p className="flex items-center gap-1.5 text-[10px] font-bold tracking-widest text-emerald-500 uppercase">
@@ -202,7 +209,9 @@ export default function MessagingClient({ currentUser, initialConversations = []
               {messages.length === 0 ? (
                 <div className="flex flex-col items-center justify-center py-20 text-center opacity-30">
                   <MessageSquare className="mb-4 h-16 w-16" />
-                  <p className="text-lg font-bold uppercase">No message history</p>
+                  <p className="text-lg font-black uppercase italic">
+                    No message history
+                  </p>
                   <p className="text-sm">Start your clinical inquiry below.</p>
                 </div>
               ) : (

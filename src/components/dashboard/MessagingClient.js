@@ -549,7 +549,7 @@ export default function MessagingClient({ currentUser, initialConversations = []
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Type clinical inquiry here..."
-                  className="bg-muted/30 focus:ring-primary/20 relative h-16 w-full rounded-[1.5rem] border-none px-8 font-sans text-sm transition-all focus:ring-2 focus:outline-none"
+                  className="bg-muted/30 focus:ring-primary/20 relative h-16 w-full rounded-[1.5rem] border-none pr-16 pl-6 font-sans text-sm transition-all focus:ring-2 focus:outline-none"
                 />
                 <Button
                   type="button"

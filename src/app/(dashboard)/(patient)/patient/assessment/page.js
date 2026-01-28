@@ -220,7 +220,7 @@ export default function PatientAssessmentPage() {
                   <span className="mb-4 block text-xs font-bold tracking-wider text-slate-400 uppercase">
                     Assessment Overview
                   </span>
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
                     <div className="flex flex-col items-center justify-center rounded-2xl border border-slate-100 bg-slate-50 p-4 text-center dark:border-slate-800 dark:bg-slate-900/50">
                       <ClipboardList className="text-primary mb-2" size={20} />
                       <span className="text-xl font-bold">

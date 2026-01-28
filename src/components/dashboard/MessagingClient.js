@@ -34,7 +34,12 @@ import {
   getConversations,
 } from '@/lib/actions/messages';
 
+import { usePresencePing } from '@/hooks/usePresencePing';
+
 export default function MessagingClient({ currentUser, initialConversations = [] }) {
+  // Active presence ping when in this component
+  usePresencePing(true);
+
   const [activeTab, setActiveTab] = useState(null);
   const [message, setMessage] = useState('');
   const [conversations, setConversations] = useState(initialConversations);

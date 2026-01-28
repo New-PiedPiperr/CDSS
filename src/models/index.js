@@ -9,3 +9,4 @@ export { default as DiagnosisSession } from './DiagnosisSession.js';
 export { default as Appointment } from './Appointment.js';
 export { default as TreatmentPlan } from './TreatmentPlan.js';
 export { default as CaseFile } from './CaseFile.js';
+export { default as SelfTest } from './SelfTest.js';

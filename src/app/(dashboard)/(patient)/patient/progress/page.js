@@ -1,6 +1,6 @@
 import { auth } from '@/auth';
 import dbConnect from '@/lib/db/connect';
-import { DiagnosisSession, TreatmentPlan } from '@/models';
+import { DiagnosisSession, TreatmentPlan, SelfTest } from '@/models';
 import { redirect } from 'next/navigation';
 import {
   Card,
@@ -31,17 +31,19 @@ export default async function ProgressPage() {
 
   await dbConnect();
 
-  const [sessionsData, treatmentPlanData] = await Promise.all([
+  const [sessionsData, treatmentPlanData, selfTestsData] = await Promise.all([
     DiagnosisSession.find({ patientId: session.user.id })
       .sort({ createdAt: -1 })
       .limit(30)
       .lean(),
     TreatmentPlan.findOne({ patient: session.user.id, status: 'active' }).lean(),
+    SelfTest.find({ patientId: session.user.id }).sort({ createdAt: -1 }).lean(),
   ]);
 
   // Serialize to plain objects
   const sessions = JSON.parse(JSON.stringify(sessionsData));
   const treatmentPlan = JSON.parse(JSON.stringify(treatmentPlanData));
+  const selfTests = JSON.parse(JSON.stringify(selfTestsData));
 
   // Process data for charts
   const painHistory = sessions
@@ -122,7 +124,8 @@ export default async function ProgressPage() {
 
   // Calculate stats
   const totalAssessments = sessions.length;
-  const completedAssessments = sessions.filter((s) => s.status === 'completed').length;
+  const completedAssessments =
+    sessions.filter((s) => s.status === 'completed').length + selfTests.length;
   const avgConfidence =
     sessions.length > 0
       ? Math.round(
@@ -319,6 +322,54 @@ export default async function ProgressPage() {
                       {sess.aiAnalysis?.confidenceScore || 0}% confidence
                     </span>
                   </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </CardContent>
+      </Card>
+
+      {/* Completed Guided Self-Tests */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Completed Guided Self-Tests</CardTitle>
+          <CardDescription>
+            Tests you have performed yourself with our guidance
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          {selfTests.length === 0 ? (
+            <div className="flex flex-col items-center justify-center py-12 text-center">
+              <ClipboardCheck className="text-muted-foreground mb-4 h-12 w-12" />
+              <p className="text-muted-foreground">No self-tests completed yet</p>
+              <p className="text-muted-foreground mt-1 text-sm">
+                Follow the self-test guides to track specific physical metrics
+              </p>
+            </div>
+          ) : (
+            <div className="space-y-4">
+              {selfTests.map((test) => (
+                <div
+                  key={test._id}
+                  className="border-border flex items-center justify-between rounded-lg border p-4"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="rounded-lg bg-green-500/10 p-2">
+                      <CheckCircle2 className="h-5 w-5 text-green-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">{test.testTitle}</h4>
+                      <p className="text-muted-foreground text-sm">
+                        {test.category} •{' '}
+                        {new Date(test.createdAt).toLocaleDateString('en-US', {
+                          month: 'long',
+                          day: 'numeric',
+                          year: 'numeric',
+                        })}
+                      </p>
+                    </div>
+                  </div>
+                  <Badge className="bg-green-500/10 text-green-600">Completed</Badge>
                 </div>
               ))}
             </div>

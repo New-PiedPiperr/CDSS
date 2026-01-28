@@ -1,19 +1,64 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Play, Info, CheckCircle2 } from 'lucide-react';
 import { Card, CardContent, Badge, Button } from '@/components/ui';
 import { toast } from 'sonner';
+import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/cn';
 
 export default function SelfTestPage() {
+  const router = useRouter();
   const [completedTests, setCompletedTests] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
-  const handleComplete = (id) => {
-    setCompletedTests((prev) => ({ ...prev, [id]: true }));
-    toast.success('Test Completed', {
-      description: 'The clinical details for this test have been recorded successfully.',
-    });
+  useEffect(() => {
+    const fetchCompletedTests = async () => {
+      try {
+        const res = await fetch('/api/patient/self-test');
+        if (res.ok) {
+          const data = await res.json();
+          const completedMap = {};
+          data.forEach((test) => {
+            completedMap[test.testId] = true;
+          });
+          setCompletedTests(completedMap);
+        }
+      } catch (error) {
+        console.error('Error fetching completed tests:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchCompletedTests();
+  }, []);
+
+  const handleComplete = async (test) => {
+    try {
+      const res = await fetch('/api/patient/self-test', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          testId: test.id,
+          testTitle: test.title,
+          category: test.category,
+        }),
+      });
+
+      if (res.ok) {
+        setCompletedTests((prev) => ({ ...prev, [test.id]: true }));
+        toast.success('Test Completed', {
+          description:
+            'The clinical details for this test have been recorded successfully.',
+        });
+      } else {
+        toast.error('Failed to record test completion');
+      }
+    } catch (error) {
+      console.error('Error marking test as completed:', error);
+      toast.error('An error occurred');
+    }
   };
 
   const tests = [
@@ -159,10 +204,11 @@ export default function SelfTestPage() {
                       </div>
                     ) : (
                       <Button
-                        onClick={() => handleComplete(test.id)}
-                        className="bg-primary shadow-primary/30 group h-16 w-full max-w-[300px] rounded-2xl text-sm font-black tracking-widest text-white uppercase shadow-2xl transition-all hover:brightness-110 active:scale-95"
+                        onClick={() => handleComplete(test)}
+                        disabled={isLoading}
+                        className="bg-primary shadow-primary/30 group h-16 w-full max-w-[300px] rounded-2xl text-sm font-black tracking-widest text-white uppercase shadow-2xl transition-all hover:brightness-110 active:scale-95 disabled:opacity-50"
                       >
-                        Mark test as completed
+                        {isLoading ? 'Loading...' : 'Mark test as completed'}
                       </Button>
                     )}
                   </div>
@@ -188,10 +234,10 @@ export default function SelfTestPage() {
           </div>
         </div>
         <Button
-          onClick={() => router.push('/patient/assessment?new=true')}
+          onClick={() => router.push('/patient/clinical-docs')}
           className="h-14 shrink-0 rounded-xl bg-white px-10 text-[10px] font-black tracking-widest text-gray-900 uppercase"
         >
-          Take an Assessment
+          View Clinical Docs
         </Button>
       </div>
     </div>

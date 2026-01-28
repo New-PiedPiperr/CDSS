@@ -5,12 +5,13 @@ import User, { ROLES } from '@/models/User';
 import DiagnosisSession from '@/models/DiagnosisSession';
 import PatientProfile from '@/models/PatientProfile';
 import Notification from '@/models/Notification';
+import {
+  sendClinicianAssignmentEmail,
+  sendPatientAssignmentEmail,
+} from '@/services/emailService';
 import bcrypt from 'bcrypt';
 import { revalidatePath } from 'next/cache';
 
-/**
- * Upgrades a user role from PATIENT to CLINICIAN.
- */
 export async function upgradeUserRole(userId) {
   try {
     await connectDB();
@@ -51,6 +52,16 @@ export async function assignCase(sessionId, clinicianId) {
       throw new Error('Session not found');
     }
 
+    // Fetch clinician and patient details for notifications and emails
+    const [clinician, patient] = await Promise.all([
+      User.findById(clinicianId),
+      User.findById(session.patientId),
+    ]);
+
+    if (!clinician || !patient) {
+      throw new Error('Clinician or Patient not found');
+    }
+
     session.clinicianId = clinicianId;
     session.status = 'assigned';
     await session.save();
@@ -81,6 +92,23 @@ export async function assignCase(sessionId, clinicianId) {
       type: 'SYSTEM',
       link: '/patient/messages',
     });
+
+    // Send Emails asynchronously (don't block the UI)
+    const clinicianName = `${clinician.firstName} ${clinician.lastName}`;
+    const patientName = `${patient.firstName} ${patient.lastName}`;
+
+    sendClinicianAssignmentEmail(
+      clinician.email,
+      clinician.lastName,
+      patientName,
+      sessionId
+    ).catch((err) => console.error('Clinician email error:', err));
+
+    sendPatientAssignmentEmail(
+      patient.email,
+      patient.firstName,
+      clinician.lastName
+    ).catch((err) => console.error('Patient email error:', err));
 
     revalidatePath('/admin/sessions');
     revalidatePath('/admin/dashboard');

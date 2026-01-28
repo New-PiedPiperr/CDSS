@@ -56,32 +56,32 @@ export default function NotificationsClient({ initialNotifications = [] }) {
           <TabsList className="bg-muted/30 h-12 rounded-2xl p-1">
             <TabsTrigger
               value="All"
-              className="h-full rounded-xl px-6 text-[10px] font-black tracking-widest uppercase"
+              className="h-full rounded-xl px-6 text-[10px] font-bold tracking-widest uppercase"
             >
               All Events
             </TabsTrigger>
             <TabsTrigger
               value="Assessments"
-              className="h-full rounded-xl px-6 text-[10px] font-black tracking-widest uppercase"
+              className="h-full rounded-xl px-6 text-[10px] font-bold tracking-widest uppercase"
             >
               Assessments
             </TabsTrigger>
             <TabsTrigger
               value="Appointments"
-              className="h-full rounded-xl px-6 text-[10px] font-black tracking-widest uppercase"
+              className="h-full rounded-xl px-6 text-[10px] font-bold tracking-widest uppercase"
             >
               Appointments
             </TabsTrigger>
             <TabsTrigger
               value="Treatments"
-              className="h-full rounded-xl px-6 text-[10px] font-black tracking-widest uppercase"
+              className="h-full rounded-xl px-6 text-[10px] font-bold tracking-widest uppercase"
             >
               Treatments
             </TabsTrigger>
           </TabsList>
           <Button
             variant="ghost"
-            className="text-primary gap-2 text-[10px] font-black tracking-widest uppercase"
+            className="text-primary gap-2 text-[10px] font-bold tracking-widest uppercase"
           >
             <CheckCircle2 className="h-4 w-4" />
             Mark All Read
@@ -110,11 +110,11 @@ export default function NotificationsClient({ initialNotifications = [] }) {
 
                   <div className="min-w-0 flex-1">
                     <div className="mb-1 flex items-center justify-between">
-                      <h3 className="text-foreground text-base font-black tracking-tight uppercase italic">
+                      <h3 className="text-foreground text-base font-bold tracking-tight uppercase">
                         {notif.title}
                       </h3>
                       <div className="flex items-center gap-3">
-                        <span className="text-muted-foreground flex items-center gap-1.5 text-[10px] font-black tracking-widest uppercase opacity-50">
+                        <span className="text-muted-foreground flex items-center gap-1.5 text-[10px] font-bold tracking-widest uppercase opacity-50">
                           <Clock className="h-3 w-3" />
                           {formatTime(notif.createdAt)}
                         </span>
@@ -144,7 +144,7 @@ export default function NotificationsClient({ initialNotifications = [] }) {
                 <Bell className="h-10 w-10" />
               </div>
               <div>
-                <h4 className="text-2xl font-black tracking-tighter uppercase italic">
+                <h4 className="text-2xl font-bold tracking-tighter uppercase">
                   All Caught Up
                 </h4>
                 <p className="text-sm font-medium">

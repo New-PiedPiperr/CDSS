@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Bell, Send, AlertCircle, Info, Megaphone, Trash2, Users } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, Button, Badge } from '@/components/ui';
 import { toast } from 'sonner';
+import { cn } from '@/lib/cn';
 
 export default function AdminNotificationsPage() {
   const [formData, setFormData] = useState({

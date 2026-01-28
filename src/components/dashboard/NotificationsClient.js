@@ -12,7 +12,9 @@ import {
   Bell,
   CheckCircle2,
   Construction,
+  ChevronRight,
 } from 'lucide-react';
+import { toast } from 'sonner';
 import {
   Card,
   CardContent,

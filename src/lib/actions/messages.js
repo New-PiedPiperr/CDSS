@@ -126,3 +126,18 @@ export async function markAsRead(senderId) {
     { $set: { isRead: true } }
   );
 }
+
+/**
+ * Clear all messages in a conversation
+ */
+export async function clearMessages(otherUserId) {
+  const session = await auth();
+  if (!session || !session.user) return { success: false };
+
+  await connectDB();
+
+  const conversationId = [session.user.id, otherUserId].sort().join('_');
+  await Message.deleteMany({ conversationId });
+
+  return { success: true };
+}

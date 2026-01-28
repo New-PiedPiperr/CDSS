@@ -25,7 +25,12 @@ import {
   DropdownMenuItem,
 } from '@/components/ui/DropdownMenu';
 import { cn } from '@/lib/cn';
-import { getMessages, sendMessage, markAsRead } from '@/lib/actions/messages';
+import {
+  getMessages,
+  sendMessage,
+  markAsRead,
+  clearMessages,
+} from '@/lib/actions/messages';
 
 export default function MessagingClient({ currentUser, initialConversations = [] }) {
   const [activeTab, setActiveTab] = useState(null);
@@ -189,6 +194,31 @@ export default function MessagingClient({ currentUser, initialConversations = []
     return parts[0][0].toUpperCase();
   };
 
+  const handleClearHistory = async () => {
+    if (
+      !activeTab ||
+      !window.confirm('Are you sure you want to clear this conversation history?')
+    )
+      return;
+
+    try {
+      const result = await clearMessages(activeTab.otherUser.id);
+      if (result.success) {
+        setMessages([]);
+        // Update last message in conversation list
+        setConversations((prev) =>
+          prev.map((c) =>
+            c.id === activeTab.id
+              ? { ...c, lastMessage: 'No messages yet', lastMessageTime: '' }
+              : c
+          )
+        );
+      }
+    } catch (error) {
+      console.error('Failed to clear history:', error);
+    }
+  };
+
   return (
     <div className="bg-card border-border/50 h-[calc(100vh-12rem)] min-h-[600px] overflow-hidden rounded-[2.5rem] border shadow-2xl">
       {!activeTab ? (
@@ -347,7 +377,10 @@ export default function MessagingClient({ currentUser, initialConversations = []
                     </DropdownMenuItem>
                   )}
 
-                  <DropdownMenuItem className="text-muted-foreground hover:text-foreground flex cursor-pointer gap-2 rounded-xl py-3 text-xs font-bold tracking-widest uppercase transition-colors">
+                  <DropdownMenuItem
+                    className="text-muted-foreground hover:text-foreground flex cursor-pointer gap-2 rounded-xl py-3 text-xs font-bold tracking-widest uppercase transition-colors"
+                    onClick={handleClearHistory}
+                  >
                     Clear History
                   </DropdownMenuItem>
                   <DropdownMenuItem className="flex cursor-pointer gap-2 rounded-xl py-3 text-xs font-bold tracking-widest text-amber-500 uppercase transition-colors hover:bg-amber-50">

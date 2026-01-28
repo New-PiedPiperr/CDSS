@@ -178,6 +178,17 @@ export default function MessagingClient({ currentUser, initialConversations = []
     setMessage((prev) => prev + emoji);
   };
 
+  const getInitials = (name) => {
+    if (!name) return 'U';
+    // Remove "Dr " or "Dr. " prefix for initials if present
+    const cleanName = name.replace(/^Dr\.?\s+/i, '');
+    const parts = cleanName.trim().split(/\s+/);
+    if (parts.length >= 2) {
+      return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
+    }
+    return parts[0][0].toUpperCase();
+  };
+
   return (
     <div className="bg-card border-border/50 h-[calc(100vh-12rem)] min-h-[600px] overflow-hidden rounded-[2.5rem] border shadow-2xl">
       {!activeTab ? (
@@ -212,8 +223,8 @@ export default function MessagingClient({ currentUser, initialConversations = []
                     <div className="relative shrink-0">
                       <Avatar className="h-16 w-16 rounded-[1.5rem] shadow-md ring-4 ring-white dark:ring-gray-800">
                         <AvatarImage src={conv.otherUser.avatar} />
-                        <AvatarFallback className="bg-primary/10 text-primary text-xl font-bold">
-                          {conv.otherUser.name[0]}
+                        <AvatarFallback className="bg-primary/20 text-primary text-xl font-bold">
+                          {getInitials(conv.otherUser.name)}
                         </AvatarFallback>
                       </Avatar>
                       {conv.otherUser.online && (
@@ -242,7 +253,7 @@ export default function MessagingClient({ currentUser, initialConversations = []
                     <div className="flex shrink-0 flex-col items-end gap-3">
                       {conv.unreadCount > 0 && (
                         <span className="bg-primary shadow-primary/20 rounded-full px-2.5 py-0.5 text-[8px] font-bold text-white shadow-lg">
-                          {conv.unreadCount} NEWS
+                          {conv.unreadCount} MSG
                         </span>
                       )}
                       <ChevronLeft className="h-5 w-5 rotate-180 opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-30" />
@@ -284,8 +295,8 @@ export default function MessagingClient({ currentUser, initialConversations = []
               <div className="relative">
                 <Avatar className="ring-primary/10 h-14 w-14 rounded-2xl ring-2">
                   <AvatarImage src={activeTab.otherUser.avatar} />
-                  <AvatarFallback className="bg-primary/10 text-primary font-bold">
-                    {activeTab.otherUser.name[0]}
+                  <AvatarFallback className="bg-primary/20 text-primary font-bold">
+                    {getInitials(activeTab.otherUser.name)}
                   </AvatarFallback>
                 </Avatar>
                 {activeTab.otherUser.online && (

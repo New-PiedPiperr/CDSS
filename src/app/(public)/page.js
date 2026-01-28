@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
 import { Logo, Button } from '@/components/ui';
 
 export default function SplashPage() {
@@ -12,6 +13,17 @@ export default function SplashPage() {
     // Small delay to ensure smooth entry animation
     setTimeout(() => setIsAnimating(true), 0);
   }, []);
+
+  // Redirect if session exists
+  const { data: session, status } = useSession();
+  useEffect(() => {
+    if (status === 'authenticated') {
+      const role = session.user.role;
+      if (role === 'ADMIN') router.push('/admin/dashboard');
+      else if (role === 'CLINICIAN') router.push('/clinician/dashboard');
+      else router.push('/patient/dashboard');
+    }
+  }, [status, session, router]);
 
   return (
     <div className="flex flex-col items-center justify-center px-4">

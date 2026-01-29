@@ -223,32 +223,58 @@ export default function AdminReportsClient({ stats }) {
             </CardHeader>
             <CardContent className="p-0">
               <div className="divide-border/50 divide-y">
-                {[1, 2, 3, 4].map((_, i) => (
-                  <div
-                    key={i}
-                    className="group hover:bg-muted/5 flex items-center justify-between p-6 transition-colors"
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="bg-primary/10 text-primary flex h-10 w-10 items-center justify-center rounded-xl">
-                        <FileText className="h-5 w-5" />
+                {stats.recentActivity && stats.recentActivity.length > 0 ? (
+                  stats.recentActivity.slice(0, 5).map((activity, i) => (
+                    <div
+                      key={activity.id || i}
+                      className="group hover:bg-muted/5 flex items-center justify-between p-6 transition-colors"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div
+                          className={cn(
+                            'flex h-10 w-10 items-center justify-center rounded-xl',
+                            activity.riskLevel === 'Urgent'
+                              ? 'bg-red-500/10 text-red-500'
+                              : activity.riskLevel === 'Moderate'
+                                ? 'bg-amber-500/10 text-amber-500'
+                                : 'bg-primary/10 text-primary'
+                          )}
+                        >
+                          <FileText className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <p className="text-foreground text-sm font-bold">
+                            {activity.title}
+                          </p>
+                          <p className="text-muted-foreground text-[10px] font-bold tracking-widest uppercase opacity-60">
+                            {activity.description}
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-foreground text-sm font-bold">
-                          Diagnostic Report Generated
-                        </p>
-                        <p className="text-muted-foreground text-[10px] font-bold tracking-widest uppercase opacity-60">
-                          Lumbar Region • Patient #1024
-                        </p>
+                      <div className="flex flex-col items-end">
+                        <span
+                          className={cn(
+                            'text-xs font-bold',
+                            activity.status === 'Success'
+                              ? 'text-emerald-500'
+                              : activity.status === 'In Review'
+                                ? 'text-amber-500'
+                                : 'text-muted-foreground'
+                          )}
+                        >
+                          {activity.status}
+                        </span>
+                        <span className="text-muted-foreground text-[10px] font-medium">
+                          {formatTimeAgo(activity.timestamp)}
+                        </span>
                       </div>
                     </div>
-                    <div className="flex flex-col items-end">
-                      <span className="text-foreground text-xs font-bold">Success</span>
-                      <span className="text-muted-foreground text-[10px] font-medium">
-                        2m ago
-                      </span>
-                    </div>
+                  ))
+                ) : (
+                  <div className="p-8 text-center">
+                    <p className="text-muted-foreground text-sm">No recent activity</p>
                   </div>
-                ))}
+                )}
               </div>
             </CardContent>
           </Card>

@@ -59,6 +59,7 @@ export default function MessagingClient({ currentUser, initialConversations = []
   const scrollRef = useRef(null);
   const scrollContainerRef = useRef(null);
   const fileInputRef = useRef(null);
+  const messageInputRef = useRef(null);
   const msgCountRef = useRef(0);
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -110,6 +111,16 @@ export default function MessagingClient({ currentUser, initialConversations = []
   // Reset message count when switching conversations
   useEffect(() => {
     msgCountRef.current = 0;
+  }, [activeTab]);
+
+  // Auto-focus message input when chat opens
+  useEffect(() => {
+    if (activeTab && messageInputRef.current) {
+      // Small delay to ensure the DOM is rendered
+      setTimeout(() => {
+        messageInputRef.current?.focus();
+      }, 100);
+    }
   }, [activeTab]);
 
   // Fetch messages when tab changes
@@ -652,6 +663,7 @@ export default function MessagingClient({ currentUser, initialConversations = []
               <div className="group relative flex-1">
                 <div className="from-primary/20 absolute -inset-1 rounded-xl bg-gradient-to-r to-indigo-500/20 opacity-0 blur transition duration-500 group-focus-within:opacity-100"></div>
                 <input
+                  ref={messageInputRef}
                   type="text"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}

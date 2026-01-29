@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BarChart3,
   Download,
@@ -13,6 +13,7 @@ import {
   Clock,
   CheckCircle2,
   AlertTriangle,
+  Calendar,
 } from 'lucide-react';
 import {
   Card,
@@ -28,7 +29,23 @@ import {
 } from '@/components/ui';
 import { cn } from '@/lib/cn';
 
+function formatTimeAgo(date) {
+  const now = new Date();
+  const diffMs = now - new Date(date);
+  const diffMins = Math.floor(diffMs / (1000 * 60));
+  const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+  if (diffMins < 1) return 'Just now';
+  if (diffMins < 60) return `${diffMins}m ago`;
+  if (diffHours < 24) return `${diffHours}h ago`;
+  if (diffDays < 7) return `${diffDays}d ago`;
+  return new Date(date).toLocaleDateString();
+}
+
 export default function AdminReportsClient({ stats }) {
+  const [reportType, setReportType] = useState('standard');
+
   return (
     <div className="space-y-10 pb-12">
       {/* Action Bar */}

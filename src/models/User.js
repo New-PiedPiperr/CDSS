@@ -60,6 +60,10 @@ const UserSchema = new mongoose.Schema(
       type: Date,
       default: null,
     },
+    twoFactorEnabled: {
+      type: Boolean,
+      default: false,
+    },
     // Clinician-specific fields
     specialization: {
       type: String,

@@ -1,156 +1,307 @@
 'use client';
-import { ArrowLeft, Play, AlertCircle, ChevronDown } from 'lucide-react';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
 
-export default function Page() {
+import React, { useState, useEffect } from 'react';
+import {
+  ArrowLeft,
+  Play,
+  AlertCircle,
+  ChevronDown,
+  CheckCircle2,
+  XCircle,
+  Clock,
+  User,
+  Activity,
+} from 'lucide-react';
+import { useRouter, useParams, useSearchParams } from 'next/navigation';
+import { cn } from '@/lib/cn';
+import { Button, Card, Badge, StatusModal } from '@/components/ui';
+
+export default function DiagnosticTestPage() {
   const router = useRouter();
-  const [selectedTest, setSelectedTest] = useState(
-    'Guided Test For Lumbar Disc Hibernation'
-  );
+  const { id } = useParams();
+  const searchParams = useSearchParams();
+  const patientName = searchParams.get('patient') || 'Bola';
+
+  const [findings, setFindings] = useState({}); // { testId: 'positive' | 'negative' | 'follow' }
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusModal, setStatusModal] = useState({
+    isOpen: false,
+    type: 'success',
+    title: '',
+    message: '',
+  });
+
+  // Map slug ID to title
+  const testTitle = id
+    ? id.charAt(0).toUpperCase() + id.slice(1).replace(/-/g, ' ')
+    : 'Guided Diagnostic Test';
 
   const tests = [
     {
       id: 1,
-      title: 'Leg Raise Tests',
+      title: 'Straight Leg Raise (SLR) - Lasegue’s Test',
       purpose:
-        'leg raises help strengthen the core-handle muscles that support the lower back, reducing pressure and improving stability.',
-      instructions: `Right bilateral anteriomnigranula (LVM)
-nghnjhss jkjujkubnhughoilkhjkhjkhjgjkghjhgssbbdsss
-njhnjku junh h njhbjs sgjhbj j mnhnjhmj j
-ldjkml nhjns , nmn medexmonoon oqoim kiknjm
-mnjkjnsi uhuu`,
+        'To assess for nerve root irritation or disc herniation (L4-S1) by inducing dural tension.',
+      instructions: `1. Have the patient lie supine on the examination table.
+2. Ensure the hip is in neutral rotation and the knee is fully extended.
+3. Slowly lift the symptomatic leg, keeping the knee straight.
+4. Note the degree of elevation where pain or neurological symptoms are reproduced.
+5. Positive result: Pain below the knee at 30-70 degrees of hip flexion.`,
     },
     {
       id: 2,
-      title: 'Arm Raise Tests',
+      title: 'Bragard’s Sign (Ankle Dorsiflexion)',
       purpose:
-        'The leg raises are good for checking nerve irritation by lifting the leg while lying flat.',
-      instructions: `Right bilateral anteriomnigranula (LVM)
-nghnjhss jkjujkubnhughoilkhjkhjkhjgjkghjhgssbbdsss
-njhnjku junh h njhbjs sgjhbj j mnhnjhmj j
-ldjkml nhjns , nmn medexmonoon oqoim kiknjm
-mnjkjnsi uhuu`,
+        'Confirmatory test to differentiate between neural tension and hamstring tightness.',
+      instructions: `1. Perform a passive SLR until symptoms are reached.
+2. Slowly lower the leg by 5-10 degrees until pain disappears.
+3. Passively dorsiflex the patient's foot.
+4. Positive result: Reproduction of radicular pain in the leg.`,
+    },
+    {
+      id: 3,
+      title: 'Slump Test (Modified)',
+      purpose:
+        'Sensitive clinical test for neurological tension in the lumbar spine and nerve roots.',
+      instructions: `1. Patient sits at the edge of the table with knees flexed 90°.
+2. Ask the patient to "slump" the mid and low back (thoracic and lumbar flexion).
+3. Have the patient bring their chin to chest (cervical flexion).
+4. Actively or passively extend the symptomatic leg.
+5. Apply passive ankle dorsiflexion.
+6. Positive result: Reproduction of neurological symptoms.`,
     },
   ];
 
+  const handleResult = (testId, result) => {
+    setFindings((prev) => ({
+      ...prev,
+      [testId]: result,
+    }));
+  };
+
+  const handleSubmit = async () => {
+    if (Object.keys(findings).length === 0) {
+      setStatusModal({
+        isOpen: true,
+        type: 'error',
+        title: 'No Findings recorded',
+        message: 'Please record at least one clinical finding before submitting.',
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setStatusModal({
+        isOpen: true,
+        type: 'success',
+        title: 'Assessment Complete',
+        message: `Clinical findings for ${patientName} have been recorded and synced with the AI engine.`,
+      });
+    }, 1500);
+  };
+
   return (
-    <div className="mx-auto w-full max-w-4xl px-3 pb-6 sm:px-4 sm:pb-8">
-      <div className="mb-4 flex flex-col gap-3 sm:mb-6 sm:flex-row sm:items-center">
-        <button
-          onClick={() => router.back()}
-          className="shrink-0 cursor-pointer text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-        >
-          <ArrowLeft size={20} className="sm:h-6 sm:w-6" />
-        </button>
-
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-200 sm:h-12 sm:w-12 dark:bg-gray-700">
-            <svg
-              className="h-5 w-5 text-gray-500 sm:h-6 sm:w-6 dark:text-gray-400"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-            </svg>
-          </div>
-
-          <div className="flex-1">
-            <div className="flex items-center gap-2">
-              <h1 className="text-base font-semibold text-gray-900 sm:text-lg dark:text-gray-100">
-                Bola's Guided Test
+    <div className="mx-auto w-full max-w-4xl px-4 py-8">
+      {/* Header */}
+      <div className="mb-8 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => router.back()}
+            className="hover:bg-accent flex h-10 w-10 items-center justify-center rounded-full transition-colors"
+          >
+            <ArrowLeft className="text-muted-foreground h-6 w-6" />
+          </button>
+          <div className="flex items-center gap-3">
+            <div className="bg-primary/10 text-primary flex h-12 w-12 items-center justify-center rounded-full">
+              <User className="h-6 w-6" />
+            </div>
+            <div>
+              <h1 className="text-xl font-black tracking-tight">
+                {patientName}'s Guided Test
               </h1>
+              <span className="text-muted-foreground text-xs font-bold tracking-widest uppercase">
+                Clinical Examination
+              </span>
             </div>
           </div>
         </div>
+        <div className="hidden border-l-2 pl-4 sm:block">
+          <Badge variant="outline" className="px-3 py-1 font-bold">
+            <Clock className="mr-1.5 h-3.5 w-3.5" />
+            {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+          </Badge>
+        </div>
       </div>
 
-      {/* Test Title */}
-      <div className="mb-4 sm:mb-6">
-        <h2 className="text-center text-sm font-medium text-gray-700 sm:text-base dark:text-gray-300">
-          {selectedTest}
+      {/* Main Title Section - Removed Italics & Reduced Accent */}
+      <div className="mb-10 text-center">
+        <h2 className="text-muted-foreground text-sm font-black tracking-[0.2em] uppercase">
+          Dynamic Diagnostic Protocol
         </h2>
+        <h3 className="text-foreground mt-2 text-3xl font-black">
+          {testTitle === 'Lumbar-pain-screener' || id?.includes('lumbar')
+            ? 'Lumbar Disc Herniation Assessment'
+            : testTitle}
+        </h3>
+        <div className="bg-primary mx-auto mt-4 h-1 w-12 rounded-full" />
       </div>
 
-      {/* Test Sections */}
-      <div className="space-y-4 sm:space-y-6">
+      {/* Test Items */}
+      <div className="space-y-8">
         {tests.map((test) => (
-          <div
+          <Card
             key={test.id}
-            className="rounded-lg border border-gray-200 bg-white p-3 shadow-sm sm:rounded-xl sm:p-6 dark:border-gray-700 dark:bg-gray-800"
+            className={cn(
+              'border-border group bg-card relative overflow-hidden rounded-[2.5rem] p-1 shadow-sm transition-all',
+              findings[test.id] === 'positive' && 'ring-destructive ring-2',
+              findings[test.id] === 'negative' && 'ring-success ring-2',
+              findings[test.id] === 'follow' && 'ring-warning ring-2'
+            )}
           >
-            {/* Test Title */}
-            <div className="mb-2.5 flex items-center gap-2 sm:mb-4">
-              <svg
-                className="h-4 w-4 shrink-0 text-gray-600 sm:h-5 sm:w-5 dark:text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                />
-              </svg>
-              <h3 className="text-sm font-semibold text-gray-900 sm:text-base dark:text-gray-100">
-                {test.title}
-              </h3>
-            </div>
-
-            {/* Purpose */}
-            <div className="mb-3 sm:mb-4">
-              <p className="text-xs font-medium text-gray-600 sm:text-sm dark:text-gray-400">
-                <span className="font-semibold">Purpose:</span> {test.purpose}
-              </p>
-            </div>
-
-            {/* Instructions */}
-            <div className="mb-3 sm:mb-4">
-              <h4 className="mb-1.5 text-xs font-semibold text-gray-900 sm:mb-2 sm:text-sm dark:text-gray-100">
-                Instructions
-              </h4>
-              <p className="text-xs leading-relaxed whitespace-pre-line text-gray-600 sm:text-sm dark:text-gray-400">
-                {test.instructions}
-              </p>
-            </div>
-
-            {/* Video Player */}
-            <div className="mb-3 overflow-hidden rounded-lg bg-gray-700 sm:mb-4 dark:bg-gray-900">
-              <div className="flex aspect-video items-center justify-center">
-                <button className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-gray-900 transition-transform hover:scale-110 sm:h-16 sm:w-16 md:h-20 md:w-20">
-                  <Play
-                    className="ml-1 h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10"
-                    fill="currentColor"
-                  />
-                </button>
+            <CardContent className="p-8">
+              <div className="mb-6 flex items-start justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="bg-primary/5 text-primary flex h-12 w-12 items-center justify-center rounded-2xl">
+                    <Activity className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-black tracking-tight">{test.title}</h3>
+                    <div className="mt-1 flex gap-2">
+                      <Badge
+                        variant="secondary"
+                        className="px-2 py-0 text-[10px] font-bold uppercase"
+                      >
+                        Clinical Test
+                      </Badge>
+                      {findings[test.id] && (
+                        <Badge
+                          className={cn(
+                            'border-none px-2 py-0 text-[10px] font-bold text-white uppercase',
+                            findings[test.id] === 'positive' && 'bg-destructive',
+                            findings[test.id] === 'negative' && 'bg-success',
+                            findings[test.id] === 'follow' && 'bg-warning'
+                          )}
+                        >
+                          {findings[test.id]}
+                        </Badge>
+                      )}
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            {/* Alert */}
-            <div className="mb-3 flex items-start gap-2 sm:mb-4">
-              <AlertCircle className="mt-0.5 h-4 w-4 shrink-0 text-orange-500 sm:h-5 sm:w-5" />
-              <p className="text-xs text-gray-600 sm:text-sm dark:text-gray-400">
-                Follow instructions carefully, stop if you feel any pain
-              </p>
-            </div>
+              <div className="grid gap-8 lg:grid-cols-2">
+                <div className="space-y-4">
+                  <div>
+                    <span className="text-muted-foreground text-[10px] font-black tracking-widest uppercase">
+                      Purpose
+                    </span>
+                    <p className="text-foreground mt-1 text-sm leading-relaxed font-medium">
+                      {test.purpose}
+                    </p>
+                  </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col gap-2 sm:flex-row sm:gap-3">
-              <button className="rounded-lg bg-cyan-500 px-4 py-2.5 text-xs font-medium text-white transition-colors hover:bg-cyan-600 sm:flex-1 sm:py-2 sm:text-sm">
-                Follow
-              </button>
-              <button className="rounded-lg bg-cyan-500 px-4 py-2.5 text-xs font-medium text-white transition-colors hover:bg-cyan-600 sm:flex-1 sm:py-2 sm:text-sm">
-                Negative
-              </button>
-              <button className="rounded-lg bg-cyan-500 px-4 py-2.5 text-xs font-medium text-white transition-colors hover:bg-cyan-600 sm:flex-1 sm:py-2 sm:text-sm">
-                Update to positive
-              </button>
-            </div>
-          </div>
+                  <div>
+                    <span className="text-muted-foreground text-[10px] font-black tracking-widest uppercase">
+                      Instructions
+                    </span>
+                    <div className="mt-2 space-y-2">
+                      {test.instructions.split('\n').map((line, i) => (
+                        <p
+                          key={i}
+                          className="text-muted-foreground text-sm leading-relaxed font-bold"
+                        >
+                          {line}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  {/* Media / Video Placeholder */}
+                  <div className="group/video relative aspect-video overflow-hidden rounded-3xl bg-slate-100 dark:bg-slate-900">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="bg-primary flex h-16 w-16 items-center justify-center rounded-full text-white shadow-xl transition-transform group-hover/video:scale-110">
+                        <Play className="ml-1 h-8 w-8" />
+                      </div>
+                    </div>
+                    <div className="absolute right-4 bottom-4 left-4 flex items-center gap-2 rounded-xl bg-black/40 p-2 text-xs font-bold text-white backdrop-blur-md">
+                      <AlertCircle className="text-warning h-4 w-4" />
+                      Visual Reference Guide
+                    </div>
+                  </div>
+
+                  {/* Actions */}
+                  <div className="grid grid-cols-3 gap-3">
+                    <button
+                      onClick={() => handleResult(test.id, 'follow')}
+                      className={cn(
+                        'flex flex-col items-center justify-center gap-2 rounded-2xl border-2 py-4 transition-all active:scale-95',
+                        findings[test.id] === 'follow'
+                          ? 'border-warning bg-warning/10 text-warning ring-warning/20 ring-2'
+                          : 'border-border bg-card hover:border-warning/50 text-muted-foreground'
+                      )}
+                    >
+                      <Clock className="h-5 w-5" />
+                      <span className="text-[10px] font-black uppercase">Follow</span>
+                    </button>
+                    <button
+                      onClick={() => handleResult(test.id, 'negative')}
+                      className={cn(
+                        'flex flex-col items-center justify-center gap-2 rounded-2xl border-2 py-4 transition-all active:scale-95',
+                        findings[test.id] === 'negative'
+                          ? 'border-success bg-success/10 text-success ring-success/20 ring-2'
+                          : 'border-border bg-card hover:border-success/50 text-muted-foreground'
+                      )}
+                    >
+                      <CheckCircle2 className="h-5 w-5" />
+                      <span className="text-[10px] font-black uppercase">Negative</span>
+                    </button>
+                    <button
+                      onClick={() => handleResult(test.id, 'positive')}
+                      className={cn(
+                        'flex flex-col items-center justify-center gap-2 rounded-2xl border-2 py-4 transition-all active:scale-95',
+                        findings[test.id] === 'positive'
+                          ? 'border-destructive bg-destructive/10 text-destructive ring-destructive/20 ring-2'
+                          : 'border-border bg-card hover:border-destructive/50 text-muted-foreground'
+                      )}
+                    >
+                      <XCircle className="h-5 w-5" />
+                      <span className="text-[10px] font-black uppercase">Positive</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         ))}
       </div>
+
+      {/* Final Action */}
+      <div className="mt-12 flex justify-center">
+        <Button
+          onClick={handleSubmit}
+          disabled={isSubmitting}
+          className="bg-primary shadow-primary/30 h-16 w-full max-w-md rounded-2xl text-base font-black tracking-widest text-white uppercase shadow-2xl transition-all hover:scale-[1.02] active:scale-95 sm:w-auto sm:px-20"
+        >
+          {isSubmitting ? 'Processing Findings...' : 'Complete Documentation'}
+        </Button>
+      </div>
+
+      <StatusModal
+        isOpen={statusModal.isOpen}
+        onClose={() => {
+          setStatusModal({ ...statusModal, isOpen: false });
+          if (statusModal.type === 'success') router.push('/clinician/diagnostic');
+        }}
+        title={statusModal.title}
+        message={statusModal.message}
+        type={statusModal.type}
+      />
     </div>
   );
 }

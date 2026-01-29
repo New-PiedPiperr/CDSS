@@ -69,7 +69,7 @@ export default function PatientDocumentsPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          fileUrl: uploadData.data.url,
+          fileUrl: uploadData.url,
           fileName: file.name,
           fileType: file.type,
           fileSize: file.size,

@@ -58,18 +58,6 @@ export default function DiagnosticTestPage() {
 3. Passively dorsiflex the patient's foot.
 4. Positive result: Reproduction of radicular pain in the leg.`,
     },
-    {
-      id: 3,
-      title: 'Slump Test (Modified)',
-      purpose:
-        'Sensitive clinical test for neurological tension in the lumbar spine and nerve roots.',
-      instructions: `1. Patient sits at the edge of the table with knees flexed 90°.
-2. Ask the patient to "slump" the mid and low back (thoracic and lumbar flexion).
-3. Have the patient bring their chin to chest (cervical flexion).
-4. Actively or passively extend the symptomatic leg.
-5. Apply passive ankle dorsiflexion.
-6. Positive result: Reproduction of neurological symptoms.`,
-    },
   ];
 
   const handleResult = (testId, result) => {
@@ -185,7 +173,9 @@ export default function DiagnosticTestPage() {
                             findings[test.id] === 'follow' && 'bg-warning'
                           )}
                         >
-                          {findings[test.id]}
+                          {findings[test.id] === 'positive'
+                            ? 'Positive'
+                            : findings[test.id]}
                         </Badge>
                       )}
                     </div>
@@ -271,7 +261,9 @@ export default function DiagnosticTestPage() {
                       )}
                     >
                       <XCircle className="h-5 w-5" />
-                      <span className="text-[10px] font-black uppercase">Positive</span>
+                      <span className="text-[10px] font-black uppercase">
+                        Update to positive
+                      </span>
                     </button>
                   </div>
                 </div>

@@ -78,9 +78,9 @@ function TopNav({ title, className, showSidebarTrigger = true, showUser = true }
               else router.push('/patient/settings');
             }}
           >
-            {session?.user?.image ? (
+            {session?.user?.avatar || session?.user?.image ? (
               <Image
-                src={session.user.image}
+                src={session.user.avatar || session.user.image}
                 alt="Profile"
                 width={48}
                 height={48}

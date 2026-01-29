@@ -177,9 +177,20 @@ export default function Sidebar({ links = [], secondaryLinks = [], className, us
             href={`${basePath}/settings`}
             className="hover:bg-muted flex items-center gap-3 rounded-lg px-3 py-2 transition-colors"
           >
-            <div className="bg-primary/10 text-primary flex h-10 w-10 items-center justify-center rounded-full font-bold">
-              {user?.firstName?.[0] || user?.email?.[0] || 'U'}
-            </div>
+            {user?.avatar || user?.image ? (
+              <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-full border border-gray-200 dark:border-gray-700">
+                <Image
+                  src={user.avatar || user.image}
+                  alt="Profile"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ) : (
+              <div className="bg-primary/10 text-primary flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full font-bold">
+                {user?.firstName?.[0] || user?.email?.[0] || 'U'}
+              </div>
+            )}
             <div className="flex flex-col overflow-hidden">
               <span className="text-foreground truncate text-sm font-medium">
                 {user ? `${user?.firstName} ${user?.lastName}` : 'Unknown User'}

@@ -185,7 +185,11 @@ export default function DiagnosticsClient({ initialModules = [] }) {
               </option>
             ))}
           </select>
-          <Button variant="outline" className="h-14 gap-2 rounded-2xl px-6 font-bold">
+          <Button
+            variant="outline"
+            className="h-14 gap-2 rounded-2xl px-6 font-bold"
+            onClick={() => setIsSettingsModalOpen(true)}
+          >
             <Settings2 className="h-4 w-4" />
             Global Settings
           </Button>

@@ -1,6 +1,6 @@
 import { auth } from '@/../auth';
 import connectDB from '@/lib/db/connect';
-import { Appointment, User } from '@/models';
+import { Appointment, User, Notification } from '@/models';
 import { NextResponse } from 'next/server';
 
 export async function POST(req) {

@@ -279,6 +279,221 @@ export default function AdminReportsClient({ stats }) {
             </CardContent>
           </Card>
         </TabsContent>
+
+        <TabsContent value="performance" className="mt-0 space-y-8">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <Card className="bg-card rounded-[2.5rem] border-none shadow-sm">
+              <CardHeader className="p-8 pb-0">
+                <CardTitle className="text-xl font-bold tracking-tight uppercase">
+                  Session Completion Rate
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-8">
+                <div className="space-y-6">
+                  {[
+                    {
+                      label: 'Completed',
+                      value:
+                        stats.riskData.Low +
+                          stats.riskData.Moderate +
+                          stats.riskData.Urgent >
+                        0
+                          ? Math.round((stats.riskData.Low / stats.totalSessions) * 100)
+                          : 0,
+                      color: 'bg-emerald-500',
+                    },
+                    {
+                      label: 'In Review',
+                      value:
+                        stats.totalSessions > 0
+                          ? Math.round(
+                              (stats.riskData.Moderate / stats.totalSessions) * 100
+                            )
+                          : 0,
+                      color: 'bg-amber-500',
+                    },
+                    {
+                      label: 'Pending',
+                      value:
+                        stats.totalSessions > 0
+                          ? Math.round(
+                              (stats.riskData.Urgent / stats.totalSessions) * 100
+                            )
+                          : 0,
+                      color: 'bg-red-500',
+                    },
+                  ].map((item, i) => (
+                    <div key={i} className="space-y-2">
+                      <div className="flex justify-between text-xs font-bold tracking-widest uppercase">
+                        <span>{item.label}</span>
+                        <span className="text-primary">{item.value}%</span>
+                      </div>
+                      <div className="bg-muted h-3 w-full overflow-hidden rounded-full">
+                        <div
+                          className={cn(
+                            'h-full rounded-full transition-all duration-1000',
+                            item.color
+                          )}
+                          style={{ width: `${item.value}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card rounded-[2.5rem] border-none shadow-sm">
+              <CardHeader className="p-8 pb-0">
+                <CardTitle className="text-xl font-bold tracking-tight uppercase">
+                  AI Performance Metrics
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-8">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-muted/20 border-border/50 flex flex-col items-center justify-center gap-2 rounded-2xl border p-6 text-center">
+                    <span className="text-muted-foreground text-[10px] font-bold tracking-widest uppercase">
+                      Avg Confidence
+                    </span>
+                    <span className="text-foreground text-3xl font-bold">
+                      {stats.avgConfidence}%
+                    </span>
+                  </div>
+                  <div className="bg-muted/20 border-border/50 flex flex-col items-center justify-center gap-2 rounded-2xl border p-6 text-center">
+                    <span className="text-muted-foreground text-[10px] font-bold tracking-widest uppercase">
+                      Sessions Today
+                    </span>
+                    <span className="text-foreground text-3xl font-bold">
+                      {stats.currentPeriodSessions || 0}
+                    </span>
+                  </div>
+                  <div className="bg-muted/20 border-border/50 flex flex-col items-center justify-center gap-2 rounded-2xl border p-6 text-center">
+                    <span className="text-muted-foreground text-[10px] font-bold tracking-widest uppercase">
+                      Avg Review Time
+                    </span>
+                    <span className="text-foreground text-3xl font-bold">
+                      {stats.avgReviewTime === 'N/A' ? 'N/A' : `${stats.avgReviewTime}h`}
+                    </span>
+                  </div>
+                  <div className="bg-muted/20 border-border/50 flex flex-col items-center justify-center gap-2 rounded-2xl border p-6 text-center">
+                    <span className="text-muted-foreground text-[10px] font-bold tracking-widest uppercase">
+                      Platform Health
+                    </span>
+                    <span className="text-foreground text-3xl font-bold">
+                      {stats.platformHealth}%
+                    </span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+
+        <TabsContent value="demographics" className="mt-0 space-y-8">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+            <Card className="bg-card rounded-[2.5rem] border-none shadow-sm">
+              <CardContent className="flex flex-col items-center justify-center p-8">
+                <div className="bg-primary/10 text-primary mb-4 flex h-16 w-16 items-center justify-center rounded-2xl">
+                  <Users className="h-8 w-8" />
+                </div>
+                <p className="text-muted-foreground mb-2 text-[10px] font-bold tracking-widest uppercase">
+                  Total Patients
+                </p>
+                <h3 className="text-foreground text-4xl font-bold">
+                  {stats.userDemographics?.patients || 0}
+                </h3>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card rounded-[2.5rem] border-none shadow-sm">
+              <CardContent className="flex flex-col items-center justify-center p-8">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-500">
+                  <Stethoscope className="h-8 w-8" />
+                </div>
+                <p className="text-muted-foreground mb-2 text-[10px] font-bold tracking-widest uppercase">
+                  Total Clinicians
+                </p>
+                <h3 className="text-foreground text-4xl font-bold">
+                  {stats.userDemographics?.clinicians || 0}
+                </h3>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card rounded-[2.5rem] border-none shadow-sm">
+              <CardContent className="flex flex-col items-center justify-center p-8">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-500/10 text-amber-500">
+                  <Activity className="h-8 w-8" />
+                </div>
+                <p className="text-muted-foreground mb-2 text-[10px] font-bold tracking-widest uppercase">
+                  Total Assessments
+                </p>
+                <h3 className="text-foreground text-4xl font-bold">
+                  {stats.totalSessions || 0}
+                </h3>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="bg-card rounded-[2.5rem] border-none shadow-sm">
+            <CardHeader className="p-8 pb-0">
+              <CardTitle className="text-xl font-bold tracking-tight uppercase">
+                User Distribution by Role
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-8">
+              <div className="space-y-6">
+                {[
+                  {
+                    label: 'Patients',
+                    value: stats.userDemographics?.patients || 0,
+                    total:
+                      (stats.userDemographics?.patients || 0) +
+                      (stats.userDemographics?.clinicians || 0) +
+                      (stats.userDemographics?.admins || 0),
+                    color: 'bg-primary',
+                  },
+                  {
+                    label: 'Clinicians',
+                    value: stats.userDemographics?.clinicians || 0,
+                    total:
+                      (stats.userDemographics?.patients || 0) +
+                      (stats.userDemographics?.clinicians || 0) +
+                      (stats.userDemographics?.admins || 0),
+                    color: 'bg-indigo-500',
+                  },
+                  {
+                    label: 'Administrators',
+                    value: stats.userDemographics?.admins || 0,
+                    total:
+                      (stats.userDemographics?.patients || 0) +
+                      (stats.userDemographics?.clinicians || 0) +
+                      (stats.userDemographics?.admins || 0),
+                    color: 'bg-amber-500',
+                  },
+                ].map((item, i) => (
+                  <div key={i} className="space-y-2">
+                    <div className="flex justify-between text-xs font-bold tracking-widest uppercase">
+                      <span>{item.label}</span>
+                      <span className="text-primary">{item.value} users</span>
+                    </div>
+                    <div className="bg-muted h-3 w-full overflow-hidden rounded-full">
+                      <div
+                        className={cn(
+                          'h-full rounded-full transition-all duration-1000',
+                          item.color
+                        )}
+                        style={{
+                          width:
+                            item.total > 0 ? `${(item.value / item.total) * 100}%` : '0%',
+                        }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
       </Tabs>
     </div>
   );

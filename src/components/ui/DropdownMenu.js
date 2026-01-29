@@ -54,7 +54,7 @@ const DropdownMenuContent = React.forwardRef(
       <div
         ref={ref}
         className={cn(
-          'bg-popover text-popover-foreground animate-in fade-in zoom-in-95 absolute z-50 mt-2 min-w-[8rem] overflow-hidden rounded-[1.5rem] border p-2 shadow-2xl transition-all',
+          'bg-popover text-popover-foreground animate-in fade-in zoom-in-95 absolute z-[9999] mt-2 min-w-[8rem] overflow-hidden rounded-[1.5rem] border p-2 shadow-2xl transition-all',
           align === 'end' ? 'right-0' : 'left-0',
           className
         )}

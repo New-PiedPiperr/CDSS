@@ -29,6 +29,7 @@ export default async function PatientsPage() {
   sessions.forEach((sess) => {
     if (!sess.patientId) return;
     const pId = sess.patientId._id.toString();
+    if (!patientsMap.has(pId)) {
       const formatName = (str) =>
         str ? str.charAt(0).toUpperCase() + str.slice(1).toLowerCase() : '';
       patientsMap.set(pId, {

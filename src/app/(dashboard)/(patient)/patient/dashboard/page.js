@@ -441,7 +441,10 @@ export default async function PatientDashboardPage() {
                       <div>
                         <p className="text-sm leading-none font-bold">{appt.type}</p>
                         <p className="text-muted-foreground mt-1.5 flex items-center gap-1.5 text-[11px] font-medium">
-                          <UserIcon className="h-3 w-3" /> Dr. {appt.therapistName}
+                          <UserIcon className="h-3 w-3" />{' '}
+                          {appt.therapistName?.startsWith('Dr.')
+                            ? appt.therapistName
+                            : `Dr. ${appt.therapistName || ''}`}
                         </p>
                       </div>
                       <Badge

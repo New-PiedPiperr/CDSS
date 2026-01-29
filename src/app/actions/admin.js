@@ -3,11 +3,14 @@
 import { auth } from '@/../auth';
 import connectDB from '@/lib/db/connect';
 import DiagnosisSession from '@/models/DiagnosisSession';
+import User from '@/models/User';
+import CaseFile from '@/models/CaseFile';
 import { revalidatePath } from 'next/cache';
 
 /**
  * Assigns a patient (diagnosis session) to a clinician.
  * Only accessible by ADMIN users.
+ * Requires the clinician to be verified.
  */
 export async function assignPatientToClinician(sessionId, clinicianId) {
   try {
@@ -20,7 +23,19 @@ export async function assignPatientToClinician(sessionId, clinicianId) {
 
     await connectDB();
 
-    // 2. Update DiagnosisSession
+    // 2. Check Clinician Verification Status
+    const clinician = await User.findById(clinicianId);
+    if (!clinician) {
+      throw new Error('Clinician not found');
+    }
+
+    if (!clinician.professional?.verified) {
+      throw new Error(
+        'Cannot assign case to an unverified clinician. Please verify their credentials first.'
+      );
+    }
+
+    // 3. Update DiagnosisSession
     const updatedSession = await DiagnosisSession.findByIdAndUpdate(
       sessionId,
       {
@@ -34,9 +49,10 @@ export async function assignPatientToClinician(sessionId, clinicianId) {
       throw new Error('Diagnosis session not found');
     }
 
-    // 3. Revalidate paths for dashboard updates
+    // 4. Revalidate paths for dashboard updates
     revalidatePath('/admin/dashboard');
     revalidatePath('/clinician/dashboard');
+    revalidatePath('/(admin)/admin/sessions'); // Also revalidate sessions page
 
     return { success: true, session: JSON.parse(JSON.stringify(updatedSession)) };
   } catch (error) {
@@ -45,7 +61,42 @@ export async function assignPatientToClinician(sessionId, clinicianId) {
   }
 }
 
-import CaseFile from '@/models/CaseFile';
+/**
+ * Verify a clinician's professional details.
+ * Only accessible by ADMIN users.
+ */
+export async function verifyClinician(clinicianId) {
+  try {
+    const session = await auth();
+    if (!session || session.user.role !== 'ADMIN') {
+      throw new Error('Unauthorized: Admin access required');
+    }
+
+    await connectDB();
+
+    const clinician = await User.findByIdAndUpdate(
+      clinicianId,
+      {
+        $set: {
+          'professional.verified': true,
+          isActive: true, // Optionally also activate the account if it was inactive
+        },
+      },
+      { new: true }
+    );
+
+    if (!clinician) {
+      throw new Error('Clinician not found');
+    }
+
+    revalidatePath('/admin/therapists');
+
+    return { success: true };
+  } catch (error) {
+    console.error('Verification Error:', error);
+    return { success: false, error: error.message };
+  }
+}
 
 /**
  * Fetch new cases (pending review) for the admin dashboard.

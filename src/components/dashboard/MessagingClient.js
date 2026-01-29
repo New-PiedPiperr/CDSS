@@ -518,7 +518,6 @@ export default function MessagingClient({ currentUser, initialConversations = []
                   const isFromMe = m.senderId === currentUser.id;
 
                   return (
-                  return (
                     <div
                       key={m._id}
                       className={cn(
@@ -534,7 +533,7 @@ export default function MessagingClient({ currentUser, initialConversations = []
                           </AvatarFallback>
                         </Avatar>
                       )}
-                      
+
                       <div
                         className={cn(
                           'group flex max-w-[80%] flex-col',
@@ -597,7 +596,6 @@ export default function MessagingClient({ currentUser, initialConversations = []
                         </Avatar>
                       )}
                     </div>
-                  );
                   );
                 })
               )}

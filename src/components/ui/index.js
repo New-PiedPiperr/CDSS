@@ -29,3 +29,4 @@ export {
 export { ScrollArea } from './ScrollArea.js';
 export { Switch } from './Switch.js';
 export { Lightbox } from './Lightbox.js';
+export { StatusModal } from './StatusModal.js';

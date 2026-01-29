@@ -18,7 +18,7 @@ import {
   AlertCircle,
 } from 'lucide-react';
 import { cn } from '@/lib/cn';
-import { Button, Card, Badge } from '@/components/ui';
+import { Button, Card, Badge, Lightbox } from '@/components/ui';
 
 export default function CaseDetailsPage({ params }) {
   const unwrappedParams = React.use(params);
@@ -28,6 +28,7 @@ export default function CaseDetailsPage({ params }) {
   const [isDocsOpen, setIsDocsOpen] = useState(false);
   const [documents, setDocuments] = useState([]);
   const [isLoadingDocs, setIsLoadingDocs] = useState(false);
+  const [activeImage, setActiveImage] = useState(null); // { src, alt }
   const [bookingData, setBookingData] = useState({
     date: '',
     time: '',
@@ -969,15 +970,28 @@ export default function CaseDetailsPage({ params }) {
                         </div>
                       </div>
                       <div className="flex gap-2">
-                        <a href={doc.fileUrl} target="_blank" rel="noopener noreferrer">
+                        {doc.fileType?.includes('pdf') ? (
+                          <a href={doc.fileUrl} target="_blank" rel="noopener noreferrer">
+                            <Button
+                              size="sm"
+                              variant="ghost"
+                              className="group-hover:bg-primary/10 group-hover:text-primary h-8 w-8 rounded-full p-0"
+                            >
+                              <Eye className="h-4 w-4" />
+                            </Button>
+                          </a>
+                        ) : (
                           <Button
                             size="sm"
                             variant="ghost"
+                            onClick={() =>
+                              setActiveImage({ src: doc.fileUrl, alt: doc.fileName })
+                            }
                             className="group-hover:bg-primary/10 group-hover:text-primary h-8 w-8 rounded-full p-0"
                           >
                             <Eye className="h-4 w-4" />
                           </Button>
-                        </a>
+                        )}
                         <a href={doc.fileUrl} download={doc.fileName}>
                           <Button
                             size="sm"
@@ -1011,6 +1025,14 @@ export default function CaseDetailsPage({ params }) {
             </div>
           </Card>
         </div>
+      )}
+
+      {activeImage && (
+        <Lightbox
+          src={activeImage.src}
+          alt={activeImage.alt}
+          onClose={() => setActiveImage(null)}
+        />
       )}
     </div>
   );

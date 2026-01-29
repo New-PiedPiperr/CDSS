@@ -130,7 +130,7 @@ export async function verifyClinician(clinicianId) {
   try {
     await connectDB();
     const clinician = await User.findById(clinicianId);
-    
+
     if (!clinician) {
       throw new Error('Clinician not found');
     }

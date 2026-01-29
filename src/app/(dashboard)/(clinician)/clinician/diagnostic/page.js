@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import {
   Compass,
   ChevronRight,
@@ -9,15 +11,21 @@ import {
   ShieldCheck,
   Zap,
 } from 'lucide-react';
-import { Card, CardContent, Button, Badge } from '@/components/ui';
+import { Card, CardContent, Button, Badge, StatusModal } from '@/components/ui';
 import { cn } from '@/lib/cn';
 import Link from 'next/link';
 
 export default function ClinicianDiagnosticPage() {
+  const [statusModal, setStatusModal] = useState({
+    isOpen: false,
+    type: 'success',
+    title: '',
+    message: '',
+  });
+
   const diagnosticModules = [
     {
       title: 'Lumbar Pain Screener',
-      questions: 12,
       region: 'Lumbar',
       intensity: 'Detailed',
       description:
@@ -25,7 +33,6 @@ export default function ClinicianDiagnosticPage() {
     },
     {
       title: 'Cervical Posture Diagnostic',
-      questions: 9,
       region: 'Cervical',
       intensity: 'Standard',
       description:
@@ -33,7 +40,6 @@ export default function ClinicianDiagnosticPage() {
     },
     {
       title: 'Ankle Stability Test',
-      questions: 8,
       region: 'Ankle',
       intensity: 'Quick',
       description:
@@ -41,7 +47,6 @@ export default function ClinicianDiagnosticPage() {
     },
     {
       title: 'Shoulder Mobility Screener',
-      questions: 11,
       region: 'Shoulder',
       intensity: 'Detailed',
       description:
@@ -49,7 +54,6 @@ export default function ClinicianDiagnosticPage() {
     },
     {
       title: 'Leg Raise Tests (Clinical)',
-      questions: 14,
       region: 'Lumbar',
       intensity: 'Clinical',
       description:
@@ -57,7 +61,6 @@ export default function ClinicianDiagnosticPage() {
     },
     {
       title: 'Knee Pain Assessment',
-      questions: 1,
       region: 'Knee',
       intensity: 'Rapid',
       description:
@@ -65,8 +68,37 @@ export default function ClinicianDiagnosticPage() {
     },
   ];
 
+  const handleSync = () => {
+    setStatusModal({
+      isOpen: true,
+      type: 'info',
+      title: 'Synchronizing Cases',
+      message:
+        'Cloud database is currently synchronizing with local clinician records. This may take a moment...',
+    });
+    setTimeout(() => {
+      setStatusModal({
+        isOpen: true,
+        type: 'success',
+        title: 'Sync Complete',
+        message:
+          'All localized cases have been successfully synchronized with the AI Heuristic Engine.',
+      });
+    }, 2000);
+  };
+
+  const handleRulebook = () => {
+    setStatusModal({
+      isOpen: true,
+      type: 'info',
+      title: 'Clinical Rulebook',
+      message:
+        'The comprehensive clinical decision rulebook effectively integrates MSK heuristic patterns. Viewing permissions are standard for therapists.',
+    });
+  };
+
   return (
-    <div className="space-y-10 overflow-hidden pb-12">
+    <div className="animate-fade-in space-y-10 overflow-hidden pb-12">
       <header className="relative overflow-hidden rounded-[3rem] bg-[#111827] p-12 text-white shadow-2xl">
         {/* Abstract background elements */}
         <div className="bg-primary/20 absolute top-0 right-0 h-full w-1/3 translate-x-1/4 -translate-y-1/2 rounded-full blur-[120px]" />
@@ -89,7 +121,10 @@ export default function ClinicianDiagnosticPage() {
               <ShieldCheck className="h-4 w-4" />
               HIPAA Compliant
             </div>
-            <Button className="bg-primary shadow-primary/30 h-14 rounded-2xl px-10 font-black tracking-widest text-white uppercase shadow-xl">
+            <Button
+              onClick={handleSync}
+              className="bg-primary shadow-primary/30 h-14 rounded-2xl px-10 font-black tracking-widest text-white uppercase shadow-xl transition-all hover:scale-105 active:scale-95"
+            >
               Sync All Cases
             </Button>
           </div>
@@ -101,7 +136,7 @@ export default function ClinicianDiagnosticPage() {
         {diagnosticModules.map((module, i) => (
           <Card
             key={i}
-            className="group bg-card relative flex h-full flex-col overflow-hidden rounded-[2.5rem] border-none shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
+            className="group border-border bg-card relative flex h-full flex-col overflow-hidden rounded-[2.5rem] border shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
           >
             <CardContent className="flex flex-1 flex-col p-10">
               <div className="mb-8 flex items-center justify-between">
@@ -147,7 +182,8 @@ export default function ClinicianDiagnosticPage() {
                           className={cn(
                             'h-1.5 w-4 rounded-full',
                             dot <=
-                              (module.intensity === 'Detailed'
+                              (module.intensity === 'Detailed' ||
+                              module.intensity === 'Clinical'
                                 ? 3
                                 : module.intensity === 'Standard'
                                   ? 2
@@ -197,11 +233,22 @@ export default function ClinicianDiagnosticPage() {
               (SLR), Spurling’s, and Thompson’s directly within your case review flow.
             </p>
           </div>
-          <Button className="h-16 shrink-0 rounded-2xl bg-white px-12 text-sm font-black tracking-widest text-gray-900 uppercase shadow-xl hover:bg-gray-100 active:scale-95">
+          <Button
+            onClick={handleRulebook}
+            className="h-16 shrink-0 rounded-2xl bg-white px-12 text-sm font-black tracking-widest text-gray-900 uppercase shadow-xl hover:bg-gray-100 active:scale-95"
+          >
             Access Rulebook
           </Button>
         </div>
       </div>
+
+      <StatusModal
+        isOpen={statusModal.isOpen}
+        onClose={() => setStatusModal({ ...statusModal, isOpen: false })}
+        title={statusModal.title}
+        message={statusModal.message}
+        type={statusModal.type}
+      />
     </div>
   );
 }

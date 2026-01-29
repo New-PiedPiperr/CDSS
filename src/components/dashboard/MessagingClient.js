@@ -350,9 +350,25 @@ export default function MessagingClient({ currentUser, initialConversations = []
 
                     <div className="min-w-0 flex-1 text-left">
                       <div className="mb-1 flex items-center justify-between gap-2">
-                        <h4 className="truncate text-sm font-bold tracking-tight uppercase">
-                          {conv.otherUser.name}
-                        </h4>
+                        <div className="flex items-center gap-2">
+                          <h4 className="truncate text-sm font-bold tracking-tight uppercase">
+                            {conv.otherUser.name}
+                          </h4>
+                          {conv.otherUser.role && (
+                            <Badge
+                              className={cn(
+                                'rounded-full px-2 py-0.5 text-[8px] font-bold uppercase',
+                                conv.otherUser.role === 'ADMIN' || conv.otherUser.role === 'SUPER_ADMIN'
+                                  ? 'bg-purple-500/10 text-purple-500'
+                                  : conv.otherUser.role === 'CLINICIAN'
+                                    ? 'bg-indigo-500/10 text-indigo-500'
+                                    : 'bg-emerald-500/10 text-emerald-500'
+                              )}
+                            >
+                              {conv.otherUser.role === 'SUPER_ADMIN' ? 'ADMIN' : conv.otherUser.role}
+                            </Badge>
+                          )}
+                        </div>
                         <span className="text-muted-foreground shrink-0 text-[9px] font-semibold tracking-widest whitespace-nowrap uppercase opacity-60">
                           {conv.lastMessageTime}
                         </span>

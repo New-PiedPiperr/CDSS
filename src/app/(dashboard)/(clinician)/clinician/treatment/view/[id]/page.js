@@ -272,8 +272,15 @@ export default async function TreatmentPlanViewPage({ params }) {
                           <span className="text-primary text-2xl opacity-30">#</span>{' '}
                           {act.goal}
                         </h4>
-                        <span className="text-muted-foreground text-[10px] font-black uppercase">
+                        <span className="text-muted-foreground text-right text-[10px] font-black uppercase">
                           {new Date(act.date).toLocaleDateString()}
+                          <br />
+                          <span className="opacity-60">
+                            {new Date(act.date).toLocaleTimeString([], {
+                              hour: '2-digit',
+                              minute: '2-digit',
+                            })}
+                          </span>
                         </span>
                       </div>
 

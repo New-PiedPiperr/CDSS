@@ -185,7 +185,11 @@ export default function DiagnosticsClient({ initialModules = [] }) {
               </option>
             ))}
           </select>
-          <Button variant="outline" className="h-14 gap-2 rounded-2xl px-6 font-bold">
+          <Button
+            variant="outline"
+            className="h-14 gap-2 rounded-2xl px-6 font-bold"
+            onClick={() => setIsSettingsModalOpen(true)}
+          >
             <Settings2 className="h-4 w-4" />
             Global Settings
           </Button>
@@ -437,6 +441,165 @@ export default function DiagnosticsClient({ initialModules = [] }) {
               </Button>
             </DialogFooter>
           </form>
+        </DialogContent>
+      </Dialog>
+
+      {/* Global Settings Modal */}
+      <Dialog open={isSettingsModalOpen} onOpenChange={setIsSettingsModalOpen}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-black tracking-tight uppercase">
+              Global Settings
+            </DialogTitle>
+            <DialogDescription>
+              Configure default settings for diagnostic modules.
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-6 pt-4">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <label className="text-sm font-semibold">Default Status</label>
+                <select
+                  value={globalSettings.defaultStatus}
+                  onChange={(e) =>
+                    setGlobalSettings((prev) => ({
+                      ...prev,
+                      defaultStatus: e.target.value,
+                    }))
+                  }
+                  className="border-border bg-background focus:ring-primary/20 h-12 w-full rounded-xl border px-4 text-sm focus:ring-2 focus:outline-none"
+                >
+                  {STATUSES.map((status) => (
+                    <option key={status} value={status}>
+                      {status}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-sm font-semibold">Default Region</label>
+                <select
+                  value={globalSettings.defaultRegion}
+                  onChange={(e) =>
+                    setGlobalSettings((prev) => ({
+                      ...prev,
+                      defaultRegion: e.target.value,
+                    }))
+                  }
+                  className="border-border bg-background focus:ring-primary/20 h-12 w-full rounded-xl border px-4 text-sm focus:ring-2 focus:outline-none"
+                >
+                  {REGIONS.map((region) => (
+                    <option key={region} value={region}>
+                      {region}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-sm font-semibold">Max Questions per Module</label>
+              <input
+                type="number"
+                value={globalSettings.maxQuestionsPerModule}
+                onChange={(e) =>
+                  setGlobalSettings((prev) => ({
+                    ...prev,
+                    maxQuestionsPerModule: parseInt(e.target.value) || 50,
+                  }))
+                }
+                min={1}
+                max={100}
+                className="border-border bg-background focus:ring-primary/20 h-12 w-full rounded-xl border px-4 text-sm focus:ring-2 focus:outline-none"
+              />
+            </div>
+
+            <div className="space-y-4">
+              <div className="border-border flex items-center justify-between rounded-xl border p-4">
+                <div>
+                  <p className="font-semibold">Require Approval for Active</p>
+                  <p className="text-muted-foreground text-sm">
+                    Modules must be reviewed before going active
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() =>
+                    setGlobalSettings((prev) => ({
+                      ...prev,
+                      requireApprovalForActive: !prev.requireApprovalForActive,
+                    }))
+                  }
+                  className={cn(
+                    'relative h-6 w-11 rounded-full transition-colors',
+                    globalSettings.requireApprovalForActive
+                      ? 'bg-primary'
+                      : 'bg-gray-300 dark:bg-gray-600'
+                  )}
+                >
+                  <span
+                    className={cn(
+                      'absolute top-0.5 left-0.5 h-5 w-5 rounded-full bg-white transition-transform',
+                      globalSettings.requireApprovalForActive && 'translate-x-5'
+                    )}
+                  />
+                </button>
+              </div>
+
+              <div className="border-border flex items-center justify-between rounded-xl border p-4">
+                <div>
+                  <p className="font-semibold">Enable AI Assist</p>
+                  <p className="text-muted-foreground text-sm">
+                    Use AI to suggest questions and validate flows
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() =>
+                    setGlobalSettings((prev) => ({
+                      ...prev,
+                      enableAIAssist: !prev.enableAIAssist,
+                    }))
+                  }
+                  className={cn(
+                    'relative h-6 w-11 rounded-full transition-colors',
+                    globalSettings.enableAIAssist
+                      ? 'bg-primary'
+                      : 'bg-gray-300 dark:bg-gray-600'
+                  )}
+                >
+                  <span
+                    className={cn(
+                      'absolute top-0.5 left-0.5 h-5 w-5 rounded-full bg-white transition-transform',
+                      globalSettings.enableAIAssist && 'translate-x-5'
+                    )}
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <DialogFooter className="gap-2 pt-4">
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => setIsSettingsModalOpen(false)}
+              className="h-12 rounded-xl px-6"
+            >
+              Cancel
+            </Button>
+            <Button
+              onClick={() => {
+                toast.success('Settings saved successfully');
+                setIsSettingsModalOpen(false);
+              }}
+              className="h-12 gap-2 rounded-xl px-6"
+            >
+              Save Settings
+            </Button>
+          </DialogFooter>
         </DialogContent>
       </Dialog>
     </div>

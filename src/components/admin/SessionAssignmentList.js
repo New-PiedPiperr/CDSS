@@ -12,8 +12,9 @@ import {
   Clock,
   AlertCircle,
   Plus,
+  ShieldAlert,
 } from 'lucide-react';
-import { assignCase } from '@/actions/admin';
+import { assignPatientToClinician } from '@/actions/admin';
 import { toast } from 'sonner';
 
 export function SessionAssignmentList({ sessions, clinicians, initialSelectedId }) {
@@ -26,12 +27,12 @@ export function SessionAssignmentList({ sessions, clinicians, initialSelectedId 
     if (!selectedSessionId) return;
 
     setAssignmentLoading(true);
-    const result = await assignCase(selectedSessionId, clinicianId);
+    const result = await assignPatientToClinician(selectedSessionId, clinicianId);
     if (result.success) {
       toast.success('Case assigned successfully!');
       setSelectedSessionId(null);
     } else {
-      toast.error('Failed to assign case.');
+      toast.error(result.error || 'Failed to assign case.');
     }
     setAssignmentLoading(false);
   };
@@ -211,41 +212,64 @@ export function SessionAssignmentList({ sessions, clinicians, initialSelectedId 
           </div>
 
           <div className="custom-scrollbar max-h-[500px] space-y-3 overflow-y-auto pr-2">
-            {filteredClinicians.map((clinician) => (
-              <button
-                key={clinician._id}
-                onClick={() => handleAssign(clinician._id)}
-                disabled={assignmentLoading}
-                className="hover:bg-primary/5 hover:border-primary/20 group flex w-full items-center gap-4 rounded-3xl border border-gray-50 p-4 transition-all dark:border-gray-800 dark:hover:bg-gray-800"
-              >
-                <div className="h-12 w-12 overflow-hidden rounded-xl bg-gray-100">
-                  {clinician.avatar ? (
-                    <Image
-                      src={clinician.avatar}
-                      alt="Avatar"
-                      width={48}
-                      height={48}
-                      className="object-cover"
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center font-bold text-gray-400">
-                      {clinician.firstName[0]}
+            {filteredClinicians.map((clinician) => {
+              const isVerified = clinician.professional?.verified;
+
+              return (
+                <button
+                  key={clinician._id}
+                  onClick={() => isVerified && handleAssign(clinician._id)}
+                  disabled={assignmentLoading || !isVerified}
+                  className={`group flex w-full items-center gap-4 rounded-3xl border p-4 transition-all ${
+                    isVerified
+                      ? 'hover:bg-primary/5 hover:border-primary/20 cursor-pointer border-gray-50 dark:border-gray-800 dark:hover:bg-gray-800'
+                      : 'cursor-not-allowed border-amber-100 bg-amber-50/50 opacity-80 dark:border-amber-900/50 dark:bg-amber-950/20'
+                  }`}
+                >
+                  <div className="relative h-12 w-12 overflow-hidden rounded-xl bg-gray-100">
+                    {clinician.avatar ? (
+                      <Image
+                        src={clinician.avatar}
+                        alt="Avatar"
+                        width={48}
+                        height={48}
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center font-bold text-gray-400">
+                        {clinician.firstName[0]}
+                      </div>
+                    )}
+                    {!isVerified && (
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                        <ShieldAlert className="h-5 w-5 text-white" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex-1 text-left">
+                    <p
+                      className={`text-sm font-bold ${isVerified ? 'text-gray-900 dark:text-white' : 'text-gray-500'}`}
+                    >
+                      Dr. {clinician.lastName}
+                    </p>
+                    {isVerified ? (
+                      <p className="text-xs font-medium text-gray-400">
+                        {clinician.specialization || 'GP'}
+                      </p>
+                    ) : (
+                      <p className="text-xs font-bold tracking-wider text-amber-500 uppercase">
+                        Unverified
+                      </p>
+                    )}
+                  </div>
+                  {isVerified && (
+                    <div className="group-hover:bg-primary flex h-8 w-8 items-center justify-center rounded-full bg-gray-50 transition-colors group-hover:text-white dark:bg-gray-800">
+                      <Plus className="h-4 w-4" />
                     </div>
                   )}
-                </div>
-                <div className="flex-1 text-left">
-                  <p className="text-sm font-bold text-gray-900 dark:text-white">
-                    Dr. {clinician.lastName}
-                  </p>
-                  <p className="text-xs font-medium text-gray-400">
-                    {clinician.specialization || 'GP'}
-                  </p>
-                </div>
-                <div className="group-hover:bg-primary flex h-8 w-8 items-center justify-center rounded-full bg-gray-50 transition-colors group-hover:text-white dark:bg-gray-800">
-                  <Plus className="h-4 w-4" />
-                </div>
-              </button>
-            ))}
+                </button>
+              );
+            })}
             {filteredClinicians.length === 0 && (
               <p className="py-4 text-center text-sm text-gray-400">
                 No clinicians matching search.

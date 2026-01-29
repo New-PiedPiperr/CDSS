@@ -87,29 +87,29 @@ export default function AdminReportsClient({ stats }) {
         <KPICard
           title="Total Sessions"
           value={stats.totalSessions}
-          change="+12.5%"
-          trend="up"
+          change={stats.sessionChange}
+          trend={stats.sessionChange?.startsWith('+') ? 'up' : 'down'}
           icon={<Activity />}
         />
         <KPICard
           title="Avg Confidence"
           value={`${stats.avgConfidence}%`}
-          change="+3.2%"
-          trend="up"
+          change={stats.confidenceChange}
+          trend={stats.confidenceChange?.startsWith('+') ? 'up' : 'down'}
           icon={<TrendingUp />}
         />
         <KPICard
           title="Avg Review Time"
-          value={`${stats.avgReviewTime}h`}
-          change="-1.5h"
+          value={stats.avgReviewTime === 'N/A' ? 'N/A' : `${stats.avgReviewTime}h`}
+          change={stats.reviewTimeChange}
           trend="up"
           icon={<Clock />}
         />
         <KPICard
           title="Platform Health"
-          value="98.2%"
-          change="+0.4%"
-          trend="up"
+          value={`${stats.platformHealth}%`}
+          change={stats.healthChange}
+          trend={stats.healthChange?.startsWith('+') ? 'up' : 'down'}
           icon={<CheckCircle2 />}
         />
       </div>

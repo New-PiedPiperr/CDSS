@@ -52,9 +52,7 @@ export default async function AdminReportsPage() {
       .select('createdAt clinicianReview.reviewedAt')
       .lean(),
     // User stats
-    User.aggregate([
-      { $group: { _id: '$role', count: { $sum: 1 } } },
-    ]),
+    User.aggregate([{ $group: { _id: '$role', count: { $sum: 1 } } }]),
   ]);
 
   // Calculate average confidence score
@@ -99,7 +97,10 @@ export default async function AdminReportsPage() {
   // Calculate percentage changes
   const sessionChange =
     previousPeriodSessions > 0
-      ? (((totalSessions - previousPeriodSessions) / previousPeriodSessions) * 100).toFixed(1)
+      ? (
+          ((totalSessions - previousPeriodSessions) / previousPeriodSessions) *
+          100
+        ).toFixed(1)
       : totalSessions > 0
         ? '+100'
         : '0';
@@ -108,7 +109,9 @@ export default async function AdminReportsPage() {
   const prevAvgConfidence = Math.round(prevAvgConfidenceResult[0]?.avgScore || 0);
   const confidenceChange =
     prevAvgConfidence > 0
-      ? ((currentAvgConfidence - prevAvgConfidence) / prevAvgConfidence * 100).toFixed(1)
+      ? (((currentAvgConfidence - prevAvgConfidence) / prevAvgConfidence) * 100).toFixed(
+          1
+        )
       : '0';
 
   // Format recent activity
@@ -117,7 +120,12 @@ export default async function AdminReportsPage() {
     type: 'diagnostic',
     title: 'Diagnostic Report Generated',
     description: `${session.bodyRegion} Region • ${session.patientId?.firstName || 'Patient'} ${session.patientId?.lastName || ''}`,
-    status: session.status === 'completed' ? 'Success' : session.status === 'assigned' ? 'In Review' : 'Pending',
+    status:
+      session.status === 'completed'
+        ? 'Success'
+        : session.status === 'assigned'
+          ? 'In Review'
+          : 'Pending',
     riskLevel: session.aiAnalysis?.riskLevel || 'Low',
     timestamp: session.createdAt,
   }));
@@ -127,9 +135,10 @@ export default async function AdminReportsPage() {
   const errorSessions = await DiagnosisSession.countDocuments({
     'aiAnalysis.confidenceScore': { $lt: 20 },
   });
-  const platformHealth = allTimeSessions > 0 
-    ? (((allTimeSessions - errorSessions) / allTimeSessions) * 100).toFixed(1)
-    : 100;
+  const platformHealth =
+    allTimeSessions > 0
+      ? (((allTimeSessions - errorSessions) / allTimeSessions) * 100).toFixed(1)
+      : 100;
 
   // User demographics
   const userDemographics = {
@@ -141,9 +150,13 @@ export default async function AdminReportsPage() {
   const stats = {
     totalSessions: allTimeSessions,
     currentPeriodSessions: totalSessions,
-    sessionChange: parseFloat(sessionChange) >= 0 ? `+${sessionChange}%` : `${sessionChange}%`,
+    sessionChange:
+      parseFloat(sessionChange) >= 0 ? `+${sessionChange}%` : `${sessionChange}%`,
     avgConfidence: currentAvgConfidence,
-    confidenceChange: parseFloat(confidenceChange) >= 0 ? `+${confidenceChange}%` : `${confidenceChange}%`,
+    confidenceChange:
+      parseFloat(confidenceChange) >= 0
+        ? `+${confidenceChange}%`
+        : `${confidenceChange}%`,
     avgReviewTime: avgReviewTimeHours > 0 ? avgReviewTimeHours.toFixed(1) : 'N/A',
     reviewTimeChange: '-1.5h', // Would need historical data to calculate
     platformHealth,

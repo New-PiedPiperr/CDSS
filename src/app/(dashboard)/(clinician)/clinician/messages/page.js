@@ -52,12 +52,13 @@ export default async function ClinicianMessagesPage() {
   return (
     <div className="mx-auto max-w-6xl">
       <MessagingClient
+        initialConversations={initialConversations}
         currentUser={{
           id: session.user.id,
           name: `${session.user.firstName} ${session.user.lastName}`,
           role: session.user.role,
+          avatar: session.user.avatar || session.user.image,
         }}
-        initialConversations={initialConversations}
       />
     </div>
   );

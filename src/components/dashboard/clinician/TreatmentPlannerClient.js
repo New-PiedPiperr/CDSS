@@ -116,10 +116,13 @@ export default function TreatmentPlannerClient({ initialPatients = [] }) {
                 <div className="space-y-4">
                   <div className="text-muted-foreground flex items-center justify-between px-1 text-[10px] font-bold tracking-widest uppercase opacity-60">
                     <span>Recovery Progress</span>
-                    <span className="text-primary">64%</span>
+                    <span className="text-primary">{patient.progress}%</span>
                   </div>
                   <div className="bg-muted h-2 w-full overflow-hidden rounded-full">
-                    <div className="bg-primary h-full w-[64%] rounded-full shadow-sm" />
+                    <div
+                      className="bg-primary h-full rounded-full shadow-sm transition-all duration-500"
+                      style={{ width: `${patient.progress}%` }}
+                    />
                   </div>
                 </div>
 

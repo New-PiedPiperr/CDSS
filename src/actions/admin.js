@@ -165,3 +165,6 @@ export async function verifyClinician(clinicianId) {
     return { success: false, error: error.message };
   }
 }
+
+// Alias for assignCase - used by SessionAssignmentList
+export const assignPatientToClinician = assignCase;

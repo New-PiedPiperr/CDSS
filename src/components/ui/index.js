@@ -28,3 +28,4 @@ export {
 } from './DropdownMenu.js';
 export { ScrollArea } from './ScrollArea.js';
 export { Switch } from './Switch.js';
+export { Lightbox } from './Lightbox.js';

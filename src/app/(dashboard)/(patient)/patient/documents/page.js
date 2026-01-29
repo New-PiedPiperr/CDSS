@@ -16,7 +16,7 @@ import {
   ExternalLink,
 } from 'lucide-react';
 import Link from 'next/link';
-import { Card, CardHeader, CardTitle, CardContent, Button, Badge } from '@/components/ui';
+import { Card, CardHeader, CardTitle, CardContent, Button, Badge, Lightbox } from '@/components/ui';
 import { cn } from '@/lib/cn';
 
 export default function PatientDocumentsPage() {
@@ -24,6 +24,7 @@ export default function PatientDocumentsPage() {
   const [documents, setDocuments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [uploadStatus, setUploadStatus] = useState(null); // 'success', 'error', null
+  const [activeImage, setActiveImage] = useState(null); // { src, alt }
 
   useEffect(() => {
     fetchDocuments();
@@ -283,15 +284,26 @@ export default function PatientDocumentsPage() {
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <a href={doc.fileUrl} target="_blank" rel="noopener noreferrer">
+                    {doc.fileType?.includes('pdf') ? (
+                      <a href={doc.fileUrl} target="_blank" rel="noopener noreferrer">
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="group-hover:bg-primary/10 group-hover:text-primary h-9 w-9 rounded-full transition-all"
+                        >
+                          <Eye className="h-4 w-4" />
+                        </Button>
+                      </a>
+                    ) : (
                       <Button
                         variant="ghost"
                         size="icon"
+                        onClick={() => setActiveImage({ src: doc.fileUrl, alt: doc.fileName })}
                         className="group-hover:bg-primary/10 group-hover:text-primary h-9 w-9 rounded-full transition-all"
                       >
                         <Eye className="h-4 w-4" />
                       </Button>
-                    </a>
+                    )}
                     <a href={doc.fileUrl} download={doc.fileName}>
                       <Button
                         variant="ghost"
@@ -349,6 +361,14 @@ export default function PatientDocumentsPage() {
           </p>
         </div>
       </div>
+
+      {activeImage && (
+        <Lightbox
+          src={activeImage.src}
+          alt={activeImage.alt}
+          onClose={() => setActiveImage(null)}
+        />
+      )}
     </div>
   );
 }

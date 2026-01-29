@@ -18,17 +18,37 @@ import {
   AlertCircle,
 } from 'lucide-react';
 import { cn } from '@/lib/cn';
-import { Button, Card, Badge, Lightbox } from '@/components/ui';
+import { Button, Card, Badge, Lightbox, StatusModal } from '@/components/ui';
+import { useParams } from 'next/navigation';
 
-export default function CaseDetailsPage({ params }) {
-  const unwrappedParams = React.use(params);
-  const id = unwrappedParams.id;
+export default function CaseDetailsPage() {
+  const { id } = useParams();
 
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [isDocsOpen, setIsDocsOpen] = useState(false);
   const [documents, setDocuments] = useState([]);
   const [isLoadingDocs, setIsLoadingDocs] = useState(false);
   const [activeImage, setActiveImage] = useState(null); // { src, alt }
+
+  // Status Modal State
+  const [statusModal, setStatusModal] = useState({
+    isOpen: false,
+    type: 'info',
+    title: '',
+    message: '',
+    onConfirm: null,
+  });
+
+  const showAlert = (title, message, type = 'info', onConfirm = null) => {
+    setStatusModal({
+      isOpen: true,
+      type,
+      title,
+      message,
+      onConfirm,
+    });
+  };
+
   const [bookingData, setBookingData] = useState({
     date: '',
     time: '',
@@ -116,14 +136,14 @@ export default function CaseDetailsPage({ params }) {
       });
 
       if (res.ok) {
-        alert('Appointment scheduled successfully!');
+        showAlert('Schedule Confirmed', 'Appointment scheduled successfully!', 'success');
         setIsBookingOpen(false);
       } else {
         const err = await res.json();
-        alert(`Error: ${err.error}`);
+        showAlert('Scheduling Failed', `Error: ${err.error}`, 'error');
       }
     } catch (err) {
-      alert('Failed to schedule appointment.');
+      showAlert('System Error', 'Failed to schedule appointment.', 'error');
     } finally {
       setIsSubmitting(false);
     }
@@ -145,14 +165,14 @@ export default function CaseDetailsPage({ params }) {
       });
 
       if (res.ok) {
-        alert('Case notes updated successfully!');
+        showAlert('Notes Saved', 'Case notes updated successfully!', 'success');
         setIsNotesOpen(false);
         fetchCaseDetails(); // Refresh data
       } else {
-        alert('Failed to update notes.');
+        showAlert('Update Failed', 'Failed to update notes.', 'error');
       }
     } catch (err) {
-      alert('Internal server error.');
+      showAlert('System Error', 'Internal server error.', 'error');
     } finally {
       setIsSubmitting(false);
     }
@@ -175,13 +195,17 @@ export default function CaseDetailsPage({ params }) {
       });
 
       if (res.ok) {
-        alert(`Referral sent to ${referralData.specialty} successfully!`);
+        showAlert(
+          'Referral Sent',
+          `Referral sent to ${referralData.specialty} successfully!`,
+          'success'
+        );
         setIsReferralOpen(false);
       } else {
-        alert('Failed to send referral.');
+        showAlert('Referral Failed', 'Failed to send referral.', 'error');
       }
     } catch (err) {
-      alert('Failed to send referral.');
+      showAlert('Referral Error', 'Failed to send referral.', 'error');
     } finally {
       setIsSubmitting(false);
     }
@@ -202,13 +226,13 @@ export default function CaseDetailsPage({ params }) {
       });
 
       if (res.ok) {
-        alert('Treatment plan updated successfully!');
+        showAlert('Plan Generated', 'Treatment plan updated successfully!', 'success');
         setIsPlanOpen(false);
       } else {
-        alert('Failed to create treatment plan.');
+        showAlert('Plan Failed', 'Failed to create treatment plan.', 'error');
       }
     } catch (err) {
-      alert('Internal server error.');
+      showAlert('System Error', 'Internal server error.', 'error');
     } finally {
       setIsSubmitting(false);
     }

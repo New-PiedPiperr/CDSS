@@ -138,16 +138,20 @@ export default function SelfTestPage() {
                   <img
                     src={test.image}
                     alt={test.title}
-                    className="absolute inset-0 h-full w-full object-contain p-8 transition-transform duration-700 group-hover:scale-105"
+                    onClick={() => setActiveImage({ src: test.image, alt: test.title })}
+                    className="absolute inset-0 h-full w-full cursor-zoom-in object-contain p-8 transition-transform duration-700 group-hover:scale-105"
                   />
 
                   {/* This is where the generated images would be displayed */}
-                  <div className="relative z-10 flex h-full w-full flex-col items-center justify-center p-8 text-center text-white/60">
+                  <div
+                    className="relative z-10 flex h-full w-full cursor-pointer flex-col items-center justify-center p-8 text-center text-white/60"
+                    onClick={() => setActiveImage({ src: test.image, alt: test.title })}
+                  >
                     <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-transform duration-500 group-hover:scale-110">
                       <Play className="ml-2 h-10 w-10 fill-white" />
                     </div>
                     <span className="text-[10px] font-black tracking-[0.3em] uppercase opacity-50">
-                      Instructional Video Loading
+                      View Clinical Asset
                     </span>
                   </div>
 
@@ -241,6 +245,14 @@ export default function SelfTestPage() {
           View Clinical Docs
         </Button>
       </div>
+
+      {activeImage && (
+        <Lightbox
+          src={activeImage.src}
+          alt={activeImage.alt}
+          onClose={() => setActiveImage(null)}
+        />
+      )}
     </div>
   );
 }

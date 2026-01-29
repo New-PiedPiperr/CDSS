@@ -24,16 +24,18 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
       >
         <NextAuthProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-            <Toaster position="top-right" richColors />
-            <OfflineStatus />
-          </ThemeProvider>
+          <QueryProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="light"
+              enableSystem
+              disableTransitionOnChange
+            >
+              {children}
+              <Toaster position="top-right" richColors />
+              <OfflineStatus />
+            </ThemeProvider>
+          </QueryProvider>
         </NextAuthProvider>
       </body>
     </html>

@@ -108,6 +108,7 @@ export function useClinicianSettings() {
       return data;
     },
     onSuccess: (data) => {
+      const { update } = useSession(); // You will need to import this
       toast.success('Avatar updated');
       queryClient.setQueryData(['clinician-settings'], (old) => {
         if (!old) return old;
@@ -117,6 +118,7 @@ export function useClinicianSettings() {
         };
       });
       queryClient.invalidateQueries({ queryKey: ['clinician-settings'] });
+      update({ image: data.avatarUrl }); // Force session update
     },
     onError: (err) => {
       toast.error('Failed to upload avatar');

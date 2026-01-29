@@ -47,16 +47,16 @@ export async function POST(req) {
         throw new Error('AI analysis failed');
       }
     }
-8: 
-9:     // 1b. Convert to Therapist-Facing Analysis before persistence
-10:     // The patient-facing version is ephemeral and must never be stored.
-11:     let therapistFacingResult;
-12:     try {
-13:       therapistFacingResult = await convertToTherapistFacingAnalysis(finalAiResult);
-14:     } catch (error) {
-15:       console.error('Conversion to therapist format failed:', error);
-16:       throw new Error('Could not prepare assessment for clinical record');
-17:     }
+
+    // 1b. Convert to Therapist-Facing Analysis before persistence
+    // The patient-facing version is ephemeral and must never be stored.
+    let therapistFacingResult;
+    try {
+      therapistFacingResult = await convertToTherapistFacingAnalysis(finalAiResult);
+    } catch (error) {
+      console.error('Conversion to therapist format failed:', error);
+      throw new Error('Could not prepare assessment for clinical record');
+    }
 
     // 2. Persist DiagnosisSession
     const diagnosisSession = await DiagnosisSession.create({

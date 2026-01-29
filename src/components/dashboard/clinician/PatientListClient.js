@@ -158,7 +158,7 @@ function PatientListItem({ patient }) {
 
         <div className="flex items-center gap-3">
           <Link
-            href={`/clinician/dashboard/case/${patient.sessionId}`}
+            href={`/clinician/cases/${patient.sessionId}`}
             className="flex-1 md:flex-none"
           >
             <Button className="bg-primary w-full gap-2 rounded-xl px-8 py-2 text-sm font-black text-white transition-all hover:shadow-lg">

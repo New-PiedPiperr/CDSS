@@ -24,7 +24,7 @@ export default function ClinicianHero({ latestPatient }) {
   const href = isMultiPatient
     ? '/clinician/dashboard'
     : latestPatient
-      ? `/clinician/dashboard/case/${latestPatient.id}`
+      ? `/clinician/cases/${latestPatient.id}`
       : '/clinician/dashboard/patients';
 
   return (

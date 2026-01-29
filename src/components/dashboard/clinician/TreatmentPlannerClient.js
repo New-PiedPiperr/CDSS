@@ -135,10 +135,7 @@ export default function TreatmentPlannerClient({ initialPatients = [] }) {
                       Open File
                     </Button>
                   </Link>
-                  <Link
-                    href={`/clinician/dashboard/case/${patient.sessionId}`}
-                    className="flex-1"
-                  >
+                  <Link href={`/clinician/cases/${patient.sessionId}`} className="flex-1">
                     <Button
                       variant="outline"
                       className="hover:bg-muted h-12 w-full rounded-xl border-2 text-[10px] font-bold tracking-widest uppercase transition-all active:scale-95"

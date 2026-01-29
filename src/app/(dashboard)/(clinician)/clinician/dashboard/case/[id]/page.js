@@ -1107,6 +1107,18 @@ export default function CaseDetailsPage() {
           onClose={() => setActiveImage(null)}
         />
       )}
+
+      <StatusModal
+        isOpen={statusModal.isOpen}
+        onClose={() => setStatusModal({ ...statusModal, isOpen: false })}
+        title={statusModal.title}
+        message={statusModal.message}
+        type={statusModal.type}
+        onConfirm={() => {
+          if (statusModal.onConfirm) statusModal.onConfirm();
+          setStatusModal({ ...statusModal, isOpen: false });
+        }}
+      />
     </div>
   );
 }

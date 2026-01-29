@@ -1,9 +1,16 @@
+'use client';
+
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
 import { toast } from 'sonner';
 
 const fetchSettings = async () => {
   const { data } = await axios.get('/api/clinician/settings');
+  return data;
+};
+
+const fetchSecuritySettings = async () => {
+  const { data } = await axios.get('/api/clinician/settings/security');
   return data;
 };
 
@@ -14,6 +21,11 @@ export function useClinicianSettings() {
   const query = useQuery({
     queryKey: ['clinician-settings'],
     queryFn: fetchSettings,
+  });
+
+  const securityQuery = useQuery({
+    queryKey: ['clinician-security'],
+    queryFn: fetchSecuritySettings,
   });
 
   // Generic mutation helper for optimistic updates
@@ -41,7 +53,7 @@ export function useClinicianSettings() {
         if (context?.previousSettings) {
           queryClient.setQueryData(['clinician-settings'], context.previousSettings);
         }
-        toast.error(`Failed to update ${key}: ${err.message}`);
+        toast.error(`Error: ${err.response?.data?.error || err.message}`);
       },
       onSuccess: () => {
         toast.success(successMessage);
@@ -60,18 +72,21 @@ export function useClinicianSettings() {
     'professional',
     'Professional details updated'
   );
-  const updateClinical = createMutation(
-    'clinical',
-    'clinicalPreferences',
-    'Clinical preferences saved'
-  ); // Key mismatch in API vs Frontend object? API route returns 'clinical', frontend object has 'clinicalPreferences'.
-  // API GET route maps 'clinical' (db) to 'clinicalPreferences' (response).
-  // API PATCH /clinical updates 'clinical' in DB.
-  // The mutation updates via PATCH /clinical.
-  // I must be careful about the key mapping.
-  // get route returns: { clinicalPreferences: ... }
-  // So the key in cache is 'clinicalPreferences'.
-  // The endpoint is 'clinical'.
+
+  // Custom mutation for clinical to handle key mismatch if any, otherwise standard would work if keys aligned
+  const updateClinical = useMutation({
+    mutationFn: async (data) => {
+      const response = await axios.patch('/api/clinician/settings/clinical', data);
+      return response.data;
+    },
+    onSuccess: () => {
+      toast.success('Clinical preferences saved');
+      queryClient.invalidateQueries({ queryKey: ['clinician-settings'] });
+    },
+    onError: (err) => {
+      toast.error(`Error: ${err.response?.data?.error || err.message}`);
+    },
+  });
 
   const updateAvailability = createMutation(
     'availability',
@@ -108,43 +123,67 @@ export function useClinicianSettings() {
     },
   });
 
+  // Security Mutations
+  const changePassword = useMutation({
+    mutationFn: async (data) => {
+      const response = await axios.patch('/api/clinician/settings/security', data);
+      return response.data;
+    },
+    onSuccess: () => {
+      toast.success('Password changed successfully');
+    },
+    onError: (err) => {
+      toast.error(err.response?.data?.error || 'Failed to change password');
+    },
+  });
+
+  const toggle2FA = useMutation({
+    mutationFn: async (enabled) => {
+      const response = await axios.patch('/api/clinician/settings/security', {
+        twoFactorEnabled: enabled,
+      });
+      return response.data;
+    },
+    onSuccess: (data) => {
+      toast.success(`2FA ${data.twoFactorEnabled ? 'enabled' : 'disabled'}`);
+      queryClient.invalidateQueries({ queryKey: ['clinician-security'] });
+    },
+    onError: (err) => {
+      toast.error('Failed to update 2FA settings');
+    },
+  });
+
+  const logoutAllSessions = useMutation({
+    mutationFn: async () => {
+      // This would ideally be a DELETE request to /api/clinician/settings/security
+      // For now we will mock it or if I added DELETE handler use it.
+      // I didn't add DELETE handler yet. I will add it.
+      const response = await axios.delete('/api/clinician/settings/security');
+      return response.data;
+    },
+    onSuccess: () => {
+      toast.success('All other sessions logged out');
+      queryClient.invalidateQueries({ queryKey: ['clinician-security'] });
+    },
+    onError: (err) => {
+      toast.error('Failed to log out sessions');
+    },
+  });
+
   return {
     settings: query.data,
-    isLoading: query.isLoading,
-    isError: query.isError,
-    error: query.error,
+    securitySettings: securityQuery.data,
+    isLoading: query.isLoading || securityQuery.isLoading,
+    isError: query.isError || securityQuery.isError,
+    error: query.error || securityQuery.error,
     updateProfile,
     updateProfessional,
-    updateClinical: useMutation({
-      // Custom override for key mismatch
-      mutationFn: async (data) => {
-        const response = await axios.patch('/api/clinician/settings/clinical', data);
-        return response.data;
-      },
-      onMutate: async (newData) => {
-        await queryClient.cancelQueries({ queryKey: ['clinician-settings'] });
-        const previousSettings = queryClient.getQueryData(['clinician-settings']);
-        if (previousSettings) {
-          queryClient.setQueryData(['clinician-settings'], (old) => ({
-            ...old,
-            clinicalPreferences: { ...old.clinicalPreferences, ...newData },
-          }));
-        }
-        return { previousSettings };
-      },
-      onError: (err, newData, context) => {
-        if (context?.previousSettings) {
-          queryClient.setQueryData(['clinician-settings'], context.previousSettings);
-        }
-        toast.error('Failed to update clinical preferences');
-      },
-      onSuccess: () => {
-        toast.success('Clinical preferences saved');
-        queryClient.invalidateQueries({ queryKey: ['clinician-settings'] });
-      },
-    }),
+    updateClinical,
     updateAvailability,
     updateNotifications,
     uploadAvatar,
+    changePassword,
+    toggle2FA,
+    logoutAllSessions,
   };
 }

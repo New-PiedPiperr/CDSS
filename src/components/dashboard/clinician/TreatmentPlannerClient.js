@@ -135,12 +135,17 @@ export default function TreatmentPlannerClient({ initialPatients = [] }) {
                       Open File
                     </Button>
                   </Link>
-                  <Button
-                    variant="outline"
-                    className="hover:bg-muted h-12 flex-1 rounded-xl border-2 text-[10px] font-bold tracking-widest uppercase transition-all active:scale-95"
+                  <Link
+                    href={`/clinician/dashboard/case/${patient.sessionId}`}
+                    className="flex-1"
                   >
-                    {patient.status === 'not_started' ? 'Assign Plan' : 'Modify'}
-                  </Button>
+                    <Button
+                      variant="outline"
+                      className="hover:bg-muted h-12 w-full rounded-xl border-2 text-[10px] font-bold tracking-widest uppercase transition-all active:scale-95"
+                    >
+                      {patient.status === 'not_started' ? 'Assign Plan' : 'Modify'}
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>

@@ -1,12 +1,106 @@
 'use client';
 
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import axios from 'axios';
+import { toast } from 'sonner';
 import { useSession } from 'next-auth/react';
+
+const fetchSettings = async () => {
+  const { data } = await axios.get('/api/clinician/settings');
+  return data;
+};
+
+const fetchSecuritySettings = async () => {
+  const { data } = await axios.get('/api/clinician/settings/security');
+  return data;
+};
 
 export function useClinicianSettings() {
   const queryClient = useQueryClient();
   const { update: updateSession } = useSession();
 
-  // ... (rest of the code)
+  // Fetch all settings
+  const query = useQuery({
+    queryKey: ['clinician-settings'],
+    queryFn: fetchSettings,
+  });
+
+  const securityQuery = useQuery({
+    queryKey: ['clinician-security'],
+    queryFn: fetchSecuritySettings,
+  });
+
+  // Generic mutation helper for optimistic updates
+  const createMutation = (endpoint, key, successMessage) => {
+    return useMutation({
+      mutationFn: async (data) => {
+        const response = await axios.patch(`/api/clinician/settings/${endpoint}`, data);
+        return response.data;
+      },
+      onMutate: async (newData) => {
+        await queryClient.cancelQueries({ queryKey: ['clinician-settings'] });
+        const previousSettings = queryClient.getQueryData(['clinician-settings']);
+
+        // Optimistically update
+        if (previousSettings && previousSettings[key]) {
+          // Basic optimistic update - only works if structure matches exactly
+          // For deeply nested or complex updates, we might want to skip this or be more careful
+          queryClient.setQueryData(['clinician-settings'], (old) => ({
+            ...old,
+            [key]: { ...old[key], ...newData },
+          }));
+        }
+
+        return { previousSettings };
+      },
+      onError: (err, newData, context) => {
+        if (context?.previousSettings) {
+          queryClient.setQueryData(['clinician-settings'], context.previousSettings);
+        }
+        toast.error(`Error: ${err.response?.data?.error || err.message}`);
+      },
+      onSuccess: () => {
+        toast.success(successMessage);
+        queryClient.invalidateQueries({ queryKey: ['clinician-settings'] });
+      },
+    });
+  };
+
+  const updateProfile = createMutation(
+    'profile',
+    'profile',
+    'Profile updated successfully'
+  );
+  const updateProfessional = createMutation(
+    'professional',
+    'professional',
+    'Professional details updated'
+  );
+
+  const updateClinical = useMutation({
+    mutationFn: async (data) => {
+      const response = await axios.patch('/api/clinician/settings/clinical', data);
+      return response.data;
+    },
+    onSuccess: () => {
+      toast.success('Clinical preferences saved');
+      queryClient.invalidateQueries({ queryKey: ['clinician-settings'] });
+    },
+    onError: (err) => {
+      toast.error(`Error: ${err.response?.data?.error || err.message}`);
+    },
+  });
+
+  const updateAvailability = createMutation(
+    'availability',
+    'availability',
+    'Availability schedule updated'
+  );
+  const updateNotifications = createMutation(
+    'notifications',
+    'notifications',
+    'Notification preferences updated'
+  );
 
   // Avatar Upload
   const uploadAvatar = useMutation({
@@ -65,9 +159,6 @@ export function useClinicianSettings() {
 
   const logoutAllSessions = useMutation({
     mutationFn: async () => {
-      // This would ideally be a DELETE request to /api/clinician/settings/security
-      // For now we will mock it or if I added DELETE handler use it.
-      // I didn't add DELETE handler yet. I will add it.
       const response = await axios.delete('/api/clinician/settings/security');
       return response.data;
     },

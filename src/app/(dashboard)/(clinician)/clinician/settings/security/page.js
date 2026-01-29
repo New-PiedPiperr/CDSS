@@ -22,8 +22,14 @@ import { useEffect, useState } from 'react';
 import { format } from 'date-fns';
 
 export default function SecurityPage() {
-  const { securitySettings, isLoading, changePassword, toggle2FA, logoutAllSessions } =
-    useClinicianSettings();
+  const {
+    securitySettings,
+    isLoading,
+    changePassword,
+    toggle2FA,
+    logoutAllSessions,
+    logoutIndividualSession,
+  } = useClinicianSettings();
 
   const passwordForm = useForm({
     resolver: zodResolver(passwordChangeSchema),
@@ -240,6 +246,32 @@ export default function SecurityPage() {
                     </div>
                   </div>
                 </div>
+                {!session.isCurrent && (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => {
+                      setStatusModal({
+                        isOpen: true,
+                        type: 'warning',
+                        title: 'Log Out Session',
+                        message: 'Are you sure you want to log out of this device?',
+                        onConfirm: () => {
+                          logoutIndividualSession.mutate(session.id, {
+                            onSettled: () => {
+                              setStatusModal((prev) => ({ ...prev, isOpen: false }));
+                            },
+                          });
+                        },
+                        confirmText: 'Log Out',
+                      });
+                    }}
+                    disabled={logoutIndividualSession.isPending}
+                    className="text-muted-foreground hover:text-destructive h-8 w-8 p-0"
+                  >
+                    <LogOut className="h-4 w-4" />
+                  </Button>
+                )}
               </div>
             ))}
 

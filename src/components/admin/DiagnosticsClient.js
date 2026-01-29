@@ -55,7 +55,15 @@ export default function DiagnosticsClient({ initialModules = [] }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState('ALL');
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
   const [isCreating, setIsCreating] = useState(false);
+  const [globalSettings, setGlobalSettings] = useState({
+    defaultStatus: 'Draft',
+    defaultRegion: 'Lumbar',
+    requireApprovalForActive: true,
+    maxQuestionsPerModule: 50,
+    enableAIAssist: true,
+  });
   const [formData, setFormData] = useState({
     title: '',
     description: '',

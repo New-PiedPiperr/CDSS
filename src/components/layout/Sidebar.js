@@ -41,6 +41,11 @@ export default function Sidebar({
       icon: Shield,
     },
     { href: '#', label: 'Logout', icon: LogOut, action: true },
+    {
+      href: `${basePath}/help-center`,
+      label: 'Help Center',
+      icon: HelpCircle,
+    },
   ];
 
   const secondaryNavLinks =

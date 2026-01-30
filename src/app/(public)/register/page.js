@@ -76,7 +76,35 @@ export default function RegisterPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validate()) return;
+
+    // Validate and get current errors immediately
+    const newErrors = {};
+    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
+    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
+    if (!formData.email) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email';
+    }
+    if (!formData.password) {
+      newErrors.password = 'Password is required';
+    } else if (formData.password.length < 8) {
+      newErrors.password = 'Password must be at least 8 characters';
+    }
+    if (formData.password !== formData.confirmPassword) {
+      newErrors.confirmPassword = 'Passwords do not match';
+    }
+
+    setErrors(newErrors);
+    const isValid = Object.keys(newErrors).length === 0;
+
+    if (!isValid) {
+      const firstErrorMessage = Object.values(newErrors)[0];
+      toast.error('Registration Failed', {
+        description: firstErrorMessage,
+      });
+      return;
+    }
 
     setIsLoading(true);
     try {
@@ -94,13 +122,19 @@ export default function RegisterPage() {
       });
 
       const data = await response.json();
-      if (!response.ok) throw new Error(data.error || 'Failed to initiate registration');
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to initiate registration');
+      }
 
-      toast.success('Verification code sent to your email!');
+      toast.success('Verification code sent!', {
+        description: `We've sent a 4-digit code to ${formData.email}`,
+      });
       // Move to verify page, passing only the email
       router.push(`/verify?email=${encodeURIComponent(formData.email)}`);
     } catch (err) {
-      toast.error(err.message);
+      toast.error('Registration Error', {
+        description: err.message,
+      });
     } finally {
       setIsLoading(false);
     }

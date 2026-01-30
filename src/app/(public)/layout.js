@@ -7,7 +7,7 @@ export default function PublicLayout({ children }) {
       <TopNav showSidebarTrigger={false} showUser={false} />
 
       {/* Main Content */}
-      <main className="flex min-h-[calc(100vh-64px)] flex-col items-center justify-center py-10">
+      <main className="flex min-h-[calc(100vh-64px)] flex-col items-center justify-center">
         {children}
       </main>
     </div>

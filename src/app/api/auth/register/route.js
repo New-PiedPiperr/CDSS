@@ -93,6 +93,37 @@ export async function POST(req) {
   try {
     // connect to database
     await connectDB();
+
+    // Check system & security settings
+    const { AdminSettings } = await import('@/models');
+    const settings = await AdminSettings.getSettings();
+
+    // 1. Check if registration is allowed
+    if (!settings.system.allowPatientSignup) {
+      return NextResponse.json(
+        { error: 'Patient registration is currently disabled by administrator.' },
+        { status: 403 }
+      );
+    }
+
+    // 2. Enforce password policy
+    const policy = settings.security.passwordPolicy;
+    if (password.length < policy.minLength) {
+      return NextResponse.json(
+        { error: `Password must be at least ${policy.minLength} characters long` },
+        { status: 400 }
+      );
+    }
+    if (policy.requireSpecialChar) {
+      const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+      if (!specialCharRegex.test(password)) {
+        return NextResponse.json(
+          { error: 'Password must contain at least one special character' },
+          { status: 400 }
+        );
+      }
+    }
+
     // check if the user already exist
     const existingUser = await User.findOne({ email: email });
     // if user exist return an error
@@ -104,6 +135,7 @@ export async function POST(req) {
         }
       );
     }
+
     // create a new user
     const newUser = await User.create({
       email: email,

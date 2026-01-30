@@ -144,6 +144,31 @@ const UserSchema = new mongoose.Schema(
       inApp: { type: Boolean, default: true },
       events: [{ type: String }], // 'new_patient', 'assessment_completed', etc.
     },
+
+    // Patient Settings
+    settings: {
+      profile: {
+        firstName: { type: String, trim: true },
+        lastName: { type: String, trim: true },
+        phone: { type: String, trim: true },
+        avatarUrl: { type: String, default: null },
+      },
+      preferences: {
+        language: {
+          type: String,
+          default: 'en',
+          enum: ['en', 'fr', 'es'],
+        },
+        notifications: {
+          email: { type: Boolean, default: true },
+          sms: { type: Boolean, default: false },
+          inApp: { type: Boolean, default: true },
+        },
+      },
+      privacy: {
+        shareDataForResearch: { type: Boolean, default: false },
+      },
+    },
   },
   {
     timestamps: true,

@@ -62,7 +62,7 @@ export default function ClinicianHero({ latestPatient }) {
               <Activity className="h-40 w-40" />
             </div>
           </div>
-          {/* Background Pattern */}
+          {/* Background Patternn */}
           <div className="absolute top-0 right-0 -mt-32 -mr-32 h-64 w-64 rounded-full bg-white/5 blur-3xl"></div>
         </div>
       </CardContent>

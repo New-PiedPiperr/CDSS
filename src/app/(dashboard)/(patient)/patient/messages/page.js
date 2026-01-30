@@ -129,6 +129,9 @@ export default async function MessagesPage() {
     </div>
   );
 }
+function formatTimeAgo(date) {
+  if (!date) return '';
+  const now = new Date();
   const diff = now - new Date(date);
   const minutes = Math.floor(diff / 60000);
   const hours = Math.floor(minutes / 60);

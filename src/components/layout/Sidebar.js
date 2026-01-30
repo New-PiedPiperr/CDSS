@@ -7,6 +7,8 @@ import { Settings, HelpCircle, Shield, LogOut, User, X } from 'lucide-react';
 import { cn } from '@/lib/cn';
 import { signOut, useSession } from 'next-auth/react'; // Added useSession
 import { useUIStore } from '@/store';
+import { useState, useEffect } from 'react';
+import { getTotalUnreadCount } from '@/lib/actions/messages';
 
 export default function Sidebar({
   links = [],
@@ -17,9 +19,26 @@ export default function Sidebar({
   const pathname = usePathname();
   const { isSidebarOpen, setSidebarOpen } = useUIStore();
   const { data: session } = useSession();
+  const [unreadCount, setUnreadCount] = useState(0);
 
   // Prefer the real-time session user if available, otherwise fall back to the server prop
   const user = session?.user || initialUser;
+
+  useEffect(() => {
+    const fetchUnread = async () => {
+      try {
+        const count = await getTotalUnreadCount();
+        setUnreadCount(count);
+      } catch (err) {
+        console.error('Failed to fetch unread count:', err);
+      }
+    };
+
+    fetchUnread();
+    // Poll for updates every 10 seconds for real-time feel in sidebar
+    const interval = setInterval(fetchUnread, 10000);
+    return () => clearInterval(interval);
+  }, []);
 
   // Determine base path from current pathname for settings route
   const basePath = pathname.startsWith('/clinician') ? '/clinician' : '/patient';
@@ -108,7 +127,12 @@ export default function Sidebar({
                     onClick={() => setSidebarOpen(false)}
                   >
                     {Icon && <Icon className="h-5 w-5" />}
-                    <span>{link.label}</span>
+                    <span className="flex-1">{link.label}</span>
+                    {link.label === 'Messages' && unreadCount > 0 && (
+                      <span className="flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white ring-2 ring-white">
+                        {unreadCount}
+                      </span>
+                    )}
                   </Link>
                 </li>
               );

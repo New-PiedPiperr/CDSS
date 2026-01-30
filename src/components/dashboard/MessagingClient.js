@@ -391,7 +391,9 @@ export default function MessagingClient({ currentUser, initialConversations = []
                       <div className="flex items-center gap-2">
                         <Check size={14} className="shrink-0 text-cyan-500" />
                         <p className="text-muted-foreground truncate text-sm font-medium">
-                          {conv.lastMessage}
+                          {conv.lastMessage.startsWith('IMAGE:')
+                            ? 'Shared a photo'
+                            : conv.lastMessage}
                         </p>
                       </div>
                     </div>

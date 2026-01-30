@@ -310,3 +310,21 @@ export async function getConversations() {
     JSON.stringify(conversations.sort((a, b) => b.timestamp - a.timestamp))
   );
 }
+
+/**
+ * Get total unread count for the current user
+ */
+export async function getTotalUnreadCount() {
+  const session = await auth();
+  if (!session || !session.user) return 0;
+
+  await connectDB();
+
+  const count = await Message.countDocuments({
+    receiverId: session.user.id,
+    isRead: false,
+    deletedBy: { $ne: session.user.id },
+  });
+
+  return count;
+}

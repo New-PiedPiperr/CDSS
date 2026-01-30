@@ -52,21 +52,3 @@ export async function POST(req) {
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
-## Error Type
-Build Error
-
-## Error Message
-Parsing ecmascript source code failed
-
-## Build Output
-./src/app/(dashboard)/(patient)/patient/messages/page.js:142:1
-Parsing ecmascript source code failed
-  140 |   if (days === 1) return 'Yesterday';
-  141 |   return `${days}d ago`;
-> 142 | }
-      | ^
-  143 |
-
-Expression expected
-
-Next.js version: 16.1.4 (Turbopack)

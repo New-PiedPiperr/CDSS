@@ -3,15 +3,16 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
-import { Logo, Button } from '@/components/ui';
+import { Button } from '@/components/ui';
+import { Activity } from 'lucide-react';
+import Image from 'next/image';
 
-export default function SplashPage() {
+export default function LandingPage() {
   const router = useRouter();
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
-    // Small delay to ensure smooth entry animation
-    setTimeout(() => setIsAnimating(true), 0);
+    setTimeout(() => setIsAnimating(true), 100);
   }, []);
 
   // Redirect if session exists
@@ -26,59 +27,47 @@ export default function SplashPage() {
   }, [status, session, router]);
 
   return (
-    <div className="flex flex-col items-center justify-center px-4">
-      {/* Logo with Animation */}
-      <div
-        className={`transition-all duration-700 ease-out ${
-          isAnimating ? 'scale-100 opacity-100' : 'scale-90 opacity-0'
-        }`}
-      >
-        <Logo size="xl" showText={false} />
+    <div className="bg-slate-600 px-4 py-12 sm:px-6 lg:px-8 dark:bg-slate-800">
+      <div className="container mx-auto">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
+          <div
+            className={`transition-all duration-700 ${isAnimating ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}
+          >
+            <h1 className="text-4xl leading-tight font-bold text-white sm:text-5xl lg:text-6xl">
+              AI Powered
+              <br />
+              Physiotherapy-
+              <br />
+              Made Simple
+            </h1>
+            <p className="mt-6 text-base text-slate-200 sm:text-lg lg:text-xl">
+              An intelligent digital system that assesses your symptoms, guides your
+              tests, and helps your physiotherapists diagnose and treat you faster
+            </p>
+            <Button
+              size="lg"
+              className="mt-8 bg-sky-400 px-8 py-6 text-base font-semibold text-white hover:bg-sky-500 sm:px-12 sm:text-lg"
+              onClick={() => router.push('/register')}
+            >
+              Start Your Assessment
+            </Button>
+          </div>
+
+          {/* Right Image */}
+          <div
+            className={`transition-all delay-200 duration-700 ${isAnimating ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}
+          >
+            <div className="relative">
+              <div className="bg-primary/20 absolute inset-0 rounded-3xl blur-3xl"></div>
+              <div className="relative overflow-hidden rounded-3xl bg-slate-300 shadow-2xl">
+                <div className="flex h-full items-center justify-center">
+                  <img src="/lpd.jpg" alt="Landing Page Display" className="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      {/* Tittle */}
-      <h1
-        className={`text-foreground mt-6 text-center text-2xl font-bold transition-all delay-200 duration-700 ease-out sm:text-3xl md:text-4xl ${
-          isAnimating ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-        }`}
-      >
-        Clinical Decision
-        <br />
-        Support System
-      </h1>
-
-      {/* Subtitle */}
-      <p
-        className={`text-muted-foreground mt-4 max-w-md text-center transition-all delay-300 duration-700 ease-out ${
-          isAnimating ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-        }`}
-      >
-        Empowering healthcare professionals with intelligent diagnostic assistance
-      </p>
-
-      {/* CTA Button */}
-      <div
-        className={`mt-8 transition-all delay-500 duration-700 ease-out ${
-          isAnimating ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-        }`}
-      >
-        <Button
-          size="lg"
-          onClick={() => router.push('/login')}
-          className="min-w-50 cursor-pointer"
-        >
-          Get Started
-        </Button>
-      </div>
-
-      {/* Version Info */}
-      <p
-        className={`text-muted-foreground mt-12 text-xs transition-all delay-700 duration-700 ease-out ${
-          isAnimating ? 'opacity-100' : 'opacity-0'
-        }`}
-      >
-        Version 1.0.0
-      </p>
     </div>
   );
 }

@@ -84,6 +84,9 @@ function categorizeQuestion(text) {
 /**
  * Parse answer line to extract value and effects
  * Effects are typically in parentheses or tabs: (Rule out X), (Confirm X)
+ * 
+ * IMPORTANT: The displayed value should NOT include rule-out/effect text.
+ * Effects are kept in the effects object for logic, but stripped from display value.
  */
 function parseAnswerLine(line) {
   const effects = {
@@ -145,7 +148,34 @@ function parseAnswerLine(line) {
     effects.notes = parentheticalMatch[1].trim();
   }
 
+  // CRITICAL: Strip parenthetical content from the display value
+  // The effects are kept in the effects object, but not shown to patient
+  value = value.replace(/\s*\([^)]*\)\s*/g, '').trim();
+
   return { value, effects };
+}
+
+/**
+ * Check if a line looks like a section header or non-answer content
+ */
+function isNonAnswerLine(line) {
+  const upperLine = line.toUpperCase();
+  return (
+    line.includes('?') ||
+    upperLine.startsWith('FOR ') ||
+    upperLine.startsWith('OBSERVATION') ||
+    upperLine.startsWith('TEST') ||
+    upperLine.startsWith('RADIOGRAPHIC') ||
+    upperLine.startsWith('CONCERNING') ||
+    upperLine.includes('FEATURES:') ||
+    upperLine.includes('NB:') ||
+    /^AGE\s*\(/i.test(line) ||
+    /^THE\s+/i.test(line) || // Explanatory text like "The fracture could be..."
+    /^THIS\s+/i.test(line) ||
+    /^NOTE:/i.test(line) ||
+    /^ASK\s+/i.test(line) ||
+    line.length > 100 // Very long lines are usually explanatory text
+  );
 }
 
 /**
@@ -323,43 +353,30 @@ function parseRulesFromText(rawText, region) {
       continue;
     }
 
-    // Detect answers - Yes/No or lettered options
-    if (currentQuestion) {
-      const isAnswer = /^(Yes|No)\b/i.test(line) || /^[a-e]\.\s+/i.test(line);
-
-      if (isAnswer) {
-        const { value, effects } = parseAnswerLine(line);
-        currentQuestion.answers.push({
-          value,
-          effects,
-        });
+    // Detect answers - any line after a question that's not a section header
+    // This includes: Yes/No, lettered options (a. b. c.), and plain text options
+    if (currentQuestion && !inTestSection && !inObservationSection) {
+      // Skip non-answer lines (headers, explanatory text, etc.)
+      if (isNonAnswerLine(line)) {
         continue;
       }
 
-      // Also detect simple text answers (like "Heel", "Ankle", etc.)
-      const isSimpleAnswer =
-        !line.includes('?') &&
-        line.length < 50 &&
-        !inTestSection &&
-        !inObservationSection &&
-        !upperLine.startsWith('FOR ') &&
-        !upperLine.startsWith('OBSERVATION') &&
-        !upperLine.startsWith('TEST') &&
-        !upperLine.startsWith('RADIOGRAPHIC') &&
-        currentQuestion.answers.length < 10; // Sanity check
-
-      if (
-        (isSimpleAnswer && currentQuestion.question.toLowerCase().includes('region')) ||
-        currentQuestion.question.toLowerCase().includes('when') ||
-        currentQuestion.question.toLowerCase().includes('type')
-      ) {
+      // Check if this looks like an answer option
+      const isLettered = /^[a-e]\.\s+/i.test(line);
+      const isYesNo = /^(Yes|No)\b/i.test(line);
+      const isShortOption = line.length > 1 && line.length < 80;
+      
+      if (isLettered || isYesNo || isShortOption) {
         const { value, effects } = parseAnswerLine(line);
-        if (value.length > 1) {
+        
+        // Only add if we have a meaningful value
+        if (value && value.length > 0 && currentQuestion.answers.length < 15) {
           currentQuestion.answers.push({
             value,
             effects,
           });
         }
+        continue;
       }
     }
 
@@ -388,6 +405,15 @@ function parseRulesFromText(rawText, region) {
       observations: [],
       is_general: true,
     });
+  }
+
+  // POST-PROCESSING: Set inputType for each question
+  // - 'select' if answers were detected (show multiple choice options)
+  // - 'text' if no answers detected (show free text input)
+  for (const condition of conditions) {
+    for (const question of condition.questions) {
+      question.inputType = question.answers.length > 0 ? 'select' : 'text';
+    }
   }
 
   return conditions;

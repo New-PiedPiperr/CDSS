@@ -53,9 +53,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 2
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q2",
@@ -86,9 +84,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 6
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q3",
@@ -129,9 +125,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 9
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q4",
@@ -178,9 +172,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 14
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q5",
@@ -221,9 +213,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 19
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q6",
@@ -254,9 +244,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 24
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q7",
@@ -287,9 +275,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 27
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q8",
@@ -314,9 +300,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 30
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q9",
@@ -330,9 +314,6 @@
               "effects": {
                 "increase_likelihood": [],
                 "decrease_likelihood": []
-              },
-              "metadata": {
-                "notes": "Recurrent low-back pain"
               }
             },
             {
@@ -344,9 +325,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 33
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q10",
@@ -377,9 +356,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 36
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q11",
@@ -410,9 +387,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 39
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q12",
@@ -445,14 +420,10 @@
               "isTerminal": true
             }
           ],
-          "metadata": {
-            "source_line": 42
-          }
+          "metadata": {}
         }
       ],
-      "metadata": {
-        "source_line": 1
-      },
+      "metadata": {},
       "recommended_tests": [],
       "confirmation_methods": [],
       "observations": []
@@ -485,9 +456,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 49
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q14",
@@ -512,9 +481,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 52
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q15",
@@ -539,9 +506,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 55
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q16",
@@ -566,9 +531,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 58
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q17",
@@ -593,9 +556,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 61
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q18",
@@ -622,14 +583,10 @@
               "isTerminal": true
             }
           ],
-          "metadata": {
-            "source_line": 64
-          }
+          "metadata": {}
         }
       ],
-      "metadata": {
-        "source_line": 48
-      },
+      "metadata": {},
       "recommended_tests": [
         "Lasegue’s Test (Straight-Leg Raise): Examiner raises legs of patient up so that hip flexion is achieved while knee is extended. Test is positive if patient feels pain along the course of the sciatic nerve and below the knee when hip is between 30 - 70 degrees of flexion.",
         "Bragard Test: This is a modification of the SLR and dorsiflexion is applied at the end of the SLR. This reduces the angle where the test is positive.",
@@ -669,9 +626,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 75
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q20",
@@ -696,9 +651,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 78
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q21",
@@ -723,9 +676,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 81
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q22",
@@ -750,9 +701,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 84
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q23",
@@ -777,9 +726,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 87
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q24",
@@ -804,9 +751,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 90
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q25",
@@ -833,14 +778,10 @@
               "isTerminal": true
             }
           ],
-          "metadata": {
-            "source_line": 93
-          }
+          "metadata": {}
         }
       ],
-      "metadata": {
-        "source_line": 74
-      },
+      "metadata": {},
       "recommended_tests": [
         "Bicycle Stress Test: Record the amount of time the patient spends on a cycle ergometer while in a neutral lumbar position and slumped position. If patient spends more time in the slumped position, a lumbar spinal stenosis is indicated.",
         "Two-stage Treadmill Test: The patient walks on a flat treadmill and the amount of time spent is recorded and compared with the amount of time while the treadmill is inclined such that patient walks in flexion.",
@@ -887,9 +828,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 107
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q27",
@@ -914,9 +853,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 110
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q28",
@@ -941,9 +878,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 113
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q29",
@@ -968,9 +903,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 116
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q30",
@@ -997,14 +930,10 @@
               "isTerminal": true
             }
           ],
-          "metadata": {
-            "source_line": 119
-          }
+          "metadata": {}
         }
       ],
-      "metadata": {
-        "source_line": 105
-      },
+      "metadata": {},
       "recommended_tests": [],
       "confirmation_methods": [
         "Radiographic confirmation:"
@@ -1052,9 +981,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 137
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q32",
@@ -1079,9 +1006,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 140
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q33",
@@ -1106,9 +1031,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 143
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q34",
@@ -1133,9 +1056,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 146
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q35",
@@ -1160,9 +1081,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 149
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q36",
@@ -1187,9 +1106,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 152
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q37",
@@ -1214,9 +1131,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 155
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q38",
@@ -1243,14 +1158,10 @@
               "isTerminal": true
             }
           ],
-          "metadata": {
-            "source_line": 158
-          }
+          "metadata": {}
         }
       ],
-      "metadata": {
-        "source_line": 136
-      },
+      "metadata": {},
       "recommended_tests": [],
       "confirmation_methods": [
         "Radiographic confirmation"
@@ -1292,9 +1203,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 169
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q40",
@@ -1319,9 +1228,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 172
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q41",
@@ -1346,9 +1253,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 175
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q42",
@@ -1373,9 +1278,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 178
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q43",
@@ -1400,9 +1303,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 181
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q44",
@@ -1427,9 +1328,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 184
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q45",
@@ -1454,9 +1353,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 187
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q46",
@@ -1481,9 +1378,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 190
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q47",
@@ -1497,9 +1392,6 @@
               "effects": {
                 "increase_likelihood": [],
                 "decrease_likelihood": []
-              },
-              "metadata": {
-                "notes": "psoriartic ankylosing spondylitis"
               }
             },
             {
@@ -1511,9 +1403,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 193
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q48",
@@ -1538,9 +1428,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 196
-          }
+          "metadata": {}
         },
         {
           "id": "lumbar_q49",
@@ -1567,14 +1455,10 @@
               "isTerminal": true
             }
           ],
-          "metadata": {
-            "source_line": 199
-          }
+          "metadata": {}
         }
       ],
-      "metadata": {
-        "source_line": 166
-      },
+      "metadata": {},
       "recommended_tests": [
         "Lateral lumbar flexion (Finger tip to Floor Test)",
         "The patient stands with heel touching wall and feet wide apart, and back against the wall. Then the examiner measures the distance from middle finger to the floor. Then patient bends to side (lateral flexion). The distance between the middle finger and the floor is measured again. This measurement is done for both sides.",

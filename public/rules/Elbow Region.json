@@ -41,9 +41,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 3
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q2",
@@ -68,9 +66,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 7
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q3",
@@ -101,9 +97,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 10
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q4",
@@ -128,9 +122,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 13
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q5",
@@ -160,15 +152,10 @@
               "effects": {
                 "increase_likelihood": [],
                 "decrease_likelihood": []
-              },
-              "metadata": {
-                "notes": "aka Tennis Elbow or Lateral Epicondylitis"
               }
             }
           ],
-          "metadata": {
-            "source_line": 16
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q6",
@@ -217,9 +204,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 22
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q7",
@@ -244,9 +229,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 29
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q8",
@@ -271,9 +254,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 32
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q9",
@@ -298,9 +279,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 35
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q10",
@@ -327,14 +306,10 @@
               "isTerminal": true
             }
           ],
-          "metadata": {
-            "source_line": 38
-          }
+          "metadata": {}
         }
       ],
-      "metadata": {
-        "source_line": 1
-      },
+      "metadata": {},
       "recommended_tests": [],
       "confirmation_methods": [],
       "observations": [
@@ -380,9 +355,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 80
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q12",
@@ -406,21 +379,13 @@
                 "increase_likelihood": [],
                 "decrease_likelihood": []
               },
-              "metadata": {
-                "notes": "Could be both"
-              },
               "isTerminal": true
             }
           ],
-          "metadata": {
-            "source_line": 83,
-            "clinicalNotes": "Check if muscle bulk in hand is normal"
-          }
+          "metadata": {}
         }
       ],
-      "metadata": {
-        "source_line": 79
-      },
+      "metadata": {},
       "recommended_tests": [],
       "confirmation_methods": [],
       "observations": []
@@ -460,14 +425,10 @@
               "isTerminal": true
             }
           ],
-          "metadata": {
-            "source_line": 91
-          }
+          "metadata": {}
         }
       ],
-      "metadata": {
-        "source_line": 87
-      },
+      "metadata": {},
       "recommended_tests": [],
       "confirmation_methods": [],
       "observations": [
@@ -510,9 +471,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 124
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q15",
@@ -537,9 +496,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 127
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q16",
@@ -564,9 +521,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 130
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q17",
@@ -591,9 +546,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 133
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q18",
@@ -620,14 +573,10 @@
               "isTerminal": true
             }
           ],
-          "metadata": {
-            "source_line": 136
-          }
+          "metadata": {}
         }
       ],
-      "metadata": {
-        "source_line": 123
-      },
+      "metadata": {},
       "recommended_tests": [
         "Check for osteopenia, bone erosions, destruction of the radial head and widening of the sigmoid notch.Other laboratories tests as may be necessary"
       ],
@@ -667,9 +616,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 143
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q20",
@@ -694,9 +641,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 146
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q21",
@@ -721,9 +666,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 149
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q22",
@@ -748,9 +691,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 152
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q23",
@@ -775,9 +716,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 155
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q24",
@@ -802,9 +741,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 158
-          }
+          "metadata": {}
         },
         {
           "id": "elbow_q25",
@@ -831,14 +768,10 @@
               "isTerminal": true
             }
           ],
-          "metadata": {
-            "source_line": 161
-          }
+          "metadata": {}
         }
       ],
-      "metadata": {
-        "source_line": 141
-      },
+      "metadata": {},
       "recommended_tests": [],
       "confirmation_methods": [
         "Radiographic confirmation – Check for joint space narrowing, osteophyte formation, and subchondral sclerosis."

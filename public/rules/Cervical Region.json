@@ -33,9 +33,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 2
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q2",
@@ -66,9 +64,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 5
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q3",
@@ -82,15 +78,10 @@
               "effects": {
                 "increase_likelihood": [],
                 "decrease_likelihood": []
-              },
-              "metadata": {
-                "notes": "Male"
               }
             }
           ],
-          "metadata": {
-            "source_line": 8
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q4",
@@ -115,9 +106,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 10
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q5",
@@ -131,9 +120,6 @@
               "effects": {
                 "increase_likelihood": [],
                 "decrease_likelihood": []
-              },
-              "metadata": {
-                "notes": "Bending neck forward"
               }
             },
             {
@@ -142,15 +128,10 @@
               "effects": {
                 "increase_likelihood": [],
                 "decrease_likelihood": []
-              },
-              "metadata": {
-                "notes": "Bending neck backward"
               }
             }
           ],
-          "metadata": {
-            "source_line": 13
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q6",
@@ -164,9 +145,6 @@
               "effects": {
                 "increase_likelihood": [],
                 "decrease_likelihood": []
-              },
-              "metadata": {
-                "notes": "Bending neck forward"
               }
             },
             {
@@ -175,15 +153,10 @@
               "effects": {
                 "increase_likelihood": [],
                 "decrease_likelihood": []
-              },
-              "metadata": {
-                "notes": "Bending neck backward"
               }
             }
           ],
-          "metadata": {
-            "source_line": 16
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q7",
@@ -208,9 +181,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 19
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q8",
@@ -235,9 +206,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 22
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q9",
@@ -268,9 +237,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 25
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q10",
@@ -301,9 +268,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 28
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q11",
@@ -328,9 +293,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 31
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q12",
@@ -355,9 +318,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 34
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q13",
@@ -382,9 +343,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 37
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q14",
@@ -411,14 +370,10 @@
               "isTerminal": true
             }
           ],
-          "metadata": {
-            "source_line": 40
-          }
+          "metadata": {}
         }
       ],
-      "metadata": {
-        "source_line": 1
-      },
+      "metadata": {},
       "recommended_tests": [],
       "confirmation_methods": [
         "Radiographic confirmation"
@@ -475,9 +430,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 51
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q16",
@@ -502,9 +455,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 56
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q17",
@@ -518,15 +469,10 @@
               "effects": {
                 "increase_likelihood": [],
                 "decrease_likelihood": []
-              },
-              "metadata": {
-                "notes": "Female"
               }
             }
           ],
-          "metadata": {
-            "source_line": 59
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q18",
@@ -551,9 +497,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 61
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q19",
@@ -567,9 +511,6 @@
               "effects": {
                 "increase_likelihood": [],
                 "decrease_likelihood": []
-              },
-              "metadata": {
-                "notes": "Bending neck forward"
               }
             },
             {
@@ -578,15 +519,10 @@
               "effects": {
                 "increase_likelihood": [],
                 "decrease_likelihood": []
-              },
-              "metadata": {
-                "notes": "Bending neck backward"
               }
             }
           ],
-          "metadata": {
-            "source_line": 64
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q20",
@@ -600,9 +536,6 @@
               "effects": {
                 "increase_likelihood": [],
                 "decrease_likelihood": []
-              },
-              "metadata": {
-                "notes": "Bending neck forward"
               }
             },
             {
@@ -611,15 +544,10 @@
               "effects": {
                 "increase_likelihood": [],
                 "decrease_likelihood": []
-              },
-              "metadata": {
-                "notes": "Bending neck backward"
               }
             }
           ],
-          "metadata": {
-            "source_line": 67
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q21",
@@ -644,9 +572,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 70
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q22",
@@ -671,9 +597,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 73
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q23",
@@ -698,9 +622,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 76
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q24",
@@ -725,9 +647,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 79
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q25",
@@ -758,9 +678,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 82
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q26",
@@ -785,9 +703,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 85
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q27",
@@ -812,9 +728,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 88
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q28",
@@ -839,9 +753,7 @@
               }
             }
           ],
-          "metadata": {
-            "source_line": 91
-          }
+          "metadata": {}
         },
         {
           "id": "cervical_q29",
@@ -868,14 +780,10 @@
               "isTerminal": true
             }
           ],
-          "metadata": {
-            "source_line": 94
-          }
+          "metadata": {}
         }
       ],
-      "metadata": {
-        "source_line": 50
-      },
+      "metadata": {},
       "recommended_tests": [
         "Spurling’s Test (Maximal Cervical Compression and Foraminal Compression Test): The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm."
       ],

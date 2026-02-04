@@ -3,718 +3,633 @@
   "title": "Lumbar Region",
   "source_file": "Lumbar Region.docx",
   "extracted_at": "2026-02-04T03:56:25.231Z",
+  "version": "2.0.0",
   "conditions": [
     {
       "name": "Non-specific low-back pain",
+      "id": "non_specific_low_back_pain",
       "entry_criteria": [],
       "questions": [
         {
           "id": "lumbar_q1",
-          "question": "Where is your pain located?",
+          "questionText": "Where is your pain located?",
           "category": "location",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Lower back only",
+              "nextQuestionId": "lumbar_q2",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Radiates down one leg",
+              "nextQuestionId": "lumbar_q13",
+              "branchTo": [
+                "sciatica"
+              ],
               "effects": {
                 "rule_out": [
                   "sciatica"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Radiates down both legs",
+              "nextQuestionId": "lumbar_q31",
+              "branchTo": [
+                "cauda equina syndrome"
+              ],
               "effects": {
                 "rule_out": [
                   "cauda equina syndrome"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 2,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 2
+          }
         },
         {
           "id": "lumbar_q2",
-          "question": "How did the pain begin?",
+          "questionText": "How did the pain begin?",
           "category": "onset",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Sudden",
+              "nextQuestionId": "lumbar_q26",
+              "branchTo": [
+                "lumbar disc herniation"
+              ],
               "effects": {
                 "rule_out": [
                   "lumbar disc herniation"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Gradual",
+              "nextQuestionId": "lumbar_q3",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 6,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 6
+          }
         },
         {
           "id": "lumbar_q3",
-          "question": "How long have you been experiencing the pain?",
+          "questionText": "How long have you been experiencing the pain?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Less than 1 week",
+              "nextQuestionId": "lumbar_q4",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "1-4 weeks",
+              "nextQuestionId": "lumbar_q4",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "1-3 months",
+              "nextQuestionId": "lumbar_q4",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "More than 3 months",
+              "nextQuestionId": "lumbar_q4",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 9,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 9
+          }
         },
         {
           "id": "lumbar_q4",
-          "question": "What currently aggravates your pain?",
+          "questionText": "What currently aggravates your pain?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Sitting",
+              "nextQuestionId": "lumbar_q5",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Standing",
+              "nextQuestionId": "lumbar_q5",
+              "branchTo": [
+                "facet joint syndrome"
+              ],
               "effects": {
                 "rule_out": [
                   "facet joint syndrome"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Walking",
+              "nextQuestionId": "lumbar_q5",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Lifting heavy objects",
+              "nextQuestionId": "lumbar_q5",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 14,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 14
+          }
         },
         {
           "id": "lumbar_q5",
-          "question": "What makes your pain better?",
+          "questionText": "What makes your pain better?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Resting",
+              "nextQuestionId": "lumbar_q6",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Changing positions",
+              "nextQuestionId": "lumbar_q6",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Exercise",
+              "nextQuestionId": "lumbar_q6",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Pain medications",
+              "nextQuestionId": "lumbar_q6",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 19,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 19
+          }
         },
         {
           "id": "lumbar_q6",
-          "question": "Do you experience any numbness or tingling sensation in your legs or feet?",
+          "questionText": "Do you experience any numbness or tingling sensation in your legs or feet?",
           "category": "neurological",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q7",
+              "branchTo": [
+                "lumbar disc herniation or cauda equina syndrome"
+              ],
               "effects": {
                 "rule_out": [
                   "lumbar disc herniation or cauda equina syndrome"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q7",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 24,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 24
+          }
         },
         {
           "id": "lumbar_q7",
-          "question": "Have you experienced any weakness in your legs?",
+          "questionText": "Have you experienced any weakness in your legs?",
           "category": "neurological",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q8",
+              "branchTo": [
+                "cauda equina"
+              ],
               "effects": {
                 "rule_out": [
                   "cauda equina"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q8",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 27,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 27
+          }
         },
         {
           "id": "lumbar_q8",
-          "question": "Have you had any recent trauma or injury to your lower back?",
+          "questionText": "Have you had any recent trauma or injury to your lower back?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q9",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q9",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 30,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 30
+          }
         },
         {
           "id": "lumbar_q9",
-          "question": "Have you had any previous episodes of low-back pain?",
+          "questionText": "Have you had any previous episodes of low-back pain?",
           "category": "history",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q10",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
+                "decrease_likelihood": []
+              },
+              "metadata": {
                 "notes": "Recurrent low-back pain"
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q10",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 33,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 33
+          }
         },
         {
           "id": "lumbar_q10",
-          "question": "Are you experiencing any bowel or bladder dysfunction, such as difficulty or loss of control in urination or defecation?",
+          "questionText": "Are you experiencing any bowel or bladder dysfunction, such as difficulty or loss of control in urination or defecation?",
           "category": "red_flag",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q31",
+              "branchTo": [
+                "cauda equina syndrome"
+              ],
               "effects": {
                 "rule_out": [
                   "cauda equina syndrome"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q11",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 36,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 36
+          }
         },
         {
           "id": "lumbar_q11",
-          "question": "Have you had any recent fever, chills, or other signs of infection?",
+          "questionText": "Have you had any recent fever, chills, or other signs of infection?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q12",
+              "branchTo": [
+                "ankylosing spondylitis or bone tumours and infection"
+              ],
               "effects": {
                 "rule_out": [
                   "ankylosing spondylitis or bone tumours and infection"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q12",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 39,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 39
+          }
         },
         {
           "id": "lumbar_q12",
-          "question": "Have you had any recent unintended weight loss?",
+          "questionText": "Have you had any recent unintended weight loss?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
+              "branchTo": [
+                "cancers/infection"
+              ],
               "effects": {
                 "rule_out": [
                   "cancers/infection"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 42,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 42
+          }
         }
       ],
+      "metadata": {
+        "source_line": 1
+      },
       "recommended_tests": [],
       "confirmation_methods": [],
-      "observations": [],
-      "source_line": 1
+      "observations": []
     },
     {
       "name": "Sciatica",
+      "id": "sciatica",
       "entry_criteria": [],
       "questions": [
         {
           "id": "lumbar_q13",
-          "question": "Do you experience paraesthesia or abnormal sensation in the affected leg?",
+          "questionText": "Do you experience paraesthesia or abnormal sensation in the affected leg?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q14",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q14",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 49,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 49
+          }
         },
         {
           "id": "lumbar_q14",
-          "question": "Does your job or daily tasks involve adopting physically awkward positions?",
+          "questionText": "Does your job or daily tasks involve adopting physically awkward positions?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q15",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q15",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 52,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 52
+          }
         },
         {
           "id": "lumbar_q15",
-          "question": "Do you experience muscle weakness in the affected leg?",
+          "questionText": "Do you experience muscle weakness in the affected leg?",
           "category": "neurological",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q16",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q16",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 55,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 55
+          }
         },
         {
           "id": "lumbar_q16",
-          "question": "Is the pain worsened with flexion of the spine, twisting, bending and/or coughing?",
+          "questionText": "Is the pain worsened with flexion of the spine, twisting, bending and/or coughing?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q17",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q17",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 58,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 58
+          }
         },
         {
           "id": "lumbar_q17",
-          "question": "Do you experience pain when elevating the heel or tip-toeing?",
+          "questionText": "Do you experience pain when elevating the heel or tip-toeing?",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q18",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q18",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 61,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 61
+          }
         },
         {
           "id": "lumbar_q18",
-          "question": "Have you had a previous surgical procedure and/or injection recently?",
+          "questionText": "Have you had a previous surgical procedure and/or injection recently?",
           "category": "history",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 64,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 64
+          }
         }
       ],
+      "metadata": {
+        "source_line": 48
+      },
       "recommended_tests": [
         "Lasegue’s Test (Straight-Leg Raise): Examiner raises legs of patient up so that hip flexion is achieved while knee is extended. Test is positive if patient feels pain along the course of the sciatic nerve and below the knee when hip is between 30 - 70 degrees of flexion.",
         "Bragard Test: This is a modification of the SLR and dorsiflexion is applied at the end of the SLR. This reduces the angle where the test is positive.",
@@ -724,245 +639,208 @@
       "observations": [
         "Check if knee jerk reflex is present",
         "Check if ankle jerk reflex is present"
-      ],
-      "source_line": 48
+      ]
     },
     {
       "name": "Lumbar spinal stenosis",
+      "id": "lumbar_spinal_stenosis",
       "entry_criteria": [],
       "questions": [
         {
           "id": "lumbar_q19",
-          "question": "Is the pain you feel aggravated by prolonged walking, standing and lumbar extension?",
+          "questionText": "Is the pain you feel aggravated by prolonged walking, standing and lumbar extension?",
           "category": "function",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q20",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q20",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 75,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 75
+          }
         },
         {
           "id": "lumbar_q20",
-          "question": "Do you experience pain radiating to the buttocks, thigh and legs after walking a certain distance?",
+          "questionText": "Do you experience pain radiating to the buttocks, thigh and legs after walking a certain distance?",
           "category": "radiation",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q21",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q21",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 78,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 78
+          }
         },
         {
           "id": "lumbar_q21",
-          "question": "Is the numbness you feel over the entire leg?",
+          "questionText": "Is the numbness you feel over the entire leg?",
           "category": "neurological",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q22",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q22",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 81,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 81
+          }
         },
         {
           "id": "lumbar_q22",
-          "question": "Is the pain you feel relieved by forward flexion (bending forward)?",
+          "questionText": "Is the pain you feel relieved by forward flexion (bending forward)?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q23",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q23",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 84,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 84
+          }
         },
         {
           "id": "lumbar_q23",
-          "question": "Do you find walking upstairs easier than walking downstairs?",
+          "questionText": "Do you find walking upstairs easier than walking downstairs?",
           "category": "function",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q24",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q24",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 87,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 87
+          }
         },
         {
           "id": "lumbar_q24",
-          "question": "Do you experience any form of erectile dysfunction?",
+          "questionText": "Do you experience any form of erectile dysfunction?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q25",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q25",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 90,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 90
+          }
         },
         {
           "id": "lumbar_q25",
-          "question": "Is tenderness present at the lumbar, paraspinal or gluteal region?",
+          "questionText": "Is tenderness present at the lumbar, paraspinal or gluteal region?",
           "category": "location",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 93,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 93
+          }
         }
       ],
+      "metadata": {
+        "source_line": 74
+      },
       "recommended_tests": [
         "Bicycle Stress Test: Record the amount of time the patient spends on a cycle ergometer while in a neutral lumbar position and slumped position. If patient spends more time in the slumped position, a lumbar spinal stenosis is indicated.",
         "Two-stage Treadmill Test: The patient walks on a flat treadmill and the amount of time spent is recorded and compared with the amount of time while the treadmill is inclined such that patient walks in flexion.",
@@ -974,11 +852,11 @@
         "Check if Trendenlenburg’s sign is present",
         "Check for negative romberg test",
         "Check if Achilles tendon reflex is diminished"
-      ],
-      "source_line": 74
+      ]
     },
     {
       "name": "Lumbar Disc Herniation",
+      "id": "lumbar_disc_herniation",
       "entry_criteria": [
         {
           "type": "age",
@@ -988,170 +866,145 @@
       "questions": [
         {
           "id": "lumbar_q26",
-          "question": "Was the pain onset immediately after a heavy lifting?",
+          "questionText": "Was the pain onset immediately after a heavy lifting?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q27",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q27",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 107,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 107
+          }
         },
         {
           "id": "lumbar_q27",
-          "question": "Does your job or daily task involve long sitting with lateral bending and rotation?",
+          "questionText": "Does your job or daily task involve long sitting with lateral bending and rotation?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q28",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q28",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 110,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 110
+          }
         },
         {
           "id": "lumbar_q28",
-          "question": "Do your symptoms feel better when lying supine with your hips and knees flexed?",
+          "questionText": "Do your symptoms feel better when lying supine with your hips and knees flexed?",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q29",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q29",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 113,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 113
+          }
         },
         {
           "id": "lumbar_q29",
-          "question": "Do you experience pain radiating to buttock and leg?",
+          "questionText": "Do you experience pain radiating to buttock and leg?",
           "category": "radiation",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q30",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q30",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 116,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 116
+          }
         },
         {
           "id": "lumbar_q30",
-          "question": "If yes, does this pain get worse with sitting and relieved with standing?",
+          "questionText": "If yes, does this pain get worse with sitting and relieved with standing?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 119,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 119
+          }
         }
       ],
+      "metadata": {
+        "source_line": 105
+      },
       "recommended_tests": [],
       "confirmation_methods": [
         "Radiographic confirmation:"
@@ -1169,289 +1022,246 @@
         "Kernig Test: Patient’s neck is flexed, hip flexed and the leg is extended. Pain is reproduced in this position.",
         "Milgram Test: pain is reproduced on straight leg elevation for 30 seconds.",
         "MRI test."
-      ],
-      "source_line": 105
+      ]
     },
     {
       "name": "Cauda Equina Syndrome",
+      "id": "cauda_equina_syndrome",
       "entry_criteria": [],
       "questions": [
         {
           "id": "lumbar_q31",
-          "question": "Do you experience pain radiating to both legs?",
+          "questionText": "Do you experience pain radiating to both legs?",
           "category": "radiation",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q32",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q32",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 137,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 137
+          }
         },
         {
           "id": "lumbar_q32",
-          "question": "Do you have a previous history of tumors or trauma to lower back?",
+          "questionText": "Do you have a previous history of tumors or trauma to lower back?",
           "category": "history",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q33",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q33",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 140,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 140
+          }
         },
         {
           "id": "lumbar_q33",
-          "question": "Do you experience reduced sensation around your perineal (around genitals) region?",
+          "questionText": "Do you experience reduced sensation around your perineal (around genitals) region?",
           "category": "location",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q34",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q34",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 143,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 143
+          }
         },
         {
           "id": "lumbar_q34",
-          "question": "Do you experience reduced sensation in the region of your inner thighs (groin)?",
+          "questionText": "Do you experience reduced sensation in the region of your inner thighs (groin)?",
           "category": "location",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q35",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q35",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 146,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 146
+          }
         },
         {
           "id": "lumbar_q35",
-          "question": "Have you just undergone a lumbar spinal surgery?",
+          "questionText": "Have you just undergone a lumbar spinal surgery?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q36",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q36",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 149,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 149
+          }
         },
         {
           "id": "lumbar_q36",
-          "question": "Do you find it difficult to initiate urination or experience urinary retention (inability to empty the bladder completely)?",
+          "questionText": "Do you find it difficult to initiate urination or experience urinary retention (inability to empty the bladder completely)?",
           "category": "red_flag",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q37",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q37",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 152,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 152
+          }
         },
         {
           "id": "lumbar_q37",
-          "question": "Do you experience bowel incontinence and/or constipation?",
+          "questionText": "Do you experience bowel incontinence and/or constipation?",
           "category": "red_flag",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q38",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q38",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 155,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 155
+          }
         },
         {
           "id": "lumbar_q38",
-          "question": "Do you experience reduced sexual sensations?",
+          "questionText": "Do you experience reduced sexual sensations?",
           "category": "demographic",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 158,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 158
+          }
         }
       ],
+      "metadata": {
+        "source_line": 136
+      },
       "recommended_tests": [],
       "confirmation_methods": [
         "Radiographic confirmation"
       ],
       "observations": [
         "Check for babinski sign and clonus to rule out upper motor neuron involvement"
-      ],
-      "source_line": 136
+      ]
     },
     {
       "name": "Axial spondyloarthropathy",
+      "id": "axial_spondyloarthropathy",
       "entry_criteria": [
         {
           "type": "age",
@@ -1461,368 +1271,310 @@
       "questions": [
         {
           "id": "lumbar_q39",
-          "question": "Do you have a family history of ankylosing spondylitis or any other autoimmune diseases?",
+          "questionText": "Do you have a family history of ankylosing spondylitis or any other autoimmune diseases?",
           "category": "history",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q40",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q40",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 169,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 169
+          }
         },
         {
           "id": "lumbar_q40",
-          "question": "Is the pain worse at night and early morning?",
+          "questionText": "Is the pain worse at night and early morning?",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q41",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q41",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 172,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 172
+          }
         },
         {
           "id": "lumbar_q41",
-          "question": "Does exercise and physical activity relieve the pain?",
+          "questionText": "Does exercise and physical activity relieve the pain?",
           "category": "activity",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q42",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q42",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 175,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 175
+          }
         },
         {
           "id": "lumbar_q42",
-          "question": "Do you experience pain and stiffness in your hips and/or buttocks?",
+          "questionText": "Do you experience pain and stiffness in your hips and/or buttocks?",
           "category": "stiffness",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q43",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q43",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 178,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 178
+          }
         },
         {
           "id": "lumbar_q43",
-          "question": "Do exercises and physical activity reduce the associated stiffness?",
+          "questionText": "Do exercises and physical activity reduce the associated stiffness?",
           "category": "stiffness",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q44",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q44",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 181,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 181
+          }
         },
         {
           "id": "lumbar_q44",
-          "question": "Do you experience pain and stiffness in your neck or upper back?",
+          "questionText": "Do you experience pain and stiffness in your neck or upper back?",
           "category": "stiffness",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q45",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q45",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 184,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 184
+          }
         },
         {
           "id": "lumbar_q45",
-          "question": "Do you experience fatigue, difficulty sleeping and/or general feelings of unwellness?",
+          "questionText": "Do you experience fatigue, difficulty sleeping and/or general feelings of unwellness?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q46",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q46",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 187,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 187
+          }
         },
         {
           "id": "lumbar_q46",
-          "question": "Do you experience chest pain or discomfort, especially when you take deep breaths?",
+          "questionText": "Do you experience chest pain or discomfort, especially when you take deep breaths?",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q47",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q47",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 190,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 190
+          }
         },
         {
           "id": "lumbar_q47",
-          "question": "Have you experienced any symptoms such as red, scaly patches on your skin that may be accompanied by itching or discomfort (psoriasis)?",
+          "questionText": "Have you experienced any symptoms such as red, scaly patches on your skin that may be accompanied by itching or discomfort (psoriasis)?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q48",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
+                "decrease_likelihood": []
+              },
+              "metadata": {
                 "notes": "psoriartic ankylosing spondylitis"
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q48",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 193,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 193
+          }
         },
         {
           "id": "lumbar_q48",
-          "question": "Have you experienced changes in your posture, such as stooping or hunching forward (question mark sign)?",
+          "questionText": "Have you experienced changes in your posture, such as stooping or hunching forward (question mark sign)?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "lumbar_q49",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "lumbar_q49",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 196,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 196
+          }
         },
         {
           "id": "lumbar_q49",
-          "question": "Have you had any instances of eye inflammation or redness, or increased sensitivity to light (uveitis)?",
+          "questionText": "Have you had any instances of eye inflammation or redness, or increased sensitivity to light (uveitis)?",
           "category": "inflammation",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 199,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 199
+          }
         }
       ],
+      "metadata": {
+        "source_line": 166
+      },
       "recommended_tests": [
         "Lateral lumbar flexion (Finger tip to Floor Test)",
         "The patient stands with heel touching wall and feet wide apart, and back against the wall. Then the examiner measures the distance from middle finger to the floor. Then patient bends to side (lateral flexion). The distance between the middle finger and the floor is measured again. This measurement is done for both sides.",
@@ -1834,10 +1586,7 @@
         "Confirmatory test through laboratory investigations."
       ],
       "confirmation_methods": [],
-      "observations": [],
-      "source_line": 166
+      "observations": []
     }
-  ],
-  "raw_text": "For Non-specific low-back pain\n\nWhere is your pain located?\n\nLower back only\n\nRadiates down one leg\t\t(Rule out sciatica)\n\nRadiates down both legs\t\t(Rule out cauda equina syndrome)\n\nHow did the pain begin?\n\nSudden\t\t\t\t(Rule out lumbar disc herniation)\n\nGradual\n\nHow long have you been experiencing the pain?\n\nLess than 1 week\n\n1-4 weeks\n\n1-3 months\n\nMore than 3 months\n\nWhat currently aggravates your pain?\n\nSitting\n\nStanding\t\t(Rule out facet joint syndrome)\n\nWalking\n\nLifting heavy objects\n\nWhat makes your pain better?\n\nResting\n\nChanging positions\n\nExercise\n\nPain medications\n\nDo you experience any numbness or tingling sensation in your legs or feet?\n\nYes\t(Rule out lumbar disc herniation or cauda equina syndrome)\n\nNo\n\nHave you experienced any weakness in your legs?\n\nYes\t\t(Rule out cauda equina)\n\nNo\n\nHave you had any recent trauma or injury to your lower back?\n\nYes\n\nNo\n\nHave you had any previous episodes of low-back pain?\n\nYes\t(Recurrent low-back pain)\n\nNo\n\nAre you experiencing any bowel or bladder dysfunction, such as difficulty or loss of control in urination or defecation?\n\nYes\t\t(Rule out cauda equina syndrome)\n\nNo\t\n\nHave you had any recent fever, chills, or other signs of infection?\n\nYes\t\t(Rule out ankylosing spondylitis or bone tumours and infection)\n\nNo\n\nHave you had any recent unintended weight loss?\n\nYes\t\t(Rule out cancers/infection)\n\nNo\n\nTEST:\n\nLasegue’s Test (Straight-Leg Raise): Examiner raises legs of patient up so that hip flexion is achieved while knee is extended. Test is positive if patient feels pain along the course of the sciatic nerve and below the knee when hip is between 30 - 70 degrees of flexion.\n\nBragard Test: This is a modification of the SLR and dorsiflexion is applied at the end of the SLR. This reduces the angle where the test is positive.\n\n\n\nFor Sciatica\n\nDo you experience paraesthesia or abnormal sensation in the affected leg?\n\nYes\n\nNo\n\nDoes your job or daily tasks involve adopting physically awkward positions?\n\nYes\n\nNo\n\nDo you experience muscle weakness in the affected leg?\n\nYes\n\nNo\n\nIs the pain worsened with flexion of the spine, twisting, bending and/or coughing?\n\nYes\n\nNo\n\nDo you experience pain when elevating the heel or tip-toeing?\n\nYes\n\nNo\n\nHave you had a previous surgical procedure and/or injection recently?\n\nYes\n\nNo\n\nObservation\n\nCheck if knee jerk reflex is present\n\nCheck if ankle jerk reflex is present\n\nTESTS\n\nLasegue’s Test (Straight-Leg Raise): Examiner raises legs of patient up so that hip flexion is achieved while knee is extended. Test is positive if patient feels pain along the course of the sciatic nerve and below the knee when hip is between 30 - 70 degrees of flexion.\n\nBragard Test: This is a modification of the SLR and dorsiflexion is applied at the end of the SLR. This reduces the angle where the test is positive.\n\nBowstring Test (Popliteal Compression Test/ Tibial Nerve Stretch Sign): This can be done while patient is lying in supine or sitting position. The examiner flexes the knee and applies pressure on the popliteal fossa evoking sciatica. \n\n\n\nFor Lumbar spinal stenosis\n\nIs the pain you feel aggravated by prolonged walking, standing and lumbar extension?\n\nYes\n\nNo\n\nDo you experience pain radiating to the buttocks, thigh and legs after walking a certain distance?\n\nYes\n\nNo\n\nIs the numbness you feel over the entire leg?\n\nYes\n\nNo\n\nIs the pain you feel relieved by forward flexion (bending forward)?\n\nYes\n\nNo\n\nDo you find walking upstairs easier than walking downstairs?\n\nYes\n\nNo\n\nDo you experience any form of erectile dysfunction?\n\nYes\n\nNo\n\nIs tenderness present at the lumbar, paraspinal or gluteal region?\n\nYes\n\nNo\n\nObservations\n\nCheck if a wide-based gait is present\n\nCheck if Trendenlenburg’s sign is present\n\nCheck for negative romberg test\n\nCheck if Achilles tendon reflex is diminished\n\nTEST\n\nBicycle Stress Test: Record the amount of time the patient spends on a cycle ergometer while in a neutral lumbar position and slumped position. If patient spends more time in the slumped position, a lumbar spinal stenosis is indicated.\n\nTwo-stage Treadmill Test: The patient walks on a flat treadmill and the amount of time spent is recorded and compared with the amount of time while the treadmill is inclined such that patient walks in flexion.\n\nThe Lumbar Extension-Loading Test: The examiner ensures that the lumbar region is in moderate extension (10-30 deg) while standing and patient lies supine. Check if there are changes in the symptoms that the patient feels.\n\n\n\n\n\n\n\nFor Lumbar Disc Herniation\n\nAge (Below 40)\n\nWas the pain onset immediately after a heavy lifting?\n\nYes\n\nNo\n\nDoes your job or daily task involve long sitting with lateral bending and rotation?\n\nYes\n\nNo\n\nDo your symptoms feel better when lying supine with your hips and knees flexed?\n\nYes\n\nNo\n\nDo you experience pain radiating to buttock and leg?\n\nYes\n\nNo\n\nIf yes, does this pain get worse with sitting and relieved with standing?\n\nYes\n\nNo\n\n\n\nObservations\n\nCheck for tenderness in the paraspinal musculature\n\nCheck for spasms in the paraspinal musculature\n\nCheck for decreased reflexes: patellar and ankle jerk\n\nCheck for trendenenburg’s sign\n\nTESTS:\n\nLasegue’s Test (Straight-Leg Raise): Examiner raises legs of patient up so that hip flexion is achieved while knee is extended. Test is positive if patient feels pain along the course of the sciatic nerve and below the knee when hip is between 30 - 70 degrees of flexion.\n\nBragard Test: This is a modification of the SLR and dorsiflexion is applied at the end of the SLR. This reduces the angle where the test is positive.\n\nBowstring Test (Popliteal Compression Test/ Tibial Nerve Stretch Sign): This can be done while patient is lying in supine or sitting position. The examiner flexes the knee and applies pressure on the popliteal fossa evoking sciatica. \n\nFemoral Nerve Stretch Test (Wasserman sign): Patient is in prone position, knee is flexed and hip is extended. Reproduction of pain in anterior thigh is positive. \n\nKernig Test: Patient’s neck is flexed, hip flexed and the leg is extended. Pain is reproduced in this position.\n\nMilgram Test: pain is reproduced on straight leg elevation for 30 seconds.\n\nRadiographic confirmation:\n\nMRI test.\n\n\n\nFor Cauda Equina Syndrome\n\nDo you experience pain radiating to both legs?\n\nYes\n\nNo\n\nDo you have a previous history of tumors or trauma to lower back?\n\nYes\n\nNo\n\nDo you experience reduced sensation around your perineal (around genitals) region?\n\nYes\n\nNo\n\nDo you experience reduced sensation in the region of your inner thighs (groin)?\n\nYes\n\nNo\n\nHave you just undergone a lumbar spinal surgery?\n\nYes\n\nNo\n\nDo you find it difficult to initiate urination or experience urinary retention (inability to empty the bladder completely)?\n\nYes\n\nNo\n\nDo you experience bowel incontinence and/or constipation?\n\nYes\n\nNo\n\nDo you experience reduced sexual sensations?\n\nYes\n\nNo\n\nObservation\n\nCheck for babinski sign and clonus to rule out upper motor neuron involvement\n\nTEST\n\nRadiographic confirmation\n\nMRI test\n\n\n\nFor Axial spondyloarthropathy (ankylosing spondylitis)\n\nAge (common in teens and early adults)\n\nSex (common in male, 3:1)\n\nDo you have a family history of ankylosing spondylitis or any other autoimmune diseases?\n\nYes\n\nNo\n\nIs the pain worse at night and early morning?\n\nYes\n\nNo\n\nDoes exercise and physical activity relieve the pain?\n\nYes\n\nNo\n\nDo you experience pain and stiffness in your hips and/or buttocks?\n\nYes\n\nNo\n\nDo exercises and physical activity reduce the associated stiffness?\n\nYes\n\nNo\n\nDo you experience pain and stiffness in your neck or upper back?\n\nYes\n\nNo\n\nDo you experience fatigue, difficulty sleeping and/or general feelings of unwellness?\n\nYes\n\nNo\n\nDo you experience chest pain or discomfort, especially when you take deep breaths?\n\nYes\n\nNo\n\nHave you experienced any symptoms such as red, scaly patches on your skin that may be accompanied by itching or discomfort (psoriasis)?\n\nYes\t\t(psoriartic ankylosing spondylitis)\n\nNo\n\nHave you experienced changes in your posture, such as stooping or hunching forward (question mark sign)?\n\nYes\n\nNo\n\nHave you had any instances of eye inflammation or redness, or increased sensitivity to light (uveitis)?\n\nYes\n\nNo\n\n\n\n\n\nTEST\n\nLateral lumbar flexion (Finger tip to Floor Test)\n\nThe patient stands with heel touching wall and feet wide apart, and back against the wall. Then the examiner measures the distance from middle finger to the floor. Then patient bends to side (lateral flexion). The distance between the middle finger and the floor is measured again. This measurement is done for both sides.\n\nModified Schrober’s test: Examiner marks both posterior superior iliac spine, and a horizontal line is drawn between both marks. A second line is marked 5cm below the first line, and a third line is marked 10 cm above the first line. Patient is then instructed to flex forward as if attempting to touch their toes.An increase of less than 5cm, shows decreased lumbar spine range of motion, and ankylosing spondylitis.\n\nChest expansion- Normal chest expansion is ≥ 5 cm.\n\nOcciput to wall distance- Normally is 0\n\nTragus to wall distance- Normally is < 15cm\n\nIntermalleolar distance- Normally >100 cm\n\nConfirmatory test through laboratory investigations.\n\n\n\n\n\n",
-  "extraction_messages": []
+  ]
 }

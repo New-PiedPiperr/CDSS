@@ -3,670 +3,560 @@
   "title": "Ankle Region",
   "source_file": "Ankle Region.docx",
   "extracted_at": "2026-02-04T03:56:23.665Z",
+  "version": "2.0.0",
   "conditions": [
     {
       "name": "General Assessment",
+      "id": "general_assessment",
       "entry_criteria": [],
       "questions": [
         {
           "id": "ankle_q1",
-          "question": "What region is pain present in?",
+          "questionText": "What region is pain present in?",
           "category": "location",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Heel",
+              "nextQuestionId": "ankle_q2",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Heel/sole of foot",
+              "nextQuestionId": "ankle_q2",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Ankle",
+              "nextQuestionId": "ankle_q2",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Malleolus",
+              "nextQuestionId": "ankle_q2",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 2,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 2
+          }
         },
         {
           "id": "ankle_q2",
-          "question": "When do you feel the pain?",
+          "questionText": "When do you feel the pain?",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Morning",
+              "nextQuestionId": "ankle_q3",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Noon",
+              "nextQuestionId": "ankle_q3",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Night",
+              "nextQuestionId": "ankle_q3",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Every time",
+              "nextQuestionId": "ankle_q3",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 7,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 7
+          }
         },
         {
           "id": "ankle_q3",
-          "question": "Do you experience ankle joint stiffness?",
+          "questionText": "Do you experience ankle joint stiffness?",
           "category": "stiffness",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q69",
+              "branchTo": [
+                "osteoarthritis"
+              ],
               "effects": {
                 "rule_out": [
                   "osteoarthritis"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q4",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 12,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 12
+          }
         },
         {
           "id": "ankle_q4",
-          "question": "If yes, when?",
+          "questionText": "If yes, when?",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Morning",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [
                   "osteoarthritis"
                 ],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "Noon",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "Night",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "Anytime",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "Every time",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 15,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 15
+          }
         }
       ],
+      "metadata": {
+        "source_line": 1
+      },
       "recommended_tests": [],
       "confirmation_methods": [],
-      "observations": [],
-      "source_line": 1,
-      "is_general": true
+      "observations": []
     },
     {
       "name": "Achilles Tendinopathy",
+      "id": "achilles_tendinopathy",
       "entry_criteria": [],
       "questions": [
         {
           "id": "ankle_q5",
-          "question": "Do you feel the pain about 4 cm above your heel?",
+          "questionText": "Do you feel the pain about 4 cm above your heel?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q6",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q6",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "How did the pain begin",
+              "nextQuestionId": "ankle_q6",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Sudden",
+              "nextQuestionId": "ankle_q10",
+              "branchTo": [
+                "achilles tendon rupture"
+              ],
               "effects": {
                 "rule_out": [
                   "achilles tendon rupture"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Gradual",
+              "nextQuestionId": "ankle_q6",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 22,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 22
+          }
         },
         {
           "id": "ankle_q6",
-          "question": "What type of pain do you feel?",
+          "questionText": "What type of pain do you feel?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Dull and aching",
+              "nextQuestionId": "ankle_q7",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Sharp and pinching",
+              "nextQuestionId": "ankle_q75",
+              "branchTo": [
+                "tarsal tunnel syndrome"
+              ],
               "effects": {
                 "rule_out": [
                   "tarsal tunnel syndrome"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 28,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 28
+          }
         },
         {
           "id": "ankle_q7",
-          "question": "Is there evidence of inflammation around the heel?",
+          "questionText": "Is there evidence of inflammation around the heel?",
           "category": "inflammation",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q8",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q8",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 31,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 31
+          }
         },
         {
           "id": "ankle_q8",
-          "question": "Do you experience pain during push-off phase of walking?",
+          "questionText": "Do you experience pain during push-off phase of walking?",
           "category": "function",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q9",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q9",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 34,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 34
+          }
         },
         {
           "id": "ankle_q9",
-          "question": "Does the pain reduce with rest at joint or with the use of NSAIDs?",
+          "questionText": "Does the pain reduce with rest at joint or with the use of NSAIDs?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
-            },
-            {
-              "value": "Use ultrasound to investigate tears",
-              "effects": {
-                "rule_out": [],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 37,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 37,
+            "clinicalNotes": "Use ultrasound to investigate tears"
+          }
         }
       ],
+      "metadata": {
+        "source_line": 21
+      },
       "recommended_tests": [],
       "confirmation_methods": [
         "Radiographic confirmation"
       ],
-      "observations": [],
-      "source_line": 21
+      "observations": []
     },
     {
       "name": "Achilles Tendon Rupture",
+      "id": "achilles_tendon_rupture",
       "entry_criteria": [],
       "questions": [
         {
           "id": "ankle_q10",
-          "question": "Do you feel the pain about 5cm from your heel?",
+          "questionText": "Do you feel the pain about 5cm from your heel?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q11",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q11",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 43,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 43
+          }
         },
         {
           "id": "ankle_q11",
-          "question": "Do you engage in sports requiring heavy push-offs such as: squash, badminton, football, tennis, netball?",
+          "questionText": "Do you engage in sports requiring heavy push-offs such as: squash, badminton, football, tennis, netball?",
           "category": "demographic",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q12",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q12",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 46,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 46
+          }
         },
         {
           "id": "ankle_q12",
-          "question": "Have you had a previous history of tendinitis?",
+          "questionText": "Have you had a previous history of tendinitis?",
           "category": "history",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q13",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q13",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 49,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 49
+          }
         },
         {
           "id": "ankle_q13",
-          "question": "Did you hear a ripping or popping sensation accompanying the pain at onset?",
+          "questionText": "Did you hear a ripping or popping sensation accompanying the pain at onset?",
           "category": "mechanical",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q14",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q14",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 52,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 52
+          }
         },
         {
           "id": "ankle_q14",
-          "question": "Did you feel like someone hit you on the heel at the onset of the pain?",
+          "questionText": "Did you feel like someone hit you on the heel at the onset of the pain?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q15",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q15",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 55,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 55
+          }
         },
         {
           "id": "ankle_q15",
-          "question": "Have you self-medicated with local corticosteroids before?",
+          "questionText": "Have you self-medicated with local corticosteroids before?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 58,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 58
+          }
         }
       ],
+      "metadata": {
+        "source_line": 42
+      },
       "recommended_tests": [
         "Check if plantarflexion of the ankle is weak.",
         "Check for palpable gap at the site of the rupture",
@@ -675,11 +565,11 @@
       "confirmation_methods": [
         "Radiographic Imaging: Use ultrasound to confirm the diagnosis."
       ],
-      "observations": [],
-      "source_line": 42
+      "observations": []
     },
     {
       "name": "Traction Apophysitis (Sever’s Disease)",
+      "id": "traction_apophysitis_sever_s_disease_",
       "entry_criteria": [
         {
           "type": "age",
@@ -689,49 +579,48 @@
       "questions": [
         {
           "id": "ankle_q16",
-          "question": "Is pain and tenderness localised to the insertion of the Tendon Achilles?",
+          "questionText": "Is pain and tenderness localised to the insertion of the Tendon Achilles?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 71,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 71
+          }
         }
       ],
+      "metadata": {
+        "source_line": 66
+      },
       "recommended_tests": [
         "Check for density of apophysitis and check for fragmentation of the apophysitis."
       ],
       "confirmation_methods": [
         "Radiographic confirmation:"
       ],
-      "observations": [],
-      "source_line": 66
+      "observations": []
     },
     {
       "name": "Calcaneal Bursitis",
+      "id": "calcaneal_bursitis",
       "entry_criteria": [
         {
           "type": "age",
@@ -741,537 +630,477 @@
       "questions": [
         {
           "id": "ankle_q17",
-          "question": "Where do you feel the pain?",
+          "questionText": "Where do you feel the pain?",
           "category": "location",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Heel",
+              "nextQuestionId": "ankle_q18",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Ankle",
+              "nextQuestionId": "ankle_q18",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 82,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 82
+          }
         },
         {
           "id": "ankle_q18",
-          "question": "Do you have painful bumps on your heel?",
+          "questionText": "Do you have painful bumps on your heel?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q19",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q19",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 85,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 85
+          }
         },
         {
           "id": "ankle_q19",
-          "question": "Do you experience this more during cold weather times?",
+          "questionText": "Do you experience this more during cold weather times?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q20",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q20",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 88,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 88
+          }
         },
         {
           "id": "ankle_q20",
-          "question": "Do you wear high-heeled shoes?",
+          "questionText": "Do you wear high-heeled shoes?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 91,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 91
+          }
         }
       ],
+      "metadata": {
+        "source_line": 77
+      },
       "recommended_tests": [],
       "confirmation_methods": [],
-      "observations": [],
-      "source_line": 77
+      "observations": []
     },
     {
       "name": "Plantar Fasciitis",
+      "id": "plantar_fasciitis",
       "entry_criteria": [],
       "questions": [
         {
           "id": "ankle_q21",
-          "question": "Do you experience pain on heel or sole with standing and/or walking?",
+          "questionText": "Do you experience pain on heel or sole with standing and/or walking?",
           "category": "function",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q22",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q22",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 97,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 97
+          }
         },
         {
           "id": "ankle_q22",
-          "question": "Is this pain most prominent at the heel?",
+          "questionText": "Is this pain most prominent at the heel?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q23",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q23",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 100,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 100
+          }
         },
         {
           "id": "ankle_q23",
-          "question": "Is the onset of pain sudden or gradual?",
+          "questionText": "Is the onset of pain sudden or gradual?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Sudden",
+              "nextQuestionId": "ankle_q24",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
+                "decrease_likelihood": []
+              },
+              "metadata": {
                 "notes": "Ask if patient has just recently changed their footwear"
               }
             },
             {
               "value": "Gradual",
+              "nextQuestionId": "ankle_q24",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 103,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 103
+          }
         },
         {
           "id": "ankle_q24",
-          "question": "Is pain worse when you first get up in the morning?",
+          "questionText": "Is pain worse when you first get up in the morning?",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q25",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
+                "decrease_likelihood": []
+              },
+              "metadata": {
                 "notes": "Though this is not in every case"
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q25",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 106,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 106
+          }
         },
         {
           "id": "ankle_q25",
-          "question": "Do you feel the pain more when you get up after you have been sitting for a long time?",
+          "questionText": "Do you feel the pain more when you get up after you have been sitting for a long time?",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q26",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q26",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 109,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 109
+          }
         },
         {
           "id": "ankle_q26",
-          "question": "Is there tenderness at the medial aspect beneath the heel / mid-foot?",
+          "questionText": "Is there tenderness at the medial aspect beneath the heel / mid-foot?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 112,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 112
+          }
         }
       ],
+      "metadata": {
+        "source_line": 96
+      },
       "recommended_tests": [
         "Confirmation using ultrasound to check for thickening around the heel.",
         "Doppler test to show increased local blood flow and neovascularisation"
       ],
       "confirmation_methods": [],
-      "observations": [],
-      "source_line": 96
+      "observations": []
     },
     {
       "name": "ANKLE LIGAMENT INJURIES",
+      "id": "ankle_ligament_injuries",
       "entry_criteria": [],
       "questions": [
         {
           "id": "ankle_q27",
-          "question": "Did you stumble on a stairway, potholes or pavement before the onset of pain?",
+          "questionText": "Did you stumble on a stairway, potholes or pavement before the onset of pain?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q28",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q28",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 119,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 119
+          }
         },
         {
           "id": "ankle_q28",
-          "question": "Have you experienced any twisting or wrenching movement at your ankle joint?",
+          "questionText": "Have you experienced any twisting or wrenching movement at your ankle joint?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q29",
+              "branchTo": [
+                "fracture"
+              ],
               "effects": {
                 "rule_out": [
                   "fracture"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q29",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 122,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 122
+          }
         },
         {
           "id": "ankle_q29",
-          "question": "Can you walk with the affected foot and bear weight on it?",
+          "questionText": "Can you walk with the affected foot and bear weight on it?",
           "category": "function",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q30",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q30",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [
                   "fracture"
                 ],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 125,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 125
+          }
         },
         {
           "id": "ankle_q30",
-          "question": "Is bruise at sight of injury faint and did it appear slowly?",
+          "questionText": "Is bruise at sight of injury faint and did it appear slowly?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 128,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 128
+          }
         }
       ],
+      "metadata": {
+        "source_line": 118
+      },
       "recommended_tests": [],
       "confirmation_methods": [],
-      "observations": [],
-      "source_line": 118
+      "observations": []
     },
     {
       "name": "Acute Injury of Lateral Ligaments",
+      "id": "acute_injury_of_lateral_ligaments",
       "entry_criteria": [],
       "questions": [
         {
           "id": "ankle_q31",
-          "question": "Is severe pain felt on slight attempt to invert (turn inward) foot?",
+          "questionText": "Is severe pain felt on slight attempt to invert (turn inward) foot?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 132,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 132
+          }
         }
       ],
+      "metadata": {
+        "source_line": 131
+      },
       "recommended_tests": [],
       "confirmation_methods": [
         "Radiographic Confirmation"
@@ -1279,127 +1108,122 @@
       "observations": [
         "Palpate the ankle, distally and anteriorly to the lateral malleolus and ask if patient feels more pain. Usually, patient feels more pain on palpation.",
         "Rule out undisplaced fracture of Fibula, tarsal bone, 5th metatarsal bone"
-      ],
-      "source_line": 131
+      ]
     },
     {
       "name": "Recurrent Lateral Instability",
+      "id": "recurrent_lateral_instability",
       "entry_criteria": [],
       "questions": [
         {
           "id": "ankle_q32",
-          "question": "Have you had a past episode of an ankle sprain?",
+          "questionText": "Have you had a past episode of an ankle sprain?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q33",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q33",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 140,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 140
+          }
         },
         {
           "id": "ankle_q33",
-          "question": "If yes, have you had experiences like your ankle giving way OR instability when walking on uneven surfaces?",
+          "questionText": "If yes, have you had experiences like your ankle giving way OR instability when walking on uneven surfaces?",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
+                "decrease_likelihood": []
+              },
+              "metadata": {
                 "notes": "proceed to special test either ways"
-              }
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 143,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 143
+          }
         }
       ],
+      "metadata": {
+        "source_line": 139
+      },
       "recommended_tests": [
         "Special Test for Recurrent Lateral Instability",
         "Talar tilt test: The ankle is held in the neutral position, examiner stabilised the tibia just above the ankle and then tries to force the ankle into maximum inversion. The ROM can be measured or compared with the contralateral side.Inversion laxity suggests injury to calcaneofibular and anterior talofibular ligaments (ATFL).",
         "Anterior Drawer Test: Patient sits with knee flexed at 90 deg and ankle in plantarflexion of about 10 deg. The lower leg is stabilised by the examiner and the force patient’s heel forward over the tibia. If positive, the talus can be felt sliding forwards and backwards. Laxity indicates tear of the ATFL."
       ],
       "confirmation_methods": [],
-      "observations": [],
-      "source_line": 139
+      "observations": []
     },
     {
       "name": "Deltoid Ligament Tear",
+      "id": "deltoid_ligament_tear",
       "entry_criteria": [],
       "questions": [
         {
           "id": "ankle_q34",
-          "question": "Do you have a previous history of fibular fracture?",
+          "questionText": "Do you have a previous history of fibular fracture?",
           "category": "history",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 151,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 151
+          }
         }
       ],
+      "metadata": {
+        "source_line": 150
+      },
       "recommended_tests": [],
       "confirmation_methods": [
         "Radiographic confirmation"
@@ -1407,124 +1231,115 @@
       "observations": [
         "Check if foot is everted and externally rotated.",
         "Check for widening of the medial joint space in the mortise view, check if talus is tilted, check for fracture or dislocation of the proximal fibula."
-      ],
-      "source_line": 150
+      ]
     },
     {
       "name": "Tears of Inferior Tibiofibular Ligaments",
+      "id": "tears_of_inferior_tibiofibular_ligaments",
       "entry_criteria": [],
       "questions": [
         {
           "id": "ankle_q35",
-          "question": "Did you have an injury that twisted your ankle?",
+          "questionText": "Did you have an injury that twisted your ankle?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q36",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q36",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 159,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 159
+          }
         },
         {
           "id": "ankle_q36",
-          "question": "Do you feel pains in front of your ankle?",
+          "questionText": "Do you feel pains in front of your ankle?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q37",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q37",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 162,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 162
+          }
         },
         {
           "id": "ankle_q37",
-          "question": "Is swelling and marked tenderness present directly over the inferior tibiofibular joint?",
+          "questionText": "Is swelling and marked tenderness present directly over the inferior tibiofibular joint?",
           "category": "inflammation",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
+              "branchTo": [
+                "fracture"
+              ],
               "effects": {
                 "rule_out": [
                   "fracture"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 165,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 165
+          }
         }
       ],
+      "metadata": {
+        "source_line": 158
+      },
       "recommended_tests": [
         "Squeeze Test: Compress the leg firmly above the ankle. Test is positive if pain is felt over the syndesmosis."
       ],
       "confirmation_methods": [],
-      "observations": [],
-      "source_line": 158
+      "observations": []
     },
     {
       "name": "MALLEOLAR FRACTURES OF THE ANKLE",
+      "id": "malleolar_fractures_of_the_ankle",
       "entry_criteria": [
         {
           "type": "age",
@@ -1534,628 +1349,513 @@
       "questions": [
         {
           "id": "ankle_q38",
-          "question": "Do you play sports?",
+          "questionText": "Do you play sports?",
           "category": "activity",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q39",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q39",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 172,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 172
+          }
         },
         {
           "id": "ankle_q39",
-          "question": "Any history of fall prior to the onset of the injury?",
+          "questionText": "Any history of fall prior to the onset of the injury?",
           "category": "history",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q40",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q40",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 175,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 175
+          }
         },
         {
           "id": "ankle_q40",
-          "question": "Did you experience any twisting injury with your ankle going into inversion?",
+          "questionText": "Did you experience any twisting injury with your ankle going into inversion?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q41",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q41",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 178,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 178
+          }
         },
         {
           "id": "ankle_q41",
-          "question": "Did you experience a fall with your foot anchored to the ground while your body fell forward?",
+          "questionText": "Did you experience a fall with your foot anchored to the ground while your body fell forward?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q42",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q42",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 181,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 181
+          }
         },
         {
           "id": "ankle_q42",
-          "question": "Is any obvious deformity present in the ankle?",
+          "questionText": "Is any obvious deformity present in the ankle?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q43",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q43",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 184,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 184
+          }
         },
         {
           "id": "ankle_q43",
-          "question": "Following the onset of the pain are you able to stand and bear weight on the affected part?",
+          "questionText": "Following the onset of the pain are you able to stand and bear weight on the affected part?",
           "category": "function",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 187,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 187
+          }
         }
       ],
+      "metadata": {
+        "source_line": 170
+      },
       "recommended_tests": [],
       "confirmation_methods": [
         "Confirm fracture using radiographic imaging"
       ],
-      "observations": [],
-      "source_line": 170
+      "observations": []
     },
     {
       "name": "CALCANEAL FRACTURES",
+      "id": "calcaneal_fractures",
       "entry_criteria": [],
       "questions": [
         {
           "id": "ankle_q44",
-          "question": "Is the patient osteoporotic?",
+          "questionText": "Is the patient osteoporotic?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q45",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q45",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 193,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 193
+          }
         },
         {
           "id": "ankle_q45",
-          "question": "Did you experience a fall from a height?",
+          "questionText": "Did you experience a fall from a height?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q46",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q46",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 196,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 196
+          }
         },
         {
           "id": "ankle_q46",
-          "question": "Were you involved in a road traffic accident?",
+          "questionText": "Were you involved in a road traffic accident?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q47",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q47",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 199,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 199
+          }
         },
         {
           "id": "ankle_q47",
-          "question": "Is your foot painful and swollen?",
+          "questionText": "Is your foot painful and swollen?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q48",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q48",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Does the heel look broad and wide",
+              "nextQuestionId": "ankle_q48",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q48",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q48",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 202,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 202
+          }
         },
         {
           "id": "ankle_q48",
-          "question": "Is the surrounding tissue around the heel thick and tender?",
+          "questionText": "Is the surrounding tissue around the heel thick and tender?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q49",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q49",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 208,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 208
+          }
         },
         {
           "id": "ankle_q49",
-          "question": "Is the normal concavity (hollow) below the lateral malleolus lacking?",
+          "questionText": "Is the normal concavity (hollow) below the lateral malleolus lacking?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q50",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q50",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 211,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 211
+          }
         },
         {
           "id": "ankle_q50",
-          "question": "Can you invert (turn inward) and evert (turn outward) your foot?",
+          "questionText": "Can you invert (turn inward) and evert (turn outward) your foot?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q51",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q51",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
-            },
-            {
-              "value": "Rule out foot compartment syndrome.",
-              "effects": {
-                "rule_out": [],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 214,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 214,
+            "clinicalNotes": "Rule out foot compartment syndrome."
+          }
         },
         {
           "id": "ankle_q51",
-          "question": "Do you feel intense pain in the foot?",
+          "questionText": "Do you feel intense pain in the foot?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q52",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q52",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 221,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 221
+          }
         },
         {
           "id": "ankle_q52",
-          "question": "Is bruising and swelling extensive?",
+          "questionText": "Is bruising and swelling extensive?",
           "category": "inflammation",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q53",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q53",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 224,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 224
+          }
         },
         {
           "id": "ankle_q53",
-          "question": "Is sensation diminished at the foot?",
+          "questionText": "Is sensation diminished at the foot?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q54",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q54",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 227,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 227
+          }
         },
         {
           "id": "ankle_q54",
-          "question": "Do you experience pain on the dorsiflexion of the toes?",
+          "questionText": "Do you experience pain on the dorsiflexion of the toes?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [
                   "ation"
                 ],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 230,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 230
+          }
         }
       ],
+      "metadata": {
+        "source_line": 192
+      },
       "recommended_tests": [],
       "confirmation_methods": [
         "Radiographic Confirmation"
@@ -2163,278 +1863,235 @@
       "observations": [
         "Check if two-point discrimination is present.",
         "Check if pain is present on passive movement of the toes"
-      ],
-      "source_line": 192
+      ]
     },
     {
       "name": "RHEUMATOID ARTHRITIS",
+      "id": "rheumatoid_arthritis",
       "entry_criteria": [],
       "questions": [
         {
           "id": "ankle_q55",
-          "question": "Do you feel uncomfortable when you wear your shoes?",
+          "questionText": "Do you feel uncomfortable when you wear your shoes?",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q56",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q56",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 238,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 238
+          }
         },
         {
           "id": "ankle_q56",
-          "question": "Since the onset of this discomfort, do you walk less due to the discomfort?",
+          "questionText": "Since the onset of this discomfort, do you walk less due to the discomfort?",
           "category": "function",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q57",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q57",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 241,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 241
+          }
         },
         {
           "id": "ankle_q57",
-          "question": "Do you feel pain at your metatarsophalangeal joint (forefoot)?",
+          "questionText": "Do you feel pain at your metatarsophalangeal joint (forefoot)?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q58",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q58",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 244,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 244
+          }
         },
         {
           "id": "ankle_q58",
-          "question": "Is the region of the metatarsophalangeal joint (forefoot) swollen?",
+          "questionText": "Is the region of the metatarsophalangeal joint (forefoot) swollen?",
           "category": "location",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q59",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q59",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 247,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 247
+          }
         },
         {
           "id": "ankle_q59",
-          "question": "Is there tenderness at the metatarsaophalangeal joint (forefoot)?",
+          "questionText": "Is there tenderness at the metatarsaophalangeal joint (forefoot)?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q60",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q60",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 250,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 250
+          }
         },
         {
           "id": "ankle_q60",
-          "question": "Do you feel pain when you press or squeeze the forefoot?",
+          "questionText": "Do you feel pain when you press or squeeze the forefoot?",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q61",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q61",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 253,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 253
+          }
         },
         {
           "id": "ankle_q61",
-          "question": "Did this pain progress to the entire foot?",
+          "questionText": "Did this pain progress to the entire foot?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q62",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q62",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 256,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 256
+          }
         },
         {
           "id": "ankle_q62",
-          "question": "Do you experience weakness of your foot muscles?",
+          "questionText": "Do you experience weakness of your foot muscles?",
           "category": "neurological",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 259,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 259
+          }
         }
       ],
+      "metadata": {
+        "source_line": 236
+      },
       "recommended_tests": [],
       "confirmation_methods": [
         "Radiographic confirmation"
@@ -2447,422 +2104,360 @@
         "Prominence of the metatarsal head in the soles (Feels like walking on stones)",
         "Presence of subcutaneous nodules",
         "Check for osteoporosis, and periarticular erosion at the metatarsophalangeal joint."
-      ],
-      "source_line": 236
+      ]
     },
     {
       "name": "RA of Ankle and Hindfoot",
+      "id": "ra_of_ankle_and_hindfoot",
       "entry_criteria": [],
       "questions": [
         {
           "id": "ankle_q63",
-          "question": "Do you find it increasingly difficult to walk?",
+          "questionText": "Do you find it increasingly difficult to walk?",
           "category": "function",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q64",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q64",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 272,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 272
+          }
         },
         {
           "id": "ankle_q64",
-          "question": "Do you experience pain around your ankle?",
+          "questionText": "Do you experience pain around your ankle?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q65",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q65",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 275,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 275
+          }
         },
         {
           "id": "ankle_q65",
-          "question": "Is swelling and tenderness present behind the lateral and/or medial malleolus?",
+          "questionText": "Is swelling and tenderness present behind the lateral and/or medial malleolus?",
           "category": "inflammation",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q66",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q66",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 278,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 278
+          }
         },
         {
           "id": "ankle_q66",
-          "question": "Do you find it painful to invert (turn inward) and evert (turn outward) your foot?",
+          "questionText": "Do you find it painful to invert (turn inward) and evert (turn outward) your foot?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q67",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q67",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 281,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 281
+          }
         },
         {
           "id": "ankle_q67",
-          "question": "Do you find the range of movement limited when you try to invert (turn inward) and evert (turn outward) your foot??",
+          "questionText": "Do you find the range of movement limited when you try to invert (turn inward) and evert (turn outward) your foot??",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q68",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q68",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 284,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 284
+          }
         },
         {
           "id": "ankle_q68",
-          "question": "Is a valgus deformity (turning outward of the foot) present?",
+          "questionText": "Is a valgus deformity (turning outward of the foot) present?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 287,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 287
+          }
         }
       ],
+      "metadata": {
+        "source_line": 271
+      },
       "recommended_tests": [],
       "confirmation_methods": [
         "Radiographic confirmation. Check for osteoporosis, erosion of the tarsal and ankle joints and the swelling of soft-tissues."
       ],
-      "observations": [],
-      "source_line": 271
+      "observations": []
     },
     {
       "name": "OSTEOARTHRITIS",
+      "id": "osteoarthritis",
       "entry_criteria": [],
       "questions": [
         {
           "id": "ankle_q69",
-          "question": "Have you had a previous diagnosis of osteoarthritis of other joints?",
+          "questionText": "Have you had a previous diagnosis of osteoarthritis of other joints?",
           "category": "history",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q70",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q70",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 293,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 293
+          }
         },
         {
           "id": "ankle_q70",
-          "question": "Do you have any previous history of the following: malunited fracture, recurrent instability, and avascular necrosis of the talus?",
+          "questionText": "Do you have any previous history of the following: malunited fracture, recurrent instability, and avascular necrosis of the talus?",
           "category": "history",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q71",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q71",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 296,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 296
+          }
         },
         {
           "id": "ankle_q71",
-          "question": "Do you experience pain and stiffness at the ankle joint?",
+          "questionText": "Do you experience pain and stiffness at the ankle joint?",
           "category": "stiffness",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q72",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q72",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 299,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 299
+          }
         },
         {
           "id": "ankle_q72",
-          "question": "Do you notice this pain more when standing up from rest?",
+          "questionText": "Do you notice this pain more when standing up from rest?",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q73",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q73",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 302,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 302
+          }
         },
         {
           "id": "ankle_q73",
-          "question": "Is the ankle swollen?",
+          "questionText": "Is the ankle swollen?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q74",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q74",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 305,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 305
+          }
         },
         {
           "id": "ankle_q74",
-          "question": "Do you experience limitation when bringing the foot upward towards (dorsiflexion) and pushing the foot downward away (plantar flexion) from the shin?",
+          "questionText": "Do you experience limitation when bringing the foot upward towards (dorsiflexion) and pushing the foot downward away (plantar flexion) from the shin?",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 308,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 308
+          }
         }
       ],
+      "metadata": {
+        "source_line": 292
+      },
       "recommended_tests": [],
       "confirmation_methods": [
         "Radiographic confirmation – check for joint space narrowing, osteophytes formation, subchondral sclerosis, and cyst formation."
@@ -2871,344 +2466,289 @@
         "Check if there:",
         "are palpable anterior osteophytes present at the ankle joint",
         "is tenderness present along the anterior joint line."
-      ],
-      "source_line": 292
+      ]
     },
     {
       "name": "Tarsal Tunnel Syndrome",
+      "id": "tarsal_tunnel_syndrome",
       "entry_criteria": [],
       "questions": [
         {
           "id": "ankle_q75",
-          "question": "Do you feel numbness, burning and tingling sensation in your foot and/or medial portion of your ankle?",
+          "questionText": "Do you feel numbness, burning and tingling sensation in your foot and/or medial portion of your ankle?",
           "category": "neurological",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q76",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q76",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 320,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 320
+          }
         },
         {
           "id": "ankle_q76",
-          "question": "Do you experience weakness in your foot muscles (toe abductors and flexors)?",
+          "questionText": "Do you experience weakness in your foot muscles (toe abductors and flexors)?",
           "category": "neurological",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q77",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q77",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 323,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 323
+          }
         },
         {
           "id": "ankle_q77",
-          "question": "Do you have a previous history of diabetes or osteoarthritis?",
+          "questionText": "Do you have a previous history of diabetes or osteoarthritis?",
           "category": "history",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q78",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q78",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 326,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 326
+          }
         },
         {
           "id": "ankle_q78",
-          "question": "Does your job or daily task involve running, excessive walking and standing?",
+          "questionText": "Does your job or daily task involve running, excessive walking and standing?",
           "category": "function",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q79",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q79",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 329,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 329
+          }
         },
         {
           "id": "ankle_q79",
-          "question": "Do you have a previous history of trauma or dislocation at ankle region?",
+          "questionText": "Do you have a previous history of trauma or dislocation at ankle region?",
           "category": "location",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q80",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q80",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 332,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 332
+          }
         },
         {
           "id": "ankle_q80",
-          "question": "Is tenderness present behind the medial malleolus?",
+          "questionText": "Is tenderness present behind the medial malleolus?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q81",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q81",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 335,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 335
+          }
         },
         {
           "id": "ankle_q81",
-          "question": "Do the symptoms you feel worsen with a forceful eversion (turning outward) of the foot OR dorsiflexion (moving foot upwards towards the shin)?",
+          "questionText": "Do the symptoms you feel worsen with a forceful eversion (turning outward) of the foot OR dorsiflexion (moving foot upwards towards the shin)?",
           "category": "general",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q82",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q82",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 338,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 338
+          }
         },
         {
           "id": "ankle_q82",
-          "question": "Do you feel a stabbing pain in the medial sole of your foot while walking?",
+          "questionText": "Do you feel a stabbing pain in the medial sole of your foot while walking?",
           "category": "function",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q83",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q83",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 341,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 341
+          }
         },
         {
           "id": "ankle_q83",
-          "question": "Does the pain get aggravated with walking?",
+          "questionText": "Does the pain get aggravated with walking?",
           "category": "function",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": "ankle_q84",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             },
             {
               "value": "No",
+              "nextQuestionId": "ankle_q84",
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
+                "decrease_likelihood": []
               }
             }
           ],
-          "source_line": 344,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 344
+          }
         },
         {
           "id": "ankle_q84",
-          "question": "Do you feel night pain that wake you up from sleep?",
+          "questionText": "Do you feel night pain that wake you up from sleep?",
           "category": "temporal",
-          "answers": [
+          "inputType": "select",
+          "options": [
             {
               "value": "Yes",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             },
             {
               "value": "No",
+              "nextQuestionId": null,
               "effects": {
-                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
+                "decrease_likelihood": []
+              },
+              "isTerminal": true
             }
           ],
-          "source_line": 347,
-          "inputType": "select"
+          "metadata": {
+            "source_line": 347
+          }
         }
       ],
+      "metadata": {
+        "source_line": 319
+      },
       "recommended_tests": [
         "Tinel’s sign: Percussion of the tarsal tunnel. Positive if this results in a distal radiation of paraesthesia",
         "Dorsiflexion-Eversion Test: Place the patient’s foot into dorsiflexion and eversion and hold for 5-10 seconds. Positive if patient’s symptom is elicited."
@@ -3218,10 +2758,7 @@
         "Check for atrophy of the abductor hallucis",
         "Check for arch stability",
         "Check for the position of the talus and calcaneus"
-      ],
-      "source_line": 319
+      ]
     }
-  ],
-  "raw_text": "General Questions:\n\n\n\nWhat region is pain present in?\n\nHeel \n\nHeel/sole of foot\n\nAnkle\n\nMalleolus\n\nWhen do you feel the pain?\n\na. Morning\n\nb. Noon\n\nc. Night\n\nd. Every time\n\nDo you experience ankle joint stiffness?\n\na. Yes\t\t(Rule out osteoarthritis)\n\nb. No\n\nIf yes, when?\n\na. Morning\t(Confirm osteoarthritis)\n\nb. Noon\n\nc. Night\n\nd. Anytime\n\ne. Every time\n\n\n\nFor Achilles Tendinopathy (Tendinitis)\n\nDo you feel the pain about 4 cm above your heel?\n\nYes\n\nNo\n\nHow did the pain begin \n\nSudden \t\t(Rule out achilles tendon rupture)\n\nGradual\n\nWhat type of pain do you feel?\n\nDull and aching\n\nSharp and pinching\t\t(Rule out tarsal tunnel syndrome)\n\nIs there evidence of inflammation around the heel?\n\nYes\n\nNo\n\nDo you experience pain during push-off phase of walking?\n\nYes\n\nNo\n\nDoes the pain reduce with rest at joint or with the use of NSAIDs?\n\nYes\n\nNo\n\nRadiographic confirmation\n\nUse ultrasound to investigate tears\n\n\n\nFor Achilles Tendon Rupture\n\nDo you feel the pain about 5cm from your heel?\n\nYes\n\nNo\n\nDo you engage in sports requiring heavy push-offs such as: squash, badminton, football, tennis, netball?\n\nYes\n\nNo\n\nHave you had a previous history of tendinitis?\n\nYes\n\nNo\n\nDid you hear a ripping or popping sensation accompanying the pain at onset?\n\nYes\n\nNo\n\nDid you feel like someone hit you on the heel at the onset of the pain?\n\nYes\n\nNo\n\nHave you self-medicated with local corticosteroids before?\n\nYes\n\nNo\n\nTEST\n\nCheck if plantarflexion of the ankle is weak.\n\nCheck for palpable gap at the site of the rupture\n\nThompson’s or Simmond’s Test: Patient lies prone and the calf is squeezed. If tendon is ruptured, the foot will remain still when it ought to contract involuntarily.\n\nRadiographic Imaging: Use ultrasound to confirm the diagnosis.\n\n\n\n\n\n\n\n\n\nFor Traction Apophysitis (Sever’s Disease) … \n\nAge ( About 10 yrs)\n\nSex\n\nMale\n\nFemale\n\nIs pain and tenderness localised to the insertion of the Tendon Achilles?\n\nYes\n\nNo\n\nTEST\n\nRadiographic confirmation:\n\nCheck for density of apophysitis and check for fragmentation of the apophysitis.\n\n\n\nFor Calcaneal Bursitis (Confirmation)\n\nAge ( 65 years and older)\n\nSex\n\nFemale\t\t(NB: Can occur in younger females)\n\nMale\n\nWhere do you feel the pain?\n\nHeel\n\nAnkle\n\nDo you have painful bumps on your heel?\n\nYes\n\nNo\n\nDo you experience this more during cold weather times?\n\nYes \n\nNo\n\nDo you wear high-heeled shoes?\n\nYes\n\nNo\n\nObservation:\n\nDoes the posterior portion of the calcaneum look more prominent?\n\n\n\n\n\n\n\nFor Plantar Fasciitis (Confirmation)\n\nDo you experience pain on heel or sole with standing and/or walking?\n\nYes \n\nNo\n\nIs this pain most prominent at the heel?\n\nYes\n\nNo\n\nIs the onset of pain sudden or gradual?\n\nSudden \t\t(Ask if patient has just recently changed their footwear)\n\nGradual\n\nIs pain worse when you first get up in the morning?\n\nYes\t(Though this is not in every case)\n\nNo\n\nDo you feel the pain more when you get up after you have been sitting for a long time?\n\nYes\n\nNo\n\nIs there tenderness at the medial aspect beneath the heel / mid-foot?\n\nYes\n\nNo\n\nTEST\n\nConfirmation using ultrasound to check for thickening around the heel.\n\nDoppler test to show increased local blood flow and neovascularisation\n\n\n\n\n\nFOR ANKLE LIGAMENT INJURIES\n\n\n\nDid you stumble on a stairway, potholes or pavement before the onset of pain?\n\nYes\n\nNo\n\nHave you experienced any twisting or wrenching movement at your ankle joint?\n\nYes \t\t(Rule out fracture)\n\nNo\n\nCan you walk with the affected foot and bear weight on it?\n\nYes\n\nNo\t\t(Confirm fracture)\n\nIs bruise at sight of injury faint and did it appear slowly?\n\nYes\n\nNo\n\nFor Acute Injury of Lateral Ligaments\n\nIs severe pain felt on slight attempt to invert (turn inward) foot?\n\nYes\n\nNo\n\nObservation\n\nPalpate the ankle, distally and anteriorly to the lateral malleolus and ask if patient feels more pain. Usually, patient feels more pain on palpation.\n\n\n\nRadiographic Confirmation\n\nRule out undisplaced fracture of Fibula, tarsal bone, 5th metatarsal bone\n\n\n\nFor Recurrent Lateral Instability\n\nHave you had a past episode of an ankle sprain?\n\nYes\n\nNo \n\nIf yes, have you had experiences like your ankle giving way OR instability when walking on uneven surfaces?\n\nYes \n\nNo\t\t(proceed to special test either ways)\n\nTESTS\n\nSpecial Test for Recurrent Lateral Instability\n\nTalar tilt test: The ankle is held in the neutral position, examiner stabilised the tibia just above the ankle and then tries to force the ankle into maximum inversion. The ROM can be measured or compared with the contralateral side.Inversion laxity suggests injury to calcaneofibular and anterior talofibular ligaments (ATFL).\n\nAnterior Drawer Test: Patient sits with knee flexed at 90 deg and ankle in plantarflexion of about 10 deg. The lower leg is stabilised by the examiner and the force patient’s heel forward over the tibia. If positive, the talus can be felt sliding forwards and backwards. Laxity indicates tear of the ATFL.\n\n\n\nFor Deltoid Ligament Tear:\n\nDo you have a previous history of fibular fracture?\n\nYes\n\nNo\n\nObservation\n\nCheck if foot is everted and externally rotated.\n\nRadiographic confirmation\n\nCheck for widening of the medial joint space in the mortise view, check if talus is tilted, check for fracture or dislocation of the proximal fibula.\n\n\n\nFor Tears of Inferior Tibiofibular Ligaments:\n\nDid you have an injury that twisted your ankle?\n\nYes\n\nNo\n\nDo you feel pains in front of your ankle?\n\nYes\n\nNo\n\nIs swelling and marked tenderness present directly over the inferior tibiofibular joint?\n\nYes\n\nNo \t\t(Rule out fracture)\n\n\n\nTEST\n\nSqueeze Test: Compress the leg firmly above the ankle. Test is positive if pain is felt over the syndesmosis.\n\n\n\n\n\nFOR MALLEOLAR FRACTURES OF THE ANKLE\n\n\n\nAge (Postmenopausal women)\n\nDo you play sports? \n\nYes\n\nNo   \n\nAny history of fall prior to the onset of the injury?\n\nYes\n\nNo\n\nDid you experience any twisting injury with your ankle going into inversion?\n\nYes\n\nNo\n\nDid you experience a fall with your foot anchored to the ground while your body fell forward?\n\nYes\n\nNo\n\nIs any obvious deformity present in the ankle?\n\nYes\n\nNo\n\nFollowing the onset of the pain are you able to stand and bear weight on the affected part?\n\nYes\n\nNo\n\nTEST\n\nConfirm fracture using radiographic imaging\n\n\n\nFOR CALCANEAL FRACTURES\n\nIs the patient osteoporotic?\n\nYes\n\nNo\t\t\n\nDid you experience a fall from a height?\n\nYes\n\nNo \n\nWere you involved in a road traffic accident?\n\nYes\n\nNo\n\nIs your foot painful and swollen?\n\nYes\n\nNo\n\nDoes the heel look broad and wide\n\nYes\n\nNo\n\nIs the surrounding tissue around the heel thick and tender?\n\nYes\n\nNo\n\nIs the normal concavity (hollow) below the lateral malleolus lacking?\n\nYes\n\nNo\n\nCan you invert (turn inward) and evert (turn outward) your foot?\n\nYes\n\nNo\n\nRule out foot compartment syndrome.\n\nTEST\n\nRadiographic Confirmation\n\n\n\n\n\n\n\n\n\nFor Foot Compartment Syndrome?\n\nDo you feel intense pain in the foot?\n\nYes\n\nNo\n\nIs bruising and swelling extensive?\n\nYes\n\nNo\n\nIs sensation diminished at the foot?\n\nYes\n\nNo\n\nDo you experience pain on the dorsiflexion of the toes?\n\nYes\t\t(Refer for laboratory confirmation)\n\nNo\n\nObservations\n\nCheck if two-point discrimination is present.\n\nCheck if pain is present on passive movement of the toes\n\n\n\nRHEUMATOID ARTHRITIS\n\nAt Forefoot\n\nDo you feel uncomfortable when you wear your shoes?\n\nYes\n\nNo\n\nSince the onset of this discomfort, do you walk less due to the discomfort?\n\nYes\n\nNo\n\nDo you feel pain at your metatarsophalangeal joint (forefoot)?\n\nYes\n\nNo\n\nIs the region of the metatarsophalangeal joint (forefoot) swollen?\n\nYes\n\nNo\n\nIs there tenderness at the metatarsaophalangeal joint (forefoot)?\n\nYes\n\nNo\n\nDo you feel pain when you press or squeeze the forefoot?\n\nYes\n\nNo\n\nDid this pain progress to the entire foot?\n\nYes\n\nNo\n\nDo you experience weakness of your foot muscles?\n\nYes\n\nNo\n\nObservation\n\nCheck for the following deformities\n\nA flattenened anterior arch\n\nHallux valgus\n\nClaw toes\n\nProminence of the metatarsal head in the soles (Feels like walking on stones)\n\nPresence of subcutaneous nodules\n\nRadiographic confirmation\n\n\tCheck for osteoporosis, and periarticular erosion at the metatarsophalangeal joint.\n\n\n\nFor RA of Ankle and Hindfoot\n\nDo you find it increasingly difficult to walk?\n\nYes\n\nNo\n\nDo you experience pain around your ankle?\n\nYes\n\nNo\n\nIs swelling and tenderness present behind the lateral and/or medial malleolus?\n\nYes\n\nNo\n\nDo you find it painful to invert (turn inward) and evert (turn outward) your foot?\n\nYes\n\nNo\n\nDo you find the range of movement limited when you try to invert (turn inward) and evert (turn outward) your foot??\n\nYes \n\nNo\n\nIs a valgus deformity (turning outward of the foot) present?\n\nYes\n\nNo\n\n\n\nTEST\n\nRadiographic confirmation. Check for osteoporosis, erosion of the tarsal and ankle joints and the swelling of soft-tissues.\n\n\n\nOSTEOARTHRITIS\n\nHave you had a previous diagnosis of osteoarthritis of other joints?\n\nYes\n\nNo\n\nDo you have any previous history of the following: malunited fracture, recurrent instability, and avascular necrosis of the talus?\n\nYes\n\nNo\n\nDo you experience pain and stiffness at the ankle joint? *\n\nYes\n\nNo\n\nDo you notice this pain more when standing up from rest?\n\nYes\n\nNo\n\nIs the ankle swollen?\n\nYes\n\nNo\n\nDo you experience limitation when bringing the foot upward towards (dorsiflexion) and pushing the foot downward away (plantar flexion) from the shin?\n\nYes\n\nNo\n\nObsevation\n\nCheck if there:\n\nare palpable anterior osteophytes present at the ankle joint\n\nis tenderness present along the anterior joint line.\n\nis an antalgic gait?\n\nis outward turning of the foot as patient walks?\n\nTEST\n\nRadiographic confirmation – check for joint space narrowing, osteophytes formation, subchondral sclerosis, and cyst formation.\n\n\n\n\n\n\n\nFor Tarsal Tunnel Syndrome\n\nDo you feel numbness, burning and tingling sensation in your foot and/or medial portion of your ankle?\n\nYes\n\nNo\n\nDo you experience weakness in your foot muscles (toe abductors and flexors)?\n\nYes\n\nNo\n\nDo you have a previous history of diabetes or osteoarthritis?\n\nYes\n\nNo\n\nDoes your job or daily task involve running, excessive walking and standing?\n\nYes\n\nNo\n\nDo you have a previous history of trauma or dislocation at ankle region?\n\nYes\n\nNo\n\nIs tenderness present behind the medial malleolus?\n\nYes\n\nNo\n\nDo the symptoms you feel worsen with a forceful eversion (turning outward) of the foot OR dorsiflexion (moving foot upwards towards the shin)?\n\nYes\n\nNo\n\nDo you feel a stabbing pain in the medial sole of your foot while walking?\n\nYes\n\nNo\n\nDoes the pain get aggravated with walking?\n\nYes\n\nNo\n\nDo you feel night pain that wake you up from sleep?\n\nYes\n\nNo\n\n\n\nObservation\n\nCheck for atrophy of the abductor hallucis\n\nCheck for arch stability\n\nCheck for the position of the talus and calcaneus\n\nTESTS\n\nTinel’s sign: Percussion of the tarsal tunnel. Positive if this results in a distal radiation of paraesthesia\n\nDorsiflexion-Eversion Test: Place the patient’s foot into dorsiflexion and eversion and hold for 5-10 seconds. Positive if patient’s symptom is elicited.\n\n",
-  "extraction_messages": []
+  ]
 }

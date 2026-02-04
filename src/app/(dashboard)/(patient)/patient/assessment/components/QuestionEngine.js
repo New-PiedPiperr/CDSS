@@ -3,8 +3,7 @@
 import { useState, useEffect } from 'react';
 import useAssessmentStore from '@/store/assessmentStore';
 import { Card, CardContent } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
-import { Loader2, ChevronRight, AlertTriangle, CheckCircle2 } from 'lucide-react';
+import { Loader2, AlertTriangle, CheckCircle2 } from 'lucide-react';
 import { toast } from 'sonner';
 import {
   initializeEngine,
@@ -22,7 +21,7 @@ import {
  * 1. Loads region-specific JSON rules on mount
  * 2. Initializes the assessment engine
  * 3. Presents questions one at a time
- * 4. Updates condition likelihood based on answers
+ * 4. SEAMLESS FLOW: Clicking an answer immediately proceeds to next question
  * 5. Tracks rule-out decisions and red flags
  * 6. Moves to summary when all questions are answered
  *
@@ -99,61 +98,56 @@ export default function QuestionEngine() {
   }, [selectedRegion, engineState, storeInitEngine]);
 
   /**
-   * HANDLE ANSWER SELECTION
-   * ========================
-   * Records user's answer selection (before submission).
+   * HANDLE ANSWER CLICK - SEAMLESS FLOW
+   * =====================================
+   * Clicking an answer immediately processes it and moves to the next question.
+   * No separate "Continue" button needed - makes the flow seamless.
    */
-  const handleSelectAnswer = (answerValue) => {
-    setSelectedAnswer(answerValue);
-  };
-
-  /**
-   * HANDLE SUBMIT ANSWER
-   * =====================
-   * Processes the selected answer through the engine.
-   * Updates condition states and moves to next question.
-   */
-  const handleSubmitAnswer = () => {
-    if (!selectedAnswer || !currentQuestion || !engineState) {
+  const handleAnswerClick = (answerValue) => {
+    if (isProcessing || !currentQuestion || !engineState) {
       return;
     }
 
+    setSelectedAnswer(answerValue);
     setIsProcessing(true);
 
-    try {
-      // Process the answer through the engine
-      const newState = processAnswer(engineState, currentQuestion.id, selectedAnswer);
+    // Small delay for visual feedback before transitioning
+    setTimeout(() => {
+      try {
+        // Process the answer through the engine
+        const newState = processAnswer(engineState, currentQuestion.id, answerValue);
 
-      // Update store with new engine state
-      updateEngineState(newState);
+        // Update store with new engine state
+        updateEngineState(newState);
 
-      // Check for red flags
-      if (newState.redFlags.length > engineState.redFlags.length) {
-        const newFlag = newState.redFlags[newState.redFlags.length - 1];
-        toast.warning('Attention Required', {
-          description: newFlag.redFlagText || 'A clinical red flag has been detected.',
-        });
+        // Check for red flags
+        if (newState.redFlags.length > engineState.redFlags.length) {
+          const newFlag = newState.redFlags[newState.redFlags.length - 1];
+          toast.warning('Attention Required', {
+            description: newFlag.redFlagText || 'A clinical red flag has been detected.',
+          });
+        }
+
+        // Get next question
+        const nextQuestion = getCurrentQuestion(newState);
+
+        if (nextQuestion) {
+          setCurrentQuestion(nextQuestion);
+          setSelectedAnswer(null);
+        } else {
+          // No more questions - move to summary
+          toast.success('Assessment Complete', {
+            description: 'Please review your answers before submission.',
+          });
+          completeQuestions();
+        }
+      } catch (error) {
+        console.error('Error processing answer:', error);
+        toast.error('Error processing your answer. Please try again.');
+      } finally {
+        setIsProcessing(false);
       }
-
-      // Get next question
-      const nextQuestion = getCurrentQuestion(newState);
-
-      if (nextQuestion) {
-        setCurrentQuestion(nextQuestion);
-        setSelectedAnswer(null);
-      } else {
-        // No more questions - move to summary
-        toast.success('Assessment Complete', {
-          description: 'Please review your answers before submission.',
-        });
-        completeQuestions();
-      }
-    } catch (error) {
-      console.error('Error processing answer:', error);
-      toast.error('Error processing your answer. Please try again.');
-    } finally {
-      setIsProcessing(false);
-    }
+    }, 150); // Brief delay for visual feedback
   };
 
   // Loading state
@@ -236,19 +230,19 @@ export default function QuestionEngine() {
             {currentQuestion.question}
           </h2>
 
-          {/* Answer Options */}
+          {/* Answer Options - Click to proceed immediately */}
           <div className="space-y-3">
             {currentQuestion.answers.map((answer, index) => (
               <button
                 key={index}
                 type="button"
-                onClick={() => handleSelectAnswer(answer.value)}
+                onClick={() => handleAnswerClick(answer.value)}
                 disabled={isProcessing}
                 className={`w-full rounded-xl border-2 p-4 text-left transition-all ${
                   selectedAnswer === answer.value
-                    ? 'border-primary bg-primary/10'
-                    : 'border-slate-200 hover:border-slate-300 dark:border-slate-700 dark:hover:border-slate-600'
-                } ${isProcessing ? 'cursor-not-allowed opacity-50' : ''}`}
+                    ? 'border-primary bg-primary/10 scale-[0.98]'
+                    : 'hover:border-primary/50 dark:hover:border-primary/50 border-slate-200 hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800'
+                } ${isProcessing ? 'cursor-not-allowed opacity-50' : 'cursor-pointer active:scale-[0.98]'}`}
               >
                 <div className="flex items-center justify-between">
                   <span className="font-medium">{answer.value}</span>
@@ -256,42 +250,11 @@ export default function QuestionEngine() {
                     <CheckCircle2 className="text-primary h-5 w-5" />
                   )}
                 </div>
-                {/* Show effect indicators if present */}
-                {answer.effects?.rule_out?.length > 0 && (
-                  <p className="mt-1 text-xs text-orange-600">
-                    Investigates: {answer.effects.rule_out.join(', ')}
-                  </p>
-                )}
-                {answer.effects?.red_flag && (
-                  <p className="mt-1 text-xs font-medium text-red-600">
-                    ⚠️ Requires attention
-                  </p>
-                )}
               </button>
             ))}
           </div>
         </CardContent>
       </Card>
-
-      {/* Submit Button */}
-      <Button
-        size="lg"
-        onClick={handleSubmitAnswer}
-        disabled={!selectedAnswer || isProcessing}
-        className="h-14 w-full text-lg font-bold"
-      >
-        {isProcessing ? (
-          <>
-            <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-            Processing...
-          </>
-        ) : (
-          <>
-            Continue
-            <ChevronRight className="ml-2 h-5 w-5" />
-          </>
-        )}
-      </Button>
 
       {/* Red Flags Warning */}
       {engineState?.redFlags?.length > 0 && (

@@ -9,8 +9,6 @@ import {
   CheckCircle2,
   ChevronRight,
   SkipForward,
-  X,
-  Target,
 } from 'lucide-react';
 import { toast } from 'sonner';
 import {
@@ -59,7 +57,6 @@ export default function QuestionEngine() {
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
-  const [showRuledOut, setShowRuledOut] = useState(false);
 
   /**
    * LOAD REGION RULES & INITIALIZE ENGINE
@@ -159,8 +156,8 @@ export default function QuestionEngine() {
             setSelectedAnswer(null);
           } else {
             // No more questions - complete assessment
-            toast.success('Assessment Complete', {
-              description: 'Please review your answers before submission.',
+            toast.success('Assessment Progress Saved', {
+              description: 'Your responses have been recorded. Please complete the final review.',
             });
             completeQuestions();
           }
@@ -220,15 +217,9 @@ export default function QuestionEngine() {
         if (nextQuestion) {
           setCurrentQuestion(nextQuestion);
           setSelectedAnswer(null);
-        } else {
-          toast.success('Assessment Complete', {
-            description: 'Please review your answers before submission.',
-          });
-          completeQuestions();
-        }
       } catch (error) {
         console.error('Error skipping question:', error);
-        toast.error('Error skipping question. Please try again.');
+        toast.error('Error moving to next question. Please try again.');
       } finally {
         setIsProcessing(false);
       }
@@ -295,71 +286,22 @@ export default function QuestionEngine() {
 
   return (
     <div className="mx-auto max-w-2xl space-y-6">
-      {/* Dynamic Progress Header */}
+      {/* Assessment Progress Header */}
       <div className="text-center">
-        <div className="flex items-center justify-center gap-4 text-sm">
-          <span className="text-muted-foreground">Question {answered + 1}</span>
-          <span className="text-muted-foreground/50">•</span>
-          <span className="text-muted-foreground">~{remaining} remaining</span>
-          {ruledOutCount > 0 && (
-            <>
-              <span className="text-muted-foreground/50">•</span>
-              <button
-                onClick={() => setShowRuledOut(!showRuledOut)}
-                className="flex items-center gap-1 text-amber-600 transition-colors hover:text-amber-700 dark:text-amber-400"
-              >
-                <X className="h-3 w-3" />
-                {ruledOutCount} ruled out
-              </button>
-            </>
-          )}
+        <h1 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Assessment Progress</h1>
+        <div className="flex items-center justify-center gap-4 text-sm mb-4">
+          <span className="text-muted-foreground font-medium">Question {answered + 1}</span>
+          <span className="text-muted-foreground/30">•</span>
+          <div className="flex-1 max-w-[200px] h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+            <div
+              className="bg-primary h-full transition-all duration-500 ease-out"
+              style={{ width: `${Math.min(progress, 100)}%` }}
+            />
+          </div>
         </div>
-        <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
-          <div
-            className="bg-primary h-full transition-all duration-500 ease-out"
-            style={{ width: `${Math.min(progress, 100)}%` }}
-          />
-        </div>
-        {currentQuestion.conditionName &&
-          currentQuestion.conditionName !== 'General Assessment' && (
-            <p className="text-muted-foreground mt-2 flex items-center justify-center gap-1 text-xs">
-              <Target className="h-3 w-3" />
-              Investigating: {currentQuestion.conditionName}
-            </p>
-          )}
       </div>
 
-      {/* Ruled Out Conditions Panel */}
-      {showRuledOut && ruledOutConditions.length > 0 && (
-        <Card className="border-amber-200 bg-amber-50/50 dark:border-amber-900/50 dark:bg-amber-900/10">
-          <CardContent className="p-4">
-            <div className="mb-2 flex items-start justify-between">
-              <h4 className="text-sm font-semibold text-amber-800 dark:text-amber-200">
-                Conditions Ruled Out
-              </h4>
-              <button
-                onClick={() => setShowRuledOut(false)}
-                className="text-amber-600 hover:text-amber-800 dark:text-amber-400"
-              >
-                <X className="h-4 w-4" />
-              </button>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {ruledOutConditions.map((cond, i) => (
-                <span
-                  key={i}
-                  className="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-800 dark:bg-amber-900/30 dark:text-amber-200"
-                >
-                  {cond}
-                </span>
-              ))}
-            </div>
-            <p className="mt-2 text-xs text-amber-700 dark:text-amber-300">
-              Questions for these conditions have been automatically skipped.
-            </p>
-          </CardContent>
-        </Card>
-      )}
+
 
       {/* Question Card */}
       <Card className="border-2 border-slate-100 dark:border-slate-800">
@@ -369,13 +311,7 @@ export default function QuestionEngine() {
             {currentQuestion.question}
           </h2>
 
-          {/* Gating Question Indicator */}
-          {currentQuestion.isGating && (
-            <p className="mb-4 flex items-center gap-1 text-xs text-amber-600 dark:text-amber-400">
-              <AlertTriangle className="h-3 w-3" />
-              Important: Your answer may skip related questions
-            </p>
-          )}
+
 
           {/* Answer Options */}
           <div className="space-y-3">
@@ -457,24 +393,24 @@ export default function QuestionEngine() {
             </Button>
 
             <p className="text-muted-foreground text-[10px] font-bold tracking-widest uppercase">
-              CDSS Branching Engine V2
+              Secure Assessment System
             </p>
           </div>
         </CardContent>
       </Card>
 
-      {/* Red Flags Warning */}
+      {/* Observation Summary */}
       {engineState?.redFlags?.length > 0 && (
-        <Card className="border-red-200 bg-red-50 dark:border-red-900 dark:bg-red-900/20">
+        <Card className="border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900/20">
           <CardContent className="p-4">
             <div className="flex items-start gap-3">
-              <AlertTriangle className="h-5 w-5 shrink-0 text-red-500" />
+              <CheckCircle2 className="h-5 w-5 shrink-0 text-slate-400" />
               <div>
-                <p className="font-medium text-red-700 dark:text-red-400">
-                  {engineState.redFlags.length} clinical concern(s) detected
+                <p className="font-medium text-slate-700 dark:text-slate-300">
+                  Observations recorded for review
                 </p>
                 <p className="text-muted-foreground mt-1 text-xs">
-                  These will be highlighted for the reviewing therapist.
+                  Your notes and responses have been flagged for clinical review by the therapist.
                 </p>
               </div>
             </div>
@@ -482,19 +418,7 @@ export default function QuestionEngine() {
         </Card>
       )}
 
-      {/* Assessment Stats (Development) */}
-      {process.env.NODE_ENV === 'development' && engineState && (
-        <Card className="border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900">
-          <CardContent className="p-3 font-mono text-xs text-slate-500">
-            <p>
-              Engine: V2-Branching | Answered: {answered} | Skipped: {skippedCount}
-            </p>
-            <p>
-              Ruled Out: {ruledOutCount} | Remaining Est: {remaining}
-            </p>
-          </CardContent>
-        </Card>
-      )}
+
     </div>
   );
 }

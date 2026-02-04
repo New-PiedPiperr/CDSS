@@ -1,26 +1,34 @@
 import testFlowGraphs from './decision-engine/test-flow-graphs.json';
+import provocativeTests from './decision-engine/test-library.json';
 
 /**
  * GUIDED DIAGNOSIS TEST ENGINE (FLOWCHART DRIVEN)
  * =============================================
  * Implements therapist-guided physical testing using a state-driven decision graph.
- *
- * Clinical Flow:
- * 1. Initialize with region-specific graph.
- * 2. currentNodeId points to the starting physical test.
- * 3. Outcome (Positive/Negative) determines explicitly the nextNodeId.
- * 4. TERMINAL nodes represent the conclusion (Refined Diagnosis).
  */
 
 /**
  * Initialize the guided test engine state
  */
-export function initializeGuidedTestEngine({ assessmentId, therapistId, region }) {
-  const regionKey = region?.toLowerCase().includes('lumbar')
-    ? 'lumbar'
-    : region?.toLowerCase().includes('shoulder')
-      ? 'shoulder'
-      : null;
+export function initializeGuidedTestEngine({
+  assessmentId,
+  therapistId,
+  region,
+  moduleSlug,
+}) {
+  const regionKey =
+    moduleSlug ||
+    (region?.toLowerCase().includes('lumbar')
+      ? 'lumbar-pain-screener'
+      : region?.toLowerCase().includes('shoulder')
+        ? 'shoulder-mobility-screener'
+        : region?.toLowerCase().includes('cervical')
+          ? 'cervical-posture-diagnostic'
+          : region?.toLowerCase().includes('ankle')
+            ? 'ankle-stability-test'
+            : region?.toLowerCase().includes('knee')
+              ? 'knee-pain-assessment'
+              : null);
 
   const graph = testFlowGraphs[regionKey] || null;
   const startNodeId = graph?.startNode || null;
@@ -51,13 +59,20 @@ export function getCurrentTest(state) {
     return null;
   }
 
+  // Find atomic test data
+  const libraryTest = provocativeTests.find((t) => t.id === node.id);
+
   return {
     id: node.id,
-    name: node.name,
-    instruction: node.instruction,
+    name: libraryTest?.name || node.name || 'Unknown Test',
+    type: libraryTest?.type || 'Clinical Test',
+    purpose: libraryTest?.purpose || node.purpose || '',
+    instructions:
+      libraryTest?.instructions || (node.instruction ? [node.instruction] : []),
+    image: libraryTest?.image || null,
     testNumber: state.completedTests.length + 1,
     isObservation: node.isObservation || false,
-    source: 'Flowchart',
+    source: 'Clinical Flowchart',
   };
 }
 

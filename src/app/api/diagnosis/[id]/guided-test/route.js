@@ -180,7 +180,7 @@ export async function POST(request, { params }) {
     // Initialize guidedTestResults if not present
     if (!diagnosisSession.guidedTestResults) {
       diagnosisSession.guidedTestResults = {
-        therapistId: session.user.id,
+        therapistId: authSession.user.id,
         performedAt: new Date(),
         tests: [],
         refinedDiagnosis: null,
@@ -188,12 +188,17 @@ export async function POST(request, { params }) {
       };
     }
 
-    // Add the test result (IMMUTABLE)
+    // Add the test result (IMMUTABLE - linked to assessmentId, testId, therapistId)
     diagnosisSession.guidedTestResults.tests.push({
       testName,
+      testId: testId || `test_${Date.now()}`, // Ensure testId exists for traceability
       result,
       notes: notes || '',
+      associatedConditions: associatedConditions || [],
       timestamp: new Date(),
+      // Traceability fields
+      recordedBy: authSession.user.id,
+      assessmentId: id,
     });
 
     await diagnosisSession.save();

@@ -186,16 +186,21 @@ const AssessmentTraceSchema = new mongoose.Schema(
  * Stores individual physical test results performed by the therapist.
  * These tests are part of the guided diagnosis flow.
  *
- * TRACEABILITY:
+ * DATA INTEGRITY:
  * - Each test is immutable once saved
- * - Linked to assessment and therapist IDs
+ * - Linked to assessmentId, testId, and therapistId
  * - Timestamped for audit purposes
+ * - Traceable back to patient responses via assessmentId
  */
 const GuidedTestResultSchema = new mongoose.Schema(
   {
     testName: {
       type: String,
       required: true,
+    },
+    testId: {
+      type: String,
+      default: null, // Unique identifier for traceability
     },
     result: {
       type: String,
@@ -206,9 +211,23 @@ const GuidedTestResultSchema = new mongoose.Schema(
       type: String,
       default: '',
     },
+    associatedConditions: {
+      type: [String],
+      default: [], // Conditions this test relates to
+    },
     timestamp: {
       type: Date,
       default: Date.now,
+    },
+    // Additional traceability fields
+    recordedBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      default: null, // TherapistId who recorded this result
+    },
+    assessmentId: {
+      type: String,
+      default: null, // Links back to the assessment
     },
   },
   { _id: false }

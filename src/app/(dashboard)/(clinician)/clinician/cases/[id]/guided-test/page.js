@@ -132,8 +132,10 @@ export default function GuidedTestPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           testName: currentTest.name,
+          testId: currentTest.id, // Include testId for traceability
           result,
           notes: testNotes,
+          associatedConditions: currentTest.associatedConditions || [], // Include conditions
         }),
       });
 
@@ -143,12 +145,14 @@ export default function GuidedTestPage() {
         throw new Error(data.error || 'Failed to record result');
       }
 
-      // Add to local state
+      // Add to local state with full test data
       const newTest = {
         testName: currentTest.name,
+        testId: currentTest.id,
         result,
         notes: testNotes,
         timestamp: new Date().toISOString(),
+        associatedConditions: currentTest.associatedConditions || [],
       };
       setCompletedTests((prev) => [...prev, newTest]);
       setTestNotes('');

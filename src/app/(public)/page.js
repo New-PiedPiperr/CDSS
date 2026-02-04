@@ -90,15 +90,14 @@ export default function LandingPage() {
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <div className="relative h-10 w-auto">
-                <Image
-                  src="/logo.png"
-                  alt="CDSS - Clinical Decision Support System"
-                  width={120}
-                  height={40}
-                  className="object-contain"
-                />
-              </div>
+              <Image
+                src="/logo.png"
+                alt="CDSS - Clinical Decision Support System"
+                width={120}
+                height={40}
+                className="-mt-1 object-contain"
+                style={{ marginTop: '-2px' }}
+              />
             </Link>
 
             {/* Navigation Links */}

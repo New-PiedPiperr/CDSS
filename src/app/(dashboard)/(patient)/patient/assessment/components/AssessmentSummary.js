@@ -20,7 +20,7 @@ import {
   getAssessmentSummary,
   completeAssessment,
   prepareForAiAnalysis,
-} from '@/lib/assessment-engine';
+} from '@/lib/branching-assessment-engine';
 
 /**
  * ASSESSMENT SUMMARY COMPONENT
@@ -201,6 +201,42 @@ export default function AssessmentSummary({ onSubmit, onEdit }) {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Conditions Ruled Out */}
+      {(summary.conditionsRuledOut?.length > 0 ||
+        engineState?.ruledOutConditions?.size > 0) && (
+        <Card className="border-2 border-amber-200 bg-amber-50/50 dark:border-amber-800 dark:bg-amber-900/20">
+          <CardContent className="p-4">
+            <div className="flex items-start gap-3">
+              <div className="rounded-full bg-amber-100 p-2 dark:bg-amber-900/30">
+                <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+              </div>
+              <div>
+                <p className="font-medium text-amber-800 dark:text-amber-200">
+                  Conditions Ruled Out
+                </p>
+                <p className="text-muted-foreground mt-1 text-sm">
+                  Based on your answers, the following conditions were ruled out and their
+                  questions skipped.
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {(
+                    summary.conditionsRuledOut ||
+                    Array.from(engineState?.ruledOutConditions || [])
+                  ).map((cond, index) => (
+                    <span
+                      key={index}
+                      className="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-800 dark:bg-amber-900/40 dark:text-amber-200"
+                    >
+                      {typeof cond === 'string' ? cond : cond.name || cond}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </CardContent>

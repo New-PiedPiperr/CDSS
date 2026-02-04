@@ -65,11 +65,22 @@ export default async function PatientDashboardPage() {
     CaseFile.find({ patientId: session.user.id }).sort({ createdAt: -1 }).limit(5).lean(),
   ]);
 
-  // Serialize to plain objects for Client Components
+  // Serialize to plain objects and sanitize for patient safety
+  // (Separation of concerns: Patients should never see diagnostic logic or test recommendations)
   const patient = JSON.parse(JSON.stringify(patientData));
-  const latestSession = JSON.parse(JSON.stringify(latestSessionData));
+
+  const sanitizeSession = (session) => {
+    if (!session) return null;
+    const s = JSON.parse(JSON.stringify(session));
+    delete s.recommendedTests;
+    delete s.guidedTestResults;
+    delete s.assessmentTrace; // Trace contains detailed logic
+    return s;
+  };
+
+  const latestSession = sanitizeSession(latestSessionData);
   const appointments = JSON.parse(JSON.stringify(appointmentsData));
-  const pastSessions = JSON.parse(JSON.stringify(pastSessionsData));
+  const pastSessions = (pastSessionsData || []).map(sanitizeSession);
   const caseFiles = JSON.parse(JSON.stringify(caseFilesData));
   let treatmentPlan = JSON.parse(JSON.stringify(treatmentPlanData));
 

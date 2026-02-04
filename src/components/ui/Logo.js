@@ -12,17 +12,38 @@ function Logo({ className, size = 'default', showText = true }) {
   const { image, text } = sizes[size] || sizes.default;
 
   return (
-    <div className={cn('flex flex-col items-center gap-2', className)}>
-      <Image
-        src="/logo.png"
-        alt="CDSS Logo"
-        width={image}
-        height={image}
-        priority
-        className="object-contain"
-      />
+    <div className={cn('flex flex-col items-center gap-2 transition-all', className)}>
+      <div
+        className="relative transition-all"
+        style={{
+          width: image,
+          height: image,
+          maxWidth: size === 'lg' || size === 'xl' ? '80vw' : '100%',
+        }}
+      >
+        <Image
+          src="/logo.png"
+          alt="CDSS Logo"
+          fill
+          priority
+          className={cn(
+            'object-contain transition-all',
+            size === 'lg' && 'scale-75 sm:scale-100',
+            size === 'xl' && 'scale-50 sm:scale-100'
+          )}
+        />
+      </div>
       {showText && (
-        <span className={cn('text-foreground font-semibold', text)}>CDSS</span>
+        <span
+          className={cn(
+            'text-foreground font-semibold transition-all',
+            text,
+            size === 'lg' && 'text-xl sm:text-3xl',
+            size === 'xl' && 'text-2xl sm:text-4xl'
+          )}
+        >
+          CDSS
+        </span>
       )}
     </div>
   );

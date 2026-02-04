@@ -19,7 +19,7 @@ const RULES_DIR = path.join(__dirname, '..', 'public', 'rules');
 
 // Instructional text patterns that should NOT be answer options
 const INSTRUCTIONAL_PATTERNS = [
-  /^if\s+(yes|no|patient|the|this)/i,
+  /^if\s+(yes|no|patient|the|this|pt)/i,
   /^ask\s+/i,
   /^proceed\s+/i,
   /^rule\s+out/i,
@@ -32,6 +32,35 @@ const INSTRUCTIONAL_PATTERNS = [
   /^confirm/i,
   /clinical\s+note/i,
   /^investigate/i,
+  /SPECIAL\s+/i,
+  /CONFIRMATORY/i,
+  /TEST$/i,
+  /^Test\s+for/i,
+  /^Special\s+Test/i,
+  /scapular\s+rhythm/i,
+  /^pain\s+is\s+(aggravated|alleviated)/i,
+  /^positive\s+(sign|when|if)/i,
+  /positive,?\s+(affected|pain)/i,
+  /^lack\s+of\s+power/i,
+  /^inability\s+to/i,
+  /^movement\s+with/i,
+  /Patient\s+is\s+(unable|asked)/i,
+  /examiner\s+(applies|stands|places)/i,
+  /suggests\s+tear/i,
+  /indicates\s+weakness/i,
+];
+
+// Additional patterns for options that are clearly test procedures or observations
+const TEST_PROCEDURE_PATTERNS = [
+  /^\w+['']s\s+Test/i, // Named tests like "Spurling's Test"
+  /^Instruct\s+/i,
+  /therapist/i,
+  /^stabilise/i,
+  /^The\s+test\s+is/i,
+  /^A\s+positive\s+sign/i,
+  /fulcrum/i,
+  /drawer/i,
+  /apprehension/i,
 ];
 
 /**
@@ -41,11 +70,16 @@ function isInstructionalText(text) {
   if (!text || typeof text !== 'string') return false;
   const trimmed = text.trim();
 
-  // Too long for a typical answer option (more than 100 chars)
-  if (trimmed.length > 100) return true;
+  // Too long for a typical answer option (more than 80 chars)
+  if (trimmed.length > 80) return true;
 
   // Contains instructional patterns
-  return INSTRUCTIONAL_PATTERNS.some((pattern) => pattern.test(trimmed));
+  if (INSTRUCTIONAL_PATTERNS.some((pattern) => pattern.test(trimmed))) return true;
+
+  // Contains test procedure patterns
+  if (TEST_PROCEDURE_PATTERNS.some((pattern) => pattern.test(trimmed))) return true;
+
+  return false;
 }
 
 /**

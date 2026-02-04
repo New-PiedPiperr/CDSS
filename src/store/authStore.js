@@ -24,9 +24,10 @@ const useAuthStore = create(
       /**
        * Login action - Set user data and token
        * @param {Object} userData - User object from API
-       * @param {string} token - JWT token
+       * @param {string} token - JWT token (if applicable)
        */
-      login: (userData, token) => {
+      login: (userData, token = null) => {
+        console.log(`[Auth Store] Logging in user: ${userData?.email || userData?.id}`);
         set({
           user: userData,
           role: userData?.role?.toLowerCase() || 'guest',
@@ -40,6 +41,7 @@ const useAuthStore = create(
        * Logout action - Clear all auth state
        */
       logout: () => {
+        console.log('[Auth Store] Logging out user');
         // Clear localStorage
         if (typeof window !== 'undefined') {
           localStorage.removeItem(STORAGE_KEY);
@@ -52,29 +54,40 @@ const useAuthStore = create(
 
       /**
        * Hydrate action - Restore state from localStorage on app load
-       * Validates token expiry and refreshes if needed
+       * Fetches fresh user data from /api/auth/me
        */
       hydrate: async () => {
+        console.log('[Auth Store] Starting hydration...');
         set({ isLoading: true });
 
         try {
-          const storedState = get();
+          // Attempt to fetch fresh user data from the server
+          // This is more reliable than localStorage and helps fix cookie-related issues
+          const response = await fetch('/api/auth/me');
 
-          if (storedState.token && storedState.user) {
-            // Token exists, validate it (implement actual validation)
-            // For now, we trust the persisted state
+          if (response.ok) {
+            const data = await response.json();
+            console.log(
+              '[Auth Store] Hydration successful, user fetched from /api/auth/me'
+            );
             set({
+              user: data.user,
+              role: data.user.role?.toLowerCase() || 'guest',
               isAuthenticated: true,
               isLoading: false,
             });
           } else {
+            console.warn(
+              `[Auth Store] Hydration: /api/auth/me returned ${response.status}`
+            );
+            // If /me fails, we are probably not logged in
             set({
               ...initialState,
               isLoading: false,
             });
           }
         } catch (error) {
-          console.error('Error hydrating auth state:', error);
+          console.error('[Auth Store] Hydration failed:', error);
           set({
             ...initialState,
             isLoading: false,
@@ -89,6 +102,7 @@ const useAuthStore = create(
       updateUser: (updates) => {
         const currentUser = get().user;
         if (currentUser) {
+          console.log('[Auth Store] Updating user profile data');
           set({
             user: { ...currentUser, ...updates },
           });
@@ -100,6 +114,7 @@ const useAuthStore = create(
        * @param {boolean} loading
        */
       setLoading: (loading) => {
+        console.log(`[Auth Store] Setting loading: ${loading}`);
         set({ isLoading: loading });
       },
 

@@ -4,6 +4,7 @@ import QueryProvider from '@/components/providers/QueryProvider';
 import { Toaster } from 'sonner';
 import OfflineStatus from '@/components/OfflineStatus';
 import NextAuthProvider from '@/components/providers/NextAuthProvider';
+import AuthProvider from '@/components/providers/AuthProvider';
 import './globals.css';
 
 const inter = Inter({
@@ -25,18 +26,20 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
       >
         <NextAuthProvider>
-          <QueryProvider>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="light"
-              enableSystem
-              disableTransitionOnChange
-            >
-              {children}
-              <Toaster position="top-right" richColors />
-              <OfflineStatus />
-            </ThemeProvider>
-          </QueryProvider>
+          <AuthProvider>
+            <QueryProvider>
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="light"
+                enableSystem
+                disableTransitionOnChange
+              >
+                {children}
+                <Toaster position="top-right" richColors />
+                <OfflineStatus />
+              </ThemeProvider>
+            </QueryProvider>
+          </AuthProvider>
         </NextAuthProvider>
       </body>
     </html>

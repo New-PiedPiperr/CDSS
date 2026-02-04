@@ -1,10 +1,11 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { serializeState, deserializeState } from '@/lib/branching-assessment-engine';
 
 /**
- * ASSESSMENT STORE
- * =================
- * Manages the patient assessment flow state with branching question engine.
+ * ASSESSMENT STORE (V2 - Branching Engine)
+ * =========================================
+ * Manages the patient assessment flow state with dynamic branching question engine.
  *
  * FLOW ORDER:
  * 1. biodata   → Patient confirms/edits biodata (MANDATORY - cannot be skipped)
@@ -315,6 +316,42 @@ const useAssessmentStore = create(
     }),
     {
       name: 'patient-assessment-storage',
+      // Custom serialization for Map and Set in engineState
+      storage: {
+        getItem: (name) => {
+          const str = localStorage.getItem(name);
+          if (!str) return null;
+          try {
+            const parsed = JSON.parse(str);
+            // Deserialize the engine state if present
+            if (parsed.state?.engineState) {
+              parsed.state.engineState = deserializeState(parsed.state.engineState);
+            }
+            return parsed;
+          } catch (e) {
+            console.error('Error deserializing assessment state:', e);
+            return null;
+          }
+        },
+        setItem: (name, value) => {
+          try {
+            // Serialize the engine state before storing
+            const toStore = {
+              ...value,
+              state: {
+                ...value.state,
+                engineState: value.state?.engineState
+                  ? serializeState(value.state.engineState)
+                  : null,
+              },
+            };
+            localStorage.setItem(name, JSON.stringify(toStore));
+          } catch (e) {
+            console.error('Error serializing assessment state:', e);
+          }
+        },
+        removeItem: (name) => localStorage.removeItem(name),
+      },
     }
   )
 );

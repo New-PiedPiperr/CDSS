@@ -138,15 +138,20 @@ export function getCurrentQuestion(state) {
  * @returns {Object} Updated engine state
  */
 export function processAnswer(state, questionId, answerValue) {
-  const question = findQuestionById(state, questionId);
-  if (!question) {
+  const questionData = findQuestionById(state, questionId);
+  if (!questionData) {
     console.warn(`Question not found: ${questionId}`);
     return state;
   }
 
+  const rawQuestion = questionData.question;
+  // Handle both 'options' (JSON format) and 'answers' (legacy format)
+  const answerOptions = rawQuestion.options || rawQuestion.answers || [];
+
   // Find the answer object
-  const answerObj = question.question.answers.find(
-    (a) => a.value === answerValue || a.value.toLowerCase() === answerValue.toLowerCase()
+  const answerObj = answerOptions.find(
+    (a) =>
+      a.value === answerValue || a.value?.toLowerCase() === answerValue?.toLowerCase()
   );
 
   const effects = answerObj?.effects || {
@@ -162,10 +167,10 @@ export function processAnswer(state, questionId, answerValue) {
    * This data will be stored with the assessment for therapist review.
    */
   const answeredQuestion = {
-    questionId: question.question.id,
-    question: question.question.question,
-    category: question.question.category,
-    conditionName: question.conditionName,
+    questionId: rawQuestion.id,
+    question: rawQuestion.questionText || rawQuestion.question,
+    category: rawQuestion.category,
+    conditionName: questionData.conditionName,
     answer: answerValue,
     effects: effects,
     timestamp: new Date().toISOString(),

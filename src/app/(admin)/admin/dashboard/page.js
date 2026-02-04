@@ -122,7 +122,10 @@ export default async function AdminDashboardPage() {
               </span>
             )}
           </h3>
-          <Link href="/admin/sessions" className="text-primary text-sm font-bold hover:underline">
+          <Link
+            href="/admin/sessions"
+            className="text-primary text-sm font-bold hover:underline"
+          >
             View All Cases
           </Link>
         </div>

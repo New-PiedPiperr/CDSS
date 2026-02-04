@@ -19,13 +19,30 @@ export function TriageQueue({ cases }) {
   const getStatusInfo = (status) => {
     switch (status) {
       case 'submitted_to_therapist':
-        return { label: 'New Assessment', color: 'bg-green-50 text-green-600 dark:bg-green-900/20 dark:text-green-400', dot: 'bg-green-500 animate-pulse' };
+        return {
+          label: 'New Assessment',
+          color: 'bg-green-50 text-green-600 dark:bg-green-900/20 dark:text-green-400',
+          dot: 'bg-green-500 animate-pulse',
+        };
       case 'pending_review':
-        return { label: 'Pending Review', color: 'bg-yellow-50 text-yellow-600 dark:bg-yellow-900/20 dark:text-yellow-400', dot: 'bg-yellow-500' };
+        return {
+          label: 'Pending Review',
+          color:
+            'bg-yellow-50 text-yellow-600 dark:bg-yellow-900/20 dark:text-yellow-400',
+          dot: 'bg-yellow-500',
+        };
       case 'assigned':
-        return { label: 'Assigned', color: 'bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400', dot: 'bg-blue-500' };
+        return {
+          label: 'Assigned',
+          color: 'bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400',
+          dot: 'bg-blue-500',
+        };
       default:
-        return { label: status || 'Unknown', color: 'bg-gray-50 text-gray-600 dark:bg-gray-900/20 dark:text-gray-400', dot: 'bg-gray-500' };
+        return {
+          label: status || 'Unknown',
+          color: 'bg-gray-50 text-gray-600 dark:bg-gray-900/20 dark:text-gray-400',
+          dot: 'bg-gray-500',
+        };
     }
   };
 
@@ -34,7 +51,7 @@ export function TriageQueue({ cases }) {
       {cases.map((item) => {
         const statusInfo = getStatusInfo(item.status);
         const isUrgent = item.aiAnalysis?.riskLevel === 'Urgent';
-        
+
         return (
           <div
             key={item._id}
@@ -44,7 +61,9 @@ export function TriageQueue({ cases }) {
             <div className="absolute top-4 right-4 flex flex-col gap-2">
               {/* New Assessment Badge */}
               {item.status === 'submitted_to_therapist' && (
-                <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold tracking-wider uppercase ${statusInfo.color}`}>
+                <span
+                  className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold tracking-wider uppercase ${statusInfo.color}`}
+                >
                   <span className={`h-2 w-2 rounded-full ${statusInfo.dot}`}></span>
                   NEW
                 </span>
@@ -93,7 +112,8 @@ export function TriageQueue({ cases }) {
                   {item.patientId?.firstName} {item.patientId?.lastName}
                 </h5>
                 <p className="text-sm font-medium text-gray-400">
-                  {item.patientId?.gender || 'N/A'} • {item.patientId?.email || 'MSK Case'}
+                  {item.patientId?.gender || 'N/A'} •{' '}
+                  {item.patientId?.email || 'MSK Case'}
                 </p>
               </div>
             </div>

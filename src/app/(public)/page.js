@@ -102,6 +102,12 @@ export default function LandingPage() {
 
             {/* Navigation Links */}
             <div className="hidden items-center gap-8 md:flex">
+              <Link
+                href="/"
+                className="text-muted-foreground hover:text-primary text-sm font-medium transition-colors"
+              >
+                Home
+              </Link>
               <a
                 href="#problem"
                 onClick={(e) => handleSmoothScroll(e, 'problem')}

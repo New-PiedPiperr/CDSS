@@ -348,18 +348,6 @@
                 "notes": null
               }
             },
-            {
-              "value": "Objective",
-              "effects": {
-                "rule_out": [],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
-            }
           ],
           "source_line": 34,
           "inputType": "select"

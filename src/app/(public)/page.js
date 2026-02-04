@@ -43,7 +43,6 @@ export default function LandingPage() {
   const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
   const [isDark, setIsDark] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -70,7 +69,6 @@ export default function LandingPage() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-    setIsMenuOpen(false);
   };
 
   // Redirect authenticated users to their dashboard

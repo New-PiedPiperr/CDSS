@@ -231,7 +231,10 @@ export function processAnswer(state, questionId, answerValue) {
         ...newConditionStates[matchingCondition],
         confirmationReasons: [
           ...newConditionStates[matchingCondition].confirmationReasons,
-          { question: rawQuestion.questionText || rawQuestion.question, answer: answerValue },
+          {
+            question: rawQuestion.questionText || rawQuestion.question,
+            answer: answerValue,
+          },
         ],
         likelihood: Math.min(100, newConditionStates[matchingCondition].likelihood + 15),
       };

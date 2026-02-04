@@ -151,6 +151,7 @@ export default function QuestionEngine() {
     }, 150); // Brief delay for visual feedback
   };
 
+  /**
    * HANDLE BACK - Move to previous question
    */
   const handleBack = () => {
@@ -311,12 +312,14 @@ export default function QuestionEngine() {
             <Button
               variant="outline"
               onClick={handleBack}
-              disabled={isProcessing || !engineState || engineState.askedQuestions.length === 0}
+              disabled={
+                isProcessing || !engineState || engineState.askedQuestions.length === 0
+              }
               className="h-10 rounded-xl px-4"
             >
               Previous Question
             </Button>
-            
+
             <p className="text-muted-foreground text-[10px] font-bold tracking-widest uppercase">
               CDSS Heuristic Engine V4
             </p>

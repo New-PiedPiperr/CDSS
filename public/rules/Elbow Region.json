@@ -2,16 +2,11 @@
   "region": "elbow",
   "title": "Elbow Region",
   "source_file": "Elbow Region.docx",
-  "extracted_at": "2026-02-04T02:48:46.432Z",
+  "extracted_at": "2026-02-04T03:54:03.792Z",
   "conditions": [
     {
       "name": "General Assessment",
-      "entry_criteria": [
-        {
-          "type": "age",
-          "description": "Age (40 - 55)"
-        }
-      ],
+      "entry_criteria": [],
       "questions": [
         {
           "id": "elbow_q1",
@@ -55,7 +50,8 @@
               }
             }
           ],
-          "source_line": 3
+          "source_line": 3,
+          "inputType": "select"
         },
         {
           "id": "elbow_q2",
@@ -87,14 +83,43 @@
               }
             }
           ],
-          "source_line": 7
+          "source_line": 7,
+          "inputType": "select"
         },
         {
           "id": "elbow_q3",
           "question": "Was the pain onset sudden or gradual?",
           "category": "general",
-          "answers": [],
-          "source_line": 10
+          "answers": [
+            {
+              "value": "Sudden",
+              "effects": {
+                "rule_out": [
+                  "rupture, link to avulsion of the biceps tendon"
+                ],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Gradual",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 10,
+          "inputType": "select"
         },
         {
           "id": "elbow_q4",
@@ -126,7 +151,8 @@
               }
             }
           ],
-          "source_line": 13
+          "source_line": 13,
+          "inputType": "select"
         },
         {
           "id": "elbow_q5",
@@ -156,9 +182,22 @@
                 "red_flag_text": null,
                 "notes": null
               }
+            },
+            {
+              "value": "LATERAL ELBOW TENDINOPATHY",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "aka Tennis Elbow or Lateral Epicondylitis"
+              }
             }
           ],
-          "source_line": 16
+          "source_line": 16,
+          "inputType": "select"
         },
         {
           "id": "elbow_q6",
@@ -188,9 +227,46 @@
                 "red_flag_text": null,
                 "notes": null
               }
+            },
+            {
+              "value": "Low",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Medium",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "High",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
             }
           ],
-          "source_line": 22
+          "source_line": 22,
+          "inputType": "select"
         },
         {
           "id": "elbow_q7",
@@ -222,7 +298,8 @@
               }
             }
           ],
-          "source_line": 29
+          "source_line": 29,
+          "inputType": "select"
         },
         {
           "id": "elbow_q8",
@@ -254,7 +331,8 @@
               }
             }
           ],
-          "source_line": 32
+          "source_line": 32,
+          "inputType": "select"
         },
         {
           "id": "elbow_q9",
@@ -286,7 +364,8 @@
               }
             }
           ],
-          "source_line": 35
+          "source_line": 35,
+          "inputType": "select"
         },
         {
           "id": "elbow_q10",
@@ -318,7 +397,8 @@
               }
             }
           ],
-          "source_line": 38
+          "source_line": 38,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -374,7 +454,8 @@
               }
             }
           ],
-          "source_line": 80
+          "source_line": 80,
+          "inputType": "select"
         },
         {
           "id": "elbow_q12",
@@ -394,7 +475,7 @@
               }
             },
             {
-              "value": "No (Could be both)",
+              "value": "No",
               "effects": {
                 "rule_out": [],
                 "increase_likelihood": [],
@@ -404,9 +485,22 @@
                 "red_flag_text": null,
                 "notes": "Could be both"
               }
+            },
+            {
+              "value": "Check if muscle bulk in hand is normal",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Extreme cases may include atrophy"
+              }
             }
           ],
-          "source_line": 83
+          "source_line": 83,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -453,7 +547,8 @@
               }
             }
           ],
-          "source_line": 91
+          "source_line": 91,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -505,7 +600,8 @@
               }
             }
           ],
-          "source_line": 124
+          "source_line": 124,
+          "inputType": "select"
         },
         {
           "id": "elbow_q15",
@@ -537,7 +633,8 @@
               }
             }
           ],
-          "source_line": 127
+          "source_line": 127,
+          "inputType": "select"
         },
         {
           "id": "elbow_q16",
@@ -569,7 +666,8 @@
               }
             }
           ],
-          "source_line": 130
+          "source_line": 130,
+          "inputType": "select"
         },
         {
           "id": "elbow_q17",
@@ -601,7 +699,8 @@
               }
             }
           ],
-          "source_line": 133
+          "source_line": 133,
+          "inputType": "select"
         },
         {
           "id": "elbow_q18",
@@ -633,7 +732,8 @@
               }
             }
           ],
-          "source_line": 136
+          "source_line": 136,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [
@@ -682,7 +782,8 @@
               }
             }
           ],
-          "source_line": 143
+          "source_line": 143,
+          "inputType": "select"
         },
         {
           "id": "elbow_q20",
@@ -714,7 +815,8 @@
               }
             }
           ],
-          "source_line": 146
+          "source_line": 146,
+          "inputType": "select"
         },
         {
           "id": "elbow_q21",
@@ -746,7 +848,8 @@
               }
             }
           ],
-          "source_line": 149
+          "source_line": 149,
+          "inputType": "select"
         },
         {
           "id": "elbow_q22",
@@ -778,7 +881,8 @@
               }
             }
           ],
-          "source_line": 152
+          "source_line": 152,
+          "inputType": "select"
         },
         {
           "id": "elbow_q23",
@@ -810,7 +914,8 @@
               }
             }
           ],
-          "source_line": 155
+          "source_line": 155,
+          "inputType": "select"
         },
         {
           "id": "elbow_q24",
@@ -842,7 +947,8 @@
               }
             }
           ],
-          "source_line": 158
+          "source_line": 158,
+          "inputType": "select"
         },
         {
           "id": "elbow_q25",
@@ -874,7 +980,8 @@
               }
             }
           ],
-          "source_line": 161
+          "source_line": 161,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],

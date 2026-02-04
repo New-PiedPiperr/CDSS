@@ -2,7 +2,7 @@
   "region": "cervical",
   "title": "Cervical Region",
   "source_file": "Cervical Region.docx",
-  "extracted_at": "2026-02-04T02:48:46.315Z",
+  "extracted_at": "2026-02-04T03:54:03.633Z",
   "conditions": [
     {
       "name": "Cervical Disc Herniation",
@@ -12,22 +12,90 @@
           "id": "cervical_q1",
           "question": "Where is your pain worse?",
           "category": "location",
-          "answers": [],
-          "source_line": 2
+          "answers": [
+            {
+              "value": "Neck",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Neck-Arm",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 2,
+          "inputType": "select"
         },
         {
           "id": "cervical_q2",
           "question": "How did the pain begin?",
           "category": "onset",
-          "answers": [],
-          "source_line": 5
+          "answers": [
+            {
+              "value": "Sudden",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Gradual",
+              "effects": {
+                "rule_out": [
+                  "cervical spondylosis"
+                ],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 5,
+          "inputType": "select"
         },
         {
           "id": "cervical_q3",
           "question": "Age (Below 40 years)?",
           "category": "demographic",
-          "answers": [],
-          "source_line": 8
+          "answers": [
+            {
+              "value": "Sex",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Male"
+              }
+            }
+          ],
+          "source_line": 8,
+          "inputType": "select"
         },
         {
           "id": "cervical_q4",
@@ -59,21 +127,74 @@
               }
             }
           ],
-          "source_line": 10
+          "source_line": 10,
+          "inputType": "select"
         },
         {
           "id": "cervical_q5",
           "question": "Which of these movements currently aggravates your pain?",
           "category": "general",
-          "answers": [],
-          "source_line": 13
+          "answers": [
+            {
+              "value": "Flexion",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck forward"
+              }
+            },
+            {
+              "value": "Extension",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck backward"
+              }
+            }
+          ],
+          "source_line": 13,
+          "inputType": "select"
         },
         {
           "id": "cervical_q6",
           "question": "What movements relieve your pain?",
           "category": "general",
-          "answers": [],
-          "source_line": 16
+          "answers": [
+            {
+              "value": "Flexion",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck forward"
+              }
+            },
+            {
+              "value": "Extension",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck backward"
+              }
+            }
+          ],
+          "source_line": 16,
+          "inputType": "select"
         },
         {
           "id": "cervical_q7",
@@ -105,7 +226,8 @@
               }
             }
           ],
-          "source_line": 19
+          "source_line": 19,
+          "inputType": "select"
         },
         {
           "id": "cervical_q8",
@@ -137,7 +259,8 @@
               }
             }
           ],
-          "source_line": 22
+          "source_line": 22,
+          "inputType": "select"
         },
         {
           "id": "cervical_q9",
@@ -171,7 +294,8 @@
               }
             }
           ],
-          "source_line": 25
+          "source_line": 25,
+          "inputType": "select"
         },
         {
           "id": "cervical_q10",
@@ -205,7 +329,8 @@
               }
             }
           ],
-          "source_line": 28
+          "source_line": 28,
+          "inputType": "select"
         },
         {
           "id": "cervical_q11",
@@ -237,7 +362,8 @@
               }
             }
           ],
-          "source_line": 31
+          "source_line": 31,
+          "inputType": "select"
         },
         {
           "id": "cervical_q12",
@@ -269,7 +395,8 @@
               }
             }
           ],
-          "source_line": 34
+          "source_line": 34,
+          "inputType": "select"
         },
         {
           "id": "cervical_q13",
@@ -301,7 +428,8 @@
               }
             }
           ],
-          "source_line": 37
+          "source_line": 37,
+          "inputType": "select"
         },
         {
           "id": "cervical_q14",
@@ -333,7 +461,8 @@
               }
             }
           ],
-          "source_line": 40
+          "source_line": 40,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -357,22 +486,112 @@
           "id": "cervical_q15",
           "question": "Where is your pain worse?",
           "category": "location",
-          "answers": [],
-          "source_line": 51
+          "answers": [
+            {
+              "value": "Back-Buttocks",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Leg",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Neck",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Neck-Arm",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 51,
+          "inputType": "select"
         },
         {
           "id": "cervical_q16",
           "question": "How did the pain begin?",
           "category": "onset",
-          "answers": [],
-          "source_line": 56
+          "answers": [
+            {
+              "value": "Sudden",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Gradual",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 56,
+          "inputType": "select"
         },
         {
           "id": "cervical_q17",
           "question": "Age (Above 40 years)?",
           "category": "demographic",
-          "answers": [],
-          "source_line": 59
+          "answers": [
+            {
+              "value": "Sex",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Female"
+              }
+            }
+          ],
+          "source_line": 59,
+          "inputType": "select"
         },
         {
           "id": "cervical_q18",
@@ -404,21 +623,74 @@
               }
             }
           ],
-          "source_line": 61
+          "source_line": 61,
+          "inputType": "select"
         },
         {
           "id": "cervical_q19",
           "question": "Which of these movements currently aggravates your pain?",
           "category": "general",
-          "answers": [],
-          "source_line": 64
+          "answers": [
+            {
+              "value": "Flexion",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck forward"
+              }
+            },
+            {
+              "value": "Extension",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck backward"
+              }
+            }
+          ],
+          "source_line": 64,
+          "inputType": "select"
         },
         {
           "id": "cervical_q20",
           "question": "What movements relieve your pain?",
           "category": "general",
-          "answers": [],
-          "source_line": 67
+          "answers": [
+            {
+              "value": "Flexion",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck forward"
+              }
+            },
+            {
+              "value": "Extension",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck backward"
+              }
+            }
+          ],
+          "source_line": 67,
+          "inputType": "select"
         },
         {
           "id": "cervical_q21",
@@ -450,7 +722,8 @@
               }
             }
           ],
-          "source_line": 70
+          "source_line": 70,
+          "inputType": "select"
         },
         {
           "id": "cervical_q22",
@@ -482,7 +755,8 @@
               }
             }
           ],
-          "source_line": 73
+          "source_line": 73,
+          "inputType": "select"
         },
         {
           "id": "cervical_q23",
@@ -514,7 +788,8 @@
               }
             }
           ],
-          "source_line": 76
+          "source_line": 76,
+          "inputType": "select"
         },
         {
           "id": "cervical_q24",
@@ -546,7 +821,8 @@
               }
             }
           ],
-          "source_line": 79
+          "source_line": 79,
+          "inputType": "select"
         },
         {
           "id": "cervical_q25",
@@ -580,7 +856,8 @@
               }
             }
           ],
-          "source_line": 82
+          "source_line": 82,
+          "inputType": "select"
         },
         {
           "id": "cervical_q26",
@@ -612,7 +889,8 @@
               }
             }
           ],
-          "source_line": 85
+          "source_line": 85,
+          "inputType": "select"
         },
         {
           "id": "cervical_q27",
@@ -644,7 +922,8 @@
               }
             }
           ],
-          "source_line": 88
+          "source_line": 88,
+          "inputType": "select"
         },
         {
           "id": "cervical_q28",
@@ -676,7 +955,8 @@
               }
             }
           ],
-          "source_line": 91
+          "source_line": 91,
+          "inputType": "select"
         },
         {
           "id": "cervical_q29",
@@ -708,7 +988,8 @@
               }
             }
           ],
-          "source_line": 94
+          "source_line": 94,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [

@@ -2,7 +2,7 @@
   "region": "ankle",
   "title": "Ankle Region",
   "source_file": "Ankle Region.docx",
-  "extracted_at": "2026-02-04T02:48:46.234Z",
+  "extracted_at": "2026-02-04T03:54:03.455Z",
   "conditions": [
     {
       "name": "General Assessment",
@@ -62,7 +62,8 @@
               }
             }
           ],
-          "source_line": 2
+          "source_line": 2,
+          "inputType": "select"
         },
         {
           "id": "ankle_q2",
@@ -118,7 +119,8 @@
               }
             }
           ],
-          "source_line": 7
+          "source_line": 7,
+          "inputType": "select"
         },
         {
           "id": "ankle_q3",
@@ -152,7 +154,8 @@
               }
             }
           ],
-          "source_line": 12
+          "source_line": 12,
+          "inputType": "select"
         },
         {
           "id": "ankle_q4",
@@ -222,7 +225,8 @@
               }
             }
           ],
-          "source_line": 15
+          "source_line": 15,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -263,9 +267,48 @@
                 "red_flag_text": null,
                 "notes": null
               }
+            },
+            {
+              "value": "How did the pain begin",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Sudden",
+              "effects": {
+                "rule_out": [
+                  "achilles tendon rupture"
+                ],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Gradual",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
             }
           ],
-          "source_line": 22
+          "source_line": 22,
+          "inputType": "select"
         },
         {
           "id": "ankle_q6",
@@ -299,7 +342,8 @@
               }
             }
           ],
-          "source_line": 28
+          "source_line": 28,
+          "inputType": "select"
         },
         {
           "id": "ankle_q7",
@@ -331,7 +375,8 @@
               }
             }
           ],
-          "source_line": 31
+          "source_line": 31,
+          "inputType": "select"
         },
         {
           "id": "ankle_q8",
@@ -363,7 +408,8 @@
               }
             }
           ],
-          "source_line": 34
+          "source_line": 34,
+          "inputType": "select"
         },
         {
           "id": "ankle_q9",
@@ -393,9 +439,22 @@
                 "red_flag_text": null,
                 "notes": null
               }
+            },
+            {
+              "value": "Use ultrasound to investigate tears",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
             }
           ],
-          "source_line": 37
+          "source_line": 37,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -439,7 +498,8 @@
               }
             }
           ],
-          "source_line": 43
+          "source_line": 43,
+          "inputType": "select"
         },
         {
           "id": "ankle_q11",
@@ -471,7 +531,8 @@
               }
             }
           ],
-          "source_line": 46
+          "source_line": 46,
+          "inputType": "select"
         },
         {
           "id": "ankle_q12",
@@ -503,7 +564,8 @@
               }
             }
           ],
-          "source_line": 49
+          "source_line": 49,
+          "inputType": "select"
         },
         {
           "id": "ankle_q13",
@@ -535,7 +597,8 @@
               }
             }
           ],
-          "source_line": 52
+          "source_line": 52,
+          "inputType": "select"
         },
         {
           "id": "ankle_q14",
@@ -567,7 +630,8 @@
               }
             }
           ],
-          "source_line": 55
+          "source_line": 55,
+          "inputType": "select"
         },
         {
           "id": "ankle_q15",
@@ -599,7 +663,8 @@
               }
             }
           ],
-          "source_line": 58
+          "source_line": 58,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [
@@ -652,7 +717,8 @@
               }
             }
           ],
-          "source_line": 71
+          "source_line": 71,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [
@@ -677,8 +743,34 @@
           "id": "ankle_q17",
           "question": "Where do you feel the pain?",
           "category": "location",
-          "answers": [],
-          "source_line": 82
+          "answers": [
+            {
+              "value": "Heel",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Ankle",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 82,
+          "inputType": "select"
         },
         {
           "id": "ankle_q18",
@@ -710,7 +802,8 @@
               }
             }
           ],
-          "source_line": 85
+          "source_line": 85,
+          "inputType": "select"
         },
         {
           "id": "ankle_q19",
@@ -742,7 +835,8 @@
               }
             }
           ],
-          "source_line": 88
+          "source_line": 88,
+          "inputType": "select"
         },
         {
           "id": "ankle_q20",
@@ -774,7 +868,8 @@
               }
             }
           ],
-          "source_line": 91
+          "source_line": 91,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -816,7 +911,8 @@
               }
             }
           ],
-          "source_line": 97
+          "source_line": 97,
+          "inputType": "select"
         },
         {
           "id": "ankle_q22",
@@ -848,14 +944,41 @@
               }
             }
           ],
-          "source_line": 100
+          "source_line": 100,
+          "inputType": "select"
         },
         {
           "id": "ankle_q23",
           "question": "Is the onset of pain sudden or gradual?",
           "category": "general",
-          "answers": [],
-          "source_line": 103
+          "answers": [
+            {
+              "value": "Sudden",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Ask if patient has just recently changed their footwear"
+              }
+            },
+            {
+              "value": "Gradual",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 103,
+          "inputType": "select"
         },
         {
           "id": "ankle_q24",
@@ -887,7 +1010,8 @@
               }
             }
           ],
-          "source_line": 106
+          "source_line": 106,
+          "inputType": "select"
         },
         {
           "id": "ankle_q25",
@@ -919,7 +1043,8 @@
               }
             }
           ],
-          "source_line": 109
+          "source_line": 109,
+          "inputType": "select"
         },
         {
           "id": "ankle_q26",
@@ -951,7 +1076,8 @@
               }
             }
           ],
-          "source_line": 112
+          "source_line": 112,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [
@@ -996,7 +1122,8 @@
               }
             }
           ],
-          "source_line": 119
+          "source_line": 119,
+          "inputType": "select"
         },
         {
           "id": "ankle_q28",
@@ -1030,7 +1157,8 @@
               }
             }
           ],
-          "source_line": 122
+          "source_line": 122,
+          "inputType": "select"
         },
         {
           "id": "ankle_q29",
@@ -1064,7 +1192,8 @@
               }
             }
           ],
-          "source_line": 125
+          "source_line": 125,
+          "inputType": "select"
         },
         {
           "id": "ankle_q30",
@@ -1096,7 +1225,8 @@
               }
             }
           ],
-          "source_line": 128
+          "source_line": 128,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -1138,7 +1268,8 @@
               }
             }
           ],
-          "source_line": 132
+          "source_line": 132,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -1185,7 +1316,8 @@
               }
             }
           ],
-          "source_line": 140
+          "source_line": 140,
+          "inputType": "select"
         },
         {
           "id": "ankle_q33",
@@ -1217,7 +1349,8 @@
               }
             }
           ],
-          "source_line": 143
+          "source_line": 143,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [
@@ -1263,7 +1396,8 @@
               }
             }
           ],
-          "source_line": 151
+          "source_line": 151,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -1310,7 +1444,8 @@
               }
             }
           ],
-          "source_line": 159
+          "source_line": 159,
+          "inputType": "select"
         },
         {
           "id": "ankle_q36",
@@ -1342,7 +1477,8 @@
               }
             }
           ],
-          "source_line": 162
+          "source_line": 162,
+          "inputType": "select"
         },
         {
           "id": "ankle_q37",
@@ -1376,7 +1512,8 @@
               }
             }
           ],
-          "source_line": 165
+          "source_line": 165,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [
@@ -1425,7 +1562,8 @@
               }
             }
           ],
-          "source_line": 172
+          "source_line": 172,
+          "inputType": "select"
         },
         {
           "id": "ankle_q39",
@@ -1457,7 +1595,8 @@
               }
             }
           ],
-          "source_line": 175
+          "source_line": 175,
+          "inputType": "select"
         },
         {
           "id": "ankle_q40",
@@ -1489,7 +1628,8 @@
               }
             }
           ],
-          "source_line": 178
+          "source_line": 178,
+          "inputType": "select"
         },
         {
           "id": "ankle_q41",
@@ -1521,7 +1661,8 @@
               }
             }
           ],
-          "source_line": 181
+          "source_line": 181,
+          "inputType": "select"
         },
         {
           "id": "ankle_q42",
@@ -1553,7 +1694,8 @@
               }
             }
           ],
-          "source_line": 184
+          "source_line": 184,
+          "inputType": "select"
         },
         {
           "id": "ankle_q43",
@@ -1585,7 +1727,8 @@
               }
             }
           ],
-          "source_line": 187
+          "source_line": 187,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -1629,7 +1772,8 @@
               }
             }
           ],
-          "source_line": 193
+          "source_line": 193,
+          "inputType": "select"
         },
         {
           "id": "ankle_q45",
@@ -1661,7 +1805,8 @@
               }
             }
           ],
-          "source_line": 196
+          "source_line": 196,
+          "inputType": "select"
         },
         {
           "id": "ankle_q46",
@@ -1693,7 +1838,8 @@
               }
             }
           ],
-          "source_line": 199
+          "source_line": 199,
+          "inputType": "select"
         },
         {
           "id": "ankle_q47",
@@ -1725,6 +1871,18 @@
               }
             },
             {
+              "value": "Does the heel look broad and wide",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
               "value": "Yes",
               "effects": {
                 "rule_out": [],
@@ -1749,7 +1907,8 @@
               }
             }
           ],
-          "source_line": 202
+          "source_line": 202,
+          "inputType": "select"
         },
         {
           "id": "ankle_q48",
@@ -1781,7 +1940,8 @@
               }
             }
           ],
-          "source_line": 208
+          "source_line": 208,
+          "inputType": "select"
         },
         {
           "id": "ankle_q49",
@@ -1813,7 +1973,8 @@
               }
             }
           ],
-          "source_line": 211
+          "source_line": 211,
+          "inputType": "select"
         },
         {
           "id": "ankle_q50",
@@ -1843,16 +2004,30 @@
                 "red_flag_text": null,
                 "notes": null
               }
+            },
+            {
+              "value": "Rule out foot compartment syndrome.",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
             }
           ],
-          "source_line": 214
+          "source_line": 214,
+          "inputType": "select"
         },
         {
           "id": "ankle_q51",
           "question": "For Foot Compartment Syndrome?",
           "category": "general",
           "answers": [],
-          "source_line": 220
+          "source_line": 220,
+          "inputType": "text"
         },
         {
           "id": "ankle_q52",
@@ -1884,7 +2059,8 @@
               }
             }
           ],
-          "source_line": 221
+          "source_line": 221,
+          "inputType": "select"
         },
         {
           "id": "ankle_q53",
@@ -1916,7 +2092,8 @@
               }
             }
           ],
-          "source_line": 224
+          "source_line": 224,
+          "inputType": "select"
         },
         {
           "id": "ankle_q54",
@@ -1948,7 +2125,8 @@
               }
             }
           ],
-          "source_line": 227
+          "source_line": 227,
+          "inputType": "select"
         },
         {
           "id": "ankle_q55",
@@ -1982,7 +2160,8 @@
               }
             }
           ],
-          "source_line": 230
+          "source_line": 230,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -2029,7 +2208,8 @@
               }
             }
           ],
-          "source_line": 238
+          "source_line": 238,
+          "inputType": "select"
         },
         {
           "id": "ankle_q57",
@@ -2061,7 +2241,8 @@
               }
             }
           ],
-          "source_line": 241
+          "source_line": 241,
+          "inputType": "select"
         },
         {
           "id": "ankle_q58",
@@ -2093,7 +2274,8 @@
               }
             }
           ],
-          "source_line": 244
+          "source_line": 244,
+          "inputType": "select"
         },
         {
           "id": "ankle_q59",
@@ -2125,7 +2307,8 @@
               }
             }
           ],
-          "source_line": 247
+          "source_line": 247,
+          "inputType": "select"
         },
         {
           "id": "ankle_q60",
@@ -2157,7 +2340,8 @@
               }
             }
           ],
-          "source_line": 250
+          "source_line": 250,
+          "inputType": "select"
         },
         {
           "id": "ankle_q61",
@@ -2189,7 +2373,8 @@
               }
             }
           ],
-          "source_line": 253
+          "source_line": 253,
+          "inputType": "select"
         },
         {
           "id": "ankle_q62",
@@ -2221,7 +2406,8 @@
               }
             }
           ],
-          "source_line": 256
+          "source_line": 256,
+          "inputType": "select"
         },
         {
           "id": "ankle_q63",
@@ -2253,7 +2439,8 @@
               }
             }
           ],
-          "source_line": 259
+          "source_line": 259,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -2305,7 +2492,8 @@
               }
             }
           ],
-          "source_line": 272
+          "source_line": 272,
+          "inputType": "select"
         },
         {
           "id": "ankle_q65",
@@ -2337,7 +2525,8 @@
               }
             }
           ],
-          "source_line": 275
+          "source_line": 275,
+          "inputType": "select"
         },
         {
           "id": "ankle_q66",
@@ -2369,7 +2558,8 @@
               }
             }
           ],
-          "source_line": 278
+          "source_line": 278,
+          "inputType": "select"
         },
         {
           "id": "ankle_q67",
@@ -2401,7 +2591,8 @@
               }
             }
           ],
-          "source_line": 281
+          "source_line": 281,
+          "inputType": "select"
         },
         {
           "id": "ankle_q68",
@@ -2433,7 +2624,8 @@
               }
             }
           ],
-          "source_line": 284
+          "source_line": 284,
+          "inputType": "select"
         },
         {
           "id": "ankle_q69",
@@ -2465,7 +2657,8 @@
               }
             }
           ],
-          "source_line": 287
+          "source_line": 287,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -2509,7 +2702,8 @@
               }
             }
           ],
-          "source_line": 293
+          "source_line": 293,
+          "inputType": "select"
         },
         {
           "id": "ankle_q71",
@@ -2541,7 +2735,8 @@
               }
             }
           ],
-          "source_line": 296
+          "source_line": 296,
+          "inputType": "select"
         },
         {
           "id": "ankle_q72",
@@ -2573,7 +2768,8 @@
               }
             }
           ],
-          "source_line": 299
+          "source_line": 299,
+          "inputType": "select"
         },
         {
           "id": "ankle_q73",
@@ -2605,7 +2801,8 @@
               }
             }
           ],
-          "source_line": 302
+          "source_line": 302,
+          "inputType": "select"
         },
         {
           "id": "ankle_q74",
@@ -2637,7 +2834,8 @@
               }
             }
           ],
-          "source_line": 305
+          "source_line": 305,
+          "inputType": "select"
         },
         {
           "id": "ankle_q75",
@@ -2669,7 +2867,8 @@
               }
             }
           ],
-          "source_line": 308
+          "source_line": 308,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -2717,7 +2916,8 @@
               }
             }
           ],
-          "source_line": 320
+          "source_line": 320,
+          "inputType": "select"
         },
         {
           "id": "ankle_q77",
@@ -2749,7 +2949,8 @@
               }
             }
           ],
-          "source_line": 323
+          "source_line": 323,
+          "inputType": "select"
         },
         {
           "id": "ankle_q78",
@@ -2781,7 +2982,8 @@
               }
             }
           ],
-          "source_line": 326
+          "source_line": 326,
+          "inputType": "select"
         },
         {
           "id": "ankle_q79",
@@ -2813,7 +3015,8 @@
               }
             }
           ],
-          "source_line": 329
+          "source_line": 329,
+          "inputType": "select"
         },
         {
           "id": "ankle_q80",
@@ -2845,7 +3048,8 @@
               }
             }
           ],
-          "source_line": 332
+          "source_line": 332,
+          "inputType": "select"
         },
         {
           "id": "ankle_q81",
@@ -2877,7 +3081,8 @@
               }
             }
           ],
-          "source_line": 335
+          "source_line": 335,
+          "inputType": "select"
         },
         {
           "id": "ankle_q82",
@@ -2909,7 +3114,8 @@
               }
             }
           ],
-          "source_line": 338
+          "source_line": 338,
+          "inputType": "select"
         },
         {
           "id": "ankle_q83",
@@ -2941,7 +3147,8 @@
               }
             }
           ],
-          "source_line": 341
+          "source_line": 341,
+          "inputType": "select"
         },
         {
           "id": "ankle_q84",
@@ -2973,7 +3180,8 @@
               }
             }
           ],
-          "source_line": 344
+          "source_line": 344,
+          "inputType": "select"
         },
         {
           "id": "ankle_q85",
@@ -3005,7 +3213,8 @@
               }
             }
           ],
-          "source_line": 347
+          "source_line": 347,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [

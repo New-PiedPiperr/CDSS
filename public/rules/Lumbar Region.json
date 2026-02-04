@@ -2,7 +2,7 @@
   "region": "lumbar",
   "title": "Lumbar Region",
   "source_file": "Lumbar Region.docx",
-  "extracted_at": "2026-02-04T02:48:46.719Z",
+  "extracted_at": "2026-02-04T03:54:04.097Z",
   "conditions": [
     {
       "name": "Non-specific low-back pain",
@@ -12,36 +12,258 @@
           "id": "lumbar_q1",
           "question": "Where is your pain located?",
           "category": "location",
-          "answers": [],
-          "source_line": 2
+          "answers": [
+            {
+              "value": "Lower back only",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Radiates down one leg",
+              "effects": {
+                "rule_out": [
+                  "sciatica"
+                ],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Radiates down both legs",
+              "effects": {
+                "rule_out": [
+                  "cauda equina syndrome"
+                ],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 2,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q2",
           "question": "How did the pain begin?",
           "category": "onset",
-          "answers": [],
-          "source_line": 6
+          "answers": [
+            {
+              "value": "Sudden",
+              "effects": {
+                "rule_out": [
+                  "lumbar disc herniation"
+                ],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Gradual",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 6,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q3",
           "question": "How long have you been experiencing the pain?",
           "category": "general",
-          "answers": [],
-          "source_line": 9
+          "answers": [
+            {
+              "value": "Less than 1 week",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "1-4 weeks",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "1-3 months",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "More than 3 months",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 9,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q4",
           "question": "What currently aggravates your pain?",
           "category": "general",
-          "answers": [],
-          "source_line": 14
+          "answers": [
+            {
+              "value": "Sitting",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Standing",
+              "effects": {
+                "rule_out": [
+                  "facet joint syndrome"
+                ],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Walking",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Lifting heavy objects",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 14,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q5",
           "question": "What makes your pain better?",
           "category": "general",
-          "answers": [],
-          "source_line": 19
+          "answers": [
+            {
+              "value": "Resting",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Changing positions",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Exercise",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Pain medications",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 19,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q6",
@@ -75,7 +297,8 @@
               }
             }
           ],
-          "source_line": 24
+          "source_line": 24,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q7",
@@ -109,7 +332,8 @@
               }
             }
           ],
-          "source_line": 27
+          "source_line": 27,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q8",
@@ -141,7 +365,8 @@
               }
             }
           ],
-          "source_line": 30
+          "source_line": 30,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q9",
@@ -173,7 +398,8 @@
               }
             }
           ],
-          "source_line": 33
+          "source_line": 33,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q10",
@@ -207,7 +433,8 @@
               }
             }
           ],
-          "source_line": 36
+          "source_line": 36,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q11",
@@ -241,7 +468,8 @@
               }
             }
           ],
-          "source_line": 39
+          "source_line": 39,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q12",
@@ -275,7 +503,8 @@
               }
             }
           ],
-          "source_line": 42
+          "source_line": 42,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -317,7 +546,8 @@
               }
             }
           ],
-          "source_line": 49
+          "source_line": 49,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q14",
@@ -349,7 +579,8 @@
               }
             }
           ],
-          "source_line": 52
+          "source_line": 52,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q15",
@@ -381,7 +612,8 @@
               }
             }
           ],
-          "source_line": 55
+          "source_line": 55,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q16",
@@ -413,7 +645,8 @@
               }
             }
           ],
-          "source_line": 58
+          "source_line": 58,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q17",
@@ -445,7 +678,8 @@
               }
             }
           ],
-          "source_line": 61
+          "source_line": 61,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q18",
@@ -477,7 +711,8 @@
               }
             }
           ],
-          "source_line": 64
+          "source_line": 64,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [
@@ -526,7 +761,8 @@
               }
             }
           ],
-          "source_line": 75
+          "source_line": 75,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q20",
@@ -558,7 +794,8 @@
               }
             }
           ],
-          "source_line": 78
+          "source_line": 78,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q21",
@@ -590,7 +827,8 @@
               }
             }
           ],
-          "source_line": 81
+          "source_line": 81,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q22",
@@ -622,7 +860,8 @@
               }
             }
           ],
-          "source_line": 84
+          "source_line": 84,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q23",
@@ -654,7 +893,8 @@
               }
             }
           ],
-          "source_line": 87
+          "source_line": 87,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q24",
@@ -686,7 +926,8 @@
               }
             }
           ],
-          "source_line": 90
+          "source_line": 90,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q25",
@@ -718,7 +959,8 @@
               }
             }
           ],
-          "source_line": 93
+          "source_line": 93,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [
@@ -774,7 +1016,8 @@
               }
             }
           ],
-          "source_line": 107
+          "source_line": 107,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q27",
@@ -806,7 +1049,8 @@
               }
             }
           ],
-          "source_line": 110
+          "source_line": 110,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q28",
@@ -838,7 +1082,8 @@
               }
             }
           ],
-          "source_line": 113
+          "source_line": 113,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q29",
@@ -870,7 +1115,8 @@
               }
             }
           ],
-          "source_line": 116
+          "source_line": 116,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q30",
@@ -902,7 +1148,8 @@
               }
             }
           ],
-          "source_line": 119
+          "source_line": 119,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -959,7 +1206,8 @@
               }
             }
           ],
-          "source_line": 137
+          "source_line": 137,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q32",
@@ -991,7 +1239,8 @@
               }
             }
           ],
-          "source_line": 140
+          "source_line": 140,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q33",
@@ -1023,7 +1272,8 @@
               }
             }
           ],
-          "source_line": 143
+          "source_line": 143,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q34",
@@ -1055,7 +1305,8 @@
               }
             }
           ],
-          "source_line": 146
+          "source_line": 146,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q35",
@@ -1087,7 +1338,8 @@
               }
             }
           ],
-          "source_line": 149
+          "source_line": 149,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q36",
@@ -1119,7 +1371,8 @@
               }
             }
           ],
-          "source_line": 152
+          "source_line": 152,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q37",
@@ -1151,7 +1404,8 @@
               }
             }
           ],
-          "source_line": 155
+          "source_line": 155,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q38",
@@ -1183,7 +1437,8 @@
               }
             }
           ],
-          "source_line": 158
+          "source_line": 158,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -1234,7 +1489,8 @@
               }
             }
           ],
-          "source_line": 169
+          "source_line": 169,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q40",
@@ -1266,7 +1522,8 @@
               }
             }
           ],
-          "source_line": 172
+          "source_line": 172,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q41",
@@ -1298,7 +1555,8 @@
               }
             }
           ],
-          "source_line": 175
+          "source_line": 175,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q42",
@@ -1330,7 +1588,8 @@
               }
             }
           ],
-          "source_line": 178
+          "source_line": 178,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q43",
@@ -1362,7 +1621,8 @@
               }
             }
           ],
-          "source_line": 181
+          "source_line": 181,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q44",
@@ -1394,7 +1654,8 @@
               }
             }
           ],
-          "source_line": 184
+          "source_line": 184,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q45",
@@ -1426,7 +1687,8 @@
               }
             }
           ],
-          "source_line": 187
+          "source_line": 187,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q46",
@@ -1458,7 +1720,8 @@
               }
             }
           ],
-          "source_line": 190
+          "source_line": 190,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q47",
@@ -1490,7 +1753,8 @@
               }
             }
           ],
-          "source_line": 193
+          "source_line": 193,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q48",
@@ -1522,7 +1786,8 @@
               }
             }
           ],
-          "source_line": 196
+          "source_line": 196,
+          "inputType": "select"
         },
         {
           "id": "lumbar_q49",
@@ -1554,7 +1819,8 @@
               }
             }
           ],
-          "source_line": 199
+          "source_line": 199,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [

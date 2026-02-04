@@ -2,7 +2,7 @@
   "region": "shoulder",
   "title": "Shoulder Region",
   "source_file": "Shoulder Region.docx",
-  "extracted_at": "2026-02-04T02:48:46.973Z",
+  "extracted_at": "2026-02-04T03:54:04.365Z",
   "conditions": [
     {
       "name": "Initial Assessment",
@@ -38,7 +38,8 @@
               }
             }
           ],
-          "source_line": 4
+          "source_line": 4,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q2",
@@ -68,9 +69,30 @@
                 "red_flag_text": null,
                 "notes": null
               }
+            }
+          ],
+          "source_line": 7,
+          "inputType": "select"
+        },
+        {
+          "id": "shoulder_q3",
+          "question": "How did the pain begin?",
+          "category": "onset",
+          "answers": [
+            {
+              "value": "Sudden",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
             },
             {
-              "value": "Concerning Pain Features:",
+              "value": "Gradual",
               "effects": {
                 "rule_out": [],
                 "increase_likelihood": [],
@@ -82,14 +104,8 @@
               }
             }
           ],
-          "source_line": 7
-        },
-        {
-          "id": "shoulder_q3",
-          "question": "How did the pain begin?",
-          "category": "onset",
-          "answers": [],
-          "source_line": 12
+          "source_line": 12,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q4",
@@ -97,7 +113,7 @@
           "category": "neurological",
           "answers": [
             {
-              "value": "Yes (Rule out  nerve involvement)",
+              "value": "Yes",
               "effects": {
                 "rule_out": [
                   "nerve involvement"
@@ -123,7 +139,8 @@
               }
             }
           ],
-          "source_line": 15
+          "source_line": 15,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q5",
@@ -155,7 +172,8 @@
               }
             }
           ],
-          "source_line": 18
+          "source_line": 18,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q6",
@@ -187,14 +205,53 @@
               }
             }
           ],
-          "source_line": 21
+          "source_line": 21,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q7",
           "question": "What aggravates this pain?",
           "category": "general",
-          "answers": [],
-          "source_line": 24
+          "answers": [
+            {
+              "value": "Overhead movement",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Elevation above shoulder height",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "ABducion of the shoulder",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 24,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q8",
@@ -226,7 +283,8 @@
               }
             }
           ],
-          "source_line": 28
+          "source_line": 28,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q9",
@@ -258,7 +316,8 @@
               }
             }
           ],
-          "source_line": 31
+          "source_line": 31,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q10",
@@ -288,16 +347,43 @@
                 "red_flag_text": null,
                 "notes": null
               }
+            },
+            {
+              "value": "Objective",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
             }
           ],
-          "source_line": 34
+          "source_line": 34,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q11",
           "question": "Is shoulder alignment proper?",
           "category": "general",
-          "answers": [],
-          "source_line": 39
+          "answers": [
+            {
+              "value": "If sagging",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "clavicular #"
+              }
+            }
+          ],
+          "source_line": 39,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q12",
@@ -329,7 +415,8 @@
               }
             }
           ],
-          "source_line": 41
+          "source_line": 41,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q13",
@@ -361,7 +448,8 @@
               }
             }
           ],
-          "source_line": 44
+          "source_line": 44,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q14",
@@ -393,7 +481,8 @@
               }
             }
           ],
-          "source_line": 47
+          "source_line": 47,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -447,7 +536,8 @@
               }
             }
           ],
-          "source_line": 56
+          "source_line": 56,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q16",
@@ -481,20 +571,71 @@
               }
             }
           ],
-          "source_line": 60
+          "source_line": 60,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q17",
           "question": "What is the nature of the pain you experience?",
           "category": "general",
-          "answers": [],
-          "source_line": 63
+          "answers": [
+            {
+              "value": "Sharp or pinching",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Dull and aching",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 63,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q18",
           "question": "How did the pain begin?",
           "category": "onset",
           "answers": [
+            {
+              "value": "Sudden",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Gradual",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
             {
               "value": "Yes",
               "effects": {
@@ -520,14 +661,65 @@
               }
             }
           ],
-          "source_line": 66
+          "source_line": 66,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q19",
           "question": "What currently aggravates the pain?",
           "category": "general",
-          "answers": [],
-          "source_line": 72
+          "answers": [
+            {
+              "value": "Arm flexion",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Movement of the arm forward"
+              }
+            },
+            {
+              "value": "Internal rotation",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Rotating the arm inward"
+              }
+            },
+            {
+              "value": "Abduction",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Sleeping on the affected side",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 72,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q20",
@@ -559,7 +751,8 @@
               }
             }
           ],
-          "source_line": 77
+          "source_line": 77,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q21",
@@ -591,14 +784,53 @@
               }
             }
           ],
-          "source_line": 80
+          "source_line": 80,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q22",
           "question": "On what movement is the pain felt?",
           "category": "general",
-          "answers": [],
-          "source_line": 83
+          "answers": [
+            {
+              "value": "Active",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Passive",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bursitis"
+              }
+            },
+            {
+              "value": "Both",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 83,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q23",
@@ -630,7 +862,8 @@
               }
             }
           ],
-          "source_line": 87
+          "source_line": 87,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -646,8 +879,46 @@
           "id": "shoulder_q24",
           "question": "For how long have you felt this present pain?",
           "category": "general",
-          "answers": [],
-          "source_line": 91
+          "answers": [
+            {
+              "value": "Less than 6 weeks",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Acute"
+              }
+            },
+            {
+              "value": "6 -  less than 12 weeks",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Subacute"
+              }
+            },
+            {
+              "value": "12 weeks or more",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Chronic"
+              }
+            }
+          ],
+          "source_line": 91,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q25",
@@ -679,7 +950,8 @@
               }
             }
           ],
-          "source_line": 95
+          "source_line": 95,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q26",
@@ -711,7 +983,8 @@
               }
             }
           ],
-          "source_line": 98
+          "source_line": 98,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -753,7 +1026,8 @@
               }
             }
           ],
-          "source_line": 102
+          "source_line": 102,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q28",
@@ -785,7 +1059,8 @@
               }
             }
           ],
-          "source_line": 105
+          "source_line": 105,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q29",
@@ -793,7 +1068,7 @@
           "category": "general",
           "answers": [
             {
-              "value": "Yes (Biccipital tendinitis can co-exist with other rotator cuff pathologies)",
+              "value": "Yes",
               "effects": {
                 "rule_out": [],
                 "increase_likelihood": [],
@@ -817,7 +1092,8 @@
               }
             }
           ],
-          "source_line": 108
+          "source_line": 108,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -859,7 +1135,8 @@
               }
             }
           ],
-          "source_line": 112
+          "source_line": 112,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q31",
@@ -889,9 +1166,166 @@
                 "red_flag_text": null,
                 "notes": null
               }
+            },
+            {
+              "value": "Check if the patient can complete a full abduction of the arm.",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "If pt, cannot initiate arm ABduction – full tear",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "If active ABduction is possible – partial tear.",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "SPECIAL CONFIRMATORY TESTS",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Spurling’s Test",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Scapular rhythm is disturbed",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Pain is aggraavated between the range of 60 - 120 deg",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Pain is alleviated IF shoulder is laterally rotated on ABduction",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "If positive, SIS is indicated",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Positive sign, Affected side is weaker than the unaffected side.",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Positive sign suggests tear in the supraspinatus",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Lack of power on one side indicates weakness of the infraspinatus muscle",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "If test is done with arm in 90 deg elevation",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
             }
           ],
-          "source_line": 115
+          "source_line": 115,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -933,14 +1367,41 @@
               }
             }
           ],
-          "source_line": 159
+          "source_line": 159,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q33",
           "question": "How did the pain begin?",
           "category": "onset",
-          "answers": [],
-          "source_line": 162
+          "answers": [
+            {
+              "value": "Sudden",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Gradual",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
+          "source_line": 162,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q34",
@@ -972,6 +1433,18 @@
               }
             },
             {
+              "value": "Do you experience pain more at night",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
               "value": "Yes",
               "effects": {
                 "rule_out": [],
@@ -996,7 +1469,8 @@
               }
             }
           ],
-          "source_line": 165
+          "source_line": 165,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q35",
@@ -1028,14 +1502,29 @@
               }
             }
           ],
-          "source_line": 171
+          "source_line": 171,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q36",
           "question": "Does the pain subside after a few days and the shoulder is restored to normal functioning?",
           "category": "general",
-          "answers": [],
-          "source_line": 174
+          "answers": [
+            {
+              "value": "If Yes",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Acute Calcific Tendinitis"
+              }
+            }
+          ],
+          "source_line": 174,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [
@@ -1131,7 +1620,8 @@
               }
             }
           ],
-          "source_line": 257
+          "source_line": 257,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q38",
@@ -1163,7 +1653,8 @@
               }
             }
           ],
-          "source_line": 260
+          "source_line": 260,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q39",
@@ -1221,43 +1712,7 @@
               }
             },
             {
-              "value": "Patient is in sitting or lying position, the examiner lifts the arn gently into ABduction, external rotation and then extension. Test is positive if Pt senses that humeral head is about to slip out anteriorly and body stiffens in apprehension.",
-              "effects": {
-                "rule_out": [],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
-            },
-            {
-              "value": "The test is repeated with the anterior part of shoulder protected.",
-              "effects": {
-                "rule_out": [],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
-            },
-            {
               "value": "Fulcrum’s Test:",
-              "effects": {
-                "rule_out": [],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
-            },
-            {
-              "value": "Pt lies supine, arm ABducted up to 90 deg. The examiner places their hands over the shoulder to set the fulcrum base. The humeral head is levered forward by extending and externally rotating arm. The patient immediately becomes apprehensive.",
               "effects": {
                 "rule_out": [],
                 "increase_likelihood": [],
@@ -1279,21 +1734,10 @@
                 "red_flag_text": null,
                 "notes": null
               }
-            },
-            {
-              "value": "Patient lies supine , scapula is stabilised with one hand while the upper arm is grasped firmly with the other, and manoeuvring is done forward and backward (like a drawer). The drawer’s test is positive if instability is marked.",
-              "effects": {
-                "rule_out": [],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": "like a drawer"
-              }
             }
           ],
-          "source_line": 263
+          "source_line": 263,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -1335,7 +1779,8 @@
               }
             }
           ],
-          "source_line": 277
+          "source_line": 277,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q41",
@@ -1367,7 +1812,8 @@
               }
             }
           ],
-          "source_line": 280
+          "source_line": 280,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q42",
@@ -1399,7 +1845,8 @@
               }
             }
           ],
-          "source_line": 283
+          "source_line": 283,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q43",
@@ -1431,7 +1878,8 @@
               }
             }
           ],
-          "source_line": 286
+          "source_line": 286,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q44",
@@ -1463,7 +1911,8 @@
               }
             }
           ],
-          "source_line": 289
+          "source_line": 289,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q45",
@@ -1495,7 +1944,8 @@
               }
             }
           ],
-          "source_line": 292
+          "source_line": 292,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q46",
@@ -1527,7 +1977,8 @@
               }
             }
           ],
-          "source_line": 295
+          "source_line": 295,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],
@@ -1576,7 +2027,8 @@
               }
             }
           ],
-          "source_line": 302
+          "source_line": 302,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q48",
@@ -1610,7 +2062,8 @@
               }
             }
           ],
-          "source_line": 305
+          "source_line": 305,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q49",
@@ -1644,7 +2097,8 @@
               }
             }
           ],
-          "source_line": 308
+          "source_line": 308,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q50",
@@ -1676,7 +2130,8 @@
               }
             }
           ],
-          "source_line": 311
+          "source_line": 311,
+          "inputType": "select"
         },
         {
           "id": "shoulder_q51",
@@ -1708,7 +2163,8 @@
               }
             }
           ],
-          "source_line": 314
+          "source_line": 314,
+          "inputType": "select"
         }
       ],
       "recommended_tests": [],

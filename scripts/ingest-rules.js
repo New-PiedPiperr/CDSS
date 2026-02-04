@@ -84,7 +84,7 @@ function categorizeQuestion(text) {
 /**
  * Parse answer line to extract value and effects
  * Effects are typically in parentheses or tabs: (Rule out X), (Confirm X)
- * 
+ *
  * IMPORTANT: The displayed value should NOT include rule-out/effect text.
  * Effects are kept in the effects object for logic, but stripped from display value.
  */
@@ -365,10 +365,10 @@ function parseRulesFromText(rawText, region) {
       const isLettered = /^[a-e]\.\s+/i.test(line);
       const isYesNo = /^(Yes|No)\b/i.test(line);
       const isShortOption = line.length > 1 && line.length < 80;
-      
+
       if (isLettered || isYesNo || isShortOption) {
         const { value, effects } = parseAnswerLine(line);
-        
+
         // Only add if we have a meaningful value
         if (value && value.length > 0 && currentQuestion.answers.length < 15) {
           currentQuestion.answers.push({

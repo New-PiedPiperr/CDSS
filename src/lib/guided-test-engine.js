@@ -179,3 +179,41 @@ export function prepareForPersistence(state, therapistId) {
     isLocked: true,
   };
 }
+
+/**
+ * Extract recommended physical tests based on suspected conditions
+ * Used during assessment submission to pre-populate guided test recommendations.
+ */
+export function extractRecommendedTests(rulesJson, suspectedConditions) {
+  if (!rulesJson || !rulesJson.conditions || !suspectedConditions) {
+    return [];
+  }
+
+  const recommendations = [];
+  const normalizedSuspected = suspectedConditions.map((c) => c.toLowerCase());
+
+  rulesJson.conditions.forEach((condition) => {
+    // Check if this condition is among the suspected ones
+    const isSuspected = normalizedSuspected.some(
+      (s) =>
+        condition.name.toLowerCase().includes(s) ||
+        s.includes(condition.name.toLowerCase())
+    );
+
+    if (isSuspected && condition.tests && Array.isArray(condition.tests)) {
+      condition.tests.forEach((test) => {
+        const testName = typeof test === 'string' ? test : test.name;
+        // Avoid duplicates
+        if (!recommendations.some((r) => r.testName === testName)) {
+          recommendations.push({
+            testName: testName,
+            rationale: `Recommended based on suspected ${condition.name}`,
+            source: 'Heuristic Match',
+          });
+        }
+      });
+    }
+  });
+
+  return recommendations;
+}

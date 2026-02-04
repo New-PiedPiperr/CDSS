@@ -22,45 +22,6 @@ const path = require('path');
 const RULES_DIR = path.join(process.cwd(), 'public', 'rules');
 
 /**
- * RULE SCHEMA
- * ============
- * Each JSON rule file follows this structure:
- * {
- *   "region": "cervical | lumbar | ankle | etc",
- *   "title": "Human-readable title",
- *   "source_file": "Original DOCX filename",
- *   "extracted_at": "ISO timestamp",
- *   "conditions": [
- *     {
- *       "name": "Condition Name",
- *       "entry_criteria": [],
- *       "questions": [
- *         {
- *           "id": "unique_question_id",
- *           "question": "Question text from document",
- *           "category": "location | temporal | onset | red_flag | etc",
- *           "answers": [
- *             {
- *               "value": "Yes | No | Option text",
- *               "effects": {
- *                 "rule_out": ["conditions to investigate further"],
- *                 "increase_likelihood": ["conditions more likely"],
- *                 "decrease_likelihood": ["conditions less likely"],
- *                 "next_questions": ["question_ids to ask next"]
- *               }
- *             }
- *           ]
- *         }
- *       ],
- *       "recommended_tests": [],
- *       "confirmation_methods": []
- *     }
- *   ],
- *   "raw_text": "Original extracted text for reference"
- * }
- */
-
-/**
  * Extract text content from a DOCX file
  */
 async function extractDocxText(filePath) {
@@ -91,56 +52,264 @@ function getRegionFromFilename(filename) {
 }
 
 /**
+ * Categorize question based on content
+ */
+function categorizeQuestion(text) {
+  const upper = text.toUpperCase();
+
+  if (upper.includes('LOCATION') || upper.includes('WHERE') || upper.includes('REGION'))
+    return 'location';
+  if (upper.includes('WHEN') || upper.includes('MORNING') || upper.includes('NIGHT'))
+    return 'temporal';
+  if (upper.includes('HOW') && upper.includes('BEGIN')) return 'onset';
+  if (upper.includes('STIFF')) return 'stiffness';
+  if (upper.includes('NUMB') || upper.includes('TINGL') || upper.includes('BURNING'))
+    return 'neurological';
+  if (upper.includes('WEAK')) return 'neurological';
+  if (upper.includes('BOWEL') || upper.includes('BLADDER')) return 'red_flag';
+  if (upper.includes('SCALE') || upper.includes('0-10')) return 'pain_intensity';
+  if (upper.includes('RADIAT')) return 'radiation';
+  if (upper.includes('SWELL') || upper.includes('INFLAMMATION')) return 'inflammation';
+  if (upper.includes('POP') || upper.includes('CRACK') || upper.includes('RIPPING'))
+    return 'mechanical';
+  if (upper.includes('WALK') || upper.includes('BEAR WEIGHT')) return 'function';
+  if (upper.includes('AGE')) return 'demographic';
+  if (upper.includes('SEX')) return 'demographic';
+  if (upper.includes('SPORT') || upper.includes('ACTIVITY')) return 'activity';
+  if (upper.includes('HISTORY') || upper.includes('PREVIOUS')) return 'history';
+
+  return 'general';
+}
+
+/**
+ * Parse answer line to extract value and effects
+ * Effects are typically in parentheses or tabs: (Rule out X), (Confirm X)
+ */
+function parseAnswerLine(line) {
+  const effects = {
+    rule_out: [],
+    increase_likelihood: [],
+    decrease_likelihood: [],
+    next_questions: [],
+    red_flag: false,
+    red_flag_text: null,
+    notes: null,
+  };
+
+  // Split by tab to find effects notation
+  const parts = line.split('\t');
+  let value = parts[0].trim();
+
+  // Clean up value - remove leading letter/number markers
+  value = value.replace(/^[a-e]\.\s*/i, '').trim();
+
+  // Check for parenthetical content in original line
+  const parentheticalMatch = line.match(/\(([^)]+)\)/);
+
+  // Check tabbed content
+  const effectsText = parts.slice(1).join(' ').trim();
+  const combinedEffects =
+    (parentheticalMatch ? parentheticalMatch[1] : '') + ' ' + effectsText;
+
+  if (/rule\s*out/i.test(combinedEffects)) {
+    const condition = combinedEffects
+      .replace(/.*rule\s*out\s*/i, '')
+      .replace(/\).*/, '')
+      .trim();
+    if (condition) {
+      effects.rule_out.push(condition);
+    }
+  }
+
+  if (/confirm/i.test(combinedEffects)) {
+    const condition = combinedEffects
+      .replace(/.*confirm\s*/i, '')
+      .replace(/\).*/, '')
+      .trim();
+    if (condition) {
+      effects.increase_likelihood.push(condition);
+    }
+  }
+
+  if (/red\s*flag/i.test(combinedEffects)) {
+    effects.red_flag = true;
+    effects.red_flag_text = combinedEffects;
+  }
+
+  // Capture notes like "(NB: ...)" or "(Though this is...)"
+  if (
+    parentheticalMatch &&
+    !effects.rule_out.length &&
+    !effects.increase_likelihood.length
+  ) {
+    effects.notes = parentheticalMatch[1].trim();
+  }
+
+  return { value, effects };
+}
+
+/**
  * Parse structured rules from raw text
  *
- * TODO: This parser requires enhancement for each specific document format.
- * Currently extracts basic structure; may need manual review for complex branching.
+ * DOCUMENT FORMAT OBSERVED:
+ * - Condition headers start with "For" or "FOR" followed by condition name
+ * - Questions end with "?"
+ * - Answers are typically Yes/No or lettered options (a. b. c.)
+ * - Effects are noted in parentheses or after tabs: (Rule out X), (Confirm X)
+ * - TEST sections contain physical examination instructions
+ * - Radiographic/Observation sections contain confirmation methods
  */
 function parseRulesFromText(rawText, region) {
-  const lines = rawText.split('\n').filter((line) => line.trim());
+  const lines = rawText
+    .split('\n')
+    .map((l) => l.trim())
+    .filter((l) => l);
 
   const conditions = [];
   let currentCondition = null;
   let currentQuestion = null;
   let questionCounter = 1;
-
-  /**
-   * PARSING STRATEGY:
-   * 1. Look for condition headers (e.g., "CONDITION:", numbered conditions)
-   * 2. Look for question patterns (e.g., "Q:", numbered questions, "?")
-   * 3. Look for answer patterns (e.g., "Yes/No", bullet points)
-   * 4. Look for clinical markers (e.g., "RED FLAG", "Rule out", "Confirm")
-   */
+  let inTestSection = false;
+  let inObservationSection = false;
+  let globalQuestions = []; // Questions before any condition
 
   for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
+    const line = lines[i];
     const upperLine = line.toUpperCase();
 
-    // Detect condition headers
+    // Detect condition headers: "For X" or "FOR X" patterns
+    // Must not be a question (no ?)
+    if (/^FOR\s+/i.test(line) && !line.includes('?')) {
+      // Save previous condition
+      if (currentCondition) {
+        conditions.push(currentCondition);
+      }
+
+      const conditionName = line
+        .replace(/^FOR\s+/i, '')
+        .replace(/\s*\(.*\)\s*$/, '')
+        .replace(/[:\s…]*$/, '')
+        .trim();
+
+      currentCondition = {
+        name: conditionName,
+        entry_criteria: [],
+        questions: [],
+        recommended_tests: [],
+        confirmation_methods: [],
+        observations: [],
+        source_line: i + 1,
+      };
+
+      inTestSection = false;
+      inObservationSection = false;
+      currentQuestion = null;
+      continue;
+    }
+
+    // Detect General Questions section header
+    if (upperLine.includes('GENERAL QUESTIONS')) {
+      if (currentCondition) {
+        conditions.push(currentCondition);
+      }
+      currentCondition = {
+        name: 'General Assessment',
+        entry_criteria: [],
+        questions: [],
+        recommended_tests: [],
+        confirmation_methods: [],
+        observations: [],
+        source_line: i + 1,
+        is_general: true,
+      };
+      inTestSection = false;
+      inObservationSection = false;
+      continue;
+    }
+
+    // Detect major section headers that create conditions
     if (
-      upperLine.startsWith('CONDITION') ||
-      upperLine.includes('PATHOLOGY') ||
-      /^[0-9]+\.\s*[A-Z]/.test(line)
+      /^FOR\s+[A-Z]+.*INJURIES$/i.test(line) ||
+      /^FOR\s+[A-Z]+.*FRACTURES$/i.test(line) ||
+      /^RHEUMATOID\s+ARTHRITIS$/i.test(line) ||
+      /^OSTEOARTHRITIS$/i.test(line)
     ) {
       if (currentCondition) {
         conditions.push(currentCondition);
       }
       currentCondition = {
-        name: line.replace(/^[0-9]+\.\s*/, '').replace(/^CONDITION[:\s]*/i, ''),
+        name: line.replace(/^FOR\s+/i, '').trim(),
         entry_criteria: [],
         questions: [],
         recommended_tests: [],
         confirmation_methods: [],
-        raw_section: line,
+        observations: [],
+        source_line: i + 1,
       };
+      inTestSection = false;
+      inObservationSection = false;
+      continue;
+    }
+
+    // Detect TEST section
+    if (upperLine === 'TEST' || upperLine === 'TESTS') {
+      inTestSection = true;
+      inObservationSection = false;
+      currentQuestion = null;
+      continue;
+    }
+
+    // Detect Observation section
+    if (upperLine.startsWith('OBSERVATION') || upperLine.startsWith('OBSEVATION')) {
+      inObservationSection = true;
+      inTestSection = false;
+      currentQuestion = null;
+      continue;
+    }
+
+    // Detect Radiographic confirmation line
+    if (upperLine.includes('RADIOGRAPHIC') && upperLine.includes('CONFIRM')) {
+      if (currentCondition) {
+        currentCondition.confirmation_methods.push(line);
+      }
+      continue;
+    }
+
+    // Collect test instructions
+    if (inTestSection && currentCondition) {
+      // Skip if it's starting a new section
+      if (/^FOR\s+/i.test(line)) {
+        i--; // Re-process this line as a condition
+        inTestSection = false;
+        continue;
+      }
+      if (line.length > 10) {
+        currentCondition.recommended_tests.push(line);
+      }
+      continue;
+    }
+
+    // Collect observation instructions
+    if (inObservationSection && currentCondition) {
+      if (/^FOR\s+/i.test(line)) {
+        i--;
+        inObservationSection = false;
+        continue;
+      }
+      if (line.length > 5 && !line.includes('?')) {
+        currentCondition.observations.push(line);
+      }
       continue;
     }
 
     // Detect questions (lines ending with ?)
     if (line.includes('?')) {
+      inTestSection = false;
+      inObservationSection = false;
+
       currentQuestion = {
         id: `${region}_q${questionCounter++}`,
-        question: line,
+        question: line.replace(/\s*\*+\s*$/, ''), // Remove trailing asterisks
         category: categorizeQuestion(line),
         answers: [],
         source_line: i + 1,
@@ -148,50 +317,58 @@ function parseRulesFromText(rawText, region) {
 
       if (currentCondition) {
         currentCondition.questions.push(currentQuestion);
+      } else {
+        globalQuestions.push(currentQuestion);
       }
       continue;
     }
 
-    // Detect Yes/No answers
-    if (
-      currentQuestion &&
-      (upperLine.startsWith('YES') ||
-        upperLine.startsWith('NO') ||
-        upperLine.match(/^[A-D]\)/))
-    ) {
-      const effects = parseEffectsFromLine(line, lines.slice(i + 1, i + 3).join(' '));
-      currentQuestion.answers.push({
-        value: line.split(/[-–:]/)[0].trim(),
-        effects,
+    // Detect answers - Yes/No or lettered options
+    if (currentQuestion) {
+      const isAnswer = /^(Yes|No)\b/i.test(line) || /^[a-e]\.\s+/i.test(line);
+
+      if (isAnswer) {
+        const { value, effects } = parseAnswerLine(line);
+        currentQuestion.answers.push({
+          value,
+          effects,
+        });
+        continue;
+      }
+
+      // Also detect simple text answers (like "Heel", "Ankle", etc.)
+      const isSimpleAnswer =
+        !line.includes('?') &&
+        line.length < 50 &&
+        !inTestSection &&
+        !inObservationSection &&
+        !upperLine.startsWith('FOR ') &&
+        !upperLine.startsWith('OBSERVATION') &&
+        !upperLine.startsWith('TEST') &&
+        !upperLine.startsWith('RADIOGRAPHIC') &&
+        currentQuestion.answers.length < 10; // Sanity check
+
+      if (
+        (isSimpleAnswer && currentQuestion.question.toLowerCase().includes('region')) ||
+        currentQuestion.question.toLowerCase().includes('when') ||
+        currentQuestion.question.toLowerCase().includes('type')
+      ) {
+        const { value, effects } = parseAnswerLine(line);
+        if (value.length > 1) {
+          currentQuestion.answers.push({
+            value,
+            effects,
+          });
+        }
+      }
+    }
+
+    // Detect age criteria
+    if (currentCondition && /^AGE\s*\(/i.test(line)) {
+      currentCondition.entry_criteria.push({
+        type: 'age',
+        description: line,
       });
-      continue;
-    }
-
-    // Detect red flags
-    if (upperLine.includes('RED FLAG') || upperLine.includes('CRITICAL')) {
-      if (currentQuestion && currentQuestion.answers.length > 0) {
-        const lastAnswer = currentQuestion.answers[currentQuestion.answers.length - 1];
-        lastAnswer.effects.red_flag = true;
-        lastAnswer.effects.red_flag_text = line;
-      }
-    }
-
-    // Detect recommended tests
-    if (
-      upperLine.includes('TEST') ||
-      upperLine.includes('EXAMINATION') ||
-      upperLine.includes('PHYSICAL EXAM')
-    ) {
-      if (currentCondition) {
-        currentCondition.recommended_tests.push(line);
-      }
-    }
-
-    // Detect confirmation methods
-    if (upperLine.includes('CONFIRM') || upperLine.includes('DIAGNOSIS')) {
-      if (currentCondition) {
-        currentCondition.confirmation_methods.push(line);
-      }
     }
   }
 
@@ -200,70 +377,20 @@ function parseRulesFromText(rawText, region) {
     conditions.push(currentCondition);
   }
 
+  // Add global questions to a general condition if they exist
+  if (globalQuestions.length > 0) {
+    conditions.unshift({
+      name: 'Initial Assessment',
+      entry_criteria: [],
+      questions: globalQuestions,
+      recommended_tests: [],
+      confirmation_methods: [],
+      observations: [],
+      is_general: true,
+    });
+  }
+
   return conditions;
-}
-
-/**
- * Categorize question based on content
- */
-function categorizeQuestion(text) {
-  const upper = text.toUpperCase();
-
-  if (upper.includes('LOCATION') || upper.includes('WHERE')) return 'location';
-  if (upper.includes('WHEN') || upper.includes('MORNING') || upper.includes('NIGHT'))
-    return 'temporal';
-  if (upper.includes('HOW') && upper.includes('BEGIN')) return 'onset';
-  if (upper.includes('STIFF')) return 'stiffness';
-  if (upper.includes('NUMB') || upper.includes('TINGL')) return 'neurological';
-  if (upper.includes('WEAK')) return 'neurological';
-  if (upper.includes('BOWEL') || upper.includes('BLADDER')) return 'red_flag';
-  if (upper.includes('SCALE') || upper.includes('0-10')) return 'pain_intensity';
-  if (upper.includes('RADIAT')) return 'radiation';
-  if (upper.includes('SWELL')) return 'inflammation';
-  if (upper.includes('POP') || upper.includes('CRACK')) return 'mechanical';
-  if (upper.includes('WALK') || upper.includes('BEAR WEIGHT')) return 'function';
-
-  return 'general';
-}
-
-/**
- * Parse effects from answer line and context
- */
-function parseEffectsFromLine(line, context) {
-  const effects = {
-    rule_out: [],
-    increase_likelihood: [],
-    decrease_likelihood: [],
-    next_questions: [],
-  };
-
-  const combined = (line + ' ' + context).toUpperCase();
-
-  // Parse "Rule out" - in this context means "investigate further"
-  if (combined.includes('RULE OUT')) {
-    const match = combined.match(/RULE OUT[:\s]*([A-Z\s]+)/);
-    if (match) {
-      effects.rule_out.push(match[1].trim());
-    }
-  }
-
-  // Parse "Confirm"
-  if (combined.includes('CONFIRM')) {
-    const match = combined.match(/CONFIRM[:\s]*([A-Z\s]+)/);
-    if (match) {
-      effects.increase_likelihood.push(match[1].trim());
-    }
-  }
-
-  // Parse "Indicator"
-  if (combined.includes('INDICATOR')) {
-    const match = combined.match(/([A-Z\s]+)\s*INDICATOR/);
-    if (match) {
-      effects.increase_likelihood.push(match[1].trim());
-    }
-  }
-
-  return effects;
 }
 
 /**
@@ -283,6 +410,9 @@ async function convertDocxToJson(docxPath) {
   }
 
   const conditions = parseRulesFromText(text, region);
+
+  // Count total questions
+  const totalQuestions = conditions.reduce((sum, c) => sum + c.questions.length, 0);
 
   const ruleJson = {
     region,
@@ -311,6 +441,7 @@ async function convertDocxToJson(docxPath) {
 
   console.log(`  Created: ${path.basename(jsonPath)}`);
   console.log(`  Conditions found: ${conditions.length}`);
+  console.log(`  Total questions: ${totalQuestions}`);
 
   return ruleJson;
 }
@@ -352,6 +483,7 @@ async function ingestAllRules() {
       source_file: r.source_file,
       json_file: r.source_file.replace('.docx', '.json'),
       condition_count: r.conditions.length,
+      question_count: r.conditions.reduce((sum, c) => sum + c.questions.length, 0),
     })),
   };
 

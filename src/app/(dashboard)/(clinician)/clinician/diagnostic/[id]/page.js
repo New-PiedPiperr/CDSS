@@ -48,10 +48,29 @@ export default function DiagnosticExecutionPage() {
     setCurrentTestState(getCurrentTest(initialState));
   }, [moduleSlug, caseId]);
 
-  const handleOutcome = (result) => {
+  const handleOutcome = async (result) => {
     if (!engineState || !currentTest) return;
 
+    // 1. Advance Engine State locally for UI responsiveness
     const newState = recordTestResult(engineState, currentTest.id, result);
+
+    // 2. Persist finding to Clinical API if linked to a case
+    if (caseId && caseId !== 'new-diagnostic') {
+      try {
+        await fetch(`/api/diagnosis/${caseId}/guided-test`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            testId: currentTest.id,
+            result: result,
+            notes: `Recorded via Guided Diagnostic Module (${moduleSlug})`,
+          }),
+        });
+      } catch (err) {
+        console.error('Clinical Sync Error:', err);
+      }
+    }
+
     setEngineState(newState);
 
     if (newState.isComplete) {

@@ -333,7 +333,8 @@ function parseRulesFromText(rawText, region) {
     }
 
     // Detect questions (lines ending with ?)
-    if (line.includes('?')) {
+    // Skip "For X?" style lines as these are condition headers, not questions
+    if (line.includes('?') && !/^FOR\s+/i.test(line)) {
       inTestSection = false;
       inObservationSection = false;
 

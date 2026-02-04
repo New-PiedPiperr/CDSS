@@ -21,23 +21,33 @@ export default function Sidebar({
   const { user: storeUser } = useAuthStore();
   const { data: session } = useSession();
   const [unreadCount, setUnreadCount] = useState(0);
+  const [unreadNotifications, setUnreadNotifications] = useState(0);
 
   // Use user from store (full profile from /me) or fallback to session or initial prop
   const user = storeUser || session?.user || initialUser;
 
   useEffect(() => {
-    const fetchUnread = async () => {
+    const fetchCounts = async () => {
       try {
-        const count = await getTotalUnreadCount();
-        setUnreadCount(count);
+        // Fetch Messages Count
+        const mCount = await getTotalUnreadCount();
+        setUnreadCount(mCount);
+
+        // Fetch Notifications Count
+        const nRes = await fetch('/api/notifications');
+        const notifications = await nRes.json();
+        if (Array.isArray(notifications)) {
+          const unreadN = notifications.filter((n) => !n.isRead).length;
+          setUnreadNotifications(unreadN);
+        }
       } catch (err) {
-        console.error('Failed to fetch unread count:', err);
+        console.error('Failed to fetch counts:', err);
       }
     };
 
-    fetchUnread();
+    fetchCounts();
     // Poll for updates every 10 seconds for real-time feel in sidebar
-    const interval = setInterval(fetchUnread, 10000);
+    const interval = setInterval(fetchCounts, 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -132,6 +142,11 @@ export default function Sidebar({
                     {link.label === 'Messages' && unreadCount > 0 && (
                       <span className="flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white ring-2 ring-white">
                         {unreadCount}
+                      </span>
+                    )}
+                    {link.label === 'Notifications' && unreadNotifications > 0 && (
+                      <span className="flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white ring-2 ring-white">
+                        {unreadNotifications}
                       </span>
                     )}
                   </Link>

@@ -21,138 +21,135 @@ import { cn } from '@/lib/cn';
 // Enhanced content based on project context
 const KNOWLEDGE_BASE = [
   {
-    id: 'getting-started',
-    title: 'Getting Started',
-    description: 'Learn the basics of using the CDSS platform.',
-    icon: <BookOpen className="h-6 w-6 text-blue-500" />,
+    id: 'clinical-workflow',
+    title: 'Clinical Workflow',
+    description: 'Optimize your patient journey and diagnostic path.',
+    icon: <Stethoscope className="h-6 w-6 text-blue-500" />,
     articles: [
       {
         id: 'overview',
-        title: 'Clinician Dashboard Overview',
+        title: 'Heuristic Assessment Logic',
         content:
-          'Navigate the main dashboard, interpret patient statistics, and access quick actions for your daily workflow.',
-        readTime: '3 min read',
-      },
-      {
-        id: 'profile-setup',
-        title: 'Setting up your profile',
-        content:
-          'Manage your professional details, clinical specializations, and availability schedule to ensure accurate patient matching.',
+          'Deep dive into the branching engine logic. Understand how responses trigger rule-outs and likelihood increases based on regional patterns.',
         readTime: '5 min read',
       },
       {
-        id: 'first-patient',
-        title: 'Adding your first patient',
+        id: 'traceability',
+        title: 'Audit-Ready Traceability',
         content:
-          'Step-by-step guide to onboarding a new patient, entering initial symptoms, and assigning a treatment plan.',
+          'Every diagnostic data point is snapshotted. Learn how to access the full Q&A log and AI reasoning for medical documentation.',
         readTime: '4 min read',
+      },
+      {
+        id: 'guided-testing',
+        title: 'Therapist-Guided Testing',
+        content:
+          'How to perform and record physical tests within the CDSS to refine preliminary AI diagnoses into definitive clinical outcomes.',
+        readTime: '6 min read',
       },
     ],
   },
   {
-    id: 'diagnostic-engine',
-    title: 'Diagnostic Engine',
-    description: 'Understand how the rule-based engine works.',
-    icon: <Stethoscope className="h-6 w-6 text-purple-500" />,
+    id: 'engine-mechanics',
+    title: 'Engine Mechanics',
+    description: 'Technical details of the CDSS reasoning engine.',
+    icon: <Activity className="h-6 w-6 text-purple-500" />,
     articles: [
       {
-        id: 'weighted-matching',
-        title: 'How weighted matching works',
+        id: 'red-flags',
+        title: 'Red Flag Protocols',
         content:
-          'The engine uses a heuristic algorithm to match reported symptoms against known clinical patterns. Each symptom carries a specific weight.',
-        readTime: '6 min read',
+          'How the engine identifies and flags clinical red flags for immediate intervention. Follow the suggested urgent review protocols.',
+        readTime: '3 min read',
       },
       {
         id: 'confidence-scores',
-        title: 'Interpreting confidence scores',
+        title: 'Interpreting AI Confidence',
         content:
-          'Confidence scores indicate the correlation strength between reported symptoms and a diagnosis. >80% suggests a strong match.',
+          'Confidence scores are derived from mathematical correlation. Learn the clinical threshold for various diagnostic suspicions.',
         readTime: '3 min read',
       },
       {
-        id: 'refining-diagnosis',
-        title: 'Refining a diagnosis',
+        id: 'rule-ingestion',
+        title: 'Medical Rule Libraries',
         content:
-          'How to use manual overrides and additional clinical notes to refine the AI-suggested diagnostic output.',
-        readTime: '5 min read',
-      },
-    ],
-  },
-  {
-    id: 'patient-management',
-    title: 'Patient Management',
-    description: 'Tools for tracking and managing patient care.',
-    icon: <Activity className="h-6 w-6 text-green-500" />,
-    articles: [
-      {
-        id: 'viewing-history',
-        title: 'Viewing patient history',
-        content:
-          'Access comprehensive logs of past sessions, treatment progress, and archived diagnostic reports.',
-        readTime: '2 min read',
-      },
-      {
-        id: 'medical-records',
-        title: 'Uploading medical records',
-        content:
-          'Securely upload external documents like MRI scans, X-rays, and previous referral letters to a patient profile.',
-        readTime: '4 min read',
-      },
-      {
-        id: 'treatment-plans',
-        title: 'Managing Treatment Plans',
-        content:
-          'Create, modify, and track adherence to prescribed rehabilitation and recovery programs.',
+          'Our rules are ingested from peer-reviewed MSK journals. Learn about the regional JSON structures for Ankle, Lumbar, and Shoulder.',
         readTime: '7 min read',
       },
     ],
   },
   {
-    id: 'security-compliance',
-    title: 'Security & Compliance',
-    description: 'Data protection and regulatory information.',
-    icon: <ShieldCheck className="h-6 w-6 text-indigo-500" />,
+    id: 'patient-data',
+    title: 'Patient Data & Privacy',
+    description: 'GDPR/HIPAA compliant data management.',
+    icon: <ShieldCheck className="h-6 w-6 text-emerald-500" />,
     articles: [
       {
-        id: 'data-privacy',
-        title: 'Patient Data Privacy',
+        id: 'biodata-snapshots',
+        title: 'Biodata Snapshot Integrity',
         content:
-          'Overview of encryption standards (AES-256) and HIPAA/GDPR compliance measures implemented in CDSS.',
+          'Understand why we snapshot patient biodata per assessment. This ensures historical clinical accuracy even if patient profiles change.',
         readTime: '4 min read',
       },
       {
-        id: 'session-security',
-        title: 'Managing Active Sessions',
+        id: 'encryption',
+        title: 'Data Security Standards',
         content:
-          'How to use the Security Settings to monitor active logins and remotely log out suspicious devices.',
+          'Overview of our AES-256 encryption at rest and TLS 1.3 in transit. Your patient records are secured to international standards.',
+        readTime: '5 min read',
+      },
+    ],
+  },
+  {
+    id: 'platform-training',
+    title: 'Platform Training',
+    description: 'Master the CDSS interface and features.',
+    icon: <BookOpen className="h-6 w-6 text-amber-500" />,
+    articles: [
+      {
+        id: 'dashboard-mastery',
+        title: 'Clinician Hub Overview',
+        content:
+          'Master the new clinician dashboard. Track active assessments, pending reviews, and urgent case files from a single pane.',
         readTime: '3 min read',
+      },
+      {
+        id: 'treatment-planning',
+        title: 'Advanced Treatment Planner',
+        content:
+          'Create complex treatment plans with exercise regimens and physiotherapy protocols tailored to diagnostic outcomes.',
+        readTime: '6 min read',
       },
     ],
   },
 ];
 
-const RESOURCES = [];
+const RESOURCES = [
+  { name: 'Therapist User Manual', type: 'PDF', size: '2.4 MB', url: '#' },
+  { name: 'MSK Rule Book (V4)', type: 'DOCX', size: '1.8 MB', url: '#' },
+  { name: 'Patient Integration Guide', type: 'PDF', size: '920 KB', url: '#' },
+];
 
 const FAQS = [
   {
-    question: 'How accurate is the diagnostic engine?',
+    question: 'How do I override an AI preliminary diagnosis?',
     answer:
-      'The heuristic engine uses a weighted matching paradigm based on established clinical patterns. While highly reliable for screening, it is designed to support, not replace, clinical judgment.',
+      'The AI diagnosis is temporal. You can finalize any diagnosis in the Clinician Review section of the case file after performing physical tests.',
   },
   {
-    question: "Can I customize a patient's treatment plan?",
+    question: 'Are my clinical notes shared with the patient?',
     answer:
-      'Yes, the Treatment Planner tool allows you to modify suggested plans or create entirely new ones based on your clinical assessment.',
+      'By default, clinical impressions are kept for therapist review. You can choose to share summary highlights in the patient-facing plan.',
   },
   {
-    question: 'Is patient data secure?',
+    question: 'How often are the medical rules updated?',
     answer:
-      'All data is encrypted in transit and at rest. We comply with standard healthcare data protection regulations to ensure patient privacy.',
+      'We update our regional JSON rule libraries quarterly or when new clinical breakthroughs in MSD are verified by our oversight board.',
   },
   {
-    question: 'How do I reset my 2FA?',
+    question: 'Is the system cloud or local based?',
     answer:
-      'Navigate to Settings > Security. If you have lost access to your device, please contact support immediately for identity verification.',
+      'CDSS is a secure cloud platform, ensuring you have real-time access to patient assessments across any clinic location.',
   },
 ];
 
@@ -168,7 +165,6 @@ export default function HelpCenterClient() {
 
     const lowerQuery = searchQuery.toLowerCase();
 
-    // deeply filter categories and articles
     return KNOWLEDGE_BASE.map((cat) => ({
       ...cat,
       articles: cat.articles.filter(
@@ -185,26 +181,41 @@ export default function HelpCenterClient() {
   }, [searchQuery, activeCategory]);
 
   return (
-    <div className="space-y-12">
-      {/* Search & Hero */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 to-blue-700 p-8 text-center text-white shadow-xl md:p-12">
-        <div className="absolute top-0 left-0 h-full w-full bg-[url('/grid-pattern.svg')] opacity-10"></div>
-        <div className="relative z-10 mx-auto max-w-3xl space-y-6">
-          <h1 className="text-4xl font-black tracking-tight md:text-5xl">
-            How can we help you?
+    <div className="space-y-16 pb-20">
+      {/* Search & Hero with Premium Glassmorphism */}
+      <div className="relative overflow-hidden rounded-[3rem] bg-slate-950 p-12 text-center text-white shadow-2xl md:p-20">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="bg-primary/10 absolute top-[-20%] left-[-10%] h-[70%] w-[70%] rounded-full blur-[120px]" />
+          <div className="absolute right-[-10%] bottom-[-20%] h-[70%] w-[70%] rounded-full bg-blue-600/10 blur-[120px]" />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-4xl space-y-8">
+          <div className="mx-auto flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-2 backdrop-blur-md">
+            <div className="bg-primary h-2 w-2 animate-pulse rounded-full" />
+            <span className="text-xs font-black tracking-widest text-white/70 uppercase">
+              CDSS Support Center
+            </span>
+          </div>
+
+          <h1 className="text-5xl font-black tracking-tight md:text-7xl">
+            Knowledge for{' '}
+            <span className="from-primary bg-gradient-to-r to-blue-400 bg-clip-text text-transparent">
+              Better Care.
+            </span>
           </h1>
-          <p className="mx-auto max-w-2xl text-lg font-medium text-indigo-100">
-            Find answers, expert guides, and technical documentation to help you support
-            your patients.
+
+          <p className="mx-auto max-w-2xl text-xl font-medium text-slate-400">
+            Access exhaustive clinical guides, technical rule documentation, and
+            operational help.
           </p>
 
-          <div className="group relative mx-auto max-w-xl">
-            <div className="pointer-events-none absolute inset-y-0 left-4 flex items-center">
-              <Search className="h-5 w-5 text-indigo-300 transition-colors group-focus-within:text-indigo-500" />
+          <div className="group relative mx-auto mt-12 max-w-2xl">
+            <div className="pointer-events-none absolute inset-y-0 left-6 flex items-center">
+              <Search className="group-focus-within:text-primary h-6 w-6 text-slate-500 transition-colors" />
             </div>
             <Input
-              placeholder="Search for articles, guides, or error codes..."
-              className="text-foreground placeholder:text-muted-foreground h-16 rounded-2xl border-none bg-white/95 pl-12 text-base font-semibold shadow-lg transition-all placeholder:font-medium focus:bg-white"
+              placeholder="Search clinical protocols, rules, or guides..."
+              className="focus:border-primary/50 focus:ring-primary/20 h-20 rounded-[2rem] border-white/10 bg-white/5 pl-16 text-lg font-bold text-white shadow-2xl backdrop-blur-2xl transition-all placeholder:font-medium placeholder:text-slate-500 focus:bg-white/10 focus:ring-4"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -213,136 +224,170 @@ export default function HelpCenterClient() {
       </div>
 
       {/* Main Content Area */}
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+      <div className="grid grid-cols-1 gap-16 px-2 lg:grid-cols-12">
         {/* Sidebar / Filters (Desktop) */}
-        <div className="hidden space-y-6 lg:col-span-3 lg:block">
-          <div className="sticky top-24">
-            <h3 className="mb-4 px-2 text-lg font-bold">Categories</h3>
-            <div className="space-y-1">
-              <Button
-                variant={activeCategory === 'all' ? 'secondary' : 'ghost'}
-                className="w-full justify-start rounded-xl font-semibold"
-                onClick={() => setActiveCategory('all')}
-              >
-                All Topics
-              </Button>
-              {KNOWLEDGE_BASE.map((cat) => (
-                <Button
-                  key={cat.id}
-                  variant={activeCategory === cat.id ? 'secondary' : 'ghost'}
-                  className="text-muted-foreground hover:text-foreground w-full justify-start rounded-xl font-medium"
-                  onClick={() => setActiveCategory(cat.id)}
+        <div className="hidden space-y-8 lg:col-span-3 lg:block">
+          <div className="sticky top-28 space-y-12">
+            <div className="space-y-4">
+              <h3 className="text-sm font-black tracking-widest text-slate-400 uppercase">
+                Knowledge Categories
+              </h3>
+              <div className="flex flex-col gap-2">
+                <button
+                  onClick={() => setActiveCategory('all')}
+                  className={cn(
+                    'flex items-center gap-3 rounded-2xl px-5 py-4 text-sm font-bold transition-all',
+                    activeCategory === 'all'
+                      ? 'bg-primary shadow-primary/20 scale-105 text-white shadow-lg'
+                      : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-900'
+                  )}
                 >
-                  {cat.title}
-                </Button>
-              ))}
+                  <Activity className="h-4 w-4" />
+                  All Case Support
+                </button>
+                {KNOWLEDGE_BASE.map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveCategory(cat.id)}
+                    className={cn(
+                      'flex items-center gap-3 rounded-2xl px-5 py-4 text-sm font-bold transition-all',
+                      activeCategory === cat.id
+                        ? 'bg-slate-900 text-white shadow-lg dark:bg-white dark:text-slate-900'
+                        : 'text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-900'
+                    )}
+                  >
+                    <span className="shrink-0">{cat.icon}</span>
+                    {cat.title}
+                  </button>
+                ))}
+              </div>
             </div>
 
-            {RESOURCES.length > 0 && (
-              <div className="mt-8">
-                <h3 className="mb-4 px-2 text-lg font-bold">Official Docs</h3>
-                <div className="space-y-3">
-                  {RESOURCES.map((doc) => (
-                    <a
-                      key={doc.name}
-                      href={doc.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:bg-muted hover:border-border group flex items-center gap-3 rounded-xl border border-transparent p-3 transition-colors"
-                    >
-                      <div className="rounded-lg bg-blue-100 p-2 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
-                        <FileText className="h-4 w-4" />
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <p className="group-hover:text-primary truncate text-sm font-bold transition-colors">
-                          {doc.name}
-                        </p>
-                        <p className="text-muted-foreground text-[10px] font-bold uppercase">
-                          {doc.type} • {doc.size}
-                        </p>
-                      </div>
-                      <Download className="text-muted-foreground h-4 w-4 opacity-0 transition-opacity group-hover:opacity-100" />
-                    </a>
-                  ))}
-                </div>
+            <div className="space-y-6">
+              <h3 className="text-sm font-black tracking-widest text-slate-400 uppercase">
+                Clinical Downloads
+              </h3>
+              <div className="space-y-3">
+                {RESOURCES.map((res) => (
+                  <button
+                    key={res.name}
+                    className="group hover:border-primary/50 hover:bg-primary/5 flex w-full items-center gap-4 rounded-2xl border border-slate-200 p-4 text-left transition-all dark:border-slate-800"
+                  >
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-900 dark:bg-slate-900 dark:text-white">
+                      <Download className="h-5 w-5" />
+                    </div>
+                    <div className="flex-1 overflow-hidden">
+                      <p className="truncate text-sm font-black">{res.name}</p>
+                      <p className="text-[10px] font-bold text-slate-400 uppercase">
+                        {res.type} • {res.size}
+                      </p>
+                    </div>
+                  </button>
+                ))}
               </div>
-            )}
+            </div>
           </div>
         </div>
 
         {/* Dynamic Content */}
-        <div className="space-y-10 lg:col-span-9">
+        <div className="space-y-16 lg:col-span-9">
           {filteredContent.length > 0 ? (
             filteredContent.map((category) => (
               <div
                 key={category.id}
-                className="animate-in fade-in slide-in-from-bottom-4 space-y-4 duration-500"
+                className="animate-in fade-in slide-in-from-bottom-6 duration-700"
               >
-                <div className="mb-2 flex items-center gap-3">
-                  <div className="bg-muted rounded-xl p-2">{category.icon}</div>
-                  <div>
-                    <h2 className="text-xl font-bold">{category.title}</h2>
-                    <p className="text-muted-foreground text-sm font-medium">
-                      {category.description}
-                    </p>
+                <div className="mb-8 flex items-end justify-between border-b border-slate-100 pb-6 dark:border-slate-900">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-primary/10 text-primary flex h-16 w-16 items-center justify-center rounded-2xl shadow-inner">
+                      {category.icon}
+                    </div>
+                    <div>
+                      <h2 className="text-3xl font-black tracking-tight">
+                        {category.title}
+                      </h2>
+                      <p className="text-lg font-medium text-slate-500">
+                        {category.description}
+                      </p>
+                    </div>
                   </div>
+                  <Badge
+                    variant="outline"
+                    className="h-8 rounded-full border-slate-200 px-4 text-xs font-bold text-slate-400 dark:border-slate-800"
+                  >
+                    {category.articles.length} articles
+                  </Badge>
                 </div>
 
-                <div className="grid gap-4 md:grid-cols-2">
+                <div className="grid gap-6 md:grid-cols-2">
                   {category.articles.map((article) => (
-                    <Card
+                    <div
                       key={article.id}
-                      className="group border-border hover:border-primary/50 cursor-pointer rounded-2xl transition-all hover:shadow-md"
+                      className="group hover:border-primary/20 cursor-pointer rounded-[2rem] border border-slate-100 bg-white p-8 shadow-sm transition-all hover:bg-slate-50 hover:shadow-xl dark:border-slate-900 dark:bg-slate-950 dark:hover:bg-slate-900/50"
                     >
-                      <CardContent className="p-6">
-                        <div className="flex items-start justify-between gap-4">
-                          <h3 className="group-hover:text-primary text-lg leading-tight font-bold transition-colors">
-                            {article.title}
-                          </h3>
-                          <Badge
-                            variant="secondary"
-                            className="shrink-0 text-[10px] font-bold uppercase"
-                          >
-                            {article.readTime}
-                          </Badge>
-                        </div>
-                        <p className="text-muted-foreground mt-3 line-clamp-3 text-sm leading-relaxed">
-                          {article.content}
-                        </p>
-                        <div className="text-primary mt-4 flex translate-y-2 transform items-center text-xs font-bold tracking-widest uppercase opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                          Read Article <ChevronRight className="ml-1 h-3 w-3" />
-                        </div>
-                      </CardContent>
-                    </Card>
+                      <div className="flex items-start justify-between gap-4">
+                        <h3 className="group-hover:text-primary text-xl font-black tracking-tight transition-colors">
+                          {article.title}
+                        </h3>
+                        <span className="shrink-0 text-[10px] font-black tracking-widest text-slate-400 uppercase">
+                          {article.readTime}
+                        </span>
+                      </div>
+                      <p className="mt-4 line-clamp-3 text-base leading-relaxed font-medium text-slate-500">
+                        {article.content}
+                      </p>
+                      <div className="text-primary mt-8 flex items-center gap-2 text-[10px] font-black tracking-[0.2em] uppercase opacity-0 transition-all duration-300 group-hover:opacity-100">
+                        Explore Methodology <ChevronRight className="h-4 w-4" />
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>
             ))
           ) : (
-            <div className="flex flex-col items-center justify-center py-20 text-center opacity-60">
-              <Search className="text-muted-foreground mb-4 h-16 w-16 opacity-50" />
-              <h3 className="text-xl font-bold">No results found</h3>
-              <p className="text-muted-foreground">Try adjusting your search terms</p>
+            <div className="flex flex-col items-center justify-center py-32 text-center">
+              <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-900">
+                <Search className="h-10 w-10 text-slate-400" />
+              </div>
+              <h3 className="text-2xl font-black">Clinical Search Exhausted</h3>
+              <p className="mt-2 text-lg font-medium text-slate-500">
+                Try clinical keywords like "branching", "MSK", or "red flag"
+              </p>
+              <Button
+                variant="outline"
+                className="mt-8 h-12 rounded-xl"
+                onClick={() => setSearchQuery('')}
+              >
+                Clear Search Parameters
+              </Button>
             </div>
           )}
 
-          {/* FAQs Section - Only show when not searching or if relevant */}
+          {/* FAQs Section */}
           {!searchQuery && (
-            <div className="border-t pt-8">
-              <h2 className="mb-8 text-2xl font-bold">Frequently Asked Questions</h2>
+            <div className="space-y-12 rounded-[3rem] bg-slate-50 p-12 dark:bg-slate-900/50">
+              <div className="text-center">
+                <h2 className="text-4xl font-black tracking-tight">Clinical FAQ</h2>
+                <p className="mt-2 text-lg font-medium text-slate-500">
+                  Quick answers for established practitioners.
+                </p>
+              </div>
+
               <div className="grid gap-6 md:grid-cols-2">
                 {FAQS.map((faq, i) => (
                   <div
                     key={i}
-                    className="bg-card rounded-2xl border p-6 shadow-sm transition-shadow hover:shadow-md"
+                    className="flex flex-col justify-between rounded-3xl bg-white p-8 shadow-sm transition-all hover:shadow-md dark:bg-slate-950"
                   >
-                    <h3 className="mb-3 flex items-start gap-3 font-bold">
-                      <HelpCircle className="mt-0.5 h-5 w-5 shrink-0 text-indigo-500" />
-                      {faq.question}
-                    </h3>
-                    <p className="text-muted-foreground pl-8 text-sm leading-relaxed">
-                      {faq.answer}
-                    </p>
+                    <div>
+                      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-indigo-50 text-indigo-500 dark:bg-indigo-900/30">
+                        <HelpCircle className="h-5 w-5" />
+                      </div>
+                      <h3 className="text-lg leading-tight font-black">{faq.question}</h3>
+                      <p className="mt-4 text-sm leading-relaxed font-medium text-slate-500">
+                        {faq.answer}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -351,24 +396,48 @@ export default function HelpCenterClient() {
         </div>
       </div>
 
-      {/* Support CTA */}
-      <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-slate-900 to-slate-800 p-8 text-center text-white shadow-2xl md:p-12">
-        <div className="animate-blob absolute top-0 right-0 rounded-full bg-blue-500 p-32 opacity-20 mix-blend-overlay blur-3xl filter"></div>
-        <div className="animate-blob animation-delay-2000 absolute bottom-0 left-0 rounded-full bg-purple-500 p-32 opacity-20 mix-blend-overlay blur-3xl filter"></div>
+      {/* Extreme Support CTA */}
+      <div className="group relative mx-2 overflow-hidden rounded-[3.5rem] bg-slate-950 p-12 text-center text-white shadow-2xl md:p-20">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute top-0 right-0 h-full w-full bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.2),transparent)] transition-all duration-700 group-hover:scale-110" />
+          <div className="absolute bottom-0 left-0 h-full w-full bg-[radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.2),transparent)] transition-all duration-700 group-hover:scale-110" />
+        </div>
 
         <div className="relative z-10 flex flex-col items-center">
-          <div className="mb-6 rounded-full bg-white/10 p-4 backdrop-blur-sm">
-            <MessageCircle className="h-8 w-8 text-white" />
+          <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-3xl bg-white/5 shadow-2xl backdrop-blur-3xl">
+            <MessageCircle className="text-primary h-10 w-10" />
           </div>
 
-          <h2 className="mb-4 text-3xl font-black tracking-tight">Still need support?</h2>
-          <p className="mb-8 max-w-lg text-lg font-medium text-slate-300">
-            Our clinical support team is available 24/7 to assist you with technical
-            issues or complicated diagnostic cases.
+          <h2 className="max-w-xl text-4xl font-black tracking-tight md:text-6xl">
+            Unresolved <span className="text-primary">Clinical Context?</span>
+          </h2>
+
+          <p className="mt-6 max-w-2xl text-xl font-medium text-slate-400">
+            Our medical oversight team is standing by to help with diagnostic logic or
+            technical platform issues.
           </p>
-          <Button className="h-14 rounded-2xl bg-white px-10 text-lg font-bold text-slate-900 shadow-lg transition-colors hover:bg-indigo-50 hover:shadow-xl">
-            Contact Support
-          </Button>
+
+          <div className="mt-12 flex flex-col items-center gap-6 sm:flex-row">
+            <Button
+              size="lg"
+              className="h-16 rounded-2xl bg-white px-12 text-lg font-extrabold text-slate-950 shadow-xl transition-all hover:scale-105 hover:bg-slate-100"
+            >
+              Contact Practitioner Support
+            </Button>
+            <div className="flex items-center gap-3">
+              <div className="flex -space-x-3">
+                {[1, 2, 3].map((i) => (
+                  <div
+                    key={i}
+                    className="ring-primary/20 h-10 w-10 rounded-full border-2 border-slate-950 bg-slate-800 ring-2"
+                  />
+                ))}
+              </div>
+              <span className="text-xs font-bold tracking-widest text-slate-400 uppercase">
+                4 Therapists Online
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

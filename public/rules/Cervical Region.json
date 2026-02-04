@@ -73,7 +73,15 @@
           "inputType": "select",
           "options": [
             {
-              "value": "Sex",
+              "value": "Yes",
+              "nextQuestionId": "cervical_q4",
+              "effects": {
+                "increase_likelihood": [],
+                "decrease_likelihood": []
+              }
+            },
+            {
+              "value": "No",
               "nextQuestionId": "cervical_q4",
               "effects": {
                 "increase_likelihood": [],

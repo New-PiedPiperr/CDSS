@@ -163,24 +163,27 @@ const useAssessmentStore = create(
       },
 
       /**
-       * UPDATE ENGINE STATE
-       * ====================
-       * Called when processing an answer through the engine.
-       * Updates the full engine state including condition tracking.
+       * UPDATE ENGINE STATE (V2)
+       * =========================
+       * Called when processing an answer through the branching engine.
+       * Updates the full engine state including condition tracking and rule-outs.
        */
       updateEngineState: (newState) => {
-        const { askedQuestions, redFlags: engineRedFlags } = newState;
+        // V2 uses answeredQuestions instead of askedQuestions
+        const answeredQuestions =
+          newState.answeredQuestions || newState.askedQuestions || [];
+        const engineRedFlags = newState.redFlags || [];
 
         // Sync legacy state for backward compatibility
         const responses = {};
-        askedQuestions.forEach((aq) => {
+        answeredQuestions.forEach((aq) => {
           responses[aq.questionId] = aq.answer;
         });
 
         set({
           engineState: newState,
           responses,
-          history: askedQuestions.map((aq) => aq.questionId),
+          history: answeredQuestions.map((aq) => aq.questionId),
           redFlags: engineRedFlags.map((rf) => rf.redFlagText || 'Red Flag Detected'),
         });
       },

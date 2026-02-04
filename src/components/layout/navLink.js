@@ -2,7 +2,7 @@
 import {
   LayoutDashboard,
   ClipboardPlus,
-  FlaskConical,
+  // FlaskConical - REMOVED: Was used by deprecated Self-Guided Test nav link
   TrendingUp,
   MessageSquare,
   Bell,

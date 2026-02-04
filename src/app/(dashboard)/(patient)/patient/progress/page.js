@@ -19,7 +19,7 @@ import {
   Award,
   ClipboardCheck,
   AlertCircle,
-  CheckCircle2,
+  // CheckCircle2 - REMOVED: Was used by deprecated Self-Tests section
 } from 'lucide-react';
 import ProgressCharts from './ProgressCharts';
 

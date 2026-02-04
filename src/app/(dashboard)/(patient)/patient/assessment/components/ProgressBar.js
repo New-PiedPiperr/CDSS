@@ -16,7 +16,8 @@ import useAssessmentStore from '@/store/assessmentStore';
  * 6. complete   → Confirmation (Step 6)
  */
 export default function ProgressBar() {
-  const { currentStep, engineState, biodataConfirmed } = useAssessmentStore();
+  const { currentStep, engineState, selectedRegion, biodataConfirmed } =
+    useAssessmentStore();
 
   // Don't show progress bar during biodata confirmation (it's a pre-step)
   if (currentStep === 'biodata') return null;
@@ -34,14 +35,23 @@ export default function ProgressBar() {
     progress = 10;
     label = 'Select Body Region';
   } else if (currentStep === 'questions') {
-    // Use engine state for accurate progress
-    const answeredCount = engineState?.askedQuestions?.length || 0;
+    // V2 uses answeredQuestions
+    const answeredCount = engineState?.answeredQuestions?.length || 0;
     const totalQuestions =
-      engineState?.conditions?.reduce((sum, c) => sum + c.questions.length, 0) || 50; // Fallback estimate
+      engineState?.questionsMap?.size ||
+      engineState?.conditions?.reduce((sum, c) => sum + c.questions.length, 0) ||
+      50;
 
     // Progress from 15% to 75% during questions
     progress = Math.min(15 + (answeredCount / totalQuestions) * 60, 75);
-    label = `Question ${answeredCount + 1}`;
+
+    // USER REQUEST: Change "Question X" to the title of the body region
+    const regionTitle =
+      engineState?.title ||
+      (selectedRegion
+        ? selectedRegion.charAt(0).toUpperCase() + selectedRegion.slice(1)
+        : '');
+    label = regionTitle || `Question ${answeredCount + 1}`;
   } else if (currentStep === 'summary') {
     progress = 85;
     label = 'Review Your Answers';

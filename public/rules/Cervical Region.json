@@ -2,386 +2,469 @@
   "region": "cervical",
   "title": "Cervical Region",
   "source_file": "Cervical Region.docx",
-  "extracted_at": "2026-02-04T03:56:23.890Z",
-  "version": "2.0.0",
+  "extracted_at": "2026-02-04T08:50:44.249Z",
   "conditions": [
     {
       "name": "Cervical Disc Herniation",
-      "id": "cervical_disc_herniation",
       "entry_criteria": [],
       "questions": [
         {
           "id": "cervical_q1",
-          "questionText": "Where is your pain worse?",
+          "question": "Where is your pain worse?",
           "category": "location",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Neck",
-              "nextQuestionId": "cervical_q2",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "Neck-Arm",
-              "nextQuestionId": "cervical_q2",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 2,
+          "inputType": "select"
         },
         {
           "id": "cervical_q2",
-          "questionText": "How did the pain begin?",
+          "question": "How did the pain begin?",
           "category": "onset",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Sudden",
-              "nextQuestionId": "cervical_q3",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "Gradual",
-              "nextQuestionId": "cervical_q15",
-              "branchTo": [
-                "cervical spondylosis"
-              ],
               "effects": {
                 "rule_out": [
                   "cervical spondylosis"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 5,
+          "inputType": "select"
         },
         {
           "id": "cervical_q3",
-          "questionText": "Age (Below 40 years)?",
+          "question": "Age (Below 40 years)?",
           "category": "demographic",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
-              "value": "Yes",
-              "nextQuestionId": "cervical_q4",
+              "value": "Sex",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
-              }
-            },
-            {
-              "value": "No",
-              "nextQuestionId": "cervical_q4",
-              "effects": {
-                "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Male"
               }
             }
           ],
-          "metadata": {}
+          "source_line": 8,
+          "inputType": "select"
         },
         {
           "id": "cervical_q4",
-          "questionText": "Do you feel numbness in any form?",
+          "question": "Do you feel numbness in any form?",
           "category": "neurological",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q5",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q5",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 10,
+          "inputType": "select"
         },
         {
           "id": "cervical_q5",
-          "questionText": "Which of these movements currently aggravates your pain?",
+          "question": "Which of these movements currently aggravates your pain?",
           "category": "general",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Flexion",
-              "nextQuestionId": "cervical_q6",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck forward"
               }
             },
             {
               "value": "Extension",
-              "nextQuestionId": "cervical_q6",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck backward"
               }
             }
           ],
-          "metadata": {}
+          "source_line": 13,
+          "inputType": "select"
         },
         {
           "id": "cervical_q6",
-          "questionText": "What movements relieve your pain?",
+          "question": "What movements relieve your pain?",
           "category": "general",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Flexion",
-              "nextQuestionId": "cervical_q7",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck forward"
               }
             },
             {
               "value": "Extension",
-              "nextQuestionId": "cervical_q7",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck backward"
               }
             }
           ],
-          "metadata": {}
+          "source_line": 16,
+          "inputType": "select"
         },
         {
           "id": "cervical_q7",
-          "questionText": "Do you feel more pain when you move your neck?",
+          "question": "Do you feel more pain when you move your neck?",
           "category": "temporal",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q8",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q8",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 19,
+          "inputType": "select"
         },
         {
           "id": "cervical_q8",
-          "questionText": "Do you experience some stiffness in your neck?",
+          "question": "Do you experience some stiffness in your neck?",
           "category": "stiffness",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q9",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q9",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 22,
+          "inputType": "select"
         },
         {
           "id": "cervical_q9",
-          "questionText": "Does the pain increase with coughing, sneezing, straining or laughing?",
+          "question": "Does the pain increase with coughing, sneezing, straining or laughing?",
           "category": "general",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q10",
-              "branchTo": [
-                "cervical myelopathy"
-              ],
               "effects": {
                 "rule_out": [
                   "cervical myelopathy"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q10",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 25,
+          "inputType": "select"
         },
         {
           "id": "cervical_q10",
-          "questionText": "Do you have any restrictions with movement around your neck?",
+          "question": "Do you have any restrictions with movement around your neck?",
           "category": "general",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q11",
-              "branchTo": [
-                "cervical stenosis"
-              ],
               "effects": {
                 "rule_out": [
                   "cervical stenosis"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q11",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 28,
+          "inputType": "select"
         },
         {
           "id": "cervical_q11",
-          "questionText": "Do you also have any pain around your lower back, buttocks, thigh or legs?",
+          "question": "Do you also have any pain around your lower back, buttocks, thigh or legs?",
           "category": "general",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q12",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q12",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 31,
+          "inputType": "select"
         },
         {
           "id": "cervical_q12",
-          "questionText": "Does the pain wake you up at night?",
+          "question": "Does the pain wake you up at night?",
           "category": "temporal",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q13",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q13",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 34,
+          "inputType": "select"
         },
         {
           "id": "cervical_q13",
-          "questionText": "Do you feel any form of muscle weakness?",
+          "question": "Do you feel any form of muscle weakness?",
           "category": "neurological",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q14",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q14",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 37,
+          "inputType": "select"
         },
         {
           "id": "cervical_q14",
-          "questionText": "Do you experience impaired sensations in your arm and forearm?",
+          "question": "Do you experience impaired sensations in your arm and forearm?",
           "category": "general",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": null,
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
-              },
-              "isTerminal": true
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
             },
             {
               "value": "No",
-              "nextQuestionId": null,
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
-              },
-              "isTerminal": true
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
             }
           ],
-          "metadata": {}
+          "source_line": 40,
+          "inputType": "select"
         }
       ],
-      "metadata": {},
       "recommended_tests": [],
       "confirmation_methods": [
         "Radiographic confirmation"
@@ -392,413 +475,533 @@
         "Spurling’s Test (Maximal Cervical Compression and Foraminal Compression Test): The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm.",
         "Cervical Distraction Test: The patient lies supine and the neck is positioned comfortably.  The examiner places hand around the patient’s mastoid process. The examiner then slightly flexes the patient’s neck and pull the head towards your torso.Test is positive if the symptoms reduces or is eliminated with traction.",
         "MRI test"
-      ]
+      ],
+      "source_line": 1
     },
     {
       "name": "Cervical Spondylosis",
-      "id": "cervical_spondylosis",
       "entry_criteria": [],
       "questions": [
         {
           "id": "cervical_q15",
-          "questionText": "Where is your pain worse?",
+          "question": "Where is your pain worse?",
           "category": "location",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Back-Buttocks",
-              "nextQuestionId": "cervical_q16",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "Leg",
-              "nextQuestionId": "cervical_q16",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "Neck",
-              "nextQuestionId": "cervical_q16",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "Neck-Arm",
-              "nextQuestionId": "cervical_q16",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 51,
+          "inputType": "select"
         },
         {
           "id": "cervical_q16",
-          "questionText": "How did the pain begin?",
+          "question": "How did the pain begin?",
           "category": "onset",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Sudden",
-              "nextQuestionId": "cervical_q17",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "Gradual",
-              "nextQuestionId": "cervical_q17",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 56,
+          "inputType": "select"
         },
         {
           "id": "cervical_q17",
-          "questionText": "Age (Above 40 years)?",
+          "question": "Age (Above 40 years)?",
           "category": "demographic",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Sex",
-              "nextQuestionId": "cervical_q18",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Female"
               }
             }
           ],
-          "metadata": {}
+          "source_line": 59,
+          "inputType": "select"
         },
         {
           "id": "cervical_q18",
-          "questionText": "Do you feel numbness in any form?",
+          "question": "Do you feel numbness in any form?",
           "category": "neurological",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q19",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q19",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 61,
+          "inputType": "select"
         },
         {
           "id": "cervical_q19",
-          "questionText": "Which of these movements currently aggravates your pain?",
+          "question": "Which of these movements currently aggravates your pain?",
           "category": "general",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Flexion",
-              "nextQuestionId": "cervical_q20",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck forward"
               }
             },
             {
               "value": "Extension",
-              "nextQuestionId": "cervical_q20",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck backward"
               }
             }
           ],
-          "metadata": {}
+          "source_line": 64,
+          "inputType": "select"
         },
         {
           "id": "cervical_q20",
-          "questionText": "What movements relieve your pain?",
+          "question": "What movements relieve your pain?",
           "category": "general",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Flexion",
-              "nextQuestionId": "cervical_q21",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck forward"
               }
             },
             {
               "value": "Extension",
-              "nextQuestionId": "cervical_q21",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck backward"
               }
             }
           ],
-          "metadata": {}
+          "source_line": 67,
+          "inputType": "select"
         },
         {
           "id": "cervical_q21",
-          "questionText": "Do you feel more pain when you move your neck?",
+          "question": "Do you feel more pain when you move your neck?",
           "category": "temporal",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q22",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q22",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 70,
+          "inputType": "select"
         },
         {
           "id": "cervical_q22",
-          "questionText": "Does the pain relieve you with rest?",
+          "question": "Does the pain relieve you with rest?",
           "category": "general",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q23",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q23",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 73,
+          "inputType": "select"
         },
         {
           "id": "cervical_q23",
-          "questionText": "Does the pain increase with coughing, sneezing, straining, or laughing?",
+          "question": "Does the pain increase with coughing, sneezing, straining, or laughing?",
           "category": "general",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q24",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q24",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 76,
+          "inputType": "select"
         },
         {
           "id": "cervical_q24",
-          "questionText": "Do you experience intermittent neck pain and shoulder pain?",
+          "question": "Do you experience intermittent neck pain and shoulder pain?",
           "category": "general",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q25",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q25",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 79,
+          "inputType": "select"
         },
         {
           "id": "cervical_q25",
-          "questionText": "Do you have any restrictions with movement around your neck?",
+          "question": "Do you have any restrictions with movement around your neck?",
           "category": "general",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q26",
-              "branchTo": [
-                "cervical stenosis"
-              ],
               "effects": {
                 "rule_out": [
                   "cervical stenosis"
                 ],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q26",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 82,
+          "inputType": "select"
         },
         {
           "id": "cervical_q26",
-          "questionText": "Do you also have any pain around your lower back, buttocks, thigh, or legs?",
+          "question": "Do you also have any pain around your lower back, buttocks, thigh, or legs?",
           "category": "general",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q27",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q27",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 85,
+          "inputType": "select"
         },
         {
           "id": "cervical_q27",
-          "questionText": "Does the pain wake you up at night?",
+          "question": "Does the pain wake you up at night?",
           "category": "temporal",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q28",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q28",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 88,
+          "inputType": "select"
         },
         {
           "id": "cervical_q28",
-          "questionText": "Do you feel any form of muscle weakness?",
+          "question": "Do you feel any form of muscle weakness?",
           "category": "neurological",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": "cervical_q29",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
-              "nextQuestionId": "cervical_q29",
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "metadata": {}
+          "source_line": 91,
+          "inputType": "select"
         },
         {
           "id": "cervical_q29",
-          "questionText": "Do you experience muscle spasms?",
+          "question": "Do you experience muscle spasms?",
           "category": "general",
-          "inputType": "select",
-          "options": [
+          "answers": [
             {
               "value": "Yes",
-              "nextQuestionId": null,
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
-              },
-              "isTerminal": true
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
             },
             {
               "value": "No",
-              "nextQuestionId": null,
               "effects": {
+                "rule_out": [],
                 "increase_likelihood": [],
-                "decrease_likelihood": []
-              },
-              "isTerminal": true
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
             }
           ],
-          "metadata": {}
+          "source_line": 94,
+          "inputType": "select"
         }
       ],
-      "metadata": {},
       "recommended_tests": [
         "Spurling’s Test (Maximal Cervical Compression and Foraminal Compression Test): The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm."
       ],
       "confirmation_methods": [
         "Radiographic confirmation: check for loss of normal cervical lordosis, and degeneration."
       ],
-      "observations": []
+      "observations": [],
+      "source_line": 50
     }
-  ]
+  ],
+  "raw_text": "For Cervical Disc Herniation\n\n\n\nWhere is your pain worse?\n\nNeck\n\nNeck-Arm\n\nHow did the pain begin?\n\nSudden\n\nGradual\t\t(Rule out cervical spondylosis)\n\nAge (Below 40 years)?\n\nSex (Male)\n\nDo you feel numbness in any form?\n\nYes\n\nNo\n\nWhich of these movements currently aggravates your pain?\n\nFlexion (Bending neck forward)\n\nExtension (Bending neck backward)\n\nWhat movements relieve your pain?\n\nFlexion (Bending neck forward)\n\nExtension (Bending neck backward)\n\nDo you feel more pain when you move your neck?\n\nYes\n\nNo\n\nDo you experience some stiffness in your neck?\n\nYes\n\nNo\n\nDoes the pain increase with coughing, sneezing, straining or laughing?\n\nYes\t\t(Rule out cervical myelopathy)\n\n No\n\n Do you have any restrictions with movement around your neck?\n\nYes \t (Rule out cervical stenosis)\n\nNo\n\n Do you also have any pain around your lower back, buttocks, thigh or legs?\n\nYes\n\nNo\n\nDoes the pain wake you up at night?\n\nYes\n\nNo\n\nDo you feel any form of muscle weakness?\n\nYes \n\nNo\n\nDo you experience impaired sensations in your arm and forearm?\n\nYes\n\nNo\n\n\n\nObservation\n\nCheck if cervical rotation on the affected side is less than 60 degrees.\n\nTESTS:\n\nSpurling’s Test (Maximal Cervical Compression and Foraminal Compression Test): The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm.\n\nCervical Distraction Test: The patient lies supine and the neck is positioned comfortably.  The examiner places hand around the patient’s mastoid process. The examiner then slightly flexes the patient’s neck and pull the head towards your torso.Test is positive if the symptoms reduces or is eliminated with traction.\n\n\n\nRadiographic confirmation\n\nMRI test\n\n\n\nFor Cervical Spondylosis\n\n\n\nWhere is your pain worse?\n\nBack-Buttocks\n\nLeg\n\nNeck\n\nNeck-Arm\n\nHow did the pain begin?\n\nSudden\n\nGradual\n\nAge (Above 40 years)?\n\nSex (Female)\n\nDo you feel numbness in any form?\n\nYes\n\nNo\n\nWhich of these movements currently aggravates your pain?\n\nFlexion (Bending neck forward)\n\nExtension (Bending neck backward)\n\nWhat movements relieve your pain?\n\nFlexion (Bending neck forward)\n\nExtension (Bending neck backward)\n\nDo you feel more pain when you move your neck?\n\nYes\n\nNo\n\nDoes the pain relieve you with rest?\n\nYes\n\nNo\n\nDoes the pain increase with coughing, sneezing, straining, or laughing?\n\nYes\n\n No\n\nDo you experience intermittent neck pain and shoulder pain?\n\nYes\n\nNo\n\n Do you have any restrictions with movement around your neck?\n\nYes  \t(Rule out cervical stenosis)\n\nNo\n\n Do you also have any pain around your lower back, buttocks, thigh, or legs?\n\nYes\n\nNo\n\nDoes the pain wake you up at night?\n\nYes\n\nNo\n\nDo you feel any form of muscle weakness?\n\nYes\n\nNo\n\nDo you experience muscle spasms?\n\nYes\n\nNo\n\n\n\n\n\n\n\n\n\nTEST\n\nSpurling’s Test (Maximal Cervical Compression and Foraminal Compression Test): The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm.\n\nRadiographic confirmation: check for loss of normal cervical lordosis, and degeneration.\n\n",
+  "extraction_messages": []
 }

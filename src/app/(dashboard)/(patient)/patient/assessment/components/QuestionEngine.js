@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import useAssessmentStore from '@/store/assessmentStore';
-import { Card, CardContent } from '@/components/ui/Card';
-import { Loader2, AlertTriangle, CheckCircle2 } from 'lucide-react';
+import { Card, CardContent, Button } from '@/components/ui';
+import { Loader2, AlertTriangle, CheckCircle2, ChevronRight } from 'lucide-react';
 import { toast } from 'sonner';
 import {
   initializeEngine,

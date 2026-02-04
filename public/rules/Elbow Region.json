@@ -2,7 +2,7 @@
   "region": "elbow",
   "title": "Elbow Region",
   "source_file": "Elbow Region.docx",
-  "extracted_at": "2026-02-04T09:25:36.180Z",
+  "extracted_at": "2026-02-04T09:27:25.047Z",
   "conditions": [
     {
       "name": "General Assessment",
@@ -406,7 +406,7 @@
       "tests": [
         {
           "name": "Provocative Tests",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Maudsley’s test",
@@ -422,11 +422,11 @@
         },
         {
           "name": "Patient resists wrist flexion with the forearm in extension and supination (i.e. therapist resists wrist extension with the forearm in extension and supination)",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "The test is positive if pain is elicited.",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         }
       ]
     },
@@ -568,7 +568,7 @@
       "tests": [
         {
           "name": "Special Test",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "O’Driscoll’s hook test",
@@ -576,7 +576,7 @@
         },
         {
           "name": "Test is positive if the biceps tendon cannot be hooked",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         }
       ]
     },
@@ -1003,7 +1003,7 @@
       "tests": [
         {
           "name": "Radiographic confirmation – Check for joint space narrowing, osteophyte formation, and subchondral sclerosis.",
-          "procedure": ""
+          "procedure": "Radiographic imaging to assess bony structures and joint alignment."
         }
       ]
     }

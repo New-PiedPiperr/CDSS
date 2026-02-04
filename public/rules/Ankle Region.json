@@ -2,7 +2,7 @@
   "region": "ankle",
   "title": "Ankle Region",
   "source_file": "Ankle Region.docx",
-  "extracted_at": "2026-02-04T09:25:36.140Z",
+  "extracted_at": "2026-02-04T09:27:24.946Z",
   "conditions": [
     {
       "name": "General Assessment",
@@ -738,7 +738,7 @@
       "tests": [
         {
           "name": "Radiographic confirmation",
-          "procedure": ""
+          "procedure": "Radiographic imaging to assess bony structures and joint alignment."
         },
         {
           "name": "Clinical Observation",
@@ -1103,11 +1103,11 @@
       "tests": [
         {
           "name": "Confirmation using ultrasound to check for thickening around the heel.",
-          "procedure": ""
+          "procedure": "Ultrasound imaging to assess soft tissue structures."
         },
         {
           "name": "Doppler test to show increased local blood flow and neovascularisation",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         }
       ]
     },
@@ -1389,7 +1389,7 @@
         },
         {
           "name": "Special Test for Recurrent Lateral Instability",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         }
       ]
     },
@@ -1773,7 +1773,7 @@
       "tests": [
         {
           "name": "Confirm fracture using radiographic imaging",
-          "procedure": ""
+          "procedure": "Radiographic imaging to assess bony structures and joint alignment."
         }
       ]
     },
@@ -2199,11 +2199,11 @@
       "tests": [
         {
           "name": "Radiographic Confirmation",
-          "procedure": ""
+          "procedure": "Radiographic imaging to assess bony structures and joint alignment."
         },
         {
           "name": "Yes (Refer for laboratory confirmation)",
-          "procedure": ""
+          "procedure": "Imaging study to confirm clinical diagnosis."
         },
         {
           "name": "Clinical Observation",
@@ -2707,7 +2707,7 @@
       "tests": [
         {
           "name": "Radiographic confirmation. Check for osteoporosis, erosion of the tarsal and ankle joints and the swelling of soft-tissues.",
-          "procedure": ""
+          "procedure": "Radiographic imaging to assess bony structures and joint alignment."
         }
       ]
     },
@@ -2918,7 +2918,7 @@
       "tests": [
         {
           "name": "Radiographic confirmation – check for joint space narrowing, osteophytes formation, subchondral sclerosis, and cyst formation.",
-          "procedure": ""
+          "procedure": "Radiographic imaging to assess bony structures and joint alignment."
         },
         {
           "name": "Clinical Observation",

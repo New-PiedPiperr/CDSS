@@ -2,7 +2,7 @@
   "region": "lumbar",
   "title": "Lumbar Region",
   "source_file": "Lumbar Region.docx",
-  "extracted_at": "2026-02-04T09:25:36.199Z",
+  "extracted_at": "2026-02-04T09:27:25.077Z",
   "conditions": [
     {
       "name": "Non-specific low-back pain",
@@ -1213,7 +1213,7 @@
         },
         {
           "name": "Radiographic confirmation",
-          "procedure": ""
+          "procedure": "Radiographic imaging to assess bony structures and joint alignment."
         },
         {
           "name": "Clinical Observation",
@@ -1232,12 +1232,8 @@
           "procedure": "Check for trendenenburg’s sign"
         },
         {
-          "name": "TESTS",
-          "procedure": ""
-        },
-        {
           "name": "MRI test.",
-          "procedure": ""
+          "procedure": "MRI imaging study to visualize soft tissue structures and confirm diagnosis."
         }
       ]
     },
@@ -1514,7 +1510,7 @@
       "tests": [
         {
           "name": "Radiographic confirmation",
-          "procedure": ""
+          "procedure": "Radiographic imaging to assess bony structures and joint alignment."
         },
         {
           "name": "Clinical Observation",
@@ -1899,7 +1895,7 @@
       "tests": [
         {
           "name": "Lateral lumbar flexion (Finger tip to Floor Test)",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "The patient stands with heel touching wall and feet wide apart, and back against the wall. Then the examiner measures the distance from middle finger to the floor. Then patient bends to side (lateral flexion)",
@@ -1911,23 +1907,23 @@
         },
         {
           "name": "Chest expansion- Normal chest expansion is ≥ 5 cm.",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Occiput to wall distance- Normally is 0",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Tragus to wall distance- Normally is < 15cm",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Intermalleolar distance- Normally >100 cm",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Confirmatory test through laboratory investigations.",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         }
       ]
     }

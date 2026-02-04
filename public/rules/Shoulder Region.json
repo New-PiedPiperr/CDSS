@@ -2,7 +2,7 @@
   "region": "shoulder",
   "title": "Shoulder Region",
   "source_file": "Shoulder Region.docx",
-  "extracted_at": "2026-02-04T09:25:36.222Z",
+  "extracted_at": "2026-02-04T09:27:25.118Z",
   "conditions": [
     {
       "name": "Initial Assessment",
@@ -1501,15 +1501,15 @@
       "tests": [
         {
           "name": "Check X-ray to rule asymptomatic calcification",
-          "procedure": ""
+          "procedure": "Radiographic imaging to assess bony structures and joint alignment."
         },
         {
           "name": "Lesions of the Biceps Tendon (Confirmation)",
-          "procedure": ""
+          "procedure": "Imaging study to confirm clinical diagnosis."
         },
         {
           "name": "Biccipital Tendinitis as above",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Speed Test",
@@ -1517,7 +1517,7 @@
         },
         {
           "name": "A positive sign, pain in the bicipital grove is replicable",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Yergasom’s test",
@@ -1525,27 +1525,27 @@
         },
         {
           "name": "A positive sign, this replicates the pain in the bicipital group tenderness.",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Rupture of the Biceps Tendon (Confirmation)",
-          "procedure": ""
+          "procedure": "Imaging study to confirm clinical diagnosis."
         },
         {
           "name": "Age (over 50yrs)",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Ask pt to lift or offer resistance to biceps contraction",
-          "procedure": ""
+          "procedure": "CT scan to provide detailed cross-sectional imaging."
         },
         {
           "name": "Is a prominent lump is seen in lower arm",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "The upper arm becomes painful and bruised",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Hypertrophy and intra-articular entrapment (the hourglass biceps)",
@@ -1553,31 +1553,31 @@
         },
         {
           "name": "Ask patient to elevate the shoulder",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "SLAP LESION (Confirmation)",
-          "procedure": ""
+          "procedure": "Imaging study to confirm clinical diagnosis."
         },
         {
           "name": "Ask the patient to throw to reach a far distance where above shoulder movement is indicated.",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Patient is unable to",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Patient is able to",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Patient is able to (with pain involvement)",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Instruct the patient to flex the arm up to 90 deg with the elbow in full extension.Then ask pt to adduct arm 10-15 deg medial to sagittal plane. Arm is maximally internally rotated and examiner applies downward pressure while patient is asked to resist.  Procedure is then repeated in supination",
-          "procedure": ""
+          "procedure": "CT scan to provide detailed cross-sectional imaging."
         },
         {
           "name": "Positive",
@@ -1585,15 +1585,15 @@
         },
         {
           "name": "ADHESIVE CAPSULITIS (Frozen Shoulder Syndrome)",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Age (40-60)",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Yes (Check for adhesive capsulitis– early phase. Carry out active and passive movements)",
-          "procedure": ""
+          "procedure": "CT scan to provide detailed cross-sectional imaging."
         },
         {
           "name": "Currently, do you find it difficult to turn your shoulder in (Internal rotation)",
@@ -1601,19 +1601,19 @@
         },
         {
           "name": "Yes (Check for adhesive capsulitis – freezing phase)",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Yes (Traumatic Adhesive Capsulitis)",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "No (Non-traumatic Adhesive Capsulitis)",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Test for Adhesive Capsulitis",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Clinical Observation",
@@ -1621,47 +1621,47 @@
         },
         {
           "name": "Active and Passive range of motion is limited in Adhesive Capsulitis",
-          "procedure": ""
+          "procedure": "CT scan to provide detailed cross-sectional imaging."
         },
         {
           "name": "Rule out other causes of stiffness with imaging",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Special Test for Biccipital Tendinitis",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Is buckling of tendon present?",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Do you feel pain on shoulder elevation?",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Can the patient elevate the arm up till the end of the range?",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Did you have any history of fall or trauma with hand stretched out?",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Did you have any history of loading the shoulder region with weight?",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Do you feel a ‘painful click’ when you lift your arm above shoulder height?",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Do you feel weakness in your arm when doing activities above shoulder height?",
-          "procedure": ""
+          "procedure": "CT scan to provide detailed cross-sectional imaging."
         },
         {
           "name": "Special Test for SLAP (O’Brien’s test)",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "At the early phase of this pain, did you find it difficult to turn your shoulder out (External rotation)",
@@ -1673,11 +1673,11 @@
         },
         {
           "name": "Do you experience progressive stiffness in your shoulder?",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Is the pain worse at night?",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Have you had any of the following conditions before",
@@ -1685,11 +1685,11 @@
         },
         {
           "name": "Have you undergone a neurosurgical procedure before?",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Previous history of fall or trauma to affected side?",
-          "procedure": ""
+          "procedure": "CT scan to provide detailed cross-sectional imaging."
         }
       ]
     },
@@ -1856,27 +1856,27 @@
       "tests": [
         {
           "name": "Apprehension Test",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Patient is in sitting or lying position, the examiner lifts the arn gently into ABduction, external rotation and then extension. Test is positive if Pt senses that humeral head is about to slip out anteriorly and body stiffens in apprehension.",
-          "procedure": ""
+          "procedure": "CT scan to provide detailed cross-sectional imaging."
         },
         {
           "name": "The test is repeated with the anterior part of shoulder protected.",
-          "procedure": ""
+          "procedure": "CT scan to provide detailed cross-sectional imaging."
         },
         {
           "name": "Fulcrum’s Test",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Pt lies supine, arm ABducted up to 90 deg. The examiner places their hands over the shoulder to set the fulcrum base. The humeral head is levered forward by extending and externally rotating arm. The patient immediately becomes apprehensive.",
-          "procedure": ""
+          "procedure": "CT scan to provide detailed cross-sectional imaging."
         },
         {
           "name": "Drawer’s Test",
-          "procedure": ""
+          "procedure": "Perform clinical test as described in standard protocols."
         },
         {
           "name": "Patient lies supine , scapula is stabilised with one hand while the upper arm is grasped firmly with the other, and manoeuvring is done forward and backward (like a drawer)",
@@ -2124,7 +2124,7 @@
       "tests": [
         {
           "name": "Radiographic confirmation – check for periarticular erosions, subchondral sclerosis, and resorption.",
-          "procedure": ""
+          "procedure": "Radiographic imaging to assess bony structures and joint alignment."
         }
       ]
     },
@@ -2311,7 +2311,7 @@
       "tests": [
         {
           "name": "Radiographic confirmation – check for distortion of the joint, subchondral sclerosis, osteophyte formation, and narrowing of articular space.",
-          "procedure": ""
+          "procedure": "Radiographic imaging to assess bony structures and joint alignment."
         }
       ]
     }

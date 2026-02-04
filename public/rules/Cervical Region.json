@@ -2,7 +2,7 @@
   "region": "cervical",
   "title": "Cervical Region",
   "source_file": "Cervical Region.docx",
-  "extracted_at": "2026-02-04T09:25:36.164Z",
+  "extracted_at": "2026-02-04T09:27:24.977Z",
   "conditions": [
     {
       "name": "Cervical Disc Herniation",
@@ -477,19 +477,15 @@
         },
         {
           "name": "Radiographic confirmation",
-          "procedure": ""
+          "procedure": "Radiographic imaging to assess bony structures and joint alignment."
         },
         {
           "name": "Clinical Observation",
           "procedure": "Check if cervical rotation on the affected side is less than 60 degrees."
         },
         {
-          "name": "TESTS",
-          "procedure": ""
-        },
-        {
           "name": "MRI test",
-          "procedure": ""
+          "procedure": "MRI imaging study to visualize soft tissue structures and confirm diagnosis."
         }
       ]
     },

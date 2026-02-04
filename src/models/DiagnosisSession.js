@@ -180,6 +180,123 @@ const AssessmentTraceSchema = new mongoose.Schema(
   { _id: false }
 );
 
+/**
+ * GUIDED TEST RESULT SCHEMA
+ * ==========================
+ * Stores individual physical test results performed by the therapist.
+ * These tests are part of the guided diagnosis flow.
+ *
+ * TRACEABILITY:
+ * - Each test is immutable once saved
+ * - Linked to assessment and therapist IDs
+ * - Timestamped for audit purposes
+ */
+const GuidedTestResultSchema = new mongoose.Schema(
+  {
+    testName: {
+      type: String,
+      required: true,
+    },
+    result: {
+      type: String,
+      enum: ['positive', 'negative', 'skipped'],
+      required: true,
+    },
+    notes: {
+      type: String,
+      default: '',
+    },
+    timestamp: {
+      type: Date,
+      default: Date.now,
+    },
+  },
+  { _id: false }
+);
+
+/**
+ * REFINED DIAGNOSIS SCHEMA
+ * =========================
+ * Stores the clinician-guided diagnostic outcome after physical testing.
+ *
+ * IMPORTANT:
+ * - This COEXISTS with aiAnalysis (temporal diagnosis)
+ * - Neither overwrites the other
+ * - Both are preserved for full traceability
+ * - Labeled as "Clinician-Guided Diagnostic Outcome"
+ */
+const RefinedDiagnosisSchema = new mongoose.Schema(
+  {
+    finalSuspectedCondition: {
+      type: String,
+      default: null,
+    },
+    confirmedConditions: {
+      type: [String],
+      default: [],
+    },
+    ruledOutConditions: {
+      type: [String],
+      default: [],
+    },
+    remainingDifferentials: {
+      type: [String],
+      default: [],
+    },
+    completionReason: {
+      type: String,
+      default: null,
+    },
+  },
+  { _id: false }
+);
+
+/**
+ * GUIDED TEST FLOW SCHEMA
+ * ========================
+ * Complete record of the therapist-guided testing session.
+ *
+ * LOCK MECHANISM:
+ * - isLocked prevents re-running tests for this assessment
+ * - TODO: Admin can reset this flag to allow re-testing
+ */
+const GuidedTestFlowSchema = new mongoose.Schema(
+  {
+    therapistId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
+    performedAt: {
+      type: Date,
+      default: Date.now,
+    },
+    completedAt: {
+      type: Date,
+      default: null,
+    },
+    tests: {
+      type: [GuidedTestResultSchema],
+      default: [],
+    },
+    refinedDiagnosis: {
+      type: RefinedDiagnosisSchema,
+      default: null,
+    },
+    /**
+     * LOCK FLAG
+     * ==========
+     * Once true, guided tests cannot be re-run for this assessment.
+     * TODO: Allow admin to reset this flag for re-testing.
+     */
+    isLocked: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  { _id: false }
+);
+
 const DiagnosisSessionSchema = new mongoose.Schema(
   {
     patientId: {

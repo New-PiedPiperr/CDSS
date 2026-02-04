@@ -10,6 +10,7 @@ import {
   getCurrentQuestion,
   processAnswer,
   getAssessmentSummary,
+  previousQuestion,
 } from '@/lib/assessment-engine';
 
 /**
@@ -150,6 +151,27 @@ export default function QuestionEngine() {
     }, 150); // Brief delay for visual feedback
   };
 
+   * HANDLE BACK - Move to previous question
+   */
+  const handleBack = () => {
+    if (isProcessing || !engineState || engineState.askedQuestions.length === 0) {
+      return;
+    }
+
+    try {
+      const prevState = previousQuestion(engineState);
+      updateEngineState(prevState);
+
+      // Get the question for the new state
+      const prevQuestion = getCurrentQuestion(prevState);
+      setCurrentQuestion(prevQuestion);
+      setSelectedAnswer(null);
+    } catch (error) {
+      console.error('Error going back:', error);
+      toast.error('Unable to return to previous question.');
+    }
+  };
+
   // Loading state
   if (isLoading) {
     return (
@@ -282,6 +304,22 @@ export default function QuestionEngine() {
                 </Button>
               </div>
             )}
+          </div>
+
+          {/* Navigation Controls */}
+          <div className="mt-8 flex items-center justify-between border-t border-slate-100 pt-6 dark:border-slate-800">
+            <Button
+              variant="outline"
+              onClick={handleBack}
+              disabled={isProcessing || !engineState || engineState.askedQuestions.length === 0}
+              className="h-10 rounded-xl px-4"
+            >
+              Previous Question
+            </Button>
+            
+            <p className="text-muted-foreground text-[10px] font-bold tracking-widest uppercase">
+              CDSS Heuristic Engine V4
+            </p>
           </div>
         </CardContent>
       </Card>

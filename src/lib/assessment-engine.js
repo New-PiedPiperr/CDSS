@@ -284,6 +284,37 @@ export function processAnswer(state, questionId, answerValue) {
 }
 
 /**
+ * Move back to the previous question
+ * @param {Object} state - Current engine state
+ * @returns {Object} Reverted engine state
+ */
+export function previousQuestion(state) {
+  if (!state || state.askedQuestions.length === 0) {
+    return state;
+  }
+
+  // Get all answers except the last one
+  const remainingAnswers = [...state.askedQuestions];
+  remainingAnswers.pop();
+
+  // Re-initialize a fresh state
+  const rulesJson = {
+    region: state.region,
+    title: state.title,
+    conditions: state.conditions,
+  };
+
+  let newState = initializeEngine(rulesJson);
+
+  // Re-process all remaining answers to reconstruct state accurately
+  remainingAnswers.forEach((aq) => {
+    newState = processAnswer(newState, aq.questionId, aq.answer);
+  });
+
+  return newState;
+}
+
+/**
  * Find a question by its ID across all conditions
  */
 function findQuestionById(state, questionId) {

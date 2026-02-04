@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import useAssessmentStore from '@/store/assessmentStore';
+import BiodataConfirmation from './components/BiodataConfirmation';
 import BodyMapPicker from './components/BodyMapPicker';
 import QuestionCard from './components/QuestionCard';
 import ProgressBar from './components/ProgressBar';
@@ -41,6 +42,8 @@ export default function PatientAssessmentPage() {
     setStep,
     aiAnalysis,
     setAiAnalysis,
+    biodataConfirmed,
+    biodata,
   } = useAssessmentStore();
   const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);

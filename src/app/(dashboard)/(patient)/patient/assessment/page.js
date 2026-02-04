@@ -288,6 +288,33 @@ export default function PatientAssessmentPage() {
 
             <Card className="border-2 border-slate-100 dark:border-slate-800">
               <CardContent className="divide-y divide-slate-100 p-6 dark:divide-slate-800">
+                {/* Biodata Summary */}
+                {biodata && (
+                  <div className="py-4">
+                    <span className="mb-3 block text-xs font-bold tracking-wider text-slate-400 uppercase">
+                      Your Information
+                    </span>
+                    <div className="grid grid-cols-2 gap-3 text-sm">
+                      <div>
+                        <span className="text-slate-500">Name:</span>{' '}
+                        <span className="font-medium">{biodata.fullName}</span>
+                      </div>
+                      <div>
+                        <span className="text-slate-500">Sex:</span>{' '}
+                        <span className="font-medium">{biodata.sex}</span>
+                      </div>
+                      <div>
+                        <span className="text-slate-500">Age Range:</span>{' '}
+                        <span className="font-medium">{biodata.ageRange}</span>
+                      </div>
+                      <div>
+                        <span className="text-slate-500">Occupation:</span>{' '}
+                        <span className="font-medium">{biodata.occupation}</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {/* Region Header */}
                 <div className="flex justify-between py-4">
                   <span className="font-medium text-slate-500">Assessment Region</span>

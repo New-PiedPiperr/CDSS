@@ -21,6 +21,8 @@ import {
   Sparkles,
   Heart,
   Brain,
+  Menu,
+  X,
 } from 'lucide-react';
 
 /**
@@ -41,6 +43,7 @@ export default function LandingPage() {
   const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -67,6 +70,7 @@ export default function LandingPage() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    setIsMenuOpen(false);
   };
 
   // Redirect authenticated users to their dashboard
@@ -86,21 +90,22 @@ export default function LandingPage() {
           NAVIGATION
           ============================================ */}
       <nav className="border-border/50 bg-background/80 fixed top-0 right-0 left-0 z-50 border-b backdrop-blur-xl">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <Image
-                src="/logo.png"
-                alt="CDSS - Clinical Decision Support System"
-                width={120}
-                height={40}
-                className="-mt-1 object-contain"
-                style={{ marginTop: '-2px' }}
-              />
+              <div className="relative h-8 w-24 sm:h-10 sm:w-32">
+                <Image
+                  src="/logo.png"
+                  alt="CDSS - Clinical Decision Support System"
+                  fill
+                  className="object-contain object-left"
+                  priority
+                />
+              </div>
             </Link>
 
-            {/* Navigation Links */}
+            {/* Desktop Navigation Links */}
             <div className="hidden items-center gap-8 md:flex">
               <Link
                 href="/"
@@ -139,7 +144,7 @@ export default function LandingPage() {
             </div>
 
             {/* Right side actions */}
-            <div className="flex items-center gap-4">
+            <div className="hidden items-center gap-4 md:flex">
               {/* Theme Toggle */}
               <button
                 onClick={toggleTheme}
@@ -157,6 +162,92 @@ export default function LandingPage() {
               <Link
                 href="/register"
                 className="from-primary hover:from-primary/90 shadow-primary/25 hover:shadow-primary/30 rounded-full bg-gradient-to-r to-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all hover:to-blue-600/90 hover:shadow-xl"
+              >
+                Get Started
+              </Link>
+            </div>
+
+            {/* Mobile Hamburger Button */}
+            <div className="flex items-center gap-4 md:hidden">
+              <button
+                onClick={toggleTheme}
+                className="text-muted-foreground hover:text-primary border-border/50 bg-card/50 hover:bg-card flex h-8 w-8 items-center justify-center rounded-lg border transition-all"
+                aria-label="Toggle theme"
+              >
+                {isDark ? (
+                  <Sun className="h-3.5 w-3.5" />
+                ) : (
+                  <Moon className="h-3.5 w-3.5" />
+                )}
+              </button>
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-muted-foreground hover:text-primary flex h-9 w-9 items-center justify-center rounded-lg transition-all"
+                aria-label="Toggle menu"
+              >
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Menu Overlay */}
+        <div
+          className={cn(
+            'bg-background/95 fixed inset-x-0 top-16 bottom-0 z-40 block border-t backdrop-blur-xl transition-all duration-300 md:hidden',
+            isMenuOpen
+              ? 'translate-y-0 opacity-100'
+              : 'pointer-events-none -translate-y-full opacity-0'
+          )}
+        >
+          <div className="flex flex-col space-y-4 p-6">
+            <Link
+              href="/"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-foreground hover:text-primary border-border/50 border-b pb-2 text-lg font-semibold transition-colors"
+            >
+              Home
+            </Link>
+            <a
+              href="#problem"
+              onClick={(e) => handleSmoothScroll(e, 'problem')}
+              className="text-foreground hover:text-primary border-border/50 border-b pb-2 text-lg font-semibold transition-colors"
+            >
+              The Challenge
+            </a>
+            <a
+              href="#solution"
+              onClick={(e) => handleSmoothScroll(e, 'solution')}
+              className="text-foreground hover:text-primary border-border/50 border-b pb-2 text-lg font-semibold transition-colors"
+            >
+              Our Approach
+            </a>
+            <a
+              href="#how-it-works"
+              onClick={(e) => handleSmoothScroll(e, 'how-it-works')}
+              className="text-foreground hover:text-primary border-border/50 border-b pb-2 text-lg font-semibold transition-colors"
+            >
+              How It Works
+            </a>
+            <a
+              href="#africa"
+              onClick={(e) => handleSmoothScroll(e, 'africa')}
+              className="text-foreground hover:text-primary border-border/50 border-b pb-2 text-lg font-semibold transition-colors"
+            >
+              Why Africa
+            </a>
+            <div className="flex flex-col gap-4 pt-4">
+              <Link
+                href="/login"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-muted-foreground hover:text-foreground text-center text-lg font-medium transition-colors"
+              >
+                Sign In
+              </Link>
+              <Link
+                href="/register"
+                onClick={() => setIsMenuOpen(false)}
+                className="from-primary hover:from-primary/90 shadow-primary/25 hover:shadow-primary/30 rounded-xl bg-gradient-to-r to-blue-600 px-6 py-4 text-center text-lg font-bold text-white shadow-lg transition-all hover:to-blue-600/90"
               >
                 Get Started
               </Link>

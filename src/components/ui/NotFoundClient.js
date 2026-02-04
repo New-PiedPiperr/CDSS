@@ -1,16 +1,36 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, ArrowLeft, Search, Activity, Heart, Shield } from 'lucide-react';
+import {
+  Home,
+  ArrowLeft,
+  Search,
+  Activity,
+  Heart,
+  Shield,
+  AlertCircle,
+  FileSearch,
+  Stethoscope,
+} from 'lucide-react';
 import { Button } from '@/components/ui';
 import { motion } from 'motion/react';
 
+/**
+ * PREMIUM 404 PAGE - REDESIGNED
+ * =============================
+ * Part of the CDSS Visual Excellence Initiative.
+ * Features:
+ * - Immersive background with animated clinical orbs
+ * - Huge tracking-tighter 404 with glassmorphic overlay
+ * - Scanner/Discovery micro-animation
+ * - Semantic navigation for easy recovery
+ */
 export function NotFoundClient() {
   return (
-    <div className="bg-background relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
+    <div className="selection:bg-primary relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 px-6 text-center selection:text-white">
       {/* Immersive Background Elements */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        {/* Animated Orbs */}
+        {/* Animated Orbs with Modern HSL Colors */}
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
@@ -18,112 +38,141 @@ export function NotFoundClient() {
             y: [0, 30, 0],
           }}
           transition={{
-            duration: 10,
+            duration: 15,
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          className="bg-primary/10 absolute top-[-10%] left-[-10%] h-[50%] w-[50%] rounded-full blur-[120px]"
+          className="absolute top-[-20%] left-[-10%] h-[70%] w-[70%] rounded-full bg-blue-600/10 blur-[150px]"
         />
         <motion.div
           animate={{
             scale: [1, 1.3, 1],
-            x: [0, -40, 0],
+            x: [0, -60, 0],
             y: [0, -50, 0],
           }}
           transition={{
-            duration: 12,
+            duration: 18,
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          className="bg-primary/5 absolute right-[-10%] bottom-[-10%] h-[60%] w-[60%] rounded-full blur-[150px]"
+          className="absolute right-[-10%] bottom-[-20%] h-[80%] w-[80%] rounded-full bg-indigo-600/10 blur-[180px]"
         />
 
-        {/* Grid Overlay */}
+        {/* Dynamic Grid Overlay */}
         <div
-          className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.05]"
           style={{
-            backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
-            backgroundSize: '40px 40px',
+            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)`,
+            backgroundSize: '48px 48px',
           }}
         />
+
+        {/* Floating Medical Icons Background */}
+        <div className="absolute inset-0 opacity-[0.03]">
+          <Stethoscope className="absolute top-[15%] left-[10%] h-32 w-32 -rotate-12" />
+          <Activity className="absolute right-[15%] bottom-[20%] h-40 w-40 rotate-12" />
+          <Heart className="absolute top-[60%] left-[5%] h-24 w-24 rotate-45" />
+        </div>
       </div>
 
-      <div className="relative z-10 flex max-w-3xl flex-col items-center">
-        {/* Huge Stylized 404 */}
-        <div className="relative mb-4 sm:mb-8">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-foreground/[0.03] text-[15rem] leading-none font-black tracking-tighter select-none sm:text-[22rem]"
+      <div className="relative z-10 flex max-w-4xl flex-col items-center">
+        {/* Huge Stylized 404 Area */}
+        <div className="relative mb-12 flex flex-col items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="flex items-center justify-center"
           >
-            404
-          </motion.h1>
+            <h1 className="text-[12rem] leading-none font-black tracking-[-0.08em] text-white/5 sm:text-[22rem]">
+              404
+            </h1>
+          </motion.div>
 
-          <div className="absolute inset-0 flex flex-col items-center justify-center pt-8 sm:pt-16">
+          {/* Central Diagnostic Hub */}
+          <div className="absolute flex flex-col items-center justify-center">
             <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.3, type: 'spring', stiffness: 200 }}
-              className="relative"
+              initial={{ scale: 0, rotate: -45 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ delay: 0.4, type: 'spring', stiffness: 120 }}
+              className="group relative"
             >
-              <div className="bg-primary/10 absolute inset-[-20px] animate-pulse rounded-full blur-2xl" />
-              <div className="bg-background/40 relative flex h-24 w-24 items-center justify-center rounded-full border border-white/10 backdrop-blur-xl sm:h-32 sm:w-32">
-                <Search
-                  className="text-primary h-12 w-12 sm:h-16 sm:w-16"
-                  strokeWidth={1.5}
+              <div className="bg-primary/20 absolute inset-[-40px] animate-pulse rounded-full blur-3xl" />
+              <div className="relative flex h-32 w-32 items-center justify-center rounded-[2.5rem] border border-white/20 bg-white/5 shadow-2xl backdrop-blur-2xl transition-all duration-500 hover:rotate-6 sm:h-40 sm:w-40">
+                <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-white/10 to-transparent" />
+                <FileSearch
+                  className="relative h-16 w-16 text-white sm:h-20 sm:w-20"
+                  strokeWidth={1.2}
                 />
 
-                {/* Scanner Effect */}
+                {/* Cyber Scanner Line */}
                 <motion.div
-                  animate={{ top: ['0%', '100%', '0%'] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-                  className="bg-primary/40 absolute left-0 h-0.5 w-full shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                  animate={{ top: ['5%', '95%', '5%'] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
+                  className="absolute left-[10%] h-[1px] w-[80%] bg-white/40 shadow-[0_0_15px_rgba(255,255,255,0.8)]"
                 />
               </div>
+
+              {/* Spinning Ring */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+                className="absolute inset-[-20px] rounded-full border border-dashed border-white/10"
+              />
             </motion.div>
           </div>
         </div>
 
         {/* Content Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="space-y-4"
+          transition={{ delay: 0.6, duration: 0.8 }}
+          className="space-y-6"
         >
-          <h2 className="text-foreground text-4xl font-black tracking-tight sm:text-6xl">
-            Lost in the <span className="text-primary">System?</span>
+          <div className="mx-auto flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 backdrop-blur-md">
+            <AlertCircle className="text-primary h-4 w-4" />
+            <span className="text-[10px] font-black tracking-[0.2em] text-white/70 uppercase">
+              Error: Page Not Found
+            </span>
+          </div>
+
+          <h2 className="text-5xl font-black tracking-tight text-white sm:text-7xl">
+            Observation Room{' '}
+            <span className="from-primary bg-gradient-to-r to-blue-400 bg-clip-text text-transparent">
+              Expired.
+            </span>
           </h2>
-          <p className="text-muted-foreground mx-auto max-w-lg text-lg leading-relaxed sm:text-xl">
-            The diagnosis is in: the page you're searching for seems to have vanished or
-            moved to a different observation room.
+
+          <p className="mx-auto max-w-xl text-lg leading-relaxed font-medium text-slate-400 sm:text-xl">
+            The path you followed is no longer on the clinical charts. It's possible the
+            data has been archived or the corridor has move.
           </p>
         </motion.div>
 
-        {/* Action Buttons */}
+        {/* Premium Action Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.8 }}
-          className="mt-12 flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row"
+          transition={{ delay: 0.8, duration: 0.8 }}
+          className="mt-16 flex w-full flex-col items-center gap-6 sm:w-auto sm:flex-row"
         >
           <Link href="/" className="group w-full sm:w-auto">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 relative h-14 w-full gap-3 overflow-hidden rounded-2xl px-8 text-base font-bold text-white shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all hover:scale-105 active:scale-95 sm:w-auto"
+              className="relative h-16 w-full gap-3 overflow-hidden rounded-[2rem] bg-white px-10 text-base font-black text-slate-950 transition-all hover:scale-105 active:scale-95 sm:w-auto"
             >
               <Home className="h-5 w-5" />
-              Back to Dashboard
-              <div className="absolute inset-0 -translate-x-full skew-x-12 bg-white/20 transition-transform duration-500 group-hover:translate-x-full" />
+              Return To Base
+              <div className="absolute inset-0 -translate-x-full skew-x-12 bg-slate-900/5 transition-transform duration-500 group-hover:translate-x-full" />
             </Button>
           </Link>
 
-          <Link href="/help" className="w-full sm:w-auto">
+          <Link href="/help" className="group w-full sm:w-auto">
             <Button
               variant="outline"
               size="lg"
-              className="bg-background/20 border-border/50 hover:bg-background/40 h-14 w-full gap-3 rounded-2xl px-8 text-base font-bold backdrop-blur-md transition-all hover:scale-105 active:scale-95 sm:w-auto"
+              className="h-16 w-full gap-3 rounded-[2rem] border-white/20 bg-white/5 px-10 text-base font-black text-white backdrop-blur-xl transition-all hover:scale-105 hover:border-white/40 hover:bg-white/10 active:scale-95 sm:w-auto"
             >
               <ArrowLeft className="h-5 w-5" />
               Help Center
@@ -131,69 +180,81 @@ export function NotFoundClient() {
           </Link>
         </motion.div>
 
-        {/* Navigation Map */}
+        {/* Navigation Map for fast recovery */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="border-border/10 mt-20 grid w-full grid-cols-2 gap-12 border-t pt-10 text-left sm:grid-cols-3"
+          transition={{ delay: 1.2, duration: 1 }}
+          className="mt-24 grid w-full grid-cols-2 gap-16 border-t border-white/10 pt-12 text-left sm:grid-cols-3"
         >
           <div className="space-y-4">
-            <h4 className="text-muted-foreground/40 flex items-center gap-2 text-xs font-black tracking-widest uppercase">
-              <Activity className="h-3 w-3" /> Platform
+            <h4 className="flex items-center gap-2 text-[10px] font-black tracking-[0.25em] text-white/30 uppercase">
+              <Activity className="h-3 w-3" /> Core Navigation
             </h4>
             <div className="flex flex-col gap-3">
               <Link
                 href="/patient/dashboard"
-                className="text-foreground/60 hover:text-primary text-sm font-medium transition-colors"
+                className="hover:text-primary text-sm font-bold text-white/60 transition-colors"
               >
-                Patient Portal
+                Patient Dashboard
               </Link>
               <Link
                 href="/clinician/dashboard"
-                className="text-foreground/60 hover:text-primary text-sm font-medium transition-colors"
+                className="hover:text-primary text-sm font-bold text-white/60 transition-colors"
               >
-                Clinician Panel
+                Clinician Hub
+              </Link>
+              <Link
+                href="/search"
+                className="hover:text-primary text-sm font-bold text-white/60 transition-colors"
+              >
+                Medical Search
               </Link>
             </div>
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-muted-foreground/40 flex items-center gap-2 text-xs font-black tracking-widest uppercase">
-              <Shield className="h-3 w-3" /> Support
+            <h4 className="flex items-center gap-2 text-[10px] font-black tracking-[0.25em] text-white/30 uppercase">
+              <Shield className="h-3 w-3" /> System Support
             </h4>
             <div className="flex flex-col gap-3">
               <Link
                 href="/contact"
-                className="text-foreground/60 hover:text-primary text-sm font-medium transition-colors"
+                className="hover:text-primary text-sm font-bold text-white/60 transition-colors"
               >
                 Support Desk
               </Link>
               <Link
                 href="/docs"
-                className="text-foreground/60 hover:text-primary text-sm font-medium transition-colors"
+                className="hover:text-primary text-sm font-bold text-white/60 transition-colors"
               >
-                API Documentation
+                Documentation
+              </Link>
+              <Link
+                href="/report-bug"
+                className="hover:text-primary text-sm font-bold text-white/60 transition-colors"
+              >
+                Report Link Error
               </Link>
             </div>
           </div>
 
           <div className="hidden space-y-4 sm:block">
-            <h4 className="text-muted-foreground/40 flex items-center gap-2 text-xs font-black tracking-widest uppercase">
-              <Heart className="h-3 w-3" /> Legal
+            <h4 className="flex items-center gap-2 text-[10px] font-black tracking-[0.25em] text-white/30 uppercase">
+              <Heart className="h-3 w-3" /> Legal & Ethics
             </h4>
             <div className="flex flex-col gap-3">
               <Link
                 href="/privacy"
-                className="text-foreground/60 hover:text-primary text-sm font-medium transition-colors"
+                className="hover:text-primary text-sm font-bold text-white/60 transition-colors"
               >
-                Privacy Policy
+                Privacy Protocol
               </Link>
               <Link
                 href="/terms"
-                className="text-foreground/60 hover:text-primary text-sm font-medium transition-colors"
+                className="hover:text-primary text-sm font-bold text-white/60 transition-colors"
               >
-                Terms of Service
+                Terms of Admission
               </Link>
             </div>
           </div>
@@ -201,15 +262,15 @@ export function NotFoundClient() {
       </div>
 
       {/* Footer Branding */}
-      <div className="absolute right-0 bottom-8 left-0 flex items-center justify-between px-8">
-        <p className="text-muted-foreground/30 text-[10px] font-bold tracking-[0.2em] uppercase">
-          &copy; 2026 CDSS PLATFORM • ADVANCED CLINICAL SUPPORT
+      <div className="absolute right-0 bottom-10 left-0 flex items-center justify-between px-10">
+        <p className="text-[10px] font-black tracking-[0.3em] text-white/20 uppercase">
+          CDSS Advanced Clinical Support &copy; 2026
         </p>
 
-        {/* Small Logo at bottom right */}
-        <div className="group flex cursor-default items-center gap-2 opacity-30 grayscale transition-all hover:grayscale-0">
-          <div className="bg-primary group-hover:bg-primary/80 flex h-6 w-6 items-center justify-center rounded-full">
-            <span className="text-[10px] font-black text-white">N</span>
+        <div className="flex items-center gap-6 opacity-20 saturate-0 transition-all hover:opacity-100 hover:saturate-100">
+          <div className="h-6 w-px bg-white/20" />
+          <div className="bg-primary flex h-8 w-8 items-center justify-center rounded-lg shadow-xl">
+            <span className="text-xs font-black text-white">N</span>
           </div>
         </div>
       </div>

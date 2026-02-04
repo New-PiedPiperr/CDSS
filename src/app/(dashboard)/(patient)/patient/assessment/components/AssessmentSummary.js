@@ -81,14 +81,14 @@ export default function AssessmentSummary({ onSubmit, onEdit }) {
       const assessmentTrace = {
         region: selectedRegion,
         biodata,
-        questionsAnswered: completedState.askedQuestions,
+        questionsAnswered: completedState.answeredQuestions || [],
         conditionAnalysis: completedState.summary.rankedConditions,
         redFlags: completedState.redFlags,
         primarySuspicion: completedState.summary.primarySuspicion,
         differentialDiagnoses: completedState.summary.differentialDiagnoses,
         startedAt: completedState.startedAt,
         completedAt: completedState.completedAt,
-        totalQuestions: completedState.askedQuestions.length,
+        totalQuestions: (completedState.answeredQuestions || []).length,
       };
 
       setAssessmentTrace(assessmentTrace);
@@ -114,7 +114,15 @@ export default function AssessmentSummary({ onSubmit, onEdit }) {
     try {
       // Revert the last answer to un-complete the assessment and allow editing
       const prevState = previousQuestion(engineState);
-      updateEngineState(prevState);
+
+      // CRITICAL: Ensure the reverted state is marked as NOT complete
+      const revertedState = {
+        ...prevState,
+        isComplete: false,
+        completionReason: null,
+      };
+
+      updateEngineState(revertedState);
       setStep('questions');
       toast.info('Returning to assessment...');
     } catch (error) {

@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Settings, HelpCircle, Shield, LogOut, User, X } from 'lucide-react';
 import { cn } from '@/lib/cn';
 import { signOut, useSession } from 'next-auth/react'; // Added useSession
-import { useUIStore } from '@/store';
+import { useUIStore, useAuthStore } from '@/store';
 import { useState, useEffect } from 'react';
 import { getTotalUnreadCount } from '@/lib/actions/messages';
 
@@ -18,11 +18,12 @@ export default function Sidebar({
 }) {
   const pathname = usePathname();
   const { isSidebarOpen, setSidebarOpen } = useUIStore();
+  const { user: storeUser } = useAuthStore();
   const { data: session } = useSession();
   const [unreadCount, setUnreadCount] = useState(0);
 
-  // Prefer the real-time session user if available, otherwise fall back to the server prop
-  const user = session?.user || initialUser;
+  // Use user from store (full profile from /me) or fallback to session or initial prop
+  const user = storeUser || session?.user || initialUser;
 
   useEffect(() => {
     const fetchUnread = async () => {

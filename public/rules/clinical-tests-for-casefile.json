@@ -343,7 +343,7 @@
     },
     {
       "region": "ankle",
-      "condition": "OSTEOARTHRITIS",
+      "condition": "Ankle Osteoarthritis",
       "conditionId": "ankle_osteoarthritis",
       "recommendedTests": [
         "Radiographic confirmation – check for joint space narrowing, osteophytes formation, subchondral sclerosis, and cyst formation.",
@@ -581,7 +581,7 @@
     },
     {
       "region": "elbow",
-      "condition": "OSTEOARTHRITIS",
+      "condition": "Ankle Osteoarthritis",
       "conditionId": "elbow_osteoarthritis",
       "recommendedTests": [
         "Radiographic confirmation – Check for joint space narrowing, osteophyte formation, and subchondral sclerosis."
@@ -1328,7 +1328,7 @@
     },
     {
       "region": "shoulder",
-      "condition": "OSTEOARTHRITIS",
+      "condition": "Ankle Osteoarthritis",
       "conditionId": "shoulder_osteoarthritis",
       "recommendedTests": [
         "Radiographic confirmation – check for distortion of the joint, subchondral sclerosis, osteophyte formation, and narrowing of articular space."

@@ -42,7 +42,7 @@
                   "Deltoid Ligament Tear",
                   "Tears of Inferior Tibiofibular Ligaments",
                   "RA of Ankle and Hindfoot",
-                  "OSTEOARTHRITIS",
+                  "Ankle Osteoarthritis",
                   "Tarsal Tunnel Syndrome"
                 ],
                 "redFlag": false,
@@ -69,7 +69,7 @@
                   "Deltoid Ligament Tear",
                   "Tears of Inferior Tibiofibular Ligaments",
                   "RA of Ankle and Hindfoot",
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
                 "redFlag": false,
                 "redFlagText": null,
@@ -145,7 +145,7 @@
                   "Deltoid Ligament Tear",
                   "Tears of Inferior Tibiofibular Ligaments",
                   "RA of Ankle and Hindfoot",
-                  "OSTEOARTHRITIS",
+                  "Ankle Osteoarthritis",
                   "Tarsal Tunnel Syndrome"
                 ],
                 "redFlag": false,
@@ -172,7 +172,7 @@
                   "Deltoid Ligament Tear",
                   "Tears of Inferior Tibiofibular Ligaments",
                   "RA of Ankle and Hindfoot",
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
                 "redFlag": false,
                 "redFlagText": null,
@@ -384,11 +384,11 @@
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
                 "triggeredConditions": [
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
@@ -404,7 +404,7 @@
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
                 "increaseLikelihood": [],
                 "decreaseLikelihood": [],
@@ -422,11 +422,11 @@
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
                 "triggeredConditions": [
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
@@ -442,7 +442,7 @@
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
                 "increaseLikelihood": [],
                 "decreaseLikelihood": [],
@@ -472,11 +472,15 @@
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
                 "triggeredConditions": [
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
-                "excludedConditions": [],
+                "excludedConditions": [
+                  "Plantar Fasciitis",
+                  "Calcaneal Bursitis",
+                  "Traction Apophysitis (Sever’s Disease)"
+                ],
                 "increaseLikelihood": [
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
@@ -553,11 +557,15 @@
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
                 "triggeredConditions": [
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
-                "excludedConditions": [],
+                "excludedConditions": [
+                  "Plantar Fasciitis",
+                  "Calcaneal Bursitis",
+                  "Traction Apophysitis (Sever’s Disease)"
+                ],
                 "increaseLikelihood": [
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
@@ -678,9 +686,11 @@
                 "terminateAssessment": false,
                 "notes": null
               }
-            },
+            }
+          ],
+          "answers": [
             {
-              "value": "How did the pain begin",
+              "value": "Yes",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -694,6 +704,34 @@
                 "notes": null
               }
             },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ankle_q5_1",
+          "questionText": "How did the pain begin?",
+          "question": "How did the pain begin?",
+          "condition": "Achilles Tendinopathy",
+          "category": "general",
+          "inputType": "select",
+          "isGating": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "options": [
             {
               "value": "Sudden",
               "effects": {
@@ -729,12 +767,14 @@
           ],
           "answers": [
             {
-              "value": "Yes",
+              "value": "Sudden",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
-                "excludedConditions": [],
+                "excludedConditions": [
+                  "Achilles Tendon Rupture"
+                ],
                 "increaseLikelihood": [],
                 "decreaseLikelihood": [],
                 "redFlag": false,
@@ -744,12 +784,42 @@
               }
             },
             {
-              "value": "No",
+              "value": "Gradual",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "ankle_q5_1",
+          "questionText": "How did the pain begin?",
+          "question": "How did the pain begin?",
+          "condition": "Achilles Tendinopathy",
+          "category": "general",
+          "inputType": "select",
+          "isGating": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "options": [
+            {
+              "value": "Sudden",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [
+                  "Achilles Tendon Rupture"
+                ],
                 "increaseLikelihood": [],
                 "decreaseLikelihood": [],
                 "redFlag": false,
@@ -759,7 +829,7 @@
               }
             },
             {
-              "value": "How did the pain begin",
+              "value": "Gradual",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -772,7 +842,9 @@
                 "terminateAssessment": false,
                 "notes": null
               }
-            },
+            }
+          ],
+          "answers": [
             {
               "value": "Sudden",
               "effects": {
@@ -5897,7 +5969,7 @@
       "tests": []
     },
     {
-      "name": "OSTEOARTHRITIS",
+      "name": "Ankle Osteoarthritis",
       "entry_criteria": [],
       "is_general": false,
       "source_line": 292,
@@ -5906,7 +5978,7 @@
           "id": "ankle_q69",
           "questionText": "Have you had a previous diagnosis of osteoarthritis of other joints?",
           "question": "Have you had a previous diagnosis of osteoarthritis of other joints?",
-          "condition": "OSTEOARTHRITIS",
+          "condition": "Ankle Osteoarthritis",
           "category": "history",
           "inputType": "select",
           "source_line": 293,
@@ -5982,7 +6054,7 @@
           "id": "ankle_q70",
           "questionText": "Do you have any previous history of the following: malunited fracture, recurrent instability, and avascular necrosis of the talus?",
           "question": "Do you have any previous history of the following: malunited fracture, recurrent instability, and avascular necrosis of the talus?",
-          "condition": "OSTEOARTHRITIS",
+          "condition": "Ankle Osteoarthritis",
           "category": "history",
           "inputType": "select",
           "source_line": 296,
@@ -6058,7 +6130,7 @@
           "id": "ankle_q71",
           "questionText": "Do you experience pain and stiffness at the ankle joint?",
           "question": "Do you experience pain and stiffness at the ankle joint?",
-          "condition": "OSTEOARTHRITIS",
+          "condition": "Ankle Osteoarthritis",
           "category": "stiffness",
           "inputType": "select",
           "source_line": 299,
@@ -6072,11 +6144,11 @@
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
                 "triggeredConditions": [
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
@@ -6108,11 +6180,11 @@
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
                 "triggeredConditions": [
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
-                  "OSTEOARTHRITIS"
+                  "Ankle Osteoarthritis"
                 ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
@@ -6142,7 +6214,7 @@
           "id": "ankle_q72",
           "questionText": "Do you notice this pain more when standing up from rest?",
           "question": "Do you notice this pain more when standing up from rest?",
-          "condition": "OSTEOARTHRITIS",
+          "condition": "Ankle Osteoarthritis",
           "category": "temporal",
           "inputType": "select",
           "source_line": 302,
@@ -6218,7 +6290,7 @@
           "id": "ankle_q73",
           "questionText": "Is the ankle swollen?",
           "question": "Is the ankle swollen?",
-          "condition": "OSTEOARTHRITIS",
+          "condition": "Ankle Osteoarthritis",
           "category": "general",
           "inputType": "select",
           "source_line": 305,
@@ -6294,7 +6366,7 @@
           "id": "ankle_q74",
           "questionText": "Do you experience limitation when bringing the foot upward towards (dorsiflexion) and pushing the foot downward away (plantar flexion) from the shin?",
           "question": "Do you experience limitation when bringing the foot upward towards (dorsiflexion) and pushing the foot downward away (plantar flexion) from the shin?",
-          "condition": "OSTEOARTHRITIS",
+          "condition": "Ankle Osteoarthritis",
           "category": "temporal",
           "inputType": "select",
           "source_line": 308,

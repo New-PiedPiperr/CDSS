@@ -55,6 +55,7 @@ export async function POST(req) {
       differentialDiagnoses,
       assessmentMetadata,
       mediaUrls,
+      conditionsRuledOut,
     } = await req.json();
 
     // Validate required fields
@@ -101,6 +102,7 @@ export async function POST(req) {
         primarySuspicion: primarySuspicion || null,
         differentialDiagnoses: differentialDiagnoses || [],
         patientBiodata: biodata,
+        conditionsRuledOut: conditionsRuledOut || [],
       });
       aiAnalysisResult = result.analysis;
     } catch (error) {

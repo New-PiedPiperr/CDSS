@@ -127,6 +127,7 @@ export async function getAiPreliminaryAnalysis({
   primarySuspicion,
   differentialDiagnoses,
   patientBiodata,
+  conditionsRuledOut,
 }) {
   try {
     if (!process.env.CDSS_AI_API_KEY) {
@@ -186,6 +187,9 @@ export async function getAiPreliminaryAnalysis({
       )}\n` : ''}${differentialDiagnoses?.length ? `Differential Diagnoses: ${sanitizeForPrompt(
         differentialDiagnoses.map((d) => typeof d === 'string' ? d : d.name).join('; '),
         300,
+      )}\n` : ''}${conditionsRuledOut?.length ? `Conditions Marked for Rule-Out/Investigation: ${sanitizeForPrompt(
+        conditionsRuledOut.map((c) => typeof c === 'string' ? c : c.name || c).join('; '),
+        500,
       )}\n` : ''}${patientBiodata?.ageRange ? `Patient Age Range: ${sanitizeForPrompt(
         patientBiodata.ageRange,
         100,
@@ -204,6 +208,7 @@ export async function getAiPreliminaryAnalysis({
       7. Calculate a dynamic "confidenceScore" (0-100) by refining the "Mathematical Baseline Confidence".
       8. For "reasoning", provide clear clinical indicators phrased for the patient.
       9. CRITICAL: Do NOT include internal tags or technical codes.
+      10. IMPORTANT: "Rule out" in this clinical system means "investigate this condition further". Conditions listed under "Conditions Marked for Rule-Out/Investigation" are active clinical concerns being investigated. Any of them can be shown/selected as the "temporalDiagnosis" if the symptoms support it.
 
       Output JSON only:
       {

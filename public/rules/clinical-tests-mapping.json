@@ -3013,7 +3013,7 @@
     {
       "region": "ankle",
       "conditionId": "ankle_osteoarthritis",
-      "conditionName": "OSTEOARTHRITIS",
+      "conditionName": "Ankle Osteoarthritis",
       "entryCriteria": [],
       "questions": [
         {
@@ -5554,7 +5554,7 @@
     {
       "region": "elbow",
       "conditionId": "elbow_osteoarthritis",
-      "conditionName": "OSTEOARTHRITIS",
+      "conditionName": "Ankle Osteoarthritis",
       "entryCriteria": [
         {
           "type": "age",
@@ -10290,7 +10290,7 @@
     {
       "region": "shoulder",
       "conditionId": "shoulder_osteoarthritis",
-      "conditionName": "OSTEOARTHRITIS",
+      "conditionName": "Ankle Osteoarthritis",
       "entryCriteria": [
         {
           "type": "age",
@@ -16489,7 +16489,7 @@
       },
       "condition": {
         "id": "ankle_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": []
       },
       "tests": {
@@ -16527,7 +16527,7 @@
       },
       "condition": {
         "id": "ankle_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": []
       },
       "tests": {
@@ -16565,7 +16565,7 @@
       },
       "condition": {
         "id": "ankle_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": []
       },
       "tests": {
@@ -16603,7 +16603,7 @@
       },
       "condition": {
         "id": "ankle_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": []
       },
       "tests": {
@@ -16641,7 +16641,7 @@
       },
       "condition": {
         "id": "ankle_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": []
       },
       "tests": {
@@ -16679,7 +16679,7 @@
       },
       "condition": {
         "id": "ankle_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": []
       },
       "tests": {
@@ -16717,7 +16717,7 @@
       },
       "condition": {
         "id": "ankle_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": []
       },
       "tests": {
@@ -16755,7 +16755,7 @@
       },
       "condition": {
         "id": "ankle_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": []
       },
       "tests": {
@@ -16793,7 +16793,7 @@
       },
       "condition": {
         "id": "ankle_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": []
       },
       "tests": {
@@ -16831,7 +16831,7 @@
       },
       "condition": {
         "id": "ankle_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": []
       },
       "tests": {
@@ -16869,7 +16869,7 @@
       },
       "condition": {
         "id": "ankle_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": []
       },
       "tests": {
@@ -16907,7 +16907,7 @@
       },
       "condition": {
         "id": "ankle_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": []
       },
       "tests": {
@@ -22665,7 +22665,7 @@
       },
       "condition": {
         "id": "elbow_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -22703,7 +22703,7 @@
       },
       "condition": {
         "id": "elbow_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -22741,7 +22741,7 @@
       },
       "condition": {
         "id": "elbow_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -22779,7 +22779,7 @@
       },
       "condition": {
         "id": "elbow_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -22817,7 +22817,7 @@
       },
       "condition": {
         "id": "elbow_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -22855,7 +22855,7 @@
       },
       "condition": {
         "id": "elbow_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -22893,7 +22893,7 @@
       },
       "condition": {
         "id": "elbow_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -22931,7 +22931,7 @@
       },
       "condition": {
         "id": "elbow_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -22969,7 +22969,7 @@
       },
       "condition": {
         "id": "elbow_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -23007,7 +23007,7 @@
       },
       "condition": {
         "id": "elbow_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -23045,7 +23045,7 @@
       },
       "condition": {
         "id": "elbow_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -23083,7 +23083,7 @@
       },
       "condition": {
         "id": "elbow_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -23121,7 +23121,7 @@
       },
       "condition": {
         "id": "elbow_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -23159,7 +23159,7 @@
       },
       "condition": {
         "id": "elbow_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -35989,7 +35989,7 @@
       },
       "condition": {
         "id": "shoulder_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -36027,7 +36027,7 @@
       },
       "condition": {
         "id": "shoulder_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -36067,7 +36067,7 @@
       },
       "condition": {
         "id": "shoulder_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -36105,7 +36105,7 @@
       },
       "condition": {
         "id": "shoulder_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -36143,7 +36143,7 @@
       },
       "condition": {
         "id": "shoulder_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -36183,7 +36183,7 @@
       },
       "condition": {
         "id": "shoulder_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -36221,7 +36221,7 @@
       },
       "condition": {
         "id": "shoulder_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -36259,7 +36259,7 @@
       },
       "condition": {
         "id": "shoulder_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -36297,7 +36297,7 @@
       },
       "condition": {
         "id": "shoulder_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -36335,7 +36335,7 @@
       },
       "condition": {
         "id": "shoulder_osteoarthritis",
-        "name": "OSTEOARTHRITIS",
+        "name": "Ankle Osteoarthritis",
         "entryCriteria": [
           {
             "type": "age",
@@ -36730,7 +36730,7 @@
     {
       "region": "ankle",
       "conditionId": "ankle_osteoarthritis",
-      "conditionName": "OSTEOARTHRITIS",
+      "conditionName": "Ankle Osteoarthritis",
       "entryCriteria": [],
       "questionCount": 6,
       "firstQuestion": "Have you had a previous diagnosis of osteoarthritis of other joints?",
@@ -36972,7 +36972,7 @@
     {
       "region": "elbow",
       "conditionId": "elbow_osteoarthritis",
-      "conditionName": "OSTEOARTHRITIS",
+      "conditionName": "Ankle Osteoarthritis",
       "entryCriteria": [
         {
           "type": "age",
@@ -37687,7 +37687,7 @@
     {
       "region": "shoulder",
       "conditionId": "shoulder_osteoarthritis",
-      "conditionName": "OSTEOARTHRITIS",
+      "conditionName": "Ankle Osteoarthritis",
       "entryCriteria": [
         {
           "type": "age",
@@ -38006,7 +38006,7 @@
       }
     },
     "ankle_osteoarthritis": {
-      "conditionName": "OSTEOARTHRITIS",
+      "conditionName": "Ankle Osteoarthritis",
       "region": "ankle",
       "tests": {
         "recommended": [
@@ -38211,7 +38211,7 @@
       }
     },
     "elbow_osteoarthritis": {
-      "conditionName": "OSTEOARTHRITIS",
+      "conditionName": "Ankle Osteoarthritis",
       "region": "elbow",
       "tests": {
         "recommended": [
@@ -38846,7 +38846,7 @@
       }
     },
     "shoulder_osteoarthritis": {
-      "conditionName": "OSTEOARTHRITIS",
+      "conditionName": "Ankle Osteoarthritis",
       "region": "shoulder",
       "tests": {
         "recommended": [

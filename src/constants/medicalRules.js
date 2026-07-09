@@ -46,7 +46,7 @@ export const MEDICAL_RULES = {
         options: [
           {
             text: 'Morning',
-            next: 'ankle_achilles_q1',
+            next: null,
             tags: ['Confirm osteoarthritis'],
           },
           { text: 'Noon', next: 'ankle_achilles_q1' },

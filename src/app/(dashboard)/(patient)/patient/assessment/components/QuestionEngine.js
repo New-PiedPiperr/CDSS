@@ -158,10 +158,20 @@ export default function QuestionEngine() {
             newState.completionReason === 'terminated_by_answer'
           ) {
             const flag = newState.redFlags[newState.redFlags.length - 1];
-            setEmergencyState({
-              message:
-                flag?.redFlagText ||
-                'An urgent clinical concern has been detected. Please seek immediate medical care.',
+            if (flag?.redFlagText) {
+              setEmergencyState({
+                message: flag.redFlagText,
+              });
+              completeQuestions();
+              return;
+            }
+
+            // No red flag attached: treat as a normal confirmed-diagnosis completion
+            // so the patient can review the recorded assessment instead of seeing an
+            // urgent-care emergency screen.
+            toast.success('Assessment Progress Saved', {
+              description:
+                'Your responses have been recorded. Please complete the final review.',
             });
             completeQuestions();
             return;

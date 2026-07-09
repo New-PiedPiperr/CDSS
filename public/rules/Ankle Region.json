@@ -471,7 +471,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "OSTEOARTHRITIS"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "OSTEOARTHRITIS"
@@ -479,7 +481,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -550,7 +552,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "OSTEOARTHRITIS"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "OSTEOARTHRITIS"
@@ -558,7 +562,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },

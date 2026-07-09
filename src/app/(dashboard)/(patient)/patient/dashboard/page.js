@@ -248,7 +248,9 @@ export default async function PatientDashboardPage() {
                   'No active case'
                 )
                   .replace(/^the patient('s)?/i, 'Your')
-                  .replace(/^the patient/i, 'You')}
+                  .replace(/^the patient/i, 'You')
+                  .replace(/^you have /i, 'You may have ')
+                  .replace(/^results suggest you /i, 'Results suggest you may ')}
               </h3>
             </div>
           </CardContent>

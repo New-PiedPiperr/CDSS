@@ -35,7 +35,6 @@ export const MEDICAL_RULES = {
           {
             text: 'Yes',
             next: 'ankle_q3_time',
-            tags: ['Rule out osteoarthritis'],
           },
           { text: 'No', next: 'ankle_achilles_q1' },
         ],

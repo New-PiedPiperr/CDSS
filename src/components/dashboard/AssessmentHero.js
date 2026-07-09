@@ -36,10 +36,13 @@ export default function AssessmentHero({ latestSession }) {
     if (isInProgress || text === 'Start a New Assessment') return text;
 
     let cleaned = text;
-    // Fix "The patient's symptoms suggest..." -> "Your symptoms suggest..."
+    // Fix "The patient's symptoms suggest..." -> "Your symptoms may suggest..."
     cleaned = cleaned.replace(/^the patient's/i, 'Your');
-    // Fix "The patient has..." -> "You have..."
-    cleaned = cleaned.replace(/^the patient/i, 'You');
+    // Fix "The patient has..." -> "You may have..."
+    cleaned = cleaned.replace(/^the patient has/i, 'You may have');
+    // Fallback: make final-diagnosis phrasing tentative/preliminary
+    cleaned = cleaned.replace(/^you have /i, 'You may have ');
+    cleaned = cleaned.replace(/^results suggest you /i, 'Results suggest you may ');
 
     // If it's still extremely long (legacy data), truncate for the Hero section
     if (cleaned.length > 80) {

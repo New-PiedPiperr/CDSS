@@ -73,7 +73,7 @@ export const MEDICAL_RULES = {
           {
             text: 'Sudden',
             next: 'ankle_achilles_pop',
-            tags: ['Rule out Achilles tendon rupture'],
+            tags: ['Suspect Achilles tendon rupture'],
           },
           { text: 'Gradual', next: 'ankle_achilles_pop' },
         ],
@@ -140,7 +140,7 @@ export const MEDICAL_RULES = {
           {
             text: 'Radiates down one leg',
             next: 'lumbar_q2',
-            tags: ['Rule out sciatica'],
+            tags: ['Suspect sciatica'],
           },
           {
             text: 'Radiates down both legs',
@@ -156,7 +156,7 @@ export const MEDICAL_RULES = {
           {
             text: 'Sudden',
             next: 'lumbar_q_redflag',
-            tags: ['Rule out lumbar disc herniation'],
+            tags: ['Suspect lumbar disc herniation'],
           },
           { text: 'Gradual', next: 'lumbar_q_redflag' },
         ],
@@ -180,7 +180,7 @@ export const MEDICAL_RULES = {
           {
             text: 'Yes',
             next: 'lumbar_q_weak',
-            tags: ['Rule out lumbar disc herniation or cauda equina'],
+            tags: ['Suspect lumbar disc herniation or cauda equina'],
           },
           { text: 'No', next: 'lumbar_q_weak' },
         ],
@@ -189,7 +189,7 @@ export const MEDICAL_RULES = {
         text: 'Have you experienced any weakness in your legs?',
         category: 'neurological',
         options: [
-          { text: 'Yes', next: 'lumbar_pain_intensity', tags: ['Rule out cauda equina'] },
+          { text: 'Yes', next: 'lumbar_pain_intensity', tags: ['Suspect cauda equina'] },
           { text: 'No', next: 'lumbar_pain_intensity' },
         ],
       },

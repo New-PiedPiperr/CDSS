@@ -737,11 +737,13 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [
+                "triggeredConditions": [
                   "Achilles Tendon Rupture"
                 ],
-                "increaseLikelihood": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Achilles Tendon Rupture"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
@@ -755,9 +757,13 @@
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
-                "excludedConditions": [],
+                "excludedConditions": [
+                  "Achilles Tendon Rupture"
+                ],
                 "increaseLikelihood": [],
-                "decreaseLikelihood": [],
+                "decreaseLikelihood": [
+                  "Achilles Tendon Rupture"
+                ],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
@@ -771,11 +777,13 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [
+                "triggeredConditions": [
                   "Achilles Tendon Rupture"
                 ],
-                "increaseLikelihood": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Achilles Tendon Rupture"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
@@ -789,9 +797,13 @@
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
-                "excludedConditions": [],
+                "excludedConditions": [
+                  "Achilles Tendon Rupture"
+                ],
                 "increaseLikelihood": [],
-                "decreaseLikelihood": [],
+                "decreaseLikelihood": [
+                  "Achilles Tendon Rupture"
+                ],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
@@ -816,11 +828,13 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [
+                "triggeredConditions": [
                   "Achilles Tendon Rupture"
                 ],
-                "increaseLikelihood": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Achilles Tendon Rupture"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
@@ -834,9 +848,13 @@
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
-                "excludedConditions": [],
+                "excludedConditions": [
+                  "Achilles Tendon Rupture"
+                ],
                 "increaseLikelihood": [],
-                "decreaseLikelihood": [],
+                "decreaseLikelihood": [
+                  "Achilles Tendon Rupture"
+                ],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
@@ -850,11 +868,13 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [
+                "triggeredConditions": [
                   "Achilles Tendon Rupture"
                 ],
-                "increaseLikelihood": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Achilles Tendon Rupture"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
@@ -868,9 +888,13 @@
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
-                "excludedConditions": [],
+                "excludedConditions": [
+                  "Achilles Tendon Rupture"
+                ],
                 "increaseLikelihood": [],
-                "decreaseLikelihood": [],
+                "decreaseLikelihood": [
+                  "Achilles Tendon Rupture"
+                ],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
@@ -1152,21 +1176,6 @@
                 "terminateAssessment": false,
                 "notes": null
               }
-            },
-            {
-              "value": "Use ultrasound to investigate tears",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
             }
           ],
           "answers": [
@@ -1187,21 +1196,6 @@
             },
             {
               "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "Use ultrasound to investigate tears",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,

@@ -2796,7 +2796,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "MALLEOLAR FRACTURES OF THE ANKLE"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "MALLEOLAR FRACTURES OF THE ANKLE"
@@ -2804,8 +2806,8 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
+                "terminateAssessment": true,
+                "notes": "Confirm fracture — inability to bear weight confirms fracture per clinical source document"
               }
             }
           ],
@@ -2830,7 +2832,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "MALLEOLAR FRACTURES OF THE ANKLE"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "MALLEOLAR FRACTURES OF THE ANKLE"
@@ -2838,8 +2842,8 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
+                "terminateAssessment": true,
+                "notes": "Confirm fracture — inability to bear weight confirms fracture per clinical source document"
               }
             }
           ]
@@ -4019,8 +4023,8 @@
       "questions": [
         {
           "id": "ankle_q44",
-          "questionText": "Is the patient osteoporotic?",
-          "question": "Is the patient osteoporotic?",
+          "questionText": "Are you osteoporotic?",
+          "question": "Are you osteoporotic?",
           "condition": "CALCANEAL FRACTURES",
           "category": "general",
           "inputType": "select",
@@ -4595,29 +4599,18 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "CALCANEAL FRACTURES"
+                ],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "CALCANEAL FRACTURES"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "Rule out foot compartment syndrome.",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
+                "notes": "Rule out foot compartment syndrome — proceed to compartment syndrome questions (q51-q54)"
               }
             }
           ],
@@ -4642,29 +4635,18 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "CALCANEAL FRACTURES"
+                ],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "CALCANEAL FRACTURES"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "Rule out foot compartment syndrome.",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
+                "notes": "Rule out foot compartment syndrome — proceed to compartment syndrome questions (q51-q54)"
               }
             }
           ]
@@ -4914,14 +4896,18 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "CALCANEAL FRACTURES"
+                ],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "CALCANEAL FRACTURES"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
+                "terminateAssessment": true,
+                "notes": "Confirm foot compartment syndrome — refer for laboratory confirmation per clinical source document"
               }
             },
             {
@@ -4946,14 +4932,18 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "CALCANEAL FRACTURES"
+                ],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "CALCANEAL FRACTURES"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
+                "terminateAssessment": true,
+                "notes": "Confirm foot compartment syndrome — refer for laboratory confirmation per clinical source document"
               }
             },
             {

@@ -2,7 +2,7 @@
   "region": "elbow",
   "title": "Elbow Region",
   "source_file": "Elbow Region.docx",
-  "extracted_at": "2026-02-04T09:27:25.047Z",
+  "extracted_at": "2026-07-09T23:17:22.606Z",
   "migrated_at": "2026-02-04T11:09:54.150Z",
   "engine_version": "v2-branching",
   "conditions": [
@@ -959,7 +959,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Clinical Assessment",
+          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+        }
+      ]
     },
     {
       "name": "Ulnar Nerve Entrapment",
@@ -1150,7 +1155,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Clinical Observation - Hand Muscle Bulk",
+          "procedure": "Check if muscle bulk in hand is normal (extreme cases may include atrophy)"
+        }
+      ]
     },
     {
       "name": "Medial Ligament Injury",
@@ -1240,7 +1250,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Valgus Stress Test",
+          "procedure": "Place forearm in supine position, flex elbow up till about 30 deg. Palpate MCL and apply lateral pressure (abduction). Positive test: increased laxity of MCL and pain."
+        }
+      ]
     },
     {
       "name": "RHEUMATOID ARTHRITIS",
@@ -1629,7 +1644,16 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Check for osteopenia, bone erosions, destruction of the radial head and widening of the sigmoid notch"
+        },
+        {
+          "name": "Laboratory Tests",
+          "procedure": "Other laboratory tests as may be necessary (RF, anti-CCP, ESR, CRP)"
+        }
+      ]
     },
     {
       "name": "OSTEOARTHRITIS",
@@ -2175,7 +2199,13 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Check for joint space narrowing, osteophyte formation, and subchondral sclerosis"
+        }
+      ]
     }
-  ]
+  ],
+  "version": "2.0.0"
 }

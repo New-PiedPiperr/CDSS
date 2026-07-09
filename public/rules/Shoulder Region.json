@@ -2,7 +2,7 @@
   "region": "shoulder",
   "title": "Shoulder Region",
   "source_file": "Shoulder Region.docx",
-  "extracted_at": "2026-02-04T09:27:25.118Z",
+  "extracted_at": "2026-07-09T23:17:22.915Z",
   "migrated_at": "2026-02-04T11:09:54.269Z",
   "engine_version": "v2-branching",
   "conditions": [
@@ -1132,7 +1132,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "X-ray to check for fracture location and displacement"
+        }
+      ]
     },
     {
       "name": "Shoulder Impingement Syndrome",
@@ -2005,7 +2010,28 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Spurling's Test (for Cervical Radiculitis)",
+          "procedure": "While patient is seated, the examiner applies side flexion of the neck towards the affected side while applying axial compression. Sign is positive if the pain sensation felt in the shoulder-neck region is replicated."
+        },
+        {
+          "name": "Painful Arc Test",
+          "procedure": "Ask patient to abduct arm across range of motion actively. Scapular rhythm is disturbed, pain is aggravated between 60-120 degrees, pain is alleviated if shoulder is laterally rotated on abduction. If positive, SIS is indicated."
+        },
+        {
+          "name": "Neer Impingement Sign",
+          "procedure": "Stabilise the scapula with one hand and raise the unaffected side to full flexion with abduction and internal rotation passively. The test is positive when there is pain at the subacromial space."
+        },
+        {
+          "name": "Hawkins-Kennedy Test",
+          "procedure": "Patient arm is placed in 90 deg of elevation at the scapular level and 90 deg flexion. Stabilise the upper arm with one hand and internally rotate with the other hand. The test is positive when pain is felt in the anterolateral aspect of the shoulder."
+        },
+        {
+          "name": "Jobe's Test",
+          "procedure": "Elevate arm in scapular plane, extend elbow and thumb points towards floor with arm internally rotated. Patient is asked to hold the position with downward pressure from examiner. Positive sign = pain on examiner restriction indicating supraspinatus irritation."
+        }
+      ]
     },
     {
       "name": "Subacute tendinitis OR Painfularc syndrome",
@@ -2166,7 +2192,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Clinical Assessment",
+          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+        }
+      ]
     },
     {
       "name": "Chronic Tendinitis",
@@ -2403,7 +2434,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Clinical Observation - Bicipital Groove",
+          "procedure": "Check for tenderness along the bicipital groove or on moving the biceps tendon (bicipital tendinitis can co-exist with other rotator cuff pathologies)"
+        }
+      ]
     },
     {
       "name": "Cuff Disruption",
@@ -2954,7 +2990,32 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Empty Can Test (Supraspinatus)",
+          "procedure": "Patient is asked to abduct up to 90 deg, 30 deg flexion and internal rotation. Examiner stands behind patient and applies downward pressure. Positive sign: affected side is weaker than unaffected side. Positive sign suggests tear in the supraspinatus."
+        },
+        {
+          "name": "Infraspinatus Test",
+          "procedure": "Patient holds arms close to body, elbow is flexed up to 90 deg of forward elevation in scapular plane. External rotation is instructed while examiner applies resistance. Lack of power on one side indicates weakness of the infraspinatus muscle."
+        },
+        {
+          "name": "Subscapularis Test (Belly Press Test)",
+          "procedure": "Patient is asked to place their hand on their abdomen and move elbow forward. Patient is then asked to press hand on the abdomen. If subscapularis is torn, patient will be unable to perform movement and elbow will move backwards."
+        },
+        {
+          "name": "Lag Sign for External Rotation",
+          "procedure": "Patient lifts arm slightly from body and is asked to hold in external rotation. Positive when hand recoils to neutral position and suggests tear of infraspinatus or supraspinatus."
+        },
+        {
+          "name": "Drop Sign",
+          "procedure": "The examiner places the arm at 90 deg abduction, elbow at right angle and arm maximally rotated. Positive sign: arm drops from position. Suggests a tear of the infraspinatus or the posterior part of the rotator cuff."
+        },
+        {
+          "name": "Lift-Off Test (Subscapularis)",
+          "procedure": "Patient is asked to place hand on the back at the mid-lumbar spine. The clinician then lifts hand from the back and patient is asked to hold it there. Positive sign: inability to maintain hand while removed suggests subscapularis weakness."
+        }
+      ]
     },
     {
       "name": "CALCIFIC TENDINITIS",
@@ -3403,7 +3464,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "X-ray",
+          "procedure": "Check X-ray to rule out asymptomatic calcification"
+        }
+      ]
     },
     {
       "name": "RECURRENT SHOULDER SUBLUXATION",
@@ -3765,7 +3831,20 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Apprehension Test",
+          "procedure": "Patient is in sitting or lying position, the examiner lifts the arm gently into abduction, external rotation and then extension. Test is positive if patient senses that humeral head is about to slip out anteriorly and body stiffens in apprehension. The test is repeated with the anterior part of shoulder protected."
+        },
+        {
+          "name": "Fulcrum's Test",
+          "procedure": "Patient lies supine, arm abducted up to 90 deg. The examiner places their hands over the shoulder to set the fulcrum base. The humeral head is levered forward by extending and externally rotating arm. The patient immediately becomes apprehensive."
+        },
+        {
+          "name": "Drawer's Test",
+          "procedure": "Patient lies supine, scapula is stabilised with one hand while the upper arm is grasped firmly with the other, and manoeuvring is done forward and backward (like a drawer). The drawer's test is positive if instability is marked."
+        }
+      ]
     },
     {
       "name": "RHEUMATOID ARTHRITIS",
@@ -4306,7 +4385,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Check for periarticular erosions, subchondral sclerosis, and resorption"
+        }
+      ]
     },
     {
       "name": "OSTEOARTHRITIS",
@@ -4708,7 +4792,13 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Check for distortion of the joint, subchondral sclerosis, osteophyte formation, and narrowing of articular space"
+        }
+      ]
     }
-  ]
+  ],
+  "version": "2.0.0"
 }

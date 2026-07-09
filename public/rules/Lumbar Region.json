@@ -2,7 +2,7 @@
   "region": "lumbar",
   "title": "Lumbar Region",
   "source_file": "Lumbar Region.docx",
-  "extracted_at": "2026-02-04T09:27:25.077Z",
+  "extracted_at": "2026-07-09T23:17:22.799Z",
   "migrated_at": "2026-02-04T11:09:54.225Z",
   "engine_version": "v2-branching",
   "conditions": [
@@ -1181,7 +1181,16 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Lasègue's Test (Straight-Leg Raise)",
+          "procedure": "Examiner raises legs of patient up so that hip flexion is achieved while knee is extended. Test is positive if patient feels pain along the course of the sciatic nerve and below the knee when hip is between 30-70 degrees of flexion."
+        },
+        {
+          "name": "Bragard Test",
+          "procedure": "This is a modification of the SLR and dorsiflexion is applied at the end of the SLR. This reduces the angle where the test is positive."
+        }
+      ]
     },
     {
       "name": "Sciatica",
@@ -1646,7 +1655,28 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Lasègue's Test (Straight-Leg Raise)",
+          "procedure": "Examiner raises legs of patient up so that hip flexion is achieved while knee is extended. Test is positive if patient feels pain along the course of the sciatic nerve and below the knee when hip is between 30-70 degrees of flexion."
+        },
+        {
+          "name": "Bragard Test",
+          "procedure": "This is a modification of the SLR and dorsiflexion is applied at the end of the SLR. This reduces the angle where the test is positive."
+        },
+        {
+          "name": "Bowstring Test (Popliteal Compression Test / Tibial Nerve Stretch Sign)",
+          "procedure": "This can be done while patient is lying in supine or sitting position. The examiner flexes the knee and applies pressure on the popliteal fossa evoking sciatica."
+        },
+        {
+          "name": "Clinical Observation - Knee Jerk Reflex",
+          "procedure": "Check if knee jerk reflex is present"
+        },
+        {
+          "name": "Clinical Observation - Ankle Jerk Reflex",
+          "procedure": "Check if ankle jerk reflex is present"
+        }
+      ]
     },
     {
       "name": "Lumbar spinal stenosis",
@@ -2187,7 +2217,36 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Bicycle Stress Test",
+          "procedure": "Record the amount of time the patient spends on a cycle ergometer while in a neutral lumbar position and slumped position. If patient spends more time in the slumped position, a lumbar spinal stenosis is indicated."
+        },
+        {
+          "name": "Two-stage Treadmill Test",
+          "procedure": "The patient walks on a flat treadmill and the amount of time spent is recorded and compared with the amount of time while the treadmill is inclined such that patient walks in flexion."
+        },
+        {
+          "name": "Lumbar Extension-Loading Test",
+          "procedure": "The examiner ensures that the lumbar region is in moderate extension (10-30 deg) while standing and patient lies supine. Check if there are changes in the symptoms that the patient feels."
+        },
+        {
+          "name": "Clinical Observation - Wide-based Gait",
+          "procedure": "Check if a wide-based gait is present"
+        },
+        {
+          "name": "Clinical Observation - Trendelenburg's Sign",
+          "procedure": "Check if Trendelenburg's sign is present"
+        },
+        {
+          "name": "Clinical Observation - Romberg Test",
+          "procedure": "Check for negative Romberg test"
+        },
+        {
+          "name": "Clinical Observation - Achilles Reflex",
+          "procedure": "Check if Achilles tendon reflex is diminished"
+        }
+      ]
     },
     {
       "name": "Lumbar Disc Herniation",
@@ -2581,7 +2640,52 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Lasègue's Test (Straight-Leg Raise)",
+          "procedure": "Examiner raises legs of patient up so that hip flexion is achieved while knee is extended. Test is positive if patient feels pain along the course of the sciatic nerve and below the knee when hip is between 30-70 degrees of flexion."
+        },
+        {
+          "name": "Bragard Test",
+          "procedure": "This is a modification of the SLR and dorsiflexion is applied at the end of the SLR. This reduces the angle where the test is positive."
+        },
+        {
+          "name": "Bowstring Test (Popliteal Compression Test / Tibial Nerve Stretch Sign)",
+          "procedure": "This can be done while patient is lying in supine or sitting position. The examiner flexes the knee and applies pressure on the popliteal fossa evoking sciatica."
+        },
+        {
+          "name": "Femoral Nerve Stretch Test (Wasserman Sign)",
+          "procedure": "Patient is in prone position, knee is flexed and hip is extended. Reproduction of pain in anterior thigh is positive."
+        },
+        {
+          "name": "Kernig Test",
+          "procedure": "Patient's neck is flexed, hip flexed and the leg is extended. Pain is reproduced in this position."
+        },
+        {
+          "name": "Milgram Test",
+          "procedure": "Pain is reproduced on straight leg elevation for 30 seconds."
+        },
+        {
+          "name": "MRI",
+          "procedure": "Radiographic confirmation of disc herniation"
+        },
+        {
+          "name": "Clinical Observation - Paraspinal Tenderness",
+          "procedure": "Check for tenderness in the paraspinal musculature"
+        },
+        {
+          "name": "Clinical Observation - Paraspinal Spasms",
+          "procedure": "Check for spasms in the paraspinal musculature"
+        },
+        {
+          "name": "Clinical Observation - Decreased Reflexes",
+          "procedure": "Check for decreased reflexes: patellar and ankle jerk"
+        },
+        {
+          "name": "Clinical Observation - Trendelenburg's Sign",
+          "procedure": "Check for Trendelenburg's sign"
+        }
+      ]
     },
     {
       "name": "Cauda Equina Syndrome",
@@ -3198,7 +3302,16 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "MRI",
+          "procedure": "Radiographic confirmation - urgent imaging required"
+        },
+        {
+          "name": "Clinical Observation - Upper Motor Neuron Signs",
+          "procedure": "Check for Babinski sign and clonus to rule out upper motor neuron involvement"
+        }
+      ]
     },
     {
       "name": "Axial spondyloarthropathy",
@@ -4048,7 +4161,37 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Lateral Lumbar Flexion (Fingertip to Floor Test)",
+          "procedure": "The patient stands with heel touching wall and feet wide apart, and back against the wall. Then the examiner measures the distance from middle finger to the floor. Then patient bends to side (lateral flexion). The distance between the middle finger and the floor is measured again. This measurement is done for both sides."
+        },
+        {
+          "name": "Modified Schober's Test",
+          "procedure": "Examiner marks both posterior superior iliac spine, and a horizontal line is drawn between both marks. A second line is marked 5cm below the first line, and a third line is marked 10cm above the first line. Patient is then instructed to flex forward as if attempting to touch their toes. An increase of less than 5cm shows decreased lumbar spine range of motion, and ankylosing spondylitis."
+        },
+        {
+          "name": "Chest Expansion Test",
+          "procedure": "Normal chest expansion is ≥ 5 cm"
+        },
+        {
+          "name": "Occiput to Wall Distance",
+          "procedure": "Normal distance is 0"
+        },
+        {
+          "name": "Tragus to Wall Distance",
+          "procedure": "Normal distance is < 15cm"
+        },
+        {
+          "name": "Intermalleolar Distance",
+          "procedure": "Normal distance is > 100cm"
+        },
+        {
+          "name": "Laboratory Investigations",
+          "procedure": "Confirmatory test through laboratory investigations (HLA-B27, ESR, CRP)"
+        }
+      ]
     }
-  ]
+  ],
+  "version": "2.0.0"
 }

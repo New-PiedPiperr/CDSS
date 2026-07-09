@@ -2,7 +2,7 @@
   "region": "hip",
   "title": "Hip Region",
   "source_file": "Hip region.docx",
-  "extracted_at": "2026-06-04T00:00:00.000Z",
+  "extracted_at": "2026-07-09T23:17:22.636Z",
   "migrated_at": "2026-06-04T00:00:00.000Z",
   "engine_version": "v2-branching",
   "conditions": [
@@ -1876,6 +1876,12 @@
             }
           ]
         }
+      ],
+      "tests": [
+        {
+          "name": "Clinical Assessment",
+          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+        }
       ]
     },
     {
@@ -2400,11 +2406,30 @@
         }
       ],
       "tests": [
-        "faber_test",
-        "fadir_test",
-        "hip_scour_test",
-        "hip_log_roll_test",
-        "trendelenburg_test"
+        {
+          "name": "FABER Test (Patrick's Test)",
+          "procedure": "Flexion, abduction, external rotation. If positive, indicates hip joint pathology such as OA."
+        },
+        {
+          "name": "FADIR Test",
+          "procedure": "Flexion, adduction, internal rotation. If positive, indicates intra-articular pathology (OA or FAI)."
+        },
+        {
+          "name": "Scour Test",
+          "procedure": "Examiner applies axial load while moving the hip in a circular motion. If positive, suggests hip joint degeneration (OA)."
+        },
+        {
+          "name": "Log Roll Test",
+          "procedure": "Examiner gently rolls the leg internally and externally. If positive, indicates intra-articular hip pathology."
+        },
+        {
+          "name": "Trendelenburg Test",
+          "procedure": "Patient stands on one leg. If positive, indicates gluteus medius weakness associated with hip OA."
+        },
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Check for joint space narrowing, osteophyte formation, and subchondral sclerosis"
+        }
       ]
     },
     {
@@ -2737,10 +2762,22 @@
         }
       ],
       "tests": [
-        "single_leg_stance_hip",
-        "resisted_ext_derotation",
-        "obers_test_hip",
-        "trendelenburg_test"
+        {
+          "name": "Single-Leg Stance Test",
+          "procedure": "Patient stands on the affected leg. Positive sign = pain over the greater trochanter."
+        },
+        {
+          "name": "Resisted External Derotation Test",
+          "procedure": "Patient resists external rotation of the hip. Positive sign = pain at the greater trochanteric region."
+        },
+        {
+          "name": "Ober's Test",
+          "procedure": "Patient lies on unaffected side. Examiner extends and abducts the hip, then slowly lowers the leg. Positive sign = leg remains elevated and does not drop."
+        },
+        {
+          "name": "Trendelenburg Test",
+          "procedure": "Patient stands on one leg. Positive sign = pelvis drops on the contralateral side, indicating gluteal weakness."
+        }
       ]
     },
     {
@@ -3155,10 +3192,26 @@
         }
       ],
       "tests": [
-        "fadir_test",
-        "faber_test",
-        "hip_scour_test",
-        "int_rotation_overpressure"
+        {
+          "name": "FADIR Test",
+          "procedure": "Flexion, adduction, internal rotation. If positive, indicates femoroacetabular impingement or intra-articular pathology."
+        },
+        {
+          "name": "FABER Test (Patrick's Test)",
+          "procedure": "Flexion, abduction, external rotation. If positive, indicates hip joint pathology."
+        },
+        {
+          "name": "Scour Test",
+          "procedure": "Apply axial load through the hip while circumducting. If positive, suggests intra-articular FAI."
+        },
+        {
+          "name": "Internal Rotation Overpressure Test",
+          "procedure": "Passively internally rotate the hip beyond its end range. Positive sign = pain or restricted motion suggesting FAI."
+        },
+        {
+          "name": "Imaging",
+          "procedure": "X-ray or MRI to confirm cam/pincer morphology and associated labral pathology."
+        }
       ]
     },
     {
@@ -3411,10 +3464,26 @@
         }
       ],
       "tests": [
-        "fadir_test",
-        "hip_scour_test",
-        "hip_log_roll_test",
-        "thomas_test_hip"
+        {
+          "name": "FADIR Test",
+          "procedure": "Flexion, adduction, internal rotation. If positive, indicates intra-articular pathology such as labral tear."
+        },
+        {
+          "name": "Scour Test",
+          "procedure": "Apply axial load while moving the hip in a circular motion. If positive, suggests labral tear."
+        },
+        {
+          "name": "Log Roll Test",
+          "procedure": "Passively roll the hip internally and externally. Positive sign = pain suggesting intra-articular pathology."
+        },
+        {
+          "name": "Thomas Test (Modified)",
+          "procedure": "Assess hip flexion contracture and labral conflict. Positive sign = restricted hip extension or pain."
+        },
+        {
+          "name": "Imaging",
+          "procedure": "MRI arthrogram to visualize labral tear and chondral damage."
+        }
       ]
     },
     {
@@ -3673,9 +3742,22 @@
         }
       ],
       "tests": [
-        "hip_log_roll_test",
-        "fadir_test",
-        "faber_test"
+        {
+          "name": "Log Roll Test",
+          "procedure": "Passively roll the hip. Positive sign = pain with motion, suggesting intra-articular pathology."
+        },
+        {
+          "name": "FADIR Test",
+          "procedure": "Flexion, adduction, internal rotation. If positive, indicates intra-articular pathology."
+        },
+        {
+          "name": "FABER Test",
+          "procedure": "Flexion, abduction, external rotation. If positive, indicates hip joint pathology."
+        },
+        {
+          "name": "Imaging",
+          "procedure": "MRI is definitive for early AVN detection. X-ray for late-stage collapse."
+        }
       ],
       "clinical_note": "AVN is imaging-dependent: MRI is definitive for early disease. Use red flags (rest pain, risk factors) to prioritize urgent imaging."
     },
@@ -4051,10 +4133,20 @@
         }
       ],
       "tests": [
-        "dynamic_hip_movement",
-        "obers_test_hip",
-        "thomas_test_hip"
+        {
+          "name": "Dynamic Hip Movement Test",
+          "procedure": "Patient actively moves the hip through flexion/extension and rotation. Positive sign = palpable/audible snap over the hip."
+        },
+        {
+          "name": "Ober's Test (External Snapping)",
+          "procedure": "Patient side-lying, hip abducted and extended, then lowered. Positive sign = snap over greater trochanter in IT band type."
+        },
+        {
+          "name": "Thomas Test (Internal Snapping)",
+          "procedure": "Patient supine, hip flexed to chest, then extended. Positive sign = snap over iliopsoas tendon during extension."
+        }
       ]
     }
-  ]
+  ],
+  "version": "2.0.0"
 }

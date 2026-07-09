@@ -2,7 +2,7 @@
   "region": "cervical",
   "title": "Cervical Region",
   "source_file": "Cervical Region.docx",
-  "extracted_at": "2026-02-04T09:27:24.977Z",
+  "extracted_at": "2026-07-09T23:17:22.538Z",
   "migrated_at": "2026-02-04T11:09:54.074Z",
   "engine_version": "v2-branching",
   "conditions": [
@@ -1051,7 +1051,24 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Spurling's Test (Maximal Cervical Compression and Foraminal Compression Test)",
+          "procedure": "The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm."
+        },
+        {
+          "name": "Cervical Distraction Test",
+          "procedure": "The patient lies supine and the neck is positioned comfortably. The examiner places hand around the patient's mastoid process. The examiner then slightly flexes the patient's neck and pulls the head towards your torso. Test is positive if the symptoms reduce or are eliminated with traction."
+        },
+        {
+          "name": "MRI",
+          "procedure": "Radiographic confirmation of disc herniation"
+        },
+        {
+          "name": "Clinical Observation - Cervical Rotation",
+          "procedure": "Check if cervical rotation on the affected side is less than 60 degrees"
+        }
+      ]
     },
     {
       "name": "Cervical Spondylosis",
@@ -2230,7 +2247,17 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Spurling's Test (Maximal Cervical Compression and Foraminal Compression Test)",
+          "procedure": "The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm."
+        },
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Check for loss of normal cervical lordosis, and degeneration"
+        }
+      ]
     }
-  ]
+  ],
+  "version": "2.0.0"
 }

@@ -233,8 +233,11 @@ async function main() {
     'Ankle Region.json',
     'Cervical Region.json',
     'Elbow Region.json',
+    'Hip Region.json',
+    'Knee Region.json',
     'Lumbar Region.json',
     'Shoulder Region.json',
+    'Wrist Region.json',
   ];
 
   const allConditionMappings = [];

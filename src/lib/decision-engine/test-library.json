@@ -1263,8 +1263,44 @@
       "Patient slumps the spine into thoracic and lumbar flexion; examiner overpresses the shoulders.",
       "Patient flexes the neck (chin to chest); examiner maintains overpressure.",
       "Examiner extends the symptomatic knee, then dorsiflexes the ankle.",
-      "Positive: reproduction of the patient’s radicular leg pain, relieved by releasing neck flexion."
+      "Positive: reproduction of the patient's radicular leg pain, relieved by releasing neck flexion."
     ],
     "image": "/images/clinical/slump-test.jpg"
+  },
+  {
+    "id": "ankle_plantarflexion_weakness",
+    "name": "Plantarflexion Weakness Check",
+    "type": "Clinical Test",
+    "purpose": "To assess for weak ankle plantarflexion suggesting Achilles tendon dysfunction or rupture.",
+    "instructions": [
+      "Ask the patient to actively plantarflex the ankle against resistance.",
+      "Compare strength bilaterally.",
+      "Positive: Noticeable weakness or inability to plantarflex on the affected side."
+    ],
+    "image": null
+  },
+  {
+    "id": "ankle_palpable_gap",
+    "name": "Palpable Gap Check",
+    "type": "Clinical Test",
+    "purpose": "To detect a palpable gap or defect at the site of an Achilles tendon rupture.",
+    "instructions": [
+      "Palpate the Achilles tendon from the myotendinous junction to the calcaneal insertion.",
+      "Feel for a discontinuity, gap, or indentation in the tendon.",
+      "Positive: Palpable gap or localization of tenderness indicating ruptured fibers."
+    ],
+    "image": null
+  },
+  {
+    "id": "ankle_ultrasound",
+    "name": "Ankle Ultrasound",
+    "type": "Imaging",
+    "purpose": "To confirm an Achilles tendon rupture and assess tear gap/retraction using bedside ultrasound.",
+    "instructions": [
+      "Perform a high-frequency ultrasound scan over the Achilles tendon.",
+      "Evaluate for complete or partial tear, fiber discontinuity, and hematoma.",
+      "Positive: Confirms diagnosis and guides management planning."
+    ],
+    "image": null
   }
 ]

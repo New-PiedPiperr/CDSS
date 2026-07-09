@@ -2,7 +2,7 @@
   "region": "wrist",
   "title": "Wrist Region",
   "source_file": "Wrist Region.docx",
-  "extracted_at": "2026-06-04T00:00:00.000Z",
+  "extracted_at": "2026-07-09T23:17:23.184Z",
   "migrated_at": "2026-06-04T00:00:00.000Z",
   "engine_version": "v2-branching",
   "conditions": [
@@ -1100,6 +1100,12 @@
             }
           ]
         }
+      ],
+      "tests": [
+        {
+          "name": "Clinical Assessment",
+          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+        }
       ]
     },
     {
@@ -1520,9 +1526,18 @@
         }
       ],
       "tests": [
-        "phalens_test",
-        "tinels_sign_wrist",
-        "carpal_compression_test"
+        {
+          "name": "Phalen's Test",
+          "procedure": "Patient flexes wrists fully and holds position. If positive, indicates CTS."
+        },
+        {
+          "name": "Tinel's Sign",
+          "procedure": "Examiner taps over carpal tunnel. If positive, indicates CTS."
+        },
+        {
+          "name": "Carpal Compression Test",
+          "procedure": "Examiner applies direct pressure over carpal tunnel. If positive, indicates CTS."
+        }
       ]
     },
     {
@@ -1855,8 +1870,14 @@
         }
       ],
       "tests": [
-        "finkelsteins_test",
-        "what_test"
+        {
+          "name": "Finkelstein's Test",
+          "procedure": "Patient makes a fist with thumb inside fingers. Examiner ulnar deviates wrist. If positive, indicates De Quervain's."
+        },
+        {
+          "name": "WHAT Test (Wrist Hyperflexion Abduction of Thumb)",
+          "procedure": "Patient hyperflexes wrist and abducts thumb against resistance. If positive, indicates De Quervain's."
+        }
       ]
     },
     {
@@ -2189,7 +2210,14 @@
         }
       ],
       "tests": [
-        "ligament_stress_wrist"
+        {
+          "name": "Ligament Stress Tests",
+          "procedure": "Examiner applies stress to specific ligaments. Positive sign = pain or instability localized to the injured ligament."
+        },
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Rule out undisplaced fracture or other bony injury"
+        }
       ]
     },
     {
@@ -2518,8 +2546,18 @@
         }
       ],
       "tests": [
-        "tfcc_load_test",
-        "press_test_wrist"
+        {
+          "name": "TFCC Load Test",
+          "procedure": "Wrist in ulnar deviation + axial load + rotation. Positive if ulnar wrist pain."
+        },
+        {
+          "name": "Press Test",
+          "procedure": "Patient pushes up from chair using hands. Positive if ulnar wrist pain."
+        },
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "MRI or arthrogram to assess TFCC complex integrity"
+        }
       ]
     },
     {
@@ -2774,7 +2812,10 @@
         }
       ],
       "tests": [
-        "transillumination_wrist"
+        {
+          "name": "Transillumination Test",
+          "procedure": "Light is applied through the swelling. Positive sign = transillumination confirms fluid-filled cyst."
+        }
       ]
     },
     {
@@ -3029,7 +3070,10 @@
         }
       ],
       "tests": [
-        "resisted_wrist_extension"
+        {
+          "name": "Resisted Wrist Extension Test",
+          "procedure": "Patient extends wrist against resistance. Positive sign = pain 4–6 cm proximal to the wrist in the dorsal radial forearm."
+        }
       ]
     },
     {
@@ -3284,8 +3328,18 @@
         }
       ],
       "tests": [
-        "snuffbox_tenderness",
-        "scaphoid_compression"
+        {
+          "name": "Snuffbox Tenderness Test",
+          "procedure": "Palpation of anatomical snuffbox. If positive, indicates scaphoid fracture."
+        },
+        {
+          "name": "Scaphoid Compression Test",
+          "procedure": "Axial load applied through thumb. If positive, indicates scaphoid fracture."
+        },
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "X-ray and/or MRI to confirm scaphoid fracture, especially if initial X-ray is normal."
+        }
       ],
       "clinical_note": "Scaphoid fracture is the highest-risk wrist red flag. Persistent snuffbox tenderness after FOOSH must be treated as a fracture and imaged (MRI/CT) even if the initial X-ray is normal, due to non-union/AVN risk."
     },
@@ -3539,9 +3593,17 @@
         }
       ],
       "tests": [
-        "axial_load_wrist"
+        {
+          "name": "Axial Load Test",
+          "procedure": "Apply compression through wrist. Positive if central dorsal wrist pain."
+        },
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "X-ray for staging, MRI for early AVN detection."
+        }
       ],
       "clinical_note": "No single definitive clinical test exists for Kienbock's disease. Diagnosis is imaging-dependent: X-ray for staging, MRI for early AVN detection."
     }
-  ]
+  ],
+  "version": "2.0.0"
 }

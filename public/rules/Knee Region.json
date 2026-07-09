@@ -2,7 +2,7 @@
   "region": "knee",
   "title": "Knee Region",
   "source_file": "Knee Region.docx",
-  "extracted_at": "2026-06-04T00:00:00.000Z",
+  "extracted_at": "2026-07-09T23:17:22.707Z",
   "migrated_at": "2026-06-04T00:00:00.000Z",
   "engine_version": "v2-branching",
   "conditions": [
@@ -1620,6 +1620,12 @@
             }
           ]
         }
+      ],
+      "tests": [
+        {
+          "name": "Clinical Assessment",
+          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+        }
       ]
     },
     {
@@ -1952,8 +1958,26 @@
         }
       ],
       "tests": [
-        "passive_joint_motion_knee",
-        "knee_temp_assessment"
+        {
+          "name": "Passive Joint Motion Test",
+          "procedure": "Examiner gently moves the knee through passive flexion and extension. Severe pain with passive movement is positive."
+        },
+        {
+          "name": "Joint Effusion Test",
+          "procedure": "Examiner strokes medial and lateral knee. Significant fluid accumulation suggests infection."
+        },
+        {
+          "name": "Blood Tests",
+          "procedure": "Elevated ESR, CRP, WBC count; identifies causative organism"
+        },
+        {
+          "name": "X-ray",
+          "procedure": "May show joint swelling (early), joint destruction (late)"
+        },
+        {
+          "name": "MRI",
+          "procedure": "Detects early joint infection and soft tissue involvement"
+        }
       ],
       "clinical_note": "MEDICAL EMERGENCY. Diagnosis is clinical + laboratory; joint aspiration is the gold standard. AVOID aggressive manual testing."
     },
@@ -2381,11 +2405,34 @@
         }
       ],
       "tests": [
-        "clarkes_test",
-        "step_down_test",
-        "patellar_tilt_test",
-        "waldron_test",
-        "patellar_glide_test"
+        {
+          "name": "Resisted Quadriceps Test",
+          "procedure": "Patient seated with knee slightly flexed. Examiner applies resistance as the patient extends the knee. If positive, indicates patellofemoral joint irritation."
+        },
+        {
+          "name": "Step-Down Test",
+          "procedure": "Patient stands on a 20 cm step and slowly lowers the contralateral heel to the ground while examiner observes knee alignment. If positive, suggests PFPS and poor lower limb control."
+        },
+        {
+          "name": "Clarke's Test (Patellar Grind Test)",
+          "procedure": "Patient supine with knee extended. Examiner applies gentle downward pressure on the superior pole of the patella while patient contracts the quadriceps. If positive, indicates patellofemoral joint dysfunction."
+        },
+        {
+          "name": "Patellar Apprehension Test",
+          "procedure": "Patient supine and relaxed. Examiner gently pushes the patella laterally. If positive, indicates patellar instability."
+        },
+        {
+          "name": "Patellar Tilt Test",
+          "procedure": "Examiner lifts the lateral edge of the patella while stabilizing the medial edge. If positive, limited tilt or pain indicates tight lateral structures or OA changes."
+        },
+        {
+          "name": "Waldron Test",
+          "procedure": "Patient seated and actively flexes and extends the knee while examiner palpates the patellofemoral joint. If positive, indicates PFPS or patellofemoral joint irritation."
+        },
+        {
+          "name": "Patellar Glide Test",
+          "procedure": "Patient supine with knee extended. Examiner glides the patella medially and laterally. If positive, indicates abnormal patellar tracking."
+        }
       ]
     },
     {
@@ -2638,11 +2685,26 @@
         }
       ],
       "tests": [
-        "mcmurray_test",
-        "apley_compression",
-        "thessaly_test",
-        "joint_line_tenderness",
-        "bounce_home_test"
+        {
+          "name": "McMurray Test",
+          "procedure": "Patient supine. Examiner flexes the hip and knee fully, then rotates the tibia internally and externally while extending the knee. If positive, suggests meniscal tear."
+        },
+        {
+          "name": "Apley's Compression Test",
+          "procedure": "Patient lies prone with knee flexed to 90°. Examiner applies downward pressure along the tibia while rotating it internally and externally. If positive, indicates meniscal injury."
+        },
+        {
+          "name": "Thessaly Test",
+          "procedure": "Patient stands on one leg with knee slightly flexed (~20°). Patient rotates the body and knee internally and externally three times. If positive, indicates possible meniscal pathology."
+        },
+        {
+          "name": "Bounce Home Test",
+          "procedure": "Patient supine. Examiner fully flexes the knee and then allows it to passively extend. If positive, suggests a displaced meniscal fragment."
+        },
+        {
+          "name": "Ege's Test",
+          "procedure": "Patient stands with knees flexed and externally rotates both feet to test the medial meniscus; internally rotates both feet to test the lateral meniscus. If positive, pain or clicking occurs along the joint line."
+        }
       ]
     },
     {
@@ -2815,8 +2877,14 @@
         }
       ],
       "tests": [
-        "resisted_contraction_test",
-        "passive_stretch_test"
+        {
+          "name": "Resisted Contraction Test",
+          "procedure": "Patient contracts the affected muscle against resistance at mid-range. Positive if pain is reproduced at the site."
+        },
+        {
+          "name": "Passive Stretch Test",
+          "procedure": "Examiner stretches the affected muscle slowly. Positive if pain is reproduced."
+        }
       ]
     },
     {
@@ -2991,8 +3059,14 @@
         }
       ],
       "tests": [
-        "lachman_test",
-        "anterior_drawer_knee"
+        {
+          "name": "Lachman Test",
+          "procedure": "Knee flexed ~30°, examiner stabilizes femur and pulls tibia anteriorly at the knee. Positive sign = soft endpoint or increased anterior tibial translation indicates ACL tear."
+        },
+        {
+          "name": "Anterior Drawer Test",
+          "procedure": "Knee flexed 90°, examiner pulls tibia anteriorly at the knee. Positive sign = increased anterior translation indicates ACL injury."
+        }
       ]
     },
     {
@@ -3165,7 +3239,10 @@
         }
       ],
       "tests": [
-        "valgus_stress_test_knee"
+        {
+          "name": "Valgus Stress Test",
+          "procedure": "With pt supine, knee flexed to 30°, examiner stabilizes the femur and applies a valgus force to the knee. Positive sign = pain or gapping at the medial knee joint line indicates MCL injury."
+        }
       ]
     },
     {
@@ -3338,7 +3415,10 @@
         }
       ],
       "tests": [
-        "varus_stress_test_knee"
+        {
+          "name": "Varus Stress Test",
+          "procedure": "With pt supine, knee flexed to 30°, examiner stabilizes the femur and applies a varus force to the knee. Positive sign = pain or gapping at the lateral knee joint line indicates LCL injury."
+        }
       ]
     },
     {
@@ -3511,8 +3591,14 @@
         }
       ],
       "tests": [
-        "posterior_drawer_test",
-        "godfrey_test"
+        {
+          "name": "Posterior Drawer Test",
+          "procedure": "Knee flexed 90°, examiner pushes tibia posteriorly at the knee. Positive sign = posterior translation indicates PCL tear."
+        },
+        {
+          "name": "Godfrey (Posterior Sag) Test",
+          "procedure": "Hip and knee flexed 90°, examiner observes tibial plateau at the knee. Positive sign = sagging tibia compared to contralateral knee indicates PCL injury."
+        }
       ]
     },
     {
@@ -3919,10 +4005,22 @@
         }
       ],
       "tests": [
-        "patellofemoral_compression",
-        "crepitus_test",
-        "knee_rom_assessment",
-        "joint_line_tenderness"
+        {
+          "name": "Patellofemoral Compression Test (Grind Test)",
+          "procedure": "Patient supine with knee extended. Examiner applies downward pressure on the patella while asking the patient to contract the quadriceps. Positive sign = pain or crepitus at the patellofemoral joint."
+        },
+        {
+          "name": "Patellar Tilt Test",
+          "procedure": "Examiner lifts the lateral edge of the patella while stabilizing the medial edge. Positive sign = limited tilt or pain indicates tight lateral structures or OA changes."
+        },
+        {
+          "name": "Crepitus Test",
+          "procedure": "Examiner moves the knee through full flexion and extension, palpating and listening for audible or palpable crepitus."
+        },
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Check for joint space narrowing, osteophyte formation, subchondral sclerosis, and cyst formation"
+        }
       ]
     },
     {
@@ -4175,10 +4273,18 @@
         }
       ],
       "tests": [
-        "patellar_apprehension",
-        "patella_tracking_assess",
-        "patella_hypermobility",
-        "q_angle_measurement"
+        {
+          "name": "Patellar Apprehension Test",
+          "procedure": "Patient lies supine with the knee extended. Examiner gently pushes the patella laterally. Positive sign = apprehension or pain indicating abnormal patellar tracking."
+        },
+        {
+          "name": "Patellar Hyper-mobility Test",
+          "procedure": "Patient lies supine, knee extended. Examiner gently displaces patella medially and laterally. Positive sign = excessive hypermobility or abnormal motion."
+        },
+        {
+          "name": "Imaging",
+          "procedure": "Lateral and axial X-rays; MRI if soft tissue assessment needed. Positive sign = subluxation/dislocation, osteochondral fractures, or MPFL tear."
+        }
       ],
       "clinical_note": "Imaging: lateral + axial X-rays; MRI if MPFL tear suspected."
     },
@@ -4434,10 +4540,26 @@
         }
       ],
       "tests": [
-        "knee_slr_test",
-        "patellar_integrity_palpation",
-        "active_knee_extension",
-        "axial_loading_test"
+        {
+          "name": "Straight Leg Raise Test",
+          "procedure": "Patient lies supine with both legs extended. Examiner asks the patient to lift the affected leg straight up without bending the knee. Positive sign = inability to lift the leg actively, indicating disruption of the extensor mechanism."
+        },
+        {
+          "name": "Palpation Test for Patella Integrity",
+          "procedure": "Patient lies supine with knee relaxed. Examiner palpates the patella gently using fingers to feel for tenderness, irregularity, or gap. Positive sign = localized severe tenderness, palpable gap, or irregularity."
+        },
+        {
+          "name": "Active Knee Extension Test",
+          "procedure": "Patient sits or lies supine. Examiner asks patient to actively straighten the knee from a flexed position. Positive sign = inability or severe pain during active extension."
+        },
+        {
+          "name": "Patellar Compression Test (Modified for fracture screening)",
+          "procedure": "Patient lies supine with knee extended. Examiner gently presses patella posteriorly toward femur. Positive sign = severe localized pain, suggesting patella fracture."
+        },
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Imaging (X-ray – AP, Lateral, Skyline view). Positive sign = visible fracture line, displacement, or comminution."
+        }
       ],
       "clinical_note": "Imaging REQUIRED: X-ray AP/Lateral/Skyline; CT for tibial plateau detail; MRI for soft tissue."
     },
@@ -4771,9 +4893,26 @@
         }
       ],
       "tests": [
-        "noble_compression",
-        "knee_obers_test",
-        "renne_test"
+        {
+          "name": "Noble Compression Test",
+          "procedure": "Patient lies supine. Examiner flexes knee to 90° and applies pressure over lateral femoral epicondyle while slowly extending the knee. Positive sign = pain at approximately 30° knee flexion."
+        },
+        {
+          "name": "Ober's Test",
+          "procedure": "Patient lies on unaffected side. Examiner extends and abducts the hip, then slowly lowers the leg. Positive sign = leg remains elevated and does not drop."
+        },
+        {
+          "name": "Renne Test",
+          "procedure": "Patient stands and performs squat while examiner applies pressure over lateral femoral epicondyle. Positive sign = pain at approximately 30° knee flexion."
+        },
+        {
+          "name": "Modified Thomas Test",
+          "procedure": "Patient lies supine at edge of table. Examiner observes hip and thigh position. Positive sign = tight lateral thigh indicating IT band tightness."
+        },
+        {
+          "name": "Palpation Test of Lateral Femoral Epicondyle",
+          "procedure": "Examiner palpates lateral femoral epicondyle with knee flexed and extended."
+        }
       ]
     },
     {
@@ -5108,10 +5247,26 @@
         }
       ],
       "tests": [
-        "decline_squat_test",
-        "resisted_knee_extension",
-        "single_leg_decline_squat",
-        "hop_test_knee"
+        {
+          "name": "Decline Squat Test",
+          "procedure": "Patient stands on 25° decline board and performs squat. Positive sign = localized pain at inferior pole of patella."
+        },
+        {
+          "name": "Resisted Knee Extension Test",
+          "procedure": "Patient sits with knee flexed. Examiner resists knee extension. Positive sign = localized tendon pain."
+        },
+        {
+          "name": "Single-Leg Decline Squat Test",
+          "procedure": "Patient performs single-leg squat on decline surface. Positive sign = reproduction of localized tendon pain."
+        },
+        {
+          "name": "Palpation Test",
+          "procedure": "Examiner palpates inferior and superior poles of patella. Positive sign = localized tenderness at tendon insertion."
+        },
+        {
+          "name": "Hop Test",
+          "procedure": "Patient performs repeated hopping on affected leg. Positive sign = localized tendon pain with loading."
+        }
       ]
     },
     {
@@ -5362,9 +5517,22 @@
         }
       ],
       "tests": [
-        "pes_anserine_palpation",
-        "resisted_knee_flexion",
-        "resisted_hip_adduction"
+        {
+          "name": "Pes Anserinus Palpation Test",
+          "procedure": "Patient lies supine with knee extended. Examiner palpates 5–7 cm below medial joint line. Positive sign = localized tenderness."
+        },
+        {
+          "name": "Resisted Knee Flexion Test",
+          "procedure": "Patient flexes knee while examiner applies resistance. Positive sign = pain at pes anserinus region."
+        },
+        {
+          "name": "Resisted Hip Adduction Test",
+          "procedure": "Patient performs hip adduction while examiner applies resistance. Positive sign = pain at pes anserinus insertion."
+        },
+        {
+          "name": "Hamstring Stretch Test",
+          "procedure": "Examiner passively stretches hamstrings. Positive sign = pain at pes anserinus region."
+        }
       ]
     },
     {
@@ -5617,9 +5785,18 @@
         }
       ],
       "tests": [
-        "wilsons_test",
-        "condylar_palpation",
-        "joint_effusion_stroke_test"
+        {
+          "name": "Wilson's Test",
+          "procedure": "Patient lies supine. Examiner flexes knee to 90°. Patient actively extends knee while examiner internally rotates tibia. Positive sign = pain between 30°–40° knee extension relieved with external rotation."
+        },
+        {
+          "name": "Passive Condylar Palpation Test",
+          "procedure": "Patient knee flexed to 90°. Examiner palpates femoral condyles. Positive sign = localized pain over femoral condyle."
+        },
+        {
+          "name": "Joint Effusion Test (Stroke Test)",
+          "procedure": "Examiner strokes medial knee upward and lateral knee downward. Positive sign = fluid movement or bulge."
+        }
       ],
       "clinical_note": "Imaging REQUIRED: X-ray (AP/lateral/tunnel view); MRI for staging."
     },
@@ -5949,11 +6126,25 @@
         }
       ],
       "tests": [
-        "foucher_sign",
-        "popliteal_palpation",
-        "knee_effusion_test"
+        {
+          "name": "Foucher's Sign",
+          "procedure": "Positive sign = mass becomes firm in extension and softens or disappears in flexion, confirming Baker's cyst."
+        },
+        {
+          "name": "Popliteal Palpation Test",
+          "procedure": "Patient prone or supine. Examiner palpates popliteal fossa. Positive sign = palpable fluid-filled mass."
+        },
+        {
+          "name": "Transillumination Test",
+          "procedure": "Light source applied behind swelling. Positive sign = transillumination suggests fluid-filled cyst."
+        },
+        {
+          "name": "Knee Effusion Test",
+          "procedure": "Examiner performs stroke test or bulge test. Positive sign = fluid accumulation present."
+        }
       ],
       "clinical_note": "Usually secondary to OA or meniscus pathology — treat the underlying cause."
     }
-  ]
+  ],
+  "version": "2.0.0"
 }

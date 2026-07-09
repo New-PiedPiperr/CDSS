@@ -2,7 +2,7 @@
   "region": "ankle",
   "title": "Ankle Region",
   "source_file": "Ankle Region.docx",
-  "extracted_at": "2026-02-04T09:27:24.946Z",
+  "extracted_at": "2026-07-09T23:17:22.467Z",
   "migrated_at": "2026-02-04T11:09:53.992Z",
   "engine_version": "v2-branching",
   "conditions": [
@@ -637,7 +637,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Clinical Assessment",
+          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+        }
+      ]
     },
     {
       "name": "Achilles Tendinopathy",
@@ -1212,7 +1217,16 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Ultrasound",
+          "procedure": "Use ultrasound to investigate tears"
+        },
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Imaging to confirm diagnosis"
+        }
+      ]
     },
     {
       "name": "Achilles Tendon Rupture",
@@ -1677,7 +1691,24 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Thompson's Test (Simmond's Test)",
+          "procedure": "Patient lies prone and the calf is squeezed. If tendon is ruptured, the foot will remain still when it ought to contract involuntarily."
+        },
+        {
+          "name": "Clinical Observation - Plantarflexion Weakness",
+          "procedure": "Check if plantarflexion of the ankle is weak"
+        },
+        {
+          "name": "Clinical Observation - Palpable Gap",
+          "procedure": "Check for palpable gap at the site of the rupture"
+        },
+        {
+          "name": "Ultrasound",
+          "procedure": "Use ultrasound to confirm the diagnosis"
+        }
+      ]
     },
     {
       "name": "Traction Apophysitis (Sever’s Disease)",
@@ -1767,7 +1798,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Clinical Assessment",
+          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+        }
+      ]
     },
     {
       "name": "Calcaneal Bursitis",
@@ -2085,7 +2121,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Clinical Observation - Posterior Calcaneum",
+          "procedure": "Check if the posterior portion of the calcaneum looks more prominent"
+        }
+      ]
     },
     {
       "name": "Plantar Fasciitis",
@@ -2550,7 +2591,16 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Ultrasound",
+          "procedure": "Confirmation using ultrasound to check for thickening around the heel"
+        },
+        {
+          "name": "Doppler Test",
+          "procedure": "Doppler test to show increased local blood flow and neovascularisation"
+        }
+      ]
     },
     {
       "name": "ANKLE LIGAMENT INJURIES",
@@ -2871,7 +2921,16 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Clinical Observation - Palpation",
+          "procedure": "Palpate the ankle distally and anteriorly to the lateral malleolus and ask if patient feels more pain. Usually, patient feels more pain on palpation."
+        },
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Rule out undisplaced fracture of fibula, tarsal bone, 5th metatarsal bone"
+        }
+      ]
     },
     {
       "name": "Acute Injury of Lateral Ligaments",
@@ -2956,7 +3015,16 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Clinical Observation - Palpation",
+          "procedure": "Palpate the ankle distally and anteriorly to the lateral malleolus and ask if patient feels more pain. Usually, patient feels more pain on palpation."
+        },
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Rule out undisplaced fracture of fibula, tarsal bone, 5th metatarsal bone"
+        }
+      ]
     },
     {
       "name": "Recurrent Lateral Instability",
@@ -3117,7 +3185,16 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Talar Tilt Test",
+          "procedure": "The ankle is held in the neutral position, examiner stabilises the tibia just above the ankle and then tries to force the ankle into maximum inversion. The ROM can be measured or compared with the contralateral side. Inversion laxity suggests injury to calcaneofibular and anterior talofibular ligaments (ATFL)."
+        },
+        {
+          "name": "Anterior Drawer Test",
+          "procedure": "Patient sits with knee flexed at 90 deg and ankle in plantarflexion of about 10 deg. The lower leg is stabilised by the examiner and forces patient's heel forward over the tibia. If positive, the talus can be felt sliding forwards and backwards. Laxity indicates tear of the ATFL."
+        }
+      ]
     },
     {
       "name": "Deltoid Ligament Tear",
@@ -3202,7 +3279,16 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Clinical Observation - Foot Position",
+          "procedure": "Check if foot is everted and externally rotated"
+        },
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Check for widening of the medial joint space in the mortise view, check if talus is tilted, check for fracture or dislocation of the proximal fibula"
+        }
+      ]
     },
     {
       "name": "Tears of Inferior Tibiofibular Ligaments",
@@ -3443,7 +3529,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Squeeze Test",
+          "procedure": "Compress the leg firmly above the ankle. Test is positive if pain is felt over the syndesmosis."
+        }
+      ]
     },
     {
       "name": "MALLEOLAR FRACTURES OF THE ANKLE",
@@ -3913,7 +4004,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Confirm fracture using radiographic imaging"
+        }
+      ]
     },
     {
       "name": "CALCANEAL FRACTURES",
@@ -4878,7 +4974,16 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "X-ray imaging to confirm fracture"
+        },
+        {
+          "name": "Clinical Assessment - Foot Compartment Syndrome",
+          "procedure": "Rule out foot compartment syndrome"
+        }
+      ]
     },
     {
       "name": "RHEUMATOID ARTHRITIS",
@@ -5495,7 +5600,16 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Clinical Observation - Deformities",
+          "procedure": "Check for the following deformities: flattened anterior arch, hallux valgus, claw toes, prominence of the metatarsal head in the soles (feels like walking on stones), presence of subcutaneous nodules"
+        },
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Check for osteoporosis and periarticular erosion at the metatarsophalangeal joint"
+        }
+      ]
     },
     {
       "name": "RA of Ankle and Hindfoot",
@@ -5960,7 +6074,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "Check for osteoporosis, erosion of the tarsal and ankle joints and the swelling of soft-tissues"
+        }
+      ]
     },
     {
       "name": "Ankle Osteoarthritis",
@@ -6433,7 +6552,12 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Clinical Assessment",
+          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+        }
+      ]
     },
     {
       "name": "Tarsal Tunnel Syndrome",
@@ -7202,7 +7326,29 @@
           ]
         }
       ],
-      "tests": []
+      "tests": [
+        {
+          "name": "Tinel's Sign",
+          "procedure": "Percussion of the tarsal tunnel. Positive if this results in a distal radiation of paraesthesia."
+        },
+        {
+          "name": "Dorsiflexion-Eversion Test",
+          "procedure": "Place the patient's foot into dorsiflexion and eversion and hold for 5-10 seconds. Positive if patient's symptom is elicited."
+        },
+        {
+          "name": "Clinical Observation - Abductor Hallucis",
+          "procedure": "Check for atrophy of the abductor hallucis"
+        },
+        {
+          "name": "Clinical Observation - Arch Stability",
+          "procedure": "Check for arch stability"
+        },
+        {
+          "name": "Clinical Observation - Talus and Calcaneus Position",
+          "procedure": "Check for the position of the talus and calcaneus"
+        }
+      ]
     }
-  ]
+  ],
+  "version": "2.0.0"
 }

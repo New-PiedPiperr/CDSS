@@ -1651,7 +1651,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "Septic Arthritis"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "Septic Arthritis",
@@ -1686,7 +1688,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "Septic Arthritis"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "Septic Arthritis",
@@ -2004,7 +2008,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "Patellofemoral Pain Syndrome"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "Patellofemoral Pain Syndrome",
@@ -2013,7 +2019,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -2039,7 +2045,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "Patellofemoral Pain Syndrome"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "Patellofemoral Pain Syndrome",
@@ -2048,7 +2056,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -2620,7 +2628,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "Meniscus Tear"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "Meniscus Tear"
@@ -2628,7 +2638,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -2654,7 +2664,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "Meniscus Tear"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "Meniscus Tear"
@@ -2662,7 +2674,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -2812,7 +2824,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "Muscle Strain"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "Muscle Strain"
@@ -2820,7 +2834,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -2846,7 +2860,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "Muscle Strain"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "Muscle Strain"
@@ -2854,7 +2870,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -2992,7 +3008,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "ACL Injury"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "ACL Injury",
@@ -3001,7 +3019,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -3027,7 +3045,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "ACL Injury"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "ACL Injury",
@@ -3036,7 +3056,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -3174,7 +3194,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "MCL Injury"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "MCL Injury"
@@ -3182,7 +3204,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -3208,7 +3230,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "MCL Injury"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "MCL Injury"
@@ -3216,7 +3240,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -3350,7 +3374,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "LCL Injury"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "LCL Injury"
@@ -3358,7 +3384,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -3384,7 +3410,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "LCL Injury"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "LCL Injury"
@@ -3392,7 +3420,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -3526,7 +3554,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "PCL Injury"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "PCL Injury"
@@ -3534,7 +3564,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -3560,7 +3590,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "PCL Injury"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "PCL Injury"
@@ -3568,7 +3600,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null
               }
             },
@@ -3940,7 +3972,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "Knee Osteoarthritis"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "Knee Osteoarthritis"
@@ -3948,7 +3982,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": "Risk for secondary OA."
               }
             },
@@ -3974,7 +4008,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "Knee Osteoarthritis"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "Knee Osteoarthritis"
@@ -3982,7 +4018,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": "Risk for secondary OA."
               }
             },

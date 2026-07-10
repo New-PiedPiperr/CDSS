@@ -11,7 +11,6 @@ import {
   ChevronRight,
   SkipForward,
 } from 'lucide-react';
-import { toast } from 'sonner';
 import {
   initializeEngine,
   getCurrentQuestion,
@@ -142,13 +141,7 @@ export default function QuestionEngine() {
           // Update store
           updateEngineState(newState);
 
-          // Check for red flags
-          if (newState.redFlags.length > (engineState.redFlags?.length || 0)) {
-            const newFlag = newState.redFlags[newState.redFlags.length - 1];
-            toast.warning('Clinical Attention Required', {
-              description: newFlag.redFlagText || 'A clinical concern has been detected.',
-            });
-          }
+
 
           // Emergency termination: an answer set terminateAssessment (e.g. suspected
           // septic arthritis). Surface a dedicated emergency screen rather than the
@@ -169,10 +162,6 @@ export default function QuestionEngine() {
             // No red flag attached: treat as a normal confirmed-diagnosis completion
             // so the patient can review the recorded assessment instead of seeing an
             // urgent-care emergency screen.
-            toast.success('Assessment Progress Saved', {
-              description:
-                'Your responses have been recorded. Please complete the final review.',
-            });
             completeQuestions();
             return;
           }
@@ -185,15 +174,10 @@ export default function QuestionEngine() {
             setSelectedAnswer(null);
           } else {
             // No more questions - complete assessment
-            toast.success('Assessment Progress Saved', {
-              description:
-                'Your responses have been recorded. Please complete the final review.',
-            });
             completeQuestions();
           }
         } catch (error) {
           console.error('Error processing answer:', error);
-          toast.error('Error processing your answer. Please try again.');
         } finally {
           setIsProcessing(false);
         }
@@ -223,7 +207,6 @@ export default function QuestionEngine() {
       setSelectedAnswer(null);
     } catch (error) {
       console.error('Error going back:', error);
-      toast.error('Unable to return to previous question.');
     }
   }, [isProcessing, engineState, updateEngineState]);
 
@@ -252,7 +235,6 @@ export default function QuestionEngine() {
         }
       } catch (error) {
         console.error('Error skipping question:', error);
-        toast.error('Error moving to next question. Please try again.');
       } finally {
         setIsProcessing(false);
       }

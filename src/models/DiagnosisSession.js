@@ -22,9 +22,15 @@ const BiodataSnapshotSchema = new mongoose.Schema(
       enum: ['Male', 'Female', 'Other'],
       required: true,
     },
+    age: {
+      type: Number,
+      min: 0,
+      max: 120,
+      default: null,
+    },
     ageRange: {
       type: String,
-      enum: ['15-20', '21-30', '31-40', '41-50', '51-60', '60+'],
+      enum: ['0-12', '13-14', '15-20', '21-30', '31-40', '41-50', '51-60', '60+'],
       required: true,
     },
     occupation: {

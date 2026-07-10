@@ -137,7 +137,9 @@ export default function AssessmentSummary({ onSubmit, onEdit }) {
             <div>
               <p className="font-medium">{biodata?.fullName}</p>
               <p className="text-muted-foreground text-sm">
-                {biodata?.sex} • {biodata?.ageRange} • {biodata?.occupation}
+                {biodata?.sex} •{' '}
+                {biodata?.age != null ? `${biodata.age} yrs` : biodata?.ageRange} •{' '}
+                {biodata?.occupation}
               </p>
             </div>
           </div>

@@ -286,7 +286,14 @@ export default function CaseDetailsPage() {
           <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
             <DataField label="Full Name" value={biodata.fullName} />
             <DataField label="Sex" value={biodata.sex} />
-            <DataField label="Age Range" value={biodata.ageRange} />
+            <DataField
+              label="Age"
+              value={
+                biodata.age != null
+                  ? `${biodata.age} yrs (${biodata.ageRange})`
+                  : biodata.ageRange
+              }
+            />
             <DataField label="Occupation / Working Class" value={biodata.occupation} />
             <DataField label="Educational Background" value={biodata.education} />
             {biodata.notes && (

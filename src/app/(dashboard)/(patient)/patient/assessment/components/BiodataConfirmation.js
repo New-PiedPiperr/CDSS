@@ -16,19 +16,24 @@ import { Loader2, User, CheckCircle2 } from 'lucide-react';
 import { toast } from 'sonner';
 
 /**
- * AGE RANGE OPTIONS
- * =================
- * Fixed age range categories for assessment biodata.
- * These are select-only options (not free-text numeric input).
+ * Derive the categorical age range from a numeric age.
+ * The patient enters a precise numeric age; the range is derived from it
+ * for downstream consumers (AI analysis, persistence).
+ * @param {number|string} age - Patient's age in years
+ * @returns {string} One of the supported age-range categories
  */
-const AGE_RANGE_OPTIONS = [
-  { value: '15-20', label: '15–20 years' },
-  { value: '21-30', label: '21–30 years' },
-  { value: '31-40', label: '31–40 years' },
-  { value: '41-50', label: '41–50 years' },
-  { value: '51-60', label: '51–60 years' },
-  { value: '60+', label: '60+ years' },
-];
+function deriveAgeRange(age) {
+  const n = Number(age);
+  if (!Number.isFinite(n)) return '';
+  if (n <= 12) return '0-12';
+  if (n <= 14) return '13-14';
+  if (n <= 20) return '15-20';
+  if (n <= 30) return '21-30';
+  if (n <= 40) return '31-40';
+  if (n <= 50) return '41-50';
+  if (n <= 60) return '51-60';
+  return '60+';
+}
 
 /**
  * SEX OPTIONS
@@ -95,6 +100,7 @@ export default function BiodataConfirmation() {
   const [formData, setFormData] = useState({
     fullName: '',
     sex: '',
+    age: '', // Numeric age entered by the patient
     ageRange: '',
     occupation: '',
     education: '',
@@ -117,6 +123,7 @@ export default function BiodataConfirmation() {
         setFormData({
           fullName: existingBiodata.fullName || '',
           sex: existingBiodata.sex || '',
+          age: existingBiodata.age != null ? String(existingBiodata.age) : '',
           ageRange: existingBiodata.ageRange || '',
           occupation: existingBiodata.occupation || '',
           education: existingBiodata.education || '',
@@ -133,19 +140,15 @@ export default function BiodataConfirmation() {
           if (result.success && result.data) {
             const { firstName, lastName, gender, dateOfBirth } = result.data;
 
-            // Calculate age range from dateOfBirth if available
+            // Calculate age from dateOfBirth if available
+            let age = '';
             let ageRange = '';
             if (dateOfBirth) {
               const birthDate = new Date(dateOfBirth);
               const today = new Date();
-              const age = today.getFullYear() - birthDate.getFullYear();
-
-              if (age >= 15 && age <= 20) ageRange = '15-20';
-              else if (age >= 21 && age <= 30) ageRange = '21-30';
-              else if (age >= 31 && age <= 40) ageRange = '31-40';
-              else if (age >= 41 && age <= 50) ageRange = '41-50';
-              else if (age >= 51 && age <= 60) ageRange = '51-60';
-              else if (age > 60) ageRange = '60+';
+              const computedAge = today.getFullYear() - birthDate.getFullYear();
+              age = String(computedAge);
+              ageRange = deriveAgeRange(computedAge);
             }
 
             // Map gender to sex option
@@ -158,6 +161,7 @@ export default function BiodataConfirmation() {
               ...prev,
               fullName: `${firstName || ''} ${lastName || ''}`.trim(),
               sex,
+              age,
               ageRange,
             }));
           }
@@ -201,8 +205,14 @@ export default function BiodataConfirmation() {
     if (!formData.sex) {
       newErrors.sex = 'Please select your sex';
     }
-    if (!formData.ageRange) {
-      newErrors.ageRange = 'Please select your age range';
+    const parsedAge = Number(formData.age);
+    if (
+      !formData.age ||
+      !Number.isFinite(parsedAge) ||
+      parsedAge <= 0 ||
+      parsedAge > 120
+    ) {
+      newErrors.age = 'Please enter a valid age';
     }
     if (!formData.occupation) {
       newErrors.occupation = 'Please select your occupation type';
@@ -246,7 +256,8 @@ export default function BiodataConfirmation() {
     const biodataSnapshot = {
       fullName: formData.fullName.trim(),
       sex: formData.sex,
-      ageRange: formData.ageRange,
+      age: Number(formData.age),
+      ageRange: deriveAgeRange(formData.age),
       occupation: formData.occupation,
       education: formData.education,
       notes: formData.notes.trim() || null,
@@ -343,27 +354,23 @@ export default function BiodataConfirmation() {
             )}
           </div>
 
-          {/* Age Range Selection */}
+          {/* Age (numeric) — used for demographic gating of conditions */}
           <div className="space-y-2">
-            <Label className="font-medium">Age Range *</Label>
-            <div className="grid grid-cols-3 gap-2">
-              {AGE_RANGE_OPTIONS.map((option) => (
-                <button
-                  key={option.value}
-                  type="button"
-                  onClick={() => handleChange('ageRange', option.value)}
-                  className={`rounded-lg border-2 px-4 py-3 text-sm font-medium transition-all ${
-                    formData.ageRange === option.value
-                      ? 'border-primary bg-primary/10 text-primary'
-                      : 'border-slate-200 hover:border-slate-300 dark:border-slate-700 dark:hover:border-slate-600'
-                  } ${errors.ageRange ? 'border-red-300' : ''}`}
-                >
-                  {option.label}
-                </button>
-              ))}
-            </div>
-            {errors.ageRange && (
-              <p className="text-xs font-medium text-red-500">{errors.ageRange}</p>
+            <Label htmlFor="age" className="font-medium">
+              Age (years) *
+            </Label>
+            <Input
+              id="age"
+              type="number"
+              min="0"
+              max="120"
+              placeholder="e.g. 10"
+              value={formData.age}
+              onChange={(e) => handleChange('age', e.target.value)}
+              className={errors.age ? 'border-red-500' : ''}
+            />
+            {errors.age && (
+              <p className="text-xs font-medium text-red-500">{errors.age}</p>
             )}
           </div>
 

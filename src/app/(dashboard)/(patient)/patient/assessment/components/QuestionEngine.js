@@ -86,8 +86,9 @@ export default function QuestionEngine() {
 
         const rulesJson = await response.json();
 
-        // Initialize the V2 branching engine
-        const initialState = initializeEngine(rulesJson);
+        // Initialize the V2 branching engine, passing patient biodata so that
+        // demographic gating (age/sex entry_criteria) is applied.
+        const initialState = initializeEngine(rulesJson, biodata);
         storeInitEngine(initialState);
 
         // Get the first valid question
@@ -140,8 +141,6 @@ export default function QuestionEngine() {
 
           // Update store
           updateEngineState(newState);
-
-
 
           // Emergency termination: an answer set terminateAssessment (e.g. suspected
           // septic arthritis). Surface a dedicated emergency screen rather than the

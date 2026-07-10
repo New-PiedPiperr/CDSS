@@ -1716,6 +1716,10 @@
         {
           "type": "age",
           "description": "Age ( About 10 yrs)"
+        },
+        {
+          "type": "sex",
+          "description": "Male"
         }
       ],
       "is_general": false,

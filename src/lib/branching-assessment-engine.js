@@ -76,7 +76,7 @@ const LOW_CONFIDENCE_THRESHOLD = 20;
  * @param {Object} rulesJson - The loaded JSON rules for the region
  * @returns {Object} Initial engine state
  */
-export function initializeEngine(rulesJson) {
+export function initializeEngine(rulesJson, biodata = null) {
   if (!rulesJson || !rulesJson.conditions) {
     throw new Error('Invalid rules JSON: missing conditions array');
   }
@@ -85,6 +85,11 @@ export function initializeEngine(rulesJson) {
   const questionsMap = new Map();
   const questionOrder = [];
   const conditionQuestions = new Map(); // Track which questions belong to which condition
+
+  // Demographic gating state (conditions ruled out by entry_criteria)
+  const ruledOutConditions = new Set();
+  const skippedQuestions = new Set();
+  const entryGatedConditions = []; // Names ruled out by demographic mismatch (for traceability)
 
   rulesJson.conditions.forEach((condition) => {
     const conditionName = condition.name;
@@ -124,6 +129,64 @@ export function initializeEngine(rulesJson) {
     }
   });
 
+  // Apply demographic gating: rule out conditions whose entry_criteria
+  // (age/sex) do not match the patient. This lets the engine skip questions
+  // that are not meant for the patient (e.g. Sever's Disease ~10 yrs,
+  // Calcaneal Bursitis 65+) based on the age/sex they entered.
+  for (const condition of rulesJson.conditions) {
+    if (condition.is_general) continue;
+
+    const evaluation = evaluateEntryCriteria(condition, biodata);
+    if (!evaluation.hasCriteria) continue;
+
+    if (evaluation.ruleOut) {
+      ruledOutConditions.add(condition.name);
+      entryGatedConditions.push(condition.name);
+
+      // Mark all of this condition's questions as skipped
+      const condQuestions = conditionQuestions.get(condition.name) || [];
+      condQuestions.forEach((qId) => skippedQuestions.add(qId));
+
+      const condState = suspectedConditions.get(condition.name);
+      if (condState) {
+        suspectedConditions.set(condition.name, {
+          ...condState,
+          active: false,
+          ruledOut: true,
+          ruledOutReason: {
+            question: 'Patient demographics',
+            answer: `Age ${biodata?.age ?? 'n/a'}${biodata?.sex ? `, ${biodata.sex}` : ''}`,
+          },
+        });
+      }
+    } else if (evaluation.softMismatch) {
+      // Demographics don't align but condition is still possible (e.g. a girl
+      // with Sever's). Lower its likelihood without ruling it out.
+      const condState = suspectedConditions.get(condition.name);
+      if (condState) {
+        suspectedConditions.set(condition.name, {
+          ...condState,
+          likelihood: Math.max(
+            0,
+            (condState.likelihood || INITIAL_LIKELIHOOD) - LIKELIHOOD_DECREMENT
+          ),
+        });
+      }
+    } else {
+      // Demographics match the entry criteria — nudge likelihood up.
+      const condState = suspectedConditions.get(condition.name);
+      if (condState) {
+        suspectedConditions.set(condition.name, {
+          ...condState,
+          likelihood: Math.min(
+            100,
+            (condState.likelihood || INITIAL_LIKELIHOOD) + LIKELIHOOD_INCREMENT
+          ),
+        });
+      }
+    }
+  }
+
   return {
     region: rulesJson.region,
     title: rulesJson.title,
@@ -133,7 +196,7 @@ export function initializeEngine(rulesJson) {
     conditionQuestions,
     currentQuestionId: questionOrder[0] || null,
     answeredQuestions: [],
-    ruledOutConditions: new Set(),
+    ruledOutConditions,
     suspectedConditions,
     redFlags: [],
     isComplete: false,
@@ -141,8 +204,83 @@ export function initializeEngine(rulesJson) {
     startedAt: new Date().toISOString(),
     // Branching state
     pendingJump: null, // If set, next question will be this ID
-    skippedQuestions: new Set(), // Questions that have been skipped
+    skippedQuestions, // Questions that have been skipped
+    biodata, // Patient biodata snapshot (used for demographic gating / replay)
+    entryGatedConditions, // Conditions ruled out by demographic mismatch
   };
+}
+
+/**
+ * Evaluate a condition's entry_criteria against the patient's demographics.
+ *
+ * Age criteria use hard gating (rule the condition out when the patient's age
+ * falls outside the documented band) because age-specific conditions such as
+ * Sever's Disease (≈10 yrs) and Calcaneal Bursitis (65+) genuinely do not
+ * occur outside those ranges. Sex criteria use SOFT signalling only — they
+ * adjust likelihood but never rule a condition out, since most MSK conditions
+ * can affect any sex (e.g. Sever's can occur in girls despite the typical
+ * male predominance).
+ *
+ * @param {Object} condition - Condition definition (with entry_criteria)
+ * @param {Object|null} biodata - Patient biodata ({ age, sex })
+ * @returns {{ hasCriteria: boolean, ruleOut: boolean, softMismatch: boolean }}
+ */
+function evaluateEntryCriteria(condition, biodata) {
+  const criteria = condition.entry_criteria || [];
+  if (!biodata || !Array.isArray(criteria) || criteria.length === 0) {
+    return { hasCriteria: false, ruleOut: false, softMismatch: false };
+  }
+
+  const age = Number.isFinite(Number(biodata.age)) ? Number(biodata.age) : null;
+  const sex = (biodata.sex || '').trim().toLowerCase();
+
+  let ruleOut = false;
+  let softMismatch = false;
+
+  for (const criterion of criteria) {
+    const type = (criterion.type || '').toLowerCase();
+    const desc = (criterion.description || '').toLowerCase();
+
+    const isAge =
+      type === 'age' ||
+      desc.includes('age') ||
+      desc.includes('yrs') ||
+      desc.includes('years');
+    const isSex = type === 'sex' || desc.includes('male') || desc.includes('female');
+
+    if (isAge) {
+      // Postmenopausal women → soft signal (older females), not a hard gate.
+      if (desc.includes('postmenopausal') || desc.includes('post-menopausal')) {
+        if (age != null && age < 45) softMismatch = true;
+        if (sex && sex !== 'female') softMismatch = true;
+        continue;
+      }
+
+      const numberMatch = desc.match(/(\d+)\s*(?:yrs?|years?)/);
+      if (!numberMatch) continue;
+      const target = parseInt(numberMatch[1], 10);
+
+      if (desc.includes('and older') || desc.includes('older') || desc.includes('+')) {
+        // "65 years and older" → rule out anyone younger.
+        if (age != null && age < target) ruleOut = true;
+      } else {
+        // "about 10 yrs" / "10 yrs" → approximate band (±3 years).
+        const band = 3;
+        if (age != null && Math.abs(age - target) > band) ruleOut = true;
+      }
+      continue;
+    }
+
+    if (isSex) {
+      const wantsMale = desc.includes('male');
+      const wantsFemale = desc.includes('female');
+      if (!sex) continue;
+      if (wantsMale && !wantsFemale && sex !== 'male') softMismatch = true;
+      else if (wantsFemale && !wantsMale && sex !== 'female') softMismatch = true;
+    }
+  }
+
+  return { hasCriteria: true, ruleOut, softMismatch };
 }
 
 /**
@@ -610,12 +748,16 @@ export function previousQuestion(state) {
   // Get all answers except the last one
   const remainingAnswers = state.answeredQuestions.slice(0, -1);
 
-  // Re-initialize and replay answers
-  const freshState = initializeEngine({
-    region: state.region,
-    title: state.title,
-    conditions: state.conditions,
-  });
+  // Re-initialize and replay answers (preserve biodata so demographic
+  // gating is re-applied consistently).
+  const freshState = initializeEngine(
+    {
+      region: state.region,
+      title: state.title,
+      conditions: state.conditions,
+    },
+    state.biodata
+  );
 
   let rebuiltState = freshState;
   for (const aq of remainingAnswers) {

@@ -180,6 +180,7 @@ export async function POST(req) {
       ? {
           fullName: biodata.fullName,
           sex: biodata.sex,
+          age: biodata.age != null ? Number(biodata.age) : null,
           ageRange: biodata.ageRange,
           occupation: biodata.occupation,
           education: biodata.education,

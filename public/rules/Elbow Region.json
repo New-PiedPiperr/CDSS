@@ -410,24 +410,9 @@
                 "redFlagText": null,
                 "terminateAssessment": false,
                 "notes": null
-              }
-            },
-            {
-              "value": "LATERAL ELBOW TENDINOPATHY",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "aka Tennis Elbow or Lateral Epicondylitis"
-              }
+              },
             }
-          ],
+          ]
           "answers": [
             {
               "value": "Yes",
@@ -457,22 +442,7 @@
                 "redFlagText": null,
                 "terminateAssessment": false,
                 "notes": null
-              }
-            },
-            {
-              "value": "LATERAL ELBOW TENDINOPATHY",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "aka Tennis Elbow or Lateral Epicondylitis"
-              }
+              },
             }
           ]
         },

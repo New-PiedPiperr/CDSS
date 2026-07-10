@@ -1,0 +1,563 @@
+[
+  {
+    "condition": "General Assessment",
+    "status": "NO DOCX BLOCK"
+  },
+  {
+    "condition": "Septic Arthritis",
+    "questionId": "knee_sep_q0",
+    "questionText": "How did the pain begin?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Sudden, rapid onset"
+    ],
+    "nonRedOptions": [
+      "Gradual onset"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"Gradual onset\""
+  },
+  {
+    "condition": "Septic Arthritis",
+    "questionId": "knee_sep_q1",
+    "questionText": "How severe is the pain?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Severe, constant pain (Hallmark feature)"
+    ],
+    "nonRedOptions": [
+      "Mild or moderate pain"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"Mild or moderate pain\""
+  },
+  {
+    "condition": "Septic Arthritis",
+    "questionId": "knee_sep_q2",
+    "questionText": "Is the pain at rest",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Yes (Infection causes constant inflammatory pain)"
+    ],
+    "nonRedOptions": [
+      "No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"No\""
+  },
+  {
+    "condition": "Septic Arthritis",
+    "questionId": "knee_sep_q3",
+    "questionText": "Do you have the ability to bear weight?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Unable to bear weight (Strong indicator of septic arthritis)"
+    ],
+    "nonRedOptions": [
+      "Able to bear weight"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"Able to bear weight\""
+  },
+  {
+    "condition": "Patellofemoral Pain Syndrome",
+    "questionId": "knee_pfps_q1",
+    "questionText": "2. What region is pain present in?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Anterior knee"
+    ],
+    "nonRedOptions": [
+      "b. Medial/lateral knee"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. Medial/lateral knee\""
+  },
+  {
+    "condition": "Patellofemoral Pain Syndrome",
+    "questionId": "knee_pfps_q2",
+    "questionText": "3.Do you have a recent history of fall or trauma in the affected region?",
+    "rule": "Rule 2",
+    "redOptions": [
+      "b. No"
+    ],
+    "nonRedOptions": [
+      "a. Yes (Rule out ligament/meniscus)"
+    ],
+    "currentJsonState": "MISSING EXCLUDE",
+    "fixNeeded": "Add excludedConditions for \"a. Yes\""
+  },
+  {
+    "condition": "Patellofemoral Pain Syndrome",
+    "questionId": "knee_pfps_q3",
+    "questionText": "4. How did the pain begin?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Gradual, insidious"
+    ],
+    "nonRedOptions": [
+      "b. Sudden"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. Sudden\""
+  },
+  {
+    "condition": "Patellofemoral Pain Syndrome",
+    "questionId": "knee_pfps_q4",
+    "questionText": "5. What is the type of your pain?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Dull, aching"
+    ],
+    "nonRedOptions": [
+      "b. Sharp"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. Sharp\""
+  },
+  {
+    "condition": "Patellofemoral Pain Syndrome",
+    "questionId": "knee_pfps_q5",
+    "questionText": "6. What aggravates your Pain?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Running, squatting, stairs, prolonged sitting"
+    ],
+    "nonRedOptions": [
+      "b. Rest"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. Rest\""
+  },
+  {
+    "condition": "Meniscus Tear",
+    "questionId": "knee_men_q1",
+    "questionText": "2. Do you have recent twisting injury?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Yes"
+    ],
+    "nonRedOptions": [
+      "b. No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. No\""
+  },
+  {
+    "condition": "Meniscus Tear",
+    "questionId": "knee_men_q2",
+    "questionText": "3. What region is pain present in?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Medial/lateral joint line"
+    ],
+    "nonRedOptions": [
+      "b. Diffuse"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. Diffuse\""
+  },
+  {
+    "condition": "Meniscus Tear",
+    "questionId": "knee_men_q3",
+    "questionText": "4. How did the pain begin?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Sudden (traumatic)"
+    ],
+    "nonRedOptions": [
+      "b. Gradual (degenerative)"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. Gradual (degenerative)\""
+  },
+  {
+    "condition": "Muscle Strain",
+    "questionId": "knee_str_q1",
+    "questionText": "2. How did the pain begin?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Sudden during activity"
+    ],
+    "nonRedOptions": [
+      "b. Gradual"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. Gradual\""
+  },
+  {
+    "condition": "Muscle Strain",
+    "questionId": "knee_str_q2",
+    "questionText": "3. What is the nature of the pain you experience?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Sharp, stabbing (Acute strain)"
+    ],
+    "nonRedOptions": [
+      "b. Dull, aching"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. Dull, aching\""
+  },
+  {
+    "condition": "ACL Injury",
+    "status": "NO DOCX BLOCK"
+  },
+  {
+    "condition": "MCL Injury",
+    "status": "NO DOCX BLOCK"
+  },
+  {
+    "condition": "LCL Injury",
+    "status": "NO DOCX BLOCK"
+  },
+  {
+    "condition": "PCL Injury",
+    "status": "NO DOCX BLOCK"
+  },
+  {
+    "condition": "Knee Osteoarthritis",
+    "status": "NO DOCX BLOCK"
+  },
+  {
+    "condition": "Patellar Dislocation",
+    "questionId": "knee_pdx_q1",
+    "questionText": "2. Do you recentlyhave twisting injury or direct blow to your knee?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Yes"
+    ],
+    "nonRedOptions": [
+      "b. No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. No\""
+  },
+  {
+    "condition": "Patellar Dislocation",
+    "questionId": "knee_pdx_q2",
+    "questionText": "3. Did you feel the kneecap move out of place?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Yes"
+    ],
+    "nonRedOptions": [
+      "b. No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. No\""
+  },
+  {
+    "condition": "Patellar Dislocation",
+    "questionId": "knee_pdx_q3",
+    "questionText": "4. Did it reduce (go back in) on its own?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Yes (Common in subluxation)"
+    ],
+    "nonRedOptions": [
+      "b. No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. No\""
+  },
+  {
+    "condition": "Knee Fracture",
+    "questionId": "knee_fx_q1",
+    "questionText": "1. Do you have recent fall, RTA, or high-impact trauma?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Yes (Suggests tibial plateau fracture / patella fracture)"
+    ],
+    "nonRedOptions": [
+      "b. No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. No\""
+  },
+  {
+    "condition": "Knee Fracture",
+    "questionId": "knee_fx_q2",
+    "questionText": "2. Is there direct blow to front of knee?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Yes (Suggests patella fracture)"
+    ],
+    "nonRedOptions": [
+      "b. No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. No\""
+  },
+  {
+    "condition": "Knee Fracture",
+    "questionId": "knee_fx_q3",
+    "questionText": "3. Is there immediate inability to bear weight?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Yes (Suggests tibial plateau fracture or severe patella fracture)"
+    ],
+    "nonRedOptions": [
+      "b. No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. No\""
+  },
+  {
+    "condition": "Iliotibial Band Syndrome",
+    "questionId": "knee_itbs_q1",
+    "questionText": "2. Does your activity involve repetitive knee bending (running, cycling)?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Yes (Strong indicator of ITBS)"
+    ],
+    "nonRedOptions": [
+      "b. No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. No\""
+  },
+  {
+    "condition": "Iliotibial Band Syndrome",
+    "questionId": "knee_itbs_q2",
+    "questionText": "3. Where is the pain located?",
+    "rule": "Rule 4",
+    "redOptions": [
+      "a. Lateral (outer) side of knee (Classic ITBS location)",
+      "a. Gradual onset during training"
+    ],
+    "nonRedOptions": [
+      "b. Anterior / medial knee",
+      "b. Sudden onset after trauma"
+    ],
+    "currentJsonState": "NO ACTION NEEDED",
+    "fixNeeded": "None"
+  },
+  {
+    "condition": "Iliotibial Band Syndrome",
+    "questionId": "knee_itbs_q3",
+    "questionText": "5. Is the pain aggravated by running?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Yes, especially long-distance running (Classic ITBS symptom)"
+    ],
+    "nonRedOptions": [
+      "b. No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. No\""
+  },
+  {
+    "condition": "Iliotibial Band Syndrome",
+    "questionId": "knee_itbs_q4",
+    "questionText": "6. Is the pain worse when running downhill or descending stairs?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Yes"
+    ],
+    "nonRedOptions": [
+      "b. No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. No\""
+  },
+  {
+    "condition": "Patellar Tendinopathy",
+    "questionId": "knee_ten_q1",
+    "questionText": "2. Does your activity involves jumping, sprinting, or frequent knee loading?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "a. Yes (Strong indicator of tendinopathy)"
+    ],
+    "nonRedOptions": [
+      "b. No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. No\""
+  },
+  {
+    "condition": "Patellar Tendinopathy",
+    "questionId": "knee_ten_q2",
+    "questionText": "3. Where is the pain located ?",
+    "rule": "Rule 4",
+    "redOptions": [
+      "a. Inferior pole of patella (Classic patellar tendinopathy)",
+      "b. Superior pole of patella (Suggests quadriceps tendinopathy)"
+    ],
+    "nonRedOptions": [
+      "c. Diffuse or other location"
+    ],
+    "currentJsonState": "NO ACTION NEEDED",
+    "fixNeeded": "None"
+  },
+  {
+    "condition": "Patellar Tendinopathy",
+    "questionId": "knee_ten_q3",
+    "questionText": "4. How did the pain begin?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Gradual onset"
+    ],
+    "nonRedOptions": [
+      "b. Sudden onset"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. Sudden onset\""
+  },
+  {
+    "condition": "Patellar Tendinopathy",
+    "questionId": "knee_ten_q4",
+    "questionText": "5. Is there pain during loading activities (jumping, squatting, running)?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Yes"
+    ],
+    "nonRedOptions": [
+      "b. No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"b. No\""
+  },
+  {
+    "condition": "Pes Anserine Bursitis",
+    "questionId": "knee_pab_q1",
+    "questionText": "Where is the pain located ?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Medial knee, 5–7 cm below joint line (Classic location of pes anserinus bursitis)"
+    ],
+    "nonRedOptions": [
+      "Medial joint line",
+      "Anterior knee"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"Medial joint line\""
+  },
+  {
+    "condition": "Pes Anserine Bursitis",
+    "questionId": "knee_pab_q2",
+    "questionText": "How did the pain begin?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Gradual onset (Typical bursitis pattern)"
+    ],
+    "nonRedOptions": [
+      "Sudden onset after trauma"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"Sudden onset after trauma\""
+  },
+  {
+    "condition": "Pes Anserine Bursitis",
+    "questionId": "knee_pab_q3",
+    "questionText": "Is the pain aggravated by stair climbing?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Yes (Common aggravating activity)"
+    ],
+    "nonRedOptions": [
+      "No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"No\""
+  },
+  {
+    "condition": "Osteochondritis Dissecans",
+    "questionId": "knee_ocd_q1",
+    "questionText": "Where is the pain located?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Deep knee pain, poorly localized (Typical OCD presentation)"
+    ],
+    "nonRedOptions": [
+      "Superficial anterior knee pain"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"Superficial anterior knee pain\""
+  },
+  {
+    "condition": "Osteochondritis Dissecans",
+    "questionId": "knee_ocd_q2",
+    "questionText": "How did the pain begin?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Gradual, insidious onset (Typical OCD)"
+    ],
+    "nonRedOptions": [
+      "Sudden onset"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"Sudden onset\""
+  },
+  {
+    "condition": "Osteochondritis Dissecans",
+    "questionId": "knee_ocd_q3",
+    "questionText": "Is there history of repetitive sports activity (running, jumping, football)?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Yes (Major risk factor due to repetitive microtrauma)"
+    ],
+    "nonRedOptions": [
+      "No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"No\""
+  },
+  {
+    "condition": "Baker's Cyst",
+    "questionId": "knee_bak_q0",
+    "questionText": "Where is the pain located ?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Posterior knee (popliteal region) (Classic Baker’s cyst location)"
+    ],
+    "nonRedOptions": [
+      "Anterior knee",
+      "Medial joint line"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"Anterior knee\""
+  },
+  {
+    "condition": "Baker's Cyst",
+    "questionId": "knee_bak_q1",
+    "questionText": "Do you notice swelling behind the knee?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Yes (Most characteristic symptom)"
+    ],
+    "nonRedOptions": [
+      "No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"No\""
+  },
+  {
+    "condition": "Baker's Cyst",
+    "questionId": "knee_bak_q2",
+    "questionText": "Do you feel a lump or mass behind the knee?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Yes"
+    ],
+    "nonRedOptions": [
+      "No"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"No\""
+  },
+  {
+    "condition": "Baker's Cyst",
+    "questionId": "knee_bak_q3",
+    "questionText": "How did the pain begin?",
+    "rule": "Rule 3",
+    "redOptions": [
+      "Gradual onset"
+    ],
+    "nonRedOptions": [
+      "Sudden onset"
+    ],
+    "currentJsonState": "MISSING SKIP LOGIC",
+    "fixNeeded": "Add skip logic for non-red \"Sudden onset\""
+  }
+]

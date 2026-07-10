@@ -1715,7 +1715,7 @@
       "entry_criteria": [
         {
           "type": "age",
-          "description": "Age (About 10 yrs)"
+          "description": "Age ( About 10 yrs)"
         },
         {
           "type": "sex",
@@ -1727,14 +1727,13 @@
       "questions": [
         {
           "id": "ankle_q16",
-          "questionText": "Do you have painful bumps on your heel?",
-          "question": "Do you have painful bumps on your heel?",
-          "condition": "Traction Apophysitis (Sever’s Disease)",
+          "questionText": "Is pain and tenderness localised to the insertion of the Tendon Achilles?",
+          "question": "Is pain and tenderness localised to the insertion of the Tendon Achilles?",
+          "condition": "Traction Apophysitis (Sever's Disease)",
           "category": "general",
           "inputType": "select",
           "source_line": 71,
-          "isGating": false,
-          "mandatory": true,
+          "isGating": true,
           "requiredConditions": [],
           "excludedIfConditions": [],
           "options": [
@@ -1743,250 +1742,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [
+                "triggeredConditions": [
                   "Traction Apophysitis (Sever’s Disease)"
                 ],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "optionColor": "black"
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [
-                  "Traction Apophysitis (Sever’s Disease)"
-                ],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "optionColor": "black"
-              }
-            }
-          ]
-        },
-        {
-          "id": "ankle_q16a",
-          "questionText": "Is the pain localized to the back of the heel where the Achilles tendon attaches?",
-          "question": "Is the pain localized to the back of the heel where the Achilles tendon attaches?",
-          "condition": "Traction Apophysitis (Sever’s Disease)",
-          "category": "location",
-          "inputType": "select",
-          "source_line": 72,
-          "isGating": false,
-          "mandatory": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [
-                  "Traction Apophysitis (Sever’s Disease)"
-                ],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "optionColor": "black"
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [
-                  "Traction Apophysitis (Sever’s Disease)"
-                ],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "optionColor": "black"
-              }
-            }
-          ]
-        },
-        {
-          "id": "ankle_q16b",
-          "questionText": "Does the pain worsen during or after physical activity such as running or jumping?",
-          "question": "Does the pain worsen during or after physical activity such as running or jumping?",
-          "condition": "Traction Apophysitis (Sever’s Disease)",
-          "category": "temporal",
-          "inputType": "select",
-          "source_line": 73,
-          "isGating": false,
-          "mandatory": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [
-                  "Traction Apophysitis (Sever’s Disease)"
-                ],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "optionColor": "black"
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [
-                  "Traction Apophysitis (Sever’s Disease)"
-                ],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "optionColor": "black"
-              }
-            }
-          ]
-        },
-        {
-          "id": "ankle_q16c",
-          "questionText": "Is the pain usually present at rest but significantly worse with activity?",
-          "question": "Is the pain usually present at rest but significantly worse with activity?",
-          "condition": "Traction Apophysitis (Sever’s Disease)",
-          "category": "temporal",
-          "inputType": "select",
-          "source_line": 74,
-          "isGating": false,
-          "mandatory": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "Traction Apophysitis (Sever’s Disease)"
@@ -1995,7 +1753,7 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": true,
-                "optionColor": "red"
+                "notes": null
               }
             },
             {
@@ -2010,7 +1768,7 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "optionColor": "black"
+                "notes": null
               }
             }
           ],
@@ -2020,7 +1778,9 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "Traction Apophysitis (Sever’s Disease)"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
                   "Traction Apophysitis (Sever’s Disease)"
@@ -2029,7 +1789,7 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": true,
-                "optionColor": "red"
+                "notes": null
               }
             },
             {
@@ -2044,7 +1804,7 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "optionColor": "black"
+                "notes": null
               }
             }
           ]
@@ -2054,10 +1814,6 @@
         {
           "name": "Clinical Assessment",
           "procedure": "Physical examination and clinical assessment based on presenting symptoms"
-        },
-        {
-          "name": "Squeeze Test",
-          "procedure": "Squeeze the heel from the sides. Pain indicates Sever's Disease."
         }
       ]
     },
@@ -2641,8 +2397,8 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Though this is not in every case"
+                "terminateAssessment": true,
+                "notes": null
               }
             },
             {
@@ -2673,8 +2429,8 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Though this is not in every case"
+                "terminateAssessment": true,
+                "notes": null
               }
             },
             {
@@ -4855,18 +4611,14 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [
-                  "CALCANEAL FRACTURES"
-                ],
+                "triggeredConditions": [],
                 "excludedConditions": [],
-                "increaseLikelihood": [
-                  "CALCANEAL FRACTURES"
-                ],
+                "increaseLikelihood": [],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Rule out foot compartment syndrome — proceed to compartment syndrome questions (q51-q54)"
+                "notes": null
               }
             }
           ],
@@ -4891,27 +4643,37 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [
-                  "CALCANEAL FRACTURES"
-                ],
+                "triggeredConditions": [],
                 "excludedConditions": [],
-                "increaseLikelihood": [
-                  "CALCANEAL FRACTURES"
-                ],
+                "increaseLikelihood": [],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Rule out foot compartment syndrome — proceed to compartment syndrome questions (q51-q54)"
+                "notes": null
               }
             }
           ]
-        },
+        }
+      ],
+      "tests": [
+        {
+          "name": "Radiographic Confirmation",
+          "procedure": "X-ray imaging to confirm fracture"
+        }
+      ]
+    },
+    {
+      "name": "Foot Compartment Syndrome",
+      "entry_criteria": [],
+      "is_general": false,
+      "source_line": 220,
+      "questions": [
         {
           "id": "ankle_q51",
           "questionText": "Do you feel intense pain in the foot?",
           "question": "Do you feel intense pain in the foot?",
-          "condition": "CALCANEAL FRACTURES",
+          "condition": "Foot Compartment Syndrome",
           "category": "general",
           "inputType": "select",
           "source_line": 221,
@@ -4987,7 +4749,7 @@
           "id": "ankle_q52",
           "questionText": "Is bruising and swelling extensive?",
           "question": "Is bruising and swelling extensive?",
-          "condition": "CALCANEAL FRACTURES",
+          "condition": "Foot Compartment Syndrome",
           "category": "inflammation",
           "inputType": "select",
           "source_line": 224,
@@ -5063,7 +4825,7 @@
           "id": "ankle_q53",
           "questionText": "Is sensation diminished at the foot?",
           "question": "Is sensation diminished at the foot?",
-          "condition": "CALCANEAL FRACTURES",
+          "condition": "Foot Compartment Syndrome",
           "category": "general",
           "inputType": "select",
           "source_line": 227,
@@ -5139,7 +4901,7 @@
           "id": "ankle_q54",
           "questionText": "Do you experience pain on the dorsiflexion of the toes?",
           "question": "Do you experience pain on the dorsiflexion of the toes?",
-          "condition": "CALCANEAL FRACTURES",
+          "condition": "Foot Compartment Syndrome",
           "category": "general",
           "inputType": "select",
           "source_line": 230,
@@ -5222,12 +4984,8 @@
       ],
       "tests": [
         {
-          "name": "Radiographic Confirmation",
-          "procedure": "X-ray imaging to confirm fracture"
-        },
-        {
           "name": "Clinical Assessment - Foot Compartment Syndrome",
-          "procedure": "Rule out foot compartment syndrome"
+          "procedure": "Refer for laboratory confirmation"
         }
       ]
     },

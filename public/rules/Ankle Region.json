@@ -1715,7 +1715,7 @@
       "entry_criteria": [
         {
           "type": "age",
-          "description": "Age ( About 10 yrs)"
+          "description": "Age (About 10 yrs)"
         },
         {
           "type": "sex",
@@ -1727,13 +1727,14 @@
       "questions": [
         {
           "id": "ankle_q16",
-          "questionText": "Is pain and tenderness localised to the insertion of the Tendon Achilles?",
-          "question": "Is pain and tenderness localised to the insertion of the Tendon Achilles?",
+          "questionText": "Do you have painful bumps on your heel?",
+          "question": "Do you have painful bumps on your heel?",
           "condition": "Traction Apophysitis (Sever’s Disease)",
           "category": "general",
           "inputType": "select",
           "source_line": 71,
-          "isGating": true,
+          "isGating": false,
+          "mandatory": true,
           "requiredConditions": [],
           "excludedIfConditions": [],
           "options": [
@@ -1744,12 +1745,14 @@
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "Traction Apophysitis (Sever’s Disease)"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "optionColor": "red"
               }
             },
             {
@@ -1764,7 +1767,7 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "optionColor": "black"
               }
             }
           ],
@@ -1776,12 +1779,14 @@
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "Traction Apophysitis (Sever’s Disease)"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "optionColor": "red"
               }
             },
             {
@@ -1796,7 +1801,250 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "optionColor": "black"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ankle_q16a",
+          "questionText": "Is the pain localized to the back of the heel where the Achilles tendon attaches?",
+          "question": "Is the pain localized to the back of the heel where the Achilles tendon attaches?",
+          "condition": "Traction Apophysitis (Sever’s Disease)",
+          "category": "location",
+          "inputType": "select",
+          "source_line": 72,
+          "isGating": false,
+          "mandatory": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "options": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Traction Apophysitis (Sever’s Disease)"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "optionColor": "black"
+              }
+            }
+          ],
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Traction Apophysitis (Sever’s Disease)"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "optionColor": "black"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ankle_q16b",
+          "questionText": "Does the pain worsen during or after physical activity such as running or jumping?",
+          "question": "Does the pain worsen during or after physical activity such as running or jumping?",
+          "condition": "Traction Apophysitis (Sever’s Disease)",
+          "category": "temporal",
+          "inputType": "select",
+          "source_line": 73,
+          "isGating": false,
+          "mandatory": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "options": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Traction Apophysitis (Sever’s Disease)"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "optionColor": "black"
+              }
+            }
+          ],
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Traction Apophysitis (Sever’s Disease)"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "optionColor": "black"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ankle_q16c",
+          "questionText": "Is the pain usually present at rest but significantly worse with activity?",
+          "question": "Is the pain usually present at rest but significantly worse with activity?",
+          "condition": "Traction Apophysitis (Sever’s Disease)",
+          "category": "temporal",
+          "inputType": "select",
+          "source_line": 74,
+          "isGating": false,
+          "mandatory": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "options": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Traction Apophysitis (Sever’s Disease)"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": true,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "optionColor": "black"
+              }
+            }
+          ],
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Traction Apophysitis (Sever’s Disease)"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": true,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "optionColor": "black"
               }
             }
           ]
@@ -1806,6 +2054,10 @@
         {
           "name": "Clinical Assessment",
           "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+        },
+        {
+          "name": "Squeeze Test",
+          "procedure": "Squeeze the heel from the sides. Pain indicates Sever's Disease."
         }
       ]
     },

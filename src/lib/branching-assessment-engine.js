@@ -86,128 +86,129 @@ export function initializeEngine(rulesJson, biodata = null) {
   const questionOrder = [];
   const conditionQuestions = new Map(); // Track which questions belong to which condition
 
-  // Demographic gating state (conditions ruled out by entry_criteria)
-  const ruledOutConditions = new Set();
-  const skippedQuestions = new Set();
-  const entryGatedConditions = []; // Names ruled out by demographic mismatch (for traceability)
+    // Demographic gating state (conditions ruled out by entry_criteria)
+    const ruledOutConditions = new Set();
+    const skippedQuestions = new Set();
+    const entryGatedConditions = []; // Names ruled out by demographic mismatch (for traceability)
 
-  rulesJson.conditions.forEach((condition) => {
-    const conditionName = condition.name;
-    conditionQuestions.set(conditionName, []);
+    rulesJson.conditions.forEach((condition) => {
+      const conditionName = condition.name;
+      conditionQuestions.set(conditionName, []);
 
-    (condition.questions || []).forEach((q) => {
-      // Normalize question structure
-      const normalizedQuestion = normalizeQuestion(q, conditionName);
-      questionsMap.set(normalizedQuestion.id, normalizedQuestion);
-      questionOrder.push(normalizedQuestion.id);
-      conditionQuestions.get(conditionName).push(normalizedQuestion.id);
+      (condition.questions || []).forEach((q) => {
+        // Normalize question structure
+        const normalizedQuestion = normalizeQuestion(q, conditionName);
+        questionsMap.set(normalizedQuestion.id, normalizedQuestion);
+        questionOrder.push(normalizedQuestion.id);
+        conditionQuestions.get(conditionName).push(normalizedQuestion.id);
+      });
     });
-  });
 
-  // Initialize suspected conditions tracking
-  const suspectedConditions = new Map();
-  rulesJson.conditions.forEach((condition) => {
-    // General Assessment is always active
-    if (condition.name === 'General Assessment' || condition.is_general) {
-      suspectedConditions.set(condition.name, {
-        likelihood: INITIAL_LIKELIHOOD,
-        reasons: [],
-        triggerAnswers: [],
-        questionCount: condition.questions?.length || 0,
-        isGeneral: true,
-      });
-    } else {
-      // Other conditions start as potential (not yet suspected)
-      suspectedConditions.set(condition.name, {
-        likelihood: INITIAL_LIKELIHOOD,
-        reasons: [],
-        triggerAnswers: [],
-        questionCount: condition.questions?.length || 0,
-        isGeneral: false,
-        active: false, // Not yet being investigated
-      });
+    // Initialize suspected conditions tracking
+    const suspectedConditions = new Map();
+    rulesJson.conditions.forEach((condition) => {
+      // General Assessment is always active
+      if (condition.name === 'General Assessment' || condition.is_general) {
+        suspectedConditions.set(condition.name, {
+          likelihood: INITIAL_LIKELIHOOD,
+          reasons: [],
+          triggerAnswers: [],
+          questionCount: condition.questions?.length || 0,
+          isGeneral: true,
+        });
+      } else {
+        // Other conditions start as potential (not yet suspected)
+        suspectedConditions.set(condition.name, {
+          likelihood: INITIAL_LIKELIHOOD,
+          reasons: [],
+          triggerAnswers: [],
+          questionCount: condition.questions?.length || 0,
+          isGeneral: false,
+          active: false, // Not yet being investigated
+        });
+      }
+    });
+
+    // Apply demographic gating: rule out conditions whose entry_criteria
+    // (age/sex) do not match the patient. This lets the engine skip questions
+    // that are not meant for the patient (e.g. Sever's Disease ~10 yrs,
+    // Calcaneal Bursitis 65+) based on the age/sex they entered.
+    for (const condition of rulesJson.conditions) {
+      if (condition.is_general) continue;
+
+      const evaluation = evaluateEntryCriteria(condition, biodata);
+      if (!evaluation.hasCriteria) continue;
+
+      if (evaluation.ruleOut) {
+        ruledOutConditions.add(condition.name);
+        entryGatedConditions.push(condition.name);
+
+        // Mark all of this condition's questions as skipped
+        const condQuestions = conditionQuestions.get(condition.name) || [];
+        condQuestions.forEach((qId) => skippedQuestions.add(qId));
+
+        const condState = suspectedConditions.get(condition.name);
+        if (condState) {
+          suspectedConditions.set(condition.name, {
+            ...condState,
+            active: false,
+            ruledOut: true,
+            ruledOutReason: {
+              question: 'Patient demographics',
+              answer: `Age ${biodata?.age ?? 'n/a'}${biodata?.sex ? `, ${biodata.sex}` : ''}`,
+            },
+          });
+        }
+      } else if (evaluation.softMismatch) {
+        // Demographics don't align but condition is still possible (e.g. a girl
+        // with Sever's). Lower its likelihood without ruling it out.
+        const condState = suspectedConditions.get(condition.name);
+        if (condState) {
+          suspectedConditions.set(condition.name, {
+            ...condState,
+            likelihood: Math.max(
+              0,
+              (condState.likelihood || INITIAL_LIKELIHOOD) - LIKELIHOOD_DECREMENT
+            ),
+          });
+        }
+      } else {
+        // Demographics match the entry criteria — nudge likelihood up.
+        const condState = suspectedConditions.get(condition.name);
+        if (condState) {
+          suspectedConditions.set(condition.name, {
+            ...condState,
+            likelihood: Math.min(
+              100,
+              (condState.likelihood || INITIAL_LIKELIHOOD) + LIKELIHOOD_INCREMENT
+            ),
+          });
+        }
+      }
     }
-  });
 
-  // Apply demographic gating: rule out conditions whose entry_criteria
-  // (age/sex) do not match the patient. This lets the engine skip questions
-  // that are not meant for the patient (e.g. Sever's Disease ~10 yrs,
-  // Calcaneal Bursitis 65+) based on the age/sex they entered.
-  for (const condition of rulesJson.conditions) {
-    if (condition.is_general) continue;
-
-    const evaluation = evaluateEntryCriteria(condition, biodata);
-    if (!evaluation.hasCriteria) continue;
-
-    if (evaluation.ruleOut) {
-      ruledOutConditions.add(condition.name);
-      entryGatedConditions.push(condition.name);
-
-      // Mark all of this condition's questions as skipped
-      const condQuestions = conditionQuestions.get(condition.name) || [];
-      condQuestions.forEach((qId) => skippedQuestions.add(qId));
-
-      const condState = suspectedConditions.get(condition.name);
-      if (condState) {
-        suspectedConditions.set(condition.name, {
-          ...condState,
-          active: false,
-          ruledOut: true,
-          ruledOutReason: {
-            question: 'Patient demographics',
-            answer: `Age ${biodata?.age ?? 'n/a'}${biodata?.sex ? `, ${biodata.sex}` : ''}`,
-          },
-        });
-      }
-    } else if (evaluation.softMismatch) {
-      // Demographics don't align but condition is still possible (e.g. a girl
-      // with Sever's). Lower its likelihood without ruling it out.
-      const condState = suspectedConditions.get(condition.name);
-      if (condState) {
-        suspectedConditions.set(condition.name, {
-          ...condState,
-          likelihood: Math.max(
-            0,
-            (condState.likelihood || INITIAL_LIKELIHOOD) - LIKELIHOOD_DECREMENT
-          ),
-        });
-      }
-    } else {
-      // Demographics match the entry criteria — nudge likelihood up.
-      const condState = suspectedConditions.get(condition.name);
-      if (condState) {
-        suspectedConditions.set(condition.name, {
-          ...condState,
-          likelihood: Math.min(
-            100,
-            (condState.likelihood || INITIAL_LIKELIHOOD) + LIKELIHOOD_INCREMENT
-          ),
-        });
-      }
-    }
-  }
-
-  return {
-    region: rulesJson.region,
-    title: rulesJson.title,
-    conditions: rulesJson.conditions,
-    questionsMap,
-    questionOrder,
-    conditionQuestions,
-    currentQuestionId: questionOrder[0] || null,
-    answeredQuestions: [],
-    ruledOutConditions,
-    suspectedConditions,
-    redFlags: [],
-    isComplete: false,
-    completionReason: null,
-    startedAt: new Date().toISOString(),
-    // Branching state
-    pendingJump: null, // If set, next question will be this ID
-    skippedQuestions, // Questions that have been skipped
-    biodata, // Patient biodata snapshot (used for demographic gating / replay)
-    entryGatedConditions, // Conditions ruled out by demographic mismatch
-  };
+    return {
+      region: rulesJson.region,
+      title: rulesJson.title,
+      conditions: rulesJson.conditions,
+      questionsMap,
+      questionOrder,
+      conditionQuestions,
+      currentQuestionId: questionOrder[0] || null,
+      answeredQuestions: [],
+      ruledOutConditions,
+      suspectedConditions,
+      redFlags: [],
+      isComplete: false,
+      completionReason: null,
+      startedAt: new Date().toISOString(),
+      // Branching state
+      pendingJump: null, // If set, next question will be this ID
+      skippedQuestions, // Questions that have been skipped
+      biodata, // Patient biodata snapshot (used for demographic gating / replay)
+      entryGatedConditions, // Conditions ruled out by demographic mismatch
+      temporaryDiagnosis: null, // Set when a red final-step answer confirms a condition
+    };
 }
 
 /**
@@ -309,6 +310,7 @@ function normalizeQuestion(rawQuestion, conditionName) {
       redFlagText: a.effects?.red_flag_text || a.effects?.redFlagText || null,
       terminateAssessment:
         a.effects?.terminateAssessment || a.effects?.terminate_assessment || false,
+      optionColor: a.effects?.optionColor || a.effects?.option_color || null,
     },
   }));
 
@@ -323,6 +325,7 @@ function normalizeQuestion(rawQuestion, conditionName) {
     excludedIfConditions:
       rawQuestion.excludedIfConditions || rawQuestion.excluded_if_conditions || [],
     isGating: rawQuestion.isGating || rawQuestion.is_gating || false,
+    mandatory: rawQuestion.mandatory || false,
     metadata: rawQuestion.metadata || {},
     inputType: rawQuestion.inputType || 'select',
     sourceLine: rawQuestion.source_line,
@@ -487,6 +490,25 @@ export function processAnswer(state, questionId, answerValue) {
     return state;
   }
 
+  // Mandatory questions cannot be skipped. If a skip is attempted, advance
+  // to the next question without recording an answer.
+  if (answerValue === 'Skipped' && question.mandatory) {
+    const currentIndex = state.questionOrder.indexOf(questionId);
+    const newState = {
+      ...state,
+      currentQuestionId: state.questionOrder[currentIndex + 1] || null,
+      pendingJump: null,
+    };
+
+    const nextQuestion = getCurrentQuestion(newState);
+    if (!nextQuestion) {
+      newState.isComplete = true;
+      newState.completionReason = 'all_relevant_questions_answered';
+    }
+
+    return newState;
+  }
+
   // Find the selected answer
   const selectedAnswer = question.answers.find(
     (a) =>
@@ -503,6 +525,7 @@ export function processAnswer(state, questionId, answerValue) {
     redFlag: false,
     redFlagText: null,
     terminateAssessment: false,
+    optionColor: null,
   };
 
   // Create answered question record
@@ -556,6 +579,44 @@ export function processAnswer(state, questionId, answerValue) {
           });
         }
       }
+    }
+  }
+
+  // Process option color semantics
+  if (effects.optionColor === 'black') {
+    const hostCondition = question.condition;
+    if (hostCondition && !newState.ruledOutConditions.has(hostCondition)) {
+      newState.ruledOutConditions.add(hostCondition);
+      const condQuestions = newState.conditionQuestions.get(hostCondition) || [];
+      condQuestions.forEach((qId) => {
+        if (!newState.answeredQuestions.some((aq) => aq.questionId === qId)) {
+          newState.skippedQuestions.add(qId);
+        }
+      });
+      const condState = newState.suspectedConditions.get(hostCondition);
+      if (condState) {
+        newState.suspectedConditions.set(hostCondition, {
+          ...condState,
+          active: false,
+          ruledOut: true,
+          ruledOutReason: {
+            question: question.question,
+            answer: answerValue,
+          },
+        });
+      }
+    }
+  }
+
+  if (effects.optionColor === 'red') {
+    const condQuestions = newState.conditionQuestions.get(question.condition) || [];
+    const isLastConditionQuestion =
+      condQuestions.length > 0 && condQuestions[condQuestions.length - 1] === question.id;
+
+    if (isLastConditionQuestion) {
+      newState.isComplete = true;
+      newState.completionReason = 'diagnosed_by_red_option';
+      newState.temporaryDiagnosis = question.condition;
     }
   }
 
@@ -681,10 +742,10 @@ export function processAnswer(state, questionId, answerValue) {
   }
 
   // Check for assessment termination
-  if (effects.terminateAssessment) {
+  if (effects.terminateAssessment && !newState.isComplete) {
     newState.isComplete = true;
     newState.completionReason = 'terminated_by_answer';
-  } else {
+  } else if (!newState.isComplete) {
     // Update current question pointer
     const currentIndex = newState.questionOrder.indexOf(questionId);
     newState.currentQuestionId = newState.questionOrder[currentIndex + 1] || null;

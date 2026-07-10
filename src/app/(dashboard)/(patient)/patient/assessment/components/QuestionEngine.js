@@ -145,10 +145,7 @@ export default function QuestionEngine() {
           // Emergency termination: an answer set terminateAssessment (e.g. suspected
           // septic arthritis). Surface a dedicated emergency screen rather than the
           // normal completion flow. The state is still saved/completed in the store.
-          if (
-            newState.isComplete &&
-            newState.completionReason === 'terminated_by_answer'
-          ) {
+          if (newState.isComplete && newState.completionReason === 'terminated_by_answer') {
             const flag = newState.redFlags[newState.redFlags.length - 1];
             if (flag?.redFlagText) {
               setEmergencyState({
@@ -161,6 +158,13 @@ export default function QuestionEngine() {
             // No red flag attached: treat as a normal confirmed-diagnosis completion
             // so the patient can review the recorded assessment instead of seeing an
             // urgent-care emergency screen.
+            completeQuestions();
+            return;
+          }
+
+          // Red-option diagnosis: a red final-step answer confirmed a condition.
+          // Complete to summary so the temporary diagnosis can be displayed.
+          if (newState.isComplete && newState.completionReason === 'diagnosed_by_red_option') {
             completeQuestions();
             return;
           }
@@ -354,26 +358,34 @@ export default function QuestionEngine() {
           {/* Answer Options */}
           <div className="space-y-3">
             {currentQuestion.answers.length > 0 ? (
-              currentQuestion.answers.map((answer, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  onClick={() => handleAnswerClick(answer.value)}
-                  disabled={isProcessing}
-                  className={`w-full rounded-xl border-2 p-4 text-left transition-all ${
-                    selectedAnswer === answer.value
-                      ? 'border-primary bg-primary/10 scale-[0.98]'
-                      : 'hover:border-primary/50 dark:hover:border-primary/50 border-slate-200 hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800'
-                  } ${isProcessing ? 'cursor-not-allowed opacity-50' : 'cursor-pointer active:scale-[0.98]'}`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium">{answer.value}</span>
-                    {selectedAnswer === answer.value && (
-                      <CheckCircle2 className="text-primary h-5 w-5" />
-                    )}
-                  </div>
-                </button>
-              ))
+              currentQuestion.answers.map((answer, index) => {
+                const answerEffects = answer.effects || {};
+                const optionColor = answerEffects.optionColor || null;
+                return (
+                  <button
+                    key={index}
+                    type="button"
+                    onClick={() => handleAnswerClick(answer.value)}
+                    disabled={isProcessing}
+                    className={`w-full rounded-xl border-2 p-4 text-left transition-all ${
+                      selectedAnswer === answer.value
+                        ? 'border-primary bg-primary/10 scale-[0.98]'
+                        : optionColor === 'red'
+                          ? 'border-red-200 bg-red-50 hover:border-red-400 dark:border-red-800 dark:hover:border-red-600 dark:bg-red-950/20'
+                          : optionColor === 'black'
+                            ? 'border-slate-300 bg-slate-50 hover:border-slate-500 dark:border-slate-600 dark:hover:border-slate-400 dark:bg-slate-800'
+                            : 'hover:border-primary/50 dark:hover:border-primary/50 border-slate-200 hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800'
+                    } ${isProcessing ? 'cursor-not-allowed opacity-50' : 'cursor-pointer active:scale-[0.98]'}`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="font-medium">{answer.value}</span>
+                      {selectedAnswer === answer.value && (
+                        <CheckCircle2 className="text-primary h-5 w-5" />
+                      )}
+                    </div>
+                  </button>
+                );
+              })
             ) : (
               /* Open-ended Question: Show Text Area */
               <div className="space-y-4">
@@ -423,8 +435,10 @@ export default function QuestionEngine() {
             <Button
               variant="ghost"
               onClick={handleSkip}
-              disabled={isProcessing}
-              className="text-muted-foreground hover:text-foreground h-10 rounded-xl px-4"
+              disabled={isProcessing || currentQuestion?.mandatory}
+              className={`text-muted-foreground hover:text-foreground h-10 rounded-xl px-4 ${
+                currentQuestion?.mandatory ? 'opacity-30 cursor-not-allowed' : ''
+              }`}
             >
               <SkipForward className="mr-2 h-4 w-4" />
               Skip

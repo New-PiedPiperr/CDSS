@@ -2252,7 +2252,7 @@
           ],
           "answers": [
             {
-              "value": "Sudden",
+              "value": "Yes",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -2263,14 +2263,14 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Ask if patient has just recently changed their footwear"
+                "notes": null
               }
             },
             {
-              "value": "Gradual",
+              "value": "No",
               "effects": {
                 "nextQuestionId": null,
-                "skipToQuestionId": null,
+                "skipToQuestionId": "ankle_q34",
                 "triggeredConditions": [],
                 "excludedConditions": [],
                 "increaseLikelihood": [],
@@ -2515,11 +2515,13 @@
       "tests": [
         {
           "name": "Ultrasound",
-          "procedure": "Confirmation using ultrasound to check for thickening around the heel"
+          "procedure": "Confirmation using ultrasound to check for thickening around the heel",
+          "testType": "imaging"
         },
         {
           "name": "Doppler Test",
-          "procedure": "Doppler test to show increased local blood flow and neovascularisation"
+          "procedure": "Doppler test to show increased local blood flow and neovascularisation",
+          "testType": "imaging"
         }
       ]
     },
@@ -2988,7 +2990,7 @@
               "value": "No",
               "effects": {
                 "nextQuestionId": null,
-                "skipToQuestionId": null,
+                "skipToQuestionId": "ankle_q34",
                 "triggeredConditions": [],
                 "excludedConditions": [],
                 "increaseLikelihood": [],
@@ -3020,7 +3022,7 @@
               "value": "No",
               "effects": {
                 "nextQuestionId": null,
-                "skipToQuestionId": null,
+                "skipToQuestionId": "ankle_q34",
                 "triggeredConditions": [],
                 "excludedConditions": [],
                 "increaseLikelihood": [],
@@ -4172,8 +4174,8 @@
         },
         {
           "id": "ankle_q47",
-          "questionText": "Is your foot painful and swollen?",
-          "question": "Is your foot painful and swollen?",
+          "questionText": "What symptoms does your foot have?",
+          "question": "What symptoms does your foot have?",
           "condition": "CALCANEAL FRACTURES",
           "category": "general",
           "inputType": "select",
@@ -4183,7 +4185,7 @@
           "excludedIfConditions": [],
           "options": [
             {
-              "value": "Yes",
+              "value": "Painful",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -4198,7 +4200,7 @@
               }
             },
             {
-              "value": "No",
+              "value": "Swollen",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -4213,7 +4215,7 @@
               }
             },
             {
-              "value": "Does the heel look broad and wide",
+              "value": "Both",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -4228,22 +4230,7 @@
               }
             },
             {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "No",
+              "value": "No pain",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -4260,7 +4247,7 @@
           ],
           "answers": [
             {
-              "value": "Yes",
+              "value": "Painful",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -4275,7 +4262,7 @@
               }
             },
             {
-              "value": "No",
+              "value": "Swollen",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -4290,7 +4277,7 @@
               }
             },
             {
-              "value": "Does the heel look broad and wide",
+              "value": "Both",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -4305,22 +4292,7 @@
               }
             },
             {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "No",
+              "value": "No pain",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -4833,6 +4805,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
+                "optionColor": "red",
                 "terminateAssessment": true,
                 "notes": "Confirm foot compartment syndrome — refer for laboratory confirmation per clinical source document"
               }
@@ -4869,6 +4842,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
+                "optionColor": "red",
                 "terminateAssessment": true,
                 "notes": "Confirm foot compartment syndrome — refer for laboratory confirmation per clinical source document"
               }
@@ -7259,9 +7233,85 @@
         {
           "name": "Clinical Observation - Talus and Calcaneus Position",
           "procedure": "Check for the position of the talus and calcaneus"
+            }
+          ]
+        },
+        {
+          "id": "ankle_q85",
+          "questionText": "Does the heel look broad and wide?",
+          "question": "Does the heel look broad and wide?",
+          "condition": "CALCANEAL FRACTURES",
+          "category": "general",
+          "inputType": "select",
+          "source_line": 215,
+          "isGating": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "options": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            }
+          ],
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            }
+          ]
         }
-      ]
-    }
-  ],
+      ],
   "version": "2.0.0"
 }

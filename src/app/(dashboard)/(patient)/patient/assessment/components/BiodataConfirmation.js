@@ -415,7 +415,7 @@ export default function BiodataConfirmation() {
           <div className="space-y-2">
             <Label className="font-medium">Occupation / Working Class *</Label>
             <div className="grid grid-cols-2 gap-2">
-              {OCCUPATION_OPTIONS.filter((o) => o.value !== 'Artisan').map((option) => (
+              {OCCUPATION_OPTIONS.map((option) => (
                 <button
                   key={option.value}
                   type="button"
@@ -429,24 +429,6 @@ export default function BiodataConfirmation() {
                   {option.label}
                 </button>
               ))}
-            </div>
-
-            {/* Bricklayer isolated section */}
-            <div className="mt-3 rounded-xl border-2 border-dashed border-amber-400 bg-amber-50 p-4 dark:border-amber-600 dark:bg-amber-950/30">
-              <p className="text-xs font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400">
-                Heavy manual labor
-              </p>
-              <button
-                type="button"
-                onClick={() => handleChange('occupation', 'Artisan')}
-                className={`mt-2 w-full rounded-lg border-2 px-4 py-3 text-left text-sm font-medium transition-all ${
-                  formData.occupation === 'Artisan'
-                    ? 'border-amber-500 bg-amber-100 text-amber-900 dark:bg-amber-900/40 dark:text-amber-100'
-                    : 'border-amber-200 hover:border-amber-300 dark:border-amber-700 dark:hover:border-amber-600'
-                } ${errors.occupation ? 'border-red-300' : ''}`}
-              >
-                Bricklayer
-              </button>
             </div>
 
             {errors.occupation && (

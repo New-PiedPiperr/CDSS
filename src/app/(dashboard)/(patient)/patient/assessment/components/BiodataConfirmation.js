@@ -35,7 +35,8 @@ const OCCUPATION_OPTIONS = [
   { value: 'Student', label: 'Student' },
   { value: 'Civil servant', label: 'Civil servant' },
   { value: 'Trader', label: 'Trader' },
-  { value: 'Artisan', label: 'Artisan (bricklayer)' },
+  { value: 'Artisan', label: 'Artisan' },
+  { value: 'Bricklayer', label: 'Bricklayer' },
   { value: 'Athlete', label: 'Athlete' },
   { value: 'Retiree', label: 'Retiree' },
 ];

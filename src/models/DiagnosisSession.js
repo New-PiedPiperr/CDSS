@@ -35,12 +35,24 @@ const BiodataSnapshotSchema = new mongoose.Schema(
     },
     occupation: {
       type: String,
-      enum: ['Sedentary', 'Light manual', 'Heavy manual', 'Athlete'],
+      enum: ['Student', 'Civil servant', 'Trader', 'Artisan', 'Athlete', 'Retiree'],
       required: true,
     },
     education: {
       type: String,
       required: true,
+    },
+    height: {
+      type: Number,
+      min: 0,
+      max: 300,
+      default: null,
+    },
+    weight: {
+      type: Number,
+      min: 0,
+      max: 500,
+      default: null,
     },
     notes: {
       type: String,

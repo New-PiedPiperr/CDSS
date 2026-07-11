@@ -314,6 +314,7 @@ export function extractRecommendedTests(rulesJson, suspectedConditions) {
         associatedConditions: [conditionName],
         source: source,
         image: libraryTest?.image || null,
+        testType: test.testType || 'provocative',
       });
     } else {
       if (!existing.associatedConditions.includes(conditionName)) {

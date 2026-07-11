@@ -84,7 +84,6 @@ const CONDITION_PATTERNS = {
         expected: ['trauma', 'repetitive_overhead'],
         weight: 0.6,
       },
-      { symptom: 'age_group', expected: 'over_40', weight: 0.4 },
     ],
     severityIndicators: {
       mild: { minScore: 0.3, maxScore: 0.5 },

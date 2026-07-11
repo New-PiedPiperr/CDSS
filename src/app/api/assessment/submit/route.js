@@ -181,9 +181,10 @@ export async function POST(req) {
           fullName: biodata.fullName,
           sex: biodata.sex,
           age: biodata.age != null ? Number(biodata.age) : null,
-          ageRange: biodata.ageRange,
           occupation: biodata.occupation,
           education: biodata.education,
+          height: biodata.height != null ? Number(biodata.height) : null,
+          weight: biodata.weight != null ? Number(biodata.weight) : null,
           notes: biodata.notes || null,
           confirmedAt: biodata.confirmedAt || new Date(),
         }

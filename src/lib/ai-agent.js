@@ -190,10 +190,7 @@ export async function getAiPreliminaryAnalysis({
       )}\n` : ''}${conditionsRuledOut?.length ? `Conditions Marked for Rule-Out/Investigation: ${sanitizeForPrompt(
         conditionsRuledOut.map((c) => typeof c === 'string' ? c : c.name || c).join('; '),
         500,
-      )}\n` : ''}${patientBiodata?.ageRange ? `Patient Age Range: ${sanitizeForPrompt(
-        patientBiodata.ageRange,
-        100,
-      )}\n` : ''}${patientBiodata?.sex ? `Patient Sex: ${sanitizeForPrompt(
+      )}\n` : ''      }${patientBiodata?.sex ? `Patient Sex: ${sanitizeForPrompt(
         patientBiodata.sex,
         100,
       )}\n` : ''}

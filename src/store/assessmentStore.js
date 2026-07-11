@@ -43,7 +43,7 @@ const useAssessmentStore = create(
        * - Each assessment is self-contained for audit/legal purposes
        */
       biodataConfirmed: false,
-      biodata: null, // { fullName, sex, ageRange, occupation, education, notes }
+      biodata: null, // { fullName, sex, age, occupation, education, height, weight, notes }
 
       selectedRegion: null,
 

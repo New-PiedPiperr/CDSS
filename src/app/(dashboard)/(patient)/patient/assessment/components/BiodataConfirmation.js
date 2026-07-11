@@ -16,26 +16,6 @@ import { Loader2, User, CheckCircle2 } from 'lucide-react';
 import { toast } from 'sonner';
 
 /**
- * Derive the categorical age range from a numeric age.
- * The patient enters a precise numeric age; the range is derived from it
- * for downstream consumers (AI analysis, persistence).
- * @param {number|string} age - Patient's age in years
- * @returns {string} One of the supported age-range categories
- */
-function deriveAgeRange(age) {
-  const n = Number(age);
-  if (!Number.isFinite(n)) return '';
-  if (n <= 12) return '0-12';
-  if (n <= 14) return '13-14';
-  if (n <= 20) return '15-20';
-  if (n <= 30) return '21-30';
-  if (n <= 40) return '31-40';
-  if (n <= 50) return '41-50';
-  if (n <= 60) return '51-60';
-  return '60+';
-}
-
-/**
  * SEX OPTIONS
  * ===========
  * Biological sex options for clinical assessment purposes.
@@ -52,10 +32,12 @@ const SEX_OPTIONS = [
  * Activity-based occupation categories relevant to MSK assessment.
  */
 const OCCUPATION_OPTIONS = [
-  { value: 'Sedentary', label: 'Sedentary (office work, desk job)' },
-  { value: 'Light manual', label: 'Light manual (retail, teaching)' },
-  { value: 'Heavy manual', label: 'Heavy manual (construction, factory)' },
-  { value: 'Athlete', label: 'Athlete (professional or regular sports)' },
+  { value: 'Student', label: 'Student' },
+  { value: 'Civil servant', label: 'Civil servant' },
+  { value: 'Trader', label: 'Trader' },
+  { value: 'Artisan', label: 'Artisan (bricklayer)' },
+  { value: 'Athlete', label: 'Athlete' },
+  { value: 'Retiree', label: 'Retiree' },
 ];
 
 /**
@@ -68,7 +50,6 @@ const EDUCATION_OPTIONS = [
   { value: 'Secondary', label: 'Secondary School' },
   { value: 'Undergraduate', label: 'Undergraduate Degree' },
   { value: 'Postgraduate', label: 'Postgraduate Degree' },
-  { value: 'Professional', label: 'Professional Certification' },
   { value: 'Other', label: 'Other' },
 ];
 
@@ -101,9 +82,10 @@ export default function BiodataConfirmation() {
     fullName: '',
     sex: '',
     age: '', // Numeric age entered by the patient
-    ageRange: '',
     occupation: '',
     education: '',
+    height: '',
+    weight: '',
     notes: '', // Optional free-text notes
   });
 
@@ -124,9 +106,10 @@ export default function BiodataConfirmation() {
           fullName: existingBiodata.fullName || '',
           sex: existingBiodata.sex || '',
           age: existingBiodata.age != null ? String(existingBiodata.age) : '',
-          ageRange: existingBiodata.ageRange || '',
           occupation: existingBiodata.occupation || '',
           education: existingBiodata.education || '',
+          height: existingBiodata.height != null ? String(existingBiodata.height) : '',
+          weight: existingBiodata.weight != null ? String(existingBiodata.weight) : '',
           notes: existingBiodata.notes || '',
         });
         setIsLoading(false);
@@ -142,13 +125,11 @@ export default function BiodataConfirmation() {
 
             // Calculate age from dateOfBirth if available
             let age = '';
-            let ageRange = '';
             if (dateOfBirth) {
               const birthDate = new Date(dateOfBirth);
               const today = new Date();
               const computedAge = today.getFullYear() - birthDate.getFullYear();
               age = String(computedAge);
-              ageRange = deriveAgeRange(computedAge);
             }
 
             // Map gender to sex option
@@ -162,7 +143,6 @@ export default function BiodataConfirmation() {
               fullName: `${firstName || ''} ${lastName || ''}`.trim(),
               sex,
               age,
-              ageRange,
             }));
           }
         }
@@ -220,6 +200,20 @@ export default function BiodataConfirmation() {
     if (!formData.education) {
       newErrors.education = 'Please select your education level';
     }
+    const parsedHeight = Number(formData.height);
+    if (
+      formData.height &&
+      (!Number.isFinite(parsedHeight) || parsedHeight <= 0 || parsedHeight > 300)
+    ) {
+      newErrors.height = 'Please enter a valid height in metres';
+    }
+    const parsedWeight = Number(formData.weight);
+    if (
+      formData.weight &&
+      (!Number.isFinite(parsedWeight) || parsedWeight <= 0 || parsedWeight > 500)
+    ) {
+      newErrors.weight = 'Please enter a valid weight in kilograms';
+    }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -253,15 +247,16 @@ export default function BiodataConfirmation() {
      * - Legal/audit requirements for medical records
      * - Each assessment is self-contained
      */
-    const biodataSnapshot = {
-      fullName: formData.fullName.trim(),
-      sex: formData.sex,
-      age: Number(formData.age),
-      ageRange: deriveAgeRange(formData.age),
-      occupation: formData.occupation,
-      education: formData.education,
-      notes: formData.notes.trim() || null,
-    };
+      const biodataSnapshot = {
+        fullName: formData.fullName.trim(),
+        sex: formData.sex,
+        age: Number(formData.age),
+        occupation: formData.occupation,
+        education: formData.education,
+        height: formData.height ? Number(formData.height) : null,
+        weight: formData.weight ? Number(formData.weight) : null,
+        notes: formData.notes.trim() || null,
+      };
 
     // Store in assessment state and proceed to body-map
     confirmBiodata(biodataSnapshot);
@@ -374,11 +369,53 @@ export default function BiodataConfirmation() {
             )}
           </div>
 
+          {/* Height and Weight */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="height" className="font-medium">
+                Height (m)
+              </Label>
+              <Input
+                id="height"
+                type="number"
+                step="0.01"
+                min="0"
+                max="3"
+                placeholder="e.g. 1.75"
+                value={formData.height}
+                onChange={(e) => handleChange('height', e.target.value)}
+                className={errors.height ? 'border-red-500' : ''}
+              />
+              {errors.height && (
+                <p className="text-xs font-medium text-red-500">{errors.height}</p>
+              )}
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="weight" className="font-medium">
+                Weight (kg)
+              </Label>
+              <Input
+                id="weight"
+                type="number"
+                step="0.1"
+                min="0"
+                max="500"
+                placeholder="e.g. 70"
+                value={formData.weight}
+                onChange={(e) => handleChange('weight', e.target.value)}
+                className={errors.weight ? 'border-red-500' : ''}
+              />
+              {errors.weight && (
+                <p className="text-xs font-medium text-red-500">{errors.weight}</p>
+              )}
+            </div>
+          </div>
+
           {/* Occupation Selection */}
           <div className="space-y-2">
             <Label className="font-medium">Occupation / Working Class *</Label>
             <div className="grid grid-cols-2 gap-2">
-              {OCCUPATION_OPTIONS.map((option) => (
+              {OCCUPATION_OPTIONS.filter((o) => o.value !== 'Artisan').map((option) => (
                 <button
                   key={option.value}
                   type="button"
@@ -393,6 +430,25 @@ export default function BiodataConfirmation() {
                 </button>
               ))}
             </div>
+
+            {/* Bricklayer isolated section */}
+            <div className="mt-3 rounded-xl border-2 border-dashed border-amber-400 bg-amber-50 p-4 dark:border-amber-600 dark:bg-amber-950/30">
+              <p className="text-xs font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400">
+                Heavy manual labor
+              </p>
+              <button
+                type="button"
+                onClick={() => handleChange('occupation', 'Artisan')}
+                className={`mt-2 w-full rounded-lg border-2 px-4 py-3 text-left text-sm font-medium transition-all ${
+                  formData.occupation === 'Artisan'
+                    ? 'border-amber-500 bg-amber-100 text-amber-900 dark:bg-amber-900/40 dark:text-amber-100'
+                    : 'border-amber-200 hover:border-amber-300 dark:border-amber-700 dark:hover:border-amber-600'
+                } ${errors.occupation ? 'border-red-300' : ''}`}
+              >
+                Bricklayer
+              </button>
+            </div>
+
             {errors.occupation && (
               <p className="text-xs font-medium text-red-500">{errors.occupation}</p>
             )}
@@ -420,9 +476,9 @@ export default function BiodataConfirmation() {
             {errors.education && (
               <p className="text-xs font-medium text-red-500">{errors.education}</p>
             )}
-          </div>
+           </div>
 
-          {/* Optional Notes */}
+           {/* Optional Notes */}
           <div className="space-y-2">
             <Label htmlFor="notes" className="font-medium">
               Additional Notes <span className="text-muted-foreground">(Optional)</span>

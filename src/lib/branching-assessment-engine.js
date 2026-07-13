@@ -689,6 +689,9 @@ export function processAnswer(state, questionId, answerValue) {
           newState.completionReason = 'diagnosed_by_red_option';
           newState.temporaryDiagnosis = hostCondition;
         }
+      } else {
+        // Non-coloured alternative chosen on a confirmation question → skip the
+        // condition and proceed to the next condition's question.
         if (!isGeneralCondition(newState, hostCondition)) {
           newState.ruledOutConditions.add(hostCondition);
           condQuestions.forEach((q) => {
@@ -706,6 +709,7 @@ export function processAnswer(state, questionId, answerValue) {
             });
           }
         }
+      }
     }
   }
 

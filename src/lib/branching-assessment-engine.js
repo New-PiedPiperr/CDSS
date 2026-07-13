@@ -631,8 +631,12 @@ export function processAnswer(state, questionId, answerValue) {
       .filter(Boolean);
 
     // Questions within this condition that expose a coloured (red) confirm option.
+    // Check both the options[] and answers[] arrays (the engine resolves the
+    // selected answer from either) so a red option is never missed.
     const coloredQuestions = condQuestions.filter((q) =>
-      (q.answers || []).some((a) => (a.effects || {}).optionColor === 'red')
+      [...(q.answers || []), ...(q.options || [])].some(
+        (a) => (a.effects || {}).optionColor === 'red'
+      )
     );
 
     if (coloredQuestions.length > 0) {
@@ -642,10 +646,13 @@ export function processAnswer(state, questionId, answerValue) {
         // Confirm this option; terminate only once ALL coloured options for the
         // condition have been confirmed (every one answered "yes").
         const allConfirmed = coloredQuestions.every((q) => {
-          const redValue = (q.answers || [])
-            .find((a) => (a.effects || {}).optionColor === 'red')?.value;
+          // A question may expose more than one coloured (red) option, so the
+          // confirmation counts if the recorded answer matches ANY of them.
+          const redValues = [...(q.answers || []), ...(q.options || [])]
+            .filter((a) => (a.effects || {}).optionColor === 'red')
+            .map((a) => a.value);
           return newState.answeredQuestions.some(
-            (aq) => aq.questionId === q.id && aq.answer === redValue
+            (aq) => aq.questionId === q.id && redValues.includes(aq.answer)
           );
         });
 

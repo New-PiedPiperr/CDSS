@@ -410,9 +410,9 @@
                 "redFlagText": null,
                 "terminateAssessment": false,
                 "notes": null
-              },
+              }
             }
-          ]
+          ],
           "answers": [
             {
               "value": "Yes",
@@ -442,7 +442,7 @@
                 "redFlagText": null,
                 "terminateAssessment": false,
                 "notes": null
-              },
+              }
             }
           ]
         },

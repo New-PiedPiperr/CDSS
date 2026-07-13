@@ -2104,8 +2104,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2453,8 +2454,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3767,8 +3769,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -4161,8 +4164,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -4961,8 +4965,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -5085,8 +5090,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -6405,8 +6411,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -6619,8 +6626,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -8225,8 +8233,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -8484,8 +8493,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -10045,8 +10055,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -10469,8 +10480,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -12347,8 +12359,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -12591,8 +12604,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -14167,8 +14181,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -14486,8 +14501,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -16609,8 +16625,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -16868,8 +16885,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -18749,8 +18767,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -18963,8 +18982,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -20753,8 +20773,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -20967,8 +20988,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -22879,8 +22901,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -23303,8 +23326,9 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {

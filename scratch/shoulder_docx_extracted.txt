@@ -1,0 +1,318 @@
+--- SHOULDERS DOCX CONTENT ---
+P: FRACTURES
+P: Of Clavicle:
+P: Age
+P: What region is pain present in?
+P: Shoulder
+P: Clavicular region
+P: Do you have a recent history of fall or trauma in the affected region?
+P: <Yes>[RED]
+P: No
+P: The fracture could be pathological (Ask for blood work-up, calcium level, and Vit D intake)
+P: Concerning Pain Features:
+P: How did the pain begin?
+P: Sudden
+P: Gradual
+P: Do you experience tingling or abnormal sensations?
+P: Yes (Rule out  nerve involvement)
+P: No
+P: Do you have swelling in the area of complaint?
+P: Yes
+P: No
+P: Did you notice any unusual movement in the area of complaint?
+P: Yes
+P: No
+P: What aggravates this pain?
+P: Overhead movement
+P: Elevation above shoulder height
+P: ABducion of the shoulder
+P: Do you feel pain when you try to raise your arm?
+P: Yes
+P: No
+P: Is there tenderness around the shoulder region or on palpating root of the neck?
+P: Yes
+P: No
+P: Is your sleep affected by pain?
+P: Yes
+P: No
+P: Objective/Observation
+P: Is shoulder alignment proper?
+P: If sagging (clavicular #)
+P: Is bruising and swelling present?
+P: Yes
+P: No
+P: Is patient adopting a pain avoidance posture by clasping hands together?
+P: Yes
+P: No
+P: Is there a bump or obvious deformity around the clavicle?
+P: Yes
+P: No
+P: TEST
+P: Radiographic confirmation. What to expect:
+P: Fracture is seen in the middle of the clavicle
+P: Check for how far out of place the broken fragments are (displacement)
+P: ROTATOR CUFF PATHOLOGIES
+P: For Shoulder Impingement Syndrome:
+P: What region is pain present in?
+P: Neck
+P: <Neck and shoulder region>[RED]
+P: <Shoulder>[RED]
+P: Do you experience tingling or abnormal sensations? – 
+P: Yes (Branch for cervical radiculitis confirmation,)
+P: <No>[RED]
+P: What is the nature of the pain you experience?
+P: <Sharp or pinching>[RED]
+P: Dull and aching
+P: How did the pain begin?
+P: Sudden
+P: Gradual
+P: If sudden, was it following any of these movements: Abduction ( movement of the arm away from the body sideways), Elevation or External rotation (Rotating shoulder away from the body).
+P: <Yes>[RED]
+P: No
+P: What currently aggravates the pain?
+P: <Arm flexion (Movement of the arm forward)>[RED]
+P: <Internal rotation (Rotating the arm inward)>[RED]
+P: <Abduction>[RED]
+P: <Sleeping on the affected side>[RED]
+P: If Pain is felt on Abduction and internal rotation, is pain present in the front or lateral part of the shoulder?
+P: <Yes>[RED]
+P: No
+P: Does your job or daily tasks involve repetitive shoulder movement?
+P: <Yes>[RED]
+P: no
+P: On what movement is the pain felt?
+P: <Active>[RED]
+P: Passive (Bursitis)
+P: <Both>[RED]
+P: Do you experience weakness on moving your shoulder?
+P: <Yes>[RED]
+P: No
+P: For Subacute tendinitis OR Painfularc syndrome
+P: For how long have you felt this present pain?
+P: Less than 6 weeks (Acute)
+P: 6 -  less than 12 weeks(Subacute)
+P: 12 weeks or more(Chronic)
+P: Does the pain resolve significantly after the precipitating activity is avoided?
+P: <Yes >[RED]  
+P: No 
+P: Palpate the anterior edge of the acromion with the arm in extension and flexion. (Subacute Tendinitis). Is pain present?
+P: Yes
+P: No
+P: For Chronic Tendinitis <(>[RED]<Age: 40-50)>[RED]
+P: Have you had a previous history of shoulder pain after repetitive use? (<Link to question 11, maybe redundant)>[RED]
+P: <Yes>[RED]
+P: No
+P: Does pain reduce with rest OR anti-inflammatory use?
+P: <Yes>[RED]
+P: No
+P: Is there tenderness along the bicipital groove or on moving the biceps tendon?
+P: Yes (Biccipital tendinitis can co-exist with other rotator cuff pathologies)
+P: No
+P: For Cuff Disruption
+P: Are you above <45yr>[RED]s of age?
+P: <Yes>[RED]
+P: No
+P: Do you have a previous history of sprain or a jerking movement at the shoulder?
+P: <Yes>[RED]
+P: No
+P: Check if the patient can complete a full abduction of the arm.
+P: If pt, cannot initiate arm ABduction – full tear
+P: If active ABduction is possible – partial tear.
+P: SPECIAL CONFIRMATORY TESTS
+P: Test for Cervical Radiculitis: 
+P: Spurling’s Test
+P: While pt is seated, the examiner applies side flexion of the neck towards the affected side while applying axial compression.Sign is positive if the pain sensation felt in the shoulder-neck region is replicated.
+P: Tests for SIS
+P: The painful arc: Ask pt to Abduct arm across range of motion actively
+P: Scapular rhythm is disturbed
+P: Pain is aggraavated between the range of 60 - 120 deg
+P: Pain is alleviated IF shoulder is laterally rotated on ABduction
+P: If positive, SIS is indicated
+P: Neer Impingement Sign: Stabilise the scapula with one hand and raise the unaffected side to full flexion with Abduction and internal rotation passively.
+P: The test is positive when there is pain at the subacromial space.
+P: Rule out acromioclavicular osteoarthritis, glenohumeral instability and SLAP lesions.
+P: Hawkins-Kennedy Test: Pt arm is placed in 90 deg of elevation at the scapular level and 90 deg flexion; Stabilise the upper arm with one hand and internally rotate with the other hand.
+P: The test is positive when pain is felt in the anterolateral aspect of the shoulder
+P: Jobe’s test: Elevate arm in scapular plane, extend elbow and thumb points towards floor with arm internally rotated. Pt is asked to hold the position with downward pressure from examiner
+P: Positve sign = Pain on examiner restriction indicating supraspinatus irritation.
+P: Tests for Isolated Muscle Weakness
+P: The ‘Empty Can Test’ for Supraspinatus: Patient is asked to ABduct up to 90 deg, 30 deg flexion and internal rotation. Examiner stands behind patient and applies downward pressure
+P: Positive sign, Affected side is weaker than the unaffected side.
+P: Positive sign suggests tear in the supraspinatus
+P: Infraspinatus Test: Pt holds arms close to body, elbow is flexed up to 90 deg of forward elevation in scapular plane. External rotation is instructed while examiner applies resistance.
+P: Lack of power on one side indicates weakness of the infraspinatus muscle
+P: If test is done with arm in 90 deg elevation
+P: i. Inability to resist external rotation suggests a tear of the infraspinatus
+P: ii. Movement with feelings of pain indicates an irritation to the infraspinatus
+P: Subscapularis (Belly Press Test): Pt is asked to place their hand on their abdomen and move elbow forward. Pt is then asked to press hand on the abdomen.
+P: If subscapularis is torn, Pt will be unable to perform movement and elbow will move backwards.
+P: Lag SignFor External Rotation: Pt lifts arm slightly from body and is asked to hold in external rotation.
+P: Positive when hand recoils to neutral position and suggests tear of infraspinatus or supraspinatus
+P: Drop Sign. The examiner places the arm at 90 deg ABduction, elbow at Rt angle and arm maximally rotated.
+P: Positive sign, arm drops from position. Suggests a tear of the infraspinatus OR the posterior part of the rotator cuff
+P: The Lift-Off Test (Subscapularis): Pt is asked to place hand on the back at the mid-lumbar spine.The therapist then lifts hand from the back and pt is asked to hold it there
+P: Positive sign, inability to maintain hand while removed suggests subscapularis weakness.
+P: For CALCIFIC TENDINITIS
+P: Acute Calcific Tendinits:
+P: Age 
+P: <30-35 years >[RED]
+P: What is the pain type?
+P: Sharp or pinching
+P: <Dull and aching>[RED]
+P: How did the pain begin?
+P: Sudden
+P: <Gradual>[RED]
+P: Did the pain increase drastically within a few hours?
+P: <Yes>[RED]
+P: No
+P: Do you experience pain more at night
+P: <Yes>[RED]
+P: No
+P: Can you perform the movements around the shoulder joint?
+P: Yes
+P: <No >[RED]
+P: Does the pain subside after a few days and the shoulder is restored to normal functioning?
+P: If Yes (Acute Calcific Tendinitis)
+P: Test
+P: Check X-ray to rule asymptomatic calcification
+P: Lesions of the Biceps Tendon (Confirmation)
+P: Biccipital Tendinitis as above:
+P: Special Test for Biccipital Tendinitis
+P: Speed Test: Place pt’s arm in shoulder flexion, forearm supination and elbow extension. The examiner then applies pressure to the arm as downward action. 
+P: A positive sign, pain in the bicipital grove is replicable
+P: Yergasom’s test:  Pt places the forearm in the supine position, and the examiner applies resistance against supination.
+P: A positive sign, this replicates the pain in the bicipital group tenderness.
+P: Rupture of the Biceps Tendon (Confirmation)
+P: Age (<over 50yr>[RED]s)
+P: Ask pt to lift or offer resistance to biceps contraction
+P: Is a prominent lump is seen in lower arm
+P: Yes
+P: No
+P: The upper arm becomes painful and bruised
+P: Yes
+P: No
+P: Hypertrophy and intra-articular entrapment (the hourglass biceps) -(Confirmation)
+P: Ask patient to elevate the shoulder
+P: Is buckling of tendon present?
+P: Yes
+P: No
+P: Do you feel pain on shoulder elevation?
+P: <Yes>[RED]
+P: No
+P: Can the patient elevate the arm up till the end of the range?
+P: Yes
+P: No
+P: SLAP LESION (Confirmation)
+P: Did you have any history of fall or trauma with hand stretched out?
+P: <Yes>[RED]
+P: No
+P:  Did you have any history of loading the shoulder region with weight?
+P: <Yes>[RED]
+P: No
+P: Do you feel a ‘painful click’ when you lift your arm above shoulder height?
+P: <Yes>[RED]
+P: No
+P: Do you feel weakness in your arm when doing activities above shoulder height?
+P: <Yes>[RED]
+P: No
+P: Ask the patient to throw to reach a far distance where above shoulder movement is indicated.
+P: Patient is unable to
+P: Patient is able to
+P: Patient is able to (with pain involvement)
+P: Special Test for SLAP (O’Brien’s test)
+P: Instruct the patient to flex the arm up to 90 deg with the elbow in full extension.Then ask pt to adduct arm 10-15 deg medial to sagittal plane. Arm is maximally internally rotated and examiner applies downward pressure while patient is asked to resist.  Procedure is then repeated in supination
+P: Positive: Pain is elicited by the first manoeuvre, and is reduced or eliminated by the second.
+P: ADHESIVE CAPSULITIS (Frozen Shoulder Syndrome)
+P: Age (4<0-60>[RED])
+P: At the early phase of this pain, did you find it difficult to turn your shoulder out (External rotation) and/or take your arm away from your body (abduction)?
+P: <Yes >[RED]<(Check for adhesive capsulitis– early phase. Carry out active and passive movements)>[RED]
+P: No
+P: Currently, do you find it difficult to turn your shoulder in (Internal rotation) or move your arms towards your body/chest (Adduction)
+P: <Yes>[RED](Check for adhesive capsulitis – freezing phase)
+P: No
+P: Do you find it easier to move your shoulder backwards (extension)?
+P: <Yes>[RED]
+P: No
+P: Do you experience progressive stiffness in your shoulder?
+P: <Yes>[RED]
+P: No
+P: Is the pain worse at night?
+P: <Yes>[RED]
+P: No
+P: Have you had any of the following conditions before: Diabetes, Dupuytren’s, hyperlipidemia, hyperthyroidism, cardiac disease, hemiplegia?
+P: <Yes>[RED]
+P: No
+P: Have you undergone a neurosurgical procedure before?
+P: <Yes>[RED]
+P: No
+P: Previous history of fall or trauma to affected side?
+P: Yes (Traumatic Adhesive Capsulitis)
+P: No(Non-traumatic Adhesive Capsulitis)
+P: Test for Adhesive Capsulitis
+P: Check if the Active range of motion and passive range of motion is full across shoulder joints
+P: Active and Passive range of motion is limited in Adhesive Capsulitis
+P: Rule out other causes of stiffness with imaging
+P: FOR RECURRENT SHOULDER SUBLUXATION
+P: Age (Young adult: <18-25>[RED])
+P: Have you had a previous history of a shoulder dislocation?
+P: <Yes>[RED]
+P: No
+P: Did the first episode occur with a pull on an abducted, laterally rotated-extended arm?
+P: <Yes>[RED]
+P: No
+P: Do you experience a catching sensation followed by numbness or weakness (Dead-arm syndrome) when making overhead arm movements?
+P: <Yes>[RED]<(Rule out rotator cuff disorder and cervical radiculitis)>[RED]
+P: No
+P: Special Tests for Recurrent Subluxation
+P: Apprehension Test:
+P: Patient is in sitting or lying position, the examiner lifts the arn gently into ABduction, external rotation and then extension. Test is positive if Pt senses that humeral head is about to slip out anteriorly and body stiffens in apprehension.
+P: The test is repeated with the anterior part of shoulder protected.
+P: Fulcrum’s Test:
+P: Pt lies supine, arm ABducted up to 90 deg. The examiner places their hands over the shoulder to set the fulcrum base. The humeral head is levered forward by extending and externally rotating arm. The patient immediately becomes apprehensive.
+P: Drawer’s Test:
+P: Patient lies supine , scapula is stabilised with one hand while the upper arm is grasped firmly with the other, and manoeuvring is done forward and backward (like a drawer). The drawer’s test is positive if instability is marked.
+P: FOR RHEUMATOID ARTHRITIS
+P: Gender
+P: Common in women
+P: Do you have a history of generalised Rheumatoid Arthritis?
+P: <Yes>[RED]
+P: No
+P: Do you experience pain and swelling in both shoulder joints?
+P: <Yes>[RED]
+P: No
+P: Do you smoke?
+P: <Yes>[RED]
+P: No
+P: Do you have episodes of fever that resolve spontaneously?
+P: Yes
+P: No
+P: Is swelling present anteriorly and superiorly to the shoulder?
+P: <Yes>[RED]
+P: No
+P: Is swelling present in the axilla?
+P: <Yes>[RED]
+P: No
+P: Do you experience increasing limitations in performing self-care (styling hair, dressing, shaving)?
+P: <Yes>[RED]
+P: No
+P: TEST 
+P: Radiographic confirmation – check for periarticular erosions, subchondral sclerosis, and resorption.
+P: FOR OSTEOARTHRITIS
+P: Age (<50-60 years>[RED])
+P: Have you had a previous history of injury, shoulder dislocation, or painful arc syndrome?
+P: <Yes>[RED]
+P: No
+P: Do you feel the pain more at night?
+P: <Yes>[RED]<(Rule out adhesive capsulitis)>[RED]
+P: No
+P: Is your shoulder movement restricted across ALL joint motions?
+P: <Yes>[RED]<>[RED]
+P: No (Rule out Adhesive Capsulitis. Extension is free in Adhesive Capsulitis)
+P: Do you experience early morning stiffness?
+P: <Yes>[RED]
+P: No
+P: If yes, does the stiffness wane within 30 minutes of waking?
+P: <Yes>[RED]
+P: No 
+P: TEST
+P: Radiographic confirmation – check for distortion of the joint, subchondral sclerosis, osteophyte formation, and narrowing of articular space.

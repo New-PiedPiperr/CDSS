@@ -340,6 +340,22 @@ function normalizeQuestion(rawQuestion, conditionName) {
 // ============================================================================
 
 /**
+ * Check if a condition is treated as general/initial assessment
+ */
+function isGeneralCondition(state, conditionName) {
+  if (!conditionName) return false;
+  if (
+    conditionName === 'Non-specific low-back pain' ||
+    conditionName === 'Initial Assessment' ||
+    conditionName === 'General Assessment'
+  ) {
+    return true;
+  }
+  const condState = state.suspectedConditions.get(conditionName);
+  return condState?.isGeneral === true;
+}
+
+/**
  * Get the next valid question to display based on current state
  * This is the core branching logic
  * @param {Object} state - Current engine state
@@ -398,7 +414,7 @@ function canShowQuestion(state, question) {
   if (
     question.condition &&
     state.ruledOutConditions.has(question.condition) &&
-    question.condition !== 'Non-specific low-back pain'
+    !isGeneralCondition(state, question.condition)
   ) {
     return false;
   }
@@ -435,7 +451,7 @@ function canShowQuestion(state, question) {
     // This maintains backward compatibility while adding rule-out capability
     if (
       state.ruledOutConditions.has(question.condition) &&
-      question.condition !== 'Non-specific low-back pain'
+      !isGeneralCondition(state, question.condition)
     ) {
       return false;
     }
@@ -597,7 +613,7 @@ export function processAnswer(state, questionId, answerValue) {
     const hostCondition = question.condition;
     if (hostCondition && !newState.ruledOutConditions.has(hostCondition)) {
       newState.ruledOutConditions.add(hostCondition);
-      if (hostCondition !== 'Non-specific low-back pain') {
+      if (!isGeneralCondition(newState, hostCondition)) {
         const condQuestions = newState.conditionQuestions.get(hostCondition) || [];
         condQuestions.forEach((qId) => {
           if (!newState.answeredQuestions.some((aq) => aq.questionId === qId)) {
@@ -673,27 +689,23 @@ export function processAnswer(state, questionId, answerValue) {
           newState.completionReason = 'diagnosed_by_red_option';
           newState.temporaryDiagnosis = hostCondition;
         }
-      } else {
-        // Non-coloured alternative chosen on a confirmation question → skip the
-        // condition and proceed to the next condition's question.
-        newState.ruledOutConditions.add(hostCondition);
-        if (hostCondition !== 'Non-specific low-back pain') {
+        if (!isGeneralCondition(newState, hostCondition)) {
+          newState.ruledOutConditions.add(hostCondition);
           condQuestions.forEach((q) => {
             if (!newState.answeredQuestions.some((aq) => aq.questionId === q.id)) {
               newState.skippedQuestions.add(q.id);
             }
           });
+          const condState = newState.suspectedConditions.get(hostCondition);
+          if (condState) {
+            newState.suspectedConditions.set(hostCondition, {
+              ...condState,
+              active: false,
+              ruledOut: true,
+              ruledOutReason: { question: question.question, answer: answerValue },
+            });
+          }
         }
-        const condState = newState.suspectedConditions.get(hostCondition);
-        if (condState) {
-          newState.suspectedConditions.set(hostCondition, {
-            ...condState,
-            active: false,
-            ruledOut: true,
-            ruledOutReason: { question: question.question, answer: answerValue },
-          });
-        }
-      }
     }
   }
 

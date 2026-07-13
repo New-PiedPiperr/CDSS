@@ -608,15 +608,71 @@ export function processAnswer(state, questionId, answerValue) {
     }
   }
 
-  if (effects.optionColor === 'red') {
-    const condQuestions = newState.conditionQuestions.get(question.condition) || [];
-    const isLastConditionQuestion =
-      condQuestions.length > 0 && condQuestions[condQuestions.length - 1] === question.id;
+  // ---------------------------------------------------------------------------
+  // COLOR RULE
+  // A condition is confirmed (assessment terminates, temporary diagnosis set
+  // to that condition) ONLY when EVERY coloured (red/confirm) option belonging
+  // to the condition has been answered in the confirming direction ("yes").
+  // A single red "yes" is not enough on its own — all must be "yes" first.
+  //
+  // If a question offers a coloured option and the user selects the
+  // non-coloured alternative instead, the current condition is skipped (ruled
+  // out) and the flow proceeds to the next condition's question. Plain
+  // questions (with no coloured option) are unaffected and flow normally.
+  // ---------------------------------------------------------------------------
+  if (
+    question.condition &&
+    !newState.ruledOutConditions.has(question.condition) &&
+    !newState.isComplete
+  ) {
+    const hostCondition = question.condition;
+    const condQuestions = (newState.conditionQuestions.get(hostCondition) || [])
+      .map((qid) => newState.questionsMap.get(qid))
+      .filter(Boolean);
 
-    if (isLastConditionQuestion) {
-      newState.isComplete = true;
-      newState.completionReason = 'diagnosed_by_red_option';
-      newState.temporaryDiagnosis = question.condition;
+    // Questions within this condition that expose a coloured (red) confirm option.
+    const coloredQuestions = condQuestions.filter((q) =>
+      (q.answers || []).some((a) => (a.effects || {}).optionColor === 'red')
+    );
+
+    if (coloredQuestions.length > 0) {
+      const isRedSelection = effects.optionColor === 'red';
+
+      if (isRedSelection) {
+        // Confirm this option; terminate only once ALL coloured options for the
+        // condition have been confirmed (every one answered "yes").
+        const allConfirmed = coloredQuestions.every((q) => {
+          const redValue = (q.answers || [])
+            .find((a) => (a.effects || {}).optionColor === 'red')?.value;
+          return newState.answeredQuestions.some(
+            (aq) => aq.questionId === q.id && aq.answer === redValue
+          );
+        });
+
+        if (allConfirmed) {
+          newState.isComplete = true;
+          newState.completionReason = 'diagnosed_by_red_option';
+          newState.temporaryDiagnosis = hostCondition;
+        }
+      } else {
+        // Non-coloured alternative chosen on a confirmation question → skip the
+        // condition and proceed to the next condition's question.
+        newState.ruledOutConditions.add(hostCondition);
+        condQuestions.forEach((q) => {
+          if (!newState.answeredQuestions.some((aq) => aq.questionId === q.id)) {
+            newState.skippedQuestions.add(q.id);
+          }
+        });
+        const condState = newState.suspectedConditions.get(hostCondition);
+        if (condState) {
+          newState.suspectedConditions.set(hostCondition, {
+            ...condState,
+            active: false,
+            ruledOut: true,
+            ruledOutReason: { question: question.question, answer: answerValue },
+          });
+        }
+      }
     }
   }
 
@@ -755,6 +811,32 @@ export function processAnswer(state, questionId, answerValue) {
     if (!nextQuestion) {
       newState.isComplete = true;
       newState.completionReason = 'all_relevant_questions_answered';
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // SUPER OVERRIDE
+  // Any option designated with BOTH a rule-out (excludedConditions) AND a
+  // confirmation (triggeredConditions / increaseLikelihood / coloured red
+  // option) must trigger immediate termination, regardless of the Color Rule
+  // above. It takes precedence over the normal branching/confirmation flow.
+  // Placed after the standard termination check so it does not override an
+  // explicit `terminateAssessment` reason that already fired.
+  // ---------------------------------------------------------------------------
+  if (!newState.isComplete) {
+    const hasRuleOut = (effects.excludedConditions || []).length > 0;
+    const hasConfirm =
+      (effects.triggeredConditions || []).length > 0 ||
+      (effects.increaseLikelihood || []).length > 0 ||
+      effects.optionColor === 'red';
+
+    if (hasRuleOut && hasConfirm) {
+      const hostCondition = question.condition;
+      newState.isComplete = true;
+      newState.completionReason = 'super_override_termination';
+      if (hostCondition) {
+        newState.temporaryDiagnosis = hostCondition;
+      }
     }
   }
 

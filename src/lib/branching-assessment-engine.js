@@ -668,45 +668,52 @@ export function processAnswer(state, questionId, answerValue) {
     );
 
     if (coloredQuestions.length > 0) {
-      const isRedSelection = effects.optionColor === 'red';
+      const currentQuestionHasColor = [
+        ...(question.answers || []),
+        ...(question.options || []),
+      ].some((a) => (a.effects || {}).optionColor === 'red');
 
-      if (isRedSelection) {
-        // Confirm this option; terminate only once ALL coloured options for the
-        // condition have been confirmed (every one answered "yes").
-        const allConfirmed = coloredQuestions.every((q) => {
-          // A question may expose more than one coloured (red) option, so the
-          // confirmation counts if the recorded answer matches ANY of them.
-          const redValues = [...(q.answers || []), ...(q.options || [])]
-            .filter((a) => (a.effects || {}).optionColor === 'red')
-            .map((a) => a.value);
-          return newState.answeredQuestions.some(
-            (aq) => aq.questionId === q.id && redValues.includes(aq.answer)
-          );
-        });
+      if (currentQuestionHasColor) {
+        const isRedSelection = effects.optionColor === 'red';
 
-        if (allConfirmed) {
-          newState.isComplete = true;
-          newState.completionReason = 'diagnosed_by_red_option';
-          newState.temporaryDiagnosis = hostCondition;
-        }
-      } else {
-        // Non-coloured alternative chosen on a confirmation question → skip the
-        // condition and proceed to the next condition's question.
-        if (!isGeneralCondition(newState, hostCondition)) {
-          newState.ruledOutConditions.add(hostCondition);
-          condQuestions.forEach((q) => {
-            if (!newState.answeredQuestions.some((aq) => aq.questionId === q.id)) {
-              newState.skippedQuestions.add(q.id);
-            }
+        if (isRedSelection) {
+          // Confirm this option; terminate only once ALL coloured options for the
+          // condition have been confirmed (every one answered "yes").
+          const allConfirmed = coloredQuestions.every((q) => {
+            // A question may expose more than one coloured (red) option, so the
+            // confirmation counts if the recorded answer matches ANY of them.
+            const redValues = [...(q.answers || []), ...(q.options || [])]
+              .filter((a) => (a.effects || {}).optionColor === 'red')
+              .map((a) => a.value);
+            return newState.answeredQuestions.some(
+              (aq) => aq.questionId === q.id && redValues.includes(aq.answer)
+            );
           });
-          const condState = newState.suspectedConditions.get(hostCondition);
-          if (condState) {
-            newState.suspectedConditions.set(hostCondition, {
-              ...condState,
-              active: false,
-              ruledOut: true,
-              ruledOutReason: { question: question.question, answer: answerValue },
+
+          if (allConfirmed) {
+            newState.isComplete = true;
+            newState.completionReason = 'diagnosed_by_red_option';
+            newState.temporaryDiagnosis = hostCondition;
+          }
+        } else {
+          // Non-coloured alternative chosen on a confirmation question → skip the
+          // condition and proceed to the next condition's question.
+          if (!isGeneralCondition(newState, hostCondition)) {
+            newState.ruledOutConditions.add(hostCondition);
+            condQuestions.forEach((q) => {
+              if (!newState.answeredQuestions.some((aq) => aq.questionId === q.id)) {
+                newState.skippedQuestions.add(q.id);
+              }
             });
+            const condState = newState.suspectedConditions.get(hostCondition);
+            if (condState) {
+              newState.suspectedConditions.set(hostCondition, {
+                ...condState,
+                active: false,
+                ruledOut: true,
+                ruledOutReason: { question: question.question, answer: answerValue },
+              });
+            }
           }
         }
       }

@@ -35,7 +35,7 @@ const BiodataSnapshotSchema = new mongoose.Schema(
     },
     occupation: {
       type: String,
-      enum: ['Student', 'Civil servant', 'Trader', 'Artisan', 'Athlete', 'Retiree'],
+      enum: ['Student', 'Civil servant', 'Trader', 'Artisan', 'Bricklayer', 'Athlete', 'Retiree'],
       required: true,
     },
     education: {
@@ -566,6 +566,9 @@ const DiagnosisSessionSchema = new mongoose.Schema(
 );
 
 // Prevent model recompilation in development
+if (process.env.NODE_ENV === 'development') {
+  delete mongoose.models.DiagnosisSession;
+}
 const DiagnosisSession =
   mongoose.models.DiagnosisSession ||
   mongoose.model('DiagnosisSession', DiagnosisSessionSchema);

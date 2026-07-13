@@ -11,6 +11,52 @@ import {
 import { extractRecommendedTests } from '@/lib/guided-test-engine';
 
 /**
+ * MAP NUMERIC AGE TO AN AGE-RANGE BUCKET
+ * ======================================
+ * The biodata snapshot schema requires `ageRange` (a discrete bucket), but the
+ * client only collects a numeric `age`. Derive the bucket here so the snapshot
+ * always satisfies the schema. Mirrors the `ageRange` enum in DiagnosisSession.
+ */
+function ageToRange(age) {
+  const a = Number(age);
+  if (!Number.isFinite(a)) return '21-30';
+  if (a <= 12) return '0-12';
+  if (a <= 14) return '13-14';
+  if (a <= 20) return '15-20';
+  if (a <= 30) return '21-30';
+  if (a <= 40) return '31-40';
+  if (a <= 50) return '41-50';
+  if (a <= 60) return '51-60';
+  return '60+';
+}
+
+/**
+ * SANITIZE CONDITION-ANALYSIS ENTRIES
+ * ===================================
+ * The assessment engine may emit condition-analysis entries that are missing a
+ * `name` (e.g. ruled-out or malformed records). The schema requires `name`, so
+ * drop entries that lack one to keep the persisted trace valid and clean.
+ */
+function sanitizeConditionAnalysisEntry(entry) {
+  if (entry && typeof entry.name === 'string' && entry.name.trim().length > 0) {
+    return {
+      name: entry.name,
+      likelihood: typeof entry.likelihood === 'number' ? entry.likelihood : 50,
+      ruleOutReasons: Array.isArray(entry.ruleOutReasons) ? entry.ruleOutReasons : [],
+      confirmationReasons: Array.isArray(entry.confirmationReasons)
+        ? entry.confirmationReasons
+        : [],
+    };
+  }
+  return null;
+}
+
+function sanitizeConditionAnalysis(list) {
+  if (!Array.isArray(list)) return [];
+  return list.map(sanitizeConditionAnalysisEntry).filter((e) => e !== null);
+}
+
+/**
  * ASSESSMENT SUBMISSION API
  * ==========================
  * Handles submission of branching assessment data with full traceability.
@@ -181,6 +227,7 @@ export async function POST(req) {
           fullName: biodata.fullName,
           sex: biodata.sex,
           age: biodata.age != null ? Number(biodata.age) : null,
+          ageRange: biodata.ageRange || ageToRange(biodata.age),
           occupation: biodata.occupation,
           education: biodata.education,
           height: biodata.height != null ? Number(biodata.height) : null,
@@ -209,10 +256,10 @@ export async function POST(req) {
       completedAt: assessmentMetadata?.completedAt || new Date(),
       totalQuestions: symptomData.length,
       questionsAnswered: symptomData,
-      conditionAnalysis: conditionAnalysis || [],
+      conditionAnalysis: sanitizeConditionAnalysis(conditionAnalysis),
       redFlags: redFlags || [],
-      primarySuspicion: primarySuspicion || null,
-      differentialDiagnoses: differentialDiagnoses || [],
+      primarySuspicion: sanitizeConditionAnalysisEntry(primarySuspicion),
+      differentialDiagnoses: sanitizeConditionAnalysis(differentialDiagnoses),
     };
 
     /**

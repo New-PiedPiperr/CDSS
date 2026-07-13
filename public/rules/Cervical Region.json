@@ -8,7 +8,16 @@
   "conditions": [
     {
       "name": "Cervical Disc Herniation",
-      "entry_criteria": [],
+      "entry_criteria": [
+        {
+          "type": "age",
+          "description": "Age (Below 40 years)"
+        },
+        {
+          "type": "sex",
+          "description": "Sex (Male)"
+        }
+      ],
       "is_general": false,
       "source_line": 1,
       "questions": [
@@ -164,52 +173,6 @@
                 "redFlagText": null,
                 "terminateAssessment": false,
                 "notes": null
-              }
-            }
-          ]
-        },
-        {
-          "id": "cervical_q3",
-          "questionText": "Age (Below 40 years)?",
-          "question": "Age (Below 40 years)?",
-          "condition": "Cervical Disc Herniation",
-          "category": "demographic",
-          "inputType": "select",
-          "source_line": 8,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Sex",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Male"
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Sex",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Male"
               }
             }
           ]
@@ -1072,7 +1035,16 @@
     },
     {
       "name": "Cervical Spondylosis",
-      "entry_criteria": [],
+      "entry_criteria": [
+        {
+          "type": "age",
+          "description": "Age (Above 40 years)"
+        },
+        {
+          "type": "sex",
+          "description": "Sex (Female)"
+        }
+      ],
       "is_general": false,
       "source_line": 50,
       "questions": [
@@ -1284,52 +1256,6 @@
                 "redFlagText": null,
                 "terminateAssessment": false,
                 "notes": null
-              }
-            }
-          ]
-        },
-        {
-          "id": "cervical_q17",
-          "questionText": "Age (Above 40 years)?",
-          "question": "Age (Above 40 years)?",
-          "condition": "Cervical Spondylosis",
-          "category": "demographic",
-          "inputType": "select",
-          "source_line": 59,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Sex",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Female"
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Sex",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Female"
               }
             }
           ]

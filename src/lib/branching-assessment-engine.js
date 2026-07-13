@@ -261,9 +261,12 @@ function evaluateEntryCriteria(condition, biodata) {
       if (!numberMatch) continue;
       const target = parseInt(numberMatch[1], 10);
 
-      if (desc.includes('and older') || desc.includes('older') || desc.includes('+')) {
-        // "65 years and older" → rule out anyone younger.
+      if (desc.includes('and older') || desc.includes('older') || desc.includes('+') || desc.includes('above')) {
+        // "65 years and older" / "above 40 years" → rule out anyone younger.
         if (age != null && age < target) ruleOut = true;
+      } else if (desc.includes('below') || desc.includes('under') || desc.includes('<')) {
+        // "below 40 years" → rule out anyone older.
+        if (age != null && age > target) ruleOut = true;
       } else {
         // "about 10 yrs" / "10 yrs" → approximate band (±3 years).
         const band = 3;
@@ -943,12 +946,14 @@ export function completeAssessment(state) {
 
   for (const [name, condState] of state.suspectedConditions) {
     if (!state.ruledOutConditions.has(name) && !condState.isGeneral) {
+      const condDef = (state.conditions || []).find((c) => c.name === name);
       rankedConditions.push({
         name,
         likelihood: condState.likelihood || 0,
         active: condState.active,
         reasons: condState.reasons || [],
         triggerAnswers: condState.triggerAnswers || [],
+        tests: condDef?.tests || [],
       });
     }
   }
@@ -960,12 +965,14 @@ export function completeAssessment(state) {
   const ruledOutWithReasons = [];
   for (const condName of state.ruledOutConditions) {
     const condState = state.suspectedConditions.get(condName);
+    const condDef = (state.conditions || []).find((c) => c.name === condName);
     ruledOutWithReasons.push({
       name: condName,
       ruledOutReason: condState?.ruledOutReason || {
         question: 'Unknown',
         answer: 'Unknown',
       },
+      tests: condDef?.tests || [],
     });
   }
 

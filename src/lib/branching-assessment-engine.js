@@ -392,7 +392,11 @@ export function getCurrentQuestion(state) {
  */
 function canShowQuestion(state, question) {
   // 1. Check if question's condition is ruled out
-  if (question.condition && state.ruledOutConditions.has(question.condition)) {
+  if (
+    question.condition &&
+    state.ruledOutConditions.has(question.condition) &&
+    question.condition !== 'Non-specific low-back pain'
+  ) {
     return false;
   }
 
@@ -426,7 +430,10 @@ function canShowQuestion(state, question) {
 
     // For now, allow condition questions if condition hasn't been explicitly ruled out
     // This maintains backward compatibility while adding rule-out capability
-    if (state.ruledOutConditions.has(question.condition)) {
+    if (
+      state.ruledOutConditions.has(question.condition) &&
+      question.condition !== 'Non-specific low-back pain'
+    ) {
       return false;
     }
   }
@@ -587,12 +594,14 @@ export function processAnswer(state, questionId, answerValue) {
     const hostCondition = question.condition;
     if (hostCondition && !newState.ruledOutConditions.has(hostCondition)) {
       newState.ruledOutConditions.add(hostCondition);
-      const condQuestions = newState.conditionQuestions.get(hostCondition) || [];
-      condQuestions.forEach((qId) => {
-        if (!newState.answeredQuestions.some((aq) => aq.questionId === qId)) {
-          newState.skippedQuestions.add(qId);
-        }
-      });
+      if (hostCondition !== 'Non-specific low-back pain') {
+        const condQuestions = newState.conditionQuestions.get(hostCondition) || [];
+        condQuestions.forEach((qId) => {
+          if (!newState.answeredQuestions.some((aq) => aq.questionId === qId)) {
+            newState.skippedQuestions.add(qId);
+          }
+        });
+      }
       const condState = newState.suspectedConditions.get(hostCondition);
       if (condState) {
         newState.suspectedConditions.set(hostCondition, {
@@ -665,11 +674,13 @@ export function processAnswer(state, questionId, answerValue) {
         // Non-coloured alternative chosen on a confirmation question → skip the
         // condition and proceed to the next condition's question.
         newState.ruledOutConditions.add(hostCondition);
-        condQuestions.forEach((q) => {
-          if (!newState.answeredQuestions.some((aq) => aq.questionId === q.id)) {
-            newState.skippedQuestions.add(q.id);
-          }
-        });
+        if (hostCondition !== 'Non-specific low-back pain') {
+          condQuestions.forEach((q) => {
+            if (!newState.answeredQuestions.some((aq) => aq.questionId === q.id)) {
+              newState.skippedQuestions.add(q.id);
+            }
+          });
+        }
         const condState = newState.suspectedConditions.get(hostCondition);
         if (condState) {
           newState.suspectedConditions.set(hostCondition, {

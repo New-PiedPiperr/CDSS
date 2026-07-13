@@ -796,7 +796,7 @@
           "category": "general",
           "inputType": "select",
           "source_line": 30,
-          "isGating": true,
+          "isGating": false,
           "requiredConditions": [],
           "excludedIfConditions": [],
           "options": [

@@ -171,25 +171,6 @@ export default function AssessmentSummary({ onSubmit, onEdit }) {
         </CardContent>
       </Card>
 
-      {/* Temporary Diagnosis */}
-      {engineState?.temporaryDiagnosis && (
-        <Card className="border-2 border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950/30">
-          <CardContent className="p-6 text-center">
-            <CheckCircle2 className="mx-auto h-12 w-12 text-green-600 dark:text-green-400" />
-            <h2 className="mt-4 text-xl font-bold text-green-700 dark:text-green-300">
-              Temporary Diagnosis
-            </h2>
-            <p className="mt-2 text-lg font-semibold text-green-800 dark:text-green-200">
-              {engineState.temporaryDiagnosis}
-            </p>
-            <p className="mt-2 text-sm text-green-600 dark:text-green-400">
-              Based on your responses, this is the preliminary assessment. Please proceed
-              to submit for clinician review and confirmation.
-            </p>
-          </CardContent>
-        </Card>
-      )}
-
       {/* Observations Summary */}
       {redFlags.length > 0 && (
         <Card className="border-2 border-slate-100 bg-slate-50/50 dark:border-slate-800 dark:bg-slate-900/40">

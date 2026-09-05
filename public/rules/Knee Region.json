@@ -1390,8 +1390,8 @@
         },
         {
           "id": "knee_patpaisynpfprunkne_q18",
-          "questionText": "Did the symptoms begin after increased activity, overuse, or training intensity?",
-          "question": "Did the symptoms begin after increased activity, overuse, or training intensity?",
+          "questionText": "Did the symptoms get worse after increased activity?",
+          "question": "Did the symptoms get worse after increased activity?",
           "condition": "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)",
           "category": "general",
           "inputType": "select",
@@ -1407,7 +1407,9 @@
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
@@ -1439,7 +1441,9 @@
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,

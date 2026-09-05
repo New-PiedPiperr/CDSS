@@ -1319,7 +1319,9 @@
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
@@ -1330,9 +1332,13 @@
             {
               "value": "No (Localized pain suggests tendinopathy, bursitis, or meniscus pathology)",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "nextQuestionId": "knee_mentea_q1",
+                "skipToQuestionId": "knee_mentea_q1",
+                "triggeredConditions": [
+                  "Meniscus Tear",
+                  "Patellar Tendinopathy",
+                  "PES ANSERINE BURSITIS"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [],
                 "decreaseLikelihood": [],
@@ -1351,7 +1357,9 @@
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
@@ -1362,9 +1370,13 @@
             {
               "value": "No (Localized pain suggests tendinopathy, bursitis, or meniscus pathology)",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "nextQuestionId": "knee_mentea_q1",
+                "skipToQuestionId": "knee_mentea_q1",
+                "triggeredConditions": [
+                  "Meniscus Tear",
+                  "Patellar Tendinopathy",
+                  "PES ANSERINE BURSITIS"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [],
                 "decreaseLikelihood": [],

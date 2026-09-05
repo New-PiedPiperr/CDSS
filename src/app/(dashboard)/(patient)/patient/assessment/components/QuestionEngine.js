@@ -335,9 +335,7 @@ export default function QuestionEngine() {
         </h1>
         <div className="mb-4 flex items-center justify-center gap-4 text-sm">
           <span className="text-muted-foreground font-medium">
-            {selectedRegion
-              ? `${selectedRegion.charAt(0).toUpperCase() + selectedRegion.slice(1)} Assessment`
-              : 'Assessment'}
+            Question {answered + 1}
           </span>
           <span className="text-muted-foreground/30">•</span>
           <div className="h-2 max-w-[200px] flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">

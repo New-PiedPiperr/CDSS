@@ -956,8 +956,8 @@
         },
         {
           "id": "knee_patpaisynpfprunkne_q13",
-          "questionText": "Do you experience pain when descending stairs more than ascending stairs?",
-          "question": "Do you experience pain when descending stairs more than ascending stairs?",
+          "questionText": "During stair climbing, when is the pain worst?",
+          "question": "During stair climbing, when is the pain worst?",
           "condition": "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)",
           "category": "general",
           "inputType": "select",
@@ -967,7 +967,7 @@
           "excludedIfConditions": [],
           "options": [
             {
-              "value": "Yes (Strong PFPS indicator due to high patellofemoral joint compression)",
+              "value": "Ascending",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -982,7 +982,24 @@
               }
             },
             {
-              "value": "No",
+              "value": "Descending (Strong PFPS indicator due to high patellofemoral joint compression)",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            },
+            {
+              "value": "No increase",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -999,7 +1016,7 @@
           ],
           "answers": [
             {
-              "value": "Yes (Strong PFPS indicator due to high patellofemoral joint compression)",
+              "value": "Ascending",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -1014,7 +1031,24 @@
               }
             },
             {
-              "value": "No",
+              "value": "Descending (Strong PFPS indicator due to high patellofemoral joint compression)",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            },
+            {
+              "value": "No increase",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,

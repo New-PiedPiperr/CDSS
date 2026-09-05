@@ -1,4 +1,5 @@
 export const authConfig = {
+  trustHost: true,
   pages: {
     signIn: '/login',
     error: '/login',

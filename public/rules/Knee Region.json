@@ -1222,8 +1222,8 @@
         },
         {
           "id": "knee_patpaisynpfprunkne_q16",
-          "questionText": "Do you experience pain when standing up after prolonged sitting?",
-          "question": "Do you experience pain when standing up after prolonged sitting?",
+          "questionText": "From sitting to standing, do you have pain?",
+          "question": "From sitting to standing, do you have pain?",
           "condition": "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)",
           "category": "general",
           "inputType": "select",
@@ -1239,7 +1239,9 @@
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
@@ -1271,7 +1273,9 @@
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,

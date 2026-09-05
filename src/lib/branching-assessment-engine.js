@@ -289,10 +289,23 @@ function evaluateEntryCriteria(condition, biodata) {
 
 /**
  * Clean leading question numbers (e.g. '20. ', '2. ', '14) ')
+ * and parenthetical clinical notes / sign names (e.g. '(Cinema sign)', '(question mark sign)')
  */
 export function cleanQuestionText(str) {
   if (typeof str !== 'string') return str;
-  return str.replace(/^\s*\d+[\.\)\:-]\s*/, '').trim();
+  let clean = str.replace(/^\s*\d+[\.\)\:-]\s*/, '').trim();
+  clean = clean
+    .replace(
+      /\s*\((Cinema sign|question mark sign|Subacute Tendinitis|Dead-arm syndrome|Link to question[^)]*)\)\s*/gi,
+      ' '
+    )
+    .trim();
+  clean = clean
+    .replace(/\s+\./g, '.')
+    .replace(/\s+\?/g, '?')
+    .replace(/\.\s*\./g, '.')
+    .replace(/\s{2,}/g, ' ');
+  return clean;
 }
 
 /**
@@ -319,6 +332,10 @@ export function extractBracketText(str) {
  * Normalize a question to ensure consistent structure
  */
 function normalizeQuestion(rawQuestion, conditionName) {
+  const rawQText = rawQuestion.questionText || rawQuestion.question;
+  const questionClean = cleanQuestionText(rawQText);
+  const questionBracket = extractBracketText(rawQText);
+
   const answers = (rawQuestion.options || rawQuestion.answers || []).map((a) => {
     const rawVal = typeof a === 'string' ? a : a.value;
     const cleanDisplay = cleanOptionText(rawVal);
@@ -355,7 +372,9 @@ function normalizeQuestion(rawQuestion, conditionName) {
 
   return {
     id: rawQuestion.id,
-    question: cleanQuestionText(rawQuestion.questionText || rawQuestion.question),
+    question: questionClean,
+    rawQuestionText: rawQText,
+    questionBracket,
     condition: conditionName,
     category: rawQuestion.category || 'general',
     answers,
@@ -594,6 +613,8 @@ export function processAnswer(state, questionId, answerValue) {
   const answeredQuestion = {
     questionId: question.id,
     question: question.question,
+    rawQuestionText: question.rawQuestionText || question.question,
+    questionBracket: question.questionBracket || null,
     answer: answerValue,
     rawValue: selectedAnswer?.rawValue || answerValue,
     bracketAnnotation: selectedAnswer?.bracketAnnotation || null,

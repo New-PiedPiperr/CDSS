@@ -94,6 +94,12 @@ const SymptomDataSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    rawValue: {
+      type: String,
+    },
+    bracketAnnotation: {
+      type: String,
+    },
     questionCategory: {
       type: String,
       default: 'general',

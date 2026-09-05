@@ -13,7 +13,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "ankle_q1",
+          "id": "ankle_genass_q1",
           "questionText": "What region is pain present in?",
           "question": "What region is pain present in?",
           "condition": "General Assessment",
@@ -231,7 +231,7 @@
           ]
         },
         {
-          "id": "ankle_q2",
+          "id": "ankle_genass_q2",
           "questionText": "When do you feel the pain?",
           "question": "When do you feel the pain?",
           "condition": "General Assessment",
@@ -367,7 +367,7 @@
           ]
         },
         {
-          "id": "ankle_q3",
+          "id": "ankle_genass_q3",
           "questionText": "Do you experience ankle joint stiffness?",
           "question": "Do you experience ankle joint stiffness?",
           "condition": "General Assessment",
@@ -455,7 +455,7 @@
           ]
         },
         {
-          "id": "ankle_q4",
+          "id": "ankle_genass_q4",
           "questionText": "If yes, when?",
           "question": "If yes, when?",
           "condition": "General Assessment",
@@ -651,7 +651,7 @@
       "source_line": 21,
       "questions": [
         {
-          "id": "ankle_q5",
+          "id": "ankle_achten_q1",
           "questionText": "Do you feel the pain about 4 cm above your heel?",
           "question": "Do you feel the pain about 4 cm above your heel?",
           "condition": "Achilles Tendinopathy",
@@ -727,7 +727,7 @@
           ]
         },
         {
-          "id": "ankle_q5_1",
+          "id": "ankle_achten_q2",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "Achilles Tendinopathy",
@@ -818,7 +818,7 @@
           ]
         },
         {
-          "id": "ankle_q6",
+          "id": "ankle_achten_q3",
           "questionText": "What type of pain do you feel?",
           "question": "What type of pain do you feel?",
           "condition": "Achilles Tendinopathy",
@@ -898,7 +898,7 @@
           ]
         },
         {
-          "id": "ankle_q7",
+          "id": "ankle_achten_q4",
           "questionText": "Is there evidence of inflammation around the heel?",
           "question": "Is there evidence of inflammation around the heel?",
           "condition": "Achilles Tendinopathy",
@@ -974,7 +974,7 @@
           ]
         },
         {
-          "id": "ankle_q8",
+          "id": "ankle_achten_q5",
           "questionText": "Do you experience pain during push-off phase of walking?",
           "question": "Do you experience pain during push-off phase of walking?",
           "condition": "Achilles Tendinopathy",
@@ -1050,7 +1050,7 @@
           ]
         },
         {
-          "id": "ankle_q9",
+          "id": "ankle_achten_q6",
           "questionText": "Does the pain reduce with rest at joint or with the use of NSAIDs?",
           "question": "Does the pain reduce with rest at joint or with the use of NSAIDs?",
           "condition": "Achilles Tendinopathy",
@@ -1144,7 +1144,7 @@
       "source_line": 42,
       "questions": [
         {
-          "id": "ankle_q10",
+          "id": "ankle_achtenrup_q1",
           "questionText": "Do you feel the pain about 5cm from your heel?",
           "question": "Do you feel the pain about 5cm from your heel?",
           "condition": "Achilles Tendon Rupture",
@@ -1220,7 +1220,7 @@
           ]
         },
         {
-          "id": "ankle_q11",
+          "id": "ankle_achtenrup_q2",
           "questionText": "Do you engage in sports requiring heavy push-offs such as: squash, badminton, football, tennis, netball?",
           "question": "Do you engage in sports requiring heavy push-offs such as: squash, badminton, football, tennis, netball?",
           "condition": "Achilles Tendon Rupture",
@@ -1296,7 +1296,7 @@
           ]
         },
         {
-          "id": "ankle_q12",
+          "id": "ankle_achtenrup_q3",
           "questionText": "Have you had a previous history of tendinitis?",
           "question": "Have you had a previous history of tendinitis?",
           "condition": "Achilles Tendon Rupture",
@@ -1372,7 +1372,7 @@
           ]
         },
         {
-          "id": "ankle_q13",
+          "id": "ankle_achtenrup_q4",
           "questionText": "Did you hear a ripping or popping sensation accompanying the pain at onset?",
           "question": "Did you hear a ripping or popping sensation accompanying the pain at onset?",
           "condition": "Achilles Tendon Rupture",
@@ -1448,7 +1448,7 @@
           ]
         },
         {
-          "id": "ankle_q14",
+          "id": "ankle_achtenrup_q5",
           "questionText": "Did you feel like someone hit you on the heel at the onset of the pain?",
           "question": "Did you feel like someone hit you on the heel at the onset of the pain?",
           "condition": "Achilles Tendon Rupture",
@@ -1524,7 +1524,7 @@
           ]
         },
         {
-          "id": "ankle_q15",
+          "id": "ankle_achtenrup_q6",
           "questionText": "Have you self-medicated with local corticosteroids before?",
           "question": "Have you self-medicated with local corticosteroids before?",
           "condition": "Achilles Tendon Rupture",
@@ -1635,7 +1635,7 @@
       "source_line": 66,
       "questions": [
         {
-          "id": "ankle_q16",
+          "id": "ankle_traaposevdis_q1",
           "questionText": "Is pain and tenderness localised to the insertion of the Tendon Achilles?",
           "question": "Is pain and tenderness localised to the insertion of the Tendon Achilles?",
           "condition": "Traction Apophysitis (Sever's Disease)",
@@ -1738,7 +1738,7 @@
       "source_line": 77,
       "questions": [
         {
-          "id": "ankle_q17",
+          "id": "ankle_calbur_q1",
           "questionText": "Where do you feel the pain?",
           "question": "Where do you feel the pain?",
           "condition": "Calcaneal Bursitis",
@@ -1814,7 +1814,7 @@
           ]
         },
         {
-          "id": "ankle_q18",
+          "id": "ankle_calbur_q2",
           "questionText": "Do you have painful bumps on your heel?",
           "question": "Do you have painful bumps on your heel?",
           "condition": "Calcaneal Bursitis",
@@ -1890,7 +1890,7 @@
           ]
         },
         {
-          "id": "ankle_q19",
+          "id": "ankle_calbur_q3",
           "questionText": "Do you experience this more during cold weather times?",
           "question": "Do you experience this more during cold weather times?",
           "condition": "Calcaneal Bursitis",
@@ -1966,7 +1966,7 @@
           ]
         },
         {
-          "id": "ankle_q20",
+          "id": "ankle_calbur_q4",
           "questionText": "Do you wear high-heeled shoes?",
           "question": "Do you wear high-heeled shoes?",
           "condition": "Calcaneal Bursitis",
@@ -2056,7 +2056,7 @@
       "source_line": 96,
       "questions": [
         {
-          "id": "ankle_q21",
+          "id": "ankle_plafas_q1",
           "questionText": "Do you experience pain on heel or sole with standing and/or walking?",
           "question": "Do you experience pain on heel or sole with standing and/or walking?",
           "condition": "Plantar Fasciitis",
@@ -2132,7 +2132,7 @@
           ]
         },
         {
-          "id": "ankle_q22",
+          "id": "ankle_plafas_q2",
           "questionText": "Is this pain most prominent at the heel?",
           "question": "Is this pain most prominent at the heel?",
           "condition": "Plantar Fasciitis",
@@ -2208,7 +2208,7 @@
           ]
         },
         {
-          "id": "ankle_q23",
+          "id": "ankle_plafas_q3",
           "questionText": "Is the onset of pain sudden or gradual?",
           "question": "Is the onset of pain sudden or gradual?",
           "condition": "Plantar Fasciitis",
@@ -2284,7 +2284,7 @@
           ]
         },
         {
-          "id": "ankle_q24",
+          "id": "ankle_plafas_q4",
           "questionText": "Is pain worse when you first get up in the morning?",
           "question": "Is pain worse when you first get up in the morning?",
           "condition": "Plantar Fasciitis",
@@ -2360,7 +2360,7 @@
           ]
         },
         {
-          "id": "ankle_q25",
+          "id": "ankle_plafas_q5",
           "questionText": "Do you feel the pain more when you get up after you have been sitting for a long time?",
           "question": "Do you feel the pain more when you get up after you have been sitting for a long time?",
           "condition": "Plantar Fasciitis",
@@ -2436,7 +2436,7 @@
           ]
         },
         {
-          "id": "ankle_q26",
+          "id": "ankle_plafas_q6",
           "questionText": "Is there tenderness at the medial aspect beneath the heel / mid-foot?",
           "question": "Is there tenderness at the medial aspect beneath the heel / mid-foot?",
           "condition": "Plantar Fasciitis",
@@ -2532,7 +2532,7 @@
       "source_line": 118,
       "questions": [
         {
-          "id": "ankle_q27",
+          "id": "ankle_ankliginj_q1",
           "questionText": "Did you stumble on a stairway, potholes or pavement before the onset of pain?",
           "question": "Did you stumble on a stairway, potholes or pavement before the onset of pain?",
           "condition": "ANKLE LIGAMENT INJURIES",
@@ -2608,7 +2608,7 @@
           ]
         },
         {
-          "id": "ankle_q28",
+          "id": "ankle_ankliginj_q2",
           "questionText": "Have you experienced any twisting or wrenching movement at your ankle joint?",
           "question": "Have you experienced any twisting or wrenching movement at your ankle joint?",
           "condition": "ANKLE LIGAMENT INJURIES",
@@ -2688,7 +2688,7 @@
           ]
         },
         {
-          "id": "ankle_q29",
+          "id": "ankle_ankliginj_q3",
           "questionText": "Can you walk with the affected foot and bear weight on it?",
           "question": "Can you walk with the affected foot and bear weight on it?",
           "condition": "ANKLE LIGAMENT INJURIES",
@@ -2772,7 +2772,7 @@
           ]
         },
         {
-          "id": "ankle_q30",
+          "id": "ankle_ankliginj_q4",
           "questionText": "Is bruise at sight of injury faint and did it appear slowly?",
           "question": "Is bruise at sight of injury faint and did it appear slowly?",
           "condition": "ANKLE LIGAMENT INJURIES",
@@ -2866,7 +2866,7 @@
       "source_line": 131,
       "questions": [
         {
-          "id": "ankle_q31",
+          "id": "ankle_acuinjoflatlig_q1",
           "questionText": "Is severe pain felt on slight attempt to invert (turn inward) foot?",
           "question": "Is severe pain felt on slight attempt to invert (turn inward) foot?",
           "condition": "Acute Injury of Lateral Ligaments",
@@ -2960,7 +2960,7 @@
       "source_line": 139,
       "questions": [
         {
-          "id": "ankle_q32",
+          "id": "ankle_reclatins_q1",
           "questionText": "Have you had a past episode of an ankle sprain?",
           "question": "Have you had a past episode of an ankle sprain?",
           "condition": "Recurrent Lateral Instability",
@@ -3036,7 +3036,7 @@
           ]
         },
         {
-          "id": "ankle_q33",
+          "id": "ankle_reclatins_q2",
           "questionText": "If yes, have you had experiences like your ankle giving way OR instability when walking on uneven surfaces?",
           "question": "If yes, have you had experiences like your ankle giving way OR instability when walking on uneven surfaces?",
           "condition": "Recurrent Lateral Instability",
@@ -3130,7 +3130,7 @@
       "source_line": 150,
       "questions": [
         {
-          "id": "ankle_q34",
+          "id": "ankle_delligtea_q1",
           "questionText": "Do you have a previous history of fibular fracture?",
           "question": "Do you have a previous history of fibular fracture?",
           "condition": "Deltoid Ligament Tear",
@@ -3224,7 +3224,7 @@
       "source_line": 158,
       "questions": [
         {
-          "id": "ankle_q35",
+          "id": "ankle_teaofinftiblig_q1",
           "questionText": "Did you have an injury that twisted your ankle?",
           "question": "Did you have an injury that twisted your ankle?",
           "condition": "Tears of Inferior Tibiofibular Ligaments",
@@ -3300,7 +3300,7 @@
           ]
         },
         {
-          "id": "ankle_q36",
+          "id": "ankle_teaofinftiblig_q2",
           "questionText": "Do you feel pains in front of your ankle?",
           "question": "Do you feel pains in front of your ankle?",
           "condition": "Tears of Inferior Tibiofibular Ligaments",
@@ -3376,7 +3376,7 @@
           ]
         },
         {
-          "id": "ankle_q37",
+          "id": "ankle_teaofinftiblig_q3",
           "questionText": "Is swelling and marked tenderness present directly over the inferior tibiofibular joint?",
           "question": "Is swelling and marked tenderness present directly over the inferior tibiofibular joint?",
           "condition": "Tears of Inferior Tibiofibular Ligaments",
@@ -3475,7 +3475,7 @@
       "source_line": 170,
       "questions": [
         {
-          "id": "ankle_q38",
+          "id": "ankle_malfraoftheank_q1",
           "questionText": "Do you play sports?",
           "question": "Do you play sports?",
           "condition": "MALLEOLAR FRACTURES OF THE ANKLE",
@@ -3551,7 +3551,7 @@
           ]
         },
         {
-          "id": "ankle_q39",
+          "id": "ankle_malfraoftheank_q2",
           "questionText": "Any history of fall prior to the onset of the injury?",
           "question": "Any history of fall prior to the onset of the injury?",
           "condition": "MALLEOLAR FRACTURES OF THE ANKLE",
@@ -3627,7 +3627,7 @@
           ]
         },
         {
-          "id": "ankle_q40",
+          "id": "ankle_malfraoftheank_q3",
           "questionText": "Did you experience any twisting injury with your ankle going into inversion?",
           "question": "Did you experience any twisting injury with your ankle going into inversion?",
           "condition": "MALLEOLAR FRACTURES OF THE ANKLE",
@@ -3703,7 +3703,7 @@
           ]
         },
         {
-          "id": "ankle_q41",
+          "id": "ankle_malfraoftheank_q4",
           "questionText": "Did you experience a fall with your foot anchored to the ground while your body fell forward?",
           "question": "Did you experience a fall with your foot anchored to the ground while your body fell forward?",
           "condition": "MALLEOLAR FRACTURES OF THE ANKLE",
@@ -3779,7 +3779,7 @@
           ]
         },
         {
-          "id": "ankle_q42",
+          "id": "ankle_malfraoftheank_q5",
           "questionText": "Is any obvious deformity present in the ankle?",
           "question": "Is any obvious deformity present in the ankle?",
           "condition": "MALLEOLAR FRACTURES OF THE ANKLE",
@@ -3855,7 +3855,7 @@
           ]
         },
         {
-          "id": "ankle_q43",
+          "id": "ankle_malfraoftheank_q6",
           "questionText": "Following the onset of the pain are you able to stand and bear weight on the affected part?",
           "question": "Following the onset of the pain are you able to stand and bear weight on the affected part?",
           "condition": "MALLEOLAR FRACTURES OF THE ANKLE",
@@ -3945,7 +3945,7 @@
       "source_line": 192,
       "questions": [
         {
-          "id": "ankle_q44",
+          "id": "ankle_calfra_q1",
           "questionText": "Are you osteoporotic?",
           "question": "Are you osteoporotic?",
           "condition": "CALCANEAL FRACTURES",
@@ -4021,7 +4021,7 @@
           ]
         },
         {
-          "id": "ankle_q45",
+          "id": "ankle_calfra_q2",
           "questionText": "Did you experience a fall from a height?",
           "question": "Did you experience a fall from a height?",
           "condition": "CALCANEAL FRACTURES",
@@ -4097,7 +4097,7 @@
           ]
         },
         {
-          "id": "ankle_q46",
+          "id": "ankle_calfra_q3",
           "questionText": "Were you involved in a road traffic accident?",
           "question": "Were you involved in a road traffic accident?",
           "condition": "CALCANEAL FRACTURES",
@@ -4173,7 +4173,7 @@
           ]
         },
         {
-          "id": "ankle_q47",
+          "id": "ankle_calfra_q4",
           "questionText": "What symptoms does your foot have?",
           "question": "What symptoms does your foot have?",
           "condition": "CALCANEAL FRACTURES",
@@ -4309,7 +4309,7 @@
           ]
         },
         {
-          "id": "ankle_q48",
+          "id": "ankle_calfra_q5",
           "questionText": "Is the surrounding tissue around the heel thick and tender?",
           "question": "Is the surrounding tissue around the heel thick and tender?",
           "condition": "CALCANEAL FRACTURES",
@@ -4385,7 +4385,7 @@
           ]
         },
         {
-          "id": "ankle_q49",
+          "id": "ankle_calfra_q6",
           "questionText": "Is the normal concavity (hollow) below the lateral malleolus lacking?",
           "question": "Is the normal concavity (hollow) below the lateral malleolus lacking?",
           "condition": "CALCANEAL FRACTURES",
@@ -4461,7 +4461,7 @@
           ]
         },
         {
-          "id": "ankle_q50",
+          "id": "ankle_calfra_q7",
           "questionText": "Can you invert (turn inward) and evert (turn outward) your foot?",
           "question": "Can you invert (turn inward) and evert (turn outward) your foot?",
           "condition": "CALCANEAL FRACTURES",
@@ -4551,7 +4551,7 @@
       "source_line": 220,
       "questions": [
         {
-          "id": "ankle_q51",
+          "id": "ankle_foocomsyn_q1",
           "questionText": "Do you feel intense pain in the foot?",
           "question": "Do you feel intense pain in the foot?",
           "condition": "Foot Compartment Syndrome",
@@ -4627,7 +4627,7 @@
           ]
         },
         {
-          "id": "ankle_q52",
+          "id": "ankle_foocomsyn_q2",
           "questionText": "Is bruising and swelling extensive?",
           "question": "Is bruising and swelling extensive?",
           "condition": "Foot Compartment Syndrome",
@@ -4703,7 +4703,7 @@
           ]
         },
         {
-          "id": "ankle_q53",
+          "id": "ankle_foocomsyn_q3",
           "questionText": "Is sensation diminished at the foot?",
           "question": "Is sensation diminished at the foot?",
           "condition": "Foot Compartment Syndrome",
@@ -4779,7 +4779,7 @@
           ]
         },
         {
-          "id": "ankle_q54",
+          "id": "ankle_foocomsyn_q4",
           "questionText": "Do you experience pain on the dorsiflexion of the toes?",
           "question": "Do you experience pain on the dorsiflexion of the toes?",
           "condition": "Foot Compartment Syndrome",
@@ -4879,7 +4879,7 @@
       "source_line": 236,
       "questions": [
         {
-          "id": "ankle_q55",
+          "id": "ankle_rheart_q1",
           "questionText": "Do you feel uncomfortable when you wear your shoes?",
           "question": "Do you feel uncomfortable when you wear your shoes?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -4955,7 +4955,7 @@
           ]
         },
         {
-          "id": "ankle_q56",
+          "id": "ankle_rheart_q2",
           "questionText": "Since the onset of this discomfort, do you walk less due to the discomfort?",
           "question": "Since the onset of this discomfort, do you walk less due to the discomfort?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -5031,7 +5031,7 @@
           ]
         },
         {
-          "id": "ankle_q57",
+          "id": "ankle_rheart_q3",
           "questionText": "Do you feel pain at your metatarsophalangeal joint (forefoot)?",
           "question": "Do you feel pain at your metatarsophalangeal joint (forefoot)?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -5107,7 +5107,7 @@
           ]
         },
         {
-          "id": "ankle_q58",
+          "id": "ankle_rheart_q4",
           "questionText": "Is the region of the metatarsophalangeal joint (forefoot) swollen?",
           "question": "Is the region of the metatarsophalangeal joint (forefoot) swollen?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -5183,7 +5183,7 @@
           ]
         },
         {
-          "id": "ankle_q59",
+          "id": "ankle_rheart_q5",
           "questionText": "Is there tenderness at the metatarsaophalangeal joint (forefoot)?",
           "question": "Is there tenderness at the metatarsaophalangeal joint (forefoot)?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -5259,7 +5259,7 @@
           ]
         },
         {
-          "id": "ankle_q60",
+          "id": "ankle_rheart_q6",
           "questionText": "Do you feel pain when you press or squeeze the forefoot?",
           "question": "Do you feel pain when you press or squeeze the forefoot?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -5335,7 +5335,7 @@
           ]
         },
         {
-          "id": "ankle_q61",
+          "id": "ankle_rheart_q7",
           "questionText": "Did this pain progress to the entire foot?",
           "question": "Did this pain progress to the entire foot?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -5411,7 +5411,7 @@
           ]
         },
         {
-          "id": "ankle_q62",
+          "id": "ankle_rheart_q8",
           "questionText": "Do you experience weakness of your foot muscles?",
           "question": "Do you experience weakness of your foot muscles?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -5505,7 +5505,7 @@
       "source_line": 271,
       "questions": [
         {
-          "id": "ankle_q63",
+          "id": "ankle_raofankandhin_q1",
           "questionText": "Do you find it increasingly difficult to walk?",
           "question": "Do you find it increasingly difficult to walk?",
           "condition": "RA of Ankle and Hindfoot",
@@ -5581,7 +5581,7 @@
           ]
         },
         {
-          "id": "ankle_q64",
+          "id": "ankle_raofankandhin_q2",
           "questionText": "Do you experience pain around your ankle?",
           "question": "Do you experience pain around your ankle?",
           "condition": "RA of Ankle and Hindfoot",
@@ -5657,7 +5657,7 @@
           ]
         },
         {
-          "id": "ankle_q65",
+          "id": "ankle_raofankandhin_q3",
           "questionText": "Is swelling and tenderness present behind the lateral and/or medial malleolus?",
           "question": "Is swelling and tenderness present behind the lateral and/or medial malleolus?",
           "condition": "RA of Ankle and Hindfoot",
@@ -5733,7 +5733,7 @@
           ]
         },
         {
-          "id": "ankle_q66",
+          "id": "ankle_raofankandhin_q4",
           "questionText": "Do you find it painful to invert (turn inward) and evert (turn outward) your foot?",
           "question": "Do you find it painful to invert (turn inward) and evert (turn outward) your foot?",
           "condition": "RA of Ankle and Hindfoot",
@@ -5809,7 +5809,7 @@
           ]
         },
         {
-          "id": "ankle_q67",
+          "id": "ankle_raofankandhin_q5",
           "questionText": "Do you find the range of movement limited when you try to invert (turn inward) and evert (turn outward) your foot??",
           "question": "Do you find the range of movement limited when you try to invert (turn inward) and evert (turn outward) your foot??",
           "condition": "RA of Ankle and Hindfoot",
@@ -5885,7 +5885,7 @@
           ]
         },
         {
-          "id": "ankle_q68",
+          "id": "ankle_raofankandhin_q6",
           "questionText": "Is a valgus deformity (turning outward of the foot) present?",
           "question": "Is a valgus deformity (turning outward of the foot) present?",
           "condition": "RA of Ankle and Hindfoot",
@@ -5975,7 +5975,7 @@
       "source_line": 292,
       "questions": [
         {
-          "id": "ankle_q69",
+          "id": "ankle_ankost_q1",
           "questionText": "Have you had a previous diagnosis of osteoarthritis of other joints?",
           "question": "Have you had a previous diagnosis of osteoarthritis of other joints?",
           "condition": "Ankle Osteoarthritis",
@@ -6051,7 +6051,7 @@
           ]
         },
         {
-          "id": "ankle_q70",
+          "id": "ankle_ankost_q2",
           "questionText": "Do you have any previous history of the following: malunited fracture, recurrent instability, and avascular necrosis of the talus?",
           "question": "Do you have any previous history of the following: malunited fracture, recurrent instability, and avascular necrosis of the talus?",
           "condition": "Ankle Osteoarthritis",
@@ -6127,7 +6127,7 @@
           ]
         },
         {
-          "id": "ankle_q71",
+          "id": "ankle_ankost_q3",
           "questionText": "Do you experience pain and stiffness at the ankle joint?",
           "question": "Do you experience pain and stiffness at the ankle joint?",
           "condition": "Ankle Osteoarthritis",
@@ -6211,7 +6211,7 @@
           ]
         },
         {
-          "id": "ankle_q72",
+          "id": "ankle_ankost_q4",
           "questionText": "Do you notice this pain more when standing up from rest?",
           "question": "Do you notice this pain more when standing up from rest?",
           "condition": "Ankle Osteoarthritis",
@@ -6287,7 +6287,7 @@
           ]
         },
         {
-          "id": "ankle_q73",
+          "id": "ankle_ankost_q5",
           "questionText": "Is the ankle swollen?",
           "question": "Is the ankle swollen?",
           "condition": "Ankle Osteoarthritis",
@@ -6363,7 +6363,7 @@
           ]
         },
         {
-          "id": "ankle_q74",
+          "id": "ankle_ankost_q6",
           "questionText": "Do you experience limitation when bringing the foot upward towards (dorsiflexion) and pushing the foot downward away (plantar flexion) from the shin?",
           "question": "Do you experience limitation when bringing the foot upward towards (dorsiflexion) and pushing the foot downward away (plantar flexion) from the shin?",
           "condition": "Ankle Osteoarthritis",
@@ -6453,7 +6453,7 @@
       "source_line": 319,
       "questions": [
         {
-          "id": "ankle_q75",
+          "id": "ankle_tartunsyn_q1",
           "questionText": "Do you feel numbness, burning and tingling sensation in your foot and/or medial portion of your ankle?",
           "question": "Do you feel numbness, burning and tingling sensation in your foot and/or medial portion of your ankle?",
           "condition": "Tarsal Tunnel Syndrome",
@@ -6529,7 +6529,7 @@
           ]
         },
         {
-          "id": "ankle_q76",
+          "id": "ankle_tartunsyn_q2",
           "questionText": "Do you experience weakness in your foot muscles (toe abductors and flexors)?",
           "question": "Do you experience weakness in your foot muscles (toe abductors and flexors)?",
           "condition": "Tarsal Tunnel Syndrome",
@@ -6605,7 +6605,7 @@
           ]
         },
         {
-          "id": "ankle_q77",
+          "id": "ankle_tartunsyn_q3",
           "questionText": "Do you have a previous history of diabetes or osteoarthritis?",
           "question": "Do you have a previous history of diabetes or osteoarthritis?",
           "condition": "Tarsal Tunnel Syndrome",
@@ -6681,7 +6681,7 @@
           ]
         },
         {
-          "id": "ankle_q78",
+          "id": "ankle_tartunsyn_q4",
           "questionText": "Does your job or daily task involve running, excessive walking and standing?",
           "question": "Does your job or daily task involve running, excessive walking and standing?",
           "condition": "Tarsal Tunnel Syndrome",
@@ -6757,7 +6757,7 @@
           ]
         },
         {
-          "id": "ankle_q79",
+          "id": "ankle_tartunsyn_q5",
           "questionText": "Do you have a previous history of trauma or dislocation at ankle region?",
           "question": "Do you have a previous history of trauma or dislocation at ankle region?",
           "condition": "Tarsal Tunnel Syndrome",
@@ -6833,7 +6833,7 @@
           ]
         },
         {
-          "id": "ankle_q80",
+          "id": "ankle_tartunsyn_q6",
           "questionText": "Is tenderness present behind the medial malleolus?",
           "question": "Is tenderness present behind the medial malleolus?",
           "condition": "Tarsal Tunnel Syndrome",
@@ -6909,7 +6909,7 @@
           ]
         },
         {
-          "id": "ankle_q81",
+          "id": "ankle_tartunsyn_q7",
           "questionText": "Do the symptoms you feel worsen with a forceful eversion (turning outward) of the foot OR dorsiflexion (moving foot upwards towards the shin)?",
           "question": "Do the symptoms you feel worsen with a forceful eversion (turning outward) of the foot OR dorsiflexion (moving foot upwards towards the shin)?",
           "condition": "Tarsal Tunnel Syndrome",
@@ -6985,7 +6985,7 @@
           ]
         },
         {
-          "id": "ankle_q82",
+          "id": "ankle_tartunsyn_q8",
           "questionText": "Do you feel a stabbing pain in the medial sole of your foot while walking?",
           "question": "Do you feel a stabbing pain in the medial sole of your foot while walking?",
           "condition": "Tarsal Tunnel Syndrome",
@@ -7061,7 +7061,7 @@
           ]
         },
         {
-          "id": "ankle_q83",
+          "id": "ankle_tartunsyn_q9",
           "questionText": "Does the pain get aggravated with walking?",
           "question": "Does the pain get aggravated with walking?",
           "condition": "Tarsal Tunnel Syndrome",
@@ -7137,7 +7137,7 @@
           ]
         },
         {
-          "id": "ankle_q84",
+          "id": "ankle_tartunsyn_q10",
           "questionText": "Do you feel night pain that wake you up from sleep?",
           "question": "Do you feel night pain that wake you up from sleep?",
           "condition": "Tarsal Tunnel Syndrome",
@@ -7233,85 +7233,85 @@
         {
           "name": "Clinical Observation - Talus and Calcaneus Position",
           "procedure": "Check for the position of the talus and calcaneus"
-            }
-          ]
+        }
+      ]
+    },
+    {
+      "id": "ankle_q85",
+      "questionText": "Does the heel look broad and wide?",
+      "question": "Does the heel look broad and wide?",
+      "condition": "CALCANEAL FRACTURES",
+      "category": "general",
+      "inputType": "select",
+      "source_line": 215,
+      "isGating": false,
+      "requiredConditions": [],
+      "excludedIfConditions": [],
+      "options": [
+        {
+          "value": "Yes",
+          "effects": {
+            "nextQuestionId": null,
+            "skipToQuestionId": null,
+            "triggeredConditions": [],
+            "excludedConditions": [],
+            "increaseLikelihood": [],
+            "decreaseLikelihood": [],
+            "redFlag": false,
+            "redFlagText": null,
+            "terminateAssessment": false,
+            "notes": null
+          }
         },
         {
-          "id": "ankle_q85",
-          "questionText": "Does the heel look broad and wide?",
-          "question": "Does the heel look broad and wide?",
-          "condition": "CALCANEAL FRACTURES",
-          "category": "general",
-          "inputType": "select",
-          "source_line": 215,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ]
+          "value": "No",
+          "effects": {
+            "nextQuestionId": null,
+            "skipToQuestionId": null,
+            "triggeredConditions": [],
+            "excludedConditions": [],
+            "increaseLikelihood": [],
+            "decreaseLikelihood": [],
+            "redFlag": false,
+            "redFlagText": null,
+            "terminateAssessment": false,
+            "notes": null
+          }
         }
       ],
+      "answers": [
+        {
+          "value": "Yes",
+          "effects": {
+            "nextQuestionId": null,
+            "skipToQuestionId": null,
+            "triggeredConditions": [],
+            "excludedConditions": [],
+            "increaseLikelihood": [],
+            "decreaseLikelihood": [],
+            "redFlag": false,
+            "redFlagText": null,
+            "terminateAssessment": false,
+            "notes": null
+          }
+        },
+        {
+          "value": "No",
+          "effects": {
+            "nextQuestionId": null,
+            "skipToQuestionId": null,
+            "triggeredConditions": [],
+            "excludedConditions": [],
+            "increaseLikelihood": [],
+            "decreaseLikelihood": [],
+            "redFlag": false,
+            "redFlagText": null,
+            "terminateAssessment": false,
+            "notes": null
+          }
+        }
+      ]
+    }
+  ],
   "version": "2.0.0"
 }

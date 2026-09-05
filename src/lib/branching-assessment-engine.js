@@ -288,11 +288,27 @@ function evaluateEntryCriteria(condition, biodata) {
 }
 
 /**
+ * Clean leading question numbers (e.g. '20. ', '2. ', '14) ')
+ */
+export function cleanQuestionText(str) {
+  if (typeof str !== 'string') return str;
+  return str.replace(/^\s*\d+[\.\)\:-]\s*/, '').trim();
+}
+
+/**
+ * Clean leading option numbers/letters (e.g. 'a. ', 'b. ', 'a) ', '1. ')
+ */
+export function cleanOptionText(str) {
+  if (typeof str !== 'string') return str;
+  return str.replace(/^\s*([a-zA-Z]|\d{1,2})[\.\)]\s+/, '').trim();
+}
+
+/**
  * Normalize a question to ensure consistent structure
  */
 function normalizeQuestion(rawQuestion, conditionName) {
   const answers = (rawQuestion.options || rawQuestion.answers || []).map((a) => ({
-    value: a.value,
+    value: cleanOptionText(typeof a === 'string' ? a : a.value),
     effects: {
       nextQuestionId: a.effects?.nextQuestionId || a.effects?.next_question_id || null,
       skipToQuestionId:
@@ -319,7 +335,7 @@ function normalizeQuestion(rawQuestion, conditionName) {
 
   return {
     id: rawQuestion.id,
-    question: rawQuestion.questionText || rawQuestion.question,
+    question: cleanQuestionText(rawQuestion.questionText || rawQuestion.question),
     condition: conditionName,
     category: rawQuestion.category || 'general',
     answers,

@@ -22,7 +22,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "cervical_q1",
+          "id": "cervical_cerdisher_q1",
           "questionText": "Where is your pain worse?",
           "question": "Where is your pain worse?",
           "condition": "Cervical Disc Herniation",
@@ -98,7 +98,7 @@
           ]
         },
         {
-          "id": "cervical_q2",
+          "id": "cervical_cerdisher_q2",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "Cervical Disc Herniation",
@@ -178,7 +178,7 @@
           ]
         },
         {
-          "id": "cervical_q4",
+          "id": "cervical_cerdisher_q3",
           "questionText": "Do you feel numbness in any form?",
           "question": "Do you feel numbness in any form?",
           "condition": "Cervical Disc Herniation",
@@ -254,7 +254,7 @@
           ]
         },
         {
-          "id": "cervical_q5",
+          "id": "cervical_cerdisher_q4",
           "questionText": "Which of these movements currently aggravates your pain?",
           "question": "Which of these movements currently aggravates your pain?",
           "condition": "Cervical Disc Herniation",
@@ -330,7 +330,7 @@
           ]
         },
         {
-          "id": "cervical_q6",
+          "id": "cervical_cerdisher_q5",
           "questionText": "What movements relieve your pain?",
           "question": "What movements relieve your pain?",
           "condition": "Cervical Disc Herniation",
@@ -406,7 +406,7 @@
           ]
         },
         {
-          "id": "cervical_q7",
+          "id": "cervical_cerdisher_q6",
           "questionText": "Do you feel more pain when you move your neck?",
           "question": "Do you feel more pain when you move your neck?",
           "condition": "Cervical Disc Herniation",
@@ -482,7 +482,7 @@
           ]
         },
         {
-          "id": "cervical_q8",
+          "id": "cervical_cerdisher_q7",
           "questionText": "Do you experience some stiffness in your neck?",
           "question": "Do you experience some stiffness in your neck?",
           "condition": "Cervical Disc Herniation",
@@ -558,7 +558,7 @@
           ]
         },
         {
-          "id": "cervical_q9",
+          "id": "cervical_cerdisher_q8",
           "questionText": "Does the pain increase with coughing, sneezing, straining or laughing?",
           "question": "Does the pain increase with coughing, sneezing, straining or laughing?",
           "condition": "Cervical Disc Herniation",
@@ -634,7 +634,7 @@
           ]
         },
         {
-          "id": "cervical_q10",
+          "id": "cervical_cerdisher_q9",
           "questionText": "Do you have any restrictions with movement around your neck?",
           "question": "Do you have any restrictions with movement around your neck?",
           "condition": "Cervical Disc Herniation",
@@ -710,7 +710,7 @@
           ]
         },
         {
-          "id": "cervical_q11",
+          "id": "cervical_cerdisher_q10",
           "questionText": "Do you also have any pain around your lower back, buttocks, thigh or legs?",
           "question": "Do you also have any pain around your lower back, buttocks, thigh or legs?",
           "condition": "Cervical Disc Herniation",
@@ -786,7 +786,7 @@
           ]
         },
         {
-          "id": "cervical_q12",
+          "id": "cervical_cerdisher_q11",
           "questionText": "Does the pain wake you up at night?",
           "question": "Does the pain wake you up at night?",
           "condition": "Cervical Disc Herniation",
@@ -862,7 +862,7 @@
           ]
         },
         {
-          "id": "cervical_q13",
+          "id": "cervical_cerdisher_q12",
           "questionText": "Do you feel any form of muscle weakness?",
           "question": "Do you feel any form of muscle weakness?",
           "condition": "Cervical Disc Herniation",
@@ -938,7 +938,7 @@
           ]
         },
         {
-          "id": "cervical_q14",
+          "id": "cervical_cerdisher_q13",
           "questionText": "Do you experience impaired sensations in your arm and forearm?",
           "question": "Do you experience impaired sensations in your arm and forearm?",
           "condition": "Cervical Disc Herniation",
@@ -1049,7 +1049,7 @@
       "source_line": 50,
       "questions": [
         {
-          "id": "cervical_q15",
+          "id": "cervical_cerspo_q1",
           "questionText": "Where is your pain worse?",
           "question": "Where is your pain worse?",
           "condition": "Cervical Spondylosis",
@@ -1185,7 +1185,7 @@
           ]
         },
         {
-          "id": "cervical_q16",
+          "id": "cervical_cerspo_q2",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "Cervical Spondylosis",
@@ -1261,7 +1261,7 @@
           ]
         },
         {
-          "id": "cervical_q18",
+          "id": "cervical_cerspo_q3",
           "questionText": "Do you feel numbness in any form?",
           "question": "Do you feel numbness in any form?",
           "condition": "Cervical Spondylosis",
@@ -1337,7 +1337,7 @@
           ]
         },
         {
-          "id": "cervical_q19",
+          "id": "cervical_cerspo_q4",
           "questionText": "Which of these movements currently aggravates your pain?",
           "question": "Which of these movements currently aggravates your pain?",
           "condition": "Cervical Spondylosis",
@@ -1413,7 +1413,7 @@
           ]
         },
         {
-          "id": "cervical_q20",
+          "id": "cervical_cerspo_q5",
           "questionText": "What movements relieve your pain?",
           "question": "What movements relieve your pain?",
           "condition": "Cervical Spondylosis",
@@ -1489,7 +1489,7 @@
           ]
         },
         {
-          "id": "cervical_q21",
+          "id": "cervical_cerspo_q6",
           "questionText": "Do you feel more pain when you move your neck?",
           "question": "Do you feel more pain when you move your neck?",
           "condition": "Cervical Spondylosis",
@@ -1565,7 +1565,7 @@
           ]
         },
         {
-          "id": "cervical_q22",
+          "id": "cervical_cerspo_q7",
           "questionText": "Does the pain relieve you with rest?",
           "question": "Does the pain relieve you with rest?",
           "condition": "Cervical Spondylosis",
@@ -1641,7 +1641,7 @@
           ]
         },
         {
-          "id": "cervical_q23",
+          "id": "cervical_cerspo_q8",
           "questionText": "Does the pain increase with coughing, sneezing, straining, or laughing?",
           "question": "Does the pain increase with coughing, sneezing, straining, or laughing?",
           "condition": "Cervical Spondylosis",
@@ -1717,7 +1717,7 @@
           ]
         },
         {
-          "id": "cervical_q24",
+          "id": "cervical_cerspo_q9",
           "questionText": "Do you experience intermittent neck pain and shoulder pain?",
           "question": "Do you experience intermittent neck pain and shoulder pain?",
           "condition": "Cervical Spondylosis",
@@ -1793,7 +1793,7 @@
           ]
         },
         {
-          "id": "cervical_q25",
+          "id": "cervical_cerspo_q10",
           "questionText": "Do you have any restrictions with movement around your neck?",
           "question": "Do you have any restrictions with movement around your neck?",
           "condition": "Cervical Spondylosis",
@@ -1869,7 +1869,7 @@
           ]
         },
         {
-          "id": "cervical_q26",
+          "id": "cervical_cerspo_q11",
           "questionText": "Do you also have any pain around your lower back, buttocks, thigh, or legs?",
           "question": "Do you also have any pain around your lower back, buttocks, thigh, or legs?",
           "condition": "Cervical Spondylosis",
@@ -1945,7 +1945,7 @@
           ]
         },
         {
-          "id": "cervical_q27",
+          "id": "cervical_cerspo_q12",
           "questionText": "Does the pain wake you up at night?",
           "question": "Does the pain wake you up at night?",
           "condition": "Cervical Spondylosis",
@@ -2021,7 +2021,7 @@
           ]
         },
         {
-          "id": "cervical_q28",
+          "id": "cervical_cerspo_q13",
           "questionText": "Do you feel any form of muscle weakness?",
           "question": "Do you feel any form of muscle weakness?",
           "condition": "Cervical Spondylosis",
@@ -2097,7 +2097,7 @@
           ]
         },
         {
-          "id": "cervical_q29",
+          "id": "cervical_cerspo_q14",
           "questionText": "Do you experience muscle spasms?",
           "question": "Do you experience muscle spasms?",
           "condition": "Cervical Spondylosis",

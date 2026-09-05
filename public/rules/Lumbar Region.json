@@ -13,7 +13,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "lumbar_q1",
+          "id": "lumbar_nonlowpai_q1",
           "questionText": "Where is your pain located?",
           "question": "Where is your pain located?",
           "condition": "Non-specific low-back pain",
@@ -131,7 +131,7 @@
           ]
         },
         {
-          "id": "lumbar_q2",
+          "id": "lumbar_nonlowpai_q2",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "Non-specific low-back pain",
@@ -213,7 +213,7 @@
           ]
         },
         {
-          "id": "lumbar_q3",
+          "id": "lumbar_nonlowpai_q3",
           "questionText": "How long have you been experiencing the pain?",
           "question": "How long have you been experiencing the pain?",
           "condition": "Non-specific low-back pain",
@@ -349,7 +349,7 @@
           ]
         },
         {
-          "id": "lumbar_q4",
+          "id": "lumbar_nonlowpai_q4",
           "questionText": "What currently aggravates your pain?",
           "question": "What currently aggravates your pain?",
           "condition": "Non-specific low-back pain",
@@ -487,7 +487,7 @@
           ]
         },
         {
-          "id": "lumbar_q5",
+          "id": "lumbar_nonlowpai_q5",
           "questionText": "What makes your pain better?",
           "question": "What makes your pain better?",
           "condition": "Non-specific low-back pain",
@@ -625,7 +625,7 @@
           ]
         },
         {
-          "id": "lumbar_q6",
+          "id": "lumbar_nonlowpai_q6",
           "questionText": "Do you experience any numbness or tingling sensation in your legs or feet?",
           "question": "Do you experience any numbness or tingling sensation in your legs or feet?",
           "condition": "Non-specific low-back pain",
@@ -711,7 +711,7 @@
           ]
         },
         {
-          "id": "lumbar_q7",
+          "id": "lumbar_nonlowpai_q7",
           "questionText": "Have you experienced any weakness in your legs?",
           "question": "Have you experienced any weakness in your legs?",
           "condition": "Non-specific low-back pain",
@@ -789,7 +789,7 @@
           ]
         },
         {
-          "id": "lumbar_q8",
+          "id": "lumbar_nonlowpai_q8",
           "questionText": "Have you had any recent trauma or injury to your lower back?",
           "question": "Have you had any recent trauma or injury to your lower back?",
           "condition": "Non-specific low-back pain",
@@ -867,7 +867,7 @@
           ]
         },
         {
-          "id": "lumbar_q9",
+          "id": "lumbar_nonlowpai_q9",
           "questionText": "Have you had any previous episodes of low-back pain?",
           "question": "Have you had any previous episodes of low-back pain?",
           "condition": "Non-specific low-back pain",
@@ -945,7 +945,7 @@
           ]
         },
         {
-          "id": "lumbar_q10",
+          "id": "lumbar_nonlowpai_q10",
           "questionText": "Are you experiencing any bowel or bladder dysfunction, such as difficulty or loss of control in urination or defecation?",
           "question": "Are you experiencing any bowel or bladder dysfunction, such as difficulty or loss of control in urination or defecation?",
           "condition": "Non-specific low-back pain",
@@ -1023,7 +1023,7 @@
           ]
         },
         {
-          "id": "lumbar_q11",
+          "id": "lumbar_nonlowpai_q11",
           "questionText": "Have you had any recent fever, chills, or other signs of infection?",
           "question": "Have you had any recent fever, chills, or other signs of infection?",
           "condition": "Non-specific low-back pain",
@@ -1101,7 +1101,7 @@
           ]
         },
         {
-          "id": "lumbar_q12",
+          "id": "lumbar_nonlowpai_q12",
           "questionText": "Have you had any recent unintended weight loss?",
           "question": "Have you had any recent unintended weight loss?",
           "condition": "Non-specific low-back pain",
@@ -1197,7 +1197,7 @@
       "source_line": 48,
       "questions": [
         {
-          "id": "lumbar_q13",
+          "id": "lumbar_sciati_q1",
           "questionText": "Do you experience paraesthesia or abnormal sensation in the affected leg?",
           "question": "Do you experience paraesthesia or abnormal sensation in the affected leg?",
           "condition": "Sciatica",
@@ -1275,7 +1275,7 @@
           ]
         },
         {
-          "id": "lumbar_q14",
+          "id": "lumbar_sciati_q2",
           "questionText": "Does your job or daily tasks involve adopting physically awkward positions?",
           "question": "Does your job or daily tasks involve adopting physically awkward positions?",
           "condition": "Sciatica",
@@ -1353,7 +1353,7 @@
           ]
         },
         {
-          "id": "lumbar_q15",
+          "id": "lumbar_sciati_q3",
           "questionText": "Do you experience muscle weakness in the affected leg?",
           "question": "Do you experience muscle weakness in the affected leg?",
           "condition": "Sciatica",
@@ -1431,7 +1431,7 @@
           ]
         },
         {
-          "id": "lumbar_q16",
+          "id": "lumbar_sciati_q4",
           "questionText": "Is the pain worsened with flexion of the spine, twisting, bending and/or coughing?",
           "question": "Is the pain worsened with flexion of the spine, twisting, bending and/or coughing?",
           "condition": "Sciatica",
@@ -1509,7 +1509,7 @@
           ]
         },
         {
-          "id": "lumbar_q17",
+          "id": "lumbar_sciati_q5",
           "questionText": "Do you experience pain when elevating the heel or tip-toeing?",
           "question": "Do you experience pain when elevating the heel or tip-toeing?",
           "condition": "Sciatica",
@@ -1587,7 +1587,7 @@
           ]
         },
         {
-          "id": "lumbar_q18",
+          "id": "lumbar_sciati_q6",
           "questionText": "Have you had a previous surgical procedure and/or injection recently?",
           "question": "Have you had a previous surgical procedure and/or injection recently?",
           "condition": "Sciatica",
@@ -1695,7 +1695,7 @@
       "source_line": 74,
       "questions": [
         {
-          "id": "lumbar_q19",
+          "id": "lumbar_lumspiste_q1",
           "questionText": "Is the pain you feel aggravated by prolonged walking, standing and lumbar extension?",
           "question": "Is the pain you feel aggravated by prolonged walking, standing and lumbar extension?",
           "condition": "Lumbar spinal stenosis",
@@ -1773,7 +1773,7 @@
           ]
         },
         {
-          "id": "lumbar_q20",
+          "id": "lumbar_lumspiste_q2",
           "questionText": "Do you experience pain radiating to the buttocks, thigh and legs after walking a certain distance?",
           "question": "Do you experience pain radiating to the buttocks, thigh and legs after walking a certain distance?",
           "condition": "Lumbar spinal stenosis",
@@ -1851,7 +1851,7 @@
           ]
         },
         {
-          "id": "lumbar_q21",
+          "id": "lumbar_lumspiste_q3",
           "questionText": "Is the numbness you feel over the entire leg?",
           "question": "Is the numbness you feel over the entire leg?",
           "condition": "Lumbar spinal stenosis",
@@ -1929,7 +1929,7 @@
           ]
         },
         {
-          "id": "lumbar_q22",
+          "id": "lumbar_lumspiste_q4",
           "questionText": "Is the pain you feel relieved by forward flexion (bending forward)?",
           "question": "Is the pain you feel relieved by forward flexion (bending forward)?",
           "condition": "Lumbar spinal stenosis",
@@ -2007,7 +2007,7 @@
           ]
         },
         {
-          "id": "lumbar_q23",
+          "id": "lumbar_lumspiste_q5",
           "questionText": "Do you find walking upstairs easier than walking downstairs?",
           "question": "Do you find walking upstairs easier than walking downstairs?",
           "condition": "Lumbar spinal stenosis",
@@ -2085,7 +2085,7 @@
           ]
         },
         {
-          "id": "lumbar_q24",
+          "id": "lumbar_lumspiste_q6",
           "questionText": "Do you experience any form of erectile dysfunction?",
           "question": "Do you experience any form of erectile dysfunction?",
           "condition": "Lumbar spinal stenosis",
@@ -2163,7 +2163,7 @@
           ]
         },
         {
-          "id": "lumbar_q25",
+          "id": "lumbar_lumspiste_q7",
           "questionText": "Is tenderness present at the lumbar, paraspinal or gluteal region?",
           "question": "Is tenderness present at the lumbar, paraspinal or gluteal region?",
           "condition": "Lumbar spinal stenosis",
@@ -2284,7 +2284,7 @@
       "source_line": 105,
       "questions": [
         {
-          "id": "lumbar_q26",
+          "id": "lumbar_lumdisher_q1",
           "questionText": "Was the pain onset immediately after a heavy lifting?",
           "question": "Was the pain onset immediately after a heavy lifting?",
           "condition": "Lumbar Disc Herniation",
@@ -2362,7 +2362,7 @@
           ]
         },
         {
-          "id": "lumbar_q27",
+          "id": "lumbar_lumdisher_q2",
           "questionText": "Does your job or daily task involve long sitting with lateral bending and rotation?",
           "question": "Does your job or daily task involve long sitting with lateral bending and rotation?",
           "condition": "Lumbar Disc Herniation",
@@ -2440,7 +2440,7 @@
           ]
         },
         {
-          "id": "lumbar_q28",
+          "id": "lumbar_lumdisher_q3",
           "questionText": "Do your symptoms feel better when lying supine with your hips and knees flexed?",
           "question": "Do your symptoms feel better when lying supine with your hips and knees flexed?",
           "condition": "Lumbar Disc Herniation",
@@ -2518,7 +2518,7 @@
           ]
         },
         {
-          "id": "lumbar_q29",
+          "id": "lumbar_lumdisher_q4",
           "questionText": "Do you experience pain radiating to buttock and leg?",
           "question": "Do you experience pain radiating to buttock and leg?",
           "condition": "Lumbar Disc Herniation",
@@ -2596,7 +2596,7 @@
           ]
         },
         {
-          "id": "lumbar_q30",
+          "id": "lumbar_lumdisher_q5",
           "questionText": "If yes, does this pain get worse with sitting and relieved with standing?",
           "question": "If yes, does this pain get worse with sitting and relieved with standing?",
           "condition": "Lumbar Disc Herniation",
@@ -2728,7 +2728,7 @@
       "source_line": 136,
       "questions": [
         {
-          "id": "lumbar_q31",
+          "id": "lumbar_cauequsyn_q1",
           "questionText": "Do you experience pain radiating to both legs?",
           "question": "Do you experience pain radiating to both legs?",
           "condition": "Cauda Equina Syndrome",
@@ -2806,7 +2806,7 @@
           ]
         },
         {
-          "id": "lumbar_q32",
+          "id": "lumbar_cauequsyn_q2",
           "questionText": "Do you have a previous history of tumors or trauma to lower back?",
           "question": "Do you have a previous history of tumors or trauma to lower back?",
           "condition": "Cauda Equina Syndrome",
@@ -2884,7 +2884,7 @@
           ]
         },
         {
-          "id": "lumbar_q33",
+          "id": "lumbar_cauequsyn_q3",
           "questionText": "Do you experience reduced sensation around your perineal (around genitals) region?",
           "question": "Do you experience reduced sensation around your perineal (around genitals) region?",
           "condition": "Cauda Equina Syndrome",
@@ -2962,7 +2962,7 @@
           ]
         },
         {
-          "id": "lumbar_q34",
+          "id": "lumbar_cauequsyn_q4",
           "questionText": "Do you experience reduced sensation in the region of your inner thighs (groin)?",
           "question": "Do you experience reduced sensation in the region of your inner thighs (groin)?",
           "condition": "Cauda Equina Syndrome",
@@ -3040,7 +3040,7 @@
           ]
         },
         {
-          "id": "lumbar_q35",
+          "id": "lumbar_cauequsyn_q5",
           "questionText": "Have you just undergone a lumbar spinal surgery?",
           "question": "Have you just undergone a lumbar spinal surgery?",
           "condition": "Cauda Equina Syndrome",
@@ -3118,7 +3118,7 @@
           ]
         },
         {
-          "id": "lumbar_q36",
+          "id": "lumbar_cauequsyn_q6",
           "questionText": "Do you find it difficult to initiate urination or experience urinary retention (inability to empty the bladder completely)?",
           "question": "Do you find it difficult to initiate urination or experience urinary retention (inability to empty the bladder completely)?",
           "condition": "Cauda Equina Syndrome",
@@ -3196,7 +3196,7 @@
           ]
         },
         {
-          "id": "lumbar_q37",
+          "id": "lumbar_cauequsyn_q7",
           "questionText": "Do you experience bowel incontinence and/or constipation?",
           "question": "Do you experience bowel incontinence and/or constipation?",
           "condition": "Cauda Equina Syndrome",
@@ -3274,7 +3274,7 @@
           ]
         },
         {
-          "id": "lumbar_q38",
+          "id": "lumbar_cauequsyn_q8",
           "questionText": "Do you experience reduced sexual sensations?",
           "question": "Do you experience reduced sexual sensations?",
           "condition": "Cauda Equina Syndrome",
@@ -3379,7 +3379,7 @@
       "source_line": 166,
       "questions": [
         {
-          "id": "lumbar_q39",
+          "id": "lumbar_axispo_q1",
           "questionText": "Do you have a family history of ankylosing spondylitis or any other autoimmune diseases?",
           "question": "Do you have a family history of ankylosing spondylitis or any other autoimmune diseases?",
           "condition": "Axial spondyloarthropathy",
@@ -3457,7 +3457,7 @@
           ]
         },
         {
-          "id": "lumbar_q40",
+          "id": "lumbar_axispo_q2",
           "questionText": "Is the pain worse at night and early morning?",
           "question": "Is the pain worse at night and early morning?",
           "condition": "Axial spondyloarthropathy",
@@ -3535,7 +3535,7 @@
           ]
         },
         {
-          "id": "lumbar_q41",
+          "id": "lumbar_axispo_q3",
           "questionText": "Does exercise and physical activity relieve the pain?",
           "question": "Does exercise and physical activity relieve the pain?",
           "condition": "Axial spondyloarthropathy",
@@ -3613,7 +3613,7 @@
           ]
         },
         {
-          "id": "lumbar_q42",
+          "id": "lumbar_axispo_q4",
           "questionText": "Do you experience pain and stiffness in your hips and/or buttocks?",
           "question": "Do you experience pain and stiffness in your hips and/or buttocks?",
           "condition": "Axial spondyloarthropathy",
@@ -3691,7 +3691,7 @@
           ]
         },
         {
-          "id": "lumbar_q43",
+          "id": "lumbar_axispo_q5",
           "questionText": "Do exercises and physical activity reduce the associated stiffness?",
           "question": "Do exercises and physical activity reduce the associated stiffness?",
           "condition": "Axial spondyloarthropathy",
@@ -3769,7 +3769,7 @@
           ]
         },
         {
-          "id": "lumbar_q44",
+          "id": "lumbar_axispo_q6",
           "questionText": "Do you experience pain and stiffness in your neck or upper back?",
           "question": "Do you experience pain and stiffness in your neck or upper back?",
           "condition": "Axial spondyloarthropathy",
@@ -3847,7 +3847,7 @@
           ]
         },
         {
-          "id": "lumbar_q45",
+          "id": "lumbar_axispo_q7",
           "questionText": "Do you experience fatigue, difficulty sleeping and/or general feelings of unwellness?",
           "question": "Do you experience fatigue, difficulty sleeping and/or general feelings of unwellness?",
           "condition": "Axial spondyloarthropathy",
@@ -3925,7 +3925,7 @@
           ]
         },
         {
-          "id": "lumbar_q46",
+          "id": "lumbar_axispo_q8",
           "questionText": "Do you experience chest pain or discomfort, especially when you take deep breaths?",
           "question": "Do you experience chest pain or discomfort, especially when you take deep breaths?",
           "condition": "Axial spondyloarthropathy",
@@ -4003,7 +4003,7 @@
           ]
         },
         {
-          "id": "lumbar_q47",
+          "id": "lumbar_axispo_q9",
           "questionText": "Have you experienced any symptoms such as red, scaly patches on your skin that may be accompanied by itching or discomfort (psoriasis)?",
           "question": "Have you experienced any symptoms such as red, scaly patches on your skin that may be accompanied by itching or discomfort (psoriasis)?",
           "condition": "Axial spondyloarthropathy",
@@ -4081,7 +4081,7 @@
           ]
         },
         {
-          "id": "lumbar_q48",
+          "id": "lumbar_axispo_q10",
           "questionText": "Have you experienced changes in your posture, such as stooping or hunching forward (question mark sign)?",
           "question": "Have you experienced changes in your posture, such as stooping or hunching forward (question mark sign)?",
           "condition": "Axial spondyloarthropathy",
@@ -4159,7 +4159,7 @@
           ]
         },
         {
-          "id": "lumbar_q49",
+          "id": "lumbar_axispo_q11",
           "questionText": "Have you had any instances of eye inflammation or redness, or increased sensitivity to light (uveitis)?",
           "question": "Have you had any instances of eye inflammation or redness, or increased sensitivity to light (uveitis)?",
           "condition": "Axial spondyloarthropathy",

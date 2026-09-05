@@ -51,7 +51,7 @@ export default function ProgressBar() {
       (selectedRegion
         ? selectedRegion.charAt(0).toUpperCase() + selectedRegion.slice(1)
         : '');
-    label = regionTitle || `Question ${answeredCount + 1}`;
+    label = regionTitle || 'Assessment';
   } else if (currentStep === 'summary') {
     progress = 85;
     label = 'Review Your Answers';

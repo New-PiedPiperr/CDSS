@@ -225,7 +225,7 @@ export default function AssessmentSummary({ onSubmit, onEdit }) {
               {summary.questionsAnswered.map((qa, index) => (
                 <div key={index} className="p-4">
                   <p className="text-muted-foreground text-sm">
-                    {index + 1}. {qa.question}
+                    {qa.question}
                   </p>
                   <p className="mt-1 font-medium">
                     <CheckCircle2 className="mr-2 inline h-4 w-4 text-green-500" />

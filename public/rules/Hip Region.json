@@ -13,7 +13,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "hip_hipost_q1",
+          "id": "hip_hiposthipoa_q1",
           "questionText": "Where is the pain located?",
           "question": "Where is the pain located?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -119,7 +119,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q2",
+          "id": "hip_hiposthipoa_q2",
           "questionText": "Recent history of fall or trauma to the hip?",
           "question": "Recent history of fall or trauma to the hip?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -195,7 +195,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q3",
+          "id": "hip_hiposthipoa_q3",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -271,7 +271,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q4",
+          "id": "hip_hiposthipoa_q4",
           "questionText": "How will you describe the pain?",
           "question": "How will you describe the pain?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -347,7 +347,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q5",
+          "id": "hip_hiposthipoa_q5",
           "questionText": "What aggravates the pain?",
           "question": "What aggravates the pain?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -423,7 +423,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q6",
+          "id": "hip_hiposthipoa_q6",
           "questionText": "Is the pain relieved by rest?",
           "question": "Is the pain relieved by rest?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -589,7 +589,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q7",
+          "id": "hip_hiposthipoa_q7",
           "questionText": "Difficulty with daily activities (e.g., shoes/socks)?",
           "question": "Difficulty with daily activities (e.g., shoes/socks)?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -665,7 +665,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q8",
+          "id": "hip_hiposthipoa_q8",
           "questionText": "Reduced walking tolerance?",
           "question": "Reduced walking tolerance?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -741,7 +741,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q9",
+          "id": "hip_hiposthipoa_q9",
           "questionText": "Crepitus or grinding sensation in the hip?",
           "question": "Crepitus or grinding sensation in the hip?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -817,7 +817,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q10",
+          "id": "hip_hiposthipoa_q10",
           "questionText": "Is sleep affected by pain?",
           "question": "Is sleep affected by pain?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -893,7 +893,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q11",
+          "id": "hip_hiposthipoa_q11",
           "questionText": "Does pain radiate below the knee?",
           "question": "Does pain radiate below the knee?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -969,7 +969,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q12",
+          "id": "hip_hiposthipoa_q12",
           "questionText": "Previous history of hip injury or surgery?",
           "question": "Previous history of hip injury or surgery?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -1045,7 +1045,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q13",
+          "id": "hip_hiposthipoa_q13",
           "questionText": "Do you feel stiffness after periods of inactivity (e.g., sitting)?",
           "question": "Do you feel stiffness after periods of inactivity (e.g., sitting)?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -1121,7 +1121,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q14",
+          "id": "hip_hiposthipoa_q14",
           "questionText": "Do symptoms worsen with prolonged standing or walking?",
           "question": "Do symptoms worsen with prolonged standing or walking?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -1197,7 +1197,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q15",
+          "id": "hip_hiposthipoa_q15",
           "questionText": "Do symptoms improve with reduced activity?",
           "question": "Do symptoms improve with reduced activity?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -1273,7 +1273,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q16",
+          "id": "hip_hiposthipoa_q16",
           "questionText": "Do you experience clicking, locking, or catching?",
           "question": "Do you experience clicking, locking, or catching?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -1349,7 +1349,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q17",
+          "id": "hip_hiposthipoa_q17",
           "questionText": "Do you feel instability or giving way?",
           "question": "Do you feel instability or giving way?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -1425,7 +1425,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q18",
+          "id": "hip_hiposthipoa_q18",
           "questionText": "Reduced hip internal rotation?",
           "question": "Reduced hip internal rotation?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -1501,7 +1501,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q19",
+          "id": "hip_hiposthipoa_q19",
           "questionText": "Pain at end-range hip flexion/internal rotation?",
           "question": "Pain at end-range hip flexion/internal rotation?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -1577,7 +1577,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q20",
+          "id": "hip_hiposthipoa_q20",
           "questionText": "Is antalgic gait present?",
           "question": "Is antalgic gait present?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -1653,7 +1653,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q21",
+          "id": "hip_hiposthipoa_q21",
           "questionText": "Trendelenburg gait/sign?",
           "question": "Trendelenburg gait/sign?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -1729,7 +1729,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q22",
+          "id": "hip_hiposthipoa_q22",
           "questionText": "Muscle weakness (gluteals)?",
           "question": "Muscle weakness (gluteals)?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -1835,7 +1835,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q23",
+          "id": "hip_hiposthipoa_q23",
           "questionText": "Inability to bear weight?",
           "question": "Inability to bear weight?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -1911,7 +1911,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q24",
+          "id": "hip_hiposthipoa_q24",
           "questionText": "Severe Do you experience night pain not relieved by rest?",
           "question": "Severe Do you experience night pain not relieved by rest?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -1987,7 +1987,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q25",
+          "id": "hip_hiposthipoa_q25",
           "questionText": "Unexplained weight loss?",
           "question": "Unexplained weight loss?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -2063,7 +2063,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q26",
+          "id": "hip_hiposthipoa_q26",
           "questionText": "Fever or systemic illness?",
           "question": "Fever or systemic illness?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -2139,7 +2139,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q27",
+          "id": "hip_hiposthipoa_q27",
           "questionText": "Pain rapidly worsening without clear cause?",
           "question": "Pain rapidly worsening without clear cause?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -2215,7 +2215,7 @@
           ]
         },
         {
-          "id": "hip_hipost_q28",
+          "id": "hip_hiposthipoa_q28",
           "questionText": "History of cancer?",
           "question": "History of cancer?",
           "condition": "HIP OSTEOARTHRITIS (Hip OA)",
@@ -2905,7 +2905,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "hip_greate_q1",
+          "id": "hip_gretropaisyngtp_q1",
           "questionText": "Where is the pain located?",
           "question": "Where is the pain located?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -3011,7 +3011,7 @@
           ]
         },
         {
-          "id": "hip_greate_q2",
+          "id": "hip_gretropaisyngtp_q2",
           "questionText": "Recent history of fall or trauma?",
           "question": "Recent history of fall or trauma?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -3087,7 +3087,7 @@
           ]
         },
         {
-          "id": "hip_greate_q3",
+          "id": "hip_gretropaisyngtp_q3",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -3163,7 +3163,7 @@
           ]
         },
         {
-          "id": "hip_greate_q4",
+          "id": "hip_gretropaisyngtp_q4",
           "questionText": "How will you describe the pain?",
           "question": "How will you describe the pain?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -3239,7 +3239,7 @@
           ]
         },
         {
-          "id": "hip_greate_q5",
+          "id": "hip_gretropaisyngtp_q5",
           "questionText": "What aggravates the pain?",
           "question": "What aggravates the pain?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -3345,7 +3345,7 @@
           ]
         },
         {
-          "id": "hip_greate_q6",
+          "id": "hip_gretropaisyngtp_q6",
           "questionText": "Is the Is the pain relieved by rest?",
           "question": "Is the Is the pain relieved by rest?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -3421,7 +3421,7 @@
           ]
         },
         {
-          "id": "hip_greate_q7",
+          "id": "hip_gretropaisyngtp_q7",
           "questionText": "Do you experience pain when climbing stairs?",
           "question": "Do you experience pain when climbing stairs?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -3497,7 +3497,7 @@
           ]
         },
         {
-          "id": "hip_greate_q8",
+          "id": "hip_gretropaisyngtp_q8",
           "questionText": "Does the pain radiate below the knee?",
           "question": "Does the pain radiate below the knee?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -3573,7 +3573,7 @@
           ]
         },
         {
-          "id": "hip_greate_q9",
+          "id": "hip_gretropaisyngtp_q9",
           "questionText": "Is sleep affected (due to lying on side)?",
           "question": "Is sleep affected (due to lying on side)?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -3649,7 +3649,7 @@
           ]
         },
         {
-          "id": "hip_greate_q10",
+          "id": "hip_gretropaisyngtp_q10",
           "questionText": "Tenderness when pressing the side of the hip?",
           "question": "Tenderness when pressing the side of the hip?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -3725,7 +3725,7 @@
           ]
         },
         {
-          "id": "hip_greate_q11",
+          "id": "hip_gretropaisyngtp_q11",
           "questionText": "Any previous hip or lower limb injury?",
           "question": "Any previous hip or lower limb injury?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -3801,7 +3801,7 @@
           ]
         },
         {
-          "id": "hip_greate_q12",
+          "id": "hip_gretropaisyngtp_q12",
           "questionText": "Tenderness over greater trochanter?",
           "question": "Tenderness over greater trochanter?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -3877,7 +3877,7 @@
           ]
         },
         {
-          "id": "hip_greate_q13",
+          "id": "hip_gretropaisyngtp_q13",
           "questionText": "Pain with resisted hip abduction?",
           "question": "Pain with resisted hip abduction?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -3953,7 +3953,7 @@
           ]
         },
         {
-          "id": "hip_greate_q14",
+          "id": "hip_gretropaisyngtp_q14",
           "questionText": "Single-leg stance (30 sec) reproduces pain?",
           "question": "Single-leg stance (30 sec) reproduces pain?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -4029,7 +4029,7 @@
           ]
         },
         {
-          "id": "hip_greate_q15",
+          "id": "hip_gretropaisyngtp_q15",
           "questionText": "Trendelenburg sign?",
           "question": "Trendelenburg sign?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -4105,7 +4105,7 @@
           ]
         },
         {
-          "id": "hip_greate_q16",
+          "id": "hip_gretropaisyngtp_q16",
           "questionText": "Any history of trauma?",
           "question": "Any history of trauma?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -4181,7 +4181,7 @@
           ]
         },
         {
-          "id": "hip_greate_q17",
+          "id": "hip_gretropaisyngtp_q17",
           "questionText": "Do you experience Do you experience night pain not relieved by rest?",
           "question": "Do you experience Do you experience night pain not relieved by rest?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -4257,7 +4257,7 @@
           ]
         },
         {
-          "id": "hip_greate_q18",
+          "id": "hip_gretropaisyngtp_q18",
           "questionText": "Do you have fever or systemic illness?",
           "question": "Do you have fever or systemic illness?",
           "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
@@ -4827,7 +4827,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "hip_femoro_q1",
+          "id": "hip_femimpfai_q1",
           "questionText": "Where is the pain located?",
           "question": "Where is the pain located?",
           "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
@@ -4933,7 +4933,7 @@
           ]
         },
         {
-          "id": "hip_femoro_q2",
+          "id": "hip_femimpfai_q2",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
@@ -5009,7 +5009,7 @@
           ]
         },
         {
-          "id": "hip_femoro_q3",
+          "id": "hip_femimpfai_q3",
           "questionText": "How will you describe the pain?",
           "question": "How will you describe the pain?",
           "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
@@ -5085,7 +5085,7 @@
           ]
         },
         {
-          "id": "hip_femoro_q4",
+          "id": "hip_femimpfai_q4",
           "questionText": "What aggravates the pain?",
           "question": "What aggravates the pain?",
           "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
@@ -5191,7 +5191,7 @@
           ]
         },
         {
-          "id": "hip_femoro_q5",
+          "id": "hip_femimpfai_q5",
           "questionText": "Is the pain relieved by rest?",
           "question": "Is the pain relieved by rest?",
           "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
@@ -5267,7 +5267,7 @@
           ]
         },
         {
-          "id": "hip_femoro_q6",
+          "id": "hip_femimpfai_q6",
           "questionText": "Do you feel clicking or catching?",
           "question": "Do you feel clicking or catching?",
           "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
@@ -5343,7 +5343,7 @@
           ]
         },
         {
-          "id": "hip_femoro_q7",
+          "id": "hip_femimpfai_q7",
           "questionText": "Do you feel stiffness in the hip?",
           "question": "Do you feel stiffness in the hip?",
           "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
@@ -5419,7 +5419,7 @@
           ]
         },
         {
-          "id": "hip_femoro_q8",
+          "id": "hip_femimpfai_q8",
           "questionText": "Does pain radiate below the knee?",
           "question": "Does pain radiate below the knee?",
           "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
@@ -5495,7 +5495,7 @@
           ]
         },
         {
-          "id": "hip_femoro_q9",
+          "id": "hip_femimpfai_q9",
           "questionText": "Are you involved in sports or repetitive hip movements?",
           "question": "Are you involved in sports or repetitive hip movements?",
           "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
@@ -5571,7 +5571,7 @@
           ]
         },
         {
-          "id": "hip_femoro_q10",
+          "id": "hip_femimpfai_q10",
           "questionText": "Is internal rotation reduced in flexion?",
           "question": "Is internal rotation reduced in flexion?",
           "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
@@ -5647,7 +5647,7 @@
           ]
         },
         {
-          "id": "hip_femoro_q11",
+          "id": "hip_femimpfai_q11",
           "questionText": "Is there pain with flexion + adduction + internal rotation?",
           "question": "Is there pain with flexion + adduction + internal rotation?",
           "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
@@ -5723,7 +5723,7 @@
           ]
         },
         {
-          "id": "hip_femoro_q12",
+          "id": "hip_femimpfai_q12",
           "questionText": "Is hip ROM asymmetry?",
           "question": "Is hip ROM asymmetry?",
           "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
@@ -5799,7 +5799,7 @@
           ]
         },
         {
-          "id": "hip_femoro_q13",
+          "id": "hip_femimpfai_q13",
           "questionText": "Is the pain severe and constant?",
           "question": "Is the pain severe and constant?",
           "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
@@ -5875,7 +5875,7 @@
           ]
         },
         {
-          "id": "hip_femoro_q14",
+          "id": "hip_femimpfai_q14",
           "questionText": "Do you experience night pain not relieved by rest?",
           "question": "Do you experience night pain not relieved by rest?",
           "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
@@ -6445,7 +6445,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "hip_hiplab_q1",
+          "id": "hip_hiplabtea_q1",
           "questionText": "Where is the pain located?",
           "question": "Where is the pain located?",
           "condition": "HIP LABRAL TEAR",
@@ -6551,7 +6551,7 @@
           ]
         },
         {
-          "id": "hip_hiplab_q2",
+          "id": "hip_hiplabtea_q2",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "HIP LABRAL TEAR",
@@ -6627,7 +6627,7 @@
           ]
         },
         {
-          "id": "hip_hiplab_q3",
+          "id": "hip_hiplabtea_q3",
           "questionText": "How will you describe the pain?",
           "question": "How will you describe the pain?",
           "condition": "HIP LABRAL TEAR",
@@ -6703,7 +6703,7 @@
           ]
         },
         {
-          "id": "hip_hiplab_q4",
+          "id": "hip_hiplabtea_q4",
           "questionText": "Do you experience clicking, locking, or catching?",
           "question": "Do you experience clicking, locking, or catching?",
           "condition": "HIP LABRAL TEAR",
@@ -6779,7 +6779,7 @@
           ]
         },
         {
-          "id": "hip_hiplab_q5",
+          "id": "hip_hiplabtea_q5",
           "questionText": "What aggravates the pain?",
           "question": "What aggravates the pain?",
           "condition": "HIP LABRAL TEAR",
@@ -6855,7 +6855,7 @@
           ]
         },
         {
-          "id": "hip_hiplab_q6",
+          "id": "hip_hiplabtea_q6",
           "questionText": "Do you feel instability in the hip?",
           "question": "Do you feel instability in the hip?",
           "condition": "HIP LABRAL TEAR",
@@ -6931,7 +6931,7 @@
           ]
         },
         {
-          "id": "hip_hiplab_q7",
+          "id": "hip_hiplabtea_q7",
           "questionText": "Is the pain relieved by rest?",
           "question": "Is the pain relieved by rest?",
           "condition": "HIP LABRAL TEAR",
@@ -7007,7 +7007,7 @@
           ]
         },
         {
-          "id": "hip_hiplab_q8",
+          "id": "hip_hiplabtea_q8",
           "questionText": "Does pain radiate below the knee?",
           "question": "Does pain radiate below the knee?",
           "condition": "HIP LABRAL TEAR",
@@ -7083,7 +7083,7 @@
           ]
         },
         {
-          "id": "hip_hiplab_q9",
+          "id": "hip_hiplabtea_q9",
           "questionText": "Is there pain with combined flexion + rotation?",
           "question": "Is there pain with combined flexion + rotation?",
           "condition": "HIP LABRAL TEAR",
@@ -7159,7 +7159,7 @@
           ]
         },
         {
-          "id": "hip_hiplab_q10",
+          "id": "hip_hiplabtea_q10",
           "questionText": "Is clicking reproduced during movement?",
           "question": "Is clicking reproduced during movement?",
           "condition": "HIP LABRAL TEAR",
@@ -7235,7 +7235,7 @@
           ]
         },
         {
-          "id": "hip_hiplab_q11",
+          "id": "hip_hiplabtea_q11",
           "questionText": "Trauma with inability to bear weight?",
           "question": "Trauma with inability to bear weight?",
           "condition": "HIP LABRAL TEAR",
@@ -7311,7 +7311,7 @@
           ]
         },
         {
-          "id": "hip_hiplab_q12",
+          "id": "hip_hiplabtea_q12",
           "questionText": "Do you experience night pain/systemic symptoms?",
           "question": "Do you experience night pain/systemic symptoms?",
           "condition": "HIP LABRAL TEAR",
@@ -7881,7 +7881,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "hip_avascu_q1",
+          "id": "hip_avanec_q1",
           "questionText": "Where is the pain located?",
           "question": "Where is the pain located?",
           "condition": "Avascular Necrosis",
@@ -7957,7 +7957,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q2",
+          "id": "hip_avanec_q2",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "Avascular Necrosis",
@@ -8033,7 +8033,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q3",
+          "id": "hip_avanec_q3",
           "questionText": "How will you describe the pain?",
           "question": "How will you describe the pain?",
           "condition": "Avascular Necrosis",
@@ -8109,7 +8109,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q4",
+          "id": "hip_avanec_q4",
           "questionText": "What aggravates the pain?",
           "question": "What aggravates the pain?",
           "condition": "Avascular Necrosis",
@@ -8185,7 +8185,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q5",
+          "id": "hip_avanec_q5",
           "questionText": "Is the pain relieved by rest?",
           "question": "Is the pain relieved by rest?",
           "condition": "Avascular Necrosis",
@@ -8261,7 +8261,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q6",
+          "id": "hip_avanec_q6",
           "questionText": "Do you experience pain at rest?",
           "question": "Do you experience pain at rest?",
           "condition": "Avascular Necrosis",
@@ -8337,7 +8337,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q7",
+          "id": "hip_avanec_q7",
           "questionText": "Do you have night pain?",
           "question": "Do you have night pain?",
           "condition": "Avascular Necrosis",
@@ -8413,7 +8413,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q8",
+          "id": "hip_avanec_q8",
           "questionText": "Risk factors (steroids, alcohol, sickle cell)?",
           "question": "Risk factors (steroids, alcohol, sickle cell)?",
           "condition": "Avascular Necrosis",
@@ -8489,7 +8489,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q9",
+          "id": "hip_avanec_q9",
           "questionText": "How will you describe the progression of the symptoms?",
           "question": "How will you describe the progression of the symptoms?",
           "condition": "Avascular Necrosis",
@@ -8565,7 +8565,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q10",
+          "id": "hip_avanec_q10",
           "questionText": "Is your walking tolerance reduced?",
           "question": "Is your walking tolerance reduced?",
           "condition": "Avascular Necrosis",
@@ -8641,7 +8641,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q11",
+          "id": "hip_avanec_q11",
           "questionText": "Does pain radiate below the knee?",
           "question": "Does pain radiate below the knee?",
           "condition": "Avascular Necrosis",
@@ -8717,7 +8717,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q12",
+          "id": "hip_avanec_q12",
           "questionText": "Is there pain with multiple hip movements (not just end-range)?",
           "question": "Is there pain with multiple hip movements (not just end-range)?",
           "condition": "Avascular Necrosis",
@@ -8793,7 +8793,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q13",
+          "id": "hip_avanec_q13",
           "questionText": "Is internal rotation reduced?",
           "question": "Is internal rotation reduced?",
           "condition": "Avascular Necrosis",
@@ -8869,7 +8869,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q14",
+          "id": "hip_avanec_q14",
           "questionText": "Antalgic gait?",
           "question": "Antalgic gait?",
           "condition": "Avascular Necrosis",
@@ -8945,7 +8945,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q15",
+          "id": "hip_avanec_q15",
           "questionText": "Do you experience night pain not relieved by rest?",
           "question": "Do you experience night pain not relieved by rest?",
           "condition": "Avascular Necrosis",
@@ -9021,7 +9021,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q16",
+          "id": "hip_avanec_q16",
           "questionText": "Do you experience pain at rest?",
           "question": "Do you experience pain at rest?",
           "condition": "Avascular Necrosis",
@@ -9097,7 +9097,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q17",
+          "id": "hip_avanec_q17",
           "questionText": "Rapid unexplained worsening?",
           "question": "Rapid unexplained worsening?",
           "condition": "Avascular Necrosis",
@@ -9173,7 +9173,7 @@
           ]
         },
         {
-          "id": "hip_avascu_q18",
+          "id": "hip_avanec_q18",
           "questionText": "Any history of steroid use/alcohol/sickle cell?",
           "question": "Any history of steroid use/alcohol/sickle cell?",
           "condition": "Avascular Necrosis",
@@ -9623,7 +9623,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "hip_snappi_q1",
+          "id": "hip_snahipsyn_q1",
           "questionText": "Where is the snapping located?",
           "question": "Where is the snapping located?",
           "condition": "SNAPPING HIP SYNDROME",
@@ -9729,7 +9729,7 @@
           ]
         },
         {
-          "id": "hip_snappi_q2",
+          "id": "hip_snahipsyn_q2",
           "questionText": "How did the symptoms begin?",
           "question": "How did the symptoms begin?",
           "condition": "SNAPPING HIP SYNDROME",
@@ -9805,7 +9805,7 @@
           ]
         },
         {
-          "id": "hip_snappi_q3",
+          "id": "hip_snahipsyn_q3",
           "questionText": "How will you describe the pain?",
           "question": "How will you describe the pain?",
           "condition": "SNAPPING HIP SYNDROME",
@@ -9881,7 +9881,7 @@
           ]
         },
         {
-          "id": "hip_snappi_q4",
+          "id": "hip_snahipsyn_q4",
           "questionText": "What aggravates the pain?",
           "question": "What aggravates the pain?",
           "condition": "SNAPPING HIP SYNDROME",
@@ -9957,7 +9957,7 @@
           ]
         },
         {
-          "id": "hip_snappi_q5",
+          "id": "hip_snahipsyn_q5",
           "questionText": "Do you experience clicking, locking, or catching?",
           "question": "Do you experience clicking, locking, or catching?",
           "condition": "SNAPPING HIP SYNDROME",
@@ -10033,7 +10033,7 @@
           ]
         },
         {
-          "id": "hip_snappi_q6",
+          "id": "hip_snahipsyn_q6",
           "questionText": "Is the pain relieved by rest?",
           "question": "Is the pain relieved by rest?",
           "condition": "SNAPPING HIP SYNDROME",
@@ -10109,7 +10109,7 @@
           ]
         },
         {
-          "id": "hip_snappi_q7",
+          "id": "hip_snahipsyn_q7",
           "questionText": "Does pain radiate below the knee?",
           "question": "Does pain radiate below the knee?",
           "condition": "SNAPPING HIP SYNDROME",
@@ -10185,7 +10185,7 @@
           ]
         },
         {
-          "id": "hip_snappi_q8",
+          "id": "hip_snahipsyn_q8",
           "questionText": "Is there visible or palpable snapping during movement?",
           "question": "Is there visible or palpable snapping during movement?",
           "condition": "SNAPPING HIP SYNDROME",
@@ -10261,7 +10261,7 @@
           ]
         },
         {
-          "id": "hip_snappi_q9",
+          "id": "hip_snahipsyn_q9",
           "questionText": "Is snapping reproduced with hip flexion-extension?",
           "question": "Is snapping reproduced with hip flexion-extension?",
           "condition": "SNAPPING HIP SYNDROME",
@@ -10337,7 +10337,7 @@
           ]
         },
         {
-          "id": "hip_snappi_q10",
+          "id": "hip_snahipsyn_q10",
           "questionText": "Tenderness over iliopsoas or ITB?",
           "question": "Tenderness over iliopsoas or ITB?",
           "condition": "SNAPPING HIP SYNDROME",
@@ -10413,7 +10413,7 @@
           ]
         },
         {
-          "id": "hip_snappi_q11",
+          "id": "hip_snahipsyn_q11",
           "questionText": "Do you experience severe and persistent pain unrelated to movement?",
           "question": "Do you experience severe and persistent pain unrelated to movement?",
           "condition": "SNAPPING HIP SYNDROME",
@@ -10489,7 +10489,7 @@
           ]
         },
         {
-          "id": "hip_snappi_q12",
+          "id": "hip_snahipsyn_q12",
           "questionText": "Do you experience night pain/systemic symptoms?",
           "question": "Do you experience night pain/systemic symptoms?",
           "condition": "SNAPPING HIP SYNDROME",

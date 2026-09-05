@@ -12,7 +12,7 @@
       "is_general": true,
       "questions": [
         {
-          "id": "shoulder_q1",
+          "id": "shoulder_iniass_q1",
           "questionText": "What region is pain present in?",
           "question": "What region is pain present in?",
           "condition": "Initial Assessment",
@@ -102,7 +102,7 @@
           ]
         },
         {
-          "id": "shoulder_q2",
+          "id": "shoulder_iniass_q2",
           "questionText": "Do you have a recent history of fall or trauma in the affected region?",
           "question": "Do you have a recent history of fall or trauma in the affected region?",
           "condition": "Initial Assessment",
@@ -180,7 +180,7 @@
           ]
         },
         {
-          "id": "shoulder_q3",
+          "id": "shoulder_iniass_q3",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "Initial Assessment",
@@ -268,7 +268,7 @@
           ]
         },
         {
-          "id": "shoulder_q4",
+          "id": "shoulder_iniass_q4",
           "questionText": "Do you experience tingling or abnormal sensations?",
           "question": "Do you experience tingling or abnormal sensations?",
           "condition": "Initial Assessment",
@@ -344,7 +344,7 @@
           ]
         },
         {
-          "id": "shoulder_q5",
+          "id": "shoulder_iniass_q5",
           "questionText": "Do you have swelling in the area of complaint?",
           "question": "Do you have swelling in the area of complaint?",
           "condition": "Initial Assessment",
@@ -420,7 +420,7 @@
           ]
         },
         {
-          "id": "shoulder_q6",
+          "id": "shoulder_iniass_q6",
           "questionText": "Did you notice any unusual movement in the area of complaint?",
           "question": "Did you notice any unusual movement in the area of complaint?",
           "condition": "Initial Assessment",
@@ -496,7 +496,7 @@
           ]
         },
         {
-          "id": "shoulder_q7",
+          "id": "shoulder_iniass_q7",
           "questionText": "What aggravates this pain?",
           "question": "What aggravates this pain?",
           "condition": "Initial Assessment",
@@ -602,7 +602,7 @@
           ]
         },
         {
-          "id": "shoulder_q8",
+          "id": "shoulder_iniass_q8",
           "questionText": "Do you feel pain when you try to raise your arm?",
           "question": "Do you feel pain when you try to raise your arm?",
           "condition": "Initial Assessment",
@@ -678,7 +678,7 @@
           ]
         },
         {
-          "id": "shoulder_q9",
+          "id": "shoulder_iniass_q9",
           "questionText": "Is there tenderness around the shoulder region or on palpating root of the neck?",
           "question": "Is there tenderness around the shoulder region or on palpating root of the neck?",
           "condition": "Initial Assessment",
@@ -754,7 +754,7 @@
           ]
         },
         {
-          "id": "shoulder_q10",
+          "id": "shoulder_iniass_q10",
           "questionText": "Is your sleep affected by pain?",
           "question": "Is your sleep affected by pain?",
           "condition": "Initial Assessment",
@@ -830,7 +830,7 @@
           ]
         },
         {
-          "id": "shoulder_q11",
+          "id": "shoulder_iniass_q11",
           "questionText": "Is shoulder alignment proper?",
           "question": "Is shoulder alignment proper?",
           "condition": "Initial Assessment",
@@ -906,7 +906,7 @@
           ]
         },
         {
-          "id": "shoulder_q12",
+          "id": "shoulder_iniass_q12",
           "questionText": "Is bruising and swelling present?",
           "question": "Is bruising and swelling present?",
           "condition": "Initial Assessment",
@@ -982,7 +982,7 @@
           ]
         },
         {
-          "id": "shoulder_q13",
+          "id": "shoulder_iniass_q13",
           "questionText": "Is patient adopting a pain avoidance posture by clasping hands together?",
           "question": "Is patient adopting a pain avoidance posture by clasping hands together?",
           "condition": "Initial Assessment",
@@ -1058,7 +1058,7 @@
           ]
         },
         {
-          "id": "shoulder_q14",
+          "id": "shoulder_iniass_q14",
           "questionText": "Is there a bump or obvious deformity around the clavicle?",
           "question": "Is there a bump or obvious deformity around the clavicle?",
           "condition": "Initial Assessment",
@@ -1148,7 +1148,7 @@
       "source_line": 55,
       "questions": [
         {
-          "id": "shoulder_q15",
+          "id": "shoulder_shoimpsyn_q1",
           "questionText": "What region is pain present in?",
           "question": "What region is pain present in?",
           "condition": "Shoulder Impingement Syndrome",
@@ -1258,7 +1258,7 @@
           ]
         },
         {
-          "id": "shoulder_q16",
+          "id": "shoulder_shoimpsyn_q2",
           "questionText": "Do you experience tingling or abnormal sensations? –",
           "question": "Do you experience tingling or abnormal sensations? –",
           "condition": "Shoulder Impingement Syndrome",
@@ -1336,7 +1336,7 @@
           ]
         },
         {
-          "id": "shoulder_q17",
+          "id": "shoulder_shoimpsyn_q3",
           "questionText": "What is the nature of the pain you experience?",
           "question": "What is the nature of the pain you experience?",
           "condition": "Shoulder Impingement Syndrome",
@@ -1414,7 +1414,7 @@
           ]
         },
         {
-          "id": "shoulder_q18",
+          "id": "shoulder_shoimpsyn_q4",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "Shoulder Impingement Syndrome",
@@ -1490,7 +1490,7 @@
           ]
         },
         {
-          "id": "shoulder_q19",
+          "id": "shoulder_shoimpsyn_q5",
           "questionText": "What currently aggravates the pain?",
           "question": "What currently aggravates the pain?",
           "condition": "Shoulder Impingement Syndrome",
@@ -1626,7 +1626,7 @@
           ]
         },
         {
-          "id": "shoulder_q20",
+          "id": "shoulder_shoimpsyn_q6",
           "questionText": "If Pain is felt on Abduction and internal rotation, is pain present in the front or lateral part of the shoulder?",
           "question": "If Pain is felt on Abduction and internal rotation, is pain present in the front or lateral part of the shoulder?",
           "condition": "Shoulder Impingement Syndrome",
@@ -1704,7 +1704,7 @@
           ]
         },
         {
-          "id": "shoulder_q21",
+          "id": "shoulder_shoimpsyn_q7",
           "questionText": "Does your job or daily tasks involve repetitive shoulder movement?",
           "question": "Does your job or daily tasks involve repetitive shoulder movement?",
           "condition": "Shoulder Impingement Syndrome",
@@ -1782,7 +1782,7 @@
           ]
         },
         {
-          "id": "shoulder_q22",
+          "id": "shoulder_shoimpsyn_q8",
           "questionText": "On what movement is the pain felt?",
           "question": "On what movement is the pain felt?",
           "condition": "Shoulder Impingement Syndrome",
@@ -1892,7 +1892,7 @@
           ]
         },
         {
-          "id": "shoulder_q23",
+          "id": "shoulder_shoimpsyn_q9",
           "questionText": "Do you experience weakness on moving your shoulder?",
           "question": "Do you experience weakness on moving your shoulder?",
           "condition": "Shoulder Impingement Syndrome",
@@ -2000,7 +2000,7 @@
       "source_line": 90,
       "questions": [
         {
-          "id": "shoulder_q24",
+          "id": "shoulder_subtenorpaisyn_q1",
           "questionText": "Does the pain resolve significantly after the precipitating activity is avoided?",
           "question": "Does the pain resolve significantly after the precipitating activity is avoided?",
           "condition": "Subacute tendinitis OR Painfularc syndrome",
@@ -2078,7 +2078,7 @@
           ]
         },
         {
-          "id": "shoulder_q25",
+          "id": "shoulder_subtenorpaisyn_q2",
           "questionText": "Palpate the anterior edge of the acromion with the arm in extension and flexion. (Subacute Tendinitis). Is pain present?",
           "question": "Palpate the anterior edge of the acromion with the arm in extension and flexion. (Subacute Tendinitis). Is pain present?",
           "condition": "Subacute tendinitis OR Painfularc syndrome",
@@ -2168,7 +2168,7 @@
       "source_line": 101,
       "questions": [
         {
-          "id": "shoulder_q26",
+          "id": "shoulder_chrten_q1",
           "questionText": "Have you had a previous history of shoulder pain after repetitive use? (Link to question 11, maybe redundant)",
           "question": "Have you had a previous history of shoulder pain after repetitive use? (Link to question 11, maybe redundant)",
           "condition": "Chronic Tendinitis",
@@ -2246,7 +2246,7 @@
           ]
         },
         {
-          "id": "shoulder_q27",
+          "id": "shoulder_chrten_q2",
           "questionText": "Does pain reduce with rest OR anti-inflammatory use?",
           "question": "Does pain reduce with rest OR anti-inflammatory use?",
           "condition": "Chronic Tendinitis",
@@ -2324,7 +2324,7 @@
           ]
         },
         {
-          "id": "shoulder_q28",
+          "id": "shoulder_chrten_q3",
           "questionText": "Is there tenderness along the bicipital groove or on moving the biceps tendon?",
           "question": "Is there tenderness along the bicipital groove or on moving the biceps tendon?",
           "condition": "Chronic Tendinitis",
@@ -2414,7 +2414,7 @@
       "source_line": 111,
       "questions": [
         {
-          "id": "shoulder_q29",
+          "id": "shoulder_cufdis_q1",
           "questionText": "Are you above 45yrs of age?",
           "question": "Are you above 45yrs of age?",
           "condition": "Cuff Disruption",
@@ -2492,7 +2492,7 @@
           ]
         },
         {
-          "id": "shoulder_q30",
+          "id": "shoulder_cufdis_q2",
           "questionText": "Do you have a previous history of sprain or a jerking movement at the shoulder?",
           "question": "Do you have a previous history of sprain or a jerking movement at the shoulder?",
           "condition": "Cuff Disruption",
@@ -2604,7 +2604,7 @@
       "source_line": 155,
       "questions": [
         {
-          "id": "shoulder_q31",
+          "id": "shoulder_calten_q1",
           "questionText": "What is the pain type?",
           "question": "What is the pain type?",
           "condition": "CALCIFIC TENDINITIS",
@@ -2682,7 +2682,7 @@
           ]
         },
         {
-          "id": "shoulder_q32",
+          "id": "shoulder_calten_q2",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "CALCIFIC TENDINITIS",
@@ -2760,7 +2760,7 @@
           ]
         },
         {
-          "id": "shoulder_q33",
+          "id": "shoulder_calten_q3",
           "questionText": "Did the pain increase drastically within a few hours?",
           "question": "Did the pain increase drastically within a few hours?",
           "condition": "CALCIFIC TENDINITIS",
@@ -2838,7 +2838,7 @@
           ]
         },
         {
-          "id": "shoulder_q33_b",
+          "id": "shoulder_calten_q4",
           "questionText": "Do you experience pain more at night?",
           "question": "Do you experience pain more at night?",
           "condition": "CALCIFIC TENDINITIS",
@@ -2916,7 +2916,7 @@
           ]
         },
         {
-          "id": "shoulder_q34",
+          "id": "shoulder_calten_q5",
           "questionText": "Can you perform the movements around the shoulder joint?",
           "question": "Can you perform the movements around the shoulder joint?",
           "condition": "CALCIFIC TENDINITIS",
@@ -2994,7 +2994,7 @@
           ]
         },
         {
-          "id": "shoulder_q35",
+          "id": "shoulder_calten_q6",
           "questionText": "Does the pain subside after a few days and the shoulder is restored to normal functioning?",
           "question": "Does the pain subside after a few days and the shoulder is restored to normal functioning?",
           "condition": "CALCIFIC TENDINITIS",
@@ -3093,7 +3093,7 @@
       "source_line": 255,
       "questions": [
         {
-          "id": "shoulder_q36",
+          "id": "shoulder_recshosub_q1",
           "questionText": "Have you had a previous history of a shoulder dislocation?",
           "question": "Have you had a previous history of a shoulder dislocation?",
           "condition": "RECURRENT SHOULDER SUBLUXATION",
@@ -3171,7 +3171,7 @@
           ]
         },
         {
-          "id": "shoulder_q37",
+          "id": "shoulder_recshosub_q2",
           "questionText": "Did the first episode occur with a pull on an abducted, laterally rotated-extended arm?",
           "question": "Did the first episode occur with a pull on an abducted, laterally rotated-extended arm?",
           "condition": "RECURRENT SHOULDER SUBLUXATION",
@@ -3249,7 +3249,7 @@
           ]
         },
         {
-          "id": "shoulder_q38",
+          "id": "shoulder_recshosub_q3",
           "questionText": "Do you experience a catching sensation followed by numbness or weakness (Dead-arm syndrome) when making overhead arm movements?",
           "question": "Do you experience a catching sensation followed by numbness or weakness (Dead-arm syndrome) when making overhead arm movements?",
           "condition": "RECURRENT SHOULDER SUBLUXATION",
@@ -3349,7 +3349,7 @@
       "source_line": 274,
       "questions": [
         {
-          "id": "shoulder_q39",
+          "id": "shoulder_rheart_q1",
           "questionText": "Do you have a history of generalised Rheumatoid Arthritis?",
           "question": "Do you have a history of generalised Rheumatoid Arthritis?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -3427,7 +3427,7 @@
           ]
         },
         {
-          "id": "shoulder_q40",
+          "id": "shoulder_rheart_q2",
           "questionText": "Do you experience pain and swelling in both shoulder joints?",
           "question": "Do you experience pain and swelling in both shoulder joints?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -3505,7 +3505,7 @@
           ]
         },
         {
-          "id": "shoulder_q41",
+          "id": "shoulder_rheart_q3",
           "questionText": "Do you smoke?",
           "question": "Do you smoke?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -3583,7 +3583,7 @@
           ]
         },
         {
-          "id": "shoulder_q42",
+          "id": "shoulder_rheart_q4",
           "questionText": "Do you have episodes of fever that resolve spontaneously?",
           "question": "Do you have episodes of fever that resolve spontaneously?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -3659,7 +3659,7 @@
           ]
         },
         {
-          "id": "shoulder_q43",
+          "id": "shoulder_rheart_q5",
           "questionText": "Is swelling present anteriorly and superiorly to the shoulder?",
           "question": "Is swelling present anteriorly and superiorly to the shoulder?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -3737,7 +3737,7 @@
           ]
         },
         {
-          "id": "shoulder_q44",
+          "id": "shoulder_rheart_q6",
           "questionText": "Is swelling present in the axilla?",
           "question": "Is swelling present in the axilla?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -3815,7 +3815,7 @@
           ]
         },
         {
-          "id": "shoulder_q45",
+          "id": "shoulder_rheart_q7",
           "questionText": "Do you experience increasing limitations in performing self-care (styling hair, dressing, shaving)?",
           "question": "Do you experience increasing limitations in performing self-care (styling hair, dressing, shaving)?",
           "condition": "RHEUMATOID ARTHRITIS",
@@ -3912,7 +3912,7 @@
       "source_line": 300,
       "questions": [
         {
-          "id": "shoulder_q46",
+          "id": "shoulder_osteoa_q1",
           "questionText": "Have you had a previous history of injury, shoulder dislocation, or painful arc syndrome?",
           "question": "Have you had a previous history of injury, shoulder dislocation, or painful arc syndrome?",
           "condition": "OSTEOARTHRITIS",
@@ -3990,7 +3990,7 @@
           ]
         },
         {
-          "id": "shoulder_q47",
+          "id": "shoulder_osteoa_q2",
           "questionText": "Do you feel the pain more at night?",
           "question": "Do you feel the pain more at night?",
           "condition": "OSTEOARTHRITIS",
@@ -4068,7 +4068,7 @@
           ]
         },
         {
-          "id": "shoulder_q48",
+          "id": "shoulder_osteoa_q3",
           "questionText": "Is your shoulder movement restricted across ALL joint motions?",
           "question": "Is your shoulder movement restricted across ALL joint motions?",
           "condition": "OSTEOARTHRITIS",
@@ -4146,7 +4146,7 @@
           ]
         },
         {
-          "id": "shoulder_q49",
+          "id": "shoulder_osteoa_q4",
           "questionText": "Do you experience early morning stiffness?",
           "question": "Do you experience early morning stiffness?",
           "condition": "OSTEOARTHRITIS",
@@ -4232,7 +4232,7 @@
           ]
         },
         {
-          "id": "shoulder_q50",
+          "id": "shoulder_osteoa_q5",
           "questionText": "If yes, does the stiffness wane within 30 minutes of waking?",
           "question": "If yes, does the stiffness wane within 30 minutes of waking?",
           "condition": "OSTEOARTHRITIS",

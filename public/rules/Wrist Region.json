@@ -13,7 +13,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "wrist_carpal_q1",
+          "id": "wrist_cartunsyncts_q1",
           "questionText": "Where is the pain located ?",
           "question": "Where is the pain located ?",
           "condition": "CARPAL TUNNEL SYNDROME (CTS)",
@@ -149,7 +149,7 @@
           ]
         },
         {
-          "id": "wrist_carpal_q2",
+          "id": "wrist_cartunsyncts_q2",
           "questionText": "How did the symptoms begin ?",
           "question": "How did the symptoms begin ?",
           "condition": "CARPAL TUNNEL SYNDROME (CTS)",
@@ -225,7 +225,7 @@
           ]
         },
         {
-          "id": "wrist_carpal_q3",
+          "id": "wrist_cartunsyncts_q3",
           "questionText": "What is the pain type?",
           "question": "What is the pain type?",
           "condition": "CARPAL TUNNEL SYNDROME (CTS)",
@@ -301,7 +301,7 @@
           ]
         },
         {
-          "id": "wrist_carpal_q4",
+          "id": "wrist_cartunsyncts_q4",
           "questionText": "Do you experience night symptoms?",
           "question": "Do you experience night symptoms?",
           "condition": "CARPAL TUNNEL SYNDROME (CTS)",
@@ -377,7 +377,7 @@
           ]
         },
         {
-          "id": "wrist_carpal_q5",
+          "id": "wrist_cartunsyncts_q5",
           "questionText": "Do symptoms wake you from sleep?",
           "question": "Do symptoms wake you from sleep?",
           "condition": "CARPAL TUNNEL SYNDROME (CTS)",
@@ -453,7 +453,7 @@
           ]
         },
         {
-          "id": "wrist_carpal_q6",
+          "id": "wrist_cartunsyncts_q6",
           "questionText": "Do you shake your hand to relieve symptoms?",
           "question": "Do you shake your hand to relieve symptoms?",
           "condition": "CARPAL TUNNEL SYNDROME (CTS)",
@@ -529,7 +529,7 @@
           ]
         },
         {
-          "id": "wrist_carpal_q7",
+          "id": "wrist_cartunsyncts_q7",
           "questionText": "What aggravates the pain",
           "question": "What aggravates the pain",
           "condition": "CARPAL TUNNEL SYNDROME (CTS)",
@@ -605,7 +605,7 @@
           ]
         },
         {
-          "id": "wrist_carpal_q8",
+          "id": "wrist_cartunsyncts_q8",
           "questionText": "Is there weakness (grip or thumb)?",
           "question": "Is there weakness (grip or thumb)?",
           "condition": "CARPAL TUNNEL SYNDROME (CTS)",
@@ -681,7 +681,7 @@
           ]
         },
         {
-          "id": "wrist_carpal_q9",
+          "id": "wrist_cartunsyncts_q9",
           "questionText": "Does pain radiate above the wrist?",
           "question": "Does pain radiate above the wrist?",
           "condition": "CARPAL TUNNEL SYNDROME (CTS)",
@@ -757,7 +757,7 @@
           ]
         },
         {
-          "id": "wrist_carpal_q10",
+          "id": "wrist_cartunsyncts_q10",
           "questionText": "Is there thenar muscle wasting?",
           "question": "Is there thenar muscle wasting?",
           "condition": "CARPAL TUNNEL SYNDROME (CTS)",
@@ -833,7 +833,7 @@
           ]
         },
         {
-          "id": "wrist_carpal_q11",
+          "id": "wrist_cartunsyncts_q11",
           "questionText": "Is there reduced sensation in median nerve distribution?",
           "question": "Is there reduced sensation in median nerve distribution?",
           "condition": "CARPAL TUNNEL SYNDROME (CTS)",
@@ -909,7 +909,7 @@
           ]
         },
         {
-          "id": "wrist_carpal_q12",
+          "id": "wrist_cartunsyncts_q12",
           "questionText": "Is there weak thumb opposition?",
           "question": "Is there weak thumb opposition?",
           "condition": "CARPAL TUNNEL SYNDROME (CTS)",
@@ -985,7 +985,7 @@
           ]
         },
         {
-          "id": "wrist_carpal_q13",
+          "id": "wrist_cartunsyncts_q13",
           "questionText": "Severe progressive weakness?",
           "question": "Severe progressive weakness?",
           "condition": "CARPAL TUNNEL SYNDROME (CTS)",
@@ -1061,7 +1061,7 @@
           ]
         },
         {
-          "id": "wrist_carpal_q14",
+          "id": "wrist_cartunsyncts_q14",
           "questionText": "Symptoms involving entire arm?",
           "question": "Symptoms involving entire arm?",
           "condition": "CARPAL TUNNEL SYNDROME (CTS)",
@@ -1511,7 +1511,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "wrist_dequer_q1",
+          "id": "wrist_dequeten_q1",
           "questionText": "Where is the pain located?",
           "question": "Where is the pain located?",
           "condition": "DE QUERVAIN’S TENOSYNOVITIS",
@@ -1587,7 +1587,7 @@
           ]
         },
         {
-          "id": "wrist_dequer_q2",
+          "id": "wrist_dequeten_q2",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "DE QUERVAIN’S TENOSYNOVITIS",
@@ -1663,7 +1663,7 @@
           ]
         },
         {
-          "id": "wrist_dequer_q3",
+          "id": "wrist_dequeten_q3",
           "questionText": "What aggravates the pain?",
           "question": "What aggravates the pain?",
           "condition": "DE QUERVAIN’S TENOSYNOVITIS",
@@ -1739,7 +1739,7 @@
           ]
         },
         {
-          "id": "wrist_dequer_q4",
+          "id": "wrist_dequeten_q4",
           "questionText": "Is there pain with lifting objects (e.g., child, kettle)?",
           "question": "Is there pain with lifting objects (e.g., child, kettle)?",
           "condition": "DE QUERVAIN’S TENOSYNOVITIS",
@@ -1815,7 +1815,7 @@
           ]
         },
         {
-          "id": "wrist_dequer_q5",
+          "id": "wrist_dequeten_q5",
           "questionText": "Is there swelling near thumb base?",
           "question": "Is there swelling near thumb base?",
           "condition": "DE QUERVAIN’S TENOSYNOVITIS",
@@ -1891,7 +1891,7 @@
           ]
         },
         {
-          "id": "wrist_dequer_q6",
+          "id": "wrist_dequeten_q6",
           "questionText": "Do you feel creaking sensation?",
           "question": "Do you feel creaking sensation?",
           "condition": "DE QUERVAIN’S TENOSYNOVITIS",
@@ -1967,7 +1967,7 @@
           ]
         },
         {
-          "id": "wrist_dequer_q7",
+          "id": "wrist_dequeten_q7",
           "questionText": "Is there ttenderness over radial styloid?",
           "question": "Is there ttenderness over radial styloid?",
           "condition": "DE QUERVAIN’S TENOSYNOVITIS",
@@ -2043,7 +2043,7 @@
           ]
         },
         {
-          "id": "wrist_dequer_q8",
+          "id": "wrist_dequeten_q8",
           "questionText": "Is there pain with resisted thumb extension/abduction?",
           "question": "Is there pain with resisted thumb extension/abduction?",
           "condition": "DE QUERVAIN’S TENOSYNOVITIS",
@@ -2119,7 +2119,7 @@
           ]
         },
         {
-          "id": "wrist_dequer_q9",
+          "id": "wrist_dequeten_q9",
           "questionText": "History of trauma?",
           "question": "History of trauma?",
           "condition": "DE QUERVAIN’S TENOSYNOVITIS",
@@ -2131,7 +2131,7 @@
           "excludedIfConditions": [],
           "options": [
             {
-              "value": "a. Yes (Rule out fracture)",
+              "value": "Yes (Rule out fracture)",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -2146,7 +2146,7 @@
               }
             },
             {
-              "value": "b. No",
+              "value": "No",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -2283,7 +2283,7 @@
           ],
           "answers": [
             {
-              "value": "a. Yes (Rule out fracture)",
+              "value": "Yes (Rule out fracture)",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -2298,7 +2298,7 @@
               }
             },
             {
-              "value": "b. No",
+              "value": "No",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -2449,7 +2449,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "wrist_wrists_q1",
+          "id": "wrist_wrisprliginj_q1",
           "questionText": "Where is the pain located ?",
           "question": "Where is the pain located ?",
           "condition": "WRIST SPRAIN (LIGAMENTOUS INJURY)",
@@ -2525,7 +2525,7 @@
           ]
         },
         {
-          "id": "wrist_wrists_q2",
+          "id": "wrist_wrisprliginj_q2",
           "questionText": "Is there any history of trauma?",
           "question": "Is there any history of trauma?",
           "condition": "WRIST SPRAIN (LIGAMENTOUS INJURY)",
@@ -2601,7 +2601,7 @@
           ]
         },
         {
-          "id": "wrist_wrists_q3",
+          "id": "wrist_wrisprliginj_q3",
           "questionText": "What is the mechanism of injury",
           "question": "What is the mechanism of injury",
           "condition": "WRIST SPRAIN (LIGAMENTOUS INJURY)",
@@ -2677,7 +2677,7 @@
           ]
         },
         {
-          "id": "wrist_wrists_q4",
+          "id": "wrist_wrisprliginj_q4",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "WRIST SPRAIN (LIGAMENTOUS INJURY)",
@@ -2813,7 +2813,7 @@
           ]
         },
         {
-          "id": "wrist_wrists_q5",
+          "id": "wrist_wrisprliginj_q5",
           "questionText": "Is swelling present?",
           "question": "Is swelling present?",
           "condition": "WRIST SPRAIN (LIGAMENTOUS INJURY)",
@@ -2889,7 +2889,7 @@
           ]
         },
         {
-          "id": "wrist_wrists_q6",
+          "id": "wrist_wrisprliginj_q6",
           "questionText": "Is the pain aggravated by movement?",
           "question": "Is the pain aggravated by movement?",
           "condition": "WRIST SPRAIN (LIGAMENTOUS INJURY)",
@@ -2965,7 +2965,7 @@
           ]
         },
         {
-          "id": "wrist_wrists_q7",
+          "id": "wrist_wrisprliginj_q7",
           "questionText": "Is there swelling/bruising?",
           "question": "Is there swelling/bruising?",
           "condition": "WRIST SPRAIN (LIGAMENTOUS INJURY)",
@@ -3041,7 +3041,7 @@
           ]
         },
         {
-          "id": "wrist_wrists_q8",
+          "id": "wrist_wrisprliginj_q8",
           "questionText": "Does the patient experience pain with ligament stress?",
           "question": "Does the patient experience pain with ligament stress?",
           "condition": "WRIST SPRAIN (LIGAMENTOUS INJURY)",
@@ -3117,7 +3117,7 @@
           ]
         },
         {
-          "id": "wrist_wrists_q9",
+          "id": "wrist_wrisprliginj_q9",
           "questionText": "Is ROM reduced?",
           "question": "Is ROM reduced?",
           "condition": "WRIST SPRAIN (LIGAMENTOUS INJURY)",
@@ -3193,7 +3193,7 @@
           ]
         },
         {
-          "id": "wrist_wrists_q10",
+          "id": "wrist_wrisprliginj_q10",
           "questionText": "Is there severe pain with deformity?",
           "question": "Is there severe pain with deformity?",
           "condition": "WRIST SPRAIN (LIGAMENTOUS INJURY)",
@@ -3269,7 +3269,7 @@
           ]
         },
         {
-          "id": "wrist_wrists_q11",
+          "id": "wrist_wrisprliginj_q11",
           "questionText": "Is the patient unable to move the wrist?",
           "question": "Is the patient unable to move the wrist?",
           "condition": "WRIST SPRAIN (LIGAMENTOUS INJURY)",
@@ -3311,7 +3311,7 @@
               }
             },
             {
-              "value": "a. Examiner applies stress to specific ligaments.",
+              "value": "Examiner applies stress to specific ligaments.",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -3326,7 +3326,7 @@
               }
             },
             {
-              "value": "b. Sign is positive if pain/laxity occurs.",
+              "value": "Sign is positive if pain/laxity occurs.",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -3388,7 +3388,7 @@
               }
             },
             {
-              "value": "a. Examiner applies stress to specific ligaments.",
+              "value": "Examiner applies stress to specific ligaments.",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -3403,7 +3403,7 @@
               }
             },
             {
-              "value": "b. Sign is positive if pain/laxity occurs.",
+              "value": "Sign is positive if pain/laxity occurs.",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -3449,7 +3449,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "wrist_tfccin_q1",
+          "id": "wrist_tfcinjtrifibcom_q1",
           "questionText": "Where is the pain located ?",
           "question": "Where is the pain located ?",
           "condition": "TFCC INJURY (Triangular Fibrocartilage Complex)",
@@ -3525,7 +3525,7 @@
           ]
         },
         {
-          "id": "wrist_tfccin_q2",
+          "id": "wrist_tfcinjtrifibcom_q2",
           "questionText": "Is there any history of trauma?",
           "question": "Is there any history of trauma?",
           "condition": "TFCC INJURY (Triangular Fibrocartilage Complex)",
@@ -3601,7 +3601,7 @@
           ]
         },
         {
-          "id": "wrist_tfccin_q3",
+          "id": "wrist_tfcinjtrifibcom_q3",
           "questionText": "What aggravates the pain?",
           "question": "What aggravates the pain?",
           "condition": "TFCC INJURY (Triangular Fibrocartilage Complex)",
@@ -3677,7 +3677,7 @@
           ]
         },
         {
-          "id": "wrist_tfccin_q4",
+          "id": "wrist_tfcinjtrifibcom_q4",
           "questionText": "Do you experience pain when clicking or catching?",
           "question": "Do you experience pain when clicking or catching?",
           "condition": "TFCC INJURY (Triangular Fibrocartilage Complex)",
@@ -3753,7 +3753,7 @@
           ]
         },
         {
-          "id": "wrist_tfccin_q5",
+          "id": "wrist_tfcinjtrifibcom_q5",
           "questionText": "Is there weak grip strength?",
           "question": "Is there weak grip strength?",
           "condition": "TFCC INJURY (Triangular Fibrocartilage Complex)",
@@ -3829,7 +3829,7 @@
           ]
         },
         {
-          "id": "wrist_tfccin_q6",
+          "id": "wrist_tfcinjtrifibcom_q6",
           "questionText": "Is there tenderness over ulnar wrist?",
           "question": "Is there tenderness over ulnar wrist?",
           "condition": "TFCC INJURY (Triangular Fibrocartilage Complex)",
@@ -3905,7 +3905,7 @@
           ]
         },
         {
-          "id": "wrist_tfccin_q7",
+          "id": "wrist_tfcinjtrifibcom_q7",
           "questionText": "Is there pain with pronation/supination?",
           "question": "Is there pain with pronation/supination?",
           "condition": "TFCC INJURY (Triangular Fibrocartilage Complex)",
@@ -3981,7 +3981,7 @@
           ]
         },
         {
-          "id": "wrist_tfccin_q8",
+          "id": "wrist_tfcinjtrifibcom_q8",
           "questionText": "Severe instability?",
           "question": "Severe instability?",
           "condition": "TFCC INJURY (Triangular Fibrocartilage Complex)",
@@ -3993,7 +3993,7 @@
           "excludedIfConditions": [],
           "options": [
             {
-              "value": "a. Yes (Serious ligament injury)",
+              "value": "Yes (Serious ligament injury)",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -4008,7 +4008,7 @@
               }
             },
             {
-              "value": "b. No",
+              "value": "No",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -4145,7 +4145,7 @@
           ],
           "answers": [
             {
-              "value": "a. Yes (Serious ligament injury)",
+              "value": "Yes (Serious ligament injury)",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -4160,7 +4160,7 @@
               }
             },
             {
-              "value": "b. No",
+              "value": "No",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -4311,9 +4311,9 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "wrist_gangli_q1",
-          "questionText": "2.Where is the pain located?",
-          "question": "2.Where is the pain located?",
+          "id": "wrist_gancys_q1",
+          "questionText": "Where is the pain located?",
+          "question": "Where is the pain located?",
           "condition": "Ganglion Cyst",
           "category": "general",
           "inputType": "select",
@@ -4387,9 +4387,9 @@
           ]
         },
         {
-          "id": "wrist_gangli_q2",
-          "questionText": "3.Do you notice a swelling/lump?",
-          "question": "3.Do you notice a swelling/lump?",
+          "id": "wrist_gancys_q2",
+          "questionText": "Do you notice a swelling/lump?",
+          "question": "Do you notice a swelling/lump?",
           "condition": "Ganglion Cyst",
           "category": "general",
           "inputType": "select",
@@ -4463,9 +4463,9 @@
           ]
         },
         {
-          "id": "wrist_gangli_q3",
-          "questionText": "4.How did the swelling begin?",
-          "question": "4.How did the swelling begin?",
+          "id": "wrist_gancys_q3",
+          "questionText": "How did the swelling begin?",
+          "question": "How did the swelling begin?",
           "condition": "Ganglion Cyst",
           "category": "general",
           "inputType": "select",
@@ -4599,9 +4599,9 @@
           ]
         },
         {
-          "id": "wrist_gangli_q4",
-          "questionText": "6.Does the size of the lump change?",
-          "question": "6.Does the size of the lump change?",
+          "id": "wrist_gancys_q4",
+          "questionText": "Does the size of the lump change?",
+          "question": "Does the size of the lump change?",
           "condition": "Ganglion Cyst",
           "category": "general",
           "inputType": "select",
@@ -4675,9 +4675,9 @@
           ]
         },
         {
-          "id": "wrist_gangli_q5",
-          "questionText": "7.What aggravates the pain ?",
-          "question": "7.What aggravates the pain ?",
+          "id": "wrist_gancys_q5",
+          "questionText": "What aggravates the pain ?",
+          "question": "What aggravates the pain ?",
           "condition": "Ganglion Cyst",
           "category": "general",
           "inputType": "select",
@@ -4751,9 +4751,9 @@
           ]
         },
         {
-          "id": "wrist_gangli_q6",
-          "questionText": "8.Is there any history of trauma?",
-          "question": "8.Is there any history of trauma?",
+          "id": "wrist_gancys_q6",
+          "questionText": "Is there any history of trauma?",
+          "question": "Is there any history of trauma?",
           "condition": "Ganglion Cyst",
           "category": "general",
           "inputType": "select",
@@ -4827,7 +4827,7 @@
           ]
         },
         {
-          "id": "wrist_gangli_q7",
+          "id": "wrist_gancys_q7",
           "questionText": "Is there visible or palpable cystic swelling?",
           "question": "Is there visible or palpable cystic swelling?",
           "condition": "Ganglion Cyst",
@@ -4903,7 +4903,7 @@
           ]
         },
         {
-          "id": "wrist_gangli_q8",
+          "id": "wrist_gancys_q8",
           "questionText": "Is transillumination positive?",
           "question": "Is transillumination positive?",
           "condition": "Ganglion Cyst",
@@ -4979,7 +4979,7 @@
           ]
         },
         {
-          "id": "wrist_gangli_q9",
+          "id": "wrist_gancys_q9",
           "questionText": "Is there tenderness over cyst?",
           "question": "Is there tenderness over cyst?",
           "condition": "Ganglion Cyst",
@@ -5055,7 +5055,7 @@
           ]
         },
         {
-          "id": "wrist_gangli_q10",
+          "id": "wrist_gancys_q10",
           "questionText": "Hard, immobile mass?",
           "question": "Hard, immobile mass?",
           "condition": "Ganglion Cyst",
@@ -5131,7 +5131,7 @@
           ]
         },
         {
-          "id": "wrist_gangli_q11",
+          "id": "wrist_gancys_q11",
           "questionText": "Rapid unexplained growth?",
           "question": "Rapid unexplained growth?",
           "condition": "Ganglion Cyst",
@@ -5188,7 +5188,7 @@
               }
             },
             {
-              "value": "a. Light is applied through the swelling",
+              "value": "Light is applied through the swelling",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -5203,7 +5203,7 @@
               }
             },
             {
-              "value": "b. Positive if light passes through",
+              "value": "Positive if light passes through",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -5280,7 +5280,7 @@
               }
             },
             {
-              "value": "a. Light is applied through the swelling",
+              "value": "Light is applied through the swelling",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -5295,7 +5295,7 @@
               }
             },
             {
-              "value": "b. Positive if light passes through",
+              "value": "Positive if light passes through",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -5341,7 +5341,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "wrist_inters_q1",
+          "id": "wrist_intsyn_q1",
           "questionText": "Where is the pain located?",
           "question": "Where is the pain located?",
           "condition": "Intersection Syndrome",
@@ -5417,7 +5417,7 @@
           ]
         },
         {
-          "id": "wrist_inters_q2",
+          "id": "wrist_intsyn_q2",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "Intersection Syndrome",
@@ -5493,7 +5493,7 @@
           ]
         },
         {
-          "id": "wrist_inters_q3",
+          "id": "wrist_intsyn_q3",
           "questionText": "What aggravates the pain?",
           "question": "What aggravates the pain?",
           "condition": "Intersection Syndrome",
@@ -5569,7 +5569,7 @@
           ]
         },
         {
-          "id": "wrist_inters_q4",
+          "id": "wrist_intsyn_q4",
           "questionText": "Do you feel creaking or squeaking?",
           "question": "Do you feel creaking or squeaking?",
           "condition": "Intersection Syndrome",
@@ -5645,7 +5645,7 @@
           ]
         },
         {
-          "id": "wrist_inters_q5",
+          "id": "wrist_intsyn_q5",
           "questionText": "Is there swelling?",
           "question": "Is there swelling?",
           "condition": "Intersection Syndrome",
@@ -5721,7 +5721,7 @@
           ]
         },
         {
-          "id": "wrist_inters_q6",
+          "id": "wrist_intsyn_q6",
           "questionText": "Is there tenderness proximal to radial styloid?",
           "question": "Is there tenderness proximal to radial styloid?",
           "condition": "Intersection Syndrome",
@@ -5797,7 +5797,7 @@
           ]
         },
         {
-          "id": "wrist_inters_q7",
+          "id": "wrist_intsyn_q7",
           "questionText": "Is there crepitus with wrist movement?",
           "question": "Is there crepitus with wrist movement?",
           "condition": "Intersection Syndrome",
@@ -5873,7 +5873,7 @@
           ]
         },
         {
-          "id": "wrist_inters_q8",
+          "id": "wrist_intsyn_q8",
           "questionText": "Is there pain with resisted wrist extension?",
           "question": "Is there pain with resisted wrist extension?",
           "condition": "Intersection Syndrome",
@@ -5949,7 +5949,7 @@
           ]
         },
         {
-          "id": "wrist_inters_q9",
+          "id": "wrist_intsyn_q9",
           "questionText": "History of trauma?",
           "question": "History of trauma?",
           "condition": "Intersection Syndrome",
@@ -5961,7 +5961,7 @@
           "excludedIfConditions": [],
           "options": [
             {
-              "value": "a. Yes (Rule out fracture)",
+              "value": "Yes (Rule out fracture)",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -5976,7 +5976,7 @@
               }
             },
             {
-              "value": "b. No",
+              "value": "No",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -6006,7 +6006,7 @@
               }
             },
             {
-              "value": "a. Patient extends wrist against resistance",
+              "value": "Patient extends wrist against resistance",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -6021,7 +6021,7 @@
               }
             },
             {
-              "value": "b. Positive if pain/crepitus occurs",
+              "value": "Positive if pain/crepitus occurs",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -6053,7 +6053,7 @@
           ],
           "answers": [
             {
-              "value": "a. Yes (Rule out fracture)",
+              "value": "Yes (Rule out fracture)",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -6068,7 +6068,7 @@
               }
             },
             {
-              "value": "b. No",
+              "value": "No",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -6098,7 +6098,7 @@
               }
             },
             {
-              "value": "a. Patient extends wrist against resistance",
+              "value": "Patient extends wrist against resistance",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -6113,7 +6113,7 @@
               }
             },
             {
-              "value": "b. Positive if pain/crepitus occurs",
+              "value": "Positive if pain/crepitus occurs",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -6159,7 +6159,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "wrist_scapho_q1",
+          "id": "wrist_scafracriredfla_q1",
           "questionText": "Where is the pain located?",
           "question": "Where is the pain located?",
           "condition": "SCAPHOID FRACTURE (CRITICAL RED FLAG)",
@@ -6235,7 +6235,7 @@
           ]
         },
         {
-          "id": "wrist_scapho_q2",
+          "id": "wrist_scafracriredfla_q2",
           "questionText": "Is there anyhistory of trauma?",
           "question": "Is there anyhistory of trauma?",
           "condition": "SCAPHOID FRACTURE (CRITICAL RED FLAG)",
@@ -6311,7 +6311,7 @@
           ]
         },
         {
-          "id": "wrist_scapho_q3",
+          "id": "wrist_scafracriredfla_q3",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "SCAPHOID FRACTURE (CRITICAL RED FLAG)",
@@ -6387,7 +6387,7 @@
           ]
         },
         {
-          "id": "wrist_scapho_q4",
+          "id": "wrist_scafracriredfla_q4",
           "questionText": "What aggravates the pan ?",
           "question": "What aggravates the pan ?",
           "condition": "SCAPHOID FRACTURE (CRITICAL RED FLAG)",
@@ -6463,7 +6463,7 @@
           ]
         },
         {
-          "id": "wrist_scapho_q5",
+          "id": "wrist_scafracriredfla_q5",
           "questionText": "Is swelling present?",
           "question": "Is swelling present?",
           "condition": "SCAPHOID FRACTURE (CRITICAL RED FLAG)",
@@ -6539,7 +6539,7 @@
           ]
         },
         {
-          "id": "wrist_scapho_q6",
+          "id": "wrist_scafracriredfla_q6",
           "questionText": "Did you ignore the injury initially?",
           "question": "Did you ignore the injury initially?",
           "condition": "SCAPHOID FRACTURE (CRITICAL RED FLAG)",
@@ -6615,7 +6615,7 @@
           ]
         },
         {
-          "id": "wrist_scapho_q7",
+          "id": "wrist_scafracriredfla_q7",
           "questionText": "Is there tenderness in the anatomical snuffbox?",
           "question": "Is there tenderness in the anatomical snuffbox?",
           "condition": "SCAPHOID FRACTURE (CRITICAL RED FLAG)",
@@ -6691,7 +6691,7 @@
           ]
         },
         {
-          "id": "wrist_scapho_q8",
+          "id": "wrist_scafracriredfla_q8",
           "questionText": "Is there pain with axial thumb compression?",
           "question": "Is there pain with axial thumb compression?",
           "condition": "SCAPHOID FRACTURE (CRITICAL RED FLAG)",
@@ -6767,7 +6767,7 @@
           ]
         },
         {
-          "id": "wrist_scapho_q9",
+          "id": "wrist_scafracriredfla_q9",
           "questionText": "Is the grip strength reduced?",
           "question": "Is the grip strength reduced?",
           "condition": "SCAPHOID FRACTURE (CRITICAL RED FLAG)",
@@ -6843,7 +6843,7 @@
           ]
         },
         {
-          "id": "wrist_scapho_q10",
+          "id": "wrist_scafracriredfla_q10",
           "questionText": "Do you experience persistent pain after fall despite normal X-ray?",
           "question": "Do you experience persistent pain after fall despite normal X-ray?",
           "condition": "SCAPHOID FRACTURE (CRITICAL RED FLAG)",
@@ -6919,7 +6919,7 @@
           ]
         },
         {
-          "id": "wrist_scapho_q11",
+          "id": "wrist_scafracriredfla_q11",
           "questionText": "Delayed presentation?",
           "question": "Delayed presentation?",
           "condition": "SCAPHOID FRACTURE (CRITICAL RED FLAG)",
@@ -7249,7 +7249,7 @@
       "source_line": 1,
       "questions": [
         {
-          "id": "wrist_kienbc_q1",
+          "id": "wrist_kiedisavnoflun_q1",
           "questionText": "Where is the pain located?",
           "question": "Where is the pain located?",
           "condition": "KIENBÖCK’S DISEASE (AVN OF LUNATE)",
@@ -7325,7 +7325,7 @@
           ]
         },
         {
-          "id": "wrist_kienbc_q2",
+          "id": "wrist_kiedisavnoflun_q2",
           "questionText": "How did the pain begin?",
           "question": "How did the pain begin?",
           "condition": "KIENBÖCK’S DISEASE (AVN OF LUNATE)",
@@ -7401,7 +7401,7 @@
           ]
         },
         {
-          "id": "wrist_kienbc_q3",
+          "id": "wrist_kiedisavnoflun_q3",
           "questionText": "How will you describe the pain?",
           "question": "How will you describe the pain?",
           "condition": "KIENBÖCK’S DISEASE (AVN OF LUNATE)",
@@ -7477,7 +7477,7 @@
           ]
         },
         {
-          "id": "wrist_kienbc_q4",
+          "id": "wrist_kiedisavnoflun_q4",
           "questionText": "What aggravates the pain",
           "question": "What aggravates the pain",
           "condition": "KIENBÖCK’S DISEASE (AVN OF LUNATE)",
@@ -7553,7 +7553,7 @@
           ]
         },
         {
-          "id": "wrist_kienbc_q5",
+          "id": "wrist_kiedisavnoflun_q5",
           "questionText": "Do you experience pain at rest or night?",
           "question": "Do you experience pain at rest or night?",
           "condition": "KIENBÖCK’S DISEASE (AVN OF LUNATE)",
@@ -7629,7 +7629,7 @@
           ]
         },
         {
-          "id": "wrist_kienbc_q6",
+          "id": "wrist_kiedisavnoflun_q6",
           "questionText": "Is there any history of repetitive trauma or loading?",
           "question": "Is there any history of repetitive trauma or loading?",
           "condition": "KIENBÖCK’S DISEASE (AVN OF LUNATE)",
@@ -7705,7 +7705,7 @@
           ]
         },
         {
-          "id": "wrist_kienbc_q7",
+          "id": "wrist_kiedisavnoflun_q7",
           "questionText": "Is there tenderness over lunate (central dorsal wrist)?",
           "question": "Is there tenderness over lunate (central dorsal wrist)?",
           "condition": "KIENBÖCK’S DISEASE (AVN OF LUNATE)",
@@ -7781,7 +7781,7 @@
           ]
         },
         {
-          "id": "wrist_kienbc_q8",
+          "id": "wrist_kiedisavnoflun_q8",
           "questionText": "Is the wrist ROM reduced?",
           "question": "Is the wrist ROM reduced?",
           "condition": "KIENBÖCK’S DISEASE (AVN OF LUNATE)",
@@ -7857,7 +7857,7 @@
           ]
         },
         {
-          "id": "wrist_kienbc_q9",
+          "id": "wrist_kiedisavnoflun_q9",
           "questionText": "Is the grip strength weak?",
           "question": "Is the grip strength weak?",
           "condition": "KIENBÖCK’S DISEASE (AVN OF LUNATE)",
@@ -7933,7 +7933,7 @@
           ]
         },
         {
-          "id": "wrist_kienbc_q10",
+          "id": "wrist_kiedisavnoflun_q10",
           "questionText": "Do you experienceprogressive stiffness and pain?",
           "question": "Do you experienceprogressive stiffness and pain?",
           "condition": "KIENBÖCK’S DISEASE (AVN OF LUNATE)",
@@ -8009,7 +8009,7 @@
           ]
         },
         {
-          "id": "wrist_kienbc_q11",
+          "id": "wrist_kiedisavnoflun_q11",
           "questionText": "Do you experience night pain not relieved by rest?",
           "question": "Do you experience night pain not relieved by rest?",
           "condition": "KIENBÖCK’S DISEASE (AVN OF LUNATE)",
@@ -8081,7 +8081,7 @@
               }
             },
             {
-              "value": "a. Apply compression through wrist",
+              "value": "Apply compression through wrist",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -8096,7 +8096,7 @@
               }
             },
             {
-              "value": "b. Positive if central wrist pain",
+              "value": "Positive if central wrist pain",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -8188,7 +8188,7 @@
               }
             },
             {
-              "value": "a. Apply compression through wrist",
+              "value": "Apply compression through wrist",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -8203,7 +8203,7 @@
               }
             },
             {
-              "value": "b. Positive if central wrist pain",
+              "value": "Positive if central wrist pain",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,

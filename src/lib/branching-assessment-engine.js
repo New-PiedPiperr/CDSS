@@ -595,6 +595,8 @@ export function processAnswer(state, questionId, answerValue) {
     questionId: question.id,
     question: question.question,
     answer: answerValue,
+    rawValue: selectedAnswer?.rawValue || answerValue,
+    bracketAnnotation: selectedAnswer?.bracketAnnotation || null,
     conditionContext: question.condition,
     category: question.category,
     effects: { ...effects },

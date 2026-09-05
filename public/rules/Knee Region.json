@@ -195,82 +195,6 @@
           ]
         },
         {
-          "id": "knee_patpaisynpfprunkne_q3",
-          "questionText": "How did the pain begin?",
-          "question": "How did the pain begin?",
-          "condition": "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)",
-          "category": "general",
-          "inputType": "select",
-          "source_line": 12,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Gradual, insidious",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "Sudden",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Gradual, insidious",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "Sudden",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ]
-        },
-        {
           "id": "knee_patpaisynpfprunkne_q4",
           "questionText": "What is the type of your pain?",
           "question": "What is the type of your pain?",
@@ -407,6 +331,166 @@
             },
             {
               "value": "Rest",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "knee_patpaisynpfprunkne_q22",
+          "questionText": "Is the pain localized specifically to the inferior pole of the patella?",
+          "question": "Is the pain localized specifically to the inferior pole of the patella?",
+          "condition": "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)",
+          "category": "general",
+          "inputType": "select",
+          "source_line": 69,
+          "isGating": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "options": [
+            {
+              "value": "Yes (Suggests patellar tendinopathy)",
+              "effects": {
+                "nextQuestionId": "knee_patten_q1",
+                "skipToQuestionId": "knee_patten_q1",
+                "triggeredConditions": [
+                  "Patellar Tendinopathy"
+                ],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            },
+            {
+              "value": "No (Supports PFPS diagnosis)",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            }
+          ],
+          "answers": [
+            {
+              "value": "Yes (Suggests patellar tendinopathy)",
+              "effects": {
+                "nextQuestionId": "knee_patten_q1",
+                "skipToQuestionId": "knee_patten_q1",
+                "triggeredConditions": [
+                  "Patellar Tendinopathy"
+                ],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            },
+            {
+              "value": "No (Supports PFPS diagnosis)",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            }
+          ]
+        },
+        {
+          "id": "knee_patpaisynpfprunkne_q3",
+          "questionText": "How did the pain begin?",
+          "question": "How did the pain begin?",
+          "condition": "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)",
+          "category": "general",
+          "inputType": "select",
+          "source_line": 12,
+          "isGating": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "options": [
+            {
+              "value": "Gradual, insidious",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            },
+            {
+              "value": "Sudden",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            }
+          ],
+          "answers": [
+            {
+              "value": "Gradual, insidious",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            },
+            {
+              "value": "Sudden",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -1681,82 +1765,6 @@
             },
             {
               "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ]
-        },
-        {
-          "id": "knee_patpaisynpfprunkne_q22",
-          "questionText": "Is the pain localized specifically to the inferior pole of the patella?",
-          "question": "Is the pain localized specifically to the inferior pole of the patella?",
-          "condition": "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)",
-          "category": "general",
-          "inputType": "select",
-          "source_line": 69,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes (Suggests patellar tendinopathy)",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "No (Supports PFPS diagnosis)",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes (Suggests patellar tendinopathy)",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "No (Supports PFPS diagnosis)",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,

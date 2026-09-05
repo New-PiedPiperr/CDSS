@@ -3,7 +3,7 @@ const nextConfig = {
   /* config options here */
 
  allowedDevOrigins: ['192.168.137.1'],
-
+  devIndicators: false,
   reactCompiler: true,
   images: {
     remotePatterns: [

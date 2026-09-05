@@ -297,41 +297,61 @@ export function cleanQuestionText(str) {
 
 /**
  * Clean leading option numbers/letters (e.g. 'a. ', 'b. ', 'a) ', '1. ')
+ * and parenthetical clinical annotations e.g. ' (Rule out nerve involvement)'
  */
 export function cleanOptionText(str) {
   if (typeof str !== 'string') return str;
-  return str.replace(/^\s*([a-zA-Z]|\d{1,2})[\.\)]\s+/, '').trim();
+  let clean = str.replace(/^\s*([a-zA-Z]|\d{1,2})[\.\)]\s+/, '').trim();
+  clean = clean.replace(/\s*\([^)]*\)\s*/g, ' ').trim();
+  return clean;
+}
+
+/**
+ * Extract bracket annotation from raw option string if present
+ */
+export function extractBracketText(str) {
+  if (typeof str !== 'string') return null;
+  const match = str.match(/\(([^)]+)\)/);
+  return match ? match[1] : null;
 }
 
 /**
  * Normalize a question to ensure consistent structure
  */
 function normalizeQuestion(rawQuestion, conditionName) {
-  const answers = (rawQuestion.options || rawQuestion.answers || []).map((a) => ({
-    value: cleanOptionText(typeof a === 'string' ? a : a.value),
-    effects: {
-      nextQuestionId: a.effects?.nextQuestionId || a.effects?.next_question_id || null,
-      skipToQuestionId:
-        a.effects?.skipToQuestionId || a.effects?.skip_to_question_id || null,
-      triggeredConditions:
-        a.effects?.triggeredConditions || a.effects?.triggered_conditions || [],
-      excludedConditions:
-        a.effects?.excludedConditions ||
-        a.effects?.excluded_conditions ||
-        // Map legacy rule_out to excludedConditions for backward compatibility
-        a.effects?.rule_out ||
-        [],
-      increaseLikelihood:
-        a.effects?.increaseLikelihood || a.effects?.increase_likelihood || [],
-      decreaseLikelihood:
-        a.effects?.decreaseLikelihood || a.effects?.decrease_likelihood || [],
-      redFlag: a.effects?.red_flag || a.effects?.redFlag || false,
-      redFlagText: a.effects?.red_flag_text || a.effects?.redFlagText || null,
-      terminateAssessment:
-        a.effects?.terminateAssessment || a.effects?.terminate_assessment || false,
-      optionColor: a.effects?.optionColor || a.effects?.option_color || null,
-    },
-  }));
+  const answers = (rawQuestion.options || rawQuestion.answers || []).map((a) => {
+    const rawVal = typeof a === 'string' ? a : a.value;
+    const cleanDisplay = cleanOptionText(rawVal);
+    const bracketAnnotation = extractBracketText(rawVal);
+
+    return {
+      value: cleanDisplay,
+      rawValue: rawVal,
+      bracketAnnotation,
+      effects: {
+        nextQuestionId: a.effects?.nextQuestionId || a.effects?.next_question_id || null,
+        skipToQuestionId:
+          a.effects?.skipToQuestionId || a.effects?.skip_to_question_id || null,
+        triggeredConditions:
+          a.effects?.triggeredConditions || a.effects?.triggered_conditions || [],
+        excludedConditions:
+          a.effects?.excludedConditions ||
+          a.effects?.excluded_conditions ||
+          // Map legacy rule_out to excludedConditions for backward compatibility
+          a.effects?.rule_out ||
+          [],
+        increaseLikelihood:
+          a.effects?.increaseLikelihood || a.effects?.increase_likelihood || [],
+        decreaseLikelihood:
+          a.effects?.decreaseLikelihood || a.effects?.decrease_likelihood || [],
+        redFlag: a.effects?.red_flag || a.effects?.redFlag || false,
+        redFlagText: a.effects?.red_flag_text || a.effects?.redFlagText || null,
+        terminateAssessment:
+          a.effects?.terminateAssessment || a.effects?.terminate_assessment || false,
+        optionColor: a.effects?.optionColor || a.effects?.option_color || null,
+      },
+    };
+  });
 
   return {
     id: rawQuestion.id,
@@ -842,7 +862,42 @@ export function processAnswer(state, questionId, answerValue) {
     });
   }
 
-  // Handle branching (nextQuestionId or skipToQuestionId)
+/**
+ * Find first unanswered question for a condition referenced in bracket text
+ * e.g. "Rule out nerve involvement", "Suspect sciatica", "Rule out fracture"
+ */
+function findTargetQuestionFromBracket(state, bracketText) {
+  if (!bracketText || typeof bracketText !== 'string') return null;
+
+  const term = bracketText
+    .replace(/^(rule out|suspect|suggests|consider|possible|rule out prior)\s+/i, '')
+    .trim()
+    .toLowerCase();
+
+  if (!term || term.length < 3) return null;
+
+  for (const cond of state.conditions) {
+    const condName = (cond.name || cond.condition || '').toLowerCase();
+    const isMatch =
+      condName.includes(term) ||
+      term.split(/[\/\s]/).some((t) => t.length >= 4 && condName.includes(t));
+
+    if (isMatch) {
+      const qIds = state.conditionQuestions.get(cond.name || cond.condition);
+      if (qIds && qIds.length > 0) {
+        for (const qId of qIds) {
+          if (!state.answeredQuestions.some((aq) => aq.questionId === qId)) {
+            return qId;
+          }
+        }
+      }
+    }
+  }
+
+  return null;
+}
+
+  // Handle branching (nextQuestionId or skipToQuestionId or Bracket Condition Jump)
   if (effects.nextQuestionId) {
     newState.pendingJump = effects.nextQuestionId;
   } else if (effects.skipToQuestionId) {
@@ -854,6 +909,16 @@ export function processAnswer(state, questionId, answerValue) {
       for (let i = currentIndex + 1; i < targetIndex; i++) {
         newState.skippedQuestions.add(newState.questionOrder[i]);
       }
+    }
+  } else if (
+    selectedAnswer &&
+    !effects.redFlag &&
+    effects.optionColor !== 'red' &&
+    selectedAnswer.bracketAnnotation
+  ) {
+    const targetQId = findTargetQuestionFromBracket(newState, selectedAnswer.bracketAnnotation);
+    if (targetQId) {
+      newState.pendingJump = targetQId;
     }
   }
 

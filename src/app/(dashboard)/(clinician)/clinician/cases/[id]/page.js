@@ -409,8 +409,16 @@ export default function CaseDetailsPage() {
                   </div>
                   <div className="flex-1">
                     <p className="font-semibold">{item.question}</p>
-                    <div className="mt-2 flex items-center gap-2">
+                    <div className="mt-2 flex flex-wrap items-center gap-2">
                       <span className="text-primary font-bold">{item.response}</span>
+                      {(item.bracketAnnotation || item.rawValue?.match(/\(([^)]+)\)/)?.[1]) && (
+                        <Badge
+                          variant="outline"
+                          className="border-blue-200 bg-blue-50 text-blue-700 text-xs dark:border-blue-800 dark:bg-blue-950/30 dark:text-blue-300 font-medium"
+                        >
+                          Rule-Out / Indication: {item.bracketAnnotation || item.rawValue?.match(/\(([^)]+)\)/)?.[1]}
+                        </Badge>
+                      )}
                       {item.effects?.red_flag && (
                         <Badge className="bg-destructive text-destructive-foreground text-xs">
                           <AlertTriangle className="mr-1 h-3 w-3" />

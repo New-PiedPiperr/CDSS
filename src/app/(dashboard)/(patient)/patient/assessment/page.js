@@ -252,61 +252,74 @@ export default function PatientAssessmentPage() {
             </p>
 
             {/* AI Analysis Summary */}
-            {aiAnalysis && (
-              <Card className="mx-auto mt-8 max-w-lg border-slate-200 dark:border-slate-800">
-                <CardContent className="p-6 text-left">
-                  <div className="mb-4 flex items-center gap-3">
-                    <div className="bg-primary/10 rounded-full p-2">
-                      <Stethoscope className="text-primary h-5 w-5" />
-                    </div>
-                    <div>
-                      <p className="font-bold">Preliminary Analysis</p>
-                      <p className="text-xs text-slate-500">
-                        AI-Generated (Pending Clinician Review)
-                      </p>
-                    </div>
-                  </div>
+            {aiAnalysis && (() => {
+              const aiFailed =
+                !aiAnalysis.confidenceScore ||
+                aiAnalysis.confidenceScore === 0 ||
+                (aiAnalysis.temporalDiagnosis || '').toLowerCase().includes('unable to generate');
 
-                  <div className="space-y-3">
-                     <div>
-                       <p className="text-sm font-medium text-slate-500">
-                         Possible Condition
-                       </p>
-                       <p className="text-lg font-semibold">
-                         {aiAnalysis.temporalDiagnosis}
-                       </p>
-                     </div>
-
-                    <div className="flex items-center gap-4">
-                      <div>
-                        <p className="text-sm font-medium text-slate-500">Confidence</p>
-                        <p className="font-semibold">{aiAnalysis.confidenceScore}%</p>
+              return (
+                <Card className="mx-auto mt-8 max-w-lg border-slate-200 dark:border-slate-800">
+                  <CardContent className="p-6 text-left">
+                    <div className="mb-4 flex items-center gap-3">
+                      <div className="bg-primary/10 rounded-full p-2">
+                        <Stethoscope className="text-primary h-5 w-5" />
                       </div>
                       <div>
-                        <p className="text-sm font-medium text-slate-500">Risk Level</p>
-                        <span
-                          className={`inline-block rounded-full px-2 py-0.5 text-xs font-bold ${
-                            aiAnalysis.riskLevel === 'Urgent'
-                              ? 'bg-red-100 text-red-700'
-                              : aiAnalysis.riskLevel === 'Moderate'
-                                ? 'bg-yellow-100 text-yellow-700'
-                                : 'bg-green-100 text-green-700'
-                          }`}
-                        >
-                          {aiAnalysis.riskLevel}
-                        </span>
+                        <p className="font-bold">Preliminary Analysis</p>
+                        <p className="text-xs text-slate-500">
+                          AI-Generated (Pending Clinician Review)
+                        </p>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Disclaimer */}
-                  <div className="mt-4 rounded-lg bg-amber-50 p-3 text-xs text-amber-800 dark:bg-amber-900/20 dark:text-amber-200">
-                    <AlertTriangle className="mb-1 inline h-4 w-4" />{' '}
-                    {aiAnalysis.disclaimer}
-                  </div>
-                </CardContent>
-              </Card>
-            )}
+                    {aiFailed ? (
+                      <div className="space-y-2">
+                        <p className="text-base font-semibold text-slate-700 dark:text-slate-200">
+                          We were unable to complete your analysis at this time.
+                        </p>
+                        <p className="text-sm text-slate-500 dark:text-slate-400">
+                          Your clinician will review your responses and get back to you shortly.
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="space-y-3">
+                        <div>
+                          <p className="text-sm font-medium text-slate-500">Possible Condition</p>
+                          <p className="text-lg font-semibold">{aiAnalysis.temporalDiagnosis}</p>
+                        </div>
+                        <div className="flex items-center gap-4">
+                          <div>
+                            <p className="text-sm font-medium text-slate-500">Confidence</p>
+                            <p className="font-semibold">{aiAnalysis.confidenceScore}%</p>
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-slate-500">Risk Level</p>
+                            <span
+                              className={`inline-block rounded-full px-2 py-0.5 text-xs font-bold ${
+                                aiAnalysis.riskLevel === 'Urgent'
+                                  ? 'bg-red-100 text-red-700'
+                                  : aiAnalysis.riskLevel === 'Moderate'
+                                    ? 'bg-yellow-100 text-yellow-700'
+                                    : 'bg-green-100 text-green-700'
+                              }`}
+                            >
+                              {aiAnalysis.riskLevel}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Disclaimer */}
+                    <div className="mt-4 rounded-lg bg-amber-50 p-3 text-xs text-amber-800 dark:bg-amber-900/20 dark:text-amber-200">
+                      <AlertTriangle className="mb-1 inline h-4 w-4" />{' '}
+                      {aiAnalysis.disclaimer}
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })()}
 
             {/* Red Flags Notice */}
             {submissionResult?.redFlagsCount > 0 && (

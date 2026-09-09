@@ -295,8 +295,16 @@ export async function POST(req) {
         temporalDiagnosis: therapistFacingResult.temporalDiagnosis,
         confidenceScore: therapistFacingResult.confidenceScore,
         riskLevel: therapistFacingResult.riskLevel,
-        reasoning: therapistFacingResult.reasoning,
-        differentialDiagnoses: aiAnalysisResult.differentialDiagnoses || [],
+        // Normalize to [String] — AI may return rich objects (SOAP-style) instead of strings
+        reasoning: (Array.isArray(therapistFacingResult.reasoning)
+          ? therapistFacingResult.reasoning
+          : [therapistFacingResult.reasoning]
+        )
+          .filter(Boolean)
+          .map((r) => (typeof r === 'string' ? r : JSON.stringify(r))),
+        differentialDiagnoses: (aiAnalysisResult.differentialDiagnoses || []).map((d) =>
+          typeof d === 'string' ? d : d?.name || JSON.stringify(d)
+        ),
         isProvisional: true, // ALWAYS provisional - medical disclaimer requirement
         disclaimer:
           'This is a preliminary AI-generated assessment and not a final diagnosis. ' +

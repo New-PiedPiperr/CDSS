@@ -479,52 +479,7 @@
               }
             },
             {
-              "value": "no",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "Low",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "Medium",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "High",
+              "value": "No",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -556,7 +511,7 @@
               }
             },
             {
-              "value": "no",
+              "value": "No",
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
@@ -569,7 +524,22 @@
                 "terminateAssessment": false,
                 "notes": null
               }
-            },
+            }
+          ],
+          "patientVisible": true
+        },
+        {
+          "id": "elbow_genass_q6_level",
+          "questionText": "Describe the level of your repetitive activities involving the forearm prior to this condition",
+          "question": "Describe the level of your repetitive activities involving the forearm prior to this condition",
+          "condition": "General Assessment",
+          "category": "general",
+          "inputType": "select",
+          "source_line": 23,
+          "isGating": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "options": [
             {
               "value": "Low",
               "effects": {
@@ -605,6 +575,26 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
+                "triggeredConditions": [
+                  "General Assessment"
+                ],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            }
+          ],
+          "answers": [
+            {
+              "value": "Low",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
                 "increaseLikelihood": [],
@@ -614,9 +604,41 @@
                 "terminateAssessment": false,
                 "notes": null
               }
+            },
+            {
+              "value": "Medium",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            },
+            {
+              "value": "High",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [
+                  "General Assessment"
+                ],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
             }
-          ],
-          "patientVisible": true
+          ]
         },
         {
           "id": "elbow_genass_q7",
@@ -1070,21 +1092,6 @@
                 "terminateAssessment": false,
                 "notes": "Could be both"
               }
-            },
-            {
-              "value": "Check if muscle bulk in hand is normal",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Extreme cases may include atrophy"
-              }
             }
           ],
           "answers": [
@@ -1116,21 +1123,6 @@
                 "redFlagText": null,
                 "terminateAssessment": false,
                 "notes": "Could be both"
-              }
-            },
-            {
-              "value": "Check if muscle bulk in hand is normal",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Extreme cases may include atrophy"
               }
             }
           ],

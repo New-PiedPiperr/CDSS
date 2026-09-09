@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T23:18:11.507Z",
+  "generatedAt": "2026-09-09T13:38:18.737Z",
   "version": "1.0.0",
   "conditionTests": [
     {
@@ -265,18 +265,29 @@
       "condition": "CALCANEAL FRACTURES",
       "conditionId": "ankle_calcaneal_fractures",
       "recommendedTests": [
-        "Radiographic Confirmation",
-        "Clinical Assessment - Foot Compartment Syndrome"
+        "Radiographic Confirmation"
       ],
       "procedures": [
         {
           "testName": "Radiographic Confirmation",
           "procedure": "X-ray imaging to confirm fracture",
           "positiveSign": ""
-        },
+        }
+      ],
+      "confirmationMethods": [],
+      "clinicalObservations": []
+    },
+    {
+      "region": "ankle",
+      "condition": "Foot Compartment Syndrome",
+      "conditionId": "ankle_foot_compartment_syndrome",
+      "recommendedTests": [
+        "Clinical Assessment - Foot Compartment Syndrome"
+      ],
+      "procedures": [
         {
           "testName": "Clinical Assessment - Foot Compartment Syndrome",
-          "procedure": "Rule out foot compartment syndrome",
+          "procedure": "Refer for laboratory confirmation",
           "positiveSign": ""
         }
       ],
@@ -444,12 +455,24 @@
       "condition": "General Assessment",
       "conditionId": "elbow_general_assessment",
       "recommendedTests": [
-        "Clinical Assessment"
+        "Cozen’s Test",
+        "Mill’s Sign",
+        "Maudsley’s Test"
       ],
       "procedures": [
         {
-          "testName": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms",
+          "testName": "Cozen’s Test",
+          "procedure": "Patient makes a fist, pronates forearm, and extends wrist against examiner resistance with elbow in 90° flexion.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Mill’s Sign",
+          "procedure": "Patient closes hand, examiner fully extends elbow, pronates forearm, and flexes wrist.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Maudsley’s Test",
+          "procedure": "Examiner resists extension of middle finger (third digit) distal to PIP joint.",
           "positiveSign": ""
         }
       ],
@@ -461,12 +484,18 @@
       "condition": "Ulnar Nerve Entrapment",
       "conditionId": "elbow_ulnar_nerve_entrapment",
       "recommendedTests": [
-        "Clinical Observation - Hand Muscle Bulk"
+        "Tinel’s Sign at Cubital Tunnel",
+        "Elbow Flexion Test"
       ],
       "procedures": [
         {
-          "testName": "Clinical Observation - Hand Muscle Bulk",
-          "procedure": "Check if muscle bulk in hand is normal (extreme cases may include atrophy)",
+          "testName": "Tinel’s Sign at Cubital Tunnel",
+          "procedure": "Examiner lightly taps ulnar nerve in groove between medial epicondyle and olecranon.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Elbow Flexion Test",
+          "procedure": "Patient holds elbow in maximal flexion with wrist in neutral for up to 3 minutes.",
           "positiveSign": ""
         }
       ],
@@ -478,12 +507,18 @@
       "condition": "Medial Ligament Injury",
       "conditionId": "elbow_medial_ligament_injury",
       "recommendedTests": [
-        "Valgus Stress Test"
+        "Valgus Stress Test",
+        "Moving Valgus Stress Test"
       ],
       "procedures": [
         {
           "testName": "Valgus Stress Test",
-          "procedure": "Place forearm in supine position, flex elbow up till about 30 deg. Palpate MCL and apply lateral pressure (abduction). Positive test: increased laxity of MCL and pain.",
+          "procedure": "Forearm supinated, elbow flexed to 25°–30°. Examiner stabilizes arm and applies valgus stress to forearm.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Moving Valgus Stress Test",
+          "procedure": "Examiner applies constant valgus torque while flexing and extending elbow between 30° and 120°.",
           "positiveSign": ""
         }
       ],
@@ -532,179 +567,150 @@
     },
     {
       "region": "hip",
-      "condition": "General Assessment",
-      "conditionId": "hip_general_assessment",
+      "condition": "HIP OSTEOARTHRITIS (Hip OA)",
+      "conditionId": "hip_hip_osteoarthritis_(hip_oa)",
       "recommendedTests": [
-        "Clinical Assessment"
-      ],
-      "procedures": [
-        {
-          "testName": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms",
-          "positiveSign": ""
-        }
-      ],
-      "confirmationMethods": [],
-      "clinicalObservations": []
-    },
-    {
-      "region": "hip",
-      "condition": "Hip Osteoarthritis",
-      "conditionId": "hip_hip_osteoarthritis",
-      "recommendedTests": [
-        "FABER Test (Patrick's Test)",
+        "FABER Test (Patrick’s Test)",
         "FADIR Test",
         "Scour Test",
         "Log Roll Test",
-        "Trendelenburg Test",
-        "Radiographic Confirmation"
-      ],
-      "procedures": [
-        {
-          "testName": "FABER Test (Patrick's Test)",
-          "procedure": "Flexion, abduction, external rotation. If positive, indicates hip joint pathology such as OA.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "FADIR Test",
-          "procedure": "Flexion, adduction, internal rotation. If positive, indicates intra-articular pathology (OA or FAI).",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Scour Test",
-          "procedure": "Examiner applies axial load while moving the hip in a circular motion. If positive, suggests hip joint degeneration (OA).",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Log Roll Test",
-          "procedure": "Examiner gently rolls the leg internally and externally. If positive, indicates intra-articular hip pathology.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Trendelenburg Test",
-          "procedure": "Patient stands on one leg. If positive, indicates gluteus medius weakness associated with hip OA.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Radiographic Confirmation",
-          "procedure": "Check for joint space narrowing, osteophyte formation, and subchondral sclerosis",
-          "positiveSign": ""
-        }
-      ],
-      "confirmationMethods": [],
-      "clinicalObservations": []
-    },
-    {
-      "region": "hip",
-      "condition": "Greater Trochanteric Pain Syndrome",
-      "conditionId": "hip_greater_trochanteric_pain_syndrome",
-      "recommendedTests": [
-        "Single-Leg Stance Test",
-        "Resisted External Derotation Test",
-        "Ober's Test",
         "Trendelenburg Test"
       ],
       "procedures": [
         {
-          "testName": "Single-Leg Stance Test",
-          "procedure": "Patient stands on the affected leg. Positive sign = pain over the greater trochanter.",
+          "testName": "FABER Test (Patrick’s Test)",
+          "procedure": "Patient is supine. Affected leg is placed in flexion, abduction, and external rotation (figure-4). Examiner applies gentle downward pressure on knee while stabilizing opposite ASIS.",
           "positiveSign": ""
         },
-        {
-          "testName": "Resisted External Derotation Test",
-          "procedure": "Patient resists external rotation of the hip. Positive sign = pain at the greater trochanteric region.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Ober's Test",
-          "procedure": "Patient lies on unaffected side. Examiner extends and abducts the hip, then slowly lowers the leg. Positive sign = leg remains elevated and does not drop.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Trendelenburg Test",
-          "procedure": "Patient stands on one leg. Positive sign = pelvis drops on the contralateral side, indicating gluteal weakness.",
-          "positiveSign": ""
-        }
-      ],
-      "confirmationMethods": [],
-      "clinicalObservations": []
-    },
-    {
-      "region": "hip",
-      "condition": "Femoroacetabular Impingement",
-      "conditionId": "hip_femoroacetabular_impingement",
-      "recommendedTests": [
-        "FADIR Test",
-        "FABER Test (Patrick's Test)",
-        "Scour Test",
-        "Internal Rotation Overpressure Test",
-        "Imaging"
-      ],
-      "procedures": [
         {
           "testName": "FADIR Test",
-          "procedure": "Flexion, adduction, internal rotation. If positive, indicates femoroacetabular impingement or intra-articular pathology.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "FABER Test (Patrick's Test)",
-          "procedure": "Flexion, abduction, external rotation. If positive, indicates hip joint pathology.",
+          "procedure": "Patient is supine. Examiner flexes hip to 90°, then adducts and internally rotates hip.",
           "positiveSign": ""
         },
         {
           "testName": "Scour Test",
-          "procedure": "Apply axial load through the hip while circumducting. If positive, suggests intra-articular FAI.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Internal Rotation Overpressure Test",
-          "procedure": "Passively internally rotate the hip beyond its end range. Positive sign = pain or restricted motion suggesting FAI.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Imaging",
-          "procedure": "X-ray or MRI to confirm cam/pincer morphology and associated labral pathology.",
-          "positiveSign": ""
-        }
-      ],
-      "confirmationMethods": [],
-      "clinicalObservations": []
-    },
-    {
-      "region": "hip",
-      "condition": "Hip Labral Tear",
-      "conditionId": "hip_hip_labral_tear",
-      "recommendedTests": [
-        "FADIR Test",
-        "Scour Test",
-        "Log Roll Test",
-        "Thomas Test (Modified)",
-        "Imaging"
-      ],
-      "procedures": [
-        {
-          "testName": "FADIR Test",
-          "procedure": "Flexion, adduction, internal rotation. If positive, indicates intra-articular pathology such as labral tear.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Scour Test",
-          "procedure": "Apply axial load while moving the hip in a circular motion. If positive, suggests labral tear.",
+          "procedure": "Patient is supine. Examiner flexes and adducts hip, applies axial compression along femur while sweeping hip in an arc between adduction/internal rotation and abduction/external rotation.",
           "positiveSign": ""
         },
         {
           "testName": "Log Roll Test",
-          "procedure": "Passively roll the hip internally and externally. Positive sign = pain suggesting intra-articular pathology.",
+          "procedure": "Patient is supine with legs extended. Examiner gently rolls the entire leg into internal and external rotation.",
           "positiveSign": ""
         },
         {
-          "testName": "Thomas Test (Modified)",
-          "procedure": "Assess hip flexion contracture and labral conflict. Positive sign = restricted hip extension or pain.",
+          "testName": "Trendelenburg Test",
+          "procedure": "Patient stands unsupported on affected leg for 30 seconds. Examiner observes pelvic tilt.",
+          "positiveSign": ""
+        }
+      ],
+      "confirmationMethods": [],
+      "clinicalObservations": []
+    },
+    {
+      "region": "hip",
+      "condition": "GREATER TROCHANTERIC PAIN SYNDROME (GTPS)",
+      "conditionId": "hip_greater_trochanteric_pain_syndrome_(gtps)",
+      "recommendedTests": [
+        "Single-Leg Stance Test",
+        "Resisted External Derotation Test",
+        "Ober’s Test",
+        "Trendelenburg Test",
+        "Greater Trochanter Palpation Test"
+      ],
+      "procedures": [
+        {
+          "testName": "Single-Leg Stance Test",
+          "procedure": "Patient stands on affected leg unsupported for up to 30 seconds.",
           "positiveSign": ""
         },
         {
-          "testName": "Imaging",
-          "procedure": "MRI arthrogram to visualize labral tear and chondral damage.",
+          "testName": "Resisted External Derotation Test",
+          "procedure": "Patient lies supine with hip and knee flexed to 90°. Examiner passively externally rotates hip, then asks patient to return to neutral against resistance.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Ober’s Test",
+          "procedure": "Patient lies on unaffected side. Examiner extends and abducts affected hip, then allows leg to drop into adduction.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Trendelenburg Test",
+          "procedure": "Patient stands on affected leg while examiner observes contralateral pelvic level.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Greater Trochanter Palpation Test",
+          "procedure": "Examiner applies firm direct palpation over lateral greater trochanter and gluteal tendon insertions.",
+          "positiveSign": ""
+        }
+      ],
+      "confirmationMethods": [],
+      "clinicalObservations": []
+    },
+    {
+      "region": "hip",
+      "condition": "FEMOROACETABULAR IMPINGEMENT (FAI)",
+      "conditionId": "hip_femoroacetabular_impingement_(fai)",
+      "recommendedTests": [
+        "FADIR Test (Flexion, Adduction, Internal Rotation)",
+        "FABER Test (Patrick’s Test)",
+        "Scour Test",
+        "Internal Rotation Overpressure Test"
+      ],
+      "procedures": [
+        {
+          "testName": "FADIR Test (Flexion, Adduction, Internal Rotation)",
+          "procedure": "Patient is supine. Examiner flexes hip to 90°, then adducts and internally rotates the hip.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "FABER Test (Patrick’s Test)",
+          "procedure": "Patient is supine with foot on opposite knee (figure-4). Examiner applies downward pressure on ipsilateral knee.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Scour Test",
+          "procedure": "Patient is supine. Examiner flexes and adducts hip, then applies axial compression while sweeping in an arc.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Internal Rotation Overpressure Test",
+          "procedure": "Patient is supine with hip flexed to 90°. Examiner applies internal rotation with terminal overpressure.",
+          "positiveSign": ""
+        }
+      ],
+      "confirmationMethods": [],
+      "clinicalObservations": []
+    },
+    {
+      "region": "hip",
+      "condition": "HIP LABRAL TEAR",
+      "conditionId": "hip_hip_labral_tear",
+      "recommendedTests": [
+        "FADIR Test (Labral Impingement)",
+        "Scour Test (Axial Load)",
+        "Log Roll Test",
+        "Modified Thomas Test"
+      ],
+      "procedures": [
+        {
+          "testName": "FADIR Test (Labral Impingement)",
+          "procedure": "Patient is supine. Examiner passively flexes, adducts, and internally rotates hip.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Scour Test (Axial Load)",
+          "procedure": "Patient is supine. Examiner applies axial load through femur while moving hip in circular compression arcs.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Log Roll Test",
+          "procedure": "Patient is supine with legs extended. Examiner gently rolls leg into full internal and external rotation.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Modified Thomas Test",
+          "procedure": "Patient lies supine at edge of table, pulling one knee to chest while affected leg hangs extended.",
           "positiveSign": ""
         }
       ],
@@ -719,27 +725,27 @@
         "Log Roll Test",
         "FADIR Test",
         "FABER Test",
-        "Imaging"
+        "MRI of Bilateral Hips (Gold Standard)"
       ],
       "procedures": [
         {
           "testName": "Log Roll Test",
-          "procedure": "Passively roll the hip. Positive sign = pain with motion, suggesting intra-articular pathology.",
+          "procedure": "Patient is supine with legs extended. Examiner gently rolls the leg internally and externally.",
           "positiveSign": ""
         },
         {
           "testName": "FADIR Test",
-          "procedure": "Flexion, adduction, internal rotation. If positive, indicates intra-articular pathology.",
+          "procedure": "Patient is supine. Examiner flexes, adducts, and internally rotates hip.",
           "positiveSign": ""
         },
         {
           "testName": "FABER Test",
-          "procedure": "Flexion, abduction, external rotation. If positive, indicates hip joint pathology.",
+          "procedure": "Patient is supine in figure-4 position. Examiner applies downward pressure on knee.",
           "positiveSign": ""
         },
         {
-          "testName": "Imaging",
-          "procedure": "MRI is definitive for early AVN detection. X-ray for late-stage collapse.",
+          "testName": "MRI of Bilateral Hips (Gold Standard)",
+          "procedure": "T1/T2-weighted MRI of pelvis and both femoral heads.",
           "positiveSign": ""
         }
       ],
@@ -748,27 +754,27 @@
     },
     {
       "region": "hip",
-      "condition": "Snapping Hip Syndrome",
+      "condition": "SNAPPING HIP SYNDROME",
       "conditionId": "hip_snapping_hip_syndrome",
       "recommendedTests": [
         "Dynamic Hip Movement Test",
-        "Ober's Test (External Snapping)",
+        "Ober’s Test (External Snapping)",
         "Thomas Test (Internal Snapping)"
       ],
       "procedures": [
         {
           "testName": "Dynamic Hip Movement Test",
-          "procedure": "Patient actively moves the hip through flexion/extension and rotation. Positive sign = palpable/audible snap over the hip.",
+          "procedure": "Patient actively flexes, abducts, and externally rotates hip, then returns to extension and adduction while examiner palpates.",
           "positiveSign": ""
         },
         {
-          "testName": "Ober's Test (External Snapping)",
-          "procedure": "Patient side-lying, hip abducted and extended, then lowered. Positive sign = snap over greater trochanter in IT band type.",
+          "testName": "Ober’s Test (External Snapping)",
+          "procedure": "Patient lies on side. Examiner extends and abducts affected hip, then allows leg to drop toward table.",
           "positiveSign": ""
         },
         {
           "testName": "Thomas Test (Internal Snapping)",
-          "procedure": "Patient supine, hip flexed to chest, then extended. Positive sign = snap over iliopsoas tendon during extension.",
+          "procedure": "Patient lies supine holding opposite knee to chest while affected hip is extended from flexion.",
           "positiveSign": ""
         }
       ],
@@ -777,70 +783,12 @@
     },
     {
       "region": "knee",
-      "condition": "General Assessment",
-      "conditionId": "knee_general_assessment",
-      "recommendedTests": [
-        "Clinical Assessment"
-      ],
-      "procedures": [
-        {
-          "testName": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms",
-          "positiveSign": ""
-        }
-      ],
-      "confirmationMethods": [],
-      "clinicalObservations": []
-    },
-    {
-      "region": "knee",
-      "condition": "Septic Arthritis",
-      "conditionId": "knee_septic_arthritis",
-      "recommendedTests": [
-        "Passive Joint Motion Test",
-        "Joint Effusion Test",
-        "Blood Tests",
-        "X-ray",
-        "MRI"
-      ],
-      "procedures": [
-        {
-          "testName": "Passive Joint Motion Test",
-          "procedure": "Examiner gently moves the knee through passive flexion and extension. Severe pain with passive movement is positive.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Joint Effusion Test",
-          "procedure": "Examiner strokes medial and lateral knee. Significant fluid accumulation suggests infection.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Blood Tests",
-          "procedure": "Elevated ESR, CRP, WBC count; identifies causative organism",
-          "positiveSign": ""
-        },
-        {
-          "testName": "X-ray",
-          "procedure": "May show joint swelling (early), joint destruction (late)",
-          "positiveSign": ""
-        },
-        {
-          "testName": "MRI",
-          "procedure": "Detects early joint infection and soft tissue involvement",
-          "positiveSign": ""
-        }
-      ],
-      "confirmationMethods": [],
-      "clinicalObservations": []
-    },
-    {
-      "region": "knee",
-      "condition": "Patellofemoral Pain Syndrome",
-      "conditionId": "knee_patellofemoral_pain_syndrome",
+      "condition": "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)",
+      "conditionId": "knee_patellofemoral_pain_syndrome_(pfps_–_“runner’s_knee”)",
       "recommendedTests": [
         "Resisted Quadriceps Test",
         "Step-Down Test",
-        "Clarke's Test (Patellar Grind Test)",
+        "Clarke’s Test (Patellar Grind Test)",
         "Patellar Apprehension Test",
         "Patellar Tilt Test",
         "Waldron Test",
@@ -849,37 +797,37 @@
       "procedures": [
         {
           "testName": "Resisted Quadriceps Test",
-          "procedure": "Patient seated with knee slightly flexed. Examiner applies resistance as the patient extends the knee. If positive, indicates patellofemoral joint irritation.",
+          "procedure": "Patient is seated with knee slightly flexed. Examiner applies resistance as the patient extends the knee.",
           "positiveSign": ""
         },
         {
           "testName": "Step-Down Test",
-          "procedure": "Patient stands on a 20 cm step and slowly lowers the contralateral heel to the ground while examiner observes knee alignment. If positive, suggests PFPS and poor lower limb control.",
+          "procedure": "Patient stands on a 20 cm step and slowly lowers contralateral heel to the ground while examiner observes alignment.",
           "positiveSign": ""
         },
         {
-          "testName": "Clarke's Test (Patellar Grind Test)",
-          "procedure": "Patient supine with knee extended. Examiner applies gentle downward pressure on the superior pole of the patella while patient contracts the quadriceps. If positive, indicates patellofemoral joint dysfunction.",
+          "testName": "Clarke’s Test (Patellar Grind Test)",
+          "procedure": "Patient is supine with knee extended. Examiner applies gentle downward pressure on superior pole of patella while patient contracts quadriceps.",
           "positiveSign": ""
         },
         {
           "testName": "Patellar Apprehension Test",
-          "procedure": "Patient supine and relaxed. Examiner gently pushes the patella laterally. If positive, indicates patellar instability.",
+          "procedure": "Patient is supine and relaxed. Examiner pushes the patella laterally.",
           "positiveSign": ""
         },
         {
           "testName": "Patellar Tilt Test",
-          "procedure": "Examiner lifts the lateral edge of the patella while stabilizing the medial edge. If positive, limited tilt or pain indicates tight lateral structures or OA changes.",
+          "procedure": "Patient is supine with knee extended. Examiner lifts the lateral edge of the patella.",
           "positiveSign": ""
         },
         {
           "testName": "Waldron Test",
-          "procedure": "Patient seated and actively flexes and extends the knee while examiner palpates the patellofemoral joint. If positive, indicates PFPS or patellofemoral joint irritation.",
+          "procedure": "Patient is seated and actively flexes and extends knee while examiner palpates patellofemoral joint.",
           "positiveSign": ""
         },
         {
           "testName": "Patellar Glide Test",
-          "procedure": "Patient supine with knee extended. Examiner glides the patella medially and laterally. If positive, indicates abnormal patellar tracking.",
+          "procedure": "Patient is supine with knee extended. Examiner glides patella medially and laterally.",
           "positiveSign": ""
         }
       ],
@@ -892,35 +840,41 @@
       "conditionId": "knee_meniscus_tear",
       "recommendedTests": [
         "McMurray Test",
-        "Apley's Compression Test",
+        "Apley’s Compression Test",
         "Thessaly Test",
+        "Joint Line Tenderness Test",
         "Bounce Home Test",
-        "Ege's Test"
+        "Ege’s Test"
       ],
       "procedures": [
         {
           "testName": "McMurray Test",
-          "procedure": "Patient supine. Examiner flexes the hip and knee fully, then rotates the tibia internally and externally while extending the knee. If positive, suggests meniscal tear.",
+          "procedure": "Patient is supine. Examiner flexes the hip and knee fully, then rotates the tibia internally and externally while extending the knee.",
           "positiveSign": ""
         },
         {
-          "testName": "Apley's Compression Test",
-          "procedure": "Patient lies prone with knee flexed to 90°. Examiner applies downward pressure along the tibia while rotating it internally and externally. If positive, indicates meniscal injury.",
+          "testName": "Apley’s Compression Test",
+          "procedure": "Patient lies prone with knee flexed to 90°. Examiner applies downward axial pressure along tibia while rotating it internally and externally.",
           "positiveSign": ""
         },
         {
           "testName": "Thessaly Test",
-          "procedure": "Patient stands on one leg with knee slightly flexed (~20°). Patient rotates the body and knee internally and externally three times. If positive, indicates possible meniscal pathology.",
+          "procedure": "Patient stands on one leg with knee flexed to 20°. Patient rotates body and knee internally and externally three times.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Joint Line Tenderness Test",
+          "procedure": "Examiner palpates along medial and lateral tibiofemoral joint lines with knee flexed to 90°.",
           "positiveSign": ""
         },
         {
           "testName": "Bounce Home Test",
-          "procedure": "Patient supine. Examiner fully flexes the knee and then allows it to passively extend. If positive, suggests a displaced meniscal fragment.",
+          "procedure": "Patient is supine. Examiner fully flexes the knee and then allows it to passively extend.",
           "positiveSign": ""
         },
         {
-          "testName": "Ege's Test",
-          "procedure": "Patient stands with knees flexed and externally rotates both feet to test the medial meniscus; internally rotates both feet to test the lateral meniscus. If positive, pain or clicking occurs along the joint line.",
+          "testName": "Ege’s Test",
+          "procedure": "Patient squats with knees flexed and externally rotates feet (medial meniscus) or internally rotates feet (lateral meniscus).",
           "positiveSign": ""
         }
       ],
@@ -938,92 +892,12 @@
       "procedures": [
         {
           "testName": "Resisted Contraction Test",
-          "procedure": "Patient contracts the affected muscle against resistance at mid-range. Positive if pain is reproduced at the site.",
+          "procedure": "Patient contracts the affected muscle against examiner resistance at mid-range.",
           "positiveSign": ""
         },
         {
           "testName": "Passive Stretch Test",
-          "procedure": "Examiner stretches the affected muscle slowly. Positive if pain is reproduced.",
-          "positiveSign": ""
-        }
-      ],
-      "confirmationMethods": [],
-      "clinicalObservations": []
-    },
-    {
-      "region": "knee",
-      "condition": "ACL Injury",
-      "conditionId": "knee_acl_injury",
-      "recommendedTests": [
-        "Lachman Test",
-        "Anterior Drawer Test"
-      ],
-      "procedures": [
-        {
-          "testName": "Lachman Test",
-          "procedure": "Knee flexed ~30°, examiner stabilizes femur and pulls tibia anteriorly at the knee. Positive sign = soft endpoint or increased anterior tibial translation indicates ACL tear.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Anterior Drawer Test",
-          "procedure": "Knee flexed 90°, examiner pulls tibia anteriorly at the knee. Positive sign = increased anterior translation indicates ACL injury.",
-          "positiveSign": ""
-        }
-      ],
-      "confirmationMethods": [],
-      "clinicalObservations": []
-    },
-    {
-      "region": "knee",
-      "condition": "MCL Injury",
-      "conditionId": "knee_mcl_injury",
-      "recommendedTests": [
-        "Valgus Stress Test"
-      ],
-      "procedures": [
-        {
-          "testName": "Valgus Stress Test",
-          "procedure": "With pt supine, knee flexed to 30°, examiner stabilizes the femur and applies a valgus force to the knee. Positive sign = pain or gapping at the medial knee joint line indicates MCL injury.",
-          "positiveSign": ""
-        }
-      ],
-      "confirmationMethods": [],
-      "clinicalObservations": []
-    },
-    {
-      "region": "knee",
-      "condition": "LCL Injury",
-      "conditionId": "knee_lcl_injury",
-      "recommendedTests": [
-        "Varus Stress Test"
-      ],
-      "procedures": [
-        {
-          "testName": "Varus Stress Test",
-          "procedure": "With pt supine, knee flexed to 30°, examiner stabilizes the femur and applies a varus force to the knee. Positive sign = pain or gapping at the lateral knee joint line indicates LCL injury.",
-          "positiveSign": ""
-        }
-      ],
-      "confirmationMethods": [],
-      "clinicalObservations": []
-    },
-    {
-      "region": "knee",
-      "condition": "PCL Injury",
-      "conditionId": "knee_pcl_injury",
-      "recommendedTests": [
-        "Posterior Drawer Test",
-        "Godfrey (Posterior Sag) Test"
-      ],
-      "procedures": [
-        {
-          "testName": "Posterior Drawer Test",
-          "procedure": "Knee flexed 90°, examiner pushes tibia posteriorly at the knee. Positive sign = posterior translation indicates PCL tear.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Godfrey (Posterior Sag) Test",
-          "procedure": "Hip and knee flexed 90°, examiner observes tibial plateau at the knee. Positive sign = sagging tibia compared to contralateral knee indicates PCL injury.",
+          "procedure": "Examiner stretches the affected muscle slowly into its lengthened position.",
           "positiveSign": ""
         }
       ],
@@ -1035,30 +909,36 @@
       "condition": "Knee Osteoarthritis",
       "conditionId": "knee_knee_osteoarthritis",
       "recommendedTests": [
-        "Patellofemoral Compression Test (Grind Test)",
-        "Patellar Tilt Test",
-        "Crepitus Test",
-        "Radiographic Confirmation"
+        "Patellar Grind Test (Clarke’s Test)",
+        "Passive Patellar Tilt Test",
+        "Crepitus Assessment (Full ROM)",
+        "Joint Line Tenderness",
+        "Functional Pain Assessment"
       ],
       "procedures": [
         {
-          "testName": "Patellofemoral Compression Test (Grind Test)",
-          "procedure": "Patient supine with knee extended. Examiner applies downward pressure on the patella while asking the patient to contract the quadriceps. Positive sign = pain or crepitus at the patellofemoral joint.",
+          "testName": "Patellar Grind Test (Clarke’s Test)",
+          "procedure": "Patient supine with knee extended. Examiner applies downward pressure on patella while patient contracts quadriceps.",
           "positiveSign": ""
         },
         {
-          "testName": "Patellar Tilt Test",
-          "procedure": "Examiner lifts the lateral edge of the patella while stabilizing the medial edge. Positive sign = limited tilt or pain indicates tight lateral structures or OA changes.",
+          "testName": "Passive Patellar Tilt Test",
+          "procedure": "Examiner lifts lateral edge of patella while stabilizing medial edge.",
           "positiveSign": ""
         },
         {
-          "testName": "Crepitus Test",
-          "procedure": "Examiner moves the knee through full flexion and extension, palpating and listening for audible or palpable crepitus.",
+          "testName": "Crepitus Assessment (Full ROM)",
+          "procedure": "Examiner moves knee through full active and passive flexion and extension while palpating joint.",
           "positiveSign": ""
         },
         {
-          "testName": "Radiographic Confirmation",
-          "procedure": "Check for joint space narrowing, osteophyte formation, subchondral sclerosis, and cyst formation",
+          "testName": "Joint Line Tenderness",
+          "procedure": "Examiner palpates medial and lateral tibiofemoral joint lines.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Functional Pain Assessment",
+          "procedure": "Ask patient to perform loaded activities such as squatting, step-ups, or sit-to-stand.",
           "positiveSign": ""
         }
       ],
@@ -1067,27 +947,39 @@
     },
     {
       "region": "knee",
-      "condition": "Patellar Dislocation",
-      "conditionId": "knee_patellar_dislocation",
+      "condition": "PATELLAR DISLOCATION / SUBLUXATION",
+      "conditionId": "knee_patellar_dislocation_/_subluxation",
       "recommendedTests": [
-        "Patellar Apprehension Test",
-        "Patellar Hyper-mobility Test",
-        "Imaging"
+        "Patella Apprehension Test",
+        "Patella Tracking Assessment",
+        "Patellar Hypermobility Test",
+        "Q-Angle Measurement",
+        "Observation for Patella Alta / Genu Recurvatum"
       ],
       "procedures": [
         {
-          "testName": "Patellar Apprehension Test",
-          "procedure": "Patient lies supine with the knee extended. Examiner gently pushes the patella laterally. Positive sign = apprehension or pain indicating abnormal patellar tracking.",
+          "testName": "Patella Apprehension Test",
+          "procedure": "Patient lies supine with knee extended. Examiner gently pushes patella laterally.",
           "positiveSign": ""
         },
         {
-          "testName": "Patellar Hyper-mobility Test",
-          "procedure": "Patient lies supine, knee extended. Examiner gently displaces patella medially and laterally. Positive sign = excessive hypermobility or abnormal motion.",
+          "testName": "Patella Tracking Assessment",
+          "procedure": "Observe patella motion during active knee flexion and extension.",
           "positiveSign": ""
         },
         {
-          "testName": "Imaging",
-          "procedure": "Lateral and axial X-rays; MRI if soft tissue assessment needed. Positive sign = subluxation/dislocation, osteochondral fractures, or MPFL tear.",
+          "testName": "Patellar Hypermobility Test",
+          "procedure": "Patient lies supine, knee extended. Examiner gently displaces patella medially and laterally.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Q-Angle Measurement",
+          "procedure": "Measure angle between ASIS-to-patella center line and patella-to-tibial-tuberosity line with knee extended.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Observation for Patella Alta / Genu Recurvatum",
+          "procedure": "Inspect patellar height in full extension (Insall-Salvati ratio) and assess knee hyperextension.",
           "positiveSign": ""
         }
       ],
@@ -1099,36 +991,30 @@
       "condition": "Knee Fracture",
       "conditionId": "knee_knee_fracture",
       "recommendedTests": [
-        "Straight Leg Raise Test",
-        "Palpation Test for Patella Integrity",
-        "Active Knee Extension Test",
-        "Patellar Compression Test (Modified for fracture screening)",
-        "Radiographic Confirmation"
+        "Active Straight Leg Raise Test",
+        "Patellar Tap / Palpation Test",
+        "Ottawa Knee Rules Assessment",
+        "Tibial Plateau Palpation Test"
       ],
       "procedures": [
         {
-          "testName": "Straight Leg Raise Test",
-          "procedure": "Patient lies supine with both legs extended. Examiner asks the patient to lift the affected leg straight up without bending the knee. Positive sign = inability to lift the leg actively, indicating disruption of the extensor mechanism.",
+          "testName": "Active Straight Leg Raise Test",
+          "procedure": "Patient lies supine with legs extended. Examiner asks patient to lift affected leg straight up without bending knee.",
           "positiveSign": ""
         },
         {
-          "testName": "Palpation Test for Patella Integrity",
-          "procedure": "Patient lies supine with knee relaxed. Examiner palpates the patella gently using fingers to feel for tenderness, irregularity, or gap. Positive sign = localized severe tenderness, palpable gap, or irregularity.",
+          "testName": "Patellar Tap / Palpation Test",
+          "procedure": "Patient lies supine with knee relaxed. Examiner palpates patella gently feeling for gap, step-off, or bone fragment displacement.",
           "positiveSign": ""
         },
         {
-          "testName": "Active Knee Extension Test",
-          "procedure": "Patient sits or lies supine. Examiner asks patient to actively straighten the knee from a flexed position. Positive sign = inability or severe pain during active extension.",
+          "testName": "Ottawa Knee Rules Assessment",
+          "procedure": "Assess age (≥55), isolated patellar tenderness, fibular head tenderness, flexion <90°, or inability to bear weight 4 steps.",
           "positiveSign": ""
         },
         {
-          "testName": "Patellar Compression Test (Modified for fracture screening)",
-          "procedure": "Patient lies supine with knee extended. Examiner gently presses patella posteriorly toward femur. Positive sign = severe localized pain, suggesting patella fracture.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Radiographic Confirmation",
-          "procedure": "Imaging (X-ray – AP, Lateral, Skyline view). Positive sign = visible fracture line, displacement, or comminution.",
+          "testName": "Tibial Plateau Palpation Test",
+          "procedure": "Palpate medial and lateral tibial condyles and tibial plateau margins.",
           "positiveSign": ""
         }
       ],
@@ -1137,39 +1023,39 @@
     },
     {
       "region": "knee",
-      "condition": "Iliotibial Band Syndrome",
-      "conditionId": "knee_iliotibial_band_syndrome",
+      "condition": "ILIOTIBIAL BAND SYNDROME (ITBS)",
+      "conditionId": "knee_iliotibial_band_syndrome_(itbs)",
       "recommendedTests": [
-        "Noble Compression Test",
-        "Ober's Test",
-        "Renne Test",
+        "Noble’s Compression Test",
+        "Ober’s Test",
+        "Renne’s Test",
         "Modified Thomas Test",
-        "Palpation Test of Lateral Femoral Epicondyle"
+        "Lateral Epicondyle Palpation Test"
       ],
       "procedures": [
         {
-          "testName": "Noble Compression Test",
-          "procedure": "Patient lies supine. Examiner flexes knee to 90° and applies pressure over lateral femoral epicondyle while slowly extending the knee. Positive sign = pain at approximately 30° knee flexion.",
+          "testName": "Noble’s Compression Test",
+          "procedure": "Patient lies supine. Examiner flexes knee to 90° and applies pressure over lateral femoral epicondyle while slowly extending knee.",
           "positiveSign": ""
         },
         {
-          "testName": "Ober's Test",
-          "procedure": "Patient lies on unaffected side. Examiner extends and abducts the hip, then slowly lowers the leg. Positive sign = leg remains elevated and does not drop.",
+          "testName": "Ober’s Test",
+          "procedure": "Patient lies on unaffected side. Examiner extends and abducts hip, then slowly lowers the leg into adduction.",
           "positiveSign": ""
         },
         {
-          "testName": "Renne Test",
-          "procedure": "Patient stands and performs squat while examiner applies pressure over lateral femoral epicondyle. Positive sign = pain at approximately 30° knee flexion.",
+          "testName": "Renne’s Test",
+          "procedure": "Patient stands on affected leg and performs single-leg squat while examiner applies pressure over lateral femoral epicondyle.",
           "positiveSign": ""
         },
         {
           "testName": "Modified Thomas Test",
-          "procedure": "Patient lies supine at edge of table. Examiner observes hip and thigh position. Positive sign = tight lateral thigh indicating IT band tightness.",
+          "procedure": "Patient lies supine at edge of table, hugging contralateral knee to chest. Examiner assesses affected thigh position.",
           "positiveSign": ""
         },
         {
-          "testName": "Palpation Test of Lateral Femoral Epicondyle",
-          "procedure": "Examiner palpates lateral femoral epicondyle with knee flexed and extended.",
+          "testName": "Lateral Epicondyle Palpation Test",
+          "procedure": "Examiner palpates lateral femoral epicondyle with knee moved between 0° and 90° flexion.",
           "positiveSign": ""
         }
       ],
@@ -1184,33 +1070,33 @@
         "Decline Squat Test",
         "Resisted Knee Extension Test",
         "Single-Leg Decline Squat Test",
-        "Palpation Test",
-        "Hop Test"
+        "Patellar Tendon Palpation Test",
+        "Single-Leg Hop Test"
       ],
       "procedures": [
         {
           "testName": "Decline Squat Test",
-          "procedure": "Patient stands on 25° decline board and performs squat. Positive sign = localized pain at inferior pole of patella.",
+          "procedure": "Patient stands on a 25° decline board and performs double- or single-leg squat.",
           "positiveSign": ""
         },
         {
           "testName": "Resisted Knee Extension Test",
-          "procedure": "Patient sits with knee flexed. Examiner resists knee extension. Positive sign = localized tendon pain.",
+          "procedure": "Patient sits with knee flexed. Examiner applies isometric resistance to knee extension.",
           "positiveSign": ""
         },
         {
           "testName": "Single-Leg Decline Squat Test",
-          "procedure": "Patient performs single-leg squat on decline surface. Positive sign = reproduction of localized tendon pain.",
+          "procedure": "Patient performs single-leg squat on a 25° decline board, loading the extensor mechanism.",
           "positiveSign": ""
         },
         {
-          "testName": "Palpation Test",
-          "procedure": "Examiner palpates inferior and superior poles of patella. Positive sign = localized tenderness at tendon insertion.",
+          "testName": "Patellar Tendon Palpation Test",
+          "procedure": "Examiner palpates inferior pole of patella and body of patellar tendon with knee extended and flexed.",
           "positiveSign": ""
         },
         {
-          "testName": "Hop Test",
-          "procedure": "Patient performs repeated hopping on affected leg. Positive sign = localized tendon pain with loading.",
+          "testName": "Single-Leg Hop Test",
+          "procedure": "Patient performs repeated hops on the affected leg.",
           "positiveSign": ""
         }
       ],
@@ -1219,33 +1105,39 @@
     },
     {
       "region": "knee",
-      "condition": "Pes Anserine Bursitis",
+      "condition": "PES ANSERINE BURSITIS",
       "conditionId": "knee_pes_anserine_bursitis",
       "recommendedTests": [
         "Pes Anserinus Palpation Test",
         "Resisted Knee Flexion Test",
         "Resisted Hip Adduction Test",
-        "Hamstring Stretch Test"
+        "Hamstring Stretch Test",
+        "Joint Line Differentiation Test"
       ],
       "procedures": [
         {
           "testName": "Pes Anserinus Palpation Test",
-          "procedure": "Patient lies supine with knee extended. Examiner palpates 5–7 cm below medial joint line. Positive sign = localized tenderness.",
+          "procedure": "Patient lies supine with knee extended. Examiner palpates anteromedial proximal tibia, 5–7 cm below medial joint line.",
           "positiveSign": ""
         },
         {
           "testName": "Resisted Knee Flexion Test",
-          "procedure": "Patient flexes knee while examiner applies resistance. Positive sign = pain at pes anserinus region.",
+          "procedure": "Patient flexes knee from 90° while examiner applies manual resistance.",
           "positiveSign": ""
         },
         {
           "testName": "Resisted Hip Adduction Test",
-          "procedure": "Patient performs hip adduction while examiner applies resistance. Positive sign = pain at pes anserinus insertion.",
+          "procedure": "Patient performs hip adduction against examiner resistance.",
           "positiveSign": ""
         },
         {
           "testName": "Hamstring Stretch Test",
-          "procedure": "Examiner passively stretches hamstrings. Positive sign = pain at pes anserinus region.",
+          "procedure": "Examiner passively extends knee with hip flexed, stretching hamstring tendons.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Joint Line Differentiation Test",
+          "procedure": "Examiner palpates medial joint line and pes anserine region sequentially.",
           "positiveSign": ""
         }
       ],
@@ -1254,27 +1146,33 @@
     },
     {
       "region": "knee",
-      "condition": "Osteochondritis Dissecans",
-      "conditionId": "knee_osteochondritis_dissecans",
+      "condition": "OSTEOCHONDRITIS DISSECANS (OCD)",
+      "conditionId": "knee_osteochondritis_dissecans_(ocd)",
       "recommendedTests": [
-        "Wilson's Test",
+        "Wilson’s Test",
         "Passive Condylar Palpation Test",
-        "Joint Effusion Test (Stroke Test)"
+        "Joint Effusion Test (Stroke Test)",
+        "Single-Leg Squat Loading Test"
       ],
       "procedures": [
         {
-          "testName": "Wilson's Test",
-          "procedure": "Patient lies supine. Examiner flexes knee to 90°. Patient actively extends knee while examiner internally rotates tibia. Positive sign = pain between 30°–40° knee extension relieved with external rotation.",
+          "testName": "Wilson’s Test",
+          "procedure": "Patient lies supine. Examiner flexes knee to 90°. Patient actively extends knee while examiner internally rotates tibia.",
           "positiveSign": ""
         },
         {
           "testName": "Passive Condylar Palpation Test",
-          "procedure": "Patient knee flexed to 90°. Examiner palpates femoral condyles. Positive sign = localized pain over femoral condyle.",
+          "procedure": "Patient knee flexed to 90°. Examiner palpates femoral condyles directly through flexed joint.",
           "positiveSign": ""
         },
         {
           "testName": "Joint Effusion Test (Stroke Test)",
-          "procedure": "Examiner strokes medial knee upward and lateral knee downward. Positive sign = fluid movement or bulge.",
+          "procedure": "Examiner strokes medial knee upward and lateral knee downward to evaluate fluid bulge.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Single-Leg Squat Loading Test",
+          "procedure": "Patient performs single-leg squat on affected leg.",
           "positiveSign": ""
         }
       ],
@@ -1283,33 +1181,68 @@
     },
     {
       "region": "knee",
-      "condition": "Baker's Cyst",
-      "conditionId": "knee_baker's_cyst",
+      "condition": "BAKER’S CYST",
+      "conditionId": "knee_baker’s_cyst",
       "recommendedTests": [
-        "Foucher's Sign",
+        "Foucher’s Sign",
         "Popliteal Palpation Test",
         "Transillumination Test",
-        "Knee Effusion Test"
+        "Knee Effusion Stroke Test"
       ],
       "procedures": [
         {
-          "testName": "Foucher's Sign",
-          "procedure": "Positive sign = mass becomes firm in extension and softens or disappears in flexion, confirming Baker's cyst.",
+          "testName": "Foucher’s Sign",
+          "procedure": "Patient lies supine. Examiner palpates popliteal mass with knee fully extended, then with knee flexed to 45°.",
           "positiveSign": ""
         },
         {
           "testName": "Popliteal Palpation Test",
-          "procedure": "Patient prone or supine. Examiner palpates popliteal fossa. Positive sign = palpable fluid-filled mass.",
+          "procedure": "Examiner palpates medial aspect of popliteal fossa between semimembranosus and medial gastrocnemius head.",
           "positiveSign": ""
         },
         {
           "testName": "Transillumination Test",
-          "procedure": "Light source applied behind swelling. Positive sign = transillumination suggests fluid-filled cyst.",
+          "procedure": "Light source placed against posterior knee swelling in a dimmed examination room.",
           "positiveSign": ""
         },
         {
-          "testName": "Knee Effusion Test",
-          "procedure": "Examiner performs stroke test or bulge test. Positive sign = fluid accumulation present.",
+          "testName": "Knee Effusion Stroke Test",
+          "procedure": "Examiner performs sweep/stroke test across medial and lateral parapatellar gutters.",
+          "positiveSign": ""
+        }
+      ],
+      "confirmationMethods": [],
+      "clinicalObservations": []
+    },
+    {
+      "region": "knee",
+      "condition": "INFLAMMATORY / SEPTIC ARTHRITIS",
+      "conditionId": "knee_inflammatory_/_septic_arthritis",
+      "recommendedTests": [
+        "Passive Joint Motion Test",
+        "Local Temperature Assessment",
+        "Joint Effusion Test (Bulge / Ballottement Test)",
+        "Diagnostic Arthrocentesis (Gold Standard)"
+      ],
+      "procedures": [
+        {
+          "testName": "Passive Joint Motion Test",
+          "procedure": "Examiner gently moves patient’s knee through minimal passive flexion and extension.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Local Temperature Assessment",
+          "procedure": "Examiner uses dorsum of hand to compare skin temperature of affected knee to contralateral knee.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Joint Effusion Test (Bulge / Ballottement Test)",
+          "procedure": "Examiner applies downward pressure on suprapatellar pouch and ballottes patella against femur.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Diagnostic Arthrocentesis (Gold Standard)",
+          "procedure": "Sterile needle joint aspiration for synovial fluid WBC count, Gram stain, crystals, and culture.",
           "positiveSign": ""
         }
       ],
@@ -1807,15 +1740,27 @@
     },
     {
       "region": "wrist",
-      "condition": "General Assessment",
-      "conditionId": "wrist_general_assessment",
+      "condition": "CARPAL TUNNEL SYNDROME (CTS)",
+      "conditionId": "wrist_carpal_tunnel_syndrome_(cts)",
       "recommendedTests": [
-        "Clinical Assessment"
+        "Phalen’s Test",
+        "Tinel’s Sign",
+        "Carpal Compression Test (Durkan’s Test)"
       ],
       "procedures": [
         {
-          "testName": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms",
+          "testName": "Phalen’s Test",
+          "procedure": "Patient flexes both wrists maximally (dorsal surfaces pressed together) and holds position for 60 seconds.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Tinel’s Sign",
+          "procedure": "Examiner taps lightly over median nerve at volar carpal tunnel using fingertip or reflex hammer.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Carpal Compression Test (Durkan’s Test)",
+          "procedure": "Examiner applies direct firm pressure with thumbs over carpal tunnel for up to 30 seconds.",
           "positiveSign": ""
         }
       ],
@@ -1824,50 +1769,27 @@
     },
     {
       "region": "wrist",
-      "condition": "Carpal Tunnel Syndrome",
-      "conditionId": "wrist_carpal_tunnel_syndrome",
+      "condition": "DE QUERVAIN’S TENOSYNOVITIS",
+      "conditionId": "wrist_de_quervain’s_tenosynovitis",
       "recommendedTests": [
-        "Phalen's Test",
-        "Tinel's Sign",
-        "Carpal Compression Test"
+        "Finkelstein’s Test",
+        "WHAT Test (Wrist Hyperflexion Abduction of Thumb)",
+        "First Dorsal Compartment Palpation"
       ],
       "procedures": [
         {
-          "testName": "Phalen's Test",
-          "procedure": "Patient flexes wrists fully and holds position. If positive, indicates CTS.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Tinel's Sign",
-          "procedure": "Examiner taps over carpal tunnel. If positive, indicates CTS.",
-          "positiveSign": ""
-        },
-        {
-          "testName": "Carpal Compression Test",
-          "procedure": "Examiner applies direct pressure over carpal tunnel. If positive, indicates CTS.",
-          "positiveSign": ""
-        }
-      ],
-      "confirmationMethods": [],
-      "clinicalObservations": []
-    },
-    {
-      "region": "wrist",
-      "condition": "De Quervain's Tenosynovitis",
-      "conditionId": "wrist_de_quervain's_tenosynovitis",
-      "recommendedTests": [
-        "Finkelstein's Test",
-        "WHAT Test (Wrist Hyperflexion Abduction of Thumb)"
-      ],
-      "procedures": [
-        {
-          "testName": "Finkelstein's Test",
-          "procedure": "Patient makes a fist with thumb inside fingers. Examiner ulnar deviates wrist. If positive, indicates De Quervain's.",
+          "testName": "Finkelstein’s Test",
+          "procedure": "Patient makes a fist with thumb tucked inside fingers. Examiner gently applies passive ulnar deviation to wrist.",
           "positiveSign": ""
         },
         {
           "testName": "WHAT Test (Wrist Hyperflexion Abduction of Thumb)",
-          "procedure": "Patient hyperflexes wrist and abducts thumb against resistance. If positive, indicates De Quervain's.",
+          "procedure": "Patient hyperflexes wrist and actively abducts thumb against examiner resistance.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "First Dorsal Compartment Palpation",
+          "procedure": "Examiner palpates APL and EPB tendons over radial styloid while patient actively moves thumb.",
           "positiveSign": ""
         }
       ],
@@ -1876,21 +1798,21 @@
     },
     {
       "region": "wrist",
-      "condition": "Wrist Sprain",
-      "conditionId": "wrist_wrist_sprain",
+      "condition": "WRIST SPRAIN (LIGAMENTOUS INJURY)",
+      "conditionId": "wrist_wrist_sprain_(ligamentous_injury)",
       "recommendedTests": [
         "Ligament Stress Tests",
-        "Radiographic Confirmation"
+        "Watson’s Test (Scaphoid Shift Test)"
       ],
       "procedures": [
         {
           "testName": "Ligament Stress Tests",
-          "procedure": "Examiner applies stress to specific ligaments. Positive sign = pain or instability localized to the injured ligament.",
+          "procedure": "Examiner applies anteroposterior translation and stress forces to scapholunate, lunotriquetral, and collateral ligaments.",
           "positiveSign": ""
         },
         {
-          "testName": "Radiographic Confirmation",
-          "procedure": "Rule out undisplaced fracture or other bony injury",
+          "testName": "Watson’s Test (Scaphoid Shift Test)",
+          "procedure": "Examiner compresses scaphoid tuberosity while moving wrist from ulnar to radial deviation.",
           "positiveSign": ""
         }
       ],
@@ -1899,27 +1821,27 @@
     },
     {
       "region": "wrist",
-      "condition": "TFCC Injury",
-      "conditionId": "wrist_tfcc_injury",
+      "condition": "TFCC INJURY (Triangular Fibrocartilage Complex)",
+      "conditionId": "wrist_tfcc_injury_(triangular_fibrocartilage_complex)",
       "recommendedTests": [
         "TFCC Load Test",
         "Press Test",
-        "Radiographic Confirmation"
+        "Fovea Sign"
       ],
       "procedures": [
         {
           "testName": "TFCC Load Test",
-          "procedure": "Wrist in ulnar deviation + axial load + rotation. Positive if ulnar wrist pain.",
+          "procedure": "Examiner places wrist in ulnar deviation, applies axial compressive load, and rotates forearm.",
           "positiveSign": ""
         },
         {
           "testName": "Press Test",
-          "procedure": "Patient pushes up from chair using hands. Positive if ulnar wrist pain.",
+          "procedure": "Patient uses hands to push up and support body weight from a seated position in a chair.",
           "positiveSign": ""
         },
         {
-          "testName": "Radiographic Confirmation",
-          "procedure": "MRI or arthrogram to assess TFCC complex integrity",
+          "testName": "Fovea Sign",
+          "procedure": "Examiner presses thumb into soft depression (fovea) between ulnar styloid and flexor carpi ulnaris tendon.",
           "positiveSign": ""
         }
       ],
@@ -1931,12 +1853,18 @@
       "condition": "Ganglion Cyst",
       "conditionId": "wrist_ganglion_cyst",
       "recommendedTests": [
-        "Transillumination Test"
+        "Transillumination Test",
+        "Palpation and Fluctuation Test"
       ],
       "procedures": [
         {
           "testName": "Transillumination Test",
-          "procedure": "Light is applied through the swelling. Positive sign = transillumination confirms fluid-filled cyst.",
+          "procedure": "Light source applied directly against wrist swelling in a darkened room.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Palpation and Fluctuation Test",
+          "procedure": "Examiner palpates lump during full wrist flexion and extension.",
           "positiveSign": ""
         }
       ],
@@ -1948,12 +1876,18 @@
       "condition": "Intersection Syndrome",
       "conditionId": "wrist_intersection_syndrome",
       "recommendedTests": [
-        "Resisted Wrist Extension Test"
+        "Resisted Wrist Extension Test",
+        "Intersection Palpation and Crepitus Test"
       ],
       "procedures": [
         {
           "testName": "Resisted Wrist Extension Test",
-          "procedure": "Patient extends wrist against resistance. Positive sign = pain 4–6 cm proximal to the wrist in the dorsal radial forearm.",
+          "procedure": "Patient extends wrist against examiner resistance with forearm pronated.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Intersection Palpation and Crepitus Test",
+          "procedure": "Examiner places fingers over dorsal radial forearm 4-6 cm proximal to wrist while patient flexes and extends wrist.",
           "positiveSign": ""
         }
       ],
@@ -1962,27 +1896,27 @@
     },
     {
       "region": "wrist",
-      "condition": "Scaphoid Fracture",
-      "conditionId": "wrist_scaphoid_fracture",
+      "condition": "SCAPHOID FRACTURE (CRITICAL RED FLAG)",
+      "conditionId": "wrist_scaphoid_fracture_(critical_red_flag)",
       "recommendedTests": [
         "Snuffbox Tenderness Test",
-        "Scaphoid Compression Test",
-        "Radiographic Confirmation"
+        "Scaphoid Compression Test (Axial Thumb Load)",
+        "Scaphoid Tubercle Palpation"
       ],
       "procedures": [
         {
           "testName": "Snuffbox Tenderness Test",
-          "procedure": "Palpation of anatomical snuffbox. If positive, indicates scaphoid fracture.",
+          "procedure": "Examiner palpates floor of anatomical snuffbox with wrist in slight ulnar deviation.",
           "positiveSign": ""
         },
         {
-          "testName": "Scaphoid Compression Test",
-          "procedure": "Axial load applied through thumb. If positive, indicates scaphoid fracture.",
+          "testName": "Scaphoid Compression Test (Axial Thumb Load)",
+          "procedure": "Examiner applies axial compressive force through the first metacarpal along axis of thumb into scaphoid.",
           "positiveSign": ""
         },
         {
-          "testName": "Radiographic Confirmation",
-          "procedure": "X-ray and/or MRI to confirm scaphoid fracture, especially if initial X-ray is normal.",
+          "testName": "Scaphoid Tubercle Palpation",
+          "procedure": "Examiner palpates volar scaphoid tubercle at base of thenar eminence with wrist extended.",
           "positiveSign": ""
         }
       ],
@@ -1991,21 +1925,27 @@
     },
     {
       "region": "wrist",
-      "condition": "Kienbock's Disease",
-      "conditionId": "wrist_kienbock's_disease",
+      "condition": "KIENBÖCK’S DISEASE (AVN OF LUNATE)",
+      "conditionId": "wrist_kienböck’s_disease_(avn_of_lunate)",
       "recommendedTests": [
         "Axial Load Test",
-        "Radiographic Confirmation"
+        "Lunate Palpation Test",
+        "Radiography and MRI Evaluation"
       ],
       "procedures": [
         {
           "testName": "Axial Load Test",
-          "procedure": "Apply compression through wrist. Positive if central dorsal wrist pain.",
+          "procedure": "Examiner applies axial compression through wrist and third metacarpal with wrist in neutral.",
           "positiveSign": ""
         },
         {
-          "testName": "Radiographic Confirmation",
-          "procedure": "X-ray for staging, MRI for early AVN detection.",
+          "testName": "Lunate Palpation Test",
+          "procedure": "Examiner palpates dorsal central wrist directly over lunate fossa in slight flexion.",
+          "positiveSign": ""
+        },
+        {
+          "testName": "Radiography and MRI Evaluation",
+          "procedure": "Standard PA and lateral wrist radiographs plus MRI if radiographs normal.",
           "positiveSign": ""
         }
       ],

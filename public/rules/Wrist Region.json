@@ -1153,8 +1153,25 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Phalen’s Test",
+          "procedure": "Patient flexes both wrists maximally (dorsal surfaces pressed together) and holds position for 60 seconds.",
+          "positiveImplication": "Numbness, tingling, or pain in median nerve distribution (thumb, index, middle finger) indicates CTS.",
+          "negativeImplication": "No sensory changes after 60 seconds of maximal flexion.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Tinel’s Sign",
+          "procedure": "Examiner taps lightly over median nerve at volar carpal tunnel using fingertip or reflex hammer.",
+          "positiveImplication": "Electric shock-like tingling sensation radiating into median nerve distribution indicates CTS.",
+          "negativeImplication": "Painless tapping without radiating paresthesias.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Carpal Compression Test (Durkan’s Test)",
+          "procedure": "Examiner applies direct firm pressure with thumbs over carpal tunnel for up to 30 seconds.",
+          "positiveImplication": "Reproduction or worsening of paresthesias in median nerve territory confirms CTS.",
+          "negativeImplication": "No symptoms during 30 seconds of direct pressure.",
+          "testType": "provocative"
         }
       ]
     },
@@ -1860,8 +1877,25 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Finkelstein’s Test",
+          "procedure": "Patient makes a fist with thumb tucked inside fingers. Examiner gently applies passive ulnar deviation to wrist.",
+          "positiveImplication": "Sharp, severe pain along radial styloid at first dorsal compartment indicates De Quervain’s tenosynovitis.",
+          "negativeImplication": "Painless ulnar deviation with thumb flexed.",
+          "testType": "provocative"
+        },
+        {
+          "name": "WHAT Test (Wrist Hyperflexion Abduction of Thumb)",
+          "procedure": "Patient hyperflexes wrist and actively abducts thumb against examiner resistance.",
+          "positiveImplication": "Reproduction of pain over first dorsal compartment confirms De Quervain’s.",
+          "negativeImplication": "Pain-free resisted thumb abduction in wrist hyperflexion.",
+          "testType": "provocative"
+        },
+        {
+          "name": "First Dorsal Compartment Palpation",
+          "procedure": "Examiner palpates APL and EPB tendons over radial styloid while patient actively moves thumb.",
+          "positiveImplication": "Point tenderness, swelling, or crepitus over first dorsal compartment.",
+          "negativeImplication": "Smooth, non-tender tendon glide.",
+          "testType": "provocative"
         }
       ]
     },
@@ -2781,8 +2815,18 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Ligament Stress Tests",
+          "procedure": "Examiner applies anteroposterior translation and stress forces to scapholunate, lunotriquetral, and collateral ligaments.",
+          "positiveImplication": "Pain, excessive translation, or laxity compared to contralateral uninjured wrist indicates ligament injury.",
+          "negativeImplication": "Firm ligamentous end-feel without pain.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Watson’s Test (Scaphoid Shift Test)",
+          "procedure": "Examiner compresses scaphoid tuberosity while moving wrist from ulnar to radial deviation.",
+          "positiveImplication": "Painful clunk or dorsal subluxation of scaphoid indicates scapholunate ligament tear.",
+          "negativeImplication": "Smooth scaphoid glide without clunk.",
+          "testType": "provocative"
         }
       ]
     },
@@ -3411,8 +3455,25 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "TFCC Load Test",
+          "procedure": "Examiner places wrist in ulnar deviation, applies axial compressive load, and rotates forearm.",
+          "positiveImplication": "Pain, clicking, crepitus, or catching along ulnar joint line indicates TFCC tear.",
+          "negativeImplication": "Painless rotation under ulnar axial load.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Press Test",
+          "procedure": "Patient uses hands to push up and support body weight from a seated position in a chair.",
+          "positiveImplication": "Reproduction of sharp ulnar-sided wrist pain upon axial loading suggests TFCC injury.",
+          "negativeImplication": "Painless push-up from chair.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Fovea Sign",
+          "procedure": "Examiner presses thumb into soft depression (fovea) between ulnar styloid and flexor carpi ulnaris tendon.",
+          "positiveImplication": "Exquisite focal tenderness in ulnar fovea indicates foveal avulsion of TFCC.",
+          "negativeImplication": "Absence of foveal tenderness.",
+          "testType": "provocative"
         }
       ]
     },
@@ -4332,8 +4393,18 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Transillumination Test",
+          "procedure": "Light source applied directly against wrist swelling in a darkened room.",
+          "positiveImplication": "Light transmits brightly through the mass (transillumination), confirming fluid-filled cyst (ganglion).",
+          "negativeImplication": "Mass remains dark and opaque (suggests solid tumor or tenosynovitis).",
+          "testType": "provocative"
+        },
+        {
+          "name": "Palpation and Fluctuation Test",
+          "procedure": "Examiner palpates lump during full wrist flexion and extension.",
+          "positiveImplication": "Firm, well-circumscribed, smooth, mobile mass becoming more prominent with wrist flexion.",
+          "negativeImplication": "Diffuse non-circumscribed swelling.",
+          "testType": "provocative"
         }
       ]
     },
@@ -5039,8 +5110,18 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Resisted Wrist Extension Test",
+          "procedure": "Patient extends wrist against examiner resistance with forearm pronated.",
+          "positiveImplication": "Pain and friction crepitus 4–6 cm proximal to radial styloid indicates intersection syndrome.",
+          "negativeImplication": "Painless resisted wrist extension.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Intersection Palpation and Crepitus Test",
+          "procedure": "Examiner places fingers over dorsal radial forearm 4-6 cm proximal to wrist while patient flexes and extends wrist.",
+          "positiveImplication": "Audible or palpable squeaking / crepitus (peritendinitis crepitans) confirms intersection syndrome.",
+          "negativeImplication": "Smooth, silent excursion.",
+          "testType": "provocative"
         }
       ]
     },
@@ -5900,8 +5981,25 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Snuffbox Tenderness Test",
+          "procedure": "Examiner palpates floor of anatomical snuffbox with wrist in slight ulnar deviation.",
+          "positiveImplication": "Focal tenderness in anatomical snuffbox strongly suggests acute scaphoid fracture.",
+          "negativeImplication": "No snuffbox tenderness.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Scaphoid Compression Test (Axial Thumb Load)",
+          "procedure": "Examiner applies axial compressive force through the first metacarpal along axis of thumb into scaphoid.",
+          "positiveImplication": "Pain localized to scaphoid confirms suspicion of scaphoid fracture.",
+          "negativeImplication": "Painless axial thumb compression.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Scaphoid Tubercle Palpation",
+          "procedure": "Examiner palpates volar scaphoid tubercle at base of thenar eminence with wrist extended.",
+          "positiveImplication": "Sharp focal bony tenderness over scaphoid tubercle indicates fracture.",
+          "negativeImplication": "Non-tender scaphoid tubercle.",
+          "testType": "provocative"
         }
       ]
     },
@@ -6761,8 +6859,25 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Axial Load Test",
+          "procedure": "Examiner applies axial compression through wrist and third metacarpal with wrist in neutral.",
+          "positiveImplication": "Deep central dorsal wrist pain localized over lunate suggests lunate avascular necrosis.",
+          "negativeImplication": "Painless axial load through central column.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Lunate Palpation Test",
+          "procedure": "Examiner palpates dorsal central wrist directly over lunate fossa in slight flexion.",
+          "positiveImplication": "Point tenderness and swelling directly over lunate indicates Kienböck’s disease.",
+          "negativeImplication": "Absence of focal lunate tenderness.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Radiography and MRI Evaluation",
+          "procedure": "Standard PA and lateral wrist radiographs plus MRI if radiographs normal.",
+          "positiveImplication": "Lunate sclerosis, fragmentation, or low T1 bone marrow signal confirms Kienböck’s disease.",
+          "negativeImplication": "Normal lunate density and contour.",
+          "testType": "imaging"
         }
       ]
     }

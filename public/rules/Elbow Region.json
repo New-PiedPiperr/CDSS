@@ -963,8 +963,25 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Cozen’s Test",
+          "procedure": "Patient makes a fist, pronates forearm, and extends wrist against examiner resistance with elbow in 90° flexion.",
+          "positiveImplication": "Sudden severe pain at lateral epicondyle indicates lateral epicondylitis (tennis elbow).",
+          "negativeImplication": "Painless resisted wrist extension.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Mill’s Sign",
+          "procedure": "Patient closes hand, examiner fully extends elbow, pronates forearm, and flexes wrist.",
+          "positiveImplication": "Pain over lateral epicondyle during passive stretch confirms lateral epicondylitis.",
+          "negativeImplication": "Painless full passive stretch.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Maudsley’s Test",
+          "procedure": "Examiner resists extension of middle finger (third digit) distal to PIP joint.",
+          "positiveImplication": "Pain over lateral epicondyle indicates extensor digitorum involvement.",
+          "negativeImplication": "Painless resisted third-digit extension.",
+          "testType": "provocative"
         }
       ]
     },
@@ -1131,8 +1148,18 @@
       ],
       "tests": [
         {
-          "name": "Clinical Observation - Hand Muscle Bulk",
-          "procedure": "Check if muscle bulk in hand is normal (extreme cases may include atrophy)"
+          "name": "Tinel’s Sign at Cubital Tunnel",
+          "procedure": "Examiner lightly taps ulnar nerve in groove between medial epicondyle and olecranon.",
+          "positiveImplication": "Electric shock or tingling sensation radiating into 4th and 5th digits indicates ulnar neuropathy.",
+          "negativeImplication": "Painless tapping without radiating tingling.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Elbow Flexion Test",
+          "procedure": "Patient holds elbow in maximal flexion with wrist in neutral for up to 3 minutes.",
+          "positiveImplication": "Numbness or paresthesias in ulnar nerve distribution indicates cubital tunnel syndrome.",
+          "negativeImplication": "No sensory changes after 3 minutes.",
+          "testType": "provocative"
         }
       ]
     },
@@ -1228,7 +1255,17 @@
       "tests": [
         {
           "name": "Valgus Stress Test",
-          "procedure": "Place forearm in supine position, flex elbow up till about 30 deg. Palpate MCL and apply lateral pressure (abduction). Positive test: increased laxity of MCL and pain."
+          "procedure": "Forearm supinated, elbow flexed to 25°–30°. Examiner stabilizes arm and applies valgus stress to forearm.",
+          "positiveImplication": "Pain or excessive medial joint opening/laxity indicates medial collateral ligament (MCL) injury.",
+          "negativeImplication": "Firm, pain-free medial end-feel.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Moving Valgus Stress Test",
+          "procedure": "Examiner applies constant valgus torque while flexing and extending elbow between 30° and 120°.",
+          "positiveImplication": "Pain maximal between 70° and 120° indicates MCL tear.",
+          "negativeImplication": "Painless valgus arc motion.",
+          "testType": "provocative"
         }
       ]
     },

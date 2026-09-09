@@ -2270,8 +2270,53 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Resisted Quadriceps Test",
+          "procedure": "Patient is seated with knee slightly flexed. Examiner applies resistance as the patient extends the knee.",
+          "positiveImplication": "Pain felt over anterior patella indicates patellofemoral joint irritation associated with PFPS.",
+          "negativeImplication": "Painless resisted knee extension.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Step-Down Test",
+          "procedure": "Patient stands on a 20 cm step and slowly lowers contralateral heel to the ground while examiner observes alignment.",
+          "positiveImplication": "Pain over anterior knee or medial collapse (dynamic valgus) indicates PFPS and poor lower limb control.",
+          "negativeImplication": "Controlled, painless descent without medial knee collapse.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Clarke’s Test (Patellar Grind Test)",
+          "procedure": "Patient is supine with knee extended. Examiner applies gentle downward pressure on superior pole of patella while patient contracts quadriceps.",
+          "positiveImplication": "Reproduction of anterior retropatellar pain indicates patellofemoral joint dysfunction.",
+          "negativeImplication": "Painless quadriceps contraction against patellar pressure.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Patellar Apprehension Test",
+          "procedure": "Patient is supine and relaxed. Examiner pushes the patella laterally.",
+          "positiveImplication": "Patient shows apprehension or contracts quadriceps to prevent displacement, indicating lateral instability.",
+          "negativeImplication": "No apprehension or muscular guarding during lateral displacement.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Patellar Tilt Test",
+          "procedure": "Patient is supine with knee extended. Examiner lifts the lateral edge of the patella.",
+          "positiveImplication": "Lateral patellar edge cannot reach horizontal, suggesting tight lateral retinacular structures.",
+          "negativeImplication": "Normal horizontal patellar tilt.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Waldron Test",
+          "procedure": "Patient is seated and actively flexes and extends knee while examiner palpates patellofemoral joint.",
+          "positiveImplication": "Grinding, crepitus, or anterior knee pain during movement indicates patellofemoral irritation.",
+          "negativeImplication": "Smooth, painless active knee range of motion.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Patellar Glide Test",
+          "procedure": "Patient is supine with knee extended. Examiner glides patella medially and laterally.",
+          "positiveImplication": "Pain or abnormal patellar mobility suggests patellar maltracking.",
+          "negativeImplication": "Symmetric, pain-free patellar mobility (1-2 quadrants).",
+          "testType": "provocative"
         }
       ]
     },
@@ -3602,8 +3647,46 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "McMurray Test",
+          "procedure": "Patient is supine. Examiner flexes the hip and knee fully, then rotates the tibia internally and externally while extending the knee.",
+          "positiveImplication": "Palpable click, snap, or pain along joint line suggests medial or lateral meniscal tear.",
+          "negativeImplication": "Smooth, painless joint motion without joint line clicking.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Apley’s Compression Test",
+          "procedure": "Patient lies prone with knee flexed to 90°. Examiner applies downward axial pressure along tibia while rotating it internally and externally.",
+          "positiveImplication": "Pain along joint line during compression indicates meniscal injury.",
+          "negativeImplication": "Painless tibial rotation under axial compression.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Thessaly Test",
+          "procedure": "Patient stands on one leg with knee flexed to 20°. Patient rotates body and knee internally and externally three times.",
+          "positiveImplication": "Pain or locking/catching sensation along joint line suggests meniscal tear.",
+          "negativeImplication": "Full stable rotation without pain or mechanical locking.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Joint Line Tenderness Test",
+          "procedure": "Examiner palpates along medial and lateral tibiofemoral joint lines with knee flexed to 90°.",
+          "positiveImplication": "Localized tenderness along joint line indicates meniscal pathology.",
+          "negativeImplication": "Absence of tenderness along joint line.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Bounce Home Test",
+          "procedure": "Patient is supine. Examiner fully flexes the knee and then allows it to passively extend.",
+          "positiveImplication": "Knee does not fully extend (blocked) or produces springy end-feel, suggesting displaced meniscal fragment.",
+          "negativeImplication": "Complete, sharp end-feel extension without restriction.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Ege’s Test",
+          "procedure": "Patient squats with knees flexed and externally rotates feet (medial meniscus) or internally rotates feet (lateral meniscus).",
+          "positiveImplication": "Pain or clicking along joint line during squat indicates meniscal tear.",
+          "negativeImplication": "Pain-free squat without joint line symptoms.",
+          "testType": "provocative"
         }
       ]
     },
@@ -4160,8 +4243,18 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Resisted Contraction Test",
+          "procedure": "Patient contracts the affected muscle against examiner resistance at mid-range.",
+          "positiveImplication": "Pain localized to muscle belly or myotendinous junction indicates muscle strain.",
+          "negativeImplication": "Painless isometric contraction against maximal resistance.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Passive Stretch Test",
+          "procedure": "Examiner stretches the affected muscle slowly into its lengthened position.",
+          "positiveImplication": "Reproduction of pain at the site of muscle injury confirms muscle strain.",
+          "negativeImplication": "Full, pain-free passive muscle excursion.",
+          "testType": "provocative"
         }
       ]
     },
@@ -5426,8 +5519,39 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Patellar Grind Test (Clarke’s Test)",
+          "procedure": "Patient supine with knee extended. Examiner applies downward pressure on patella while patient contracts quadriceps.",
+          "positiveImplication": "Pain or coarse crepitus at patellofemoral joint suggests patellofemoral osteoarthritis.",
+          "negativeImplication": "Smooth, painless quadriceps contraction.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Passive Patellar Tilt Test",
+          "procedure": "Examiner lifts lateral edge of patella while stabilizing medial edge.",
+          "positiveImplication": "Limited tilt or pain indicates tight lateral structures or osteoarthritic changes.",
+          "negativeImplication": "Normal lateral edge elevation.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Crepitus Assessment (Full ROM)",
+          "procedure": "Examiner moves knee through full active and passive flexion and extension while palpating joint.",
+          "positiveImplication": "Audible or palpable coarse crepitus indicates articular cartilage degeneration.",
+          "negativeImplication": "Smooth glide without crepitus.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Joint Line Tenderness",
+          "procedure": "Examiner palpates medial and lateral tibiofemoral joint lines.",
+          "positiveImplication": "Bony marginal tenderness along joint lines indicates tibiofemoral OA involvement.",
+          "negativeImplication": "Absence of marginal joint tenderness.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Functional Pain Assessment",
+          "procedure": "Ask patient to perform loaded activities such as squatting, step-ups, or sit-to-stand.",
+          "positiveImplication": "Mechanical pain reproduction during weight-bearing loading supports OA diagnosis.",
+          "negativeImplication": "Painless functional weight-bearing.",
+          "testType": "provocative"
         }
       ]
     },
@@ -6902,8 +7026,39 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Patella Apprehension Test",
+          "procedure": "Patient lies supine with knee extended. Examiner gently pushes patella laterally.",
+          "positiveImplication": "Apprehension, facial anxiety, or sudden quadriceps contraction indicates patellar instability.",
+          "negativeImplication": "Comfortable lateral displacement without guarding.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Patella Tracking Assessment",
+          "procedure": "Observe patella motion during active knee flexion and extension.",
+          "positiveImplication": "Patella deviates laterally (J-sign) or fails to track smoothly within trochlear groove.",
+          "negativeImplication": "Linear vertical tracking within trochlea.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Patellar Hypermobility Test",
+          "procedure": "Patient lies supine, knee extended. Examiner gently displaces patella medially and laterally.",
+          "positiveImplication": "Displacement greater than 2 quadrants (>50% patellar width) indicates generalized patellar laxity.",
+          "negativeImplication": "Displacement restricted to 1-2 quadrants.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Q-Angle Measurement",
+          "procedure": "Measure angle between ASIS-to-patella center line and patella-to-tibial-tuberosity line with knee extended.",
+          "positiveImplication": "Increased Q-angle (>15° in men, >20° in women) indicates malalignment predisposing to dislocation.",
+          "negativeImplication": "Normal anatomical Q-angle.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Observation for Patella Alta / Genu Recurvatum",
+          "procedure": "Inspect patellar height in full extension (Insall-Salvati ratio) and assess knee hyperextension.",
+          "positiveImplication": "High-riding patella (patella alta) or hyperextension (>10°) indicates structural predisposition.",
+          "negativeImplication": "Normal anatomical patellar position and knee extension.",
+          "testType": "observation"
         }
       ]
     },
@@ -8274,8 +8429,32 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Active Straight Leg Raise Test",
+          "procedure": "Patient lies supine with legs extended. Examiner asks patient to lift affected leg straight up without bending knee.",
+          "positiveImplication": "Inability to lift leg actively indicates extensor mechanism disruption due to patellar or tibial fracture.",
+          "negativeImplication": "Ability to perform active straight leg raise.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Patellar Tap / Palpation Test",
+          "procedure": "Patient lies supine with knee relaxed. Examiner palpates patella gently feeling for gap, step-off, or bone fragment displacement.",
+          "positiveImplication": "Palpable defect, separation, or severe localized tenderness indicates displaced patella fracture.",
+          "negativeImplication": "Intact patellar contour without palpable gap.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Ottawa Knee Rules Assessment",
+          "procedure": "Assess age (≥55), isolated patellar tenderness, fibular head tenderness, flexion <90°, or inability to bear weight 4 steps.",
+          "positiveImplication": "Positive criteria indicate immediate radiographic evaluation requirement.",
+          "negativeImplication": "Negative criteria reliably rule out knee fracture without radiography.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Tibial Plateau Palpation Test",
+          "procedure": "Palpate medial and lateral tibial condyles and tibial plateau margins.",
+          "positiveImplication": "Focal acute bony tenderness suggests tibial plateau fracture.",
+          "negativeImplication": "Absence of acute focal bony tenderness.",
+          "testType": "provocative"
         }
       ]
     },
@@ -9798,8 +9977,39 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Noble’s Compression Test",
+          "procedure": "Patient lies supine. Examiner flexes knee to 90° and applies pressure over lateral femoral epicondyle while slowly extending knee.",
+          "positiveImplication": "Reproduction of pain over lateral femoral epicondyle at approximately 30° flexion indicates ITBS.",
+          "negativeImplication": "Painless knee extension under epicondylar pressure.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Ober’s Test",
+          "procedure": "Patient lies on unaffected side. Examiner extends and abducts hip, then slowly lowers the leg into adduction.",
+          "positiveImplication": "Leg remains abducted and does not drop below horizontal, indicating contracture/tightness of iliotibial band.",
+          "negativeImplication": "Thigh drops below horizontal into smooth adduction.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Renne’s Test",
+          "procedure": "Patient stands on affected leg and performs single-leg squat while examiner applies pressure over lateral femoral epicondyle.",
+          "positiveImplication": "Pain over lateral femoral epicondyle at 30°–40° of knee flexion confirms ITBS.",
+          "negativeImplication": "Painless single-leg squat.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Modified Thomas Test",
+          "procedure": "Patient lies supine at edge of table, hugging contralateral knee to chest. Examiner assesses affected thigh position.",
+          "positiveImplication": "Thigh remains abducted and externally rotated, indicating lateral soft tissue tightness.",
+          "negativeImplication": "Thigh rests flat on table in neutral alignment.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Lateral Epicondyle Palpation Test",
+          "procedure": "Examiner palpates lateral femoral epicondyle with knee moved between 0° and 90° flexion.",
+          "positiveImplication": "Sharp localized tenderness over lateral epicondyle, maximal at 30° flexion, indicates ITBS.",
+          "negativeImplication": "Absence of lateral epicondylar tenderness.",
+          "testType": "provocative"
         }
       ]
     },
@@ -11222,8 +11432,39 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Decline Squat Test",
+          "procedure": "Patient stands on a 25° decline board and performs double- or single-leg squat.",
+          "positiveImplication": "Sharp localized pain at inferior pole of patella indicates patellar tendinopathy.",
+          "negativeImplication": "Pain-free decline squat.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Resisted Knee Extension Test",
+          "procedure": "Patient sits with knee flexed. Examiner applies isometric resistance to knee extension.",
+          "positiveImplication": "Localized tendon pain at inferior or superior patellar pole indicates tendinopathy.",
+          "negativeImplication": "Painless maximal isometric contraction.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Single-Leg Decline Squat Test",
+          "procedure": "Patient performs single-leg squat on a 25° decline board, loading the extensor mechanism.",
+          "positiveImplication": "Dose-dependent reproduction of localized patellar tendon pain.",
+          "negativeImplication": "Painless single-leg decline squat.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Patellar Tendon Palpation Test",
+          "procedure": "Examiner palpates inferior pole of patella and body of patellar tendon with knee extended and flexed.",
+          "positiveImplication": "Point tenderness at inferior pole (Basset’s sign) that diminishes in flexion confirms tendinopathy.",
+          "negativeImplication": "Absence of tenderness along patellar tendon.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Single-Leg Hop Test",
+          "procedure": "Patient performs repeated hops on the affected leg.",
+          "positiveImplication": "Reproduction of localized pain at patellar tendon during high-rate loading.",
+          "negativeImplication": "Painless hopping on affected leg.",
+          "testType": "provocative"
         }
       ]
     },
@@ -13096,8 +13337,39 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Pes Anserinus Palpation Test",
+          "procedure": "Patient lies supine with knee extended. Examiner palpates anteromedial proximal tibia, 5–7 cm below medial joint line.",
+          "positiveImplication": "Focal localized tenderness over pes anserine bursa indicates bursitis.",
+          "negativeImplication": "No tenderness at pes anserine insertion.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Resisted Knee Flexion Test",
+          "procedure": "Patient flexes knee from 90° while examiner applies manual resistance.",
+          "positiveImplication": "Pain at pes anserinus region indicates tendon/bursal irritation.",
+          "negativeImplication": "Painless resisted knee flexion.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Resisted Hip Adduction Test",
+          "procedure": "Patient performs hip adduction against examiner resistance.",
+          "positiveImplication": "Pain at medial proximal tibia insertion confirms gracilis/pes anserine involvement.",
+          "negativeImplication": "Painless resisted hip adduction.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Hamstring Stretch Test",
+          "procedure": "Examiner passively extends knee with hip flexed, stretching hamstring tendons.",
+          "positiveImplication": "Pain at pes anserinus region during passive stretch.",
+          "negativeImplication": "Normal hamstring excursion without localized insertion pain.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Joint Line Differentiation Test",
+          "procedure": "Examiner palpates medial joint line and pes anserine region sequentially.",
+          "positiveImplication": "Tenderness strictly 5-7 cm below joint line (pes anserinus) with negative joint line tenderness excludes meniscal tear.",
+          "negativeImplication": "Tenderness on joint line suggests meniscal pathology rather than bursitis.",
+          "testType": "provocative"
         }
       ]
     },
@@ -14788,8 +15060,32 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Wilson’s Test",
+          "procedure": "Patient lies supine. Examiner flexes knee to 90°. Patient actively extends knee while examiner internally rotates tibia.",
+          "positiveImplication": "Pain between 30°–40° extension relieved immediately by external tibial rotation indicates OCD of medial femoral condyle.",
+          "negativeImplication": "No pain during internal rotation extension.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Passive Condylar Palpation Test",
+          "procedure": "Patient knee flexed to 90°. Examiner palpates femoral condyles directly through flexed joint.",
+          "positiveImplication": "Focal articular tenderness over femoral condyle indicates OCD lesion.",
+          "negativeImplication": "Absence of condylar tenderness.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Joint Effusion Test (Stroke Test)",
+          "procedure": "Examiner strokes medial knee upward and lateral knee downward to evaluate fluid bulge.",
+          "positiveImplication": "Fluid wave or bulge indicates joint effusion associated with OCD lesion.",
+          "negativeImplication": "Zero intra-articular fluid wave.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Single-Leg Squat Loading Test",
+          "procedure": "Patient performs single-leg squat on affected leg.",
+          "positiveImplication": "Deep, poorly localized articular pain indicates articular surface pathology.",
+          "negativeImplication": "Painless single-leg squat.",
+          "testType": "provocative"
         }
       ]
     },
@@ -16434,8 +16730,32 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Foucher’s Sign",
+          "procedure": "Patient lies supine. Examiner palpates popliteal mass with knee fully extended, then with knee flexed to 45°.",
+          "positiveImplication": "Popliteal mass becomes firm/tense in full extension and softens or disappears in flexion, confirming Baker’s cyst.",
+          "negativeImplication": "Mass does not alter consistency with joint angle (consider solid tumor).",
+          "testType": "provocative"
+        },
+        {
+          "name": "Popliteal Palpation Test",
+          "procedure": "Examiner palpates medial aspect of popliteal fossa between semimembranosus and medial gastrocnemius head.",
+          "positiveImplication": "Smooth, tense, fluctuant fluid-filled mass indicates popliteal cyst.",
+          "negativeImplication": "Empty popliteal fossa without palpable mass.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Transillumination Test",
+          "procedure": "Light source placed against posterior knee swelling in a dimmed examination room.",
+          "positiveImplication": "Light transilluminates through mass, confirming fluid content rather than solid tissue.",
+          "negativeImplication": "Opaque mass failing to transilluminate.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Knee Effusion Stroke Test",
+          "procedure": "Examiner performs sweep/stroke test across medial and lateral parapatellar gutters.",
+          "positiveImplication": "Associated joint effusion present, confirming intra-articular pathology feeding the cyst.",
+          "negativeImplication": "No intra-articular effusion.",
+          "testType": "provocative"
         }
       ]
     },
@@ -18202,8 +18522,32 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Passive Joint Motion Test",
+          "procedure": "Examiner gently moves patient’s knee through minimal passive flexion and extension.",
+          "positiveImplication": "Severe, excruciating pain with even minimal passive motion indicates acute septic or acute inflammatory arthritis.",
+          "negativeImplication": "Tolerable joint motion.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Local Temperature Assessment",
+          "procedure": "Examiner uses dorsum of hand to compare skin temperature of affected knee to contralateral knee.",
+          "positiveImplication": "Marked erythema and localized calor (significantly elevated temperature) indicate acute infection/inflammation.",
+          "negativeImplication": "Normothermic joint surface.",
+          "testType": "observation"
+        },
+        {
+          "name": "Joint Effusion Test (Bulge / Ballottement Test)",
+          "procedure": "Examiner applies downward pressure on suprapatellar pouch and ballottes patella against femur.",
+          "positiveImplication": "Tense joint effusion with floating patella indicates large intra-articular inflammatory/purulent fluid collection.",
+          "negativeImplication": "Absence of ballottement or effusion wave.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Diagnostic Arthrocentesis (Gold Standard)",
+          "procedure": "Sterile needle joint aspiration for synovial fluid WBC count, Gram stain, crystals, and culture.",
+          "positiveImplication": "Cloudy/purulent fluid with WBC >50,000/µL and positive Gram stain/culture confirms septic arthritis.",
+          "negativeImplication": "Clear fluid with normal cell count.",
+          "testType": "laboratory"
         }
       ]
     }

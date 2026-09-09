@@ -2283,8 +2283,39 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "FABER Test (Patrick’s Test)",
+          "procedure": "Patient is supine. Affected leg is placed in flexion, abduction, and external rotation (figure-4). Examiner applies gentle downward pressure on knee while stabilizing opposite ASIS.",
+          "positiveImplication": "Groin pain reproduction or restricted motion indicates hip joint pathology (OA).",
+          "negativeImplication": "Symmetric, pain-free range of motion without groin pain.",
+          "testType": "provocative"
+        },
+        {
+          "name": "FADIR Test",
+          "procedure": "Patient is supine. Examiner flexes hip to 90°, then adducts and internally rotates hip.",
+          "positiveImplication": "Reproduction of anterior groin pain indicates intra-articular pathology (OA or FAI).",
+          "negativeImplication": "Smooth, painless internal rotation in flexion.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Scour Test",
+          "procedure": "Patient is supine. Examiner flexes and adducts hip, applies axial compression along femur while sweeping hip in an arc between adduction/internal rotation and abduction/external rotation.",
+          "positiveImplication": "Groin pain, catching, grinding, or crepitus indicates hip joint degeneration (OA).",
+          "negativeImplication": "Smooth circumduction arc without pain or crepitus.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Log Roll Test",
+          "procedure": "Patient is supine with legs extended. Examiner gently rolls the entire leg into internal and external rotation.",
+          "positiveImplication": "Groin pain or markedly restricted internal rotation indicates intra-articular hip pathology.",
+          "negativeImplication": "Painless, symmetric passive rotational glide.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Trendelenburg Test",
+          "procedure": "Patient stands unsupported on affected leg for 30 seconds. Examiner observes pelvic tilt.",
+          "positiveImplication": "Pelvis on unsupported side drops below horizontal, indicating gluteus medius weakness associated with hip OA.",
+          "negativeImplication": "Pelvis remains horizontal or slightly elevates on unsupported side.",
+          "testType": "provocative"
         }
       ]
     },
@@ -3743,8 +3774,39 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Single-Leg Stance Test",
+          "procedure": "Patient stands on affected leg unsupported for up to 30 seconds.",
+          "positiveImplication": "Reproduction of lateral hip pain within 30 seconds indicates gluteal tendinopathy (GTPS).",
+          "negativeImplication": "Painless 30-second single-leg stance.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Resisted External Derotation Test",
+          "procedure": "Patient lies supine with hip and knee flexed to 90°. Examiner passively externally rotates hip, then asks patient to return to neutral against resistance.",
+          "positiveImplication": "Pain reproduced over greater trochanter indicates gluteus medius/minimus tendinopathy.",
+          "negativeImplication": "Painless resisted derotation.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Ober’s Test",
+          "procedure": "Patient lies on unaffected side. Examiner extends and abducts affected hip, then allows leg to drop into adduction.",
+          "positiveImplication": "Leg remains abducted and fails to adduct past table, indicating ITB tightness contributing to GTPS.",
+          "negativeImplication": "Smooth drop into adduction below table horizontal.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Trendelenburg Test",
+          "procedure": "Patient stands on affected leg while examiner observes contralateral pelvic level.",
+          "positiveImplication": "Pelvic drop on opposite side indicates gluteal abductor dysfunction associated with GTPS.",
+          "negativeImplication": "Stable pelvic alignment.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Greater Trochanter Palpation Test",
+          "procedure": "Examiner applies firm direct palpation over lateral greater trochanter and gluteal tendon insertions.",
+          "positiveImplication": "Exquisite point tenderness over trochanteric facet indicates GTPS.",
+          "negativeImplication": "Absence of tenderness over greater trochanter.",
+          "testType": "provocative"
         }
       ]
     },
@@ -4895,8 +4957,32 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "FADIR Test (Flexion, Adduction, Internal Rotation)",
+          "procedure": "Patient is supine. Examiner flexes hip to 90°, then adducts and internally rotates the hip.",
+          "positiveImplication": "Reproduction of sharp groin pain indicates femoroacetabular impingement.",
+          "negativeImplication": "Painless internal rotation in 90° flexion.",
+          "testType": "provocative"
+        },
+        {
+          "name": "FABER Test (Patrick’s Test)",
+          "procedure": "Patient is supine with foot on opposite knee (figure-4). Examiner applies downward pressure on ipsilateral knee.",
+          "positiveImplication": "Anterior groin pain or asymmetric restriction suggests hip joint pathology or FAI.",
+          "negativeImplication": "Knee reaches table parallel without anterior groin pain.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Scour Test",
+          "procedure": "Patient is supine. Examiner flexes and adducts hip, then applies axial compression while sweeping in an arc.",
+          "positiveImplication": "Pain, clicking, or mechanical catching indicates labral pathology or FAI.",
+          "negativeImplication": "Smooth, painless motion arc.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Internal Rotation Overpressure Test",
+          "procedure": "Patient is supine with hip flexed to 90°. Examiner applies internal rotation with terminal overpressure.",
+          "positiveImplication": "Groin pain or marked end-range restriction suggests cam or pincer FAI morphology.",
+          "negativeImplication": "Normal symmetric internal rotation range without pain.",
+          "testType": "provocative"
         }
       ]
     },
@@ -5863,8 +5949,32 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "FADIR Test (Labral Impingement)",
+          "procedure": "Patient is supine. Examiner passively flexes, adducts, and internally rotates hip.",
+          "positiveImplication": "Sharp anterior groin pain or painful click indicates acetabular labral tear.",
+          "negativeImplication": "Painless excursion without clicking.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Scour Test (Axial Load)",
+          "procedure": "Patient is supine. Examiner applies axial load through femur while moving hip in circular compression arcs.",
+          "positiveImplication": "Pain, clicking, popping, or catching sensation confirms labral tear.",
+          "negativeImplication": "No clicking, popping, or pain under axial load.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Log Roll Test",
+          "procedure": "Patient is supine with legs extended. Examiner gently rolls leg into full internal and external rotation.",
+          "positiveImplication": "Pain or increased external rotation laxity indicates iliofemoral ligament or labral tear.",
+          "negativeImplication": "Painless symmetric rotation.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Modified Thomas Test",
+          "procedure": "Patient lies supine at edge of table, pulling one knee to chest while affected leg hangs extended.",
+          "positiveImplication": "Groin pain, mechanical clicking, or restriction in the hanging leg indicates labral irritation.",
+          "negativeImplication": "Hanging leg hangs freely without joint pain or clicking.",
+          "testType": "provocative"
         }
       ]
     },
@@ -7263,8 +7373,32 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Log Roll Test",
+          "procedure": "Patient is supine with legs extended. Examiner gently rolls the leg internally and externally.",
+          "positiveImplication": "Pain in neutral rotation during gentle roll indicates early intra-articular pathology (AVN suspicion).",
+          "negativeImplication": "Painless roll in neutral.",
+          "testType": "provocative"
+        },
+        {
+          "name": "FADIR Test",
+          "procedure": "Patient is supine. Examiner flexes, adducts, and internally rotates hip.",
+          "positiveImplication": "Groin pain reproduction suggests intra-articular compromise (evaluated with AVN risk factors).",
+          "negativeImplication": "Painless internal rotation in flexion.",
+          "testType": "provocative"
+        },
+        {
+          "name": "FABER Test",
+          "procedure": "Patient is supine in figure-4 position. Examiner applies downward pressure on knee.",
+          "positiveImplication": "Groin pain or severe stiffness indicates femoral head pathology.",
+          "negativeImplication": "Symmetric, pain-free FABER position.",
+          "testType": "provocative"
+        },
+        {
+          "name": "MRI of Bilateral Hips (Gold Standard)",
+          "procedure": "T1/T2-weighted MRI of pelvis and both femoral heads.",
+          "positiveImplication": "Serpiginous low-signal band on T1, 'double-line sign' on T2, or subchondral collapse confirms AVN.",
+          "negativeImplication": "Normal bone marrow signal and spherical femoral head.",
+          "testType": "imaging"
         }
       ]
     },
@@ -8231,8 +8365,25 @@
       ],
       "tests": [
         {
-          "name": "Clinical Assessment",
-          "procedure": "Physical examination and clinical assessment based on presenting symptoms"
+          "name": "Dynamic Hip Movement Test",
+          "procedure": "Patient actively flexes, abducts, and externally rotates hip, then returns to extension and adduction while examiner palpates.",
+          "positiveImplication": "Palpable or audible snap over greater trochanter or groin confirms snapping hip.",
+          "negativeImplication": "Smooth silent movement without snapping.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Ober’s Test (External Snapping)",
+          "procedure": "Patient lies on side. Examiner extends and abducts affected hip, then allows leg to drop toward table.",
+          "positiveImplication": "Leg remains elevated (ITB tightness) or snapping occurs across trochanter as hip flexes/extends.",
+          "negativeImplication": "Normal drop into adduction without snap.",
+          "testType": "provocative"
+        },
+        {
+          "name": "Thomas Test (Internal Snapping)",
+          "procedure": "Patient lies supine holding opposite knee to chest while affected hip is extended from flexion.",
+          "positiveImplication": "Audible or palpable snap in anterior groin as iliopsoas tendon glides over iliopectineal eminence.",
+          "negativeImplication": "Silent extension without anterior snap.",
+          "testType": "provocative"
         }
       ]
     }

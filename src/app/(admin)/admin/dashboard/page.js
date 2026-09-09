@@ -39,6 +39,7 @@ export default async function AdminDashboardPage() {
 
   // Fetch Clinicians for Management
   const approvedTherapistsRaw = await User.find({ role: ROLES.CLINICIAN })
+    .select('firstName lastName email role isVerified isActive createdAt professional avatar')
     .sort({ createdAt: -1 })
     .limit(5)
     .lean();
@@ -46,6 +47,7 @@ export default async function AdminDashboardPage() {
   const approvedTherapists = JSON.parse(JSON.stringify(approvedTherapistsRaw));
 
   const pendingTherapistsRaw = await User.find({ role: ROLES.PATIENT }) // Conceptually candidates
+    .select('firstName lastName email role isVerified isActive createdAt avatar')
     .sort({ createdAt: -1 })
     .limit(5)
     .lean();

@@ -7,6 +7,7 @@ export default async function AdminTherapistsPage() {
 
   // Fetch all clinicians
   const therapistsRaw = await User.find({ role: 'CLINICIAN' })
+    .select('firstName lastName email role isVerified isActive createdAt professional avatar')
     .sort({ createdAt: -1 })
     .lean();
 

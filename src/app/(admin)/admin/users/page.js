@@ -5,13 +5,25 @@ import AdminUserListClient from '@/components/admin/UserListClient';
 export default async function AdminUsersPage() {
   await connectDB();
 
-  // Fetch all users except admins (to focus on platform members)
+  // Fetch all users except admins with strict field projection to avoid fetching bloated fields
   const usersRaw = await User.find({ role: { $ne: 'ADMIN' } })
+    .select('firstName lastName email role isVerified isActive createdAt professional avatar')
     .sort({ createdAt: -1 })
     .lean();
 
-  // Serialize Mongoose objects
-  const users = JSON.parse(JSON.stringify(usersRaw));
+  // Clean and serialize objects, ensuring no massive base64 strings stall RSC serialization
+  const users = usersRaw.map((u) => ({
+    _id: u._id.toString(),
+    firstName: u.firstName || '',
+    lastName: u.lastName || '',
+    email: u.email || '',
+    role: u.role || 'PATIENT',
+    isVerified: !!u.isVerified,
+    isActive: u.isActive !== false,
+    createdAt: u.createdAt ? new Date(u.createdAt).toISOString() : null,
+    professional: u.professional ? JSON.parse(JSON.stringify(u.professional)) : null,
+    avatar: u.avatar && u.avatar.length > 2000 ? null : (u.avatar || null),
+  }));
 
   return (
     <div className="space-y-8 pb-12">

@@ -110,7 +110,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -125,7 +126,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -190,7 +192,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -268,7 +271,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -283,7 +287,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -300,7 +305,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -315,7 +321,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -330,7 +337,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -345,7 +353,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -454,7 +463,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Pain aggravated by standing/extension can indicate facet joint syndrome (not modeled here)."
+                "notes": "Pain aggravated by standing/extension can indicate facet joint syndrome (not modeled here).",
+                "optionColor": null
               }
             },
             {
@@ -469,7 +479,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -484,7 +495,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -593,7 +605,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -608,7 +621,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -623,7 +637,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -690,7 +705,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -773,7 +789,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -852,7 +869,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -931,7 +949,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Recurrent low-back pain"
+                "notes": "Recurrent low-back pain",
+                "optionColor": null
               }
             },
             {
@@ -1010,7 +1029,8 @@
                 "redFlag": true,
                 "redFlagText": "Possible Cauda Equina Syndrome - Urgent referral required",
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -1089,7 +1109,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "RED FLAG: fever/chills — consider infection, inflammatory (ankylosing spondylitis) or tumour; urgent work-up."
+                "notes": "RED FLAG: fever/chills — consider infection, inflammatory (ankylosing spondylitis) or tumour; urgent work-up.",
+                "optionColor": null
               }
             },
             {
@@ -1168,7 +1189,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "RED FLAG: unexplained weight loss — consider malignancy or infection; urgent work-up."
+                "notes": "RED FLAG: unexplained weight loss — consider malignancy or infection; urgent work-up.",
+                "optionColor": null
               }
             },
             {
@@ -1233,7 +1255,7 @@
                 "redFlagText": null,
                 "terminateAssessment": false,
                 "notes": null,
-                "optionColor": "red"
+                "optionColor": null
               }
             },
             {
@@ -1266,7 +1288,7 @@
                 "redFlagText": null,
                 "terminateAssessment": false,
                 "notes": null,
-                "optionColor": "red"
+                "optionColor": null
               }
             },
             {
@@ -1281,7 +1303,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1360,7 +1383,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1439,7 +1463,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1518,7 +1543,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1597,7 +1623,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1676,7 +1703,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1785,7 +1813,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1864,7 +1893,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1943,7 +1973,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2022,7 +2053,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2101,7 +2133,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2180,7 +2213,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2259,7 +2293,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2381,7 +2416,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2460,7 +2496,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2539,7 +2576,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2618,7 +2656,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2649,7 +2688,7 @@
                 "redFlagText": null,
                 "terminateAssessment": false,
                 "notes": null,
-                "optionColor": "red"
+                "optionColor": null
               }
             },
             {
@@ -2682,7 +2721,7 @@
                 "redFlagText": null,
                 "terminateAssessment": false,
                 "notes": null,
-                "optionColor": "red"
+                "optionColor": null
               }
             },
             {
@@ -2697,7 +2736,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2830,7 +2870,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2909,7 +2950,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2988,7 +3030,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3067,7 +3110,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3146,7 +3190,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3225,7 +3270,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3304,7 +3350,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3383,7 +3430,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3489,7 +3537,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3568,7 +3617,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3647,7 +3697,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3726,7 +3777,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3805,7 +3857,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3884,7 +3937,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3963,7 +4017,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -4042,7 +4097,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -4121,7 +4177,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -4200,7 +4257,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -4279,7 +4337,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],

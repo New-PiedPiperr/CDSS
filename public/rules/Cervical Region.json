@@ -45,7 +45,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -77,7 +78,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -92,7 +94,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -122,7 +125,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -156,7 +160,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -173,7 +178,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -203,7 +209,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -235,7 +242,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -250,7 +258,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -280,7 +289,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bending neck forward"
+                "notes": "Bending neck forward",
+                "optionColor": "red"
               }
             },
             {
@@ -312,7 +322,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bending neck forward"
+                "notes": "Bending neck forward",
+                "optionColor": "red"
               }
             },
             {
@@ -327,7 +338,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bending neck backward"
+                "notes": "Bending neck backward",
+                "optionColor": null
               }
             }
           ],
@@ -372,7 +384,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bending neck backward"
+                "notes": "Bending neck backward",
+                "optionColor": "red"
               }
             }
           ],
@@ -389,7 +402,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bending neck forward"
+                "notes": "Bending neck forward",
+                "optionColor": null
               }
             },
             {
@@ -404,7 +418,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bending neck backward"
+                "notes": "Bending neck backward",
+                "optionColor": "red"
               }
             }
           ],
@@ -434,7 +449,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -466,7 +482,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -481,7 +498,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -511,7 +529,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -543,7 +562,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -558,7 +578,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -588,7 +609,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Pain increasing with cough/sneeze/strain raises disc/radicular involvement; consider myelopathy work-up if neuro signs."
+                "notes": "Pain increasing with cough/sneeze/strain raises disc/radicular involvement; consider myelopathy work-up if neuro signs.",
+                "optionColor": "red"
               }
             },
             {
@@ -620,7 +642,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Pain increasing with cough/sneeze/strain raises disc/radicular involvement; consider myelopathy work-up if neuro signs."
+                "notes": "Pain increasing with cough/sneeze/strain raises disc/radicular involvement; consider myelopathy work-up if neuro signs.",
+                "optionColor": "red"
               }
             },
             {
@@ -635,7 +658,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -680,7 +704,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -697,7 +722,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Movement restriction noted; consider cervical stenosis if accompanied by myelopathic signs."
+                "notes": "Movement restriction noted; consider cervical stenosis if accompanied by myelopathic signs.",
+                "optionColor": null
               }
             },
             {
@@ -712,7 +738,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -757,7 +784,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -774,7 +802,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -789,7 +818,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -834,7 +864,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -851,7 +882,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -866,7 +898,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -896,7 +929,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -928,7 +962,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -943,7 +978,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -973,7 +1009,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1005,7 +1042,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1020,7 +1058,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1115,7 +1154,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1130,7 +1170,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -1147,7 +1188,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -1162,7 +1204,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -1177,7 +1220,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1192,7 +1236,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -1237,7 +1282,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -1254,7 +1300,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -1269,7 +1316,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -1299,7 +1347,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1331,7 +1380,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1346,7 +1396,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1391,7 +1442,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bending neck backward"
+                "notes": "Bending neck backward",
+                "optionColor": "red"
               }
             }
           ],
@@ -1408,7 +1460,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bending neck forward"
+                "notes": "Bending neck forward",
+                "optionColor": null
               }
             },
             {
@@ -1423,7 +1476,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bending neck backward"
+                "notes": "Bending neck backward",
+                "optionColor": "red"
               }
             }
           ],
@@ -1453,7 +1507,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bending neck forward"
+                "notes": "Bending neck forward",
+                "optionColor": "red"
               }
             },
             {
@@ -1485,7 +1540,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bending neck forward"
+                "notes": "Bending neck forward",
+                "optionColor": "red"
               }
             },
             {
@@ -1500,7 +1556,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bending neck backward"
+                "notes": "Bending neck backward",
+                "optionColor": null
               }
             }
           ],
@@ -1545,7 +1602,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -1562,7 +1620,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -1577,7 +1636,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -1607,7 +1667,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1639,7 +1700,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1654,7 +1716,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1699,7 +1762,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -1716,7 +1780,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             },
             {
@@ -1731,7 +1796,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -1761,7 +1827,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1793,7 +1860,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1808,7 +1876,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1853,7 +1922,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -1870,7 +1940,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Movement restriction noted; consider cervical stenosis if accompanied by myelopathic signs."
+                "notes": "Movement restriction noted; consider cervical stenosis if accompanied by myelopathic signs.",
+                "optionColor": null
               }
             },
             {
@@ -1885,7 +1956,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -1915,7 +1987,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1947,7 +2020,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1962,7 +2036,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1992,7 +2067,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2024,7 +2100,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2039,7 +2116,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2069,7 +2147,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2101,7 +2180,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2116,7 +2196,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2146,7 +2227,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2178,7 +2260,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2193,7 +2276,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],

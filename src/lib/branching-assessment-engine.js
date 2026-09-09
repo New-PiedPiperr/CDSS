@@ -742,23 +742,25 @@ export function processAnswer(state, questionId, answerValue) {
         const isRedSelection = effects.optionColor === 'red';
 
         if (isRedSelection) {
-          // Confirm this option; terminate only once ALL coloured options for the
+          // Confirm this option; terminate only once ALL coloured options for a non-general
           // condition have been confirmed (every one answered "yes").
-          const allConfirmed = coloredQuestions.every((q) => {
-            // A question may expose more than one coloured (red) option, so the
-            // confirmation counts if the recorded answer matches ANY of them.
-            const redValues = [...(q.answers || []), ...(q.options || [])]
-              .filter((a) => (a.effects || {}).optionColor === 'red')
-              .map((a) => a.value);
-            return newState.answeredQuestions.some(
-              (aq) => aq.questionId === q.id && redValues.includes(aq.answer)
-            );
-          });
+          if (!isGeneralCondition(newState, hostCondition)) {
+            const allConfirmed = coloredQuestions.every((q) => {
+              // A question may expose more than one coloured (red) option, so the
+              // confirmation counts if the recorded answer matches ANY of them.
+              const redValues = [...(q.answers || []), ...(q.options || [])]
+                .filter((a) => (a.effects || {}).optionColor === 'red')
+                .map((a) => a.value);
+              return newState.answeredQuestions.some(
+                (aq) => aq.questionId === q.id && redValues.includes(aq.answer)
+              );
+            });
 
-          if (allConfirmed) {
-            newState.isComplete = true;
-            newState.completionReason = 'diagnosed_by_red_option';
-            newState.temporaryDiagnosis = hostCondition;
+            if (allConfirmed) {
+              newState.isComplete = true;
+              newState.completionReason = 'diagnosed_by_red_option';
+              newState.temporaryDiagnosis = hostCondition;
+            }
           }
         } else {
           // Non-coloured alternative chosen on a confirmation question → skip the

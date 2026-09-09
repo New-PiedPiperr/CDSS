@@ -206,10 +206,22 @@ export async function POST(req) {
       const rulesContent = await fs.readFile(rulesPath, 'utf-8');
       const rulesJson = JSON.parse(rulesContent);
 
-      const suspectedConditionsForTests = [
-        therapistFacingResult.temporalDiagnosis,
-        ...(aiAnalysisResult.differentialDiagnoses || []),
+      // Build suspected condition list from STRUCTURED sources first (condition names),
+      // falling back to AI prose arrays. Avoids substring-match failures where
+      // temporalDiagnosis is a full sentence rather than a bare condition name.
+      const structuredConditionNames = [
+        ...(conditionAnalysis || []).map((c) => c.name),
+        ...(differentialDiagnoses || []).map((c) => c.name),
+        primarySuspicion?.name,
       ].filter(Boolean);
+
+      const suspectedConditionsForTests =
+        structuredConditionNames.length > 0
+          ? structuredConditionNames
+          : [
+              therapistFacingResult.temporalDiagnosis,
+              ...(aiAnalysisResult.differentialDiagnoses || []),
+            ].filter(Boolean);
 
       recommendedTests = extractRecommendedTests(rulesJson, suspectedConditionsForTests);
       console.log(`Extracted ${recommendedTests.length} recommended tests for ${region}`);

@@ -95,7 +95,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerdisher_q2",
@@ -175,7 +176,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerdisher_q3",
@@ -251,7 +253,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerdisher_q4",
@@ -327,7 +330,8 @@
                 "notes": "Bending neck backward"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerdisher_q5",
@@ -403,7 +407,8 @@
                 "notes": "Bending neck backward"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerdisher_q6",
@@ -479,7 +484,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerdisher_q7",
@@ -555,7 +561,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerdisher_q8",
@@ -631,7 +638,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerdisher_q9",
@@ -707,7 +715,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerdisher_q10",
@@ -783,7 +792,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerdisher_q11",
@@ -859,7 +869,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerdisher_q12",
@@ -935,7 +946,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerdisher_q13",
@@ -1011,7 +1023,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -1182,7 +1195,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerspo_q2",
@@ -1258,7 +1272,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerspo_q3",
@@ -1334,7 +1349,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerspo_q4",
@@ -1410,7 +1426,8 @@
                 "notes": "Bending neck backward"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerspo_q5",
@@ -1486,7 +1503,8 @@
                 "notes": "Bending neck backward"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerspo_q6",
@@ -1562,7 +1580,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerspo_q7",
@@ -1638,7 +1657,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerspo_q8",
@@ -1714,7 +1734,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerspo_q9",
@@ -1790,7 +1811,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerspo_q10",
@@ -1866,7 +1888,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerspo_q11",
@@ -1942,7 +1965,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerspo_q12",
@@ -2018,7 +2042,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerspo_q13",
@@ -2094,7 +2119,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "cervical_cerspo_q14",
@@ -2170,7 +2196,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [

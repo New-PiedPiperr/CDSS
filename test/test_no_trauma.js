@@ -24,11 +24,15 @@ state = processAnswer(state, q3.id, 'Dull, aching');
 
 let q4 = getCurrentQuestion(state);
 console.log('Step 4 ->', q4.id, ':', q4.question);
-state = processAnswer(state, q4.id, 'Running, squatting, stairs, prolonged sitting');
+state = processAnswer(state, q4.id, 'Gradual, insidious');
 
 let q5 = getCurrentQuestion(state);
 console.log('Step 5 ->', q5.id, ':', q5.question);
-state = processAnswer(state, q5.id, 'No');
+state = processAnswer(state, q5.id, 'Running, squatting, stairs, prolonged sitting');
 
 let q6 = getCurrentQuestion(state);
 console.log('Step 6 ->', q6.id, ':', q6.question);
+state = processAnswer(state, q6.id, 'No (Supports PFPS diagnosis)');
+
+let q7 = getCurrentQuestion(state);
+console.log('Step 7 ->', q7.id, ':', q7.question);

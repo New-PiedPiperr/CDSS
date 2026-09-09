@@ -136,7 +136,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_genass_q2",
@@ -212,7 +213,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_genass_q3",
@@ -288,7 +290,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_genass_q4",
@@ -368,7 +371,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_genass_q5",
@@ -444,7 +448,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_genass_q6",
@@ -610,7 +615,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_genass_q7",
@@ -686,7 +692,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_genass_q8",
@@ -774,7 +781,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_genass_q9",
@@ -850,7 +858,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_genass_q10",
@@ -926,7 +935,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -1016,7 +1026,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_ulnnerent_q2",
@@ -1122,7 +1133,8 @@
                 "notes": "Extreme cases may include atrophy"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -1217,7 +1229,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -1307,7 +1320,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_rheart_q2",
@@ -1383,7 +1397,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_rheart_q3",
@@ -1459,7 +1474,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_rheart_q4",
@@ -1535,7 +1551,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_rheart_q5",
@@ -1611,7 +1628,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         }
       ],
       "tests": [
@@ -1710,7 +1728,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_osteoa_q2",
@@ -1786,7 +1805,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_osteoa_q3",
@@ -1862,7 +1882,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_osteoa_q4",
@@ -1938,7 +1959,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "elbow_osteoa_q5",
@@ -2014,7 +2036,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_osteoa_q6",
@@ -2090,7 +2113,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "elbow_osteoa_q7",
@@ -2166,7 +2190,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [

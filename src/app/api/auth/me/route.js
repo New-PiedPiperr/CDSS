@@ -1,4 +1,4 @@
-import { auth } from '@/../auth';
+import { auth } from '@/auth';
 import connectDB from '@/lib/db/connect';
 import User from '@/models/User';
 import { NextResponse } from 'next/server';

@@ -15466,7 +15466,7 @@
               }
             },
             {
-              "value": "ABducion of the shoulder",
+              "value": "Abducion of the shoulder",
               "isTerminal": false,
               "branchTo": [],
               "effects": {
@@ -50592,7 +50592,7 @@
       "questionId": "shoulder_q7",
       "question": "What aggravates this pain?",
       "category": "general",
-      "response": "ABducion of the shoulder",
+      "response": "Abducion of the shoulder",
       "isTerminal": false,
       "effects": {
         "nextQuestionId": null,

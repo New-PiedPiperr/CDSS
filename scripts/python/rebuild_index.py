@@ -6,7 +6,7 @@ total questions. Preserves the General region entry.
 """
 import json, os, glob
 
-ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 RULES_DIR = os.path.join(ROOT, "public", "rules")
 INDEX = os.path.join(RULES_DIR, "index.json")
 

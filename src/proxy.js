@@ -3,7 +3,7 @@ import { authConfig } from './auth.config';
 
 const { auth } = NextAuth(authConfig);
 
-export const middleware = auth((req) => {
+export const proxy = auth((req) => {
   const { nextUrl } = req;
   const isLoggedIn = !!req.auth;
 
@@ -12,7 +12,7 @@ export const middleware = auth((req) => {
     const cookieHeader = req.headers.get('cookie') || '';
     if (cookieHeader.length > 2000) {
       console.warn(
-        `[Middleware] LARGE COOKIE DETECTED for ${nextUrl.pathname}: ${cookieHeader.length} bytes`
+        `[Proxy] LARGE COOKIE DETECTED for ${nextUrl.pathname}: ${cookieHeader.length} bytes`
       );
     }
   }
@@ -39,7 +39,7 @@ export const middleware = auth((req) => {
     if (isLoggedIn) {
       const role = req.auth?.user?.role?.toUpperCase();
       console.log(
-        `Middleware: Authenticated user with role ${role} accessing auth route ${nextUrl.pathname}. Redirecting...`
+        `Proxy: Authenticated user with role ${role} accessing auth route ${nextUrl.pathname}. Redirecting...`
       );
 
       if (role === 'ADMIN')
@@ -87,6 +87,8 @@ export const middleware = auth((req) => {
 
   return null;
 });
+
+export default proxy;
 
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*)'],

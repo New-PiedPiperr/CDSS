@@ -1,5 +1,5 @@
 import axios from 'axios';
-import decisionEngine from './decision-engine/heuristic';
+import decisionEngine from './decision-engine/heuristic.js';
 
 /**
  * Mistral AI Agent utility for clinical diagnosis.
@@ -7,8 +7,8 @@ import decisionEngine from './decision-engine/heuristic';
  */
 
 const MISTRAL_URL = 'https://api.mistral.ai/v1/chat/completions';
-// Current Mistral model id. `mistral-medium` (no version) is a legacy alias.
-const MISTRAL_MODEL = 'mistral-medium-latest';
+// Free experimentation tier model on Mistral AI
+const MISTRAL_MODEL = 'open-mistral-7b';
 
 // ---------------------------------------------------------------------------
 // CLINICAL SAFETY GUARDRAILS

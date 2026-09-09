@@ -1,6 +1,6 @@
 'use server';
 
-import { auth } from '@/../auth';
+import { auth } from '@/auth';
 import connectDB from '@/lib/db/connect';
 import DiagnosisSession from '@/models/DiagnosisSession';
 import User from '@/models/User';

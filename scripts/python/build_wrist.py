@@ -290,14 +290,14 @@ wrist = region("wrist", "Wrist Region", "Wrist Region.docx", conditions)
 
 if __name__ == "__main__":
     out = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                       "..", "public", "rules", "Wrist Region.json")
+                       "..", "..", "public", "rules", "Wrist Region.json")
     out = os.path.normpath(out)
     c, q = write_region(wrist, out)
     print(f"Wrote {out}: {c} conditions, {q} questions")
     # Re-apply the verified answer-driven branching map (rule-out / down-weight rules
     # derived from the DOCX clinical notes) so a rebuild stays reproducible.
     bmap = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                                         "..", "docs", "branching_wrist.json"))
+                                         "..", "..", "docs", "branching_wrist.json"))
     if os.path.exists(bmap):
         from apply_branching import apply
         apply("Wrist", bmap)

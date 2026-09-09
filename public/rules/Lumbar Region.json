@@ -128,7 +128,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_nonlowpai_q2",
@@ -210,7 +211,8 @@
                 "optionColor": "red"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_nonlowpai_q3",
@@ -346,7 +348,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_nonlowpai_q4",
@@ -484,7 +487,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_nonlowpai_q5",
@@ -622,7 +626,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_nonlowpai_q6",
@@ -708,7 +713,8 @@
                 "optionColor": "red"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_nonlowpai_q7",
@@ -786,7 +792,8 @@
                 "optionColor": "red"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_nonlowpai_q8",
@@ -864,7 +871,8 @@
                 "optionColor": "red"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_nonlowpai_q9",
@@ -942,7 +950,8 @@
                 "optionColor": "red"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_nonlowpai_q10",
@@ -1020,7 +1029,8 @@
                 "optionColor": "red"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_nonlowpai_q11",
@@ -1098,7 +1108,8 @@
                 "optionColor": "red"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_nonlowpai_q12",
@@ -1176,7 +1187,8 @@
                 "optionColor": "red"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -1272,7 +1284,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_sciati_q2",
@@ -1350,7 +1363,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_sciati_q3",
@@ -1428,7 +1442,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_sciati_q4",
@@ -1506,7 +1521,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_sciati_q5",
@@ -1584,7 +1600,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_sciati_q6",
@@ -1662,7 +1679,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -1770,7 +1788,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_lumspiste_q2",
@@ -1848,7 +1867,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_lumspiste_q3",
@@ -1926,7 +1946,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_lumspiste_q4",
@@ -2004,7 +2025,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "lumbar_lumspiste_q5",
@@ -2082,7 +2104,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_lumspiste_q6",
@@ -2160,7 +2183,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_lumspiste_q7",
@@ -2238,7 +2262,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -2359,7 +2384,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_lumdisher_q2",
@@ -2437,7 +2463,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_lumdisher_q3",
@@ -2515,7 +2542,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_lumdisher_q4",
@@ -2593,7 +2621,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_lumdisher_q5",
@@ -2671,7 +2700,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -2803,7 +2833,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_cauequsyn_q2",
@@ -2881,7 +2912,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_cauequsyn_q3",
@@ -2959,7 +2991,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "lumbar_cauequsyn_q4",
@@ -3037,7 +3070,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "lumbar_cauequsyn_q5",
@@ -3115,7 +3149,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_cauequsyn_q6",
@@ -3193,7 +3228,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "lumbar_cauequsyn_q7",
@@ -3271,7 +3307,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_cauequsyn_q8",
@@ -3349,7 +3386,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -3454,7 +3492,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_axispo_q2",
@@ -3532,7 +3571,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_axispo_q3",
@@ -3610,7 +3650,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_axispo_q4",
@@ -3688,7 +3729,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_axispo_q5",
@@ -3766,7 +3808,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_axispo_q6",
@@ -3844,7 +3887,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_axispo_q7",
@@ -3922,7 +3966,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_axispo_q8",
@@ -4000,7 +4045,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "lumbar_axispo_q9",
@@ -4078,7 +4124,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "lumbar_axispo_q10",
@@ -4156,7 +4203,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "lumbar_axispo_q11",
@@ -4234,7 +4282,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         }
       ],
       "tests": [

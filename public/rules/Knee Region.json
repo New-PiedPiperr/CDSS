@@ -211,14 +211,17 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -233,7 +236,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "black"
               }
             }
           ],
@@ -243,14 +247,17 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -265,10 +272,96 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "black"
               }
             }
           ]
+        },
+        {
+          "id": "knee_patpaisynpfprunkne_q3",
+          "questionText": "How did the pain begin?",
+          "question": "How did the pain begin?",
+          "condition": "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)",
+          "category": "general",
+          "inputType": "select",
+          "source_line": 12,
+          "isGating": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "options": [
+            {
+              "value": "Gradual, insidious",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "Sudden",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "black"
+              }
+            }
+          ],
+          "answers": [
+            {
+              "value": "Gradual, insidious",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "Sudden",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "black"
+              }
+            }
+          ],
+          "patientVisible": true
         },
         {
           "id": "knee_patpaisynpfprunkne_q5",
@@ -287,14 +380,17 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -309,7 +405,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "black"
               }
             }
           ],
@@ -319,14 +416,17 @@
               "effects": {
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
+                "triggeredConditions": [
+                  "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
+                ],
                 "excludedConditions": [],
                 "increaseLikelihood": [],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -341,7 +441,8 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": null,
+                "optionColor": "black"
               }
             }
           ]
@@ -421,82 +522,6 @@
                 "increaseLikelihood": [
                   "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)"
                 ],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ]
-        },
-        {
-          "id": "knee_patpaisynpfprunkne_q3",
-          "questionText": "How did the pain begin?",
-          "question": "How did the pain begin?",
-          "condition": "PATELLOFEMORAL PAIN SYNDROME (PFPS – “Runner’s Knee”)",
-          "category": "general",
-          "inputType": "select",
-          "source_line": 12,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Gradual, insidious",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "Sudden",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Gradual, insidious",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "Sudden",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,

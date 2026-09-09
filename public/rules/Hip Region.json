@@ -116,7 +116,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q2",
@@ -192,7 +193,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q3",
@@ -268,7 +270,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q4",
@@ -344,7 +347,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q5",
@@ -420,7 +424,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q6",
@@ -586,7 +591,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q7",
@@ -662,7 +668,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "hip_hiposthipoa_q8",
@@ -738,7 +745,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q9",
@@ -814,7 +822,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q10",
@@ -890,7 +899,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q11",
@@ -966,7 +976,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q12",
@@ -1042,7 +1053,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q13",
@@ -1118,7 +1130,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "hip_hiposthipoa_q14",
@@ -1194,7 +1207,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q15",
@@ -1270,7 +1284,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q16",
@@ -1346,7 +1361,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q17",
@@ -1422,7 +1438,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q18",
@@ -1498,7 +1515,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q19",
@@ -1574,7 +1592,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q20",
@@ -1650,7 +1669,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q21",
@@ -1726,7 +1746,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q22",
@@ -1832,7 +1853,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "hip_hiposthipoa_q23",
@@ -1908,7 +1930,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q24",
@@ -1984,7 +2007,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q25",
@@ -2060,7 +2084,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q26",
@@ -2136,7 +2161,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q27",
@@ -2212,7 +2238,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiposthipoa_q28",
@@ -2888,7 +2915,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -3008,7 +3036,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q2",
@@ -3084,7 +3113,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q3",
@@ -3160,7 +3190,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q4",
@@ -3236,7 +3267,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q5",
@@ -3342,7 +3374,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q6",
@@ -3418,7 +3451,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q7",
@@ -3494,7 +3528,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q8",
@@ -3570,7 +3605,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q9",
@@ -3646,7 +3682,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "hip_gretropaisyngtp_q10",
@@ -3722,7 +3759,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q11",
@@ -3798,7 +3836,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q12",
@@ -3874,7 +3913,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q13",
@@ -3950,7 +3990,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q14",
@@ -4026,7 +4067,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "hip_gretropaisyngtp_q15",
@@ -4102,7 +4144,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q16",
@@ -4178,7 +4221,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q17",
@@ -4254,7 +4298,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_gretropaisyngtp_q18",
@@ -4810,7 +4855,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -4930,7 +4976,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_femimpfai_q2",
@@ -5006,7 +5053,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_femimpfai_q3",
@@ -5082,7 +5130,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_femimpfai_q4",
@@ -5188,7 +5237,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_femimpfai_q5",
@@ -5264,7 +5314,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_femimpfai_q6",
@@ -5340,7 +5391,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_femimpfai_q7",
@@ -5416,7 +5468,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_femimpfai_q8",
@@ -5492,7 +5545,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_femimpfai_q9",
@@ -5568,7 +5622,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_femimpfai_q10",
@@ -5644,7 +5699,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_femimpfai_q11",
@@ -5720,7 +5776,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_femimpfai_q12",
@@ -5796,7 +5853,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_femimpfai_q13",
@@ -5872,7 +5930,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_femimpfai_q14",
@@ -6428,7 +6487,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -6548,7 +6608,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiplabtea_q2",
@@ -6624,7 +6685,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiplabtea_q3",
@@ -6700,7 +6762,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiplabtea_q4",
@@ -6776,7 +6839,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiplabtea_q5",
@@ -6852,7 +6916,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiplabtea_q6",
@@ -6928,7 +6993,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiplabtea_q7",
@@ -7004,7 +7070,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiplabtea_q8",
@@ -7080,7 +7147,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiplabtea_q9",
@@ -7156,7 +7224,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiplabtea_q10",
@@ -7232,7 +7301,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiplabtea_q11",
@@ -7308,7 +7378,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_hiplabtea_q12",
@@ -7864,7 +7935,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -7954,7 +8026,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q2",
@@ -8030,7 +8103,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q3",
@@ -8106,7 +8180,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q4",
@@ -8182,7 +8257,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q5",
@@ -8258,7 +8334,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q6",
@@ -8334,7 +8411,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q7",
@@ -8410,7 +8488,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q8",
@@ -8486,7 +8565,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "hip_avanec_q9",
@@ -8562,7 +8642,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q10",
@@ -8638,7 +8719,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q11",
@@ -8714,7 +8796,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q12",
@@ -8790,7 +8873,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "hip_avanec_q13",
@@ -8866,7 +8950,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q14",
@@ -8942,7 +9027,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q15",
@@ -9018,7 +9104,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q16",
@@ -9094,7 +9181,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q17",
@@ -9170,7 +9258,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_avanec_q18",
@@ -9606,7 +9695,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -9726,7 +9816,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_snahipsyn_q2",
@@ -9802,7 +9893,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_snahipsyn_q3",
@@ -9878,7 +9970,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_snahipsyn_q4",
@@ -9954,7 +10047,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_snahipsyn_q5",
@@ -10030,7 +10124,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_snahipsyn_q6",
@@ -10106,7 +10201,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_snahipsyn_q7",
@@ -10182,7 +10278,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_snahipsyn_q8",
@@ -10258,7 +10355,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_snahipsyn_q9",
@@ -10334,7 +10432,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_snahipsyn_q10",
@@ -10410,7 +10509,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_snahipsyn_q11",
@@ -10486,7 +10586,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "hip_snahipsyn_q12",
@@ -10922,7 +11023,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [

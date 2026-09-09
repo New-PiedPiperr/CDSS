@@ -20,7 +20,7 @@ Idempotent. Reports every change.
 """
 import json, os
 
-ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 
 
 def load(region):

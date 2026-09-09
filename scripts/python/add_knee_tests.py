@@ -7,7 +7,7 @@ decision graph to test-flow-graphs.json (idempotent).
 
 import json, os
 
-ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 LIB = os.path.join(ROOT, "src", "lib", "decision-engine", "test-library.json")
 GRAPHS = os.path.join(ROOT, "src", "lib", "decision-engine", "test-flow-graphs.json")
 

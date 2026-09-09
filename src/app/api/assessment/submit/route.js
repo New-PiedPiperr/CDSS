@@ -1,4 +1,4 @@
-import { auth } from '@/../auth';
+import { auth } from '@/auth';
 import connectDB from '@/lib/db/connect';
 import DiagnosisSession from '@/models/DiagnosisSession';
 import CaseFile from '@/models/CaseFile';

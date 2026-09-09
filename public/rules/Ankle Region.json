@@ -228,7 +228,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_genass_q2",
@@ -364,7 +365,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_genass_q3",
@@ -452,7 +454,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_genass_q4",
@@ -634,7 +637,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -724,7 +728,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_achten_q2",
@@ -815,7 +820,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_achten_q3",
@@ -895,7 +901,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_achten_q4",
@@ -971,7 +978,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_achten_q5",
@@ -1047,7 +1055,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_achten_q6",
@@ -1123,7 +1132,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -1217,7 +1227,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_achtenrup_q2",
@@ -1293,7 +1304,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_achtenrup_q3",
@@ -1369,7 +1381,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_achtenrup_q4",
@@ -1445,7 +1458,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_achtenrup_q5",
@@ -1521,7 +1535,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_achtenrup_q6",
@@ -1597,7 +1612,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -1716,7 +1732,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -1811,7 +1828,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_calbur_q2",
@@ -1887,7 +1905,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_calbur_q3",
@@ -1963,7 +1982,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_calbur_q4",
@@ -2039,7 +2059,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -2129,7 +2150,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_plafas_q2",
@@ -2205,7 +2227,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_plafas_q3",
@@ -2281,7 +2304,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_plafas_q4",
@@ -2357,7 +2381,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_plafas_q5",
@@ -2433,7 +2458,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_plafas_q6",
@@ -2509,7 +2535,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -2605,7 +2632,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_ankliginj_q2",
@@ -2685,7 +2713,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_ankliginj_q3",
@@ -2769,7 +2798,8 @@
                 "notes": "Confirm fracture — inability to bear weight confirms fracture per clinical source document"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_ankliginj_q4",
@@ -2845,7 +2875,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -2939,7 +2970,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         }
       ],
       "tests": [
@@ -3033,7 +3065,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_reclatins_q2",
@@ -3109,7 +3142,8 @@
                 "notes": "proceed to special test either ways"
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -3203,7 +3237,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -3297,7 +3332,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_teaofinftiblig_q2",
@@ -3373,7 +3409,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_teaofinftiblig_q3",
@@ -3453,7 +3490,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -3548,7 +3586,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_malfraoftheank_q2",
@@ -3624,7 +3663,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_malfraoftheank_q3",
@@ -3700,7 +3740,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_malfraoftheank_q4",
@@ -3776,7 +3817,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_malfraoftheank_q5",
@@ -3852,7 +3894,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_malfraoftheank_q6",
@@ -3928,7 +3971,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -4018,7 +4062,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_calfra_q2",
@@ -4094,7 +4139,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_calfra_q3",
@@ -4170,7 +4216,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_calfra_q4",
@@ -4306,7 +4353,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_calfra_q5",
@@ -4382,7 +4430,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_calfra_q6",
@@ -4458,7 +4507,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "ankle_calfra_q7",
@@ -4534,7 +4584,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         }
       ],
       "tests": [
@@ -4624,7 +4675,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_foocomsyn_q2",
@@ -4700,7 +4752,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_foocomsyn_q3",
@@ -4776,7 +4829,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_foocomsyn_q4",
@@ -4862,7 +4916,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -4952,7 +5007,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_rheart_q2",
@@ -5028,7 +5084,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_rheart_q3",
@@ -5104,7 +5161,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "ankle_rheart_q4",
@@ -5180,7 +5238,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "ankle_rheart_q5",
@@ -5256,7 +5315,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "ankle_rheart_q6",
@@ -5332,7 +5392,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_rheart_q7",
@@ -5408,7 +5469,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_rheart_q8",
@@ -5484,7 +5546,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -5578,7 +5641,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_raofankandhin_q2",
@@ -5654,7 +5718,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_raofankandhin_q3",
@@ -5730,7 +5795,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_raofankandhin_q4",
@@ -5806,7 +5872,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "ankle_raofankandhin_q5",
@@ -5882,7 +5949,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "ankle_raofankandhin_q6",
@@ -5958,7 +6026,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         }
       ],
       "tests": [
@@ -6048,7 +6117,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_ankost_q2",
@@ -6124,7 +6194,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_ankost_q3",
@@ -6208,7 +6279,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_ankost_q4",
@@ -6284,7 +6356,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_ankost_q5",
@@ -6360,7 +6433,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_ankost_q6",
@@ -6436,7 +6510,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         }
       ],
       "tests": [
@@ -6526,7 +6601,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_tartunsyn_q2",
@@ -6602,7 +6678,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "ankle_tartunsyn_q3",
@@ -6678,7 +6755,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_tartunsyn_q4",
@@ -6754,7 +6832,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_tartunsyn_q5",
@@ -6830,7 +6909,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_tartunsyn_q6",
@@ -6906,7 +6986,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_tartunsyn_q7",
@@ -6982,7 +7063,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "id": "ankle_tartunsyn_q8",
@@ -7058,7 +7140,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_tartunsyn_q9",
@@ -7134,7 +7217,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         },
         {
           "id": "ankle_tartunsyn_q10",
@@ -7210,7 +7294,8 @@
                 "notes": null
               }
             }
-          ]
+          ],
+          "patientVisible": true
         }
       ],
       "tests": [

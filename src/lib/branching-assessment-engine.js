@@ -387,6 +387,7 @@ function normalizeQuestion(rawQuestion, conditionName) {
     metadata: rawQuestion.metadata || {},
     inputType: rawQuestion.inputType || 'select',
     sourceLine: rawQuestion.source_line,
+    patientVisible: !questionBracket, // hide from patient if bracket text exists
   };
 }
 
@@ -464,13 +465,18 @@ export function getCurrentQuestion(state) {
  * @param {Object} question - Question to evaluate
  * @returns {boolean} Whether question should be shown
  */
-function canShowQuestion(state, question) {
+export function canShowQuestion(state, question) {
   // 1. Check if question's condition is ruled out
   if (
     question.condition &&
     state.ruledOutConditions.has(question.condition) &&
     !isGeneralCondition(state, question.condition)
   ) {
+    return false;
+  }
+
+  // 1a. Respect patient visibility flag
+  if (question.patientVisible === false) {
     return false;
   }
 

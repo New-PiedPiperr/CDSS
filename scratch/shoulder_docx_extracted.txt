@@ -25,7 +25,7 @@ P: No
 P: What aggravates this pain?
 P: Overhead movement
 P: Elevation above shoulder height
-P: ABducion of the shoulder
+P: Abducion of the shoulder
 P: Do you feel pain when you try to raise your arm?
 P: Yes
 P: No

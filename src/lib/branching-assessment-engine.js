@@ -387,7 +387,10 @@ function normalizeQuestion(rawQuestion, conditionName) {
     metadata: rawQuestion.metadata || {},
     inputType: rawQuestion.inputType || 'select',
     sourceLine: rawQuestion.source_line,
-    patientVisible: !questionBracket, // hide from patient if bracket text exists
+    patientVisible:
+      rawQuestion.patientVisible !== undefined
+        ? rawQuestion.patientVisible
+        : !questionBracket, // hide from patient if bracket text exists
   };
 }
 
@@ -986,7 +989,12 @@ function findTargetQuestionFromBracket(state, bracketText) {
       (effects.increaseLikelihood || []).length > 0 ||
       effects.optionColor === 'red';
 
-    if (hasRuleOut && hasConfirm) {
+    if (
+      hasRuleOut &&
+      hasConfirm &&
+      !isGeneralCondition(newState, question.condition) &&
+      !effects.nextQuestionId
+    ) {
       const hostCondition = question.condition;
       newState.isComplete = true;
       newState.completionReason = 'super_override_termination';

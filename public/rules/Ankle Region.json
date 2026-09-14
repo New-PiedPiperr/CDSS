@@ -385,14 +385,14 @@
           "category": "stiffness",
           "inputType": "select",
           "source_line": 12,
-          "isGating": true,
+          "isGating": false,
           "requiredConditions": [],
           "excludedIfConditions": [],
           "options": [
             {
               "value": "Yes",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_genass_q4",
                 "skipToQuestionId": null,
                 "triggeredConditions": [
                   "Ankle Osteoarthritis"
@@ -405,13 +405,13 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null
+                "notes": "Rule out osteoarthritis"
               }
             },
             {
               "value": "No",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_achten_q1",
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [
@@ -430,7 +430,7 @@
             {
               "value": "Yes",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_genass_q4",
                 "skipToQuestionId": null,
                 "triggeredConditions": [
                   "Ankle Osteoarthritis"
@@ -443,14 +443,14 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": null,
+                "notes": "Rule out osteoarthritis",
                 "optionColor": null
               }
             },
             {
               "value": "No",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_achten_q1",
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [
@@ -470,8 +470,8 @@
         },
         {
           "id": "ankle_genass_q4",
-          "questionText": "If yes, when?",
-          "question": "If yes, when?",
+          "questionText": "When?",
+          "question": "When?",
           "condition": "General Assessment",
           "category": "temporal",
           "inputType": "select",
@@ -483,30 +483,26 @@
             {
               "value": "Morning",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_ankost_q1",
                 "skipToQuestionId": null,
                 "triggeredConditions": [
                   "Ankle Osteoarthritis"
                 ],
-                "excludedConditions": [
-                  "Plantar Fasciitis",
-                  "Calcaneal Bursitis",
-                  "Traction Apophysitis (Sever’s Disease)"
-                ],
+                "excludedConditions": [],
                 "increaseLikelihood": [
                   "Ankle Osteoarthritis"
                 ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null
+                "terminateAssessment": false,
+                "notes": "Confirm osteoarthritis"
               }
             },
             {
               "value": "Noon",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_achten_q1",
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
@@ -521,7 +517,7 @@
             {
               "value": "Night",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_achten_q1",
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
@@ -536,7 +532,7 @@
             {
               "value": "Anytime",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_achten_q1",
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
@@ -546,13 +542,13 @@
                 "redFlagText": null,
                 "terminateAssessment": false,
                 "notes": null,
-                "optionColor": "red"
+                "optionColor": null
               }
             },
             {
               "value": "Every time",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_achten_q1",
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
@@ -569,31 +565,27 @@
             {
               "value": "Morning",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_ankost_q1",
                 "skipToQuestionId": null,
                 "triggeredConditions": [
                   "Ankle Osteoarthritis"
                 ],
-                "excludedConditions": [
-                  "Plantar Fasciitis",
-                  "Calcaneal Bursitis",
-                  "Traction Apophysitis (Sever’s Disease)"
-                ],
+                "excludedConditions": [],
                 "increaseLikelihood": [
                   "Ankle Osteoarthritis"
                 ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
-                "notes": null,
+                "terminateAssessment": false,
+                "notes": "Confirm osteoarthritis",
                 "optionColor": null
               }
             },
             {
               "value": "Noon",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_achten_q1",
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
@@ -609,7 +601,7 @@
             {
               "value": "Night",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_achten_q1",
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
@@ -625,7 +617,7 @@
             {
               "value": "Anytime",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_achten_q1",
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
@@ -635,13 +627,13 @@
                 "redFlagText": null,
                 "terminateAssessment": false,
                 "notes": null,
-                "optionColor": "red"
+                "optionColor": null
               }
             },
             {
               "value": "Every time",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_achten_q1",
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
@@ -6805,7 +6797,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         }
       ],
       "tests": [

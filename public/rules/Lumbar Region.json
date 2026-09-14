@@ -2058,7 +2058,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "lumbar_lumspiste_q5",
@@ -2665,8 +2665,8 @@
         },
         {
           "id": "lumbar_lumdisher_q5",
-          "questionText": "If yes, does this pain get worse with sitting and relieved with standing?",
-          "question": "If yes, does this pain get worse with sitting and relieved with standing?",
+          "questionText": "Does this pain get worse with sitting and relieved with standing?",
+          "question": "Does this pain get worse with sitting and relieved with standing?",
           "condition": "Lumbar Disc Herniation",
           "category": "general",
           "inputType": "select",
@@ -3035,7 +3035,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "lumbar_cauequsyn_q4",
@@ -3115,7 +3115,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "lumbar_cauequsyn_q5",
@@ -3275,7 +3275,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "lumbar_cauequsyn_q7",
@@ -4182,7 +4182,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "lumbar_axispo_q10",
@@ -4262,7 +4262,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "lumbar_axispo_q11",
@@ -4342,7 +4342,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         }
       ],
       "tests": [

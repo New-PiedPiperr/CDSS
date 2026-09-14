@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T13:38:18.737Z",
+  "generatedAt": "2026-09-14T18:58:29.734Z",
   "version": "1.0.0",
   "conditionTests": [
     {
@@ -455,23 +455,23 @@
       "condition": "General Assessment",
       "conditionId": "elbow_general_assessment",
       "recommendedTests": [
-        "Cozen’s Test",
-        "Mill’s Sign",
-        "Maudsley’s Test"
+        "Cozenâ€™s Test",
+        "Millâ€™s Sign",
+        "Maudsleyâ€™s Test"
       ],
       "procedures": [
         {
-          "testName": "Cozen’s Test",
-          "procedure": "Patient makes a fist, pronates forearm, and extends wrist against examiner resistance with elbow in 90° flexion.",
+          "testName": "Cozenâ€™s Test",
+          "procedure": "Patient makes a fist, pronates forearm, and extends wrist against examiner resistance with elbow in 90Â° flexion.",
           "positiveSign": ""
         },
         {
-          "testName": "Mill’s Sign",
+          "testName": "Millâ€™s Sign",
           "procedure": "Patient closes hand, examiner fully extends elbow, pronates forearm, and flexes wrist.",
           "positiveSign": ""
         },
         {
-          "testName": "Maudsley’s Test",
+          "testName": "Maudsleyâ€™s Test",
           "procedure": "Examiner resists extension of middle finger (third digit) distal to PIP joint.",
           "positiveSign": ""
         }
@@ -484,12 +484,12 @@
       "condition": "Ulnar Nerve Entrapment",
       "conditionId": "elbow_ulnar_nerve_entrapment",
       "recommendedTests": [
-        "Tinel’s Sign at Cubital Tunnel",
+        "Tinelâ€™s Sign at Cubital Tunnel",
         "Elbow Flexion Test"
       ],
       "procedures": [
         {
-          "testName": "Tinel’s Sign at Cubital Tunnel",
+          "testName": "Tinelâ€™s Sign at Cubital Tunnel",
           "procedure": "Examiner lightly taps ulnar nerve in groove between medial epicondyle and olecranon.",
           "positiveSign": ""
         },
@@ -513,12 +513,12 @@
       "procedures": [
         {
           "testName": "Valgus Stress Test",
-          "procedure": "Forearm supinated, elbow flexed to 25°–30°. Examiner stabilizes arm and applies valgus stress to forearm.",
+          "procedure": "Forearm supinated, elbow flexed to 25Â°â€“30Â°. Examiner stabilizes arm and applies valgus stress to forearm.",
           "positiveSign": ""
         },
         {
           "testName": "Moving Valgus Stress Test",
-          "procedure": "Examiner applies constant valgus torque while flexing and extending elbow between 30° and 120°.",
+          "procedure": "Examiner applies constant valgus torque while flexing and extending elbow between 30Â° and 120Â°.",
           "positiveSign": ""
         }
       ],
@@ -570,7 +570,7 @@
       "condition": "HIP OSTEOARTHRITIS (Hip OA)",
       "conditionId": "hip_hip_osteoarthritis_(hip_oa)",
       "recommendedTests": [
-        "FABER Test (Patrick’s Test)",
+        "FABER Test (Patrickâ€™s Test)",
         "FADIR Test",
         "Scour Test",
         "Log Roll Test",
@@ -578,13 +578,13 @@
       ],
       "procedures": [
         {
-          "testName": "FABER Test (Patrick’s Test)",
+          "testName": "FABER Test (Patrickâ€™s Test)",
           "procedure": "Patient is supine. Affected leg is placed in flexion, abduction, and external rotation (figure-4). Examiner applies gentle downward pressure on knee while stabilizing opposite ASIS.",
           "positiveSign": ""
         },
         {
           "testName": "FADIR Test",
-          "procedure": "Patient is supine. Examiner flexes hip to 90°, then adducts and internally rotates hip.",
+          "procedure": "Patient is supine. Examiner flexes hip to 90Â°, then adducts and internally rotates hip.",
           "positiveSign": ""
         },
         {
@@ -613,7 +613,7 @@
       "recommendedTests": [
         "Single-Leg Stance Test",
         "Resisted External Derotation Test",
-        "Ober’s Test",
+        "Oberâ€™s Test",
         "Trendelenburg Test",
         "Greater Trochanter Palpation Test"
       ],
@@ -625,11 +625,11 @@
         },
         {
           "testName": "Resisted External Derotation Test",
-          "procedure": "Patient lies supine with hip and knee flexed to 90°. Examiner passively externally rotates hip, then asks patient to return to neutral against resistance.",
+          "procedure": "Patient lies supine with hip and knee flexed to 90Â°. Examiner passively externally rotates hip, then asks patient to return to neutral against resistance.",
           "positiveSign": ""
         },
         {
-          "testName": "Ober’s Test",
+          "testName": "Oberâ€™s Test",
           "procedure": "Patient lies on unaffected side. Examiner extends and abducts affected hip, then allows leg to drop into adduction.",
           "positiveSign": ""
         },
@@ -653,18 +653,18 @@
       "conditionId": "hip_femoroacetabular_impingement_(fai)",
       "recommendedTests": [
         "FADIR Test (Flexion, Adduction, Internal Rotation)",
-        "FABER Test (Patrick’s Test)",
+        "FABER Test (Patrickâ€™s Test)",
         "Scour Test",
         "Internal Rotation Overpressure Test"
       ],
       "procedures": [
         {
           "testName": "FADIR Test (Flexion, Adduction, Internal Rotation)",
-          "procedure": "Patient is supine. Examiner flexes hip to 90°, then adducts and internally rotates the hip.",
+          "procedure": "Patient is supine. Examiner flexes hip to 90Â°, then adducts and internally rotates the hip.",
           "positiveSign": ""
         },
         {
-          "testName": "FABER Test (Patrick’s Test)",
+          "testName": "FABER Test (Patrickâ€™s Test)",
           "procedure": "Patient is supine with foot on opposite knee (figure-4). Examiner applies downward pressure on ipsilateral knee.",
           "positiveSign": ""
         },
@@ -675,7 +675,7 @@
         },
         {
           "testName": "Internal Rotation Overpressure Test",
-          "procedure": "Patient is supine with hip flexed to 90°. Examiner applies internal rotation with terminal overpressure.",
+          "procedure": "Patient is supine with hip flexed to 90Â°. Examiner applies internal rotation with terminal overpressure.",
           "positiveSign": ""
         }
       ],
@@ -758,7 +758,7 @@
       "conditionId": "hip_snapping_hip_syndrome",
       "recommendedTests": [
         "Dynamic Hip Movement Test",
-        "Ober’s Test (External Snapping)",
+        "Oberâ€™s Test (External Snapping)",
         "Thomas Test (Internal Snapping)"
       ],
       "procedures": [
@@ -768,7 +768,7 @@
           "positiveSign": ""
         },
         {
-          "testName": "Ober’s Test (External Snapping)",
+          "testName": "Oberâ€™s Test (External Snapping)",
           "procedure": "Patient lies on side. Examiner extends and abducts affected hip, then allows leg to drop toward table.",
           "positiveSign": ""
         },
@@ -1743,23 +1743,23 @@
       "condition": "CARPAL TUNNEL SYNDROME (CTS)",
       "conditionId": "wrist_carpal_tunnel_syndrome_(cts)",
       "recommendedTests": [
-        "Phalen’s Test",
-        "Tinel’s Sign",
-        "Carpal Compression Test (Durkan’s Test)"
+        "Phalenâ€™s Test",
+        "Tinelâ€™s Sign",
+        "Carpal Compression Test (Durkanâ€™s Test)"
       ],
       "procedures": [
         {
-          "testName": "Phalen’s Test",
+          "testName": "Phalenâ€™s Test",
           "procedure": "Patient flexes both wrists maximally (dorsal surfaces pressed together) and holds position for 60 seconds.",
           "positiveSign": ""
         },
         {
-          "testName": "Tinel’s Sign",
+          "testName": "Tinelâ€™s Sign",
           "procedure": "Examiner taps lightly over median nerve at volar carpal tunnel using fingertip or reflex hammer.",
           "positiveSign": ""
         },
         {
-          "testName": "Carpal Compression Test (Durkan’s Test)",
+          "testName": "Carpal Compression Test (Durkanâ€™s Test)",
           "procedure": "Examiner applies direct firm pressure with thumbs over carpal tunnel for up to 30 seconds.",
           "positiveSign": ""
         }
@@ -1769,16 +1769,16 @@
     },
     {
       "region": "wrist",
-      "condition": "DE QUERVAIN’S TENOSYNOVITIS",
-      "conditionId": "wrist_de_quervain’s_tenosynovitis",
+      "condition": "DE QUERVAINâ€™S TENOSYNOVITIS",
+      "conditionId": "wrist_de_quervainâ€™s_tenosynovitis",
       "recommendedTests": [
-        "Finkelstein’s Test",
+        "Finkelsteinâ€™s Test",
         "WHAT Test (Wrist Hyperflexion Abduction of Thumb)",
         "First Dorsal Compartment Palpation"
       ],
       "procedures": [
         {
-          "testName": "Finkelstein’s Test",
+          "testName": "Finkelsteinâ€™s Test",
           "procedure": "Patient makes a fist with thumb tucked inside fingers. Examiner gently applies passive ulnar deviation to wrist.",
           "positiveSign": ""
         },
@@ -1802,7 +1802,7 @@
       "conditionId": "wrist_wrist_sprain_(ligamentous_injury)",
       "recommendedTests": [
         "Ligament Stress Tests",
-        "Watson’s Test (Scaphoid Shift Test)"
+        "Watsonâ€™s Test (Scaphoid Shift Test)"
       ],
       "procedures": [
         {
@@ -1811,7 +1811,7 @@
           "positiveSign": ""
         },
         {
-          "testName": "Watson’s Test (Scaphoid Shift Test)",
+          "testName": "Watsonâ€™s Test (Scaphoid Shift Test)",
           "procedure": "Examiner compresses scaphoid tuberosity while moving wrist from ulnar to radial deviation.",
           "positiveSign": ""
         }
@@ -1925,8 +1925,8 @@
     },
     {
       "region": "wrist",
-      "condition": "KIENBÖCK’S DISEASE (AVN OF LUNATE)",
-      "conditionId": "wrist_kienböck’s_disease_(avn_of_lunate)",
+      "condition": "KIENBÃ–CKâ€™S DISEASE (AVN OF LUNATE)",
+      "conditionId": "wrist_kienbã–ckâ€™s_disease_(avn_of_lunate)",
       "recommendedTests": [
         "Axial Load Test",
         "Lunate Palpation Test",

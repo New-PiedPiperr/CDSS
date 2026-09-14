@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T18:58:29.734Z",
+  "generatedAt": "2026-09-14T20:31:25.666Z",
   "version": "1.0.0",
   "stats": {
     "totalConditions": 66,
@@ -650,7 +650,50 @@
         },
         {
           "questionId": "ankle_achten_q6",
-          "questionText": "Does the pain reduce with rest at joint or with the use of NSAIDs?",
+          "questionText": "Does the pain reduce with rest at the ankle joint?",
+          "category": "general",
+          "responses": [
+            {
+              "value": "Yes",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": null
+              }
+            }
+          ]
+        },
+        {
+          "questionId": "ankle_achten_q7",
+          "questionText": "Does the pain reduce with the use of NSAIDs (anti-inflammatory medication)?",
           "category": "general",
           "responses": [
             {
@@ -1255,6 +1298,51 @@
                 "terminateAssessment": false,
                 "notes": null,
                 "optionColor": null
+              }
+            }
+          ]
+        },
+        {
+          "questionId": "ankle_calbur_q5",
+          "questionText": "Does the back part of your heel (posterior calcaneum) look more prominent or swollen?",
+          "category": "general",
+          "responses": [
+            {
+              "value": "Yes",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Calcaneal Bursitis"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "black"
               }
             }
           ]
@@ -2161,6 +2249,51 @@
       "questions": [
         {
           "questionId": "ankle_malfraoftheank_q1",
+          "questionText": "Are you a postmenopausal woman?",
+          "category": "general",
+          "responses": [
+            {
+              "value": "Yes",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "MALLEOLAR FRACTURES OF THE ANKLE"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "black"
+              }
+            }
+          ]
+        },
+        {
+          "questionId": "ankle_malfraoftheank_q2",
           "questionText": "Do you play sports?",
           "category": "activity",
           "responses": [
@@ -2203,7 +2336,7 @@
           ]
         },
         {
-          "questionId": "ankle_malfraoftheank_q2",
+          "questionId": "ankle_malfraoftheank_q3",
           "questionText": "Any history of fall prior to the onset of the injury?",
           "category": "history",
           "responses": [
@@ -2246,7 +2379,7 @@
           ]
         },
         {
-          "questionId": "ankle_malfraoftheank_q3",
+          "questionId": "ankle_malfraoftheank_q4",
           "questionText": "Did you experience any twisting injury with your ankle going into inversion?",
           "category": "general",
           "responses": [
@@ -2289,7 +2422,7 @@
           ]
         },
         {
-          "questionId": "ankle_malfraoftheank_q4",
+          "questionId": "ankle_malfraoftheank_q5",
           "questionText": "Did you experience a fall with your foot anchored to the ground while your body fell forward?",
           "category": "general",
           "responses": [
@@ -2332,7 +2465,7 @@
           ]
         },
         {
-          "questionId": "ankle_malfraoftheank_q5",
+          "questionId": "ankle_malfraoftheank_q6",
           "questionText": "Is any obvious deformity present in the ankle?",
           "category": "general",
           "responses": [
@@ -2375,7 +2508,7 @@
           ]
         },
         {
-          "questionId": "ankle_malfraoftheank_q6",
+          "questionId": "ankle_malfraoftheank_q7",
           "questionText": "Following the onset of the pain are you able to stand and bear weight on the affected part?",
           "category": "function",
           "responses": [
@@ -2640,6 +2773,51 @@
         },
         {
           "questionId": "ankle_calfra_q5",
+          "questionText": "Does the heel look broad and wide?",
+          "category": "general",
+          "responses": [
+            {
+              "value": "Yes",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "CALCANEAL FRACTURES"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "black"
+              }
+            }
+          ]
+        },
+        {
+          "questionId": "ankle_calfra_q6",
           "questionText": "Is the surrounding tissue around the heel thick and tender?",
           "category": "general",
           "responses": [
@@ -2682,7 +2860,7 @@
           ]
         },
         {
-          "questionId": "ankle_calfra_q6",
+          "questionId": "ankle_calfra_q7",
           "questionText": "Is the normal concavity (hollow) below the lateral malleolus lacking?",
           "category": "general",
           "responses": [
@@ -2725,7 +2903,7 @@
           ]
         },
         {
-          "questionId": "ankle_calfra_q7",
+          "questionId": "ankle_calfra_q8",
           "questionText": "Can you invert (turn inward) and evert (turn outward) your foot?",
           "category": "general",
           "responses": [
@@ -2763,49 +2941,6 @@
                 "terminateAssessment": false,
                 "notes": null,
                 "optionColor": "red"
-              }
-            }
-          ]
-        },
-        {
-          "questionId": "ankle_q85",
-          "questionText": "Does the heel look broad and wide?",
-          "category": "general",
-          "responses": [
-            {
-              "value": "Yes",
-              "isTerminal": false,
-              "branchTo": [],
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "isTerminal": false,
-              "branchTo": [],
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
               }
             }
           ]
@@ -5828,11 +5963,11 @@
                 "excludedConditions": [],
                 "increaseLikelihood": [],
                 "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
+                "redFlag": true,
+                "redFlagText": "Sudden onset of elbow pain suggests possible distal biceps tendon rupture/avulsion. Urgent clinical evaluation required.",
                 "terminateAssessment": false,
-                "notes": "Sudden onset: consider biceps tendon rupture/avulsion (not modeled here) â€” refer if a pop/bulge is reported.",
-                "optionColor": null
+                "notes": "Sudden onset elicits diagnosis rule-out for biceps tendon rupture/avulsion.",
+                "optionColor": "red"
               }
             },
             {
@@ -26013,7 +26148,7 @@
               "isTerminal": false,
               "branchTo": [],
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "shoulder_shoimpsyn_q4_followup",
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
@@ -26042,6 +26177,51 @@
                 "terminateAssessment": false,
                 "notes": null,
                 "optionColor": null
+              }
+            }
+          ]
+        },
+        {
+          "questionId": "shoulder_shoimpsyn_q4_followup",
+          "questionText": "Was the sudden pain following any of these movements: Abduction (moving arm away from the body sideways), Elevation, or External rotation (rotating shoulder outward)?",
+          "category": "general",
+          "responses": [
+            {
+              "value": "Yes",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": "shoulder_shoimpsyn_q5",
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Shoulder Impingement Syndrome"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": "Sudden onset following abduction/external rotation strongly correlates with acute rotator cuff impingement.",
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": "shoulder_shoimpsyn_q5",
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "black"
               }
             }
           ]
@@ -26243,12 +26423,14 @@
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "Subacute tendinitis OR Painfularc syndrome"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bursitis",
+                "notes": "Passive movement pain points toward subacromial bursitis.",
                 "optionColor": null
               }
             },
@@ -26354,6 +26536,77 @@
       "conditionName": "Subacute tendinitis OR Painfularc syndrome",
       "entryCriteria": [],
       "questions": [
+        {
+          "questionId": "shoulder_subtenorpaisyn_q0",
+          "questionText": "For how long have you felt this present pain?",
+          "category": "general",
+          "responses": [
+            {
+              "value": "Less than 6 weeks (Acute)",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Subacute tendinitis OR Painfularc syndrome"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": "Acute presentation (< 6 weeks).",
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "6 - less than 12 weeks (Subacute)",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [
+                  "Subacute tendinitis OR Painfularc syndrome"
+                ],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Subacute tendinitis OR Painfularc syndrome"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": "Subacute tendinitis presentation (6-12 weeks).",
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "12 weeks or more (Chronic)",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [
+                  "Chronic Tendinitis"
+                ],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Chronic Tendinitis"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": "Chronic presentation (>= 12 weeks).",
+                "optionColor": "red"
+              }
+            }
+          ]
+        },
         {
           "questionId": "shoulder_subtenorpaisyn_q1",
           "questionText": "Does the pain resolve significantly after the precipitating activity is avoided?",
@@ -26461,7 +26714,7 @@
       "questions": [
         {
           "questionId": "shoulder_chrten_q1",
-          "questionText": "Have you had a previous history of shoulder pain after repetitive use? (Link to question 11, maybe redundant)",
+          "questionText": "Have you had a previous history of shoulder pain after repetitive use?",
           "category": "history",
           "responses": [
             {
@@ -32750,7 +33003,7 @@
     {
       "region": "ankle",
       "questionId": "ankle_achten_q6",
-      "question": "Does the pain reduce with rest at joint or with the use of NSAIDs?",
+      "question": "Does the pain reduce with rest at the ankle joint?",
       "category": "general",
       "response": "Yes",
       "isTerminal": false,
@@ -32792,7 +33045,91 @@
     {
       "region": "ankle",
       "questionId": "ankle_achten_q6",
-      "question": "Does the pain reduce with rest at joint or with the use of NSAIDs?",
+      "question": "Does the pain reduce with rest at the ankle joint?",
+      "category": "general",
+      "response": "No",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": null,
+        "skipToQuestionId": null,
+        "triggeredConditions": [],
+        "excludedConditions": [],
+        "increaseLikelihood": [],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": null,
+        "optionColor": null
+      },
+      "condition": {
+        "id": "ankle_achilles_tendinopathy",
+        "name": "Achilles Tendinopathy",
+        "entryCriteria": []
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Ultrasound",
+            "procedure": "Use ultrasound to investigate tears",
+            "confirmation": ""
+          },
+          {
+            "name": "Radiographic Confirmation",
+            "procedure": "Imaging to confirm diagnosis",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "ankle",
+      "questionId": "ankle_achten_q7",
+      "question": "Does the pain reduce with the use of NSAIDs (anti-inflammatory medication)?",
+      "category": "general",
+      "response": "Yes",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": null,
+        "skipToQuestionId": null,
+        "triggeredConditions": [],
+        "excludedConditions": [],
+        "increaseLikelihood": [],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": null,
+        "optionColor": "red"
+      },
+      "condition": {
+        "id": "ankle_achilles_tendinopathy",
+        "name": "Achilles Tendinopathy",
+        "entryCriteria": []
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Ultrasound",
+            "procedure": "Use ultrasound to investigate tears",
+            "confirmation": ""
+          },
+          {
+            "name": "Radiographic Confirmation",
+            "procedure": "Imaging to confirm diagnosis",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "ankle",
+      "questionId": "ankle_achten_q7",
+      "question": "Does the pain reduce with the use of NSAIDs (anti-inflammatory medication)?",
       "category": "general",
       "response": "No",
       "isTerminal": false,
@@ -33864,6 +34201,92 @@
         "terminateAssessment": false,
         "notes": null,
         "optionColor": null
+      },
+      "condition": {
+        "id": "ankle_calcaneal_bursitis",
+        "name": "Calcaneal Bursitis",
+        "entryCriteria": [
+          {
+            "type": "age",
+            "description": "Age ( 65 years and older)"
+          }
+        ]
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Clinical Observation - Posterior Calcaneum",
+            "procedure": "Check if the posterior portion of the calcaneum looks more prominent",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "ankle",
+      "questionId": "ankle_calbur_q5",
+      "question": "Does the back part of your heel (posterior calcaneum) look more prominent or swollen?",
+      "category": "general",
+      "response": "Yes",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": null,
+        "skipToQuestionId": null,
+        "triggeredConditions": [],
+        "excludedConditions": [],
+        "increaseLikelihood": [
+          "Calcaneal Bursitis"
+        ],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": null,
+        "optionColor": "red"
+      },
+      "condition": {
+        "id": "ankle_calcaneal_bursitis",
+        "name": "Calcaneal Bursitis",
+        "entryCriteria": [
+          {
+            "type": "age",
+            "description": "Age ( 65 years and older)"
+          }
+        ]
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Clinical Observation - Posterior Calcaneum",
+            "procedure": "Check if the posterior portion of the calcaneum looks more prominent",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "ankle",
+      "questionId": "ankle_calbur_q5",
+      "question": "Does the back part of your heel (posterior calcaneum) look more prominent or swollen?",
+      "category": "general",
+      "response": "No",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": null,
+        "skipToQuestionId": null,
+        "triggeredConditions": [],
+        "excludedConditions": [],
+        "increaseLikelihood": [],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": null,
+        "optionColor": "black"
       },
       "condition": {
         "id": "ankle_calcaneal_bursitis",
@@ -35294,8 +35717,8 @@
     {
       "region": "ankle",
       "questionId": "ankle_malfraoftheank_q1",
-      "question": "Do you play sports?",
-      "category": "activity",
+      "question": "Are you a postmenopausal woman?",
+      "category": "general",
       "response": "Yes",
       "isTerminal": false,
       "effects": {
@@ -35303,7 +35726,9 @@
         "skipToQuestionId": null,
         "triggeredConditions": [],
         "excludedConditions": [],
-        "increaseLikelihood": [],
+        "increaseLikelihood": [
+          "MALLEOLAR FRACTURES OF THE ANKLE"
+        ],
         "decreaseLikelihood": [],
         "redFlag": false,
         "redFlagText": null,
@@ -35336,6 +35761,90 @@
     {
       "region": "ankle",
       "questionId": "ankle_malfraoftheank_q1",
+      "question": "Are you a postmenopausal woman?",
+      "category": "general",
+      "response": "No",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": null,
+        "skipToQuestionId": null,
+        "triggeredConditions": [],
+        "excludedConditions": [],
+        "increaseLikelihood": [],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": null,
+        "optionColor": "black"
+      },
+      "condition": {
+        "id": "ankle_malleolar_fractures_of_the_ankle",
+        "name": "MALLEOLAR FRACTURES OF THE ANKLE",
+        "entryCriteria": [
+          {
+            "type": "age",
+            "description": "Age (Postmenopausal women)"
+          }
+        ]
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Radiographic Confirmation",
+            "procedure": "Confirm fracture using radiographic imaging",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "ankle",
+      "questionId": "ankle_malfraoftheank_q2",
+      "question": "Do you play sports?",
+      "category": "activity",
+      "response": "Yes",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": null,
+        "skipToQuestionId": null,
+        "triggeredConditions": [],
+        "excludedConditions": [],
+        "increaseLikelihood": [],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": null,
+        "optionColor": "red"
+      },
+      "condition": {
+        "id": "ankle_malleolar_fractures_of_the_ankle",
+        "name": "MALLEOLAR FRACTURES OF THE ANKLE",
+        "entryCriteria": [
+          {
+            "type": "age",
+            "description": "Age (Postmenopausal women)"
+          }
+        ]
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Radiographic Confirmation",
+            "procedure": "Confirm fracture using radiographic imaging",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "ankle",
+      "questionId": "ankle_malfraoftheank_q2",
       "question": "Do you play sports?",
       "category": "activity",
       "response": "No",
@@ -35377,7 +35886,7 @@
     },
     {
       "region": "ankle",
-      "questionId": "ankle_malfraoftheank_q2",
+      "questionId": "ankle_malfraoftheank_q3",
       "question": "Any history of fall prior to the onset of the injury?",
       "category": "history",
       "response": "Yes",
@@ -35419,7 +35928,7 @@
     },
     {
       "region": "ankle",
-      "questionId": "ankle_malfraoftheank_q2",
+      "questionId": "ankle_malfraoftheank_q3",
       "question": "Any history of fall prior to the onset of the injury?",
       "category": "history",
       "response": "No",
@@ -35461,7 +35970,7 @@
     },
     {
       "region": "ankle",
-      "questionId": "ankle_malfraoftheank_q3",
+      "questionId": "ankle_malfraoftheank_q4",
       "question": "Did you experience any twisting injury with your ankle going into inversion?",
       "category": "general",
       "response": "Yes",
@@ -35503,7 +36012,7 @@
     },
     {
       "region": "ankle",
-      "questionId": "ankle_malfraoftheank_q3",
+      "questionId": "ankle_malfraoftheank_q4",
       "question": "Did you experience any twisting injury with your ankle going into inversion?",
       "category": "general",
       "response": "No",
@@ -35545,7 +36054,7 @@
     },
     {
       "region": "ankle",
-      "questionId": "ankle_malfraoftheank_q4",
+      "questionId": "ankle_malfraoftheank_q5",
       "question": "Did you experience a fall with your foot anchored to the ground while your body fell forward?",
       "category": "general",
       "response": "Yes",
@@ -35587,92 +36096,8 @@
     },
     {
       "region": "ankle",
-      "questionId": "ankle_malfraoftheank_q4",
+      "questionId": "ankle_malfraoftheank_q5",
       "question": "Did you experience a fall with your foot anchored to the ground while your body fell forward?",
-      "category": "general",
-      "response": "No",
-      "isTerminal": false,
-      "effects": {
-        "nextQuestionId": null,
-        "skipToQuestionId": null,
-        "triggeredConditions": [],
-        "excludedConditions": [],
-        "increaseLikelihood": [],
-        "decreaseLikelihood": [],
-        "redFlag": false,
-        "redFlagText": null,
-        "terminateAssessment": false,
-        "notes": null,
-        "optionColor": null
-      },
-      "condition": {
-        "id": "ankle_malleolar_fractures_of_the_ankle",
-        "name": "MALLEOLAR FRACTURES OF THE ANKLE",
-        "entryCriteria": [
-          {
-            "type": "age",
-            "description": "Age (Postmenopausal women)"
-          }
-        ]
-      },
-      "tests": {
-        "recommended": [
-          {
-            "name": "Radiographic Confirmation",
-            "procedure": "Confirm fracture using radiographic imaging",
-            "confirmation": ""
-          }
-        ],
-        "confirmationMethods": [],
-        "observations": []
-      }
-    },
-    {
-      "region": "ankle",
-      "questionId": "ankle_malfraoftheank_q5",
-      "question": "Is any obvious deformity present in the ankle?",
-      "category": "general",
-      "response": "Yes",
-      "isTerminal": false,
-      "effects": {
-        "nextQuestionId": null,
-        "skipToQuestionId": null,
-        "triggeredConditions": [],
-        "excludedConditions": [],
-        "increaseLikelihood": [],
-        "decreaseLikelihood": [],
-        "redFlag": false,
-        "redFlagText": null,
-        "terminateAssessment": false,
-        "notes": null,
-        "optionColor": "red"
-      },
-      "condition": {
-        "id": "ankle_malleolar_fractures_of_the_ankle",
-        "name": "MALLEOLAR FRACTURES OF THE ANKLE",
-        "entryCriteria": [
-          {
-            "type": "age",
-            "description": "Age (Postmenopausal women)"
-          }
-        ]
-      },
-      "tests": {
-        "recommended": [
-          {
-            "name": "Radiographic Confirmation",
-            "procedure": "Confirm fracture using radiographic imaging",
-            "confirmation": ""
-          }
-        ],
-        "confirmationMethods": [],
-        "observations": []
-      }
-    },
-    {
-      "region": "ankle",
-      "questionId": "ankle_malfraoftheank_q5",
-      "question": "Is any obvious deformity present in the ankle?",
       "category": "general",
       "response": "No",
       "isTerminal": false,
@@ -35714,6 +36139,90 @@
     {
       "region": "ankle",
       "questionId": "ankle_malfraoftheank_q6",
+      "question": "Is any obvious deformity present in the ankle?",
+      "category": "general",
+      "response": "Yes",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": null,
+        "skipToQuestionId": null,
+        "triggeredConditions": [],
+        "excludedConditions": [],
+        "increaseLikelihood": [],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": null,
+        "optionColor": "red"
+      },
+      "condition": {
+        "id": "ankle_malleolar_fractures_of_the_ankle",
+        "name": "MALLEOLAR FRACTURES OF THE ANKLE",
+        "entryCriteria": [
+          {
+            "type": "age",
+            "description": "Age (Postmenopausal women)"
+          }
+        ]
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Radiographic Confirmation",
+            "procedure": "Confirm fracture using radiographic imaging",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "ankle",
+      "questionId": "ankle_malfraoftheank_q6",
+      "question": "Is any obvious deformity present in the ankle?",
+      "category": "general",
+      "response": "No",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": null,
+        "skipToQuestionId": null,
+        "triggeredConditions": [],
+        "excludedConditions": [],
+        "increaseLikelihood": [],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": null,
+        "optionColor": null
+      },
+      "condition": {
+        "id": "ankle_malleolar_fractures_of_the_ankle",
+        "name": "MALLEOLAR FRACTURES OF THE ANKLE",
+        "entryCriteria": [
+          {
+            "type": "age",
+            "description": "Age (Postmenopausal women)"
+          }
+        ]
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Radiographic Confirmation",
+            "procedure": "Confirm fracture using radiographic imaging",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "ankle",
+      "questionId": "ankle_malfraoftheank_q7",
       "question": "Following the onset of the pain are you able to stand and bear weight on the affected part?",
       "category": "function",
       "response": "Yes",
@@ -35755,7 +36264,7 @@
     },
     {
       "region": "ankle",
-      "questionId": "ankle_malfraoftheank_q6",
+      "questionId": "ankle_malfraoftheank_q7",
       "question": "Following the onset of the pain are you able to stand and bear weight on the affected part?",
       "category": "function",
       "response": "No",
@@ -36162,7 +36671,7 @@
     {
       "region": "ankle",
       "questionId": "ankle_calfra_q5",
-      "question": "Is the surrounding tissue around the heel thick and tender?",
+      "question": "Does the heel look broad and wide?",
       "category": "general",
       "response": "Yes",
       "isTerminal": false,
@@ -36171,7 +36680,9 @@
         "skipToQuestionId": null,
         "triggeredConditions": [],
         "excludedConditions": [],
-        "increaseLikelihood": [],
+        "increaseLikelihood": [
+          "CALCANEAL FRACTURES"
+        ],
         "decreaseLikelihood": [],
         "redFlag": false,
         "redFlagText": null,
@@ -36199,6 +36710,80 @@
     {
       "region": "ankle",
       "questionId": "ankle_calfra_q5",
+      "question": "Does the heel look broad and wide?",
+      "category": "general",
+      "response": "No",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": null,
+        "skipToQuestionId": null,
+        "triggeredConditions": [],
+        "excludedConditions": [],
+        "increaseLikelihood": [],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": null,
+        "optionColor": "black"
+      },
+      "condition": {
+        "id": "ankle_calcaneal_fractures",
+        "name": "CALCANEAL FRACTURES",
+        "entryCriteria": []
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Radiographic Confirmation",
+            "procedure": "X-ray imaging to confirm fracture",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "ankle",
+      "questionId": "ankle_calfra_q6",
+      "question": "Is the surrounding tissue around the heel thick and tender?",
+      "category": "general",
+      "response": "Yes",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": null,
+        "skipToQuestionId": null,
+        "triggeredConditions": [],
+        "excludedConditions": [],
+        "increaseLikelihood": [],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": null,
+        "optionColor": "red"
+      },
+      "condition": {
+        "id": "ankle_calcaneal_fractures",
+        "name": "CALCANEAL FRACTURES",
+        "entryCriteria": []
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Radiographic Confirmation",
+            "procedure": "X-ray imaging to confirm fracture",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "ankle",
+      "questionId": "ankle_calfra_q6",
       "question": "Is the surrounding tissue around the heel thick and tender?",
       "category": "general",
       "response": "No",
@@ -36235,7 +36820,7 @@
     },
     {
       "region": "ankle",
-      "questionId": "ankle_calfra_q6",
+      "questionId": "ankle_calfra_q7",
       "question": "Is the normal concavity (hollow) below the lateral malleolus lacking?",
       "category": "general",
       "response": "Yes",
@@ -36272,7 +36857,7 @@
     },
     {
       "region": "ankle",
-      "questionId": "ankle_calfra_q6",
+      "questionId": "ankle_calfra_q7",
       "question": "Is the normal concavity (hollow) below the lateral malleolus lacking?",
       "category": "general",
       "response": "No",
@@ -36309,7 +36894,7 @@
     },
     {
       "region": "ankle",
-      "questionId": "ankle_calfra_q7",
+      "questionId": "ankle_calfra_q8",
       "question": "Can you invert (turn inward) and evert (turn outward) your foot?",
       "category": "general",
       "response": "Yes",
@@ -36346,7 +36931,7 @@
     },
     {
       "region": "ankle",
-      "questionId": "ankle_calfra_q7",
+      "questionId": "ankle_calfra_q8",
       "question": "Can you invert (turn inward) and evert (turn outward) your foot?",
       "category": "general",
       "response": "No",
@@ -36363,80 +36948,6 @@
         "terminateAssessment": false,
         "notes": null,
         "optionColor": "red"
-      },
-      "condition": {
-        "id": "ankle_calcaneal_fractures",
-        "name": "CALCANEAL FRACTURES",
-        "entryCriteria": []
-      },
-      "tests": {
-        "recommended": [
-          {
-            "name": "Radiographic Confirmation",
-            "procedure": "X-ray imaging to confirm fracture",
-            "confirmation": ""
-          }
-        ],
-        "confirmationMethods": [],
-        "observations": []
-      }
-    },
-    {
-      "region": "ankle",
-      "questionId": "ankle_q85",
-      "question": "Does the heel look broad and wide?",
-      "category": "general",
-      "response": "Yes",
-      "isTerminal": false,
-      "effects": {
-        "nextQuestionId": null,
-        "skipToQuestionId": null,
-        "triggeredConditions": [],
-        "excludedConditions": [],
-        "increaseLikelihood": [],
-        "decreaseLikelihood": [],
-        "redFlag": false,
-        "redFlagText": null,
-        "terminateAssessment": false,
-        "notes": null,
-        "optionColor": "red"
-      },
-      "condition": {
-        "id": "ankle_calcaneal_fractures",
-        "name": "CALCANEAL FRACTURES",
-        "entryCriteria": []
-      },
-      "tests": {
-        "recommended": [
-          {
-            "name": "Radiographic Confirmation",
-            "procedure": "X-ray imaging to confirm fracture",
-            "confirmation": ""
-          }
-        ],
-        "confirmationMethods": [],
-        "observations": []
-      }
-    },
-    {
-      "region": "ankle",
-      "questionId": "ankle_q85",
-      "question": "Does the heel look broad and wide?",
-      "category": "general",
-      "response": "No",
-      "isTerminal": false,
-      "effects": {
-        "nextQuestionId": null,
-        "skipToQuestionId": null,
-        "triggeredConditions": [],
-        "excludedConditions": [],
-        "increaseLikelihood": [],
-        "decreaseLikelihood": [],
-        "redFlag": false,
-        "redFlagText": null,
-        "terminateAssessment": false,
-        "notes": null,
-        "optionColor": null
       },
       "condition": {
         "id": "ankle_calcaneal_fractures",
@@ -42869,11 +43380,11 @@
         "excludedConditions": [],
         "increaseLikelihood": [],
         "decreaseLikelihood": [],
-        "redFlag": false,
-        "redFlagText": null,
+        "redFlag": true,
+        "redFlagText": "Sudden onset of elbow pain suggests possible distal biceps tendon rupture/avulsion. Urgent clinical evaluation required.",
         "terminateAssessment": false,
-        "notes": "Sudden onset: consider biceps tendon rupture/avulsion (not modeled here) â€” refer if a pop/bulge is reported.",
-        "optionColor": null
+        "notes": "Sudden onset elicits diagnosis rule-out for biceps tendon rupture/avulsion.",
+        "optionColor": "red"
       },
       "condition": {
         "id": "elbow_general_assessment",
@@ -91640,7 +92151,7 @@
       "response": "Sudden",
       "isTerminal": false,
       "effects": {
-        "nextQuestionId": null,
+        "nextQuestionId": "shoulder_shoimpsyn_q4_followup",
         "skipToQuestionId": null,
         "triggeredConditions": [],
         "excludedConditions": [],
@@ -91708,6 +92219,122 @@
         "terminateAssessment": false,
         "notes": null,
         "optionColor": null
+      },
+      "condition": {
+        "id": "shoulder_shoulder_impingement_syndrome",
+        "name": "Shoulder Impingement Syndrome",
+        "entryCriteria": []
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Spurling's Test (for Cervical Radiculitis)",
+            "procedure": "While patient is seated, the examiner applies side flexion of the neck towards the affected side while applying axial compression. Sign is positive if the pain sensation felt in the shoulder-neck region is replicated.",
+            "confirmation": ""
+          },
+          {
+            "name": "Painful Arc Test",
+            "procedure": "Ask patient to abduct arm across range of motion actively. Scapular rhythm is disturbed, pain is aggravated between 60-120 degrees, pain is alleviated if shoulder is laterally rotated on abduction. If positive, SIS is indicated.",
+            "confirmation": ""
+          },
+          {
+            "name": "Neer Impingement Sign",
+            "procedure": "Stabilise the scapula with one hand and raise the unaffected side to full flexion with abduction and internal rotation passively. The test is positive when there is pain at the subacromial space.",
+            "confirmation": ""
+          },
+          {
+            "name": "Hawkins-Kennedy Test",
+            "procedure": "Patient arm is placed in 90 deg of elevation at the scapular level and 90 deg flexion. Stabilise the upper arm with one hand and internally rotate with the other hand. The test is positive when pain is felt in the anterolateral aspect of the shoulder.",
+            "confirmation": ""
+          },
+          {
+            "name": "Jobe's Test",
+            "procedure": "Elevate arm in scapular plane, extend elbow and thumb points towards floor with arm internally rotated. Patient is asked to hold the position with downward pressure from examiner. Positive sign = pain on examiner restriction indicating supraspinatus irritation.",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "shoulder",
+      "questionId": "shoulder_shoimpsyn_q4_followup",
+      "question": "Was the sudden pain following any of these movements: Abduction (moving arm away from the body sideways), Elevation, or External rotation (rotating shoulder outward)?",
+      "category": "general",
+      "response": "Yes",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": "shoulder_shoimpsyn_q5",
+        "skipToQuestionId": null,
+        "triggeredConditions": [],
+        "excludedConditions": [],
+        "increaseLikelihood": [
+          "Shoulder Impingement Syndrome"
+        ],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": "Sudden onset following abduction/external rotation strongly correlates with acute rotator cuff impingement.",
+        "optionColor": "red"
+      },
+      "condition": {
+        "id": "shoulder_shoulder_impingement_syndrome",
+        "name": "Shoulder Impingement Syndrome",
+        "entryCriteria": []
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Spurling's Test (for Cervical Radiculitis)",
+            "procedure": "While patient is seated, the examiner applies side flexion of the neck towards the affected side while applying axial compression. Sign is positive if the pain sensation felt in the shoulder-neck region is replicated.",
+            "confirmation": ""
+          },
+          {
+            "name": "Painful Arc Test",
+            "procedure": "Ask patient to abduct arm across range of motion actively. Scapular rhythm is disturbed, pain is aggravated between 60-120 degrees, pain is alleviated if shoulder is laterally rotated on abduction. If positive, SIS is indicated.",
+            "confirmation": ""
+          },
+          {
+            "name": "Neer Impingement Sign",
+            "procedure": "Stabilise the scapula with one hand and raise the unaffected side to full flexion with abduction and internal rotation passively. The test is positive when there is pain at the subacromial space.",
+            "confirmation": ""
+          },
+          {
+            "name": "Hawkins-Kennedy Test",
+            "procedure": "Patient arm is placed in 90 deg of elevation at the scapular level and 90 deg flexion. Stabilise the upper arm with one hand and internally rotate with the other hand. The test is positive when pain is felt in the anterolateral aspect of the shoulder.",
+            "confirmation": ""
+          },
+          {
+            "name": "Jobe's Test",
+            "procedure": "Elevate arm in scapular plane, extend elbow and thumb points towards floor with arm internally rotated. Patient is asked to hold the position with downward pressure from examiner. Positive sign = pain on examiner restriction indicating supraspinatus irritation.",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "shoulder",
+      "questionId": "shoulder_shoimpsyn_q4_followup",
+      "question": "Was the sudden pain following any of these movements: Abduction (moving arm away from the body sideways), Elevation, or External rotation (rotating shoulder outward)?",
+      "category": "general",
+      "response": "No",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": "shoulder_shoimpsyn_q5",
+        "skipToQuestionId": null,
+        "triggeredConditions": [],
+        "excludedConditions": [],
+        "increaseLikelihood": [],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": null,
+        "optionColor": "black"
       },
       "condition": {
         "id": "shoulder_shoulder_impingement_syndrome",
@@ -92271,12 +92898,14 @@
         "skipToQuestionId": null,
         "triggeredConditions": [],
         "excludedConditions": [],
-        "increaseLikelihood": [],
+        "increaseLikelihood": [
+          "Subacute tendinitis OR Painfularc syndrome"
+        ],
         "decreaseLikelihood": [],
         "redFlag": false,
         "redFlagText": null,
         "terminateAssessment": false,
-        "notes": "Bursitis",
+        "notes": "Passive movement pain points toward subacromial bursitis.",
         "optionColor": null
       },
       "condition": {
@@ -92489,6 +93118,127 @@
     },
     {
       "region": "shoulder",
+      "questionId": "shoulder_subtenorpaisyn_q0",
+      "question": "For how long have you felt this present pain?",
+      "category": "general",
+      "response": "Less than 6 weeks (Acute)",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": null,
+        "skipToQuestionId": null,
+        "triggeredConditions": [],
+        "excludedConditions": [],
+        "increaseLikelihood": [
+          "Subacute tendinitis OR Painfularc syndrome"
+        ],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": "Acute presentation (< 6 weeks).",
+        "optionColor": "red"
+      },
+      "condition": {
+        "id": "shoulder_subacute_tendinitis_or_painfularc_syndrome",
+        "name": "Subacute tendinitis OR Painfularc syndrome",
+        "entryCriteria": []
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Clinical Assessment",
+            "procedure": "Physical examination and clinical assessment based on presenting symptoms",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "shoulder",
+      "questionId": "shoulder_subtenorpaisyn_q0",
+      "question": "For how long have you felt this present pain?",
+      "category": "general",
+      "response": "6 - less than 12 weeks (Subacute)",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": null,
+        "skipToQuestionId": null,
+        "triggeredConditions": [
+          "Subacute tendinitis OR Painfularc syndrome"
+        ],
+        "excludedConditions": [],
+        "increaseLikelihood": [
+          "Subacute tendinitis OR Painfularc syndrome"
+        ],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": "Subacute tendinitis presentation (6-12 weeks).",
+        "optionColor": "red"
+      },
+      "condition": {
+        "id": "shoulder_subacute_tendinitis_or_painfularc_syndrome",
+        "name": "Subacute tendinitis OR Painfularc syndrome",
+        "entryCriteria": []
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Clinical Assessment",
+            "procedure": "Physical examination and clinical assessment based on presenting symptoms",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "shoulder",
+      "questionId": "shoulder_subtenorpaisyn_q0",
+      "question": "For how long have you felt this present pain?",
+      "category": "general",
+      "response": "12 weeks or more (Chronic)",
+      "isTerminal": false,
+      "effects": {
+        "nextQuestionId": null,
+        "skipToQuestionId": null,
+        "triggeredConditions": [
+          "Chronic Tendinitis"
+        ],
+        "excludedConditions": [],
+        "increaseLikelihood": [
+          "Chronic Tendinitis"
+        ],
+        "decreaseLikelihood": [],
+        "redFlag": false,
+        "redFlagText": null,
+        "terminateAssessment": false,
+        "notes": "Chronic presentation (>= 12 weeks).",
+        "optionColor": "red"
+      },
+      "condition": {
+        "id": "shoulder_subacute_tendinitis_or_painfularc_syndrome",
+        "name": "Subacute tendinitis OR Painfularc syndrome",
+        "entryCriteria": []
+      },
+      "tests": {
+        "recommended": [
+          {
+            "name": "Clinical Assessment",
+            "procedure": "Physical examination and clinical assessment based on presenting symptoms",
+            "confirmation": ""
+          }
+        ],
+        "confirmationMethods": [],
+        "observations": []
+      }
+    },
+    {
+      "region": "shoulder",
       "questionId": "shoulder_subtenorpaisyn_q1",
       "question": "Does the pain resolve significantly after the precipitating activity is avoided?",
       "category": "activity",
@@ -92638,7 +93388,7 @@
     {
       "region": "shoulder",
       "questionId": "shoulder_chrten_q1",
-      "question": "Have you had a previous history of shoulder pain after repetitive use? (Link to question 11, maybe redundant)",
+      "question": "Have you had a previous history of shoulder pain after repetitive use?",
       "category": "history",
       "response": "Yes",
       "isTerminal": false,
@@ -92675,7 +93425,7 @@
     {
       "region": "shoulder",
       "questionId": "shoulder_chrten_q1",
-      "question": "Have you had a previous history of shoulder pain after repetitive use? (Link to question 11, maybe redundant)",
+      "question": "Have you had a previous history of shoulder pain after repetitive use?",
       "category": "history",
       "response": "No",
       "isTerminal": false,
@@ -102773,7 +103523,7 @@
       "conditionId": "ankle_achilles_tendinopathy",
       "conditionName": "Achilles Tendinopathy",
       "entryCriteria": [],
-      "questionCount": 6,
+      "questionCount": 7,
       "firstQuestion": "Do you feel the pain about 4 cm above your heel?",
       "tests": {
         "recommended": [
@@ -102864,7 +103614,7 @@
           "description": "Age ( 65 years and older)"
         }
       ],
-      "questionCount": 4,
+      "questionCount": 5,
       "firstQuestion": "Where do you feel the pain?",
       "tests": {
         "recommended": [
@@ -103027,8 +103777,8 @@
           "description": "Age (Postmenopausal women)"
         }
       ],
-      "questionCount": 6,
-      "firstQuestion": "Do you play sports?",
+      "questionCount": 7,
+      "firstQuestion": "Are you a postmenopausal woman?",
       "tests": {
         "recommended": [
           {
@@ -104335,7 +105085,7 @@
       "conditionId": "shoulder_shoulder_impingement_syndrome",
       "conditionName": "Shoulder Impingement Syndrome",
       "entryCriteria": [],
-      "questionCount": 9,
+      "questionCount": 10,
       "firstQuestion": "What region is pain present in?",
       "tests": {
         "recommended": [
@@ -104374,8 +105124,8 @@
       "conditionId": "shoulder_subacute_tendinitis_or_painfularc_syndrome",
       "conditionName": "Subacute tendinitis OR Painfularc syndrome",
       "entryCriteria": [],
-      "questionCount": 2,
-      "firstQuestion": "Does the pain resolve significantly after the precipitating activity is avoided?",
+      "questionCount": 3,
+      "firstQuestion": "For how long have you felt this present pain?",
       "tests": {
         "recommended": [
           {
@@ -104394,7 +105144,7 @@
       "conditionName": "Chronic Tendinitis",
       "entryCriteria": [],
       "questionCount": 3,
-      "firstQuestion": "Have you had a previous history of shoulder pain after repetitive use? (Link to question 11, maybe redundant)",
+      "firstQuestion": "Have you had a previous history of shoulder pain after repetitive use?",
       "tests": {
         "recommended": [
           {

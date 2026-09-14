@@ -249,10 +249,11 @@
                 "excludedConditions": [],
                 "increaseLikelihood": [],
                 "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
+                "redFlag": true,
+                "redFlagText": "Sudden onset of elbow pain suggests possible distal biceps tendon rupture/avulsion. Urgent clinical evaluation required.",
                 "terminateAssessment": false,
-                "notes": "Sudden onset: consider biceps tendon rupture/avulsion (not modeled here) â€” refer if a pop/bulge is reported."
+                "notes": "Sudden onset elicits diagnosis rule-out for biceps tendon rupture/avulsion.",
+                "optionColor": "red"
               }
             },
             {
@@ -282,11 +283,11 @@
                 "excludedConditions": [],
                 "increaseLikelihood": [],
                 "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
+                "redFlag": true,
+                "redFlagText": "Sudden onset of elbow pain suggests possible distal biceps tendon rupture/avulsion. Urgent clinical evaluation required.",
                 "terminateAssessment": false,
-                "notes": "Sudden onset: consider biceps tendon rupture/avulsion (not modeled here) â€” refer if a pop/bulge is reported.",
-                "optionColor": null
+                "notes": "Sudden onset elicits diagnosis rule-out for biceps tendon rupture/avulsion.",
+                "optionColor": "red"
               }
             },
             {
@@ -1244,21 +1245,21 @@
       ],
       "tests": [
         {
-          "name": "Cozenâ€™s Test",
-          "procedure": "Patient makes a fist, pronates forearm, and extends wrist against examiner resistance with elbow in 90Â° flexion.",
+          "name": "Cozen\u00e2\u20ac\u2122s Test",
+          "procedure": "Patient makes a fist, pronates forearm, and extends wrist against examiner resistance with elbow in 90\u00c2\u00b0 flexion.",
           "positiveImplication": "Sudden severe pain at lateral epicondyle indicates lateral epicondylitis (tennis elbow).",
           "negativeImplication": "Painless resisted wrist extension.",
           "testType": "provocative"
         },
         {
-          "name": "Millâ€™s Sign",
+          "name": "Mill\u00e2\u20ac\u2122s Sign",
           "procedure": "Patient closes hand, examiner fully extends elbow, pronates forearm, and flexes wrist.",
           "positiveImplication": "Pain over lateral epicondyle during passive stretch confirms lateral epicondylitis.",
           "negativeImplication": "Painless full passive stretch.",
           "testType": "provocative"
         },
         {
-          "name": "Maudsleyâ€™s Test",
+          "name": "Maudsley\u00e2\u20ac\u2122s Test",
           "procedure": "Examiner resists extension of middle finger (third digit) distal to PIP joint.",
           "positiveImplication": "Pain over lateral epicondyle indicates extensor digitorum involvement.",
           "negativeImplication": "Painless resisted third-digit extension.",
@@ -1434,7 +1435,7 @@
       ],
       "tests": [
         {
-          "name": "Tinelâ€™s Sign at Cubital Tunnel",
+          "name": "Tinel\u00e2\u20ac\u2122s Sign at Cubital Tunnel",
           "procedure": "Examiner lightly taps ulnar nerve in groove between medial epicondyle and olecranon.",
           "positiveImplication": "Electric shock or tingling sensation radiating into 4th and 5th digits indicates ulnar neuropathy.",
           "negativeImplication": "Painless tapping without radiating tingling.",
@@ -1544,15 +1545,15 @@
       "tests": [
         {
           "name": "Valgus Stress Test",
-          "procedure": "Forearm supinated, elbow flexed to 25Â°â€“30Â°. Examiner stabilizes arm and applies valgus stress to forearm.",
+          "procedure": "Forearm supinated, elbow flexed to 25\u00c2\u00b0\u00e2\u20ac\u201c30\u00c2\u00b0. Examiner stabilizes arm and applies valgus stress to forearm.",
           "positiveImplication": "Pain or excessive medial joint opening/laxity indicates medial collateral ligament (MCL) injury.",
           "negativeImplication": "Firm, pain-free medial end-feel.",
           "testType": "provocative"
         },
         {
           "name": "Moving Valgus Stress Test",
-          "procedure": "Examiner applies constant valgus torque while flexing and extending elbow between 30Â° and 120Â°.",
-          "positiveImplication": "Pain maximal between 70Â° and 120Â° indicates MCL tear.",
+          "procedure": "Examiner applies constant valgus torque while flexing and extending elbow between 30\u00c2\u00b0 and 120\u00c2\u00b0.",
+          "positiveImplication": "Pain maximal between 70\u00c2\u00b0 and 120\u00c2\u00b0 indicates MCL tear.",
           "negativeImplication": "Painless valgus arc motion.",
           "testType": "provocative"
         }

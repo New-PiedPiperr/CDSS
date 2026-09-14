@@ -90,7 +90,7 @@
                 "decreaseLikelihood": [
                   "Plantar Fasciitis",
                   "Calcaneal Bursitis",
-                  "Traction Apophysitis (Sever’s Disease)",
+                  "Traction Apophysitis (Sever\u2019s Disease)",
                   "CALCANEAL FRACTURES",
                   "Achilles Tendinopathy",
                   "Achilles Tendon Rupture"
@@ -117,7 +117,7 @@
                   "CALCANEAL FRACTURES",
                   "Achilles Tendinopathy",
                   "Achilles Tendon Rupture",
-                  "Traction Apophysitis (Sever’s Disease)"
+                  "Traction Apophysitis (Sever\u2019s Disease)"
                 ],
                 "redFlag": false,
                 "redFlagText": null,
@@ -195,7 +195,7 @@
                 "decreaseLikelihood": [
                   "Plantar Fasciitis",
                   "Calcaneal Bursitis",
-                  "Traction Apophysitis (Sever’s Disease)",
+                  "Traction Apophysitis (Sever\u2019s Disease)",
                   "CALCANEAL FRACTURES",
                   "Achilles Tendinopathy",
                   "Achilles Tendon Rupture"
@@ -223,7 +223,7 @@
                   "CALCANEAL FRACTURES",
                   "Achilles Tendinopathy",
                   "Achilles Tendon Rupture",
-                  "Traction Apophysitis (Sever’s Disease)"
+                  "Traction Apophysitis (Sever\u2019s Disease)"
                 ],
                 "redFlag": false,
                 "redFlagText": null,
@@ -1084,8 +1084,88 @@
         },
         {
           "id": "ankle_achten_q6",
-          "questionText": "Does the pain reduce with rest at joint or with the use of NSAIDs?",
-          "question": "Does the pain reduce with rest at joint or with the use of NSAIDs?",
+          "questionText": "Does the pain reduce with rest at the ankle joint?",
+          "question": "Does the pain reduce with rest at the ankle joint?",
+          "condition": "Achilles Tendinopathy",
+          "category": "general",
+          "inputType": "select",
+          "source_line": 37,
+          "isGating": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "options": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null
+              }
+            }
+          ],
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": null
+              }
+            }
+          ],
+          "patientVisible": true
+        },
+        {
+          "id": "ankle_achten_q7",
+          "questionText": "Does the pain reduce with the use of NSAIDs (anti-inflammatory medication)?",
+          "question": "Does the pain reduce with the use of NSAIDs (anti-inflammatory medication)?",
           "condition": "Achilles Tendinopathy",
           "category": "general",
           "inputType": "select",
@@ -1681,7 +1761,7 @@
       ]
     },
     {
-      "name": "Traction Apophysitis (Sever’s Disease)",
+      "name": "Traction Apophysitis (Sever\u2019s Disease)",
       "entry_criteria": [
         {
           "type": "age",
@@ -1713,11 +1793,11 @@
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
                 "triggeredConditions": [
-                  "Traction Apophysitis (Sever’s Disease)"
+                  "Traction Apophysitis (Sever\u2019s Disease)"
                 ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
-                  "Traction Apophysitis (Sever’s Disease)"
+                  "Traction Apophysitis (Sever\u2019s Disease)"
                 ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
@@ -1750,11 +1830,11 @@
                 "nextQuestionId": null,
                 "skipToQuestionId": null,
                 "triggeredConditions": [
-                  "Traction Apophysitis (Sever’s Disease)"
+                  "Traction Apophysitis (Sever\u2019s Disease)"
                 ],
                 "excludedConditions": [],
                 "increaseLikelihood": [
-                  "Traction Apophysitis (Sever’s Disease)"
+                  "Traction Apophysitis (Sever\u2019s Disease)"
                 ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
@@ -2119,6 +2199,91 @@
             }
           ],
           "patientVisible": true
+        },
+        {
+          "id": "ankle_calbur_q5",
+          "questionText": "Does the back part of your heel (posterior calcaneum) look more prominent or swollen?",
+          "question": "Does the back part of your heel (posterior calcaneum) look more prominent or swollen?",
+          "condition": "Calcaneal Bursitis",
+          "category": "general",
+          "inputType": "select",
+          "source_line": 95,
+          "isGating": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "patientVisible": true,
+          "options": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Calcaneal Bursitis"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "black"
+              }
+            }
+          ],
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Calcaneal Bursitis"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "black"
+              }
+            }
+          ]
         }
       ],
       "tests": [
@@ -2838,7 +3003,7 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": true,
-                "notes": "Confirm fracture — inability to bear weight confirms fracture per clinical source document"
+                "notes": "Confirm fracture \u2014 inability to bear weight confirms fracture per clinical source document"
               }
             }
           ],
@@ -2875,7 +3040,7 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": true,
-                "notes": "Confirm fracture — inability to bear weight confirms fracture per clinical source document",
+                "notes": "Confirm fracture \u2014 inability to bear weight confirms fracture per clinical source document",
                 "optionColor": null
               }
             }
@@ -3618,6 +3783,91 @@
       "questions": [
         {
           "id": "ankle_malfraoftheank_q1",
+          "questionText": "Are you a postmenopausal woman?",
+          "question": "Are you a postmenopausal woman?",
+          "condition": "MALLEOLAR FRACTURES OF THE ANKLE",
+          "category": "general",
+          "inputType": "select",
+          "source_line": 171,
+          "isGating": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "patientVisible": true,
+          "options": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "MALLEOLAR FRACTURES OF THE ANKLE"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "black"
+              }
+            }
+          ],
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "MALLEOLAR FRACTURES OF THE ANKLE"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "black"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ankle_malfraoftheank_q2",
           "questionText": "Do you play sports?",
           "question": "Do you play sports?",
           "condition": "MALLEOLAR FRACTURES OF THE ANKLE",
@@ -3697,7 +3947,7 @@
           "patientVisible": true
         },
         {
-          "id": "ankle_malfraoftheank_q2",
+          "id": "ankle_malfraoftheank_q3",
           "questionText": "Any history of fall prior to the onset of the injury?",
           "question": "Any history of fall prior to the onset of the injury?",
           "condition": "MALLEOLAR FRACTURES OF THE ANKLE",
@@ -3777,7 +4027,7 @@
           "patientVisible": true
         },
         {
-          "id": "ankle_malfraoftheank_q3",
+          "id": "ankle_malfraoftheank_q4",
           "questionText": "Did you experience any twisting injury with your ankle going into inversion?",
           "question": "Did you experience any twisting injury with your ankle going into inversion?",
           "condition": "MALLEOLAR FRACTURES OF THE ANKLE",
@@ -3857,7 +4107,7 @@
           "patientVisible": true
         },
         {
-          "id": "ankle_malfraoftheank_q4",
+          "id": "ankle_malfraoftheank_q5",
           "questionText": "Did you experience a fall with your foot anchored to the ground while your body fell forward?",
           "question": "Did you experience a fall with your foot anchored to the ground while your body fell forward?",
           "condition": "MALLEOLAR FRACTURES OF THE ANKLE",
@@ -3937,7 +4187,7 @@
           "patientVisible": true
         },
         {
-          "id": "ankle_malfraoftheank_q5",
+          "id": "ankle_malfraoftheank_q6",
           "questionText": "Is any obvious deformity present in the ankle?",
           "question": "Is any obvious deformity present in the ankle?",
           "condition": "MALLEOLAR FRACTURES OF THE ANKLE",
@@ -4017,7 +4267,7 @@
           "patientVisible": true
         },
         {
-          "id": "ankle_malfraoftheank_q6",
+          "id": "ankle_malfraoftheank_q7",
           "questionText": "Following the onset of the pain are you able to stand and bear weight on the affected part?",
           "question": "Following the onset of the pain are you able to stand and bear weight on the affected part?",
           "condition": "MALLEOLAR FRACTURES OF THE ANKLE",
@@ -4486,6 +4736,91 @@
         },
         {
           "id": "ankle_calfra_q5",
+          "questionText": "Does the heel look broad and wide?",
+          "question": "Does the heel look broad and wide?",
+          "condition": "CALCANEAL FRACTURES",
+          "category": "general",
+          "inputType": "select",
+          "source_line": 205,
+          "isGating": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "patientVisible": true,
+          "options": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "CALCANEAL FRACTURES"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "black"
+              }
+            }
+          ],
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "CALCANEAL FRACTURES"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "black"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ankle_calfra_q6",
           "questionText": "Is the surrounding tissue around the heel thick and tender?",
           "question": "Is the surrounding tissue around the heel thick and tender?",
           "condition": "CALCANEAL FRACTURES",
@@ -4565,7 +4900,7 @@
           "patientVisible": true
         },
         {
-          "id": "ankle_calfra_q6",
+          "id": "ankle_calfra_q7",
           "questionText": "Is the normal concavity (hollow) below the lateral malleolus lacking?",
           "question": "Is the normal concavity (hollow) below the lateral malleolus lacking?",
           "condition": "CALCANEAL FRACTURES",
@@ -4645,7 +4980,7 @@
           "patientVisible": true
         },
         {
-          "id": "ankle_calfra_q7",
+          "id": "ankle_calfra_q8",
           "questionText": "Can you invert (turn inward) and evert (turn outward) your foot?",
           "question": "Can you invert (turn inward) and evert (turn outward) your foot?",
           "condition": "CALCANEAL FRACTURES",
@@ -4723,85 +5058,6 @@
             }
           ],
           "patientVisible": true
-        },
-        {
-          "id": "ankle_q85",
-          "questionText": "Does the heel look broad and wide?",
-          "question": "Does the heel look broad and wide?",
-          "condition": "CALCANEAL FRACTURES",
-          "category": "general",
-          "inputType": "select",
-          "source_line": 215,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            }
-          ]
         }
       ],
       "tests": [
@@ -5086,7 +5342,7 @@
                 "redFlagText": null,
                 "optionColor": "red",
                 "terminateAssessment": true,
-                "notes": "Confirm foot compartment syndrome — refer for laboratory confirmation per clinical source document"
+                "notes": "Confirm foot compartment syndrome \u2014 refer for laboratory confirmation per clinical source document"
               }
             },
             {
@@ -5123,7 +5379,7 @@
                 "redFlagText": null,
                 "optionColor": "red",
                 "terminateAssessment": true,
-                "notes": "Confirm foot compartment syndrome — refer for laboratory confirmation per clinical source document"
+                "notes": "Confirm foot compartment syndrome \u2014 refer for laboratory confirmation per clinical source document"
               }
             },
             {

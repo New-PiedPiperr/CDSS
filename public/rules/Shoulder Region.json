@@ -303,7 +303,7 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Tingling/abnormal sensation suggests neural involvement (cervical radiculopathy / brachial plexus) â€” assess accordingly.",
+                "notes": "Tingling/abnormal sensation suggests neural involvement (cervical radiculopathy / brachial plexus) \u00e2\u20ac\u201d assess accordingly.",
                 "optionColor": "red"
               }
             },
@@ -337,7 +337,7 @@
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Tingling/abnormal sensation suggests neural involvement (cervical radiculopathy / brachial plexus) â€” assess accordingly.",
+                "notes": "Tingling/abnormal sensation suggests neural involvement (cervical radiculopathy / brachial plexus) \u00e2\u20ac\u201d assess accordingly.",
                 "optionColor": "red"
               }
             },
@@ -1332,8 +1332,8 @@
         },
         {
           "id": "shoulder_shoimpsyn_q2",
-          "questionText": "Do you experience tingling or abnormal sensations? â€“",
-          "question": "Do you experience tingling or abnormal sensations? â€“",
+          "questionText": "Do you experience tingling or abnormal sensations? \u00e2\u20ac\u201c",
+          "question": "Do you experience tingling or abnormal sensations? \u00e2\u20ac\u201c",
           "condition": "Shoulder Impingement Syndrome",
           "category": "neurological",
           "inputType": "select",
@@ -1505,7 +1505,7 @@
             {
               "value": "Sudden",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "shoulder_shoimpsyn_q4_followup",
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
@@ -1539,7 +1539,7 @@
             {
               "value": "Sudden",
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "shoulder_shoimpsyn_q4_followup",
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
@@ -1570,6 +1570,91 @@
             }
           ],
           "patientVisible": true
+        },
+        {
+          "id": "shoulder_shoimpsyn_q4_followup",
+          "questionText": "Was the sudden pain following any of these movements: Abduction (moving arm away from the body sideways), Elevation, or External rotation (rotating shoulder outward)?",
+          "question": "Was the sudden pain following any of these movements: Abduction (moving arm away from the body sideways), Elevation, or External rotation (rotating shoulder outward)?",
+          "condition": "Shoulder Impingement Syndrome",
+          "category": "general",
+          "inputType": "select",
+          "source_line": 68,
+          "isGating": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "patientVisible": true,
+          "options": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": "shoulder_shoimpsyn_q5",
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Shoulder Impingement Syndrome"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": "Sudden onset following abduction/external rotation strongly correlates with acute rotator cuff impingement.",
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": "shoulder_shoimpsyn_q5",
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "black"
+              }
+            }
+          ],
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "nextQuestionId": "shoulder_shoimpsyn_q5",
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Shoulder Impingement Syndrome"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": "Sudden onset following abduction/external rotation strongly correlates with acute rotator cuff impingement.",
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "nextQuestionId": "shoulder_shoimpsyn_q5",
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "black"
+              }
+            }
+          ]
         },
         {
           "id": "shoulder_shoimpsyn_q5",
@@ -1912,12 +1997,14 @@
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "Subacute tendinitis OR Painfularc syndrome"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bursitis"
+                "notes": "Passive movement pain points toward subacromial bursitis."
               }
             },
             {
@@ -1961,12 +2048,14 @@
                 "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
-                "increaseLikelihood": [],
+                "increaseLikelihood": [
+                  "Subacute tendinitis OR Painfularc syndrome"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
                 "terminateAssessment": false,
-                "notes": "Bursitis",
+                "notes": "Passive movement pain points toward subacromial bursitis.",
                 "optionColor": null
               }
             },
@@ -2099,6 +2188,139 @@
       "is_general": false,
       "source_line": 90,
       "questions": [
+        {
+          "id": "shoulder_subtenorpaisyn_q0",
+          "questionText": "For how long have you felt this present pain?",
+          "question": "For how long have you felt this present pain?",
+          "condition": "Subacute tendinitis OR Painfularc syndrome",
+          "category": "general",
+          "inputType": "select",
+          "source_line": 90,
+          "isGating": false,
+          "requiredConditions": [],
+          "excludedIfConditions": [],
+          "patientVisible": true,
+          "options": [
+            {
+              "value": "Less than 6 weeks (Acute)",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Subacute tendinitis OR Painfularc syndrome"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": "Acute presentation (< 6 weeks).",
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "6 - less than 12 weeks (Subacute)",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [
+                  "Subacute tendinitis OR Painfularc syndrome"
+                ],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Subacute tendinitis OR Painfularc syndrome"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": "Subacute tendinitis presentation (6-12 weeks).",
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "12 weeks or more (Chronic)",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [
+                  "Chronic Tendinitis"
+                ],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Chronic Tendinitis"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": "Chronic presentation (>= 12 weeks).",
+                "optionColor": "red"
+              }
+            }
+          ],
+          "answers": [
+            {
+              "value": "Less than 6 weeks (Acute)",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Subacute tendinitis OR Painfularc syndrome"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": "Acute presentation (< 6 weeks).",
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "6 - less than 12 weeks (Subacute)",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [
+                  "Subacute tendinitis OR Painfularc syndrome"
+                ],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Subacute tendinitis OR Painfularc syndrome"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": "Subacute tendinitis presentation (6-12 weeks).",
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "12 weeks or more (Chronic)",
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [
+                  "Chronic Tendinitis"
+                ],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Chronic Tendinitis"
+                ],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": "Chronic presentation (>= 12 weeks).",
+                "optionColor": "red"
+              }
+            }
+          ]
+        },
         {
           "id": "shoulder_subtenorpaisyn_q1",
           "questionText": "Does the pain resolve significantly after the precipitating activity is avoided?",
@@ -2276,8 +2498,8 @@
       "questions": [
         {
           "id": "shoulder_chrten_q1",
-          "questionText": "Have you had a previous history of shoulder pain after repetitive use? (Link to question 11, maybe redundant)",
-          "question": "Have you had a previous history of shoulder pain after repetitive use? (Link to question 11, maybe redundant)",
+          "questionText": "Have you had a previous history of shoulder pain after repetitive use?",
+          "question": "Have you had a previous history of shoulder pain after repetitive use?",
           "condition": "Chronic Tendinitis",
           "category": "history",
           "inputType": "select",
@@ -2513,7 +2735,7 @@
               }
             }
           ],
-          "patientVisible": true
+          "patientVisible": false
         }
       ],
       "tests": [

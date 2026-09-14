@@ -2393,7 +2393,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
+                "terminateAssessment": false,
                 "notes": null,
                 "optionColor": "red"
               }
@@ -2426,7 +2426,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": true,
+                "terminateAssessment": false,
                 "notes": null,
                 "optionColor": "red"
               }
@@ -3058,7 +3058,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -3109,8 +3109,8 @@
             {
               "value": "No",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": "ankle_q34",
+                "nextQuestionId": "ankle_delligtea_q1",
+                "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
                 "increaseLikelihood": [],
@@ -3142,8 +3142,8 @@
             {
               "value": "No",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": "ankle_q34",
+                "nextQuestionId": "ankle_delligtea_q1",
+                "skipToQuestionId": null,
                 "triggeredConditions": [],
                 "excludedConditions": [],
                 "increaseLikelihood": [],
@@ -3160,8 +3160,8 @@
         },
         {
           "id": "ankle_reclatins_q2",
-          "questionText": "If yes, have you had experiences like your ankle giving way OR instability when walking on uneven surfaces?",
-          "question": "If yes, have you had experiences like your ankle giving way OR instability when walking on uneven surfaces?",
+          "questionText": "Have you had experiences like your ankle giving way OR instability when walking on uneven surfaces?",
+          "question": "Have you had experiences like your ankle giving way OR instability when walking on uneven surfaces?",
           "condition": "Recurrent Lateral Instability",
           "category": "temporal",
           "inputType": "select",
@@ -4642,7 +4642,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "ankle_calfra_q7",
@@ -4722,7 +4722,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "ankle_q85",
@@ -5397,7 +5397,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "ankle_rheart_q4",
@@ -5477,7 +5477,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "ankle_rheart_q5",
@@ -5557,7 +5557,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "ankle_rheart_q6",
@@ -6135,7 +6135,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "ankle_raofankandhin_q5",
@@ -6215,7 +6215,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "ankle_raofankandhin_q6",
@@ -6295,7 +6295,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         }
       ],
       "tests": [
@@ -6971,7 +6971,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "ankle_tartunsyn_q3",
@@ -7371,7 +7371,7 @@
               }
             }
           ],
-          "patientVisible": false
+          "patientVisible": true
         },
         {
           "id": "ankle_tartunsyn_q8",

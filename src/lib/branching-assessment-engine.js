@@ -730,6 +730,7 @@ export function processAnswer(state, questionId, answerValue) {
     // Check both the options[] and answers[] arrays (the engine resolves the
     // selected answer from either) so a red option is never missed.
     const coloredQuestions = condQuestions.filter((q) =>
+      q.patientVisible !== false &&
       [...(q.answers || []), ...(q.options || [])].some(
         (a) => (a.effects || {}).optionColor === 'red'
       )

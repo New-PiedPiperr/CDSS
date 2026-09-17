@@ -20,10 +20,12 @@ export default async function TreatmentPlannerPage() {
   // Aggregate into unique patients
   const patientsMap = new Map();
 
-  // Get all active treatment plans to check status
-  const activePlans = await TreatmentPlan.find({
-    therapistName: { $regex: session.user.lastName, $options: 'i' },
-  }).lean();
+  // Get all active treatment plans to check status.
+  // Guard against missing lastName to prevent a MongoDB regex crash.
+  const therapistNameQuery = session.user.lastName
+    ? { therapistName: { $regex: session.user.lastName, $options: 'i' } }
+    : {};
+  const activePlans = await TreatmentPlan.find(therapistNameQuery).lean();
 
   sessions.forEach((sess) => {
     if (!sess.patientId) return;

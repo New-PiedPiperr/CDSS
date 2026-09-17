@@ -45,6 +45,35 @@ export default function CaseDetailsPage() {
   const { id } = useParams();
   const router = useRouter();
 
+  /**
+   * Safely extract plain text from a reasoning entry that may be a raw
+   * string or a JSON-stringified object (SOAP-style) stored by older records.
+   */
+  const parseReasoningPoint = (point) => {
+    if (typeof point !== 'string') return String(point ?? '');
+    // Fast path: plain text (doesn't start with { or [)
+    const trimmed = point.trim();
+    if (!trimmed.startsWith('{') && !trimmed.startsWith('[')) return point;
+    try {
+      const parsed = JSON.parse(trimmed);
+      // Common SOAP / reasoning field names
+      if (typeof parsed === 'string') return parsed;
+      if (parsed.text) return parsed.text;
+      if (parsed.reasoning) return parsed.reasoning;
+      if (parsed.clinicalNarrative) return parsed.clinicalNarrative;
+      if (parsed.content) return parsed.content;
+      if (parsed.narrative) return parsed.narrative;
+      if (parsed.value) return parsed.value;
+      if (parsed.summary) return parsed.summary;
+      // Fallback: join all string values
+      return Object.values(parsed)
+        .filter((v) => typeof v === 'string')
+        .join(' ') || trimmed;
+    } catch {
+      return point;
+    }
+  };
+
   const [session, setSession] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [activeAssessmentId, setActiveAssessmentId] = useState(id);
@@ -136,7 +165,12 @@ export default function CaseDetailsPage() {
       const res = await fetch(`/api/diagnosis/${id}/guided-test`);
       const result = await res.json();
       if (result.success) {
-        setRecommendedTests(result.recommendedTests || []);
+        const tests = result.recommendedTests || [];
+        // Only overwrite if the API returned a non-empty list.
+        // This prevents a late empty response wiping tests already set from the session.
+        if (tests.length > 0) {
+          setRecommendedTests(tests);
+        }
       }
     } catch (err) {
       console.error('Error fetching recommended tests:', err);
@@ -518,7 +552,7 @@ export default function CaseDetailsPage() {
                   {analysis.reasoning.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-sm">
                       <CheckCircle2 className="text-primary mt-0.5 h-4 w-4 shrink-0" />
-                      <span>{point}</span>
+                      <span>{parseReasoningPoint(point)}</span>
                     </li>
                   ))}
                 </ul>
@@ -541,16 +575,15 @@ export default function CaseDetailsPage() {
           Includes prominent "Start Test" button for clinician action.
        */}
       {(() => {
-        const provocativeTests = recommendedTests.filter(
-          (t) => t.testType === 'provocative' || t.testType === 'active'
-        );
+        // Show all tests — provocative, active, observation, or untyped
+        const displayTests = recommendedTests.filter((t) => !!t.name);
 
-        if (provocativeTests.length === 0) return null;
+        if (displayTests.length === 0) return null;
 
         return (
           <CollapsibleSection
             title="Recommended Clinical Tests"
-            subtitle={`${provocativeTests.length} tests determined from assessment`}
+            subtitle={`${displayTests.length} tests determined from assessment`}
             icon={<Activity className="h-5 w-5" />}
             isExpanded={expandedSections.tests}
             onToggle={() => toggleSection('tests')}
@@ -562,7 +595,7 @@ export default function CaseDetailsPage() {
                   Loading recommended tests...
                 </span>
               </div>
-            ) : provocativeTests.length > 0 ? (
+            ) : displayTests.length > 0 ? (
               <div className="space-y-4">
                 {/* Tests Summary Header */}
                 <div className="bg-primary/5 border-primary/20 rounded-xl border p-4">
@@ -572,7 +605,7 @@ export default function CaseDetailsPage() {
                         Based on Assessment Results
                       </p>
                       <p className="mt-1 text-sm">
-                        <span className="font-bold">{provocativeTests.length}</span> clinical
+                        <span className="font-bold">{displayTests.length}</span> clinical
                         tests recommended for{' '}
                         <span className="font-bold">{session.bodyRegion}</span> region
                       </p>
@@ -587,7 +620,7 @@ export default function CaseDetailsPage() {
 
                 {/* Test List */}
                 <div className="space-y-3">
-                  {provocativeTests.map((test, index) => (
+                  {displayTests.map((test, index) => (
                     <div
                       key={index}
                       className="border-border hover:border-primary/30 rounded-xl border p-4 transition-colors"
@@ -667,7 +700,7 @@ export default function CaseDetailsPage() {
                             Ready for Physical Examination
                           </h4>
                           <p className="text-muted-foreground mt-1 text-sm">
-                            Proceed through {provocativeTests.length} recommended tests
+                            Proceed through {displayTests.length} recommended tests
                             sequentially
                           </p>
                         </div>

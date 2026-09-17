@@ -42,7 +42,7 @@ general_qs = [
     ]),
     question("hip_q2", "Where is the pain located?", GEN, "location", [
         opt("Groin or anterior hip", increase=[OA, FAI, LAB, AVN]),
-        opt("Lateral (side) of the hip", increase=[GTPS, SNAP], excluded=[]),
+        opt("Lateral/side of the hip", increase=[GTPS, SNAP], excluded=[]),
         opt("Buttock", increase=[],
             notes="Consider lumbar spine / SIJ referral — assess separately."),
         opt("Anterior hip with snapping", increase=[SNAP]),

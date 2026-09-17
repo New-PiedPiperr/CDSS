@@ -2,2299 +2,1006 @@
   "region": "cervical",
   "title": "Cervical Region",
   "source_file": "Cervical Region.docx",
-  "extracted_at": "2026-07-09T23:17:22.538Z",
-  "migrated_at": "2026-02-04T11:09:54.074Z",
-  "engine_version": "v2-branching",
+  "extracted_at": "2026-09-17T22:40:03.348Z",
   "conditions": [
     {
       "name": "Cervical Disc Herniation",
-      "entry_criteria": [
-        {
-          "type": "age",
-          "description": "Age (Below 40 years)"
-        },
-        {
-          "type": "sex",
-          "description": "Sex (Male)"
-        }
-      ],
-      "is_general": false,
-      "source_line": 1,
+      "entry_criteria": [],
       "questions": [
         {
-          "id": "cervical_cerdisher_q1",
-          "questionText": "Where is your pain worse?",
+          "id": "cervical_q1",
           "question": "Where is your pain worse?",
-          "condition": "Cervical Disc Herniation",
           "category": "location",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Neck",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Neck-Arm",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 2,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Neck",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "Neck-Arm",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Neck",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "Neck-Arm",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerdisher_q2",
-          "questionText": "How did the pain begin?",
+          "id": "cervical_q2",
           "question": "How did the pain begin?",
-          "condition": "Cervical Disc Herniation",
           "category": "onset",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Sudden",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Gradual",
+              "effects": {
+                "rule_out": [
+                  "cervical spondylosis"
+                ],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 5,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Sudden",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "Gradual",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [
-                  "Cervical Spondylosis"
-                ],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Sudden",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "Gradual",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [
-                  "Cervical Spondylosis"
-                ],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerdisher_q3",
-          "questionText": "Do you feel numbness in any form?",
+          "id": "cervical_q3",
+          "question": "Age (Below 40 years)?",
+          "category": "demographic",
+          "answers": [
+            {
+              "value": "Sex",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Male"
+              }
+            }
+          ],
+          "source_line": 8,
+          "inputType": "select"
+        },
+        {
+          "id": "cervical_q4",
           "question": "Do you feel numbness in any form?",
-          "condition": "Cervical Disc Herniation",
           "category": "neurological",
-          "inputType": "select",
-          "source_line": 10,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
+          "answers": [
             {
               "value": "Yes",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
                 "notes": null
               }
             }
           ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            }
-          ],
-          "patientVisible": true
+          "source_line": 10,
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerdisher_q4",
-          "questionText": "Which of these movements currently aggravates your pain?",
+          "id": "cervical_q5",
           "question": "Which of these movements currently aggravates your pain?",
-          "condition": "Cervical Disc Herniation",
           "category": "general",
-          "inputType": "select",
-          "source_line": 13,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Flexion",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Bending neck forward",
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "Extension",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Bending neck backward"
-              }
-            }
-          ],
           "answers": [
             {
               "value": "Flexion",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Bending neck forward",
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "Extension",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Bending neck backward",
-                "optionColor": null
-              }
-            }
-          ],
-          "patientVisible": true
-        },
-        {
-          "id": "cervical_cerdisher_q5",
-          "questionText": "What movements relieve your pain?",
-          "question": "What movements relieve your pain?",
-          "condition": "Cervical Disc Herniation",
-          "category": "general",
-          "inputType": "select",
-          "source_line": 16,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Flexion",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
                 "notes": "Bending neck forward"
               }
             },
             {
               "value": "Extension",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Bending neck backward",
-                "optionColor": "red"
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck backward"
               }
             }
           ],
+          "source_line": 13,
+          "inputType": "select"
+        },
+        {
+          "id": "cervical_q6",
+          "question": "What movements relieve your pain?",
+          "category": "general",
           "answers": [
             {
               "value": "Flexion",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Bending neck forward",
-                "optionColor": null
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck forward"
               }
             },
             {
               "value": "Extension",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Bending neck backward",
-                "optionColor": "red"
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck backward"
               }
             }
           ],
-          "patientVisible": true
+          "source_line": 16,
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerdisher_q6",
-          "questionText": "Do you feel more pain when you move your neck?",
+          "id": "cervical_q7",
           "question": "Do you feel more pain when you move your neck?",
-          "condition": "Cervical Disc Herniation",
           "category": "temporal",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 19,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerdisher_q7",
-          "questionText": "Do you experience some stiffness in your neck?",
+          "id": "cervical_q8",
           "question": "Do you experience some stiffness in your neck?",
-          "condition": "Cervical Disc Herniation",
           "category": "stiffness",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 22,
-          "isGating": true,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerdisher_q8",
-          "questionText": "Does the pain increase with coughing, sneezing, straining or laughing?",
+          "id": "cervical_q9",
           "question": "Does the pain increase with coughing, sneezing, straining or laughing?",
-          "condition": "Cervical Disc Herniation",
           "category": "general",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "rule_out": [
+                  "cervical myelopathy"
+                ],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 25,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Pain increasing with cough/sneeze/strain raises disc/radicular involvement; consider myelopathy work-up if neuro signs.",
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Pain increasing with cough/sneeze/strain raises disc/radicular involvement; consider myelopathy work-up if neuro signs.",
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerdisher_q9",
-          "questionText": "Do you have any restrictions with movement around your neck?",
+          "id": "cervical_q10",
           "question": "Do you have any restrictions with movement around your neck?",
-          "condition": "Cervical Disc Herniation",
           "category": "general",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "rule_out": [
+                  "cervical stenosis"
+                ],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 28,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Movement restriction noted; consider cervical stenosis if accompanied by myelopathic signs."
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Movement restriction noted; consider cervical stenosis if accompanied by myelopathic signs.",
-                "optionColor": null
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerdisher_q10",
-          "questionText": "Do you also have any pain around your lower back, buttocks, thigh or legs?",
+          "id": "cervical_q11",
           "question": "Do you also have any pain around your lower back, buttocks, thigh or legs?",
-          "condition": "Cervical Disc Herniation",
           "category": "general",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 31,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerdisher_q11",
-          "questionText": "Does the pain wake you up at night?",
+          "id": "cervical_q12",
           "question": "Does the pain wake you up at night?",
-          "condition": "Cervical Disc Herniation",
           "category": "temporal",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 34,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerdisher_q12",
-          "questionText": "Do you feel any form of muscle weakness?",
+          "id": "cervical_q13",
           "question": "Do you feel any form of muscle weakness?",
-          "condition": "Cervical Disc Herniation",
           "category": "neurological",
-          "inputType": "select",
-          "source_line": 37,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
           "answers": [
             {
               "value": "Yes",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "patientVisible": true
+          "source_line": 37,
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerdisher_q13",
-          "questionText": "Do you experience impaired sensations in your arm and forearm?",
+          "id": "cervical_q14",
           "question": "Do you experience impaired sensations in your arm and forearm?",
-          "condition": "Cervical Disc Herniation",
           "category": "general",
-          "inputType": "select",
-          "source_line": 40,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
           "answers": [
             {
               "value": "Yes",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "patientVisible": true
+          "source_line": 40,
+          "inputType": "select"
         }
       ],
-      "tests": [
-        {
-          "name": "Spurling's Test (Maximal Cervical Compression and Foraminal Compression Test)",
-          "procedure": "The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm."
-        },
-        {
-          "name": "Cervical Distraction Test",
-          "procedure": "The patient lies supine and the neck is positioned comfortably. The examiner places hand around the patient's mastoid process. The examiner then slightly flexes the patient's neck and pulls the head towards your torso. Test is positive if the symptoms reduce or are eliminated with traction."
-        },
-        {
-          "name": "MRI",
-          "procedure": "Radiographic confirmation of disc herniation"
-        },
-        {
-          "name": "Clinical Observation - Cervical Rotation",
-          "procedure": "Check if cervical rotation on the affected side is less than 60 degrees"
-        }
-      ]
+      "recommended_tests": [],
+      "confirmation_methods": [
+        "Radiographic confirmation"
+      ],
+      "observations": [
+        "Check if cervical rotation on the affected side is less than 60 degrees.",
+        "TESTS:",
+        "Spurling’s Test (Maximal Cervical Compression and Foraminal Compression Test): The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm.",
+        "Cervical Distraction Test: The patient lies supine and the neck is positioned comfortably.  The examiner places hand around the patient’s mastoid process. The examiner then slightly flexes the patient’s neck and pull the head towards your torso.Test is positive if the symptoms reduces or is eliminated with traction.",
+        "MRI test"
+      ],
+      "source_line": 1
     },
     {
       "name": "Cervical Spondylosis",
-      "entry_criteria": [
-        {
-          "type": "age",
-          "description": "Age (Above 40 years)"
-        },
-        {
-          "type": "sex",
-          "description": "Sex (Female)"
-        }
-      ],
-      "is_general": false,
-      "source_line": 50,
+      "entry_criteria": [],
       "questions": [
         {
-          "id": "cervical_cerspo_q1",
-          "questionText": "Where is your pain worse?",
+          "id": "cervical_q15",
           "question": "Where is your pain worse?",
-          "condition": "Cervical Spondylosis",
           "category": "location",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Back-Buttocks",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Leg",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Neck",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Neck-Arm",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 51,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Back-Buttocks",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "Leg",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "Neck",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "Neck-Arm",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Back-Buttocks",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            },
-            {
-              "value": "Leg",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            },
-            {
-              "value": "Neck",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "Neck-Arm",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerspo_q2",
-          "questionText": "How did the pain begin?",
+          "id": "cervical_q16",
           "question": "How did the pain begin?",
-          "condition": "Cervical Spondylosis",
           "category": "onset",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Sudden",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "Gradual",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 56,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Sudden",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "Gradual",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Sudden",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            },
-            {
-              "value": "Gradual",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerspo_q3",
-          "questionText": "Do you feel numbness in any form?",
+          "id": "cervical_q17",
+          "question": "Age (Above 40 years)?",
+          "category": "demographic",
+          "answers": [
+            {
+              "value": "Sex",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Female"
+              }
+            }
+          ],
+          "source_line": 59,
+          "inputType": "select"
+        },
+        {
+          "id": "cervical_q18",
           "question": "Do you feel numbness in any form?",
-          "condition": "Cervical Spondylosis",
           "category": "neurological",
-          "inputType": "select",
-          "source_line": 61,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
           "answers": [
             {
               "value": "Yes",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "patientVisible": true
+          "source_line": 61,
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerspo_q4",
-          "questionText": "Which of these movements currently aggravates your pain?",
+          "id": "cervical_q19",
           "question": "Which of these movements currently aggravates your pain?",
-          "condition": "Cervical Spondylosis",
           "category": "general",
-          "inputType": "select",
-          "source_line": 64,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
+          "answers": [
             {
               "value": "Flexion",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
                 "notes": "Bending neck forward"
               }
             },
             {
               "value": "Extension",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Bending neck backward",
-                "optionColor": "red"
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Flexion",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Bending neck forward",
-                "optionColor": null
-              }
-            },
-            {
-              "value": "Extension",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Bending neck backward",
-                "optionColor": "red"
-              }
-            }
-          ],
-          "patientVisible": true
-        },
-        {
-          "id": "cervical_cerspo_q5",
-          "questionText": "What movements relieve your pain?",
-          "question": "What movements relieve your pain?",
-          "condition": "Cervical Spondylosis",
-          "category": "general",
-          "inputType": "select",
-          "source_line": 67,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Flexion",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Bending neck forward",
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "Extension",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
                 "notes": "Bending neck backward"
               }
             }
           ],
+          "source_line": 64,
+          "inputType": "select"
+        },
+        {
+          "id": "cervical_q20",
+          "question": "What movements relieve your pain?",
+          "category": "general",
           "answers": [
             {
               "value": "Flexion",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Bending neck forward",
-                "optionColor": "red"
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck forward"
               }
             },
             {
               "value": "Extension",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Bending neck backward",
-                "optionColor": null
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": "Bending neck backward"
               }
             }
           ],
-          "patientVisible": true
+          "source_line": 67,
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerspo_q6",
-          "questionText": "Do you feel more pain when you move your neck?",
+          "id": "cervical_q21",
           "question": "Do you feel more pain when you move your neck?",
-          "condition": "Cervical Spondylosis",
           "category": "temporal",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 70,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerspo_q7",
-          "questionText": "Does the pain relieve you with rest?",
+          "id": "cervical_q22",
           "question": "Does the pain relieve you with rest?",
-          "condition": "Cervical Spondylosis",
           "category": "general",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 73,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerspo_q8",
-          "questionText": "Does the pain increase with coughing, sneezing, straining, or laughing?",
+          "id": "cervical_q23",
           "question": "Does the pain increase with coughing, sneezing, straining, or laughing?",
-          "condition": "Cervical Spondylosis",
           "category": "general",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 76,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerspo_q9",
-          "questionText": "Do you experience intermittent neck pain and shoulder pain?",
+          "id": "cervical_q24",
           "question": "Do you experience intermittent neck pain and shoulder pain?",
-          "condition": "Cervical Spondylosis",
           "category": "general",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 79,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerspo_q10",
-          "questionText": "Do you have any restrictions with movement around your neck?",
+          "id": "cervical_q25",
           "question": "Do you have any restrictions with movement around your neck?",
-          "condition": "Cervical Spondylosis",
           "category": "general",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "rule_out": [
+                  "cervical stenosis"
+                ],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 82,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Movement restriction noted; consider cervical stenosis if accompanied by myelopathic signs."
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": "Movement restriction noted; consider cervical stenosis if accompanied by myelopathic signs.",
-                "optionColor": null
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerspo_q11",
-          "questionText": "Do you also have any pain around your lower back, buttocks, thigh, or legs?",
+          "id": "cervical_q26",
           "question": "Do you also have any pain around your lower back, buttocks, thigh, or legs?",
-          "condition": "Cervical Spondylosis",
           "category": "general",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 85,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerspo_q12",
-          "questionText": "Does the pain wake you up at night?",
+          "id": "cervical_q27",
           "question": "Does the pain wake you up at night?",
-          "condition": "Cervical Spondylosis",
           "category": "temporal",
-          "inputType": "select",
+          "answers": [
+            {
+              "value": "Yes",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            },
+            {
+              "value": "No",
+              "effects": {
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
+              }
+            }
+          ],
           "source_line": 88,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
-          "answers": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            }
-          ],
-          "patientVisible": true
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerspo_q13",
-          "questionText": "Do you feel any form of muscle weakness?",
+          "id": "cervical_q28",
           "question": "Do you feel any form of muscle weakness?",
-          "condition": "Cervical Spondylosis",
           "category": "neurological",
-          "inputType": "select",
-          "source_line": 91,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
           "answers": [
             {
               "value": "Yes",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "patientVisible": true
+          "source_line": 91,
+          "inputType": "select"
         },
         {
-          "id": "cervical_cerspo_q14",
-          "questionText": "Do you experience muscle spasms?",
+          "id": "cervical_q29",
           "question": "Do you experience muscle spasms?",
-          "condition": "Cervical Spondylosis",
           "category": "general",
-          "inputType": "select",
-          "source_line": 94,
-          "isGating": false,
-          "requiredConditions": [],
-          "excludedIfConditions": [],
-          "options": [
-            {
-              "value": "Yes",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null
-              }
-            }
-          ],
           "answers": [
             {
               "value": "Yes",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             },
             {
               "value": "No",
               "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
+                "rule_out": [],
+                "increase_likelihood": [],
+                "decrease_likelihood": [],
+                "next_questions": [],
+                "red_flag": false,
+                "red_flag_text": null,
+                "notes": null
               }
             }
           ],
-          "patientVisible": true
+          "source_line": 94,
+          "inputType": "select"
         }
       ],
-      "tests": [
-        {
-          "name": "Spurling's Test (Maximal Cervical Compression and Foraminal Compression Test)",
-          "procedure": "The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm."
-        },
-        {
-          "name": "Radiographic Confirmation",
-          "procedure": "Check for loss of normal cervical lordosis, and degeneration"
-        }
-      ]
+      "recommended_tests": [
+        "Spurling’s Test (Maximal Cervical Compression and Foraminal Compression Test): The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm."
+      ],
+      "confirmation_methods": [
+        "Radiographic confirmation: check for loss of normal cervical lordosis, and degeneration."
+      ],
+      "observations": [],
+      "source_line": 50
     }
   ],
-  "version": "2.0.0"
+  "raw_text": "For Cervical Disc Herniation\n\n\n\nWhere is your pain worse?\n\nNeck\n\nNeck-Arm\n\nHow did the pain begin?\n\nSudden\n\nGradual\t\t(Rule out cervical spondylosis)\n\nAge (Below 40 years)?\n\nSex (Male)\n\nDo you feel numbness in any form?\n\nYes\n\nNo\n\nWhich of these movements currently aggravates your pain?\n\nFlexion (Bending neck forward)\n\nExtension (Bending neck backward)\n\nWhat movements relieve your pain?\n\nFlexion (Bending neck forward)\n\nExtension (Bending neck backward)\n\nDo you feel more pain when you move your neck?\n\nYes\n\nNo\n\nDo you experience some stiffness in your neck?\n\nYes\n\nNo\n\nDoes the pain increase with coughing, sneezing, straining or laughing?\n\nYes\t\t(Rule out cervical myelopathy)\n\n No\n\n Do you have any restrictions with movement around your neck?\n\nYes \t (Rule out cervical stenosis)\n\nNo\n\n Do you also have any pain around your lower back, buttocks, thigh or legs?\n\nYes\n\nNo\n\nDoes the pain wake you up at night?\n\nYes\n\nNo\n\nDo you feel any form of muscle weakness?\n\nYes \n\nNo\n\nDo you experience impaired sensations in your arm and forearm?\n\nYes\n\nNo\n\n\n\nObservation\n\nCheck if cervical rotation on the affected side is less than 60 degrees.\n\nTESTS:\n\nSpurling’s Test (Maximal Cervical Compression and Foraminal Compression Test): The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm.\n\nCervical Distraction Test: The patient lies supine and the neck is positioned comfortably.  The examiner places hand around the patient’s mastoid process. The examiner then slightly flexes the patient’s neck and pull the head towards your torso.Test is positive if the symptoms reduces or is eliminated with traction.\n\n\n\nRadiographic confirmation\n\nMRI test\n\n\n\nFor Cervical Spondylosis\n\n\n\nWhere is your pain worse?\n\nBack-Buttocks\n\nLeg\n\nNeck\n\nNeck-Arm\n\nHow did the pain begin?\n\nSudden\n\nGradual\n\nAge (Above 40 years)?\n\nSex (Female)\n\nDo you feel numbness in any form?\n\nYes\n\nNo\n\nWhich of these movements currently aggravates your pain?\n\nFlexion (Bending neck forward)\n\nExtension (Bending neck backward)\n\nWhat movements relieve your pain?\n\nFlexion (Bending neck forward)\n\nExtension (Bending neck backward)\n\nDo you feel more pain when you move your neck?\n\nYes\n\nNo\n\nDoes the pain relieve you with rest?\n\nYes\n\nNo\n\nDoes the pain increase with coughing, sneezing, straining, or laughing?\n\nYes\n\n No\n\nDo you experience intermittent neck pain and shoulder pain?\n\nYes\n\nNo\n\n Do you have any restrictions with movement around your neck?\n\nYes  \t(Rule out cervical stenosis)\n\nNo\n\n Do you also have any pain around your lower back, buttocks, thigh, or legs?\n\nYes\n\nNo\n\nDoes the pain wake you up at night?\n\nYes\n\nNo\n\nDo you feel any form of muscle weakness?\n\nYes\n\nNo\n\nDo you experience muscle spasms?\n\nYes\n\nNo\n\n\n\n\n\n\n\n\n\nTEST\n\nSpurling’s Test (Maximal Cervical Compression and Foraminal Compression Test): The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm.\n\nRadiographic confirmation: check for loss of normal cervical lordosis, and degeneration.\n\n",
+  "extraction_messages": []
 }

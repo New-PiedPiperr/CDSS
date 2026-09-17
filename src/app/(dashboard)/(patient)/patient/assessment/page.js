@@ -233,7 +233,7 @@ export default function PatientAssessmentPage() {
                 analysis...
               </p>
               <p className="text-muted-foreground mt-4 text-sm">
-                This usually takes 10-30 seconds
+                This usually takes 3-10 seconds
               </p>
             </div>
           </div>
@@ -350,7 +350,7 @@ export default function PatientAssessmentPage() {
                     1
                   </div>
                   <p className="text-sm text-slate-600 dark:text-slate-400">
-                    A qualified clinician will review your assessment and AI analysis
+                    A qualified clinician will review your assessment
                   </p>
                 </div>
                 <div className="flex items-start gap-3">

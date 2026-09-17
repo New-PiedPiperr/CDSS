@@ -10,6 +10,7 @@ import {
   CheckCircle2,
   ChevronRight,
   SkipForward,
+  Check,
 } from 'lucide-react';
 import {
   initializeEngine,
@@ -174,7 +175,11 @@ export default function QuestionEngine() {
 
           if (nextQuestion) {
             setCurrentQuestion(nextQuestion);
-            setSelectedAnswer(null);
+            setSelectedAnswer(
+              nextQuestion.inputType === 'multiselect' || nextQuestion.inputType === 'checkbox'
+                ? []
+                : null
+            );
           } else {
             // No more questions - complete assessment
             completeQuestions();
@@ -188,6 +193,20 @@ export default function QuestionEngine() {
     },
     [isProcessing, currentQuestion, engineState, updateEngineState, completeQuestions]
   );
+
+  /**
+   * TOGGLE MULTI-SELECT ANSWER
+   */
+  const toggleMultiAnswer = useCallback((value) => {
+    setSelectedAnswer((prev) => {
+      const arr = Array.isArray(prev) ? prev : [];
+      if (arr.includes(value)) {
+        return arr.filter((v) => v !== value);
+      } else {
+        return [...arr, value];
+      }
+    });
+  }, []);
 
   /**
    * HANDLE BACK - Undo last answer
@@ -207,7 +226,11 @@ export default function QuestionEngine() {
 
       const prevQuestion = getCurrentQuestion(prevState);
       setCurrentQuestion(prevQuestion);
-      setSelectedAnswer(null);
+      setSelectedAnswer(
+        prevQuestion?.inputType === 'multiselect' || prevQuestion?.inputType === 'checkbox'
+          ? []
+          : null
+      );
     } catch (error) {
       console.error('Error going back:', error);
     }
@@ -358,34 +381,86 @@ export default function QuestionEngine() {
           {/* Answer Options */}
           <div className="space-y-3">
             {currentQuestion.answers.length > 0 ? (
-              currentQuestion.answers.map((answer, index) => {
-                const answerEffects = answer.effects || {};
-                const optionColor = answerEffects.optionColor || null;
-                return (
-                  <button
-                    key={index}
-                    type="button"
-                    onClick={() => handleAnswerClick(answer.value)}
-                    disabled={isProcessing}
-                    className={`w-full rounded-xl border-2 p-4 text-left transition-all ${
-                      selectedAnswer === answer.value
-                        ? 'border-primary bg-primary/10 scale-[0.98]'
-                        : optionColor === 'red'
-                          ? 'border-red-200 bg-red-50 hover:border-red-400 dark:border-red-800 dark:hover:border-red-600 dark:bg-red-950/20'
-                          : optionColor === 'black'
-                            ? 'border-slate-300 bg-slate-50 hover:border-slate-500 dark:border-slate-600 dark:hover:border-slate-400 dark:bg-slate-800'
-                            : 'hover:border-primary/50 dark:hover:border-primary/50 border-slate-200 hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800'
-                    } ${isProcessing ? 'cursor-not-allowed opacity-50' : 'cursor-pointer active:scale-[0.98]'}`}
+              currentQuestion.inputType === 'multiselect' || currentQuestion.inputType === 'checkbox' ? (
+                <div className="space-y-3">
+                  <p className="text-xs text-muted-foreground font-medium mb-1">Select all that apply:</p>
+                  {currentQuestion.answers.map((answer, index) => {
+                    const isChecked = Array.isArray(selectedAnswer) && selectedAnswer.includes(answer.value);
+                    const answerEffects = answer.effects || {};
+                    const optionColor = answerEffects.optionColor || null;
+                    return (
+                      <button
+                        key={index}
+                        type="button"
+                        onClick={() => toggleMultiAnswer(answer.value)}
+                        disabled={isProcessing}
+                        className={`w-full rounded-xl border-2 p-4 text-left transition-all flex items-center justify-between ${
+                          isChecked
+                            ? 'border-primary bg-primary/10 scale-[0.99]'
+                            : optionColor === 'red'
+                              ? 'border-red-200 bg-red-50 hover:border-red-400 dark:border-red-800 dark:hover:border-red-600 dark:bg-red-950/20'
+                              : 'border-slate-200 hover:border-primary/50 hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800'
+                        } ${isProcessing ? 'cursor-not-allowed opacity-50' : 'cursor-pointer active:scale-[0.99]'}`}
+                      >
+                        <span className="font-medium text-sm md:text-base">{answer.value}</span>
+                        <div
+                          className={`h-5 w-5 rounded-md border flex items-center justify-center transition-colors ${
+                            isChecked
+                              ? 'border-primary bg-primary text-primary-foreground'
+                              : 'border-slate-300 dark:border-slate-600'
+                          }`}
+                        >
+                          {isChecked && <Check className="h-3.5 w-3.5 stroke-[3]" />}
+                        </div>
+                      </button>
+                    );
+                  })}
+                  <Button
+                    size="lg"
+                    className="h-12 w-full mt-4 font-bold"
+                    onClick={() => handleAnswerClick(selectedAnswer)}
+                    disabled={!Array.isArray(selectedAnswer) || selectedAnswer.length === 0 || isProcessing}
                   >
-                    <div className="flex items-center justify-between">
-                      <span className="font-medium">{answer.value}</span>
-                      {selectedAnswer === answer.value && (
-                        <CheckCircle2 className="text-primary h-5 w-5" />
-                      )}
-                    </div>
-                  </button>
-                );
-              })
+                    {isProcessing ? (
+                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                    ) : (
+                      <>
+                        Continue
+                        <ChevronRight className="ml-2 h-5 w-5" />
+                      </>
+                    )}
+                  </Button>
+                </div>
+              ) : (
+                currentQuestion.answers.map((answer, index) => {
+                  const answerEffects = answer.effects || {};
+                  const optionColor = answerEffects.optionColor || null;
+                  return (
+                    <button
+                      key={index}
+                      type="button"
+                      onClick={() => handleAnswerClick(answer.value)}
+                      disabled={isProcessing}
+                      className={`w-full rounded-xl border-2 p-4 text-left transition-all ${
+                        selectedAnswer === answer.value
+                          ? 'border-primary bg-primary/10 scale-[0.98]'
+                          : optionColor === 'red'
+                            ? 'border-red-200 bg-red-50 hover:border-red-400 dark:border-red-800 dark:hover:border-red-600 dark:bg-red-950/20'
+                            : optionColor === 'black'
+                              ? 'border-slate-300 bg-slate-50 hover:border-slate-500 dark:border-slate-600 dark:hover:border-slate-400 dark:bg-slate-800'
+                              : 'hover:border-primary/50 dark:hover:border-primary/50 border-slate-200 hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800'
+                      } ${isProcessing ? 'cursor-not-allowed opacity-50' : 'cursor-pointer active:scale-[0.98]'}`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="font-medium">{answer.value}</span>
+                        {selectedAnswer === answer.value && (
+                          <CheckCircle2 className="text-primary h-5 w-5" />
+                        )}
+                      </div>
+                    </button>
+                  );
+                })
+              )
             ) : (
               /* Open-ended Question: Show Text Area */
               <div className="space-y-4">

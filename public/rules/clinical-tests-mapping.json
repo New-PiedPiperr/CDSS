@@ -7290,7 +7290,7 @@
               }
             },
             {
-              "value": "Lateral (side) of the hip",
+              "value": "Lateral/side of the hip",
               "isTerminal": false,
               "branchTo": [],
               "effects": {
@@ -28001,7 +28001,7 @@
           "category": "general",
           "responses": [
             {
-              "value": "Palmar wrist/hand (Median nerve distribution â†’ CTS)",
+              "value": "Front of wrist/hand",
               "isTerminal": false,
               "branchTo": [],
               "effects": {
@@ -28019,43 +28019,7 @@
               }
             },
             {
-              "value": "Dorsal (back of hand/wrist) – Suggests other pathology",
-              "isTerminal": false,
-              "branchTo": [],
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": null
-              }
-            },
-            {
-              "value": "Thumb, index, middle, and radial half of ring finger (CLASSIC CTS)",
-              "isTerminal": false,
-              "branchTo": [],
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
-              "value": "Whole hand (Consider proximal nerve or systemic issue)",
+              "value": "Back of wrist/hand",
               "isTerminal": false,
               "branchTo": [],
               "effects": {
@@ -28118,8 +28082,70 @@
           ]
         },
         {
+          "questionId": "wrist_cartunsyncts_q_symp_dist",
+          "questionText": "Where are the symptoms felt?",
+          "category": "general",
+          "patientVisible": true,
+          "responses": [
+            {
+              "value": "Thumb, index, middle, and radial half of ring finger",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            },
+            {
+              "value": "Whole hand",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": null
+              }
+            },
+            {
+              "value": "Little finger side only",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": null
+              }
+            }
+          ]
+        },
+        {
           "questionId": "wrist_cartunsyncts_q3",
-          "questionText": "What is the pain type?",
+          "questionText": "What does the pain feel like?",
           "category": "general",
           "responses": [
             {
@@ -28153,7 +28179,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null,
                 "optionColor": null
               }
@@ -28171,7 +28197,7 @@
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,
-                "terminateAssessment": false,
+                "terminateAssessment": true,
                 "notes": null,
                 "optionColor": null
               }
@@ -28197,8 +28223,52 @@
           ]
         },
         {
+          "questionId": "wrist_cartunsyncts_q_rest",
+          "questionText": "Do you experience pain at rest?",
+          "category": "general",
+          "patientVisible": true,
+          "responses": [
+            {
+              "value": "Yes",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": null
+              }
+            },
+            {
+              "value": "No",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": null
+              }
+            }
+          ]
+        },
+        {
           "questionId": "wrist_cartunsyncts_q4",
-          "questionText": "Do you experience night symptoms?",
+          "questionText": "Do you experience pain at night?",
           "category": "general",
           "responses": [
             {
@@ -28280,7 +28350,8 @@
                 "optionColor": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         },
         {
           "questionId": "wrist_cartunsyncts_q5",
@@ -28374,24 +28445,6 @@
           "category": "general",
           "responses": [
             {
-              "value": "Repetitive wrist use (Typing, gripping) (CTS)",
-              "isTerminal": false,
-              "branchTo": [],
-              "effects": {
-                "nextQuestionId": null,
-                "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [],
-                "increaseLikelihood": [],
-                "decreaseLikelihood": [],
-                "redFlag": false,
-                "redFlagText": null,
-                "terminateAssessment": false,
-                "notes": null,
-                "optionColor": "red"
-              }
-            },
-            {
               "value": "Impact/trauma (Consider injury)",
               "isTerminal": false,
               "branchTo": [],
@@ -28408,16 +28461,9 @@
                 "notes": null,
                 "optionColor": null
               }
-            }
-          ]
-        },
-        {
-          "questionId": "wrist_cartunsyncts_q8",
-          "questionText": "Is there weakness (grip or thumb)?",
-          "category": "general",
-          "responses": [
+            },
             {
-              "value": "Yes (Thenar involvement â†’ advanced CTS)",
+              "value": "Repetitive wrist use (Typing, gripping) (CTS)",
               "isTerminal": false,
               "branchTo": [],
               "effects": {
@@ -28433,7 +28479,14 @@
                 "notes": null,
                 "optionColor": "red"
               }
-            },
+            }
+          ]
+        },
+        {
+          "questionId": "wrist_cartunsyncts_q8",
+          "questionText": "Is there weakness (grip or thumb)?",
+          "category": "general",
+          "responses": [
             {
               "value": "No",
               "isTerminal": false,
@@ -28450,6 +28503,24 @@
                 "terminateAssessment": false,
                 "notes": null,
                 "optionColor": null
+              }
+            },
+            {
+              "value": "Yes (Thenar involvement â†’ advanced CTS)",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ]
@@ -28499,7 +28570,7 @@
         },
         {
           "questionId": "wrist_cartunsyncts_q9",
-          "questionText": "Does pain radiate above the wrist?",
+          "questionText": "Does the pain radiate above the wrist into the forearm?",
           "category": "general",
           "responses": [
             {
@@ -28522,6 +28593,50 @@
             },
             {
               "value": "No (Supports CTS)",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": "red"
+              }
+            }
+          ]
+        },
+        {
+          "questionId": "wrist_cartunsyncts_q_arm",
+          "questionText": "Does the pain radiate above the wrist into the arm?",
+          "category": "general",
+          "patientVisible": true,
+          "responses": [
+            {
+              "value": "Yes (Consider proximal or cervical nerve issue)",
+              "isTerminal": false,
+              "branchTo": [],
+              "effects": {
+                "nextQuestionId": null,
+                "skipToQuestionId": null,
+                "triggeredConditions": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [],
+                "decreaseLikelihood": [],
+                "redFlag": false,
+                "redFlagText": null,
+                "terminateAssessment": false,
+                "notes": null,
+                "optionColor": null
+              }
+            },
+            {
+              "value": "No (Isolated to wrist/hand/forearm)",
               "isTerminal": false,
               "branchTo": [],
               "effects": {
@@ -28667,7 +28782,8 @@
                 "optionColor": null
               }
             }
-          ]
+          ],
+          "patientVisible": false
         }
       ],
       "tests": {
@@ -45883,7 +45999,7 @@
       "questionId": "hip_hiposthipoa_q1",
       "question": "Where is the pain located?",
       "category": "general",
-      "response": "Lateral (side) of the hip",
+      "response": "Lateral/side of the hip",
       "isTerminal": false,
       "effects": {
         "nextQuestionId": null,
@@ -95560,7 +95676,7 @@
       "questionId": "wrist_cartunsyncts_q1",
       "question": "Where is the pain located ?",
       "category": "general",
-      "response": "Palmar wrist/hand (Median nerve distribution â†’ CTS)",
+      "response": "Front of wrist/hand",
       "isTerminal": false,
       "effects": {
         "nextQuestionId": null,
@@ -95607,101 +95723,7 @@
       "questionId": "wrist_cartunsyncts_q1",
       "question": "Where is the pain located ?",
       "category": "general",
-      "response": "Dorsal (back of hand/wrist) – Suggests other pathology",
-      "isTerminal": false,
-      "effects": {
-        "nextQuestionId": null,
-        "skipToQuestionId": null,
-        "triggeredConditions": [],
-        "excludedConditions": [],
-        "increaseLikelihood": [],
-        "decreaseLikelihood": [],
-        "redFlag": false,
-        "redFlagText": null,
-        "terminateAssessment": false,
-        "notes": null,
-        "optionColor": null
-      },
-      "condition": {
-        "id": "wrist_carpal_tunnel_syndrome_(cts)",
-        "name": "CARPAL TUNNEL SYNDROME (CTS)",
-        "entryCriteria": []
-      },
-      "tests": {
-        "recommended": [
-          {
-            "name": "Phalenâ€™s Test",
-            "procedure": "Patient flexes both wrists maximally (dorsal surfaces pressed together) and holds position for 60 seconds.",
-            "confirmation": ""
-          },
-          {
-            "name": "Tinelâ€™s Sign",
-            "procedure": "Examiner taps lightly over median nerve at volar carpal tunnel using fingertip or reflex hammer.",
-            "confirmation": ""
-          },
-          {
-            "name": "Carpal Compression Test (Durkanâ€™s Test)",
-            "procedure": "Examiner applies direct firm pressure with thumbs over carpal tunnel for up to 30 seconds.",
-            "confirmation": ""
-          }
-        ],
-        "confirmationMethods": [],
-        "observations": []
-      }
-    },
-    {
-      "region": "wrist",
-      "questionId": "wrist_cartunsyncts_q1",
-      "question": "Where is the pain located ?",
-      "category": "general",
-      "response": "Thumb, index, middle, and radial half of ring finger (CLASSIC CTS)",
-      "isTerminal": false,
-      "effects": {
-        "nextQuestionId": null,
-        "skipToQuestionId": null,
-        "triggeredConditions": [],
-        "excludedConditions": [],
-        "increaseLikelihood": [],
-        "decreaseLikelihood": [],
-        "redFlag": false,
-        "redFlagText": null,
-        "terminateAssessment": false,
-        "notes": null,
-        "optionColor": "red"
-      },
-      "condition": {
-        "id": "wrist_carpal_tunnel_syndrome_(cts)",
-        "name": "CARPAL TUNNEL SYNDROME (CTS)",
-        "entryCriteria": []
-      },
-      "tests": {
-        "recommended": [
-          {
-            "name": "Phalenâ€™s Test",
-            "procedure": "Patient flexes both wrists maximally (dorsal surfaces pressed together) and holds position for 60 seconds.",
-            "confirmation": ""
-          },
-          {
-            "name": "Tinelâ€™s Sign",
-            "procedure": "Examiner taps lightly over median nerve at volar carpal tunnel using fingertip or reflex hammer.",
-            "confirmation": ""
-          },
-          {
-            "name": "Carpal Compression Test (Durkanâ€™s Test)",
-            "procedure": "Examiner applies direct firm pressure with thumbs over carpal tunnel for up to 30 seconds.",
-            "confirmation": ""
-          }
-        ],
-        "confirmationMethods": [],
-        "observations": []
-      }
-    },
-    {
-      "region": "wrist",
-      "questionId": "wrist_cartunsyncts_q1",
-      "question": "Where is the pain located ?",
-      "category": "general",
-      "response": "Whole hand (Consider proximal nerve or systemic issue)",
+      "response": "Back of wrist/hand",
       "isTerminal": false,
       "effects": {
         "nextQuestionId": null,

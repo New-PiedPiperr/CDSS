@@ -78,7 +78,7 @@ HIP
 
 Q2 Where is the pain located?
 Groin or anterior hip= Groin or front of the hip
-Lateral (side) of the hip
+Lateral/side of the hip
 Buttock
 Anterior hip with snapping= front of the hip with snapping
 Deep groin

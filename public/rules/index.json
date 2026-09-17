@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-02-04T09:27:24.665Z",
+  "generated_at": "2026-09-17T22:40:04.573Z",
   "regions": [
     {
       "region": "ankle",
       "title": "Ankle Region",
       "source_file": "Ankle Region.docx",
       "json_file": "Ankle Region.json",
-      "condition_count": 19,
-      "question_count": 85
+      "condition_count": 17,
+      "question_count": 84
     },
     {
       "region": "cervical",
@@ -15,7 +15,7 @@
       "source_file": "Cervical Region.docx",
       "json_file": "Cervical Region.json",
       "condition_count": 2,
-      "question_count": 27
+      "question_count": 29
     },
     {
       "region": "elbow",
@@ -34,20 +34,20 @@
       "question_count": 0
     },
     {
-      "region": "hip",
-      "title": "Hip Region",
+      "region": "hip_region",
+      "title": "Hip region",
       "source_file": "Hip region.docx",
-      "json_file": "Hip Region.json",
-      "condition_count": 6,
+      "json_file": "Hip region.json",
+      "condition_count": 1,
       "question_count": 102
     },
     {
-      "region": "knee",
+      "region": "knee_region",
       "title": "Knee Region",
       "source_file": "Knee Region.docx",
       "json_file": "Knee Region.json",
-      "condition_count": 12,
-      "question_count": 220
+      "condition_count": 1,
+      "question_count": 226
     },
     {
       "region": "lumbar",
@@ -63,15 +63,15 @@
       "source_file": "Shoulder Region.docx",
       "json_file": "Shoulder Region.json",
       "condition_count": 9,
-      "question_count": 51
+      "question_count": 50
     },
     {
-      "region": "wrist",
+      "region": "wrist_region",
       "title": "Wrist Region",
       "source_file": "Wrist Region.docx",
       "json_file": "Wrist Region.json",
-      "condition_count": 8,
-      "question_count": 84
+      "condition_count": 1,
+      "question_count": 81
     }
   ]
 }

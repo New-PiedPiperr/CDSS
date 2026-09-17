@@ -599,24 +599,57 @@ export function processAnswer(state, questionId, answerValue) {
     return newState;
   }
 
-  // Find the selected answer
-  const selectedAnswer = question.answers.find(
-    (a) =>
-      a.value === answerValue || a.value?.toLowerCase() === answerValue?.toLowerCase()
-  );
+  // Find the selected answer(s)
+  const isMulti = Array.isArray(answerValue);
+  let selectedAnswer;
+  let effects;
 
-  const effects = selectedAnswer?.effects || {
-    nextQuestionId: null,
-    skipToQuestionId: null,
-    triggeredConditions: [],
-    excludedConditions: [],
-    increaseLikelihood: [],
-    decreaseLikelihood: [],
-    redFlag: false,
-    redFlagText: null,
-    terminateAssessment: false,
-    optionColor: null,
-  };
+  if (isMulti) {
+    const matchedAnswers = (question.answers || []).filter(
+      (a) => answerValue.includes(a.value) || answerValue.some((av) => a.value?.toLowerCase() === av?.toLowerCase())
+    );
+    const hasTerminate = matchedAnswers.some((a) => a.effects?.terminateAssessment);
+    const hasRedFlag = matchedAnswers.some((a) => a.effects?.redFlag);
+    const redFlagObj = matchedAnswers.find((a) => a.effects?.redFlag && a.effects?.redFlagText);
+    const hasRedOption = matchedAnswers.some((a) => (a.effects || {}).optionColor === 'red');
+    const hasBlackOption = matchedAnswers.some((a) => (a.effects || {}).optionColor === 'black');
+
+    effects = {
+      nextQuestionId: null,
+      skipToQuestionId: null,
+      triggeredConditions: [...new Set(matchedAnswers.flatMap((a) => a.effects?.triggeredConditions || []))],
+      excludedConditions: [...new Set(matchedAnswers.flatMap((a) => a.effects?.excludedConditions || []))],
+      increaseLikelihood: [...new Set(matchedAnswers.flatMap((a) => a.effects?.increaseLikelihood || []))],
+      decreaseLikelihood: [...new Set(matchedAnswers.flatMap((a) => a.effects?.decreaseLikelihood || []))],
+      redFlag: hasRedFlag,
+      redFlagText: redFlagObj?.effects?.redFlagText || null,
+      terminateAssessment: hasTerminate,
+      optionColor: hasRedOption ? 'red' : hasBlackOption ? 'black' : null,
+    };
+    selectedAnswer = {
+      value: answerValue.join(', '),
+      rawValue: answerValue,
+      effects,
+    };
+  } else {
+    selectedAnswer = question.answers.find(
+      (a) =>
+        a.value === answerValue || a.value?.toLowerCase() === answerValue?.toLowerCase()
+    );
+
+    effects = selectedAnswer?.effects || {
+      nextQuestionId: null,
+      skipToQuestionId: null,
+      triggeredConditions: [],
+      excludedConditions: [],
+      increaseLikelihood: [],
+      decreaseLikelihood: [],
+      redFlag: false,
+      redFlagText: null,
+      terminateAssessment: false,
+      optionColor: null,
+    };
+  }
 
   // Create answered question record
   const answeredQuestion = {
@@ -624,7 +657,7 @@ export function processAnswer(state, questionId, answerValue) {
     question: question.question,
     rawQuestionText: question.rawQuestionText || question.question,
     questionBracket: question.questionBracket || null,
-    answer: answerValue,
+    answer: isMulti ? answerValue.join(', ') : answerValue,
     rawValue: selectedAnswer?.rawValue || answerValue,
     bracketAnnotation: selectedAnswer?.bracketAnnotation || null,
     conditionContext: question.condition,

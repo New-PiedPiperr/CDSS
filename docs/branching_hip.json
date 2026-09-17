@@ -3,7 +3,7 @@
   "rules": [
     {
       "questionId": "hip_q2",
-      "answerValue": "Lateral (side) of the hip",
+      "answerValue": "Lateral/side of the hip",
       "excludedConditions": [],
       "decreaseLikelihood": [
         "Hip Osteoarthritis",

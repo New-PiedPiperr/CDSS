@@ -69,8 +69,10 @@ export function StatusModal({
   const handleConfirm = () => {
     if (type === 'prompt') {
       if (onConfirm) onConfirm(inputValue);
+      else if (onClose) onClose();
     } else {
       if (onConfirm) onConfirm();
+      else if (onClose) onClose();
     }
   };
 

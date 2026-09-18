@@ -30,7 +30,6 @@ export const clinicianLinks = [
   { href: '/clinician/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/clinician/patients', label: 'Patient List', icon: Users },
   { href: '/clinician/cases', label: 'Case View', icon: FolderOpen },
-  { href: '/clinician/diagnostic', label: 'Guided Diagnostic Mode', icon: Compass },
   { href: '/clinician/treatment', label: 'Treatment Planner', icon: ClipboardList },
   { href: '/clinician/appointments', label: 'Appointments', icon: Clock },
   { href: '/clinician/referral', label: 'Referral or Order', icon: FileOutput },

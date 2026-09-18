@@ -28,11 +28,13 @@ export function initializeGuidedTestEngine({
             ? 'ankle-stability-test'
             : region?.toLowerCase().includes('knee')
               ? 'knee-pain-screener'
-              : region?.toLowerCase().includes('hip')
-                ? 'hip-pain-screener'
-                : region?.toLowerCase().includes('wrist')
-                  ? 'wrist-pain-screener'
-                  : null);
+              : region?.toLowerCase().includes('elbow')
+                ? 'elbow-pain-screener'
+                : region?.toLowerCase().includes('hip')
+                  ? 'hip-pain-screener'
+                  : region?.toLowerCase().includes('wrist')
+                    ? 'wrist-pain-screener'
+                    : null);
 
   const graph = testFlowGraphs[regionKey] || null;
   const startNodeId = graph?.startNode || null;

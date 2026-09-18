@@ -22,7 +22,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Median nerve distribution → CTS"
+                "notes": "Median nerve distribution → CTS",
+                "optionColor": "red"
               }
             },
             {
@@ -58,7 +59,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "CLASSIC CTS"
+                "notes": "CLASSIC CTS",
+                "optionColor": "red"
               }
             },
             {
@@ -91,7 +93,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Typical CTS"
+                "notes": "Typical CTS",
+                "optionColor": "red"
               }
             },
             {
@@ -124,7 +127,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Neuropathic → CTS"
+                "notes": "Neuropathic → CTS",
+                "optionColor": "red"
               }
             },
             {
@@ -157,7 +161,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "VERY STRONG CTS INDICATOR"
+                "notes": "VERY STRONG CTS INDICATOR",
+                "optionColor": "red"
               }
             },
             {
@@ -190,7 +195,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Classic CTS"
+                "notes": "Classic CTS",
+                "optionColor": "red"
               }
             },
             {
@@ -223,7 +229,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "“Flick sign” → HIGHLY SPECIFIC CTS"
+                "notes": "“Flick sign” → HIGHLY SPECIFIC CTS",
+                "optionColor": "red"
               }
             },
             {
@@ -256,7 +263,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Typing, gripping"
+                "notes": "Typing, gripping",
+                "optionColor": "red"
               }
             },
             {
@@ -289,7 +297,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Thenar involvement → advanced CTS"
+                "notes": "Thenar involvement → advanced CTS",
+                "optionColor": "red"
               }
             },
             {
@@ -301,7 +310,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -322,7 +332,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Possible proximal nerve involvement"
+                "notes": "Possible proximal nerve involvement",
+                "optionColor": "red"
               }
             },
             {
@@ -334,7 +345,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Supports CTS"
+                "notes": "Supports CTS",
+                "optionColor": "red"
               }
             },
             {
@@ -367,7 +379,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Chronic CTS"
+                "notes": "Chronic CTS",
+                "optionColor": "red"
               }
             },
             {
@@ -400,7 +413,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "CTS"
+                "notes": "CTS",
+                "optionColor": "red"
               }
             },
             {
@@ -433,7 +447,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Median nerve motor deficit"
+                "notes": "Median nerve motor deficit",
+                "optionColor": "red"
               }
             },
             {
@@ -700,7 +715,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Thumb side"
+                "notes": "Thumb side",
+                "optionColor": "red"
               }
             },
             {
@@ -733,7 +749,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Overuse"
+                "notes": "Overuse",
+                "optionColor": "red"
               }
             },
             {
@@ -745,7 +762,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Less common"
+                "notes": "Less common",
+                "optionColor": "red"
               }
             }
           ],
@@ -766,7 +784,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "CLASSIC"
+                "notes": "CLASSIC",
+                "optionColor": "red"
               }
             },
             {
@@ -778,7 +797,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Less specific"
+                "notes": "Less specific",
+                "optionColor": "red"
               }
             }
           ],
@@ -799,7 +819,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Very typical"
+                "notes": "Very typical",
+                "optionColor": "red"
               }
             },
             {
@@ -832,7 +853,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Inflammation of tendon sheath"
+                "notes": "Inflammation of tendon sheath",
+                "optionColor": "red"
               }
             },
             {
@@ -844,7 +866,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -865,7 +888,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Tenosynovitis"
+                "notes": "Tenosynovitis",
+                "optionColor": "red"
               }
             },
             {
@@ -877,7 +901,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -910,7 +935,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "PRIMARY FINDING"
+                "notes": "PRIMARY FINDING",
+                "optionColor": "red"
               }
             },
             {
@@ -990,7 +1016,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1004,7 +1031,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1157,7 +1185,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Depends on ligament"
+                "notes": "Depends on ligament",
+                "optionColor": "red"
               }
             },
             {
@@ -1190,7 +1219,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "PRIMARY DIAGNOSTIC DRIVER"
+                "notes": "PRIMARY DIAGNOSTIC DRIVER",
+                "optionColor": "red"
               }
             },
             {
@@ -1202,7 +1232,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1226,7 +1257,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "FOOSH"
+                "notes": "FOOSH",
+                "optionColor": "red"
               }
             },
             {
@@ -1259,7 +1291,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Injury"
+                "notes": "Injury",
+                "optionColor": "red"
               }
             },
             {
@@ -1271,7 +1304,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Not sprain"
+                "notes": "Not sprain",
+                "optionColor": "red"
               }
             },
             {
@@ -1295,7 +1329,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1328,7 +1363,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Acute injury"
+                "notes": "Acute injury",
+                "optionColor": "red"
               }
             },
             {
@@ -1361,7 +1397,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Ligament involvement"
+                "notes": "Ligament involvement",
+                "optionColor": "red"
               }
             },
             {
@@ -1406,7 +1443,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Acute sprain"
+                "notes": "Acute sprain",
+                "optionColor": "red"
               }
             },
             {
@@ -1441,7 +1479,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1474,7 +1513,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Protective limitation"
+                "notes": "Protective limitation",
+                "optionColor": "red"
               }
             },
             {
@@ -1693,7 +1733,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "KEY SIGN"
+                "notes": "KEY SIGN",
+                "optionColor": "red"
               }
             },
             {
@@ -1726,7 +1767,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "FOOSH or twisting"
+                "notes": "FOOSH or twisting",
+                "optionColor": "red"
               }
             },
             {
@@ -1738,7 +1780,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Degenerative"
+                "notes": "Degenerative",
+                "optionColor": null
               }
             }
           ],
@@ -1759,7 +1802,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "CLASSIC"
+                "notes": "CLASSIC",
+                "optionColor": "red"
               }
             },
             {
@@ -1792,7 +1836,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Mechanical → TFCC"
+                "notes": "Mechanical → TFCC",
+                "optionColor": "red"
               }
             },
             {
@@ -1825,7 +1870,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Common finding"
+                "notes": "Common finding",
+                "optionColor": "red"
               }
             },
             {
@@ -1870,7 +1916,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Primary finding"
+                "notes": "Primary finding",
+                "optionColor": "red"
               }
             },
             {
@@ -1903,7 +1950,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "TFCC involvement"
+                "notes": "TFCC involvement",
+                "optionColor": "red"
               }
             },
             {
@@ -2170,7 +2218,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "DEFINING FEATURE → ganglion cyst"
+                "notes": "DEFINING FEATURE → ganglion cyst",
+                "optionColor": "red"
               }
             },
             {
@@ -2182,7 +2231,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2338,7 +2388,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "May contribute"
+                "notes": "May contribute",
+                "optionColor": "red"
               }
             },
             {
@@ -2350,7 +2401,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2383,7 +2435,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "PRIMARY SIGN"
+                "notes": "PRIMARY SIGN",
+                "optionColor": "red"
               }
             },
             {
@@ -2416,7 +2469,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Fluid-filled → ganglion"
+                "notes": "Fluid-filled → ganglion",
+                "optionColor": "red"
               }
             },
             {
@@ -2668,7 +2722,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "4–6 cm proximal to wrist"
+                "notes": "4–6 cm proximal to wrist",
+                "optionColor": "red"
               }
             },
             {
@@ -2701,7 +2756,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Overuse"
+                "notes": "Overuse",
+                "optionColor": "red"
               }
             },
             {
@@ -2713,7 +2769,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Less common"
+                "notes": "Less common",
+                "optionColor": "red"
               }
             }
           ],
@@ -2734,7 +2791,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Rowing, lifting"
+                "notes": "Rowing, lifting",
+                "optionColor": "red"
               }
             },
             {
@@ -2767,7 +2825,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Characteristic crepitus → intersection syndrome"
+                "notes": "Characteristic crepitus → intersection syndrome",
+                "optionColor": "red"
               }
             },
             {
@@ -2800,7 +2859,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Inflammatory"
+                "notes": "Inflammatory",
+                "optionColor": "red"
               }
             },
             {
@@ -2845,7 +2905,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Differentiates from De Quervain’s"
+                "notes": "Differentiates from De Quervain’s",
+                "optionColor": "red"
               }
             },
             {
@@ -2878,7 +2939,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "KEY FINDING"
+                "notes": "KEY FINDING",
+                "optionColor": "red"
               }
             },
             {
@@ -2911,7 +2973,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2958,7 +3021,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2972,7 +3036,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3101,7 +3166,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "KEY SIGN"
+                "notes": "KEY SIGN",
+                "optionColor": "red"
               }
             },
             {
@@ -3134,7 +3200,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "FOOSH"
+                "notes": "FOOSH",
+                "optionColor": "red"
               }
             },
             {
@@ -3146,7 +3213,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3167,7 +3235,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Fracture"
+                "notes": "Fracture",
+                "optionColor": "red"
               }
             },
             {
@@ -3179,7 +3248,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Not fracture"
+                "notes": "Not fracture",
+                "optionColor": "red"
               }
             }
           ],
@@ -3200,7 +3270,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3233,7 +3304,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "May be mild"
+                "notes": "May be mild",
+                "optionColor": "red"
               }
             },
             {
@@ -3266,7 +3338,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Common in scaphoid fractures"
+                "notes": "Common in scaphoid fractures",
+                "optionColor": "red"
               }
             },
             {
@@ -3278,7 +3351,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3311,7 +3385,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "MOST IMPORTANT SIGN"
+                "notes": "MOST IMPORTANT SIGN",
+                "optionColor": "red"
               }
             },
             {
@@ -3344,7 +3419,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Scaphoid injury"
+                "notes": "Scaphoid injury",
+                "optionColor": "red"
               }
             },
             {
@@ -3377,7 +3453,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3422,7 +3499,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Treat as fracture"
+                "notes": "Treat as fracture",
+                "optionColor": "red"
               }
             },
             {
@@ -3434,7 +3512,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3644,7 +3723,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "KEY SIGN"
+                "notes": "KEY SIGN",
+                "optionColor": "red"
               }
             },
             {
@@ -3677,7 +3757,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "AVN pattern"
+                "notes": "AVN pattern",
+                "optionColor": "red"
               }
             },
             {
@@ -3689,7 +3770,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Consider trauma"
+                "notes": "Consider trauma",
+                "optionColor": "red"
               }
             }
           ],
@@ -3710,7 +3792,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "AVN"
+                "notes": "AVN",
+                "optionColor": "red"
               }
             },
             {
@@ -3746,7 +3829,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3779,7 +3863,8 @@
                 "next_questions": [],
                 "red_flag": true,
                 "red_flag_text": "Red flag → AVN ",
-                "notes": "Red flag → AVN"
+                "notes": "Red flag → AVN",
+                "optionColor": "red"
               }
             },
             {
@@ -3812,7 +3897,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Risk factor"
+                "notes": "Risk factor",
+                "optionColor": "red"
               }
             },
             {
@@ -3857,7 +3943,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "PRIMARY FINDING"
+                "notes": "PRIMARY FINDING",
+                "optionColor": "red"
               }
             },
             {
@@ -3890,7 +3977,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Progressive stiffness"
+                "notes": "Progressive stiffness",
+                "optionColor": "red"
               }
             },
             {
@@ -3923,7 +4011,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -4001,7 +4090,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Serious pathology"
+                "notes": "Serious pathology",
+                "optionColor": "red"
               }
             },
             {
@@ -4013,7 +4103,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {

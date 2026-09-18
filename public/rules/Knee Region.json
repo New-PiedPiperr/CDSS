@@ -22,7 +22,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -71,7 +72,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -92,7 +94,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -104,7 +107,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -125,7 +129,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -158,7 +163,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -191,7 +197,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -203,7 +210,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -224,7 +232,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Mild, transient"
+                "notes": "Mild, transient",
+                "optionColor": "red"
               }
             },
             {
@@ -236,7 +245,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -257,7 +267,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -290,7 +301,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -302,7 +314,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -335,7 +348,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -372,7 +386,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -395,7 +410,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -409,7 +425,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -430,7 +447,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Strong PFPS indicator due to high patellofemoral joint compression"
+                "notes": "Strong PFPS indicator due to high patellofemoral joint compression",
+                "optionColor": "red"
               }
             },
             {
@@ -463,7 +481,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -496,7 +515,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Classic PFPS feature"
+                "notes": "Classic PFPS feature",
+                "optionColor": "red"
               }
             },
             {
@@ -529,7 +549,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Patellofemoral loading intolerance"
+                "notes": "Patellofemoral loading intolerance",
+                "optionColor": "red"
               }
             },
             {
@@ -562,7 +583,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Diffuse anterior knee pain typical of PFPS"
+                "notes": "Diffuse anterior knee pain typical of PFPS",
+                "optionColor": "red"
               }
             },
             {
@@ -595,7 +617,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Common overload mechanism in PFPS"
+                "notes": "Common overload mechanism in PFPS",
+                "optionColor": "red"
               }
             },
             {
@@ -607,7 +630,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -644,7 +668,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -681,7 +706,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -718,7 +744,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -751,7 +778,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Supports PFPS diagnosis"
+                "notes": "Supports PFPS diagnosis",
+                "optionColor": "red"
               }
             }
           ],
@@ -774,7 +802,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -788,7 +817,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -809,7 +839,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Patellofemoral compression intolerance"
+                "notes": "Patellofemoral compression intolerance",
+                "optionColor": "red"
               }
             },
             {
@@ -842,7 +873,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Typical mechanical PFPS pattern"
+                "notes": "Typical mechanical PFPS pattern",
+                "optionColor": "red"
               }
             },
             {
@@ -887,7 +919,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -899,7 +932,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -932,7 +966,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Normal is typical for PFPS; atrophy suggests chronicity or other pathology"
+                "notes": "Normal is typical for PFPS; atrophy suggests chronicity or other pathology",
+                "optionColor": "red"
               }
             }
           ],
@@ -965,7 +1000,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1142,7 +1178,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1175,7 +1212,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1208,7 +1246,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "traumatic"
+                "notes": "traumatic",
+                "optionColor": "red"
               }
             },
             {
@@ -1220,7 +1259,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "degenerative"
+                "notes": "degenerative",
+                "optionColor": "red"
               }
             }
           ],
@@ -1241,7 +1281,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1277,7 +1318,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1310,7 +1352,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1322,7 +1365,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1346,7 +1390,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1379,7 +1424,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "acute traumatic"
+                "notes": "acute traumatic",
+                "optionColor": "red"
               }
             },
             {
@@ -1412,7 +1458,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "check ligaments"
+                "notes": "check ligaments",
+                "optionColor": "red"
               }
             },
             {
@@ -1424,7 +1471,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1457,7 +1505,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "unless re-injury"
+                "notes": "unless re-injury",
+                "optionColor": "red"
               }
             },
             {
@@ -1481,7 +1530,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "<6 weeks"
+                "notes": "<6 weeks",
+                "optionColor": "red"
               }
             },
             {
@@ -1541,7 +1591,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -1562,7 +1613,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "acute tear"
+                "notes": "acute tear",
+                "optionColor": "red"
               }
             },
             {
@@ -1595,7 +1647,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1631,7 +1684,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1703,7 +1757,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "chronic inhibition"
+                "notes": "chronic inhibition",
+                "optionColor": "red"
               }
             },
             {
@@ -1784,7 +1839,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1796,7 +1852,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -1817,7 +1874,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Acute strain"
+                "notes": "Acute strain",
+                "optionColor": "red"
               }
             },
             {
@@ -1850,7 +1908,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1883,7 +1942,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1916,7 +1976,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1949,7 +2010,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1997,7 +2059,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2162,7 +2225,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "PCL/ACL/LCL"
+                "notes": "PCL/ACL/LCL",
+                "optionColor": "red"
               }
             }
           ],
@@ -2183,7 +2247,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2216,7 +2281,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "ACL often"
+                "notes": "ACL often",
+                "optionColor": "red"
               }
             },
             {
@@ -2294,7 +2360,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "ACL"
+                "notes": "ACL",
+                "optionColor": "red"
               }
             },
             {
@@ -2327,7 +2394,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "ACL/PCL/LCL grade II-III"
+                "notes": "ACL/PCL/LCL grade II-III",
+                "optionColor": "red"
               }
             },
             {
@@ -2363,7 +2431,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "ACL"
+                "notes": "ACL",
+                "optionColor": "red"
               }
             },
             {
@@ -2375,7 +2444,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "PCL"
+                "notes": "PCL",
+                "optionColor": "red"
               }
             },
             {
@@ -2447,7 +2517,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "ligament site"
+                "notes": "ligament site",
+                "optionColor": "red"
               }
             },
             {
@@ -2480,7 +2551,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2528,7 +2600,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "all grade II-III"
+                "notes": "all grade II-III",
+                "optionColor": "red"
               }
             },
             {
@@ -2564,7 +2637,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "grade II-III"
+                "notes": "grade II-III",
+                "optionColor": "red"
               }
             },
             {
@@ -2669,7 +2743,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2702,7 +2777,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2735,7 +2811,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2768,7 +2845,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2780,7 +2858,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2803,7 +2882,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2817,7 +2897,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2838,7 +2919,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2850,7 +2932,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2873,7 +2956,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2887,7 +2971,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -2908,7 +2993,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2941,7 +3027,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2974,7 +3061,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "risk for secondary OA"
+                "notes": "risk for secondary OA",
+                "optionColor": "red"
               }
             },
             {
@@ -3007,7 +3095,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3031,7 +3120,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3064,7 +3154,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3097,7 +3188,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3130,7 +3222,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3163,7 +3256,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3196,7 +3290,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3385,7 +3480,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3418,7 +3514,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3451,7 +3548,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Common in subluxation"
+                "notes": "Common in subluxation",
+                "optionColor": "red"
               }
             },
             {
@@ -3484,7 +3582,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Hemarthrosis likely"
+                "notes": "Hemarthrosis likely",
+                "optionColor": "red"
               }
             },
             {
@@ -3520,7 +3619,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3555,7 +3655,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3567,7 +3668,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -3600,7 +3702,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -3623,7 +3726,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3637,7 +3741,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3661,7 +3766,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3673,7 +3779,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -3694,7 +3801,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3727,7 +3835,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3772,7 +3881,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3805,7 +3915,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3838,7 +3949,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3871,7 +3983,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3904,7 +4017,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3937,7 +4051,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -3970,7 +4085,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -4003,7 +4119,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -4015,7 +4132,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -4132,7 +4250,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests tibial plateau fracture / patella fracture"
+                "notes": "Suggests tibial plateau fracture / patella fracture",
+                "optionColor": "red"
               }
             },
             {
@@ -4165,7 +4284,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests patella fracture"
+                "notes": "Suggests patella fracture",
+                "optionColor": "red"
               }
             },
             {
@@ -4198,7 +4318,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests tibial plateau fracture or severe patella fracture"
+                "notes": "Suggests tibial plateau fracture or severe patella fracture",
+                "optionColor": "red"
               }
             },
             {
@@ -4231,7 +4352,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests intra-articular fracture / hemarthrosis"
+                "notes": "Suggests intra-articular fracture / hemarthrosis",
+                "optionColor": "red"
               }
             },
             {
@@ -4264,7 +4386,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests acute fracture"
+                "notes": "Suggests acute fracture",
+                "optionColor": "red"
               }
             },
             {
@@ -4300,7 +4423,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests fracture"
+                "notes": "Suggests fracture",
+                "optionColor": "red"
               }
             },
             {
@@ -4333,7 +4457,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests patella fracture / extensor mechanism injury"
+                "notes": "Suggests patella fracture / extensor mechanism injury",
+                "optionColor": "red"
               }
             },
             {
@@ -4366,7 +4491,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Strong indicator of patella fracture"
+                "notes": "Strong indicator of patella fracture",
+                "optionColor": "red"
               }
             },
             {
@@ -4399,7 +4525,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -4432,7 +4559,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests tibial plateau fracture with ligament involvement"
+                "notes": "Suggests tibial plateau fracture with ligament involvement",
+                "optionColor": "red"
               }
             },
             {
@@ -4465,7 +4593,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests fracture"
+                "notes": "Suggests fracture",
+                "optionColor": "red"
               }
             },
             {
@@ -4510,7 +4639,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests fracture"
+                "notes": "Suggests fracture",
+                "optionColor": "red"
               }
             },
             {
@@ -4543,7 +4673,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests patella fracture"
+                "notes": "Suggests patella fracture",
+                "optionColor": "red"
               }
             },
             {
@@ -4576,7 +4707,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -4609,7 +4741,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests displaced fracture"
+                "notes": "Suggests displaced fracture",
+                "optionColor": "red"
               }
             },
             {
@@ -4642,7 +4775,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests tibial plateau fracture"
+                "notes": "Suggests tibial plateau fracture",
+                "optionColor": "red"
               }
             },
             {
@@ -4675,7 +4809,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -4708,7 +4843,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests displaced patella fracture"
+                "notes": "Suggests displaced patella fracture",
+                "optionColor": "red"
               }
             },
             {
@@ -4741,7 +4877,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Strong indicator of ITBS"
+                "notes": "Strong indicator of ITBS",
+                "optionColor": "red"
               }
             },
             {
@@ -4810,7 +4947,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -4843,7 +4981,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Classic ITBS symptom"
+                "notes": "Classic ITBS symptom",
+                "optionColor": "red"
               }
             },
             {
@@ -4876,7 +5015,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -4909,7 +5049,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -4942,7 +5083,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -4975,7 +5117,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -5008,7 +5151,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -5041,7 +5185,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -5074,7 +5219,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -5107,7 +5253,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Overuse syndrome pattern"
+                "notes": "Overuse syndrome pattern",
+                "optionColor": "red"
               }
             },
             {
@@ -5152,7 +5299,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Most important objective sign of ITBS"
+                "notes": "Most important objective sign of ITBS",
+                "optionColor": "red"
               }
             },
             {
@@ -5185,7 +5333,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Classic ITBS compression point"
+                "notes": "Classic ITBS compression point",
+                "optionColor": "red"
               }
             },
             {
@@ -5218,7 +5367,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "May be present in ITBS"
+                "notes": "May be present in ITBS",
+                "optionColor": "red"
               }
             },
             {
@@ -5251,7 +5401,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests ITBS friction"
+                "notes": "Suggests ITBS friction",
+                "optionColor": "red"
               }
             },
             {
@@ -5284,7 +5435,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Major contributing factor"
+                "notes": "Major contributing factor",
+                "optionColor": "red"
               }
             },
             {
@@ -5317,7 +5469,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Major biomechanical cause of ITBS"
+                "notes": "Major biomechanical cause of ITBS",
+                "optionColor": "red"
               }
             },
             {
@@ -5350,7 +5503,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Indicates ITB overload"
+                "notes": "Indicates ITB overload",
+                "optionColor": "red"
               }
             },
             {
@@ -5362,7 +5516,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -5385,7 +5540,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -5399,7 +5555,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -5576,7 +5733,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Strong indicator of tendinopathy"
+                "notes": "Strong indicator of tendinopathy",
+                "optionColor": "red"
               }
             },
             {
@@ -5588,7 +5746,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -5609,7 +5768,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Classic patellar tendinopathy"
+                "notes": "Classic patellar tendinopathy",
+                "optionColor": "red"
               }
             },
             {
@@ -5621,7 +5781,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests quadriceps tendinopathy"
+                "notes": "Suggests quadriceps tendinopathy",
+                "optionColor": "red"
               }
             },
             {
@@ -5654,7 +5815,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -5687,7 +5849,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -5699,7 +5862,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -5720,7 +5884,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Dose-dependent pain – key diagnostic feature"
+                "notes": "Dose-dependent pain – key diagnostic feature",
+                "optionColor": "red"
               }
             },
             {
@@ -5732,7 +5897,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -5753,7 +5919,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -5765,7 +5932,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -5789,7 +5957,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Typical early tendinopathy"
+                "notes": "Typical early tendinopathy",
+                "optionColor": "red"
               }
             },
             {
@@ -5801,7 +5970,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "suggests severe or other pathology"
+                "notes": "suggests severe or other pathology",
+                "optionColor": "red"
               }
             }
           ],
@@ -5822,7 +5992,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Increased patellar tendon loading"
+                "notes": "Increased patellar tendon loading",
+                "optionColor": "red"
               }
             },
             {
@@ -5834,7 +6005,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -5855,7 +6027,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -5867,7 +6040,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -5888,7 +6062,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -5921,7 +6096,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -5968,7 +6144,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -6001,7 +6178,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Load-related tendon pain"
+                "notes": "Load-related tendon pain",
+                "optionColor": "red"
               }
             },
             {
@@ -6034,7 +6212,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Dose-dependent tendon pain"
+                "notes": "Dose-dependent tendon pain",
+                "optionColor": "red"
               }
             },
             {
@@ -6046,7 +6225,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -6067,7 +6247,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Common in tendinopathy"
+                "notes": "Common in tendinopathy",
+                "optionColor": "red"
               }
             },
             {
@@ -6079,7 +6260,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -6100,7 +6282,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Strong functional indicator"
+                "notes": "Strong functional indicator",
+                "optionColor": "red"
               }
             },
             {
@@ -6133,7 +6316,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -6166,7 +6350,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Helps differentiate from joint pathology"
+                "notes": "Helps differentiate from joint pathology",
+                "optionColor": "red"
               }
             },
             {
@@ -6178,7 +6363,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -6388,7 +6574,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Typical bursitis pattern"
+                "notes": "Typical bursitis pattern",
+                "optionColor": "red"
               }
             },
             {
@@ -6421,7 +6608,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Common aggravating activity"
+                "notes": "Common aggravating activity",
+                "optionColor": "red"
               }
             },
             {
@@ -6454,7 +6642,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Typical pes anserinus bursitis"
+                "notes": "Typical pes anserinus bursitis",
+                "optionColor": "red"
               }
             },
             {
@@ -6487,7 +6676,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -6520,7 +6710,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -6553,7 +6744,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -6586,7 +6778,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Major risk factor"
+                "notes": "Major risk factor",
+                "optionColor": "red"
               }
             },
             {
@@ -6619,7 +6812,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Strong associated condition"
+                "notes": "Strong associated condition",
+                "optionColor": "red"
               }
             },
             {
@@ -6652,7 +6846,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Major risk factor"
+                "notes": "Major risk factor",
+                "optionColor": "red"
               }
             },
             {
@@ -6685,7 +6880,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Contributes to medial knee stress"
+                "notes": "Contributes to medial knee stress",
+                "optionColor": "red"
               }
             },
             {
@@ -6718,7 +6914,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Contributing factor"
+                "notes": "Contributing factor",
+                "optionColor": "red"
               }
             },
             {
@@ -6751,7 +6948,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Can cause bursitis"
+                "notes": "Can cause bursitis",
+                "optionColor": "red"
               }
             },
             {
@@ -6784,7 +6982,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests bursitis"
+                "notes": "Suggests bursitis",
+                "optionColor": "red"
               }
             },
             {
@@ -6796,7 +6995,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -6829,7 +7029,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Most important diagnostic sign"
+                "notes": "Most important diagnostic sign",
+                "optionColor": "red"
               }
             },
             {
@@ -6841,7 +7042,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -6862,7 +7064,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests inflamed bursa"
+                "notes": "Suggests inflamed bursa",
+                "optionColor": "red"
               }
             },
             {
@@ -6895,7 +7098,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -6928,7 +7132,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -6940,7 +7145,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -6961,7 +7167,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Involves sartorius, gracilis, semitendinosus"
+                "notes": "Involves sartorius, gracilis, semitendinosus",
+                "optionColor": "red"
               }
             },
             {
@@ -6973,7 +7180,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -6994,7 +7202,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Major contributing factor"
+                "notes": "Major contributing factor",
+                "optionColor": "red"
               }
             },
             {
@@ -7027,7 +7236,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Bursa compression during extension"
+                "notes": "Bursa compression during extension",
+                "optionColor": "red"
               }
             },
             {
@@ -7060,7 +7270,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Helps differentiate from meniscus injury"
+                "notes": "Helps differentiate from meniscus injury",
+                "optionColor": "red"
               }
             },
             {
@@ -7095,7 +7306,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -7109,7 +7321,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -7130,7 +7343,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -7319,7 +7533,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Typical OCD presentation"
+                "notes": "Typical OCD presentation",
+                "optionColor": "red"
               }
             },
             {
@@ -7352,7 +7567,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Typical OCD"
+                "notes": "Typical OCD",
+                "optionColor": "red"
               }
             },
             {
@@ -7385,7 +7601,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Major risk factor due to repetitive microtrauma"
+                "notes": "Major risk factor due to repetitive microtrauma",
+                "optionColor": "red"
               }
             },
             {
@@ -7418,7 +7635,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -7451,7 +7669,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -7484,7 +7703,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Early OCD responds to rest"
+                "notes": "Early OCD responds to rest",
+                "optionColor": "red"
               }
             },
             {
@@ -7517,7 +7737,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -7550,7 +7771,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Indicates loose body – advanced OCD"
+                "notes": "Indicates loose body – advanced OCD",
+                "optionColor": "red"
               }
             },
             {
@@ -7583,7 +7805,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests loose osteochondral fragment"
+                "notes": "Suggests loose osteochondral fragment",
+                "optionColor": "red"
               }
             },
             {
@@ -7616,7 +7839,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Mechanical symptom typical of OCD"
+                "notes": "Mechanical symptom typical of OCD",
+                "optionColor": "red"
               }
             },
             {
@@ -7649,7 +7873,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -7682,7 +7907,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Common OCD feature"
+                "notes": "Common OCD feature",
+                "optionColor": "red"
               }
             },
             {
@@ -7715,7 +7941,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Chronic condition"
+                "notes": "Chronic condition",
+                "optionColor": "red"
               }
             },
             {
@@ -7760,7 +7987,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -7772,7 +8000,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -7793,7 +8022,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Key diagnostic feature"
+                "notes": "Key diagnostic feature",
+                "optionColor": "red"
               }
             },
             {
@@ -7805,7 +8035,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -7826,7 +8057,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -7859,7 +8091,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Mechanical obstruction or joint irritation"
+                "notes": "Mechanical obstruction or joint irritation",
+                "optionColor": "red"
               }
             },
             {
@@ -7892,7 +8125,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests intra-articular pathology"
+                "notes": "Suggests intra-articular pathology",
+                "optionColor": "red"
               }
             },
             {
@@ -7925,7 +8159,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Indicates inflammation"
+                "notes": "Indicates inflammation",
+                "optionColor": "red"
               }
             },
             {
@@ -7958,7 +8193,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Loose body present"
+                "notes": "Loose body present",
+                "optionColor": "red"
               }
             },
             {
@@ -7991,7 +8227,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Compensation due to pain or instability"
+                "notes": "Compensation due to pain or instability",
+                "optionColor": "red"
               }
             },
             {
@@ -8003,7 +8240,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -8024,7 +8262,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests joint pathology"
+                "notes": "Suggests joint pathology",
+                "optionColor": "red"
               }
             },
             {
@@ -8213,7 +8452,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "popliteal region"
+                "notes": "popliteal region",
+                "optionColor": "red"
               }
             },
             {
@@ -8258,7 +8498,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Most characteristic symptom"
+                "notes": "Most characteristic symptom",
+                "optionColor": "red"
               }
             },
             {
@@ -8270,7 +8511,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -8291,7 +8533,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -8324,7 +8567,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -8357,7 +8601,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Increased intra-articular fluid enlarges cyst"
+                "notes": "Increased intra-articular fluid enlarges cyst",
+                "optionColor": "red"
               }
             },
             {
@@ -8390,7 +8635,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Classic symptom"
+                "notes": "Classic symptom",
+                "optionColor": "red"
               }
             },
             {
@@ -8423,7 +8669,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Common complaint"
+                "notes": "Common complaint",
+                "optionColor": "red"
               }
             },
             {
@@ -8456,7 +8703,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -8489,7 +8737,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Mechanical obstruction due to cyst"
+                "notes": "Mechanical obstruction due to cyst",
+                "optionColor": "red"
               }
             },
             {
@@ -8522,7 +8771,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Increased fluid accumulation"
+                "notes": "Increased fluid accumulation",
+                "optionColor": "red"
               }
             },
             {
@@ -8555,7 +8805,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests large or ruptured cyst"
+                "notes": "Suggests large or ruptured cyst",
+                "optionColor": "red"
               }
             },
             {
@@ -8588,7 +8839,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Possible ruptured cyst"
+                "notes": "Possible ruptured cyst",
+                "optionColor": "red"
               }
             },
             {
@@ -8621,7 +8873,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Strong association"
+                "notes": "Strong association",
+                "optionColor": "red"
               }
             },
             {
@@ -8654,7 +8907,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Common underlying cause"
+                "notes": "Common underlying cause",
+                "optionColor": "red"
               }
             },
             {
@@ -8699,7 +8953,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -8711,7 +8966,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -8732,7 +8988,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Diagnostic sign"
+                "notes": "Diagnostic sign",
+                "optionColor": "red"
               }
             },
             {
@@ -8744,7 +9001,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -8765,7 +9023,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Characteristic Baker’s cyst behavior"
+                "notes": "Characteristic Baker’s cyst behavior",
+                "optionColor": "red"
               }
             },
             {
@@ -8798,7 +9057,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Foucher’s sign positive"
+                "notes": "Foucher’s sign positive",
+                "optionColor": "red"
               }
             },
             {
@@ -8831,7 +9091,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Indicates intra-articular pathology"
+                "notes": "Indicates intra-articular pathology",
+                "optionColor": "red"
               }
             },
             {
@@ -8843,7 +9104,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -8864,7 +9126,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests cyst inflammation"
+                "notes": "Suggests cyst inflammation",
+                "optionColor": "red"
               }
             },
             {
@@ -8899,7 +9162,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -8913,7 +9177,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -8937,7 +9202,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -9090,7 +9356,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -9102,7 +9369,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -9123,7 +9391,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Hallmark feature"
+                "notes": "Hallmark feature",
+                "optionColor": "red"
               }
             },
             {
@@ -9156,7 +9425,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Strong indicator of septic arthritis"
+                "notes": "Strong indicator of septic arthritis",
+                "optionColor": "red"
               }
             },
             {
@@ -9168,7 +9438,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -9189,7 +9460,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Major risk factor"
+                "notes": "Major risk factor",
+                "optionColor": "red"
               }
             },
             {
@@ -9222,7 +9494,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Systemic infection sign"
+                "notes": "Systemic infection sign",
+                "optionColor": "red"
               }
             },
             {
@@ -9255,7 +9528,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -9288,7 +9562,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -9321,7 +9596,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -9333,7 +9609,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -9354,7 +9631,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -9387,7 +9665,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Possible infection entry"
+                "notes": "Possible infection entry",
+                "optionColor": "red"
               }
             },
             {
@@ -9420,7 +9699,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Systemic infection indicator"
+                "notes": "Systemic infection indicator",
+                "optionColor": "red"
               }
             },
             {
@@ -9453,7 +9733,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -9498,7 +9779,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -9531,7 +9813,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Strong indicator of infection"
+                "notes": "Strong indicator of infection",
+                "optionColor": "red"
               }
             },
             {
@@ -9597,7 +9880,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -9630,7 +9914,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -9663,7 +9948,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -9675,7 +9961,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -9696,7 +9983,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Suggests systemic infection"
+                "notes": "Suggests systemic infection",
+                "optionColor": "red"
               }
             },
             {
@@ -9729,7 +10017,8 @@
                 "next_questions": [],
                 "red_flag": true,
                 "red_flag_text": "Critical red flag ",
-                "notes": "Critical red flag"
+                "notes": "Critical red flag",
+                "optionColor": "red"
               }
             },
             {
@@ -9762,7 +10051,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Diffuse joint inflammation"
+                "notes": "Diffuse joint inflammation",
+                "optionColor": "red"
               }
             },
             {
@@ -9795,7 +10085,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Highly suggestive of septic arthritis"
+                "notes": "Highly suggestive of septic arthritis",
+                "optionColor": "red"
               }
             },
             {

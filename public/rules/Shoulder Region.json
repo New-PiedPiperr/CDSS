@@ -22,7 +22,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -55,7 +56,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -100,7 +102,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -123,7 +126,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -137,7 +141,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -191,7 +196,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -203,7 +209,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -302,7 +309,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -314,7 +322,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -510,7 +519,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -522,7 +532,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -534,7 +545,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -557,7 +569,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -569,7 +582,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -590,7 +604,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -635,7 +650,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -647,7 +663,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -680,7 +697,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Movement of the arm forward"
+                "notes": "Movement of the arm forward",
+                "optionColor": "red"
               }
             },
             {
@@ -692,7 +710,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Rotating the arm inward"
+                "notes": "Rotating the arm inward",
+                "optionColor": "red"
               }
             },
             {
@@ -704,7 +723,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -716,7 +736,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -737,7 +758,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -770,7 +792,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -803,7 +826,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -827,7 +851,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -848,7 +873,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -891,7 +917,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -924,7 +951,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -967,7 +995,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1000,7 +1029,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1033,7 +1063,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": "Biccipital tendinitis can co-exist with other rotator cuff pathologies"
+                "notes": "Biccipital tendinitis can co-exist with other rotator cuff pathologies",
+                "optionColor": "red"
               }
             },
             {
@@ -1076,7 +1107,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1109,7 +1141,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1320,7 +1353,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -1353,7 +1387,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
@@ -1374,7 +1409,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1407,7 +1443,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1419,7 +1456,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1440,7 +1478,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1452,7 +1491,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1558,7 +1598,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1591,7 +1632,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1626,7 +1668,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1719,7 +1762,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1752,7 +1796,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1785,7 +1830,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1818,7 +1864,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1851,7 +1898,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1884,7 +1932,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1917,7 +1966,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -1967,7 +2017,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2002,7 +2053,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2037,7 +2089,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2072,7 +2125,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2105,7 +2159,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -2117,7 +2172,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],

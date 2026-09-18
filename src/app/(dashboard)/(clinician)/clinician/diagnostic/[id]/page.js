@@ -39,13 +39,32 @@ export default function DiagnosticExecutionPage() {
 
   // Initialize Engine
   useEffect(() => {
-    const initialState = initializeGuidedTestEngine({
-      assessmentId: caseId,
-      therapistId: 'current-therapist', // In production, get from auth
-      moduleSlug: moduleSlug,
-    });
-    setEngineState(initialState);
-    setCurrentTestState(getCurrentTest(initialState));
+    async function loadEngine() {
+      let regionFromCase = null;
+      if (caseId && caseId !== 'new-diagnostic') {
+        try {
+          const res = await fetch(`/api/diagnosis/${caseId}`);
+          const data = await res.json();
+          if (data.success && data.data?.bodyRegion) {
+            regionFromCase = data.data.bodyRegion;
+          }
+        } catch (e) {
+          console.error('Failed to load case session details:', e);
+        }
+      }
+
+      const initialState = initializeGuidedTestEngine({
+        assessmentId: caseId,
+        therapistId: 'current-therapist',
+        moduleSlug: moduleSlug,
+        region: regionFromCase,
+      });
+
+      setEngineState(initialState);
+      setCurrentTestState(getCurrentTest(initialState));
+    }
+
+    loadEngine();
   }, [moduleSlug, caseId]);
 
   const handleOutcome = async (result) => {

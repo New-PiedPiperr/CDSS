@@ -52,6 +52,7 @@ export async function GET(request, { params }) {
         assessmentId: id,
         therapistId: session.user.id,
         region: diagnosisSession.bodyRegion,
+        recommendedTests: diagnosisSession.recommendedTests || [],
       });
       engineState = { ...engineState, ...initialState };
 
@@ -72,6 +73,7 @@ export async function GET(request, { params }) {
         assessmentId: id,
         therapistId: session.user.id,
         region: diagnosisSession.bodyRegion,
+        recommendedTests: diagnosisSession.recommendedTests || [],
       });
       engineState.graph = baseState.graph;
     }
@@ -120,6 +122,7 @@ export async function POST(request, { params }) {
       assessmentId: id,
       therapistId: authSession.user.id,
       region: ds.bodyRegion,
+      recommendedTests: ds.recommendedTests || [],
     });
 
     const currentState = {

@@ -328,16 +328,23 @@ export function extractRecommendedTests(rulesJson, suspectedConditions) {
   // 1. Try to extract from Rules JSON if available
   if (rulesJson && rulesJson.conditions) {
     rulesJson.conditions.forEach((condition) => {
-      const isSuspected = normalizedSuspected.some(
-        (s) =>
-          condition.name.toLowerCase().includes(s) ||
-          s.includes(condition.name.toLowerCase())
-      );
-
-      if (isSuspected && condition.tests && Array.isArray(condition.tests)) {
-        condition.tests.forEach((test) =>
-          addTest(test, condition.name, 'Heuristic Match')
+      const isSuspected = normalizedSuspected.some((s) => {
+        const condLower = condition.name.toLowerCase();
+        return (
+          condLower.includes(s) ||
+          s.includes(condLower) ||
+          condLower.split(/\s+/).some((word) => word.length > 3 && s.includes(word))
         );
+      });
+
+      if (isSuspected) {
+        const rawTests = [
+          ...(Array.isArray(condition.tests) ? condition.tests : []),
+          ...(Array.isArray(condition.recommended_tests) ? condition.recommended_tests : []),
+          ...(Array.isArray(condition.confirmation_methods) ? condition.confirmation_methods : []),
+        ];
+
+        rawTests.forEach((test) => addTest(test, condition.name, 'Heuristic Match'));
       }
     });
   }

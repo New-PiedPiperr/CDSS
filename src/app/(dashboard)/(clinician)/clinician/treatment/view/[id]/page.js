@@ -189,7 +189,7 @@ export default async function TreatmentPlanViewPage({ params }) {
                   Primary Impression
                 </p>
                 <p className="text-lg leading-tight font-black text-cyan-500">
-                  {aiRes.temporalDiagnosis || 'Awaiting Assessment'}
+                  {(aiRes.temporalDiagnosis || 'Awaiting Assessment').replace(/\*\*/g, '').replace(/\*/g, '')}
                 </p>
               </div>
 

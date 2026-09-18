@@ -55,10 +55,16 @@ export async function GET(request, { params }) {
       });
       engineState = { ...engineState, ...initialState };
 
-      // Save initial currentNodeId
+      // Ensure guidedTestResults object exists before updating nested fields
       await DiagnosisSession.findByIdAndUpdate(id, {
-        'guidedTestResults.currentNodeId': engineState.currentNodeId,
-        'guidedTestResults.therapistId': session.user.id,
+        $set: {
+          guidedTestResults: {
+            currentNodeId: engineState.currentNodeId,
+            therapistId: session.user.id,
+            tests: [],
+            isLocked: false,
+          },
+        },
       });
     } else {
       // Re-initialize graph for existing session

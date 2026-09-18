@@ -268,7 +268,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -280,33 +281,32 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
-            },
-            {
-              "value": "How did the pain begin",
-              "effects": {
-                "rule_out": [],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
-            },
+            }
+          ],
+          "source_line": 22,
+          "inputType": "select"
+        },
+        {
+          "id": "ankle_q5_onset",
+          "question": "How did the pain begin?",
+          "category": "onset",
+          "answers": [
             {
               "value": "Sudden",
               "effects": {
                 "rule_out": [
-                  "achilles tendon rupture"
+                  "Achilles Tendon Rupture"
                 ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": "Rule out achilles tendon rupture",
+                "optionColor": null
               }
             },
             {
@@ -318,11 +318,12 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             }
           ],
-          "source_line": 22,
+          "source_line": 25,
           "inputType": "select"
         },
         {
@@ -339,21 +340,27 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
               "value": "Sharp and pinching",
               "effects": {
-                "rule_out": [
-                  "tarsal tunnel syndrome"
+                "rule_out": [],
+                "triggered_conditions": [
+                  "Tarsal Tunnel Syndrome"
                 ],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
+                "increase_likelihood": [
+                  "Tarsal Tunnel Syndrome"
+                ],
+                "next_questions": [
+                  "ankle_q75"
+                ],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -374,7 +381,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -386,7 +394,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -407,7 +416,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -419,7 +429,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -440,7 +451,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": "red"
               }
             },
             {
@@ -452,7 +464,8 @@
                 "next_questions": [],
                 "red_flag": false,
                 "red_flag_text": null,
-                "notes": null
+                "notes": null,
+                "optionColor": null
               }
             }
           ],
@@ -1874,19 +1887,16 @@
                 "red_flag_text": null,
                 "notes": null
               }
-            },
-            {
-              "value": "Does the heel look broad and wide",
-              "effects": {
-                "rule_out": [],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
-            },
+            }
+          ],
+          "source_line": 202,
+          "inputType": "select"
+        },
+        {
+          "id": "ankle_q47_heel_broad",
+          "question": "Does the heel look broad and wide?",
+          "category": "general",
+          "answers": [
             {
               "value": "Yes",
               "effects": {
@@ -1912,7 +1922,7 @@
               }
             }
           ],
-          "source_line": 202,
+          "source_line": 205,
           "inputType": "select"
         },
         {

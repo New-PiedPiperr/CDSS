@@ -24,32 +24,35 @@ import { useParams } from 'next/navigation';
 export default function CaseDetailsPage() {
   const { id } = useParams();
 
-  const parseReasoningPoint = (point) => {
-    if (!point) return '';
-    if (typeof point === 'object') return formatJsonObjectToClinicalText(point);
-    if (typeof point !== 'string') return String(point);
-
-    const trimmed = point.trim();
-    if (!trimmed.startsWith('{') && !trimmed.startsWith('[')) return point;
-
-    try {
-      const parsed = JSON.parse(trimmed);
-      return formatJsonObjectToClinicalText(parsed);
-    } catch {
-      return point;
-    }
+  const stripMarkdown = (text) => {
+    if (!text || typeof text !== 'string') return text || '';
+    return text.replace(/\*\*/g, '').replace(/\*/g, '');
   };
 
   const formatJsonObjectToClinicalText = (obj) => {
-    if (typeof obj === 'string') return obj;
+    if (typeof obj === 'string') return stripMarkdown(obj);
     if (!obj || typeof obj !== 'object') return String(obj || '');
+
+    const formatNestedValue = (val) => {
+      if (val === null || val === undefined) return '';
+      if (typeof val === 'string') return stripMarkdown(val);
+      if (typeof val === 'number' || typeof val === 'boolean') return String(val);
+      if (Array.isArray(val)) return val.map(formatNestedValue).filter(Boolean).join(', ');
+      if (typeof val === 'object') {
+        return Object.entries(val)
+          .filter(([, v]) => v !== null && v !== undefined && v !== '')
+          .map(([k, v]) => `${k.replace(/_/g, ' ')}: ${formatNestedValue(v)}`)
+          .join(', ');
+      }
+      return String(val);
+    };
 
     const lines = [];
 
     const formatSection = (title, data) => {
       if (!data) return;
       if (typeof data === 'string') {
-        lines.push(`${title}: ${data}`);
+        lines.push(`${title}: ${stripMarkdown(data)}`);
         return;
       }
       if (typeof data === 'object') {
@@ -57,14 +60,9 @@ export default function CaseDetailsPage() {
         for (const [key, val] of Object.entries(data)) {
           if (!val) continue;
           const formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-          if (typeof val === 'string' || typeof val === 'number') {
-            parts.push(`${formattedKey}: ${val}`);
-          } else if (typeof val === 'object') {
-            const subParts = Object.entries(val)
-              .filter(([, v]) => v)
-              .map(([k, v]) => `${k.replace(/_/g, ' ')}: ${typeof v === 'object' ? JSON.stringify(v) : v}`)
-              .join(', ');
-            if (subParts) parts.push(`${formattedKey}: (${subParts})`);
+          const formattedVal = formatNestedValue(val);
+          if (formattedVal) {
+            parts.push(`${formattedKey}: ${formattedVal}`);
           }
         }
         if (parts.length > 0) {
@@ -85,10 +83,26 @@ export default function CaseDetailsPage() {
     return Object.entries(obj)
       .map(([k, v]) => {
         const key = k.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-        const val = typeof v === 'object' ? JSON.stringify(v) : v;
+        const val = formatNestedValue(v);
         return `${key}: ${val}`;
       })
       .join('; ');
+  };
+
+  const parseReasoningPoint = (point) => {
+    if (!point) return '';
+    if (typeof point === 'object') return formatJsonObjectToClinicalText(point);
+    if (typeof point !== 'string') return String(point);
+
+    const trimmed = point.trim();
+    if (!trimmed.startsWith('{') && !trimmed.startsWith('[')) return stripMarkdown(point);
+
+    try {
+      const parsed = JSON.parse(trimmed);
+      return formatJsonObjectToClinicalText(parsed);
+    } catch {
+      return stripMarkdown(point);
+    }
   };
 
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -523,7 +537,7 @@ export default function CaseDetailsPage() {
             Temporary Diagnosis
           </span>
           <h3 className="mt-8 text-4xl leading-tight font-black tracking-tight">
-            {analysis?.temporalDiagnosis || 'N/A'}
+            {stripMarkdown(analysis?.temporalDiagnosis) || 'N/A'}
           </h3>
         </Card>
         <Card className="border-border bg-card flex items-center justify-around gap-8 rounded-[2.5rem] p-10">

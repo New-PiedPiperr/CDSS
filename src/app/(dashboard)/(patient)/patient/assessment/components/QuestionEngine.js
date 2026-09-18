@@ -265,6 +265,65 @@ export default function QuestionEngine() {
     }, 150);
   }, [isProcessing, currentQuestion, engineState, updateEngineState, completeQuestions]);
 
+  /**
+   * KEYBOARD NAVIGATION (ArrowLeft, ArrowRight, Enter, 1-9)
+   */
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      // Ignore keyboard shortcuts if focus is inside an input/textarea
+      if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) {
+        if (e.key === 'Enter' && e.ctrlKey) {
+          e.preventDefault();
+          if (selectedAnswer && String(selectedAnswer).trim().length > 0) {
+            handleAnswerClick(selectedAnswer);
+          }
+        }
+        return;
+      }
+
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        handleBack();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        if (currentQuestion?.inputType === 'multiselect' || currentQuestion?.inputType === 'checkbox') {
+          if (Array.isArray(selectedAnswer) && selectedAnswer.length > 0) {
+            handleAnswerClick(selectedAnswer);
+          } else {
+            handleSkip();
+          }
+        } else if (selectedAnswer) {
+          handleAnswerClick(selectedAnswer);
+        } else {
+          handleSkip();
+        }
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (currentQuestion?.inputType === 'multiselect' || currentQuestion?.inputType === 'checkbox') {
+          if (Array.isArray(selectedAnswer) && selectedAnswer.length > 0) {
+            handleAnswerClick(selectedAnswer);
+          }
+        } else if (selectedAnswer) {
+          handleAnswerClick(selectedAnswer);
+        }
+      } else if (e.key >= '1' && e.key <= '9') {
+        const index = parseInt(e.key, 10) - 1;
+        if (currentQuestion?.answers && currentQuestion.answers[index]) {
+          e.preventDefault();
+          const targetVal = currentQuestion.answers[index].value;
+          if (currentQuestion.inputType === 'multiselect' || currentQuestion.inputType === 'checkbox') {
+            toggleMultiAnswer(targetVal);
+          } else {
+            handleAnswerClick(targetVal);
+          }
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentQuestion, selectedAnswer, handleAnswerClick, handleBack, handleSkip, toggleMultiAnswer]);
+
   // Emergency state — takes precedence over everything else.
   if (emergencyState) {
     return (

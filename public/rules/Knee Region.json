@@ -9137,42 +9137,6 @@
                 "red_flag_text": null,
                 "notes": null
               }
-            },
-            {
-              "value": "Is the pain at rest",
-              "effects": {
-                "rule_out": [],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
-            },
-            {
-              "value": "Yes",
-              "effects": {
-                "rule_out": [],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": "Infection causes constant inflammatory pain"
-              }
-            },
-            {
-              "value": "No",
-              "effects": {
-                "rule_out": [],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
             }
           ],
           "source_line": 1015,

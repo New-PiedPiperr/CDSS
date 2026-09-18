@@ -237,19 +237,16 @@
                 "red_flag_text": null,
                 "notes": null
               }
-            },
-            {
-              "value": "What aggravates the pain",
-              "effects": {
-                "rule_out": [],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
-            },
+            }
+          ],
+          "source_line": 23,
+          "inputType": "select"
+        },
+        {
+          "id": "wrist_region_q6_aggravates",
+          "question": "What aggravates the pain?",
+          "category": "aggravating",
+          "answers": [
             {
               "value": "Repetitive wrist use",
               "effects": {
@@ -275,7 +272,7 @@
               }
             }
           ],
-          "source_line": 23,
+          "source_line": 26,
           "inputType": "select"
         },
         {

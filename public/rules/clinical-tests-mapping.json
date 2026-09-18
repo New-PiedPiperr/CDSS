@@ -545,13 +545,15 @@
               "isTerminal": false,
               "branchTo": [],
               "effects": {
-                "nextQuestionId": null,
+                "nextQuestionId": "ankle_q75",
                 "skipToQuestionId": null,
-                "triggeredConditions": [],
-                "excludedConditions": [
+                "triggeredConditions": [
                   "Tarsal Tunnel Syndrome"
                 ],
-                "increaseLikelihood": [],
+                "excludedConditions": [],
+                "increaseLikelihood": [
+                  "Tarsal Tunnel Syndrome"
+                ],
                 "decreaseLikelihood": [],
                 "redFlag": false,
                 "redFlagText": null,

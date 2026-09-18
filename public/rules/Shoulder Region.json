@@ -1388,19 +1388,16 @@
                 "red_flag_text": null,
                 "notes": null
               }
-            },
-            {
-              "value": "Do you experience pain more at night",
-              "effects": {
-                "rule_out": [],
-                "increase_likelihood": [],
-                "decrease_likelihood": [],
-                "next_questions": [],
-                "red_flag": false,
-                "red_flag_text": null,
-                "notes": null
-              }
-            },
+            }
+          ],
+          "source_line": 164,
+          "inputType": "select"
+        },
+        {
+          "id": "shoulder_q33_night_pain",
+          "question": "Do you experience pain more at night?",
+          "category": "general",
+          "answers": [
             {
               "value": "Yes",
               "effects": {
@@ -1426,7 +1423,7 @@
               }
             }
           ],
-          "source_line": 164,
+          "source_line": 167,
           "inputType": "select"
         },
         {

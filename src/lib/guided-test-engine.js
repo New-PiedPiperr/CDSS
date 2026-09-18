@@ -15,28 +15,68 @@ export function initializeGuidedTestEngine({
   therapistId,
   region,
   moduleSlug,
+  recommendedTests = [],
 }) {
-  const regionKey =
-    moduleSlug ||
-    (region?.toLowerCase().includes('lumbar')
-      ? 'lumbar-pain-screener'
-      : region?.toLowerCase().includes('shoulder')
-        ? 'shoulder-mobility-screener'
-        : region?.toLowerCase().includes('cervical')
-          ? 'cervical-posture-diagnostic'
-          : region?.toLowerCase().includes('ankle')
-            ? 'ankle-stability-test'
-            : region?.toLowerCase().includes('knee')
-              ? 'knee-pain-screener'
-              : region?.toLowerCase().includes('elbow')
-                ? 'elbow-pain-screener'
-                : region?.toLowerCase().includes('hip')
-                  ? 'hip-pain-screener'
-                  : region?.toLowerCase().includes('wrist')
-                    ? 'wrist-pain-screener'
-                    : null);
+  let graph = null;
 
-  const graph = testFlowGraphs[regionKey] || null;
+  // 1. If case has dynamic recommended tests, build dynamic flowchart nodes
+  if (Array.isArray(recommendedTests) && recommendedTests.length > 0) {
+    const nodes = {};
+    const testList = recommendedTests.filter((t) => t && (t.name || typeof t === 'string'));
+
+    testList.forEach((t, index) => {
+      const testName = typeof t === 'string' ? t : t.name;
+      const testId = typeof t === 'object' && t.id ? t.id : `dynamic_test_${index + 1}`;
+      const nextId = index < testList.length - 1 ? (typeof testList[index + 1] === 'object' && testList[index + 1].id ? testList[index + 1].id : `dynamic_test_${index + 2}`) : 'terminal_node';
+
+      nodes[testId] = {
+        id: testId,
+        name: testName,
+        purpose: typeof t === 'object' ? t.positiveImplication || t.instruction : 'Physical test confirmation',
+        instruction: typeof t === 'object' ? t.instruction : 'Perform test according to clinical guidelines',
+        onPositive: nextId,
+        onNegative: nextId,
+      };
+    });
+
+    nodes['terminal_node'] = {
+      id: 'terminal_node',
+      isTerminal: true,
+      diagnosisMapping: 'Physical Testing Sequence Completed',
+      instruction: 'Review test responses to refine clinical diagnosis.',
+    };
+
+    graph = {
+      startNode: testList.length > 0 ? (typeof testList[0] === 'object' && testList[0].id ? testList[0].id : 'dynamic_test_1') : null,
+      nodes,
+    };
+  }
+
+  // 2. Fallback to static flowchart graph for region if no recommended tests
+  if (!graph) {
+    const regionKey =
+      moduleSlug ||
+      (region?.toLowerCase().includes('lumbar')
+        ? 'lumbar-pain-screener'
+        : region?.toLowerCase().includes('shoulder')
+          ? 'shoulder-mobility-screener'
+          : region?.toLowerCase().includes('cervical')
+            ? 'cervical-posture-diagnostic'
+            : region?.toLowerCase().includes('ankle')
+              ? 'ankle-stability-test'
+              : region?.toLowerCase().includes('knee')
+                ? 'knee-pain-screener'
+                : region?.toLowerCase().includes('elbow')
+                  ? 'elbow-pain-screener'
+                  : region?.toLowerCase().includes('hip')
+                    ? 'hip-pain-screener'
+                    : region?.toLowerCase().includes('wrist')
+                      ? 'wrist-pain-screener'
+                      : null);
+
+    graph = testFlowGraphs[regionKey] || null;
+  }
+
   const startNodeId = graph?.startNode || null;
 
   return {
@@ -66,15 +106,51 @@ export function getCurrentTest(state) {
   }
 
   // Find atomic test data
-  const libraryTest = provocativeTests.find((t) => t.id === node.id);
+  const libraryTest = provocativeTests.find((t) => t.id === node.id || t.name.toLowerCase() === node.name?.toLowerCase());
+
+  const testName = libraryTest?.name || node.name || 'Unknown Test';
+  const testType = libraryTest?.type || node.testType || 'Clinical Test';
+
+  // Determine if this is a non-provocative external report/imaging test
+  const nameLower = testName.toLowerCase();
+  const typeLower = String(testType).toLowerCase();
+  const isImaging =
+    typeLower.includes('imaging') ||
+    typeLower.includes('radiograph') ||
+    typeLower.includes('x-ray') ||
+    typeLower.includes('ultrasound') ||
+    typeLower.includes('mri') ||
+    nameLower.includes('ultrasound') ||
+    nameLower.includes('radiograph') ||
+    nameLower.includes('x-ray') ||
+    nameLower.includes('xray') ||
+    nameLower.includes('mri') ||
+    nameLower.includes('ct scan') ||
+    nameLower.includes('scan');
+
+  let instructions = libraryTest?.instructions || (node.instruction ? [node.instruction] : []);
+  if (typeof instructions === 'string') {
+    instructions = [instructions];
+  }
+
+  if (instructions.length === 0) {
+    if (isImaging) {
+      instructions = [
+        'Review patient-provided imaging/radiographic report (Ultrasound, X-Ray, or MRI).',
+        'Check for structural findings, fractures, tendon tears, or joint space narrowing.',
+      ];
+    } else {
+      instructions = ['Perform physical test according to standard clinical protocol.'];
+    }
+  }
 
   return {
     id: node.id,
-    name: libraryTest?.name || node.name || 'Unknown Test',
-    type: libraryTest?.type || 'Clinical Test',
+    name: testName,
+    type: testType,
+    isImaging,
     purpose: libraryTest?.purpose || node.purpose || '',
-    instructions:
-      libraryTest?.instructions || (node.instruction ? [node.instruction] : []),
+    instructions,
     image: libraryTest?.image || null,
     testNumber: state.completedTests.length + 1,
     isObservation: node.isObservation || false,
@@ -329,12 +405,9 @@ export function extractRecommendedTests(rulesJson, suspectedConditions) {
   if (rulesJson && rulesJson.conditions) {
     rulesJson.conditions.forEach((condition) => {
       const isSuspected = normalizedSuspected.some((s) => {
-        const condLower = condition.name.toLowerCase();
-        return (
-          condLower.includes(s) ||
-          s.includes(condLower) ||
-          condLower.split(/\s+/).some((word) => word.length > 3 && s.includes(word))
-        );
+        const condLower = condition.name.toLowerCase().trim();
+        const targetLower = s.toLowerCase().trim();
+        return condLower === targetLower;
       });
 
       if (isSuspected) {
@@ -350,15 +423,17 @@ export function extractRecommendedTests(rulesJson, suspectedConditions) {
   }
 
   // 2. Add Clinical Fallbacks if recommendations are sparse
-  normalizedSuspected.forEach((suspect) => {
-    Object.keys(clinicalFallbackTests).forEach((key) => {
-      if (suspect.includes(key) || key.includes(suspect)) {
-        clinicalFallbackTests[key].forEach((test) =>
-          addTest(test, suspect, 'Clinical Guideline Pattern')
-        );
-      }
+  if (recommendations.length === 0) {
+    normalizedSuspected.forEach((suspect) => {
+      Object.keys(clinicalFallbackTests).forEach((key) => {
+        if (suspect.includes(key) || key.includes(suspect)) {
+          clinicalFallbackTests[key].forEach((test) =>
+            addTest(test, suspect, 'Clinical Guideline Pattern')
+          );
+        }
+      });
     });
-  });
+  }
 
   return recommendations;
 }

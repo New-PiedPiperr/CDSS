@@ -273,10 +273,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "lumbar disc herniation or cauda equina syndrome"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -287,7 +287,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "lumbar disc herniation or cauda equina syndrome"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -308,10 +310,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "cauda equina"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -322,7 +324,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "cauda equina"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -409,10 +413,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "cauda equina syndrome"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -423,7 +427,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "cauda equina syndrome"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -444,10 +450,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "ankylosing spondylitis or bone tumours and infection"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -458,7 +464,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "ankylosing spondylitis or bone tumours and infection"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -479,10 +487,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "cancers/infection"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -493,7 +501,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "cancers/infection"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],

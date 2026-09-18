@@ -346,9 +346,26 @@ function normalizeQuestion(rawQuestion, conditionName) {
       rawValue: rawVal,
       bracketAnnotation,
       effects: {
-        nextQuestionId: a.effects?.nextQuestionId || a.effects?.next_question_id || null,
+        nextQuestionId:
+          a.effects?.nextQuestionId ||
+          a.effects?.next_question_id ||
+          (Array.isArray(a.effects?.next_questions) && a.effects.next_questions.length > 0
+            ? a.effects.next_questions[0]
+            : typeof a.effects?.next_questions === 'string'
+            ? a.effects.next_questions
+            : null) ||
+          a.next ||
+          a.nextQuestion ||
+          null,
         skipToQuestionId:
-          a.effects?.skipToQuestionId || a.effects?.skip_to_question_id || null,
+          a.effects?.skipToQuestionId ||
+          a.effects?.skip_to_question_id ||
+          (Array.isArray(a.effects?.skip_to_questions) && a.effects.skip_to_questions.length > 0
+            ? a.effects.skip_to_questions[0]
+            : typeof a.effects?.skip_to_questions === 'string'
+            ? a.effects.skip_to_questions
+            : null) ||
+          null,
         triggeredConditions:
           a.effects?.triggeredConditions || a.effects?.triggered_conditions || [],
         excludedConditions:
@@ -968,6 +985,13 @@ function findTargetQuestionFromBracket(state, bracketText) {
   // Handle branching (nextQuestionId or skipToQuestionId or Bracket Condition Jump)
   if (effects.nextQuestionId) {
     newState.pendingJump = effects.nextQuestionId;
+    const currentIndex = newState.questionOrder.indexOf(questionId);
+    const targetIndex = newState.questionOrder.indexOf(effects.nextQuestionId);
+    if (currentIndex >= 0 && targetIndex > currentIndex) {
+      for (let i = currentIndex + 1; i < targetIndex; i++) {
+        newState.skippedQuestions.add(newState.questionOrder[i]);
+      }
+    }
   } else if (effects.skipToQuestionId) {
     newState.pendingJump = effects.skipToQuestionId;
     // Mark all questions between current and target as skipped

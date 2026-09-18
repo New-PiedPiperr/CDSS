@@ -49,10 +49,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "ligament/meniscus"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -63,7 +63,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "ligament/meniscus"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -348,10 +350,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "nerve involvement"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -362,7 +364,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "nerve involvement"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -383,10 +387,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "prior ligament/meniscus injury"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -397,7 +401,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "prior ligament/meniscus injury"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -616,10 +622,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "meniscus tear or loose body"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -630,7 +636,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "meniscus tear or loose body"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -651,10 +659,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "ligament injury or patellar instability"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -665,7 +673,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "ligament injury or patellar instability"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -686,10 +696,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "patellar instability or subluxation"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -700,7 +710,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "patellar instability or subluxation"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -754,10 +766,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "referred pain from hip pathology such as FAI or slipped epiphysis"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -768,7 +780,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "referred pain from hip pathology such as FAI or slipped epiphysis"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -2781,10 +2795,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "inflammatory arthritis"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -2795,7 +2809,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "inflammatory arthritis"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -2849,10 +2865,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "ligament injury"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -2863,7 +2879,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "ligament injury"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -3597,10 +3615,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "nerve injury"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -3611,7 +3629,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "nerve injury"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -5357,10 +5377,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "ligament injury, supports ITBS diagnosis"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -5371,7 +5391,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "ligament injury, supports ITBS diagnosis"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -7065,10 +7087,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "MCL injury"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -7079,7 +7101,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "MCL injury"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -8867,10 +8891,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "ligament injury"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -8881,7 +8905,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "ligament injury"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],

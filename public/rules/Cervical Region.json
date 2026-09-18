@@ -270,10 +270,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "cervical myelopathy"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -284,7 +284,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "cervical myelopathy"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -305,10 +307,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "cervical stenosis"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -319,7 +321,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "cervical stenosis"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -832,10 +836,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "cervical stenosis"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -846,7 +850,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "cervical stenosis"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],

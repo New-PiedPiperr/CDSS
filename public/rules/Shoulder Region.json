@@ -115,10 +115,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "nerve involvement"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -129,7 +129,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "nerve involvement"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -1619,10 +1621,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "rotator cuff disorder and cervical radiculitis"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -1633,7 +1635,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "rotator cuff disorder and cervical radiculitis"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -1993,10 +1997,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "adhesive capsulitis"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -2007,7 +2011,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "adhesive capsulitis"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],

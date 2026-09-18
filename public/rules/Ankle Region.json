@@ -130,9 +130,7 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
-                  "osteoarthritis"
-                ],
+                "rule_out": [],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
@@ -144,7 +142,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "OSTEOARTHRITIS"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [
@@ -169,10 +169,15 @@
               "effects": {
                 "rule_out": [],
                 "increase_likelihood": [
-                  "osteoarthritis"
+                  "OSTEOARTHRITIS"
                 ],
                 "decrease_likelihood": [],
-                "next_questions": [],
+                "triggered_conditions": [
+                  "OSTEOARTHRITIS"
+                ],
+                "next_questions": [
+                  "ankle_q69"
+                ],
                 "red_flag": false,
                 "red_flag_text": null,
                 "notes": null
@@ -184,7 +189,9 @@
                 "rule_out": [],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
-                "next_questions": [],
+                "next_questions": [
+                  "ankle_q5"
+                ],
                 "red_flag": false,
                 "red_flag_text": null,
                 "notes": null
@@ -196,7 +203,9 @@
                 "rule_out": [],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
-                "next_questions": [],
+                "next_questions": [
+                  "ankle_q5"
+                ],
                 "red_flag": false,
                 "red_flag_text": null,
                 "notes": null
@@ -208,7 +217,9 @@
                 "rule_out": [],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
-                "next_questions": [],
+                "next_questions": [
+                  "ankle_q5"
+                ],
                 "red_flag": false,
                 "red_flag_text": null,
                 "notes": null
@@ -220,7 +231,9 @@
                 "rule_out": [],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
-                "next_questions": [],
+                "next_questions": [
+                  "ankle_q5"
+                ],
                 "red_flag": false,
                 "red_flag_text": null,
                 "notes": null
@@ -1123,10 +1136,10 @@
             {
               "value": "Yes",
               "effects": {
-                "rule_out": [
+                "rule_out": [],
+                "increase_likelihood": [
                   "fracture"
                 ],
-                "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],
                 "red_flag": false,
@@ -1137,7 +1150,9 @@
             {
               "value": "No",
               "effects": {
-                "rule_out": [],
+                "rule_out": [
+                  "fracture"
+                ],
                 "increase_likelihood": [],
                 "decrease_likelihood": [],
                 "next_questions": [],

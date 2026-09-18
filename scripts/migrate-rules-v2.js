@@ -165,7 +165,7 @@ function applyClinicialEnhancements(
     }
   }
 
-  // "If yes, when?" for stiffness - if morning, increase likelihood of OA
+  // "when?" for stiffness - if morning, increase likelihood of OA
   if (qLower.includes('if yes') && qLower.includes('when')) {
     if (aLower === 'morning') {
       const oaCondition = availableConditions.find((c) =>

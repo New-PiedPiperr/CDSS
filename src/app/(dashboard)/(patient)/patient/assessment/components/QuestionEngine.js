@@ -108,19 +108,17 @@ export default function QuestionEngine() {
     if (!engineState) {
       loadRules();
     } else {
-      // Resume from existing state
-      const question = getCurrentQuestion(engineState);
-
-      // If we are resumed but state is still complete, we should probably be in summary
-      if (!question && engineState.isComplete) {
-        completeQuestions();
-        return;
+      let stateToUse = engineState;
+      if (engineState.isComplete) {
+        stateToUse = previousQuestion(engineState);
+        updateEngineState(stateToUse);
       }
 
+      const question = getCurrentQuestion(stateToUse);
       setCurrentQuestion(question);
       setIsLoading(false);
     }
-  }, [selectedRegion, engineState, storeInitEngine]);
+  }, [selectedRegion, engineState, storeInitEngine, updateEngineState]);
 
   /**
    * HANDLE ANSWER CLICK - SEAMLESS FLOW WITH BRANCHING

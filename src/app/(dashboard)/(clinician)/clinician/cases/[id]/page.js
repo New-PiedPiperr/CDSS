@@ -50,28 +50,71 @@ export default function CaseDetailsPage() {
    * string or a JSON-stringified object (SOAP-style) stored by older records.
    */
   const parseReasoningPoint = (point) => {
-    if (typeof point !== 'string') return String(point ?? '');
-    // Fast path: plain text (doesn't start with { or [)
+    if (!point) return '';
+    if (typeof point === 'object') return formatJsonObjectToClinicalText(point);
+    if (typeof point !== 'string') return String(point);
+
     const trimmed = point.trim();
     if (!trimmed.startsWith('{') && !trimmed.startsWith('[')) return point;
+
     try {
       const parsed = JSON.parse(trimmed);
-      // Common SOAP / reasoning field names
-      if (typeof parsed === 'string') return parsed;
-      if (parsed.text) return parsed.text;
-      if (parsed.reasoning) return parsed.reasoning;
-      if (parsed.clinicalNarrative) return parsed.clinicalNarrative;
-      if (parsed.content) return parsed.content;
-      if (parsed.narrative) return parsed.narrative;
-      if (parsed.value) return parsed.value;
-      if (parsed.summary) return parsed.summary;
-      // Fallback: join all string values
-      return Object.values(parsed)
-        .filter((v) => typeof v === 'string')
-        .join(' ') || trimmed;
+      return formatJsonObjectToClinicalText(parsed);
     } catch {
       return point;
     }
+  };
+
+  const formatJsonObjectToClinicalText = (obj) => {
+    if (typeof obj === 'string') return obj;
+    if (!obj || typeof obj !== 'object') return String(obj || '');
+
+    const lines = [];
+
+    const formatSection = (title, data) => {
+      if (!data) return;
+      if (typeof data === 'string') {
+        lines.push(`${title}: ${data}`);
+        return;
+      }
+      if (typeof data === 'object') {
+        const parts = [];
+        for (const [key, val] of Object.entries(data)) {
+          if (!val) continue;
+          const formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+          if (typeof val === 'string' || typeof val === 'number') {
+            parts.push(`${formattedKey}: ${val}`);
+          } else if (typeof val === 'object') {
+            const subParts = Object.entries(val)
+              .filter(([, v]) => v)
+              .map(([k, v]) => `${k.replace(/_/g, ' ')}: ${typeof v === 'object' ? JSON.stringify(v) : v}`)
+              .join(', ');
+            if (subParts) parts.push(`${formattedKey}: (${subParts})`);
+          }
+        }
+        if (parts.length > 0) {
+          lines.push(`${title}: ${parts.join('; ')}`);
+        }
+      }
+    };
+
+    if (obj.subjective) formatSection('Subjective', obj.subjective);
+    if (obj.objective) formatSection('Objective', obj.objective);
+    if (obj.assessment) formatSection('Assessment', obj.assessment);
+    if (obj.plan) formatSection('Plan', obj.plan);
+
+    if (lines.length > 0) {
+      return lines.join(' | ');
+    }
+
+    // Generic fallback for any other JSON object structure
+    return Object.entries(obj)
+      .map(([k, v]) => {
+        const key = k.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+        const val = typeof v === 'object' ? JSON.stringify(v) : v;
+        return `${key}: ${val}`;
+      })
+      .join('; ');
   };
 
   const [session, setSession] = useState(null);
@@ -716,16 +759,22 @@ export default function CaseDetailsPage() {
                                 : 'Patient',
                             });
 
-                            // Map region to module slug
-                            const regionSlug = session.bodyRegion
-                              ?.toLowerCase()
-                              .includes('lumbar')
+                            const r = (session.bodyRegion || '').toLowerCase();
+                            const regionSlug = r.includes('lumbar')
                               ? 'lumbar-pain-screener'
-                              : session.bodyRegion?.toLowerCase().includes('shoulder')
+                              : r.includes('shoulder')
                                 ? 'shoulder-mobility-screener'
-                                : session.bodyRegion?.toLowerCase().includes('cervical')
+                                : r.includes('cervical')
                                   ? 'cervical-posture-diagnostic'
-                                  : 'ankle-stability-test';
+                                  : r.includes('knee')
+                                    ? 'knee-pain-screener'
+                                    : r.includes('elbow')
+                                      ? 'elbow-pain-screener'
+                                      : r.includes('hip')
+                                        ? 'hip-pain-screener'
+                                        : r.includes('wrist')
+                                          ? 'wrist-pain-screener'
+                                          : 'ankle-stability-test';
 
                             router.push(
                               `/clinician/diagnostic/${regionSlug}?${params.toString()}`

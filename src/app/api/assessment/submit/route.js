@@ -206,25 +206,19 @@ export async function POST(req) {
       const rulesContent = await fs.readFile(rulesPath, 'utf-8');
       const rulesJson = JSON.parse(rulesContent);
 
-      // Build suspected condition list from STRUCTURED sources first (condition names),
-      // falling back to AI prose arrays. Avoids substring-match failures where
-      // temporalDiagnosis is a full sentence rather than a bare condition name.
+      // Pass target primary condition and top differentials strictly
       const structuredConditionNames = [
-        ...(conditionAnalysis || []).map((c) => c.name),
-        ...(differentialDiagnoses || []).map((c) => c.name),
-        primarySuspicion?.name,
+        primarySuspicion?.name || primarySuspicion,
+        ...(conditionAnalysis || []).filter((c) => c.active || c.likelihood > 50).map((c) => c.name),
       ].filter(Boolean);
 
       const suspectedConditionsForTests =
         structuredConditionNames.length > 0
-          ? structuredConditionNames
-          : [
-              therapistFacingResult.temporalDiagnosis,
-              ...(aiAnalysisResult.differentialDiagnoses || []),
-            ].filter(Boolean);
+          ? Array.from(new Set(structuredConditionNames))
+          : [therapistFacingResult.temporalDiagnosis].filter(Boolean);
 
       recommendedTests = extractRecommendedTests(rulesJson, suspectedConditionsForTests);
-      console.log(`Extracted ${recommendedTests.length} recommended tests for ${region}`);
+      console.log(`Extracted ${recommendedTests.length} recommended tests for ${region} (Conditions: ${suspectedConditionsForTests.join(', ')})`);
     } catch (err) {
       console.warn(`Could not load rules for ${region} to extract tests:`, err.message);
     }

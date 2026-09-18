@@ -24,6 +24,73 @@ import { useParams } from 'next/navigation';
 export default function CaseDetailsPage() {
   const { id } = useParams();
 
+  const parseReasoningPoint = (point) => {
+    if (!point) return '';
+    if (typeof point === 'object') return formatJsonObjectToClinicalText(point);
+    if (typeof point !== 'string') return String(point);
+
+    const trimmed = point.trim();
+    if (!trimmed.startsWith('{') && !trimmed.startsWith('[')) return point;
+
+    try {
+      const parsed = JSON.parse(trimmed);
+      return formatJsonObjectToClinicalText(parsed);
+    } catch {
+      return point;
+    }
+  };
+
+  const formatJsonObjectToClinicalText = (obj) => {
+    if (typeof obj === 'string') return obj;
+    if (!obj || typeof obj !== 'object') return String(obj || '');
+
+    const lines = [];
+
+    const formatSection = (title, data) => {
+      if (!data) return;
+      if (typeof data === 'string') {
+        lines.push(`${title}: ${data}`);
+        return;
+      }
+      if (typeof data === 'object') {
+        const parts = [];
+        for (const [key, val] of Object.entries(data)) {
+          if (!val) continue;
+          const formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+          if (typeof val === 'string' || typeof val === 'number') {
+            parts.push(`${formattedKey}: ${val}`);
+          } else if (typeof val === 'object') {
+            const subParts = Object.entries(val)
+              .filter(([, v]) => v)
+              .map(([k, v]) => `${k.replace(/_/g, ' ')}: ${typeof v === 'object' ? JSON.stringify(v) : v}`)
+              .join(', ');
+            if (subParts) parts.push(`${formattedKey}: (${subParts})`);
+          }
+        }
+        if (parts.length > 0) {
+          lines.push(`${title}: ${parts.join('; ')}`);
+        }
+      }
+    };
+
+    if (obj.subjective) formatSection('Subjective', obj.subjective);
+    if (obj.objective) formatSection('Objective', obj.objective);
+    if (obj.assessment) formatSection('Assessment', obj.assessment);
+    if (obj.plan) formatSection('Plan', obj.plan);
+
+    if (lines.length > 0) {
+      return lines.join(' | ');
+    }
+
+    return Object.entries(obj)
+      .map(([k, v]) => {
+        const key = k.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+        const val = typeof v === 'object' ? JSON.stringify(v) : v;
+        return `${key}: ${val}`;
+      })
+      .join('; ');
+  };
+
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [isDocsOpen, setIsDocsOpen] = useState(false);
   const [documents, setDocuments] = useState([]);
@@ -425,7 +492,7 @@ export default function CaseDetailsPage() {
             <ul className="mt-2 ml-5 list-disc space-y-3">
               {analysis?.reasoning?.map((point, idx) => (
                 <li key={idx} className="pl-2">
-                  {point}
+                  {parseReasoningPoint(point)}
                 </li>
               ))}
             </ul>
@@ -721,7 +788,7 @@ export default function CaseDetailsPage() {
                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-indigo-500 text-xs font-black text-white">
                       {idx + 1}
                     </div>
-                    <p className="text-sm font-medium">{point}</p>
+                    <p className="text-sm font-medium">{parseReasoningPoint(point)}</p>
                   </div>
                 ))}
               </div>

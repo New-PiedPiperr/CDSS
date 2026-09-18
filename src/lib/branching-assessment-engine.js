@@ -1105,6 +1105,11 @@ export function previousQuestion(state) {
     rebuiltState = processAnswer(rebuiltState, aq.questionId, aq.answer);
   }
 
+  // Ensure returning to questions clears completion flags
+  rebuiltState.isComplete = false;
+  rebuiltState.completionReason = null;
+  rebuiltState.temporaryDiagnosis = null;
+
   return rebuiltState;
 }
 

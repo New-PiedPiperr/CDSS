@@ -40,7 +40,7 @@ export const MEDICAL_RULES = {
         ],
       },
       ankle_q3_time: {
-        text: 'If yes, when?',
+        text: 'when?',
         category: 'temporal',
         options: [
           {

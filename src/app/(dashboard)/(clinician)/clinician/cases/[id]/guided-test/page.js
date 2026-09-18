@@ -220,21 +220,52 @@ export default function GuidedTestPage() {
                   <Activity className="h-6 w-6" />
                 </div>
                 <div>
-                  <span className="text-primary text-sm font-black tracking-widest uppercase">
-                    Current Procedure
+                  <span className="text-primary flex items-center gap-2 text-sm font-black tracking-widest uppercase">
+                    {currentTest.isImaging ? 'Patient Report / Imaging Review' : 'Current Physical Test Procedure'}
+                    {currentTest.isImaging && (
+                      <Badge className="bg-amber-500/10 text-amber-600 border-amber-500/20 text-xs uppercase">
+                        External Scan / Report
+                      </Badge>
+                    )}
                   </span>
                   <h2 className="text-3xl font-extrabold">{currentTest.name}</h2>
                 </div>
               </div>
 
-              <div className="bg-muted/50 border-border mb-8 rounded-2xl border p-6">
-                <h3 className="text-muted-foreground mb-3 flex items-center text-sm font-bold tracking-tight uppercase">
-                  Clinical Instructions
-                </h3>
-                <p className="text-xl leading-relaxed font-medium">
-                  {currentTest.instruction}
-                </p>
-              </div>
+              {currentTest.isImaging ? (
+                <div className="mb-8 space-y-3 rounded-2xl border border-amber-500/20 bg-amber-500/5 p-6 text-amber-900 dark:text-amber-200">
+                  <h3 className="flex items-center text-sm font-bold tracking-tight uppercase text-amber-700 dark:text-amber-400">
+                    Patient Report Review Protocol
+                  </h3>
+                  <p className="text-base font-semibold leading-relaxed">
+                    This is a non-provocative imaging test (Ultrasound, Radiograph / X-Ray, MRI, etc.). The patient brings the scan report; no physical test is performed live by the clinician.
+                  </p>
+                  <ul className="list-disc space-y-1.5 pl-5 text-sm">
+                    <li>Review the patient's submitted scan, radiologist findings, or imaging report.</li>
+                    <li>Mark <strong>Positive Findings</strong> if report indicates pathology, fracture, or abnormal findings.</li>
+                    <li>Mark <strong>Negative Findings</strong> if report is unremarkable or normal.</li>
+                  </ul>
+                </div>
+              ) : (
+                <div className="bg-muted/50 border-border mb-8 rounded-2xl border p-6">
+                  <h3 className="text-muted-foreground mb-3 flex items-center text-sm font-bold tracking-tight uppercase">
+                    Clinical Instructions & Protocol
+                  </h3>
+                  {Array.isArray(currentTest.instructions) && currentTest.instructions.length > 0 ? (
+                    <ul className="space-y-2 list-disc pl-5">
+                      {currentTest.instructions.map((ins, idx) => (
+                        <li key={idx} className="text-lg leading-relaxed font-medium">
+                          {ins}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-xl leading-relaxed font-medium">
+                      {currentTest.instruction || (typeof currentTest.instructions === 'string' ? currentTest.instructions : 'Perform physical test according to standard clinical protocol.')}
+                    </p>
+                  )}
+                </div>
+              )}
 
               <div className="mb-8">
                 <label className="text-muted-foreground mb-2 block text-sm font-bold tracking-tight uppercase">
@@ -243,7 +274,7 @@ export default function GuidedTestPage() {
                 <textarea
                   className="border-border bg-background focus:border-primary focus:ring-primary w-full rounded-xl border-2 p-4 text-lg transition-all outline-none focus:ring-1"
                   rows={3}
-                  placeholder="Record any specific observations during this test..."
+                  placeholder={currentTest.isImaging ? "Record radiologist findings or report summary..." : "Record any specific observations during this test..."}
                   value={testNotes}
                   onChange={(e) => setTestNotes(e.target.value)}
                 />
@@ -257,7 +288,7 @@ export default function GuidedTestPage() {
                   disabled={isRecording}
                 >
                   <CheckCircle2 className="mr-3 h-7 w-7" />
-                  Positive Result
+                  {currentTest.isImaging ? 'Positive Findings' : 'Positive Result'}
                 </Button>
                 <Button
                   size="lg"
@@ -266,7 +297,7 @@ export default function GuidedTestPage() {
                   disabled={isRecording}
                 >
                   <XCircle className="mr-3 h-7 w-7" />
-                  Negative Result
+                  {currentTest.isImaging ? 'Negative Findings' : 'Negative Result'}
                 </Button>
               </div>
 

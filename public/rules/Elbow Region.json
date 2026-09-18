@@ -566,7 +566,22 @@
           "inputType": "select"
         }
       ],
-      "recommended_tests": [],
+      "recommended_tests": [
+        "DISTAL BICEPS TENDINOPATHY (Confirmation)",
+        "Age (40-59)",
+        "Pain indicates the presence of a biceps tendinopathy",
+        "AVULSION OF THE DISTAL BICEPS TENDON",
+        "Start from pain is sudden",
+        "Age (40s)",
+        "O’Driscoll’s hook test: Palpate for biceps tendon in the antecubital fossa with arms flexed, shoulder ABducted and forearm in supination.",
+        "Test is positive if the biceps tendon cannot be hooked",
+        "OLECRANON BURSITIS (Student’s Elbow)",
+        "-Radiographic confirmation: Check for osteopenia, bone erosions, destruction of the radial head and widening of the sigmoid notch.",
+        "-Other laboratories tests as may be necessary",
+        "FOR OSTEOARTHRITIS",
+        "Age (60-69) and Male.",
+        "Radiographic confirmation – Check for joint space narrowing, osteophyte formation, and subchondral sclerosis."
+      ],
       "confirmation_methods": [],
       "observations": [
         "Pain indicates the presence of a biceps tendinopathy",

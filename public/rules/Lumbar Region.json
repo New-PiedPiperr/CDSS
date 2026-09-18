@@ -530,7 +530,10 @@
           "inputType": "select"
         }
       ],
-      "recommended_tests": [],
+      "recommended_tests": [
+        "Lasegue’s Test (Straight-Leg Raise): Examiner raises legs of patient up so that hip flexion is achieved while knee is extended. Test is positive if patient feels pain along the course of the sciatic nerve and below the knee when hip is between 30 - 70 degrees of flexion.",
+        "Bragard Test: This is a modification of the SLR and dorsiflexion is applied at the end of the SLR. This reduces the angle where the test is positive."
+      ],
       "confirmation_methods": [],
       "observations": [],
       "source_line": 1
@@ -747,7 +750,14 @@
       "recommended_tests": [
         "Lasegue’s Test (Straight-Leg Raise): Examiner raises legs of patient up so that hip flexion is achieved while knee is extended. Test is positive if patient feels pain along the course of the sciatic nerve and below the knee when hip is between 30 - 70 degrees of flexion.",
         "Bragard Test: This is a modification of the SLR and dorsiflexion is applied at the end of the SLR. This reduces the angle where the test is positive.",
-        "Bowstring Test (Popliteal Compression Test/ Tibial Nerve Stretch Sign): This can be done while patient is lying in supine or sitting position. The examiner flexes the knee and applies pressure on the popliteal fossa evoking sciatica."
+        "Bowstring Test (Popliteal Compression Test/ Tibial Nerve Stretch Sign): This can be done while patient is lying in supine or sitting position. The examiner flexes the knee and applies pressure on the popliteal fossa evoking sciatica.",
+        "Check if knee jerk reflex is present",
+        "Check if ankle jerk reflex is present",
+        "Femoral Nerve Stretch Test (Wasserman sign): Patient is in prone position, knee is flexed and hip is extended. Reproduction of pain in anterior thigh is positive.",
+        "Kernig Test: Patient’s neck is flexed, hip flexed and the leg is extended. Pain is reproduced in this position.",
+        "Milgram Test: pain is reproduced on straight leg elevation for 30 seconds.",
+        "Radiographic confirmation:",
+        "MRI test."
       ],
       "confirmation_methods": [],
       "observations": [
@@ -1002,7 +1012,12 @@
       "recommended_tests": [
         "Bicycle Stress Test: Record the amount of time the patient spends on a cycle ergometer while in a neutral lumbar position and slumped position. If patient spends more time in the slumped position, a lumbar spinal stenosis is indicated.",
         "Two-stage Treadmill Test: The patient walks on a flat treadmill and the amount of time spent is recorded and compared with the amount of time while the treadmill is inclined such that patient walks in flexion.",
-        "The Lumbar Extension-Loading Test: The examiner ensures that the lumbar region is in moderate extension (10-30 deg) while standing and patient lies supine. Check if there are changes in the symptoms that the patient feels."
+        "The Lumbar Extension-Loading Test: The examiner ensures that the lumbar region is in moderate extension (10-30 deg) while standing and patient lies supine. Check if there are changes in the symptoms that the patient feels.",
+        "Check if a wide-based gait is present",
+        "Check if Trendenlenburg’s sign is present",
+        "Check for negative romberg test",
+        "Check if Achilles tendon reflex is diminished",
+        "Age (Below 40)"
       ],
       "confirmation_methods": [],
       "observations": [
@@ -1194,7 +1209,20 @@
           "inputType": "select"
         }
       ],
-      "recommended_tests": [],
+      "recommended_tests": [
+        "Check for tenderness in the paraspinal musculature",
+        "Check for spasms in the paraspinal musculature",
+        "Check for decreased reflexes: patellar and ankle jerk",
+        "Check for trendenenburg’s sign",
+        "TESTS:",
+        "Lasegue’s Test (Straight-Leg Raise): Examiner raises legs of patient up so that hip flexion is achieved while knee is extended. Test is positive if patient feels pain along the course of the sciatic nerve and below the knee when hip is between 30 - 70 degrees of flexion.",
+        "Bragard Test: This is a modification of the SLR and dorsiflexion is applied at the end of the SLR. This reduces the angle where the test is positive.",
+        "Bowstring Test (Popliteal Compression Test/ Tibial Nerve Stretch Sign): This can be done while patient is lying in supine or sitting position. The examiner flexes the knee and applies pressure on the popliteal fossa evoking sciatica.",
+        "Femoral Nerve Stretch Test (Wasserman sign): Patient is in prone position, knee is flexed and hip is extended. Reproduction of pain in anterior thigh is positive.",
+        "Kernig Test: Patient’s neck is flexed, hip flexed and the leg is extended. Pain is reproduced in this position.",
+        "Milgram Test: pain is reproduced on straight leg elevation for 30 seconds.",
+        "Radiographic confirmation:"
+      ],
       "confirmation_methods": [
         "Radiographic confirmation:"
       ],
@@ -1491,7 +1519,13 @@
           "inputType": "select"
         }
       ],
-      "recommended_tests": [],
+      "recommended_tests": [
+        "Check for babinski sign and clonus to rule out upper motor neuron involvement",
+        "Radiographic confirmation",
+        "MRI test",
+        "Age (common in teens and early adults)",
+        "Sex (common in male, 3:1)"
+      ],
       "confirmation_methods": [
         "Radiographic confirmation"
       ],

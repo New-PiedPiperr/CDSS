@@ -490,7 +490,15 @@
           "inputType": "select"
         }
       ],
-      "recommended_tests": [],
+      "recommended_tests": [
+        "Check if cervical rotation on the affected side is less than 60 degrees.",
+        "TESTS:",
+        "Spurling’s Test (Maximal Cervical Compression and Foraminal Compression Test): The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm.",
+        "Cervical Distraction Test: The patient lies supine and the neck is positioned comfortably.  The examiner places hand around the patient’s mastoid process. The examiner then slightly flexes the patient’s neck and pull the head towards your torso.Test is positive if the symptoms reduces or is eliminated with traction.",
+        "Radiographic confirmation",
+        "MRI test",
+        "Back-Buttocks"
+      ],
       "confirmation_methods": [
         "Radiographic confirmation"
       ],
@@ -1044,7 +1052,8 @@
         }
       ],
       "recommended_tests": [
-        "Spurling’s Test (Maximal Cervical Compression and Foraminal Compression Test): The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm."
+        "Spurling’s Test (Maximal Cervical Compression and Foraminal Compression Test): The neck is placed in extension, lateral flexion, and axial compression. The test is positive if pain is present and radiates to the arm.",
+        "Radiographic confirmation: check for loss of normal cervical lordosis, and degeneration."
       ],
       "confirmation_methods": [
         "Radiographic confirmation: check for loss of normal cervical lordosis, and degeneration."

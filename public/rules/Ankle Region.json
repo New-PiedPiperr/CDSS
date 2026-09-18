@@ -476,7 +476,9 @@
           "inputType": "select"
         }
       ],
-      "recommended_tests": [],
+      "recommended_tests": [
+        "Use ultrasound to investigate tears"
+      ],
       "confirmation_methods": [
         "Radiographic confirmation"
       ],
@@ -695,7 +697,10 @@
       "recommended_tests": [
         "Check if plantarflexion of the ankle is weak.",
         "Check for palpable gap at the site of the rupture",
-        "Thompson’s or Simmond’s Test: Patient lies prone and the calf is squeezed. If tendon is ruptured, the foot will remain still when it ought to contract involuntarily."
+        "Thompson’s or Simmond’s Test: Patient lies prone and the calf is squeezed. If tendon is ruptured, the foot will remain still when it ought to contract involuntarily.",
+        "Radiographic Imaging: Use ultrasound to confirm the diagnosis.",
+        "Age ( About 10 yrs)",
+        "Female"
       ],
       "confirmation_methods": [
         "Radiographic Imaging: Use ultrasound to confirm the diagnosis."
@@ -748,7 +753,10 @@
         }
       ],
       "recommended_tests": [
-        "Check for density of apophysitis and check for fragmentation of the apophysitis."
+        "Check for density of apophysitis and check for fragmentation of the apophysitis.",
+        "Radiographic confirmation:",
+        "Age ( 65 years and older)",
+        "Female(NB: Can occur in younger females)"
       ],
       "confirmation_methods": [
         "Radiographic confirmation:"
@@ -1119,7 +1127,8 @@
       ],
       "recommended_tests": [
         "Confirmation using ultrasound to check for thickening around the heel.",
-        "Doppler test to show increased local blood flow and neovascularisation"
+        "Doppler test to show increased local blood flow and neovascularisation",
+        "FOR ANKLE LIGAMENT INJURIES"
       ],
       "confirmation_methods": [],
       "observations": [],
@@ -1316,7 +1325,11 @@
           "inputType": "select"
         }
       ],
-      "recommended_tests": [],
+      "recommended_tests": [
+        "Palpate the ankle, distally and anteriorly to the lateral malleolus and ask if patient feels more pain. Usually, patient feels more pain on palpation.",
+        "Radiographic Confirmation",
+        "Rule out undisplaced fracture of Fibula, tarsal bone, 5th metatarsal bone"
+      ],
       "confirmation_methods": [
         "Radiographic Confirmation"
       ],
@@ -1403,7 +1416,8 @@
       "recommended_tests": [
         "Special Test for Recurrent Lateral Instability",
         "Talar tilt test: The ankle is held in the neutral position, examiner stabilised the tibia just above the ankle and then tries to force the ankle into maximum inversion. The ROM can be measured or compared with the contralateral side.Inversion laxity suggests injury to calcaneofibular and anterior talofibular ligaments (ATFL).",
-        "Anterior Drawer Test: Patient sits with knee flexed at 90 deg and ankle in plantarflexion of about 10 deg. The lower leg is stabilised by the examiner and the force patient’s heel forward over the tibia. If positive, the talus can be felt sliding forwards and backwards. Laxity indicates tear of the ATFL."
+        "Anterior Drawer Test: Patient sits with knee flexed at 90 deg and ankle in plantarflexion of about 10 deg. The lower leg is stabilised by the examiner and the force patient’s heel forward over the tibia. If positive, the talus can be felt sliding forwards and backwards. Laxity indicates tear of the ATFL.",
+        "Observation"
       ],
       "confirmation_methods": [],
       "observations": [],
@@ -1448,7 +1462,11 @@
           "inputType": "select"
         }
       ],
-      "recommended_tests": [],
+      "recommended_tests": [
+        "Check if foot is everted and externally rotated.",
+        "Radiographic confirmation",
+        "Check for widening of the medial joint space in the mortise view, check if talus is tilted, check for fracture or dislocation of the proximal fibula."
+      ],
       "confirmation_methods": [
         "Radiographic confirmation"
       ],
@@ -1568,7 +1586,22 @@
         }
       ],
       "recommended_tests": [
-        "Squeeze Test: Compress the leg firmly above the ankle. Test is positive if pain is felt over the syndesmosis."
+        "Squeeze Test: Compress the leg firmly above the ankle. Test is positive if pain is felt over the syndesmosis.",
+        "FOR MALLEOLAR FRACTURES OF THE ANKLE",
+        "Age (Postmenopausal women)",
+        "Confirm fracture using radiographic imaging",
+        "FOR CALCANEAL FRACTURES",
+        "Radiographic Confirmation",
+        "Check if two-point discrimination is present.",
+        "Check if pain is present on passive movement of the toes",
+        "RHEUMATOID ARTHRITIS",
+        "At Forefoot",
+        "Check for the following deformities",
+        "A flattened anterior arch",
+        "Hallux valgus",
+        "Claw toes",
+        "Prominence of the metatarsal head in the soles (Feels like walking on stones)",
+        "Check for osteoporosis, and periarticular erosion at the metatarsophalangeal joint."
       ],
       "confirmation_methods": [],
       "observations": [],
@@ -2725,7 +2758,11 @@
           "inputType": "select"
         }
       ],
-      "recommended_tests": [],
+      "recommended_tests": [
+        "Radiographic confirmation. Check for osteoporosis, erosion of the tarsal and ankle joints and the swelling of soft-tissues.",
+        "OSTEOARTHRITIS",
+        "Radiographic confirmation – check for joint space narrowing, osteophytes formation, subchondral sclerosis, and cyst formation."
+      ],
       "confirmation_methods": [
         "Radiographic confirmation. Check for osteoporosis, erosion of the tarsal and ankle joints and the swelling of soft-tissues."
       ],
@@ -3301,7 +3338,10 @@
       ],
       "recommended_tests": [
         "Tinel’s sign: Percussion of the tarsal tunnel. Positive if this results in a distal radiation of paraesthesia",
-        "Dorsiflexion-Eversion Test: Place the patient’s foot into dorsiflexion and eversion and hold for 5-10 seconds. Positive if patient’s symptom is elicited."
+        "Dorsiflexion-Eversion Test: Place the patient’s foot into dorsiflexion and eversion and hold for 5-10 seconds. Positive if patient’s symptom is elicited.",
+        "Check for atrophy of the abductor hallucis",
+        "Check for arch stability",
+        "Check for the position of the talus and calcaneus"
       ],
       "confirmation_methods": [],
       "observations": [

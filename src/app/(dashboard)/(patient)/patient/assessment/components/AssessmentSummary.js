@@ -203,7 +203,42 @@ export default function AssessmentSummary({ onSubmit, onEdit }) {
         </Card>
       )}
 
-      {/* Questions & Answers List */}
+          {/* Suspected Condition & Recommended Tests Display */}
+          {summary.temporaryDiagnosis && (
+            <Card className="border-2 border-emerald-200 bg-emerald-50/50 dark:border-emerald-800 dark:bg-emerald-950/30">
+              <CardContent className="p-4 space-y-3">
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="h-6 w-6 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400">
+                      Primary Indication Identified
+                    </p>
+                    <h3 className="text-lg font-black text-slate-900 dark:text-white">
+                      {summary.temporaryDiagnosis}
+                    </h3>
+                  </div>
+                </div>
+
+                {summary.recommendedTests && summary.recommendedTests.length > 0 && (
+                  <div className="border-t border-emerald-200/60 dark:border-emerald-800/60 pt-3">
+                    <p className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
+                      Recommended Clinical Tests for Verification:
+                    </p>
+                    <ul className="space-y-1.5">
+                      {summary.recommendedTests.map((test, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
+                          <span className="text-emerald-500 font-bold">•</span>
+                          <span>{test}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Questions & Answers List */}
       <Card className="border-2 border-slate-100 dark:border-slate-800">
         <CardContent className="p-0">
           {/* Collapsible Header */}

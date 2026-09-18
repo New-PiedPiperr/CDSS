@@ -1209,9 +1209,23 @@ export function completeAssessment(state) {
  * @returns {Object} Summary object for patient review
  */
 export function getAssessmentSummary(state) {
+  const tempDiag = state.temporaryDiagnosis || null;
+  let recommendedTests = [];
+
+  if (tempDiag && state.conditions) {
+    const condDef = state.conditions.find((c) => c.name === tempDiag);
+    if (condDef && Array.isArray(condDef.recommended_tests)) {
+      recommendedTests = condDef.recommended_tests;
+    } else if (condDef && Array.isArray(condDef.tests)) {
+      recommendedTests = condDef.tests;
+    }
+  }
+
   return {
     region: state.region,
     title: state.title,
+    temporaryDiagnosis: tempDiag,
+    recommendedTests,
     questionsAnswered: state.answeredQuestions.map((aq) => ({
       question: aq.question,
       answer: aq.answer,

@@ -54,81 +54,114 @@ export default function CaseDetailsPage() {
     return text.replace(/\*\*/g, '').replace(/\*/g, '');
   };
 
-  const formatJsonObjectToClinicalText = (obj) => {
-    if (typeof obj === 'string') return stripMarkdown(obj);
-    if (!obj || typeof obj !== 'object') return String(obj || '');
+  const renderReasoningNode = (data, title = null) => {
+    if (!data) return null;
 
-    const formatNestedValue = (val) => {
-      if (val === null || val === undefined) return '';
-      if (typeof val === 'string') return stripMarkdown(val);
-      if (typeof val === 'number' || typeof val === 'boolean') return String(val);
-      if (Array.isArray(val)) return val.map(formatNestedValue).filter(Boolean).join(', ');
-      if (typeof val === 'object') {
-        return Object.entries(val)
-          .filter(([, v]) => v !== null && v !== undefined && v !== '')
-          .map(([k, v]) => `${k.replace(/_/g, ' ')}: ${formatNestedValue(v)}`)
-          .join(', ');
-      }
-      return String(val);
-    };
-
-    const lines = [];
-
-    const formatSection = (title, data) => {
-      if (!data) return;
-      if (typeof data === 'string') {
-        lines.push(`${title}: ${stripMarkdown(data)}`);
-        return;
-      }
-      if (typeof data === 'object') {
-        const parts = [];
-        for (const [key, val] of Object.entries(data)) {
-          if (!val) continue;
-          const formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-          const formattedVal = formatNestedValue(val);
-          if (formattedVal) {
-            parts.push(`${formattedKey}: ${formattedVal}`);
-          }
-        }
-        if (parts.length > 0) {
-          lines.push(`${title}: ${parts.join('; ')}`);
-        }
-      }
-    };
-
-    if (obj.subjective) formatSection('Subjective', obj.subjective);
-    if (obj.objective) formatSection('Objective', obj.objective);
-    if (obj.assessment) formatSection('Assessment', obj.assessment);
-    if (obj.plan) formatSection('Plan', obj.plan);
-
-    if (lines.length > 0) {
-      return lines.join(' | ');
+    if (typeof data === 'string') {
+      const clean = stripMarkdown(data);
+      if (!clean) return null;
+      return (
+        <div className="space-y-1">
+          {title && <h5 className="text-xs font-bold uppercase tracking-wider text-primary">{title}</h5>}
+          <p className="text-sm leading-relaxed text-foreground">{clean}</p>
+        </div>
+      );
     }
 
-    // Generic fallback for any other JSON object structure
-    return Object.entries(obj)
-      .map(([k, v]) => {
-        const key = k.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-        const val = formatNestedValue(v);
-        return `${key}: ${val}`;
-      })
-      .join('; ');
+    if (Array.isArray(data)) {
+      return (
+        <div className="space-y-2">
+          {title && <h5 className="text-xs font-bold uppercase tracking-wider text-primary">{title}</h5>}
+          <ul className="space-y-1.5 pl-4 list-disc">
+            {data.map((item, idx) => (
+              <li key={idx} className="text-sm text-foreground">
+                {typeof item === 'object' ? renderReasoningNode(item) : stripMarkdown(String(item))}
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+
+    if (typeof data === 'object') {
+      return (
+        <div className="space-y-3">
+          {title && <h5 className="text-xs font-bold uppercase tracking-wider text-primary border-b border-border pb-1">{title}</h5>}
+          <div className="grid grid-cols-1 gap-3">
+            {Object.entries(data).map(([key, val]) => {
+              if (val === null || val === undefined || val === '') return null;
+              const formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+              return (
+                <div key={key} className="bg-muted/40 rounded-xl p-3 border border-border/50">
+                  <span className="text-xs font-bold tracking-wider uppercase text-muted-foreground block mb-1">
+                    {formattedKey}
+                  </span>
+                  {typeof val === 'object' ? (
+                    renderReasoningNode(val)
+                  ) : (
+                    <p className="text-sm font-medium text-foreground">{stripMarkdown(String(val))}</p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      );
+    }
+
+    return null;
   };
 
   const parseReasoningPoint = (point) => {
-    if (!point) return '';
-    if (typeof point === 'object') return formatJsonObjectToClinicalText(point);
-    if (typeof point !== 'string') return String(point);
+    if (!point) return null;
+    let target = point;
 
-    const trimmed = point.trim();
-    if (!trimmed.startsWith('{') && !trimmed.startsWith('[')) return stripMarkdown(point);
+    if (typeof point === 'string') {
+      const trimmed = point.trim();
+      if (trimmed.startsWith('{') || trimmed.startsWith('[')) {
+        try {
+          target = JSON.parse(trimmed);
+        } catch {
+          target = stripMarkdown(point);
+        }
+      } else if (trimmed.includes(' | ') || (trimmed.includes('Subjective:') && trimmed.includes('Assessment:'))) {
+        // Parse semi-colon / pipe concatenated SOAP string into structured object
+        const obj = {};
+        const sections = trimmed.split(/\s*\|\s*/);
+        sections.forEach((sec) => {
+          const colonIdx = sec.indexOf(':');
+          if (colonIdx > -1) {
+            const secTitle = sec.substring(0, colonIdx).trim();
+            const secContent = sec.substring(colonIdx + 1).trim();
 
-    try {
-      const parsed = JSON.parse(trimmed);
-      return formatJsonObjectToClinicalText(parsed);
-    } catch {
-      return stripMarkdown(point);
+            const subObj = {};
+            const subItems = secContent.split(/\s*;\s*/);
+            subItems.forEach((item) => {
+              const subColonIdx = item.indexOf(':');
+              if (subColonIdx > -1) {
+                const k = item.substring(0, subColonIdx).trim();
+                const v = item.substring(subColonIdx + 1).trim();
+                subObj[k] = v;
+              } else if (item) {
+                subObj['Details'] = item;
+              }
+            });
+
+            obj[secTitle] = Object.keys(subObj).length > 0 ? subObj : secContent;
+          }
+        });
+
+        if (Object.keys(obj).length > 0) {
+          target = obj;
+        } else {
+          target = stripMarkdown(point);
+        }
+      } else {
+        target = stripMarkdown(point);
+      }
     }
+
+    return renderReasoningNode(target);
   };
 
   const [session, setSession] = useState(null);
@@ -601,18 +634,23 @@ export default function CaseDetailsPage() {
 
             {/* Reasoning */}
             {analysis.reasoning?.length > 0 && (
-              <div>
-                <p className="text-muted-foreground mb-3 text-xs font-bold tracking-wider uppercase">
-                  AI Reasoning
+              <div className="space-y-3">
+                <p className="text-muted-foreground text-xs font-bold tracking-wider uppercase">
+                  AI Reasoning & Clinical Breakdown
                 </p>
-                <ul className="space-y-2">
+                <div className="space-y-4">
                   {analysis.reasoning.map((point, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-sm">
-                      <CheckCircle2 className="text-primary mt-0.5 h-4 w-4 shrink-0" />
-                      <span>{parseReasoningPoint(point)}</span>
-                    </li>
+                    <div key={idx} className="bg-card border border-border rounded-2xl p-4 shadow-sm space-y-2">
+                      <div className="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider">
+                        <CheckCircle2 className="h-4 w-4 shrink-0" />
+                        <span>Finding #{idx + 1}</span>
+                      </div>
+                      <div className="pt-1">
+                        {parseReasoningPoint(point)}
+                      </div>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             )}
           </div>
@@ -765,34 +803,7 @@ export default function CaseDetailsPage() {
                           size="lg"
                           className="h-14 px-8 text-lg font-bold shadow-lg transition-all hover:shadow-xl"
                           onClick={() => {
-                            // Pass context via URL search params to the unified diagnostic executor
-                            const params = new URLSearchParams({
-                              caseId: id,
-                              patient: patient?.firstName
-                                ? `${patient.firstName} ${patient.lastName}`
-                                : 'Patient',
-                            });
-
-                            const r = (session.bodyRegion || '').toLowerCase();
-                            const regionSlug = r.includes('lumbar')
-                              ? 'lumbar-pain-screener'
-                              : r.includes('shoulder')
-                                ? 'shoulder-mobility-screener'
-                                : r.includes('cervical')
-                                  ? 'cervical-posture-diagnostic'
-                                  : r.includes('knee')
-                                    ? 'knee-pain-screener'
-                                    : r.includes('elbow')
-                                      ? 'elbow-pain-screener'
-                                      : r.includes('hip')
-                                        ? 'hip-pain-screener'
-                                        : r.includes('wrist')
-                                          ? 'wrist-pain-screener'
-                                          : 'ankle-stability-test';
-
-                            router.push(
-                              `/clinician/diagnostic/${regionSlug}?${params.toString()}`
-                            );
+                            router.push(`/clinician/cases/${id}/guided-test`);
                           }}
                         >
                           <Stethoscope className="mr-2 h-6 w-6" />

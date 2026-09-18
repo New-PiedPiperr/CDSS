@@ -286,7 +286,9 @@ export default function PatientAssessmentPage() {
                       <div className="space-y-3">
                         <div>
                           <p className="text-sm font-medium text-slate-500">Possible Condition</p>
-                          <p className="text-lg font-semibold">{aiAnalysis.temporalDiagnosis}</p>
+                          <p className="text-lg font-semibold">
+                            {(aiAnalysis.temporalDiagnosis || '').replace(/\*\*/g, '')}
+                          </p>
                         </div>
                         <div className="flex items-center gap-4">
                           <div>

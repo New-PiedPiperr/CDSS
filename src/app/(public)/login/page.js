@@ -90,8 +90,17 @@ export default function LoginPage() {
         return toast.error('Invalid credentials. Please try again.');
       }
       toast.success('Logged in successfully!');
-      // Redirect to dashboard or desired page
-      window.location.href = '/patient/dashboard';
+      const res = await fetch('/api/auth/session');
+      const sessionData = await res.json();
+      const role = sessionData?.user?.role?.toUpperCase();
+
+      if (role === 'ADMIN') {
+        window.location.href = '/admin/dashboard';
+      } else if (role === 'CLINICIAN') {
+        window.location.href = '/clinician/dashboard';
+      } else {
+        window.location.href = '/patient/dashboard';
+      }
     } catch {
       toast.error('Invalid credentials. Please try again.');
     } finally {

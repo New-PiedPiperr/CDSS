@@ -611,5 +611,55 @@
         "diagnosisMapping": "Meniscus Tear"
       }
     }
+  },
+  "elbow-pain-screener": {
+    "startNode": "cozens_test",
+    "nodes": {
+      "cozens_test": {
+        "id": "cozens_test",
+        "onPositive": "maudsleys_test",
+        "onNegative": "mills_sign",
+        "isTerminal": false
+      },
+      "maudsleys_test": {
+        "id": "maudsleys_test",
+        "onPositive": "diag_lateral_epicondylitis",
+        "onNegative": "mills_sign",
+        "isTerminal": false
+      },
+      "mills_sign": {
+        "id": "mills_sign",
+        "onPositive": "diag_lateral_epicondylitis",
+        "onNegative": "odriscolls_hook_test",
+        "isTerminal": false
+      },
+      "odriscolls_hook_test": {
+        "id": "odriscolls_hook_test",
+        "onPositive": "diag_biceps_tendon_rupture",
+        "onNegative": "diag_elbow_sprain",
+        "isTerminal": false
+      },
+      "diag_lateral_epicondylitis": {
+        "id": "diag_lateral_epicondylitis",
+        "name": "Refined Diagnosis: Lateral Epicondylitis (Tennis Elbow)",
+        "instruction": "Positive provocative testing (Cozen's / Maudsley's / Mill's) confirms lateral epicondylalgia.",
+        "isTerminal": true,
+        "diagnosisMapping": "Lateral Epicondylitis"
+      },
+      "diag_biceps_tendon_rupture": {
+        "id": "diag_biceps_tendon_rupture",
+        "name": "Refined Diagnosis: Distal Biceps Tendon Rupture",
+        "instruction": "Inability to hook distal biceps tendon indicates rupture. Urgent orthopedic referral recommended.",
+        "isTerminal": true,
+        "diagnosisMapping": "Biceps Tendon Rupture"
+      },
+      "diag_elbow_sprain": {
+        "id": "diag_elbow_sprain",
+        "name": "Refined Diagnosis: Nonspecific Elbow Strain/Sprain",
+        "instruction": "Provocative tests negative for epicondylitis or tendon rupture. Treat mechanically.",
+        "isTerminal": true,
+        "diagnosisMapping": "Elbow Sprain"
+      }
+    }
   }
 }

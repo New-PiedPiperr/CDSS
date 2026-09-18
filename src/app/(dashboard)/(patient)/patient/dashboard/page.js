@@ -247,6 +247,7 @@ export default async function PatientDashboardPage() {
                   latestSession?.aiAnalysis?.temporalDiagnosis ||
                   'No active case'
                 )
+                  .replace(/\*\*/g, '')
                   .replace(/^the patient('s)?/i, 'Your')
                   .replace(/^the patient/i, 'You')
                   .replace(/^you have /i, 'You may have ')

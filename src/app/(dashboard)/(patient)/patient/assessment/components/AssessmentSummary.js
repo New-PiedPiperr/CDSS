@@ -13,6 +13,7 @@ import {
   ChevronUp,
   Send,
   User,
+  ArrowLeft,
 } from 'lucide-react';
 import { toast } from 'sonner';
 import {
@@ -240,12 +241,22 @@ export default function AssessmentSummary({ onSubmit, onEdit }) {
       </Card>
 
       {/* Action Buttons */}
-      <div className="flex justify-center">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+        <Button
+          variant="outline"
+          size="lg"
+          onClick={() => setStep('questions')}
+          disabled={isSubmitting}
+          className="border-slate-200 font-bold dark:border-slate-800"
+        >
+          <ArrowLeft className="mr-2 h-5 w-5" />
+          Back to Questions
+        </Button>
         <Button
           size="lg"
           onClick={handleSubmitForAnalysis}
           disabled={isSubmitting}
-          className="bg-primary hover:bg-primary/90 min-w-[200px] flex-1 font-bold"
+          className="bg-primary hover:bg-primary/90 flex-1 font-bold"
         >
           {isSubmitting ? (
             <>
